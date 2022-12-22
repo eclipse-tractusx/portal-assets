@@ -1,0 +1,6 @@
+# Building Block View
+
+The Portal as an overall product is a complex composition of several interacting solution building blocks, each comprised of a backend (including api and db) and frontend component, depicted in the following blackbox-illustration:
+
+
+
