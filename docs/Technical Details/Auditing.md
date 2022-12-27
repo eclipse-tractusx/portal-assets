@@ -4,32 +4,33 @@ For db audit logs, 2 generic approaches are used
 
  * PostgreSQL Session Logging (pgAudit)
  * Application Logging
+<br>
+<br>
 
- ## PostgreSQL Session Logging (pgAudit)
-
+## PostgreSQL Session Logging (pgAudit)
+<br>
 PgAudit module is enabled for the portal db via the Bitnami PostgreSQL Image:
-
+<br>
 https://github.com/bitnami/bitnami-docker-postgresql#auditing
-
-
+<br>
+<br>
 
 Following operations are audited: WRITE, DDL
-
 WRITE: INSERT, UPDATE, DELETE, TRUNCATE, and COPY
-
 DDL: CREATE, ALTER, and DROP schema objects
-
 For a complete list of auditable operations see https://github.com/pgaudit/pgaudit#pgauditlog
 
-
+<br>
 
 In addition the parameters time stamp with milliseconds, user name and database name are configured as log line prefixes.
 
-
+<br>
 
 Future enhancements: Auditing logging on application side namely in the backend. The auditing on db level with pgAudit doesn't provide the information by which person specific user an operation was triggered because db operations are executed by our generic db users (for instance the 'portal').
 
- ## Application Audit Logging
+<br><br>
+
+## Application Audit Logging
 
 Application Audit Logging is implemented  to fulfill and enable extended audit log functionalities for the CX portal.
 
@@ -37,7 +38,7 @@ In the implementation the possibility of pgAudit extension and db table logging 
 
 Due to the functional requirement to enable serach, quick validations and audit traceability, the in-DB audit implementation got preferred.
 
-
+<br>
 
 <strong>Implementation Details</strong>
 
@@ -47,6 +48,8 @@ What: for each audit relevant table, an audit_tablename_version table is created
 - What
 - When
 
+<br>
+
 <strong> Why we use versioning for the audit tables?</strong>
 
           To ensure that an audit table is never modified, but only entries are added, we have introduced versioning for audit table.
@@ -55,7 +58,7 @@ What: for each audit relevant table, an audit_tablename_version table is created
 
           See the example below for further information:
 
-
+<br>
 
 <strong> How to enable an entity to be auditable in the code (Example: CompanyUser)</strong>
 
@@ -84,7 +87,8 @@ What: for each audit relevant table, an audit_tablename_version table is created
 
 7. Add the AuditTrigger to the created migration. Add migrationBuilder.AddAuditTrigger<T>("versionName") at the end of the Up method and migrationBuilder.DropAuditTrigger<T>() to the beginning of the Down method. T should be the Audit Entity and the version should equal the backpart of the name of the migration without timestamp as snakecase.
 
-
+<br>
+ 
 Up:
 
        migrationBuilder.AddAuditTrigger<AuditCompanyUser>("cplp_1254_db_audit");
@@ -93,9 +97,7 @@ Down:
 
        migrationBuilder.DropAuditTrigger<AuditCompanyUser>();
 
-
-
-
+<br>
 
 Additional relevant information:
 
