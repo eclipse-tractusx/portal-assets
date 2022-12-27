@@ -79,7 +79,12 @@ What: for each audit relevant table, an audit_tablename_version table is created
 
 5. Add modelBuilder.Entity configuration to the OnModelCreating for the audit table ignore all virtual properties of the base entity. !IMPORTANT! -> The tablename of the audit table must exactly match the name of the migration in snakecase and beginn with audit_.
 
-       modelBuilder.Entity<AuditCompanyUser>(x =>   {          x.HasBaseType((Type?)null);             x.Ignore(x => x.Company);           x.Ignore(x => x.IamUser);           x.Ignore(x => x.Consents);           x.Ignore(x => x.Documents);           x.Ignore(x => x.Invitations);           x.Ignore(x => x.Apps);           x.Ignore(x => x.UserRoles);           x.Ignore(x => x.CompanyUserAssignedRoles);           x.Ignore(x => x.CompanyUserAssignedBusinessPartners);           x.Ignore(x => x.Notifications);           x.Ignore(x => x.CreatedNotifications);             x.ToTable("audit_company_users_cplp_1254_db_audit");       });`
+       modelBuilder.Entity<AuditCompanyUser>(x =>   {          x.HasBaseType((Type?)null);             x.Ignore(x => x.Company);
+       x.Ignore(x => x.IamUser);           x.Ignore(x => x.Consents);           x.Ignore(x => x.Documents);
+       x.Ignore(x => x.Invitations);           x.Ignore(x => x.Apps);           x.Ignore(x => x.UserRoles);
+       x.Ignore(x => x.CompanyUserAssignedRoles);           x.Ignore(x => x.CompanyUserAssignedBusinessPartners);
+       x.Ignore(x => x.Notifications);           x.Ignore(x => x.CreatedNotifications);
+       x.ToTable("audit_company_users_cplp_1254_db_audit");       });`
 
 6. Add Migration as described in the readme.md in CatenaX.NetworkServices.PortalBackend.Migrations the name must match the table name of the audit table
 
