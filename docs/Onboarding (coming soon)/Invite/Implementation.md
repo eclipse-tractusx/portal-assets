@@ -43,3 +43,11 @@ Please note that a standard realm config got configured inside the endpoint to e
 Search is included in Endpoint #1.
 
 The endpoint does support search via the company name
+
+>Validation
+>
+>Search
+>- Search field added (already available inside the table component but needs to get activated)
+>- User can add a company name (minimum 3 digits) and receives in realtime (without pressing enter) the results
+>- There is a typing validation logic implemented, if the user is not typing for 1 seconds, the serach results will show up, below 1 seconds, the system will wait if any additional characters are getting added
+>- the serach field is validating the input, only letters, spaces, "!", "?", "&", "@", ".", "_", "-" and numbers are allowed
