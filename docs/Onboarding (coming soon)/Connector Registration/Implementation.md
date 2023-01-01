@@ -1,6 +1,5 @@
 # Implementation
 <br>
-<br>
 
 ## 1 Get all MY Connector Registrations
 <br>
