@@ -120,6 +120,9 @@ In case the DAPS registration failed as part of the connector registration, the 
 For this endpoint; following data will be pushed
 <br>
 <br>
+<img width="750" alt="image" src="https://user-images.githubusercontent.com/94133633/210188600-ffcbee1a-2f6e-432c-845d-8fc64109d9ac.png">
+<br>
+<br>
 >Validation:
 >
 >* connectorId existing
