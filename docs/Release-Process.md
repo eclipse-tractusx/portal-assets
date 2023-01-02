@@ -30,7 +30,7 @@ In the released version, the changelog is structured as following:
 * Changes
 * Features
 * Technical Support
-* BigFixes
+* Bug Fixes
 
 In case of breaking change, the breaking change will get highlihted with a breaking change tag => ![Tag](https://img.shields.io/static/v1?label=&message=BreakingChange&color=yellow&style=flat)
 
