@@ -21,15 +21,20 @@ The relevant backend repository is the following:
 
 It's recommended to do step 1-3 in one preparatory pull request to main, or dev respectively.
 
-1. Update changelog file
+#### 1. Update changelog file
 
 The changelog file tracks all notable changes since the last released version.
 During development every developer should extend the changelog under the 'Unreleased' section when raising a pull request to main or dev.
 Once a new version is ready to be released, the changelog of the version gets finalized and the release version for the, up to then, unreleased changes gets set.
-The following convention is a good practice for a clearly structured changelog:
-https://keepachangelog.com/en/1.0.0/
+In the released version, the changelog is structured as following:
+* Changes
+* Features
+* Technical Support
+* BigFixes
 
-2. Update dependencies file
+In case of breaking change, the breaking change will get highlihted with a breaking change tag => ![Tag](https://img.shields.io/static/v1?label=&message=BreakingChange&color=yellow&style=flat)
+
+#### 2. Update dependencies file
 
 In order to have an up-to-date list, of the used third-party libraries, the dependencies file needs to be updated.
 
@@ -49,7 +54,7 @@ awk -i inplace '!seen[$0]++' DEPENDENCIES
 
 Only commit the updated dependencies file, not the 'DEPENDENCIES-PREP' file.
 
-3. Version bump (frontend repos only)
+#### 3. Version bump (frontend repos only)
 
 The version in the 'package.json' files needs to get bumped, the following statement can be used:
 
@@ -57,7 +62,7 @@ The version in the 'package.json' files needs to get bumped, the following state
 yarn version
 ```
 
-4. Merge from dev into main branch
+#### 4. Merge from dev into main branch
 
 The merge from dev into main, via pull request, needs to happen before releasing.
 This is only necessary for repositories with a dev branch e.g., tx-portal-frontend and tx-portal-frontend-registration.
