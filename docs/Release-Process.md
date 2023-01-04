@@ -1,6 +1,6 @@
 # Release Process
 
-The release process for a new version can roughly be divided in five steps:
+The release process for a new version can roughly be divided in the following steps:
 
 * Preparation
 * Build of a versioned image
@@ -10,6 +10,7 @@ The release process for a new version can roughly be divided in five steps:
 The process builds on the development flow which takes place within the forks from eclipse-tractusx, located in the catenax-ng organization.
 
 The relevant frontend repositories are the following:
+
 * https://github.com/catenax-ng/tx-portal-frontend
 * https://github.com/catenax-ng/tx-portal-frontend-registration
 * https://github.com/catenax-ng/tx-portal-assets
@@ -25,14 +26,15 @@ It's recommended to do step 1-3 in one preparatory pull request to main, or dev 
 
 The changelog file tracks all notable changes since the last released version.
 During development every developer should extend the changelog under the 'Unreleased' section when raising a pull request to main or dev.
-Once a new version is ready to be released, the changelog of the version gets finalized and the release version for the, up to then, unreleased changes gets set.
+Once a new version is ready to be released, the changelog of the version gets finalized and the release version gets set for the, up to then, unreleased changes.
 In the released version, the changelog is structured as following:
+
 * Changes
 * Features
 * Technical Support
 * Bug Fixes
 
-In case of breaking change, the breaking change will get highlihted with a breaking change tag => ![Tag](https://img.shields.io/static/v1?label=&message=BreakingChange&color=yellow&style=flat)
+In case of breaking change, the breaking change will get highlighted with a breaking change tag => ![Tag](https://img.shields.io/static/v1?label=&message=BreakingChange&color=yellow&style=flat)
 
 #### 2. Update dependencies file
 
