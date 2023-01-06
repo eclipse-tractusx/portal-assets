@@ -11,6 +11,23 @@ Permission: "view_tech_user_management"
 ```
 
 <br>
+
+#### Get Service Account Role Profiles
+
+Technical users are currently managed under one single client. "Tech_User_Management" client.
+All technical user roles are created inside this client as "composite role". With that, permissions of the actual client where the technical client will need to get access to, can get assigned to the roles inside the client "Tech_User_Management".
+
+On the FE side, for role assignment, only the composite roles will be visible for the user
+
+Data flow details are drawn below
+
+<img width="637" alt="image" src="https://user-images.githubusercontent.com/94133633/210976320-210ae964-8be8-4bc6-bb42-bddd235025ba.png">
+
+```diff
+! GET: /api/administration/serviceaccount/user/roles
+```
+
+<br>
 <br>
 
 ### #2 Create Service Account
