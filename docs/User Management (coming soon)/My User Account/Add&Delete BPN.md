@@ -38,7 +38,7 @@
 <br>
 <br>
 
-## Details
+### Details
 <br>
 
 * when clicking on the "bin" icon, the respective bpn will get triggered for deletion (via API)
@@ -50,5 +50,36 @@
 <br>
 
 * no actual success message needed if a BPN was deleted, the user can see that the BPN is not existing anymore in the list
+<br>
+<br>
+
+# API Details
+
+### #1 API Endpoint Details: Add BPN
+<br>
+Add a bpn to the respective user
+<br>
+Currently no bpn validation implemented. Reason: waiting for bpn family tree from bpdm product team. Otherwise the validation is not possible.
+<br>
+<br>
+
+```diff
+! PUT: api/administration/user/owncompany/users/(userId}/businessPartnerNumbers/{bpn}
+```
+
+<br>
+<br>
+
+
+### #2 API Endpoint Details: Delete BPN
+<br>
+Delete a bpn of the respective user
+<br>
+<br>
+
+```diff
+! DELETE: api/administration/user/owncompany/users/(userId}/businessPartnerNumbers/{bpn}
+```
+
 <br>
 <br>
