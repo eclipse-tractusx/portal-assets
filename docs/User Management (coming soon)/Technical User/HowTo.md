@@ -1,6 +1,6 @@
 # Technical User - How to (Functional explanation)
 
-## Create a new user
+## Create a new technical user
 User with the respective user management rights can access the user management via the top right user navigation.
 As soon as the user management is displayed, a button "Technical User Management" shows up to switch from real users to technical users.  
 <br>
