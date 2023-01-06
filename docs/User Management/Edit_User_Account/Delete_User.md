@@ -1,4 +1,4 @@
-# Delete User 
+# Delete User
 
 Inside the portal, a user will be able to delete an user - the function is differentiated into 2 functions
 
@@ -6,6 +6,13 @@ Inside the portal, a user will be able to delete an user - the function is diffe
 * Delete an user account of a user inside your organization (only available for the IT Administrator)
 <br>
 <br>
+
+User accounts might be companyIdP federated or CX user accounts. In both scenarios the user deletion is implemented and will effect the user account itself, the user favorites, user roles as well as user attributes.
+
+The deletion of users is audit relevant and will be audit logged inside the db.
+
+More details to the audit logging can get found here: https://github.com/catenax-ng/tx-portal-assets/blob/945546d91065b8870aa8f69ce94b48eac7a5ade2/docs/Technical%20Details/Auditing.md
+
 
 ## Own User Deletion Flow
 <br>
@@ -83,4 +90,3 @@ Instead user will get set to "DELETED", and following information/details will g
 
 <br>
 <br>
-
