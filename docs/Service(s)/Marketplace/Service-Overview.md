@@ -13,7 +13,15 @@ additionally user can select service details to display additional information f
 
 # Functionality
 
+### Service Marketplace Overview
+
 <img width="583" alt="image" src="https://user-images.githubusercontent.com/94133633/211114836-8168354a-a933-4314-ae73-00393cdb3113.png">
+
+<br>
+
+### Service Marketplace - Service Details
+
+<img width="1471" alt="image" src="https://user-images.githubusercontent.com/94133633/211170242-a9e40b4c-b500-495b-a293-0774908c0dca.png">
 
 <br>
 <br>
@@ -60,12 +68,18 @@ Sorting is enabled and works jointly with the filters
 
 ### #4 Get all active services
 
-API is used to display the active services of the CX network based on the released services. If a service is under review or creation, the service wont show up in this view.
+API is used to display the active services of the CX network based on the released services. If a service is under review or creation, the service wont show up in this view.  
+Only those services in status "ACTIVE" are getting displayed.
 <br>
 
 ```diff
 ! GET /api/services/active
 ```
+<br>
+
+Data Mapping View:  
+<img width="700" alt="image" src="https://user-images.githubusercontent.com/94133633/211171007-06f19543-0c75-4fd4-9cf1-89e0d1c374aa.png">
+
 <br>
 
 API Response:
@@ -93,6 +107,42 @@ API Response:
       ]
      }
      
+
+<br>
+<br>
+
+### #5 Get Service Offer Details
+
+When selecting an offered service, the service details are getting fetched.
+
+Data mapping logic:
+
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/94133633/211170341-97904369-250c-416e-b9fe-b34f549d69d3.png">
+
+<br>
+
+```diff
+! PUT Get /api/services/{serviceID}
+```
+
+<br>
+<br>
+
+
+### #6 Get Service Order Details
+
+When the user is accessing a service detail page and in case there are already active or pending subscriptions, the subscription status will show up below the "Subscribe" button.  
+Details regarding active subscriptions will be included in the get service details endpoint.
+<br>
+
+```diff
+! PUT Get /api/services/{serviceID}
+```
+
+<br>
+Details on the UI implementation
+
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/94133633/211170389-1cbba688-7ac8-49ff-8c11-59d06d44a1c0.png">
 
 <br>
 <br>
