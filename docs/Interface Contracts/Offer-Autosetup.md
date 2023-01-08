@@ -92,6 +92,7 @@ With the successful client/app instance creation on the portal side, the technic
 
 Request Body
 <br>
+
           [
            {
              requestId (service request id),
@@ -151,6 +152,7 @@ API Endpoint Logic
 
 Response Body
 <br>
+
           {
              technicalUserId,
              technical user secret
