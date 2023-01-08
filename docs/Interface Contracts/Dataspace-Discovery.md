@@ -19,17 +19,35 @@ n/a
 The edc discovery endpoint can get triggered via technical as well as real users, if relevant roles are available.  
 For technical user, a company can request the user creation with the technical user creation feature inside the portal.  
 For details, click following link: 
-[An Internal Link](/User%20Management/Technical_User/HowTo.md)
-https://github.com/catenax-ng/tx-portal-assets/blob/add73daa995047ce0717ac12fb73b5306f32f570/docs/User%20Management/Technical_User/HowTo.md
-<br>
-
-<img width="600" alt="image" src="https://user-images.githubusercontent.com/94133633/211172164-f552814c-4212-4936-9c52-a8f7df3622df.png">
-
+[Technical User Management](/docs/User%20Management/Technical_User/HowTo)  
 <br>
 
 ```diff
-! POST api/administration/serviceprovider/owncompany
+! POST: /api/administration/connectors/discovery
 ```
+
+###### Request Body
+The request body is expecting a list of BPNs for which the EDC endpoint should get be fetched. Please add minimum one BPN.  
+<br>
+
+        [
+          "string"
+        ]
+
+###### Response Body
+
+        [
+          {
+            "bpn": "string",
+            "connectorEndpoint": [
+              "string"
+            ]
+          }
+        ]
+
+
+<br>
+In case of an empty response, no edc is found for the requested BPNs
 
 <br>
 <br>
