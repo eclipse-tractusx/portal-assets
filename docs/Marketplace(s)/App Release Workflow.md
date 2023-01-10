@@ -89,7 +89,25 @@ Get possible sales manager (under my company) which I can add as Sales Manager o
 <br>
 <br>
 
-###### #4 Create App
+###### #4 GET/POST App LeadImage
+
+The endpoints enable the user to store and retrieve the app leadimage id.  
+Using the document id of the response body, the document base64 encoding can get retireved and turned to the actual image.  
+<br>
+
+Supported formats: JPEG and PNG
+<br>
+
+```diff
+! PUT /api/apps/appreleaseprocess/updateappdoc/{appId}/documentType/{documentTypeId}/documents
+! GET /api/apps/appreleaseprocess/{appId}/appStatus
+! GET /api/administration/documents/{documentId}
+```
+
+<br>
+<br>
+
+###### #5 Create App
 Created a new app for the current active app provider
 
 ```diff
