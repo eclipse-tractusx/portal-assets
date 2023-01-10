@@ -151,18 +151,20 @@ All documents uploaded under the same application register form are shown. If a 
 
 #### API Details
 
-#1 API Get Documents
+##### #1 API Get Documents
+Fetching documents already loaded by a company assigned user which is connected to the current application.  
 <br>
-Fetching documents already loaded by a company assigned user which is connected to the current application.
+
 ```diff
 ! GET /api/registration/application/{applicationId}/documentType/{documentTypeId}/documents
 ```
 <br>
 <br>
 
-#2 API Upload Document
+##### #2 API Upload Document
+Documents are uploaded into the portal.document table and are connected via the user_id and document_type to the respective application.  
 <br>
-Documents are uploaded into the portal.document table and are connected via the user_id and document_type to the respective application.
+
 ```diff
 ! POST /api/registration/application/{applicationId}/documentType/{documentTypeId}/documents
 ```
@@ -170,12 +172,14 @@ Documents are uploaded into the portal.document table and are connected via the 
 <br>
 
 
-#3 API Delete Document
+##### #3 API Delete Document
+Documents can get deleted as long as the documents are still in the right/respective status.  
 <br>
-Documents can get deleted as long as the documents are still in the right/respective status
+
 ```diff
 ! DELETE /api/registration/documents/{documentId}
 ```
+
 <br>
 <br>
 Important: only documents under the same application are deletable. Additional the application needs to be in any status beside submitted; approved and declined.
@@ -184,9 +188,10 @@ The document deletion does also validate the document type. Only types related t
 <br>
 <br>
 
-#4 API Download Document
+##### #4 API Download Document
+Uploaded documents can also get viewed / downloaded by the user. To do this, the user needs to open the document by clicking on the document name. Automatically the document will get downloaded.  
 <br>
-Uploaded documents can also get viewed / downloaded by the user. To do this, the user needs to open the document by clicking on the document name. Automatically the document will get downloaded.
+
 ```diff
 ! GET /api/registration/Documents/{documentId}
 ```
@@ -203,15 +208,33 @@ Uploaded documents can also get viewed / downloaded by the user. To do this, the
 <br>
 
 ## Verify your data
-<br>
 ...
 <br>
+...
+
+##### #1 Get application data
+...
 <br>
 
-#### API Details
-
 ```diff
-- to be added
+! GET POST /api/registration/application/{applicationID}/registrationData
 ```
 <br>
 <br>
+
+##### #2 Submit Registration
+<br>
+text text text
+<br>
+The endpoint triggers the 
+* submission of the applicaton (status update to "SUBMITTED")
+* all documents related to the application get "locked"
+<br>
+
+```diff
+! POST /api/registration/application/{applicationID}/submitregistration
+```
+<br>
+<br>
+
+
