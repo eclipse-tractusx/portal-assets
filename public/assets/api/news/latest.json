@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "title": "CX Design launched!",
+    "subtitle": "Catena-X",
+    "description": "The new Catena-X Portal designed launched successfully in Catena-X NG",
+    "readMoreText": "Read more",
+    "readMoreLink": "#",
+    "image": {
+      "src": "https://portal.dev.demo.catena-x.net/assets/images/samples/s006.jpg",
+      "alt": "BMW New Stuff"
+    }
+  },
+  {
+    "id": "2",
+    "title": "Catena-X Network of Networks started",
+    "subtitle": "Catena-X",
+    "description": "Lets get started! The Network of Networks team will start with first PoCs.",
+    "readMoreText": "Read more",
+    "readMoreLink": "#",
+    "image": {
+      "src": "https://portal.dev.demo.catena-x.net/assets/images/samples/s007.jpg",
+      "alt": "BMW New Stuff"
+    }
+  },
+  {
+    "id": "3",
+    "title": "HMI Preparation Ongoing",
+    "subtitle": "Catena-X",
+    "description": "The HMI (Hannover Fair) preparation are ongoing and looking forward to see you there.",
+    "readMoreText": "Read more",
+    "readMoreLink": "#",
+    "image": {
+      "src": "https://portal.dev.demo.catena-x.net/assets/images/samples/s008.jpg",
+      "alt": "BMW New Stuff"
+    }
+  }
+]
