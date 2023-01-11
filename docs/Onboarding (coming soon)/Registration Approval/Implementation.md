@@ -3,14 +3,25 @@
 
 ## 1 Get Applications
 <br>
-Get all applications in status "submitted", "confirmed" or "declined" with the respective application data entered by the registration company member.
+Get all applications in status "submitted", "confirmed" or "declined" with the respective application data entered by the registration company member.   
 <br>
+Filtering as well as search is enabled to support the user to easily find application requests.  
+<br>
+<br>
+
+###### Filtering
+Review: {hostname}/api/administration/registration/applications?page=0&size=20&companyApplicationStatusFilter=InReview  
+Closed: {hostname}/api/administration/registration/applications?page=0&size=20&companyApplicationStatusFilter=Close  
+All: {hostname}/api/administration/registration/applications?page=0&size=20  
+<br>
+
+###### Search
+Search is enabled by company name.  
 <br>
 
 #### Logical flow of the service
 * Get all applications which are submitted for review or where review is finished
-* Applications in any status beside the three mentioned status above will not get included in the response.
-<br>
+* Applications in any status beside the three mentioned status above will not get included in the response.  
 <br>
 
 #### API Details

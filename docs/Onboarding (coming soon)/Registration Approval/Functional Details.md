@@ -10,12 +10,6 @@
 <br>
 <br>
 
-### Display Application Details
-<br>
-<img width="1000" alt="image" src="https://user-images.githubusercontent.com/94133633/210288576-e97207fe-fb86-44ed-991a-f6c9de7b47c8.png">
-<br>
-<br>
-
 ### Add/Update BPN for the registration company
 <br>
 The bpn can get manually added (as an workaround) if the registration company request doesnt have a business partner number added and the registration request is in status "submitted".
