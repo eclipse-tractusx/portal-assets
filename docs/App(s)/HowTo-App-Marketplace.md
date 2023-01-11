@@ -1,4 +1,4 @@
-## My Favorites
+## App Favorites
 
 <img width="717" alt="image" src="https://user-images.githubusercontent.com/94133633/211009835-090cceff-4eb9-41c7-ab1e-aea17a4415e8.png">
 
@@ -34,10 +34,9 @@ Beside the generic list, apps can get viewed in specific pre-configured views
 additionally user can select app details to display additional information for a specific selected app and mark apps as favorite (Details about Favorites)
 
 <img width="578" alt="image" src="https://user-images.githubusercontent.com/94133633/211010432-f2c31fe6-11d5-43bb-a495-b2a6e0ba237a.png">
- 
 
-#### Sub-Headlines
 
+#### App Overview
 
 API is used to display the active apps of the CX network based on the released apps. If an app is under review or creation, the app wont show up in this view.
 <br>
@@ -66,7 +65,6 @@ Inside the app deatils following information will be stored
 
 
 #### Sub-Headlines
-
 
 The api is responding with all app details for a specific app id. Within the path, the app id is getting send. Additionally language can get set as optional parameter. If no value is send for "language" inside the request call, english will be used as default language setting for the app detail response.   
 Additionally the app subscription status is included.
@@ -105,9 +103,6 @@ With a click on the business app tile, the user gets automatically redirected to
 The idp of the business application will check the user token. If the user token is valid, the user gets access to the respective tenant. If not, a permission / access error page is getting displayed.  
 Important: to enable the functionality, an idp connection must be existing between the business app and catena-x.  
 This connection is a user federation which establishes trust between the app idp and catena-x idp and enabled users with a valid key to access there subscribed app tenant.
- 
-
-#### Sub-Headlines
 
 #### DB Details
 
@@ -132,7 +127,3 @@ Important for the function is an active company subscription of the assigned use
 
 <br>
 <br>
-
-
-
-

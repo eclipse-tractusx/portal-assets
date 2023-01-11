@@ -39,7 +39,7 @@ Its planned to change this as soon as a search engine is implemented.
 
 ### #2 Filter
 
-Filters provide two different views which can get easily switched by the user 
+Filters provide two different views which can get easily switched by the user
 
 <img width="637" alt="image" src="https://user-images.githubusercontent.com/94133633/211114974-b16776a3-3c79-45f6-8f18-27ffbcd1cf83.png">
 
@@ -83,7 +83,7 @@ Data Mapping View:
 <br>
 
 API Response:
-     
+
      {
       "meta": {
       "totalElements": 0,
@@ -106,7 +106,7 @@ API Response:
        }
       ]
      }
-     
+
 
 <br>
 <br>
