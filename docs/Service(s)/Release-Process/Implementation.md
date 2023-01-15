@@ -7,6 +7,14 @@ Till that, the service publication is only available via api endpoints. Users ca
 <br>
 <br>
 
+Links:  
+
+[Design](/docs/Service(s)/Release-Process/Design.md)  
+[FAQ](/docs/Service(s)/Subscription/FAQ.md)
+
+<br>
+<br>
+
 # Design
 
 ![Tag](https://img.shields.io/static/v1?label=&message=ImplementationOngoing&color=yellow&style=flat)
