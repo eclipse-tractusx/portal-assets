@@ -6,8 +6,10 @@ Service purchasing is describing the subscribe/purchase process of an service in
 <br>
 
 Links:
-[Design](/tx-portal-assets/docs/Service(s)/Subscription/Service-Subscription)
+[Design](/docs/Service(s)/Subscription/Service-Subscription)
+
 [FAQ](/docs/User Management/Technical_User/HowTo)
+
 [Others](/guides/content/editing-an-existing-page)
 
 <br>
