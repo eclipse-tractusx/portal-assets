@@ -20,7 +20,10 @@ CX Member companies can create their technical users on their needs and map them
 
 
 ### Available technical user roles
-* Digital Twin Management
-* Semantic Model Management
-* Wallet Management 
-* DAPS Certificate Management
+* Connector User
+* Identity Wallet Management
+* BPDM Management
+* BPDM Gateway
+* Dataspace Discvoery 
+* App Tech User
+* Service Management
