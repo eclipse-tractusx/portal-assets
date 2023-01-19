@@ -297,7 +297,7 @@
   "participant": {
     "title": "Catena-X Data Participant",
     "description": "The catena-x participant is the standard role inside the catena-x network. Companies sharing and receviing data as well as using service provider offers and app offers are usually 'participants' - active members of the network.",
-    "providers": [
+    "sections": [
       {
         "title": "Catena-X Marketplace",
         "description": "The CX marketplace(s) are separated between apps and services. Both the marketplaces offer customer oriented offers to enable the customer to participate inside the network as well as support the daily business by use case specific business applications.",
