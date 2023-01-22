@@ -42,7 +42,25 @@ API is used to display the active apps of the CX network based on the released a
 ### #3 App Details
 
 The api is responding with all app details for a specific app id. Within the path, the app id is getting send. Additionally language can get set as optional parameter. If no value is send for "language" inside the request call, english will be used as default language setting for the app detail response.   
-Additionally the app subscription status is included.
+Additionally the app subscription status is included.  
+<br>
+
+The app details endpoint include
+- app title
+- app leadimage id
+- app detail image id's
+- provider URI
+- provider name
+- provider contact email
+- provider contact number
+- app supported use cases
+- app long description
+- app price tag
+- app tags
+- subscription status (for the respective company of the api calling user)
+- app supported languages
+- app documents (documents of type APP_CONTRACT, APP_DATA_DETAILS, ADDITIONAL_DETAILS, APP_TECHNICAL_INFORMATION)
+
 <br>
 
 ```diff

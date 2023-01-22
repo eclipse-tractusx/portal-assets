@@ -23,12 +23,16 @@ In step 1, the user is asked to add the company details
 
 #### API Details
 
+##### Display Company Data Registration Details
+
 ```diff
-- to be added
+! GET /api/registration/application/{applicationId}/companyDetailsWithAddress
+! GET /api/registration/legalEntityAddress/{bpn}
 ```
-<br>
+
 <br>
 
+.....
 
 <br>
 <br>
@@ -37,6 +41,60 @@ Flow diagram for option a) and b)
 Details about the BPDM data call can get found in the Interface / API Call specification: BPDM - Get/Post Company Data
 <br>
 <br>
+
+
+##### Unique Identifier
+
+The company unique identifier is a company specific identifier which is used to help companies to prove their identity. In Catena-X registration party needs to add minimum one unqiue identifier which is later used inside the application verification flow to identifier the companies identity.
+To support the user entry and ensure that human errors are reduced, an endpoint to fetch the allowed unique identifier (per country) as well as field input validations are implemented.
+
+###### GET allowed Unique Identifier
+
+```diff
+! GET /api/registration/company/country/{alpha2Code}/uniqueidentifiers
+```
+
+Response example
+
+			[
+			  {
+			    "id": 5,
+			    "label": "EORI"
+			  },
+			  {
+			    "id": 1,
+			    "label": "COMMERCIAL_REG_NUMBER"
+			  },
+			  {
+			    "id": 2,
+			    "label": "VAT_ID"
+			  }
+			]
+
+<br>
+<br>
+
+###### POST allowed Unique Identifier
+
+no post call existing. The data will get stored as part of the POST /companyDetailsWithAddress endpoint
+
+<br>
+<br>
+
+###### Input validations
+currently only FE supported
+
+.....to be added.....
+
+
+##### Store / Save Company Data Registration Details
+<br>
+Via the post request, all company details will get stored/saved inside the portal db. The endpoint is used for both methods (manual data entering as well as the bpdm interface usage).  
+<br>
+
+```diff
+! POST /api/registration/application/{applicationId}/companyDetailsWithAddress
+```
 
 >Validation
 >
@@ -65,11 +123,11 @@ Details about the BPDM data call can get found in the Interface / API Call speci
 >Street with House Number - minlength: 3, maxlength: 60; pattern:
 >- A – Z; a-z
 >- numbers (0 – 9)
->- or any of the following special characters: - 
+>- or any of the following special characters: -
 >- name must start with a letter or a number
 >- space
 >
->Postal Code - minlength: 0, maxlength: 10; pattern: 
+>Postal Code - minlength: 0, maxlength: 10; pattern:
 >- A – Z; a-z
 >- numbers (0 – 9)
 >
@@ -87,7 +145,7 @@ Details about the BPDM data call can get found in the Interface / API Call speci
 <br>
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/94133633/210187937-82a3eb9f-4953-4f3c-8841-cfb16c89f248.png">
 <br>
-As part of the registration and onboarding process a number of users will be needed to support 
+As part of the registration and onboarding process a number of users will be needed to support
 
 * Signing Manager
 * Legal Admin
@@ -105,7 +163,7 @@ As part of the registration and onboarding process a number of users will be nee
 ## Select company role & sign terms and conditions
 <br>
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/94133633/210187987-d0dee3e8-c180-44f7-a2d2-ae78a1b020b9.png">
-<br> 
+<br>
 For the company role selection the Company Admin can select the company role within the network
 <br>
 * Active Participant
@@ -142,7 +200,7 @@ Via the endpoint post consent, the consent given by the user to the respective a
 ## Upload registration relevant documents
 <br>
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/94133633/210188158-22d3f21a-bb4e-4c39-b619-a000cb446c87.png">
-<br> 
+<br>
 In Step 4, the users are asked to upload the company identification.
 <br>
 All documents uploaded under the same application register form are shown. If a second user has already uploaded a doc, the user will be able to see as well as delete this document as weel; as long as the users belong to the same company application.
@@ -226,7 +284,7 @@ Uploaded documents can also get viewed / downloaded by the user. To do this, the
 <br>
 text text text
 <br>
-The endpoint triggers the 
+The endpoint triggers the
 * submission of the applicaton (status update to "SUBMITTED")
 * all documents related to the application get "locked"
 <br>
@@ -236,5 +294,3 @@ The endpoint triggers the
 ```
 <br>
 <br>
-
-

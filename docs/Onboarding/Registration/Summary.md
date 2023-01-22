@@ -62,3 +62,40 @@ Below an example of the email send to the invited user is shared:
 
 <br>
 <br>
+
+#### Company Role & Terms and Conditions
+
+Under step 3 "Company Roles & Agreements" the applicator is requested to select the company role with which the application company want to participate inside the network. Beside the "Active Participant", "App Provider" and "Service Provider" are available. Depending on the role, the network agreements/terms and conditions which the application company needs to agree on are getting displayed. Also, the role i relevant to manage the respective access rights/permissions which the application company will receive inside the Catena-X network.  
+The role can get easily enhanced in future by enhancing or reducing the role inside the company configuration (available inside the CX Portal).  
+<br>
+
+image
+
+<br>
+<br>
+
+#### Document upload
+
+In Step 4, the users are asked to upload the company identification.
+<br>
+All documents uploaded under the same application register form are shown. If a second user has already uploaded a doc, the user will be able to see as well as delete this document as weel; as long as the users belong to the same company application.  
+<br>
+
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/94133633/210188158-22d3f21a-bb4e-4c39-b619-a000cb446c87.png">
+
+<br>
+<br>
+
+#### Submit company data
+
+The last step of the company application is the verification of the data.
+The user can revalidate if al data are correctly added. In case anything is wrong or missing, the "back" button will support to update any entered data.  
+<br>
+
+With the submit of the application, the application form is getting closed and the company application data are submitted for review to the platform operator. The application verification will run through a number of identification validations as well as technical setup to enable the company to participate inside the dataspace.
+<br>
+
+image
+
+<br>
+<br>
