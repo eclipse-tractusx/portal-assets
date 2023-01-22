@@ -58,7 +58,7 @@ Normally this should only be relevant if an user is not authorized to finish the
 With the invite of an user, a personal message can get entered to ensure that the invited user knows the purpose of the invite.
 Below an example of the email send to the invited user is shared:
 
-
+<img width="450" alt="image" src="https://user-images.githubusercontent.com/94133633/213935368-0cbbbf5e-f257-4a44-b52f-58722f81c5ec.png">
 
 <br>
 <br>
