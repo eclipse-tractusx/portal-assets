@@ -5,6 +5,13 @@ Below you can find an overview of all supported templates as well as the templat
 
 ### Templates
 
+
+#### Common Notes
+
+* <id: `templateId`>
+  * The `templateId` is the link in the sub navigation section.
+  * The `templateId` has to be unique among the templates
+
 #### #1 TextCenterAlignedWithCardGrid
 
 Template Name: "TextCenterAlignedWithCardGrid"
@@ -179,7 +186,6 @@ Template Name: "TextImageSideBySideWithCardGrid"
       detailsWithoutImageRow1: [
         {
           title: 'Card Title 1',
-          imageUrl:'',
           description: 'Card element description, with limited size.',
           readMore: '',
           readMoreTitle: 'Details',
@@ -187,7 +193,6 @@ Template Name: "TextImageSideBySideWithCardGrid"
         },
         {
           title: 'Card Title 2',
-          imageUrl: '',
           description: 'Card element description, with limited size.',
           readMore: '',
           readMoreTitle: 'Details',
@@ -195,7 +200,6 @@ Template Name: "TextImageSideBySideWithCardGrid"
         },
         {
           title: 'Card Title 3',
-          imageUrl: '',
           description: 'Card element description, with limited size.',
           readMore: '',
           readMoreTitle: 'Details',
@@ -238,7 +242,7 @@ Template Name: "TextVideoSideBySide"
 
 #### #5 Video-Text-Side-By-Side 
 
-Template Name: "TextVideoSideBySide"
+Template Name: "VideoTextSideBySide"
 <br>
 
 <img width="1080" alt="image" src="https://user-images.githubusercontent.com/94133633/211922905-875e8531-17b4-467d-8c83-5215a1d86f4d.png">
@@ -253,7 +257,7 @@ Template Name: "TextVideoSideBySide"
       videoUrl: 'https://www.youtube.com/embed/g-NVjP2srw4',
       id: 'intro-id',
       backgroundColor: '#FFFFFF',
-      template: 'TextVideoSideBySide',
+      template: 'VideoTextSideBySide',
     },
   
 </details>
