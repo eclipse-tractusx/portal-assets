@@ -338,9 +338,23 @@ Template Name: "TextImageSideBySide"
 <br>
 
 
-### Implementation
+### Implementation  
 
-Input from Mano needed. What do we need to do, if a new introduction page - e.g. a new Use Case is planned to get created.
+To create a new page or enhance an existing page, the following steps need to get performed
+<br>
+
+#### New Page creation
+If a complete new page with the usage static data templates is planned, the page need to get introduced inside the portal frontend repo as well as inside the asset repo.
+The frontend repo is needed to introduce the page, permissions to the page as well as the navigation.
+
+<br>
+<br>
+
+#### Enhancing an existing page
+For enhancing an existing page, the asset files insidide the asset repo => /public/assets/content/de/.... need to get enhanced.
+Please ensure that you extend all language files and not only one.
+
+By adding a new template (as mentioned above) inside the content files, the portal page will get automatically extended by the new content.
 
 <br>
 <br>
