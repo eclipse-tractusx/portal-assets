@@ -4,24 +4,13 @@ The service marketplace is providing a list of services (such as consultancy but
 
 Beside the generic list, services can get viewed in specific pre-configured views
 
-* Consultant Services
-* Dataspace Services
-additionally user can select service details to display additional information for a specific selected service
-
 <br>
 <br>
 
-# Functionality
+Links:  
 
-### Service Marketplace Overview
-
-<img width="583" alt="image" src="https://user-images.githubusercontent.com/94133633/211114836-8168354a-a933-4314-ae73-00393cdb3113.png">
-
-<br>
-
-### Service Marketplace - Service Details
-
-<img width="1471" alt="image" src="https://user-images.githubusercontent.com/94133633/211170242-a9e40b4c-b500-495b-a293-0774908c0dca.png">
+[Design](/docs/Service(s)/Marketplace/Design.md)  
+[FAQ](/docs/Service(s)/Marketplace/FAQ.md)
 
 <br>
 <br>

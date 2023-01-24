@@ -7,16 +7,17 @@ Till that, the service publication is only available via api endpoints. Users ca
 <br>
 <br>
 
-# Design
+Links:  
 
-![Tag](https://img.shields.io/static/v1?label=&message=ImplementationOngoing&color=yellow&style=flat)
+[Design](/docs/Service(s)/Release-Process/Design.md)  
+[FAQ](/docs/Service(s)/Subscription/FAQ.md)
 
 <br>
 <br>
 
 # Implementation
 
-### #1 POST Service Office Request
+### #1 Create Service Offering
 
 Service provider can create a new service offer. The endpoint validates
 <br>
@@ -34,7 +35,7 @@ Request body:
 <br>
 <br>
 
-### #2 Update a service offering
+### #2 Update Service Offering
 
 Service Providers are able to update their own service offering by calling the put endpoint.
 <br>
@@ -52,7 +53,7 @@ Request body:
 <br>
 <br>
 
-### #3 Submit the service for release/publishing
+### #3 Submit new Service Offering for release/publishing
 
 The endpoint is used to submit a service for release/publish validation by the operator of the marketplace.  
 Services created by a company can get pushed to the "In Review" state of the service is owned by the company and all respective needed data inputs are filled.
