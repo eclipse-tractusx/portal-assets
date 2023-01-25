@@ -1,3 +1,18 @@
+## 1.0.0-RC2
+
+### Change
+* Documentation v2 released
+
+### Feature
+* Static page contents for portal company role and use case introductions released as part of assets/contents
+
+### Technical Support
+* n/a
+
+### Bugfix
+* n/a
+
+
 ## 1.0.0-RC1
 
 ### Change
