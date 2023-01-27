@@ -328,7 +328,7 @@ class Main extends Viewable {
     }
 
     loadData() {
-        fetch('data/tree.js')
+        fetch('data/Tree.js')
             .then(response => response.json())
             .then(state.setData.bind(state))
     }
