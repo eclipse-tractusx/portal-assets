@@ -1,0 +1,18 @@
+{
+  "name": "tx-portal-assets",
+  "version": "0.0.1",
+  "description": "Shared frontend content and static assets for the Catena-X Portal",
+  "main": "index.js",
+  "repository": "git@github.com:catenax-ng/tx-portal-assets.git",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "directory-tree": "^3.5.1",
+    "http-server": "^14.1.1"
+  },
+  "scripts": {
+    "build:docs": "directory-tree docs > ./public/documentation/data/tree.js",
+    "start": "yarn run open",
+    "open": "concurrently \"http-server -a localhost -p 3000\" \"open http://localhost:3000/\""
+  }
+}
