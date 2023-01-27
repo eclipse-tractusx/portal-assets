@@ -1,0 +1,94 @@
+/********************************************************************************
+ * Copyright (c) 2021-2023 Contributors to the Eclipse Foundation
+ *
+ * See the NOTICE file(s) distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Apache License, Version 2.0 which is available at
+ * https://www.apache.org/licenses/LICENSE-2.0.
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations
+ * under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ ********************************************************************************/
+
+zero-md {
+    margin: 0px;
+}
+
+section.chapter {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul {
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    list-style-type: none;
+}
+
+article.content,
+nav.navigation ul {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+}
+
+nav.navigation ul {
+    background-image: url(/assets/images/logos/cx-text.svg);
+    background-position: 20px 20px;
+    background-repeat: no-repeat;
+    background-size: auto 40px;
+    padding: 100px 16px 16px 16px;
+    width: 240px;
+    position: fixed;
+}
+
+nav.navigation ul li {
+    margin: 16px 0;
+}
+
+nav.breadcrumb ul {
+    margin-bottom: 30px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+}
+
+nav.breadcrumb ul li {
+    margin-right: 20px;
+}
+
+nav.breadcrumb ul li::before {
+    color: lightgray;
+    content: '» ';
+}
+
+nav ul li a {
+    cursor: pointer;
+    color: rgb(15, 113, 203);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #004488;
+}
+
+nav ul li a:active {
+    color: blue;
+}
+
+article.content {
+    padding: 40px 60px 60px 60px;
+    max-width: 800px;
+    min-width: 800px;
+    margin-left: 280px;
+}
