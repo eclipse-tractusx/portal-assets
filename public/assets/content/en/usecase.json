@@ -20,7 +20,7 @@
       {
         "title": "Core Values of Catena-X represented in Traceability",
         "description": "",
-        "imageUrl": "traceability_core_values.png",
+        "imageUrl": "traceability_core_values(en).png",
         "backgroundColor": "#F9F9F9",
         "id": "core-id",
         "template": "TextImageCenterAligned"
@@ -28,7 +28,7 @@
       {
         "title": "How to contribute to Traceability and why?",
         "description": "",
-        "imageUrl": "traceability_contribution.png",
+        "imageUrl": "traceability_contribution(en).png",
         "backgroundColor": "#F9F9F9",
         "id": "contribution-id",
         "template": "TextImageCenterAligned"
@@ -36,7 +36,7 @@
       {
         "title": "Brief explanation of most important terms",
         "description": "",
-        "imageUrl": "traceability_terms.png",
+        "imageUrl": "traceability_terms(en).png",
         "backgroundColor": "#F9F9F9",
         "id": "context-id",
         "template": "TextImageCenterAligned"
@@ -44,7 +44,7 @@
       {
         "title": "Traceability subdivides the data models for each life cycle phase",
         "description": "",
-        "imageUrl": "traceability_datamodels.png",
+        "imageUrl": "traceability_datamodels(en).png",
         "backgroundColor": "#F9F9F9",
         "id": "details-id",
         "template": "TextImageCenterAligned"
@@ -52,7 +52,7 @@
       {
         "title": "Details to the data exchange",
         "description": "",
-        "imageUrl": "traceability_dataexchange.png",
+        "imageUrl": "traceability_dataexchange(en).png",
         "backgroundColor": "#F9F9F9",
         "id": "details2-id",
         "template": "TextImageCenterAligned"
