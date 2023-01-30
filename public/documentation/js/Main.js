@@ -145,7 +145,7 @@ class ChapterCard extends Viewable {
 
     getImage(name) {
         return addEvents(
-            N('img', null, { alt: name, src: `images/lib.png`}),
+            N('img', null, { alt: name, src: `images/lib.png` }),
             {
                 error: (e) => { e.target.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' }
             }
@@ -167,13 +167,42 @@ class Chapters extends Viewable {
     }
 
     dataChanged(data) {
-        console.log('chapters', data)
-        this.items.appendChild(
+        //console.log('chapters', data)
+        clear(this.items)
+        return this.items.appendChild(
             N('ul', data.children.map((chapter) => N('li', new ChapterCard(chapter))))
         )
     }
 
 }
+
+class ReleaseSelection extends Viewable {
+
+    constructor() {
+        super()
+        state.addReleasesListener(this)
+        this.view = N('div', null, { class: 'release-selection' })
+    }
+
+    createItem(item) {
+        return N('option', item.name, { value: item.name, ...(item.name === state.releaseSelection ? { selected: 'selected' } : {}) })
+    }
+
+    releasesChanged(releases) {
+        return this.clear().append(
+            addEvents(
+                N('select', releases.map(item =>
+                    this.createItem(item))
+                ),
+                {
+                    change: (e) => { state.setReleaseSelection(e.target.value) }
+                }
+            )
+        )
+    }
+
+}
+
 
 class Breadcrumb extends Viewable {
 
@@ -183,9 +212,9 @@ class Breadcrumb extends Viewable {
     }
 
     createItem(item) {
-        return N('li', 
+        return N('li',
             addEvents(
-                N('a', item.name),
+                N('a', item.name, { disabled: 'disabled' }),
                 {
                     click: () => {
                         state.setSelection(item.path)
@@ -196,7 +225,7 @@ class Breadcrumb extends Viewable {
     }
 
     selectionChanged(selection, content) {
-        const list = [ content ]
+        const list = [content]
         while (list[0].parent) {
             list.unshift(list[0].parent)
         }
@@ -211,11 +240,25 @@ class Navigation extends Viewable {
 
     constructor() {
         super()
-        this.view = N('nav', null, { class: 'navigation' })
+        state.addMenuOpenListener(this)
+        this.menu = N('ul')
+        this.toggle = this.createToggleButton()
+        this.view = N('nav', [this.menu, this.toggle], { class: 'menu open' })
+    }
+
+    createToggleButton() {
+        return addEvents(
+            N('button'),
+            {
+                click: () => {
+                    state.setMenuOpen(!state.menuOpen)
+                }
+            }
+        )
     }
 
     createItem(item) {
-        return N('li', 
+        return N('li',
             addEvents(
                 N('a', item.name),
                 {
@@ -228,17 +271,20 @@ class Navigation extends Viewable {
     }
 
     selectionChanged(selection, content) {
-        return this.clear().append(
-            N('ul',
-                [
-                    this.createItem({ path: ROOT }),
-                    this.createItem(content)
-                ].concat(content.children
-                    ? content.children.map((child) => this.createItem(child))
-                    : ['']
-                )
-            )
-        )
+        clear(this.menu);
+        [
+            //this.createItem({ path: ROOT }),
+            //this.createItem(content)
+        ].concat(content.children
+            ? content.children.map((child) => this.createItem(child))
+            : [document.createTextNode('')]
+        ).forEach(item => this.menu.appendChild(item))
+        return this
+    }
+
+    menuOpenChanged(menuOpen) {
+        this.view.className = `menu ${menuOpen ? 'open' : 'closed'}`
+        return this
     }
 
 }
@@ -247,20 +293,27 @@ class Content extends Viewable {
 
     constructor() {
         super()
+        state.addMenuOpenListener(this)
         this.breadcrumb = new Breadcrumb()
-        this.view = N('article', null, { class: 'content' })
+        this.view = N('article', null, { class: 'content small' })
     }
 
-    selectionChanged(selection, content) {        
+    selectionChanged(selection, content) {
         return this.clear()
             .append(this.breadcrumb.selectionChanged(selection, content))
             .append(this.renderArticle(content))
+        return this
+    }
+
+    menuOpenChanged(menuOpen) {
+        this.view.className = menuOpen ? 'content small' : 'content large'
+        return this
     }
 
     renderArticle(content) {
         return content.children
             ? ''
-            : N('zero-md', null, { src: `https://raw.githubusercontent.com/catenax-ng/tx-portal-assets/main/${content.path}` })
+            : N('zero-md', null, { src: `https://raw.githubusercontent.com/catenax-ng/tx-portal-assets/${state.releaseSelection}/${content.path}` })
     }
 
 }
@@ -274,7 +327,7 @@ class Chapter extends Viewable {
         this.view = N('section', [
             this.navigation,
             this.content
-        ],  { class: 'chapter' })
+        ], { class: 'chapter' })
     }
 
     selectionChanged(selection, content) {
@@ -301,6 +354,7 @@ class Header extends Viewable {
             'header',
             [
                 N('div', null, { class: 'logo' }),
+                new ReleaseSelection(),
             ]
         )
     }
@@ -320,15 +374,22 @@ class Main extends Viewable {
 
     constructor() {
         super()
+        state.addReleaseSelectionListener(this)
         state.addSelectionListener(this)
         this.chapters = new Chapters()
         this.chapter = new Chapter()
         this.view = N('main', this.chapters)
-        this.loadData()
+        this.loadReleases()
     }
 
-    loadData() {
-        fetch('data/Tree.js')
+    loadReleases() {
+        fetch('data/Releases.json')
+            .then(response => response.json())
+            .then(state.setReleases.bind(state))
+    }
+
+    releaseSelectionChanged(releaseSelection) {
+        fetch(`data/${releaseSelection}/Tree.json`)
             .then(response => response.json())
             .then(state.setData.bind(state))
     }
@@ -365,7 +426,7 @@ class NavTools {
         const url = new URL(window.location)
         const path = url.searchParams.get('path')
         if (path !== item.path) {
-            console.log('path', path, item.path)
+            //console.log('path', path, item.path)
             url.searchParams.set('path', item.path)
             const title = `CX Docs - ${item.name}`
             window.history.pushState({}, title, url)
@@ -377,19 +438,32 @@ class NavTools {
 
 class State {
 
+    listener = {
+        data: [],
+        selection: [],
+        menuOpen: [],
+        releases: [],
+        releaseSelection: [],
+    }
+
     data = {}
-    dataListener = []
     pendingSelection = undefined
     selection = undefined
-    selectionListener = []
+    menuOpen = true
+    releases = undefined
+    releaseSelection = 'main'
 
-    addDataListener(listener) {
-        this.dataListener = [...new Set([...this.dataListener, ...(typeof listener === 'Array' ? listener : [listener])])]
+    addListener(key, listener) {
+        this.listener[key] = [...new Set([...this.listener[key], ...(typeof listener === 'Array' ? listener : [listener])])]
         return this
     }
 
+    addDataListener(listener) {
+        return this.addListener('data', listener)
+    }
+
     fireDataChanged() {
-        this.dataListener.forEach(l => l.dataChanged(this.data))
+        this.listener.data.forEach(l => l.dataChanged(this.data))
         return this
     }
 
@@ -408,12 +482,12 @@ class State {
     }
 
     addSelectionListener(listener) {
-        this.selectionListener = [...new Set([...this.selectionListener, ...(typeof listener === 'Array' ? listener : [listener])])]
+        this.addListener('selection', listener)
         return this
     }
 
     fireSelectionChanged() {
-        this.selectionListener.forEach(l => l.selectionChanged(
+        this.listener.selection.forEach(l => l.selectionChanged(
             this.selection,
             this.data.map[this.selection]
         ))
@@ -421,7 +495,7 @@ class State {
     }
 
     setSelection(selection) {
-        console.log('selection', selection)
+        //console.log('selection', selection)
         if (selection === this.selection)
             return
         if (!this.data.map) {
@@ -440,6 +514,54 @@ class State {
         return this
     }
 
+    addMenuOpenListener(listener) {
+        return this.addListener('menuOpen', listener)
+    }
+
+    fireMenuOpenChanged() {
+        this.listener.menuOpen.forEach(l => l.menuOpenChanged(this.menuOpen))
+        return this
+    }
+
+    setMenuOpen(menuOpen) {
+        this.menuOpen = menuOpen
+        this.fireMenuOpenChanged(menuOpen)
+        return this
+    }
+
+    addReleasesListener(listener) {
+        return this.addListener('releases', listener)
+    }
+
+    fireReleasesChanged() {
+        this.listener.releases.forEach(l => l.releasesChanged(this.releases))
+        return this
+    }
+
+    setReleases(releases) {
+        this.releases = [{ name: 'main' }].concat(releases.map(item => {
+            item.name = item.ref.split('/').slice(-1)[0]
+            return item
+        }))
+        this.fireReleasesChanged(this.releases)
+        return this
+    }
+
+    addReleaseSelectionListener(listener) {
+        return this.addListener('releaseSelection', listener)
+    }
+
+    fireReleaseSelectionChanged() {
+        this.listener.releaseSelection.forEach(l => l.releaseSelectionChanged(this.releaseSelection))
+        return this
+    }
+
+    setReleaseSelection(releaseSelection) {
+        this.releaseSelection = releaseSelection
+        this.fireReleaseSelectionChanged(releaseSelection)
+        return this
+    }
+
 }
 
 const state = new State()
@@ -450,4 +572,5 @@ window.onload = () => {
         .append(new Main())
         .append(new Footer())
     state.setSelection(NavTools.currentPath())
+    state.setReleaseSelection('main')
 }

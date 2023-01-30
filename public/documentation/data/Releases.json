@@ -1,0 +1,22 @@
+[
+  {
+    "ref": "refs/tags/1.0.0-RC2",
+    "node_id": "REF_kwDOIe7Dt7NyZWZzL3RhZ3MvMS4wLjAtUkMy",
+    "url": "https://api.github.com/repos/catenax-ng/tx-portal-assets/git/refs/tags/1.0.0-RC2",
+    "object": {
+      "sha": "12d52264f28691cc038a7ddad64762eea2b5ebeb",
+      "type": "tag",
+      "url": "https://api.github.com/repos/catenax-ng/tx-portal-assets/git/tags/12d52264f28691cc038a7ddad64762eea2b5ebeb"
+    }
+  },
+  {
+    "ref": "refs/tags/1.0.0-RC1",
+    "node_id": "REF_kwDOIe7Dt7NyZWZzL3RhZ3MvMS4wLjAtUkMx",
+    "url": "https://api.github.com/repos/catenax-ng/tx-portal-assets/git/refs/tags/1.0.0-RC1",
+    "object": {
+      "sha": "0d0026867d57c86dc4a04be45e44016a60a651cb",
+      "type": "tag",
+      "url": "https://api.github.com/repos/catenax-ng/tx-portal-assets/git/tags/0d0026867d57c86dc4a04be45e44016a60a651cb"
+    }
+  }
+]
