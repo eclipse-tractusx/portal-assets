@@ -28,7 +28,7 @@ section.chapter {
     flex-direction: row;
 }
 
-nav ul {
+xnav ul {
     padding-inline-start: 0;
     margin-block-start: 0;
     margin-block-end: 0;
@@ -43,6 +43,7 @@ nav.menu button {
 }
 
 nav.menu {
+    font-size: 12px;
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -86,15 +87,45 @@ nav.menu button:hover {
 }
 
 nav.menu ul {
-    margin: 100px 0px 16px 0px;
+    margin: 0px 0px 16px 0px;
     width: 100%;
 }
 
+nav.menu ul.level1:first-of-type {
+    margin-top: 70px;
+}
+
+nav.menu ul.level1:last-of-type {
+    margin-bottom: 30px;
+}
+
 nav.menu ul li {
-    margin: 16px;
+    margin: 14px;
+}
+
+nav.menu > ul.level1 > li {
+    padding-top: 16px;
+}
+
+nav.menu ul.level1,
+nav.breadcrumb ul {
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    list-style-type: none;
+}
+
+nav.menu ul.level2 {
+    padding-inline-start: 20px;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 nav.breadcrumb ul {
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    list-style-type: none;
     margin-bottom: 30px;
     font-size: 12px;
     display: flex;
@@ -127,8 +158,8 @@ nav ul li a:hover {
     color: #004488;
 }
 
-nav ul li a:active {
-    color: blue;
+nav ul li a.selected {
+    border-bottom: 2px solid rgb(15, 113, 203, 0.7);
 }
 
 article.content {
@@ -146,4 +177,17 @@ article.content.large {
     padding: 40px 60px 60px 60px;
     width: 1072px;
     margin-left: 20px;
+}
+
+ul.subchapter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 60px auto 0px auto;
+    max-width: 1330px;
 }

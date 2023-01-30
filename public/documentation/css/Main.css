@@ -67,6 +67,12 @@ header {
     margin: 20px auto;
 }
 
+.release-selection select {    
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px solid lightgray
+}
+
 /* MAIN */
 
 main {

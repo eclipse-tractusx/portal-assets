@@ -18,6 +18,7 @@
  ********************************************************************************/
 
 const ROOT = 'docs'
+const DEFAULT_BRANCH = 'main'
 
 const append = (n, c) => {
     if (!(c instanceof Array)) c = [c]
@@ -58,6 +59,15 @@ const addEvents = (node, evts) => {
     Object.keys(evts).forEach((key) => node.addEventListener(key, evts[key]))
     return node
 }
+
+const createSelectLink = (item) => addEvents(
+    N('a', item.name.replace(/(_|\.md$)/g, ' '), item.path === state.selection && { class: 'selected' }),
+    {
+        click: () => {
+            state.setSelection(item.path)
+        }
+    }
+)
 
 function debounce(func, timeout = 220) {
     let timer
@@ -128,8 +138,8 @@ class ChapterCard extends Viewable {
         this.view = addEvents(
             N('div',
                 N('div', [
-                    this.getImage(chapter.name),
-                    N('div', chapter.name, { class: 'chapter-card-title' }),
+                    this.getImage(chapter),
+                    N('div', chapter.name.replace(/(_|\.md$)/g, ' '), { class: 'chapter-card-title' }),
                 ], {
                     href: chapter.path
                 }),
@@ -143,9 +153,9 @@ class ChapterCard extends Viewable {
         )
     }
 
-    getImage(name) {
+    getImage(chapter) {
         return addEvents(
-            N('img', null, { alt: name, src: `images/lib.png` }),
+            N('img', null, { alt: chapter.name, src: `images/level-${chapter.level}.png` }),
             {
                 error: (e) => { e.target.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' }
             }
@@ -212,16 +222,7 @@ class Breadcrumb extends Viewable {
     }
 
     createItem(item) {
-        return N('li',
-            addEvents(
-                N('a', item.name, { disabled: 'disabled' }),
-                {
-                    click: () => {
-                        state.setSelection(item.path)
-                    }
-                }
-            )
-        )
+        return N('li', createSelectLink(item))
     }
 
     selectionChanged(selection, content) {
@@ -241,7 +242,7 @@ class Navigation extends Viewable {
     constructor() {
         super()
         state.addMenuOpenListener(this)
-        this.menu = N('ul')
+        this.menu = N('ul', null, { class: 'level1' })
         this.toggle = this.createToggleButton()
         this.view = N('nav', [this.menu, this.toggle], { class: 'menu open' })
     }
@@ -258,25 +259,24 @@ class Navigation extends Viewable {
     }
 
     createItem(item) {
-        return N('li',
-            addEvents(
-                N('a', item.name),
-                {
-                    click: () => {
-                        state.setSelection(item.path)
-                    }
-                }
-            )
-        )
+        return N('li', createSelectLink(item))
+    }
+
+    createSubnav(category) {
+        return N('li', [
+            category.name,
+            N('ul', category.children.map(this.createItem.bind(this)), { class: 'level2' })
+        ])
     }
 
     selectionChanged(selection, content) {
-        clear(this.menu);
-        [
-            //this.createItem({ path: ROOT }),
-            //this.createItem(content)
-        ].concat(content.children
-            ? content.children.map((child) => this.createItem(child))
+        clear(this.menu)
+        let start = content
+        while (start.level > 1) {
+            start = start.parent
+        }
+        [].concat(start.children
+            ? start.children.map(this.createSubnav.bind(this))
             : [document.createTextNode('')]
         ).forEach(item => this.menu.appendChild(item))
         return this
@@ -312,7 +312,7 @@ class Content extends Viewable {
 
     renderArticle(content) {
         return content.children
-            ? ''
+            ? N('ul', content.children.map((chapter) => N('li', new ChapterCard(chapter))), { class: 'subchapter' })
             : N('zero-md', null, { src: `https://raw.githubusercontent.com/catenax-ng/tx-portal-assets/${state.releaseSelection}/${content.path}` })
     }
 
@@ -405,11 +405,12 @@ class Main extends Viewable {
 
 class Transformer {
 
-    static tree2map(map, tree, parent) {
+    static tree2map(map, tree, parent, level) {
         tree.parent = parent
+        tree.level = level
         map[tree.path] = tree
         if (tree.children)
-            tree.children.forEach(child => Transformer.tree2map(map, child, tree))
+            tree.children.forEach(child => Transformer.tree2map(map, child, tree, level + 1))
         return map
     }
 
@@ -429,9 +430,13 @@ class NavTools {
             //console.log('path', path, item.path)
             url.searchParams.set('path', item.path)
             const title = `CX Docs - ${item.name}`
-            window.history.pushState({}, title, url)
+            window.history.pushState(item.path, title, url)
             document.getElementsByTagName('title')[0].firstChild.data = title
         }
+    }
+
+    static popState(e) {
+        state.setSelection(e.state)
     }
 
 }
@@ -451,7 +456,7 @@ class State {
     selection = undefined
     menuOpen = true
     releases = undefined
-    releaseSelection = 'main'
+    releaseSelection = DEFAULT_BRANCH
 
     addListener(key, listener) {
         this.listener[key] = [...new Set([...this.listener[key], ...(typeof listener === 'Array' ? listener : [listener])])]
@@ -470,7 +475,7 @@ class State {
     setData(data) {
         console.log('data', data)
         data.name = 'Home'
-        data.map = Transformer.tree2map({}, data)
+        data.map = Transformer.tree2map({}, data, undefined, 0)
         this.data = data
         this.fireDataChanged(data)
         this.setSelection(this.pendingSelection || this.data.path)
@@ -539,7 +544,7 @@ class State {
     }
 
     setReleases(releases) {
-        this.releases = [{ name: 'main' }].concat(releases.map(item => {
+        this.releases = [{ name: DEFAULT_BRANCH }].concat(releases.map(item => {
             item.name = item.ref.split('/').slice(-1)[0]
             return item
         }))
@@ -566,11 +571,13 @@ class State {
 
 const state = new State()
 
+window.onpopstate = NavTools.popState
+
 window.onload = () => {
     new Page()
         .append(new Header())
         .append(new Main())
         .append(new Footer())
     state.setSelection(NavTools.currentPath())
-    state.setReleaseSelection('main')
+    state.setReleaseSelection(DEFAULT_BRANCH)
 }
