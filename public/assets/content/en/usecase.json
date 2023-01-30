@@ -1,28 +1,98 @@
 {
   "subNavigation": {
     "link1Label": "Intro",
-    "link2Label": "Data Provisioning",
-    "link3Label": "Business Applications"
+    "link2Label": "Core Values",
+    "link3Label": "Details",
+    "link4Label": "Business Applications"
   },
   "traceability": {
     "title": "Traceablity",
-    "description": "...als Basis und integraler Bestandteil zum Aufbau von digitalen Datenketten und Befähiger von datenketten-fokussierter Use Cases",
+    "description": "...as basis for building digital data chains and enabling data chain-focused use cases",
     "sections": [
       {
         "title": "Introduction",
-        "description": "Der Use-Case Rückverfolgbarkeit hat das Ziel, durchgängige Datenketten aufzubauen: vom Rohstoff über Zwischenprodukte bis zum fertigen Fahrzeug beim OEM bzw. dessen Wiederverwertung im Recycling. Partner im Use Case sind sowohl Hersteller von Produkten bis hin zu Automobilherstellern als auch Zulieferer von Material und Teilen.",
+        "description": "The aim of the use case traceability is to establish continuous data chains: from raw materials via components to the finished vehicle at the OEM or its recycling within the recycling company. Partners in the use case include manufacturers of components, automotive manufacturers as well as suppliers of materials and parts.",
         "videoUrl": "https://www.youtube.com/embed/g-NVjP2srw4",
         "id": "intro-id",
         "backgroundColor": "#FFFFFF",
         "template": "TextVideoSideBySide"
       },
       {
-        "title": "How to contribute to traceability and why?",
+        "title": "Core Values of Catena-X represented in Traceability",
         "description": "",
-        "imageUrl": "traceability_why.png",
+        "imageUrl": "traceability_core_values(en).png",
         "backgroundColor": "#F9F9F9",
-        "id": "data-id",
+        "id": "core-id",
         "template": "TextImageCenterAligned"
+      },
+      {
+        "title": "How to contribute to Traceability and why?",
+        "description": "",
+        "imageUrl": "traceability_contribution(en).png",
+        "backgroundColor": "#F9F9F9",
+        "id": "contribution-id",
+        "template": "TextImageCenterAligned"
+      },
+      {
+        "title": "Brief explanation of most important terms",
+        "description": "",
+        "imageUrl": "traceability_terms(en).png",
+        "backgroundColor": "#F9F9F9",
+        "id": "context-id",
+        "template": "TextImageCenterAligned"
+      },
+      {
+        "title": "Traceability subdivides the data models for each life cycle phase",
+        "description": "",
+        "imageUrl": "traceability_datamodels(en).png",
+        "backgroundColor": "#F9F9F9",
+        "id": "details-id",
+        "template": "TextImageCenterAligned"
+      },
+      {
+        "title": "Details to the data exchange",
+        "description": "",
+        "imageUrl": "traceability_dataexchange(en).png",
+        "backgroundColor": "#F9F9F9",
+        "id": "details2-id",
+        "template": "TextImageCenterAligned"
+      },
+      {
+        "title": "Opportunities to participate in Use Case Traceability",
+        "description": "Based on individual company needs, traceability offers various ways to participate in the use case. You can decide for yourself in which role (e.g. data provider and/or data consumer) and to what extent you participate in the use case.",
+        "backgroundColor": "#FFFFFF",
+        "id": "setup-id",
+        "grid": 3,
+        "template": "TextCenterAlignedWithCardGrid",
+        "detailsWithImageRow1": [
+          {
+            "title": "Self/Local Setup",
+            "imageUrl": "rectangle-image.png",
+            "description": "Individual and independent connection to traceability...",
+            "readMore": "",
+            "readMoreTitle": "Direct link (coming soon)",
+            "backgroundColor": "#f9f9f9",
+            "align": "center"
+          },
+          {
+            "title": "Minimal Setup",
+            "imageUrl": "rectangle-image.png",
+            "description": "Use of web services to provide data for traceability..",
+            "readMore": "",
+            "readMoreTitle": "Direct link (coming soon)",
+            "backgroundColor": "#f9f9f9",
+            "align": "center"
+          },
+          {
+            "title": "Complete Setup",
+            "imageUrl": "rectangle-image.png",
+            "description": "Use of business applications with full traceability functions...",
+            "readMore": "",
+            "readMoreTitle": "Direct link (coming soon)",
+            "backgroundColor": "#f9f9f9",
+            "align": "center"
+          }
+        ]
       },
       {
         "title": "Business Applications inside Traceability",
@@ -35,7 +105,7 @@
           {
             "title": "Trace X",
             "imageUrl": "rectangle-image.png",
-            "description": "Ermöglicht die lückenlose Rückverfolgbarkeit von Teilen über die Lieferkette von n.tier – visualisiert detaillierte Informationen über die Komponenten von direkten Lieferanten und Direktkunden.",
+            "description": "Enables seamless traceability of parts across n.tier's supply chain - visualizes...",
             "readMore": "/appdetail/ac1cf001-7fbc-1f2f-817f-bce0572c0007",
             "readMoreTitle": "Get to the app",
             "backgroundColor": "#f9f9f9",
@@ -44,7 +114,7 @@
           {
             "title": "Smart MOM",
             "imageUrl": "rectangle-image.png",
-            "description": "",
+            "description": "Consolidates all production processes and systems to control manufacturing processes...",
             "readMore": "",
             "backgroundColor": "#f9f9f9",
             "align": "center"
@@ -52,7 +122,7 @@
           {
             "title": "SAP BN MT",
             "imageUrl": "rectangle-image.png",
-            "description": "",
+            "description": "is a solution for cross-company supply chain transparency and material traceability...",
             "readMore": "",
             "backgroundColor": "#f9f9f9",
             "align": "center"
@@ -60,38 +130,10 @@
           {
             "title": "Trusted Traceability",
             "imageUrl": "rectangle-image.png",
-            "description": "",
+            "description": "is a fully managed system (software-as-a-service) and enables the introduction of traceability...",
             "readMore": "",
             "backgroundColor": "#f9f9f9",
             "align": "center"
-          }
-        ]
-      },
-      {
-        "title": "Direct Links / What Else Do You Need To Know",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
-        "imageUrl": "rectangle-image.png",
-        "backgroundColor": "#FFFFFF",
-        "grid": 2,
-        "id": "section-one",
-        "template": "TextCenterAlignedWithLinkButtonGrid",
-        "linksRow1": [
-          {
-            "background": "#C498EF63",
-            "title": "Get more details to the use case",
-            "navigate": "/help/traceability"
-          },
-          {
-            "background": "#C498EF63",
-            "title": "Sample Name",
-            "navigate": "/help/traceability"
-          }
-        ],
-        "linksRow2": [
-          {
-            "background": "#C498EF63",
-            "title": "Sample Name",
-            "navigate": "/help/traceability"
           }
         ]
       }
