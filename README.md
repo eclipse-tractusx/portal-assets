@@ -1,3 +1,9 @@
 # Catena-X Portal Assets
 
-This repository containes the documenation and static image content for Catena-X Portal.
+This repository contains the documenation and static image content for Catena-X Portal.
+
+Steps to run local
+
+    yarn
+    yarn build:docs
+    yarn start
