@@ -28,8 +28,8 @@ Following interfaces are relevant to enable the autosetup
 
 ## Implementation
 
-### #1 POST Service URL
-The post service url is enabling the service / app provider to store/hold the service partner / app partner autosetup url.
+### #1 PUT Service URL
+The PUT service url is enabling the service / app provider to store/hold the service partner / app partner autosetup url.
 <br>
 Logic: the service provider/app provider (must be an cx member) can trigger the endpoint to store the autosetup endpoint.
 <br>
@@ -39,8 +39,11 @@ Logic: the service provider/app provider (must be an cx member) can trigger the 
 <br>
 
 ```diff
-! POST api/administration/serviceprovider/owncompany
+! PUT api/administration/serviceprovider/owncompany
 ```
+
+With the first time calling the endpoint; the url will be set as app/service provider endpoint as a new data set.  
+With any further endpoint triggers; the existing record will get overwritten. Means; the app/service provider can have only one endpoint configured.
 
 <br>
 <br>
