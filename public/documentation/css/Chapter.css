@@ -36,23 +36,62 @@ nav ul {
 }
 
 article.content,
-nav.navigation ul {
+nav.menu,
+nav.menu button {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
 }
 
-nav.navigation ul {
+nav.menu {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    min-height: 800px;
     background-image: url(/assets/images/logos/cx-text.svg);
     background-position: 20px 20px;
     background-repeat: no-repeat;
     background-size: auto 40px;
-    padding: 100px 16px 16px 16px;
-    width: 240px;
-    position: fixed;
+    transition: width 0.1s;
+    white-space: nowrap;
 }
 
-nav.navigation ul li {
-    margin: 16px 0;
+nav.menu.open {
+    width: 272px;
+}
+
+nav.menu.closed {
+    width: 0px;
+}
+
+nav.menu.closed ul {
+    overflow: hidden;
+}
+
+nav.menu button {
+    padding: 2px;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+nav.menu.open button {
+    margin: 20px 0;
+}
+
+nav.menu.closed button {
+    margin: 0;
+}
+
+nav.menu button:hover {
+    background-color: #fdfdfd;
+}
+
+nav.menu ul {
+    margin: 100px 0px 16px 0px;
+    width: 100%;
+}
+
+nav.menu ul li {
+    margin: 16px;
 }
 
 nav.breadcrumb ul {
@@ -66,9 +105,15 @@ nav.breadcrumb ul li {
     margin-right: 20px;
 }
 
+nav.menu.closed button::before,
 nav.breadcrumb ul li::before {
     color: lightgray;
     content: '» ';
+}
+
+nav.menu.open button::before {
+    color: lightgray;
+    content: '«';
 }
 
 nav ul li a {
@@ -87,8 +132,18 @@ nav ul li a:active {
 }
 
 article.content {
+    min-height: 800px;
+    transition: all 0.1s;
+}
+
+article.content.small {
     padding: 40px 60px 60px 60px;
-    max-width: 800px;
-    min-width: 800px;
+    width: 800px;
     margin-left: 280px;
+}
+
+article.content.large {
+    padding: 40px 60px 60px 60px;
+    width: 1072px;
+    margin-left: 20px;
 }
