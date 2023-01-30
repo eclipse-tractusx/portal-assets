@@ -263,10 +263,13 @@ class Navigation extends Viewable {
     }
 
     createSubnav(category) {
-        return N('li', [
-            category.name,
-            N('ul', category.children.map(this.createItem.bind(this)), { class: 'level2' })
-        ])
+        return N('li', category.children
+            ? [
+                category.name,
+                N('ul', category.children.map(this.createItem.bind(this)), { class: 'level2' })
+            ]
+            : createSelectLink(category)
+        )
     }
 
     selectionChanged(selection, content) {
