@@ -214,7 +214,7 @@ class Breadcrumb extends Viewable {
     createItem(item) {
         return N('li',
             addEvents(
-                N('a', item.name),
+                N('a', item.name, { disabled: 'disabled' }),
                 {
                     click: () => {
                         state.setSelection(item.path)
@@ -273,8 +273,8 @@ class Navigation extends Viewable {
     selectionChanged(selection, content) {
         clear(this.menu);
         [
-            this.createItem({ path: ROOT }),
-            this.createItem(content)
+            //this.createItem({ path: ROOT }),
+            //this.createItem(content)
         ].concat(content.children
             ? content.children.map((child) => this.createItem(child))
             : [document.createTextNode('')]
@@ -313,7 +313,7 @@ class Content extends Viewable {
     renderArticle(content) {
         return content.children
             ? ''
-            : N('zero-md', null, { src: `https://raw.githubusercontent.com/catenax-ng/tx-portal-assets/main/${content.path}` })
+            : N('zero-md', null, { src: `https://raw.githubusercontent.com/catenax-ng/tx-portal-assets/${state.releaseSelection}/${content.path}` })
     }
 
 }
@@ -389,7 +389,6 @@ class Main extends Viewable {
     }
 
     releaseSelectionChanged(releaseSelection) {
-        console.log('releaseSelection', releaseSelection)
         fetch(`data/${releaseSelection}/Tree.json`)
             .then(response => response.json())
             .then(state.setData.bind(state))
