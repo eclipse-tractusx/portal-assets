@@ -54,6 +54,7 @@ nav.menu.open {
 
 nav.menu.closed {
     width: 0px;
+    max-height: 90vh;
 }
 
 nav.menu.closed ul {
