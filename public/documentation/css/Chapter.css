@@ -157,9 +157,6 @@ nav ul li a.selected {
 article.content {
     min-height: 800px;
     transition: all 0.1s;
-    background-image: url(/assets/images/icons/loading.gif);
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 article.content.small {
