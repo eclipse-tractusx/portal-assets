@@ -4,7 +4,8 @@
     "link2Label": "Core Values",
     "link3Label": "Details",
     "link4Label": "Business Applications"
-  },
+ },
+"traceability": {
   "title": "Traceablity",
   "description": "...als Basis und integraler Bestandteil zum Aufbau von digitalen Datenketten und Befähiger von datenketten-fokussierter Use Cases",
   "sections": [
@@ -136,8 +137,9 @@
           "readMoreTitle": "Get to the app",
           "backgroundColor": "#f9f9f9",
           "align": "center"
-        }
-      ]
-    }
-  ]
+         }
+       ]
+     }
+   ]
+  }
 }
