@@ -64,9 +64,9 @@
           "The 'customer' is the manufacturer of an assembly. He creates a UUID for his manufactured serialized item (item number 5A52429 and serial number 21B294301268) via App B and registers it as a digital twin using the 'SerialPartTypization' aspect model. The assembly relationship with the supplier's batch is established using the 'AssemblyPartRelation' aspect model. He scans the components of the 'SME' and the identified data is linked to the digital twin of its serialized component. On the digital level, a contract is concluded via the EDC connectors of the 'customer' and the 'OEM' to exchange this data. The physical component (e.g. transmission) is then sent to the 'OEM'.",
           "During the assembly process, the OEM scans the parts to link the vehicle (VIN/VAN = Vehicle Identification Number) to the serialized part. The OEM can then find the digital twin of the component with the information about the serial number and item number and thus read out the digital twin via the UUID. He then creates a UUID for his manufactured vehicle and registers it in the Digital Twin Registry as a digital twin and establishes the assembly relationship with the installed part of the 'customer' using the 'AssemblyPartRelation' aspect model."
           ],
-        "id": 'details3-id',
-        "backgroundColor": '#f9f9f9',
-        "template": 'TextCenterAlignedBody2',
+        "id": "details3-id",
+        "backgroundColor": "#f9f9f9",
+        "template": "TextCenterAlignedBody2",
       },
       {
         "title": "Opportunities to participate in Use Case Traceability",
