@@ -94,7 +94,7 @@ In the Step 2 of the publishing process, the app detail page is getting filled
 
 Under Step 3 - the user needs to agree to the terms and conditions of the app publish rules before getting on the marketplace. This section is mandatory and displays areement documents; if any documents are linked to the relevant agreement types
 
-<img width="783" alt="image" src="https://user-images.githubusercontent.com/94133633/215896971-e9d452c6-c4a8-465f-9f8f-20f6ba215d1a.png">
+<img width="580" alt="image" src="https://user-images.githubusercontent.com/94133633/215896971-e9d452c6-c4a8-465f-9f8f-20f6ba215d1a.png">
   
 <br>
 <br>
