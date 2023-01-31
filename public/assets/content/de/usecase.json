@@ -66,7 +66,7 @@
          ],
        "id": "details3-id",
        "backgroundColor": "#f9f9f9",
-       "template": "TextCenterAlignedBody2",
+       "template": "TextCenterAlignedBody2"
       },
       {
         "title": "Möglichkeiten zur Teilnahme am Use Case Traceability",
