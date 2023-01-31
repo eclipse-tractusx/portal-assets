@@ -4,7 +4,8 @@
     "link2Label": "Core Values",
     "link3Label": "Details",
     "link4Label": "Business Applications"
-  },
+ },
+"traceability": {
   "title": "Traceablity",
   "description": "...als Basis und integraler Bestandteil zum Aufbau von digitalen Datenketten und Befähiger von datenketten-fokussierter Use Cases",
   "sections": [
@@ -56,6 +57,17 @@
        "id": "details2-id",
        "template": "TextImageCenterAligned"
      },
+     {
+       "title": "",
+       "subTitles": [
+          "Im Beispiel fertigt ein 'KMU' einen Sensor. Die Bauteile haben eine Sachnummer (PRT-12345) und es handelt sich um Chargenteile (XX1235509). Nach Fertigung der Teile legt das KMU für die produzierte Charge über die App A eine UUID an und registriert diese automatisch in der Digital Twin Registry als Digitalen Zwilling. Hierfür wird das Aspektmodell 'Batch' genutzt. Auf der digitalen Ebene wird über die EDC-Konnektoren des KMU und des Kunden ein Vertrag zum Austausch dieser Daten geschlossen. Die physischen Bauteile (Sensoren) werden anschließend oder parallel an den 'Kunden' verschickt.",
+          "Der 'Kunde' ist Hersteller eines Zusammenbaus und auf der physischen Ebene scannt er die Bauteilen des 'KMUs' im Wareneingang und verbaut diese. Für sein hergestelltes serialisiertes Einzelteil (Sachnummer 5A52429 und Seriennummer 21B294301268) legt er über die App B eine UUID an und registriert diesen als Digitalen Zwilling mit Hilfe des Aspektmodells 'SerialPartTypization'. Die Verbaubeziehung zur Charge des Lieferanten wird über das Aspektmodell AssemblyPartRelation hergestellt. Dabei werden die identifizierten Daten (UUID des KMU) am Digitalen Zwilling seines serialisierten Bauteils verknüpft. Auf der digitalen Ebene wird über die EDC-Konnektoren des 'Kunden' und des 'OEMs' ein Vertrag zum Austausch dieser Daten geschlossen. Das physische Bauteil (Getriebe) wird anschließend oder parallel an den 'OEM' verschickt.",
+          "Der OEM scannt beim Verbau die Teile, um die Verknüpfung von Fahrzeug (VIN/VAN = Vehicle Identification Number) zum serialisierten Teil herzustellen. Danach kann der OEM den Digitalen Zwilling des Bauteils mit der Information zur Serialnummer und Sachnummer finden und somit über die UUID den Digitalen Zwilling auslesen. Anschließend legt er für sein hergestelltes Fahrzeug eine UUID an und registriert diese in der der Digital Twin Registry als Digitalen Zwilling und stellt die Verbaubeziehung zum verbauten Teil des 'Kunden' über das Aspektmodell Assembly Part Relation her."
+         ],
+       "id": "details3-id",
+       "backgroundColor": "#f9f9f9",
+       "template": "TextCenterAlignedBody2"
+      },
       {
         "title": "Möglichkeiten zur Teilnahme am Use Case Traceability",
         "description": "Basierend auf den individuellen Unternehmensbedürfnissen bietet die Traceability unterschiedliche Möglichkeiten am Use Case teilzunehmen. Sie entscheiden selbst in welcher Rolle (bspw. Data Provider und/oder Data Consumer) und in welchem Umfang sie am Use Case teilnehmen.",
@@ -136,8 +148,9 @@
           "readMoreTitle": "Get to the app",
           "backgroundColor": "#f9f9f9",
           "align": "center"
-        }
-      ]
-    }
-  ]
+         }
+       ]
+     }
+   ]
+  }
 }
