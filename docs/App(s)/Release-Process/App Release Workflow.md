@@ -85,7 +85,7 @@ In the Step 2 of the publishing process, the app detail page is getting filled
 * etc.
 
 
-<img width="212" alt="image" src="https://user-images.githubusercontent.com/94133633/211016428-19697dc0-362e-4de9-b955-2feee5f13797.png">
+<img width="750" alt="image" src="https://user-images.githubusercontent.com/94133633/215898791-b832d31c-8c37-4483-af45-53b263c649c4.png">
 
 <br>
 <br>
