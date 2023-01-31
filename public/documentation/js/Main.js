@@ -548,10 +548,11 @@ class State {
     }
 
     setReleases(releases) {
-        this.releases = [{ name: DEFAULT_BRANCH }].concat(releases.map(item => {
-            item.name = item.ref.split('/').slice(-1)[0]
-            return item
-        }))
+        this.releases = [{ name: DEFAULT_BRANCH }]
+            .concat(releases.reverse().map(item => {
+                item.name = item.ref.split('/').slice(-1)[0]
+                return item
+            }))
         this.fireReleasesChanged(this.releases)
         return this
     }
