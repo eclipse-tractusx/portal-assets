@@ -17,8 +17,9 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-const ROOT = 'docs'
+const DOCBASE = 'https://raw.githubusercontent.com/catenax-ng/tx-portal-assets'
 const DEFAULT_BRANCH = 'main'
+const ROOT = 'docs'
 
 const append = (n, c) => {
     if (!(c instanceof Array)) c = [c]
@@ -316,7 +317,7 @@ class Content extends Viewable {
     renderArticle(content) {
         return content.children
             ? N('ul', content.children.map((chapter) => N('li', new ChapterCard(chapter))), { class: 'subchapter' })
-            : N('zero-md', null, { src: `https://raw.githubusercontent.com/catenax-ng/tx-portal-assets/${state.releaseSelection}/${content.path}` })
+            : N('zero-md', null, { src: `${DOCBASE}/${state.releaseSelection}/${content.path}` })
     }
 
 }

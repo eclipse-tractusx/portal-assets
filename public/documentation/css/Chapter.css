@@ -28,13 +28,6 @@ section.chapter {
     flex-direction: row;
 }
 
-xnav ul {
-    padding-inline-start: 0;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    list-style-type: none;
-}
-
 article.content,
 nav.menu,
 nav.menu button {
@@ -164,6 +157,9 @@ nav ul li a.selected {
 article.content {
     min-height: 800px;
     transition: all 0.1s;
+    background-image: url(/assets/images/icons/loading.gif);
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 article.content.small {
