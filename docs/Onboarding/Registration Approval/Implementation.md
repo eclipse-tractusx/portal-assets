@@ -114,7 +114,13 @@ Response Body / Details:
 			      "lastName": "string",
 			      "email": "string"
 			    }
-			  ]
+			  ],
+			  "uniqueIdentifier": [
+                            {
+                              "type": "VAT_ID",
+                              "value": "string"
+                            }
+                          ]
 			}
 
 <br>
