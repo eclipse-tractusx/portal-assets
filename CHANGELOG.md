@@ -1,3 +1,19 @@
+## 1.0.0-RC3
+
+### Change
+* Documentation v3 released (idp/auth developer docu)
+* Use Case introduction content updated and enhanced
+
+### Feature
+n/a
+
+### Technical Support
+n/a
+
+### Bugfix
+n/a
+
+
 ## 1.0.0-RC2
 
 ### Change
