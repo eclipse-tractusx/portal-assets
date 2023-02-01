@@ -1,5 +1,5 @@
 {
-  "name": "tx-portal-assets",
+  "name": "cx-portal-assets",
   "version": "1.0.0-RC3",
   "description": "Shared frontend content and static assets for the Catena-X Portal",
   "main": "index.js",
