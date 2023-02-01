@@ -576,13 +576,18 @@ class State {
 
 const state = new State()
 
-window.onpopstate = NavTools.popState
+addEvents(
+    window, 
+    {
+        popstate: NavTools.popState,
+        load: () => {
+            new Page()
+                .append(new Header())
+                .append(new Main())
+                .append(new Footer())
+            state.setSelection(NavTools.currentPath())
+            state.setReleaseSelection(DEFAULT_BRANCH)
+        }
+    }
+)
 
-window.onload = () => {
-    new Page()
-        .append(new Header())
-        .append(new Main())
-        .append(new Footer())
-    state.setSelection(NavTools.currentPath())
-    state.setReleaseSelection(DEFAULT_BRANCH)
-}
