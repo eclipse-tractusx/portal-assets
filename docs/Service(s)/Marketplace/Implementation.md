@@ -115,6 +115,46 @@ Data mapping logic:
 ```
 
 <br>
+
+     {
+       "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+       "title": "string",
+       "provider": "string",
+       "contactEmail": "string",
+       "description": "string",
+       "price": "string",
+       "offerSubscriptionDetailData": [
+         {
+           "offerSubscriptionId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+           "offerSubscriptionStatus": "PENDING"
+         }
+       ],
+       "serviceTypeIds": [
+         "DATASPACE_SERVICE"
+       ],
+       "documents": {
+         "additionalProp1": [
+           {
+             "documentId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+             "documentName": "string"
+           }
+         ],
+         "additionalProp2": [
+           {
+             "documentId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+             "documentName": "string"
+           }
+         ],
+         "additionalProp3": [
+           {
+             "documentId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+             "documentName": "string"
+           }
+         ]
+       }
+     }
+
+<br>
 <br>
 
 
