@@ -1,6 +1,6 @@
 {
   "name": "tx-portal-assets",
-  "version": "0.0.1",
+  "version": "1.0.0-RC3",
   "description": "Shared frontend content and static assets for the Catena-X Portal",
   "main": "index.js",
   "repository": "git@github.com:catenax-ng/tx-portal-assets.git",
