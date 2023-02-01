@@ -43,7 +43,7 @@ In order to have an up-to-date list, of the used third-party libraries, the depe
 For the frontend repositories this can be done by running the following statement:
 
 ```bash
-    yarn licenses list > DEPENDENCIES
+yarn licenses list > DEPENDENCIES
 ```
 
 For the backend repository the dependencies file can be updated by running the following statements:
