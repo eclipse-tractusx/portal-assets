@@ -87,34 +87,212 @@ Request Body:
 <br>
 <br>
 
-###### Details "Create Business Partner Number (if necessary)"
+##### Details "Create Business Partner Number (if necessary)"
 <br>
+The status "Business_Partner_Number" is getting updated based on the application registration content.
+
+<br>
+
+###### Scenario 1 - Registration with BPN
+
+If the registration application is getting submitted by the registration party for approval with an BPN, the checklist item "Business Partner Number" is getting set to "DONE".
+In this case; nothing is needed anymore regarding the business partner number checklist item.
+<br>
+<br>
+
+###### Scenario 2 - Registration without BPN
+
+If the registration application is getting submitted by the registration party for approval <strong>without an BPN</strong>, the checklist item "Business Partner Number" is kept in status "TO_DO"
+
+In this case; the checklist item worker will fetch the application when running and submit the company data of the registration company to the business partner golden record gateway to validate the record and to generate a business partner number.
+<br>
+
+```diff
+! POST /api/administration/registration/application/{applicationId}/trigger-bpn
+```
+
+the checklist item "Business Partner Number" is getting set to "IN_PROGRESS", till a BPN is received (currently not yet implemented)
+<br>
+<br>
+
+    Please note - in the current implementation the bpn gate response does mainly handle success scenarios. In the Scenario of an fail (due to incorrect/not matching company data) the failure response is not yet available and will be delivered by the bpdm product team asap.
+
+<br>
+
+###### Scenario 3 - manually add BPN as operator (interim supported workflow)
+
+For the interim process of the need to add the BPN of the new CX participant manually, the operator can use the endpoint to add the business partner number to the application.
+This endpoint is an interim endpoint only and supposed to get disabled; as soon as the BPN Gateway is providing a stable feedback on provided company data.
+<br>
+
+```diff
+! POST /api/administration/registration/application/{applicationId}/{bpn}/bpn
+```
+ 
+<br>
+<br>
+
+##### Details "Create Managed Identity Wallet"
+<br>
+After the checklist item "Registration_Verification" status is set to "DONE", as well as the status of the "Business_Partner_Number" automatically the IF to the identity wallet is getting triggered to create the company identity wallet.
+Details to the company identity wallet can get found inside the identity wallet product description.
+
+With triggering the registration; the company name as well as the bpn are getting submitted and stored inside the company wallet.
+
+Depending on the API response, the system will behave in the following way:
+
+- Response "Fail" => store the error message in the checklist table under checklist.comment and set the status to "FAILED"
+- Response "Success" => set status to "DONE" and store the did provided by the response body inside the comment attribute inside the table checklist.comment
+
+
+    Please note: the scenario of "bring your own company wallet" is currently not supported and will get rechecked in H2 2023.
 
 <br>
 <br>
 
-###### Details "Create Managed Identity Wallet"
+##### Details "Clearinghouse Check"
 <br>
+The "Clearinghouse Check" is getting automatically triggered when following pre-requisites are fullfilled: 
+<br>
+
+* application checklist status "Business_Partner_Number" = "DONE"
+* application checklist status "Registration_Verification" = "DONE"
+* application checklist status "Identity_Wallet" = "DONE"
+* application is in status "submitted"
+<br>
+
+<img width="450" alt="image" src="https://user-images.githubusercontent.com/94133633/216144714-07d07704-7ee8-4f71-b2f3-b6b2767ea87c.png">
+<br>
+
+The interface is an asyncron interface - due to this; the interface is explained below in two steps
+ 
+###### Step 1 - manually add BPN as operator (interim supported workflow)
+
+```diff
+PUT /api/administration/registration/application/{applicationId}/trigger-clearinghouse
+```
+
+Submitted body to clearinghouse endpoint (content is created on backend side only; no FE interaction)
+
+        {       
+           "participantDetails": {
+                "name": "string",
+                "city": "string",
+                "street": "string",
+                "bpn": "string",
+                "region": "string",
+                "zipCode": "string",
+                "country": "string",
+                "countryAlpha2Code": "string"
+               },
+           "identityDetails": {
+                "did": "string",
+                "uniqueIds": [ 
+                        {
+                           "type": "string",
+                           "value": "string"
+                         }
+                       ]
+               }
+          } 
+ 
+<br>
+<br>
+
+###### Step 2 - Clearinghouse response
+
+In the asyncron call of the clearinhouse check; the portal provices an POST endpoint, which can get triggered by the clearinghouse to update the checklist status.  
+<br>
+
+the clearinghouse need to be able to store an fail/success message. the message is supposed to get stored inside the checklist comment of the record attribute "clearing_house"
+<br>
+
+```diff
+! PUT ????
+```
+
+        {
+          "bpn": "string",
+          "status": "string",
+          "message": "string"
+        }
+ 
+
+The bpn inside the request body is used to fetch the correct application Id. (application in status "submitted")
+The status can only get changed/updated; if the status of the application checklist attribute "clearing_house" is "IN_PROGRESS".
 
 <br>
 <br>
 
-###### Details "Clearinghouse Check"
+##### Details "Self-Description Creation LegalPerson"
 <br>
+The "Self_Description_Legal_Person" is getting automatically triggered when following pre-requisites are fullfilled: 
+<br>
+
+* application checklist status "Business_Partner_Number" = "DONE"
+* application checklist status "Registration_Verification" = "DONE"
+* application checklist status "Identity_Wallet" = "DONE"
+* application checklist status "Clearinghouse_Check" = "DONE"
+* application checklist status "Self_Description_LP" = "TO_DO"
+* application is in status "submitted"
+<br>
+
+with the endpoint; the SD Factory is getting triggered and a self description of the legal person is getting submitted back. The portal backend is storing the self-description inside the portal db linked to the company.
+<br>
+
+With triggering the endpoint, the status of the checklist item "Self_Description_LP" is set to "IN_PROGRESS"
+<br>
+
+Response "Error" => store the error message in the checklist table under checklist.comment and set the status to "FAILED"  
+Response "Success" => set status to "DONE"
+ 
+
+
+        "registratioNumber": [
+                     
+             { 
+               "type":"technicalKey",
+               "value":"value from db"
+             }
+           ]
+  
+ 
+###### DB Table Content
+ 
+ID  | Portal DB Key  | Interface Key for SD 
+------------- | ------------- | -------------
+1  | COMMERCIAL_REG_NUMBER  | local
+2  | VAT_ID  | vatID
+3  | LEI_CODE  | leiCode
+4  | VIES  | EUID
+5  | EORI  | EORI
 
 <br>
 <br>
 
-###### Details "Self-Description Creation LegalPerson"
+##### Details "Activation"
+<br>
+The complete company account activation (as result of the successful application checklist finalization) is automatically executed when following pre-requisites are fullfilled: 
 <br>
 
-<br>
+* application checklist status "Business_Partner_Number" = "DONE"
+* application checklist status "Registration_Verification" = "DONE"
+* application checklist status "Identity_Wallet" = "DONE"
+* application checklist status "Clearinghouse_Check" = "DONE"
+* application checklist status "Self_Description_LP" = "DONE"
+* application is in status "submitted"
 <br>
 
-###### Details "Activation"
-<br>
+With the execution of the application activation, the system will:
 
-
+* set company status inside portal.companies to "ACTIVE"
+* set application status inside portal.company_application to"CONFIRMED"
+* set company_application time stamp
+* set invitation of all users to "CLOSED"
+* set invitation time stamp
+* update user roles (portal db and keycloak)
+* add bpn to user(s)
+* send welcome email
 
 <br>
 <br>
