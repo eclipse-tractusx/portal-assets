@@ -261,10 +261,21 @@ class Content extends Viewable {
             {
                 click: (e) => {
                     e.preventDefault()
-                    state.setSelection(decodeURI(link.href).replace(`${Settings.DOCBASE}/${state.releaseSelection}/`, '').replace(/\/$/,''))
+                    const path = decodeURI(link.href).replace(`${Settings.DOCBASE}/${state.releaseSelection}/`, '').replace(/\/$/,'')
+                    e.target.href = `.?path=${path}`
+                    //console.log(link.href, path)
+                    state.setSelection(path)
                 }
             }
         ))
+        const h = root.querySelectorAll('h1, h2, h3, h4, h5');
+        [...h].map(item => {
+            item.onclick = () => {
+                history.replaceState({}, document.getElementsByTagName('title').content, location.href.split('#')[0]+(item.id ? '#'+item.id: ''))
+                item.scrollIntoView()
+            }
+            item.style.cursor = 'pointer'
+        })
     }
 
     renderMD(content) {
