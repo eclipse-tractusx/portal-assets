@@ -18,11 +18,8 @@
  ********************************************************************************/
 
 import { clear, addEvents, N, Viewable, NavTools } from "./Toolkit.js"
-import { State } from "./State.js"
-
-const DOCBASE = 'https://raw.githubusercontent.com/catenax-ng/tx-portal-assets'
-const DEFAULT_BRANCH = 'main'
-const ROOT = 'docs'
+import { state } from "./State.js"
+import { Settings } from "./Settings.js"
 
 const createSelectLink = (item) => addEvents(
     N('a', item.name.replace(/(_|\.md$)/g, ' '), item.path === state.selection && { class: 'selected' }),
@@ -275,7 +272,7 @@ class Content extends Viewable {
     }
 
     renderMD(content) {
-        this.zeromd = N('zero-md', null, { src: `${DOCBASE}/${state.releaseSelection}/${content.path}` })
+        this.zeromd = N('zero-md', null, { src: `${Settings.DOCBASE}/${state.releaseSelection}/${content.path}` })
         this.checkLoadedCount = 0
         //this.checkLoadedTimer = setInterval(this.checkLoaded.bind(this), 500)
         return this.zeromd
@@ -328,12 +325,12 @@ class App extends Viewable {
         console.log(this.clazz, 'loadReleases')
         fetch('data/Releases.json')
             .then(response => response.json())
-            .then((releases) => state.setReleases([{ ref: `/${DEFAULT_BRANCH}` }].concat(releases.reverse())))
+            .then((releases) => state.setReleases([{ ref: `/${Settings.DEFAULT_BRANCH}` }].concat(releases.reverse())))
     }
 
     releasesChanged(releases) {
         console.log(this.clazz, 'releasesChanged', releases)
-        state.setReleaseSelection(DEFAULT_BRANCH)
+        state.setReleaseSelection(Settings.DEFAULT_BRANCH)
     }
 
     releaseSelectionChanged(releaseSelection) {
@@ -387,7 +384,7 @@ class Main extends Viewable {
 
     selectionChanged(selection, content) {
         console.log(this.clazz, 'selectionChanged', selection)
-        return this.clear().append(selection === ROOT
+        return this.clear().append(selection === Settings.ROOT
             ? this.chapters
             : this.chapter.selectionChanged(selection, content)
         )
@@ -395,12 +392,10 @@ class Main extends Viewable {
 
 }
 
-const state = new State()
-
 addEvents(
     window,
     {
-        popstate: NavTools.popState,
+        popstate: (e) => state.setSelection(e.state, undefined),
         load: () => {
             new App()
                 .append(new Header())

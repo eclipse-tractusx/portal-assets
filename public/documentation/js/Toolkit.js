@@ -105,10 +105,6 @@ export class NavTools {
         }
     }
 
-    static popState(e) {
-        state.setSelection(e.state, undefined)
-    }
-
 }
 
 export class Transformer {

@@ -18,8 +18,9 @@
  ********************************************************************************/
 
 import { NavTools, Transformer } from './Toolkit.js'
+import { Settings } from './Settings.js'
 
-export class State {
+class State {
 
     clazz = 'State'
 
@@ -79,7 +80,7 @@ export class State {
 
     setSelection(selection, hash) {
         console.log(this.clazz, 'setSelection', selection, hash)
-        selection = (this.data.map && this.data.map.hasOwnProperty(selection)) ? selection : ROOT
+        selection = (this.data.map && this.data.map.hasOwnProperty(selection)) ? selection : Settings.ROOT
         if (selection === this.selection)
             return
         const content = this.getItem(selection)
@@ -138,3 +139,5 @@ export class State {
     }
 
 }
+
+export const state = new State()
