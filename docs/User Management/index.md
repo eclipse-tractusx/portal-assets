@@ -2,7 +2,7 @@
 
 User accounts are the basic entities to access resources in Catena-X.
 Learn how to manage different kinds of user accounts in the Catena-X Portal.
-Read more details in the sections:
+Read more details in the following sections:
 
 - [User Account](./1%20User%20Account/)
 - [Edit User Account](./2%20Edit%20User%20Account/)
