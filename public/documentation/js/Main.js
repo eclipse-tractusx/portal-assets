@@ -1,5 +1,5 @@
 /********************************************************************************
- * Copyright (c) 2021-2023 Contributors to the Eclipse Foundation
+ * Copyright (c) 2021, 2023 Contributors to the Eclipse Foundation
  *
  * See the NOTICE file(s) distributed with this work for additional
  * information regarding copyright ownership.
@@ -17,55 +17,18 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
+import { clear, addEvents, N, Viewable, NavTools } from "./Toolkit.js"
+import { State } from "./State.js"
+
 const DOCBASE = 'https://raw.githubusercontent.com/catenax-ng/tx-portal-assets'
 const DEFAULT_BRANCH = 'main'
 const ROOT = 'docs'
-
-const append = (n, c) => {
-    if (!(c instanceof Array)) c = [c]
-    for (let i in c) {
-        const tc = typeof c[i]
-        if (tc !== 'undefined')
-            try {
-                n.appendChild(
-                    tc === 'object'
-                        ? (c[i].hasOwnProperty('view') ? c[i].view : c[i])
-                        : document.createTextNode(tc === 'string' ? c[i] : '' + c[i])
-                )
-            } catch (e) {
-                const pre = document.createElement('pre')
-                pre.appendChild(document.createTextNode(JSON.stringify(c[i], null, 4)))
-                n.appendChild(pre)
-            }
-    }
-    return n
-}
-
-const N = (tag, c, att) => {
-    const n = document.createElement(tag)
-    if (att) for (let a of Object.keys(att)) n.setAttribute(a, att[a])
-    if (typeof c === 'undefined' || c === null || c === false) return n
-    return append(n, c)
-}
-
-const remove = (n) => n.parentElement.removeChild(n)
-
-const clear = (n) => {
-    if (!n) return
-    while (n.childNodes.length > 0) n.removeChild(n.firstChild)
-    return n
-}
-
-const addEvents = (node, evts) => {
-    Object.keys(evts).forEach((key) => node.addEventListener(key, evts[key]))
-    return node
-}
 
 const createSelectLink = (item) => addEvents(
     N('a', item.name.replace(/(_|\.md$)/g, ' '), item.path === state.selection && { class: 'selected' }),
     {
         click: () => {
-            state.setSelection(item.path)
+            state.setSelection(item.path, undefined)
         }
     }
 )
@@ -79,31 +42,6 @@ function debounce(func, timeout = 220) {
 }
 
 const processChange = debounce((e) => Selector.filter(e))
-
-class Viewable {
-
-    getView() {
-        return this.view
-    }
-
-    append(c) {
-        append(this.getView(), c)
-        //this.getView().appendChild(typeof p instanceof HTMLElement ? p : p.getView())
-        return this
-    }
-
-    appendTo(p) {
-        append(p, this.getView())
-        //(p instanceof HTMLElement ? p : p.getView()).appendChild(this.getView())
-        return this
-    }
-
-    clear() {
-        clear(this.view)
-        return this
-    }
-
-}
 
 class SearchInput extends Viewable {
 
@@ -148,7 +86,7 @@ class ChapterCard extends Viewable {
             ),
             {
                 click: (e) => {
-                    state.setSelection(chapter.path)
+                    state.setSelection(chapter.path, undefined)
                 }
             }
         )
@@ -314,10 +252,39 @@ class Content extends Viewable {
         return this
     }
 
+    renderOverview(content) {
+        return N('ul', content.children.map((chapter) => N('li', new ChapterCard(chapter))), { class: 'subchapter' })
+    }
+
+    replaceLinks() {
+        console.log('replace links')
+    }
+
+    checkLoaded() {
+        if (++this.checkLoadedCount > 2) {
+            clearInterval(this.checkLoadedTimer)
+        }
+        //console.log('check loaded', this.checkLoadedCount)
+        const root = this.zeromd.shadowRoot
+        const a = root.querySelectorAll('a')
+        console.log('links', a, a.length);
+        [...a].map(link => { console.log(link.href) })
+        //if (a) {
+        //    clearInterval(this.checkLoadedTimer)
+        //}
+    }
+
+    renderMD(content) {
+        this.zeromd = N('zero-md', null, { src: `${DOCBASE}/${state.releaseSelection}/${content.path}` })
+        this.checkLoadedCount = 0
+        //this.checkLoadedTimer = setInterval(this.checkLoaded.bind(this), 500)
+        return this.zeromd
+    }
+
     renderArticle(content) {
         return content.children
-            ? N('ul', content.children.map((chapter) => N('li', new ChapterCard(chapter))), { class: 'subchapter' })
-            : N('zero-md', null, { src: `${DOCBASE}/${state.releaseSelection}/${content.path}` })
+            ? this.renderOverview(content)
+            : this.renderMD(content)
     }
 
 }
@@ -342,13 +309,45 @@ class Chapter extends Viewable {
 
 }
 
-class Page extends Viewable {
+class App extends Viewable {
+
+    clazz = 'App'
+
     constructor() {
         super()
         this.view = document.body
         while (this.view.childNodes.length > 0)
             this.view.removeChild(this.view.lastChild)
+        state.addReleasesListener(this)
+        state.addReleaseSelectionListener(this)
+        state.addDataListener(this)
+        this.loadReleases()
     }
+
+    loadReleases() {
+        console.log(this.clazz, 'loadReleases')
+        fetch('data/Releases.json')
+            .then(response => response.json())
+            .then((releases) => state.setReleases([{ ref: `/${DEFAULT_BRANCH}` }].concat(releases.reverse())))
+    }
+
+    releasesChanged(releases) {
+        console.log(this.clazz, 'releasesChanged', releases)
+        state.setReleaseSelection(DEFAULT_BRANCH)
+    }
+
+    releaseSelectionChanged(releaseSelection) {
+        console.log(this.clazz, 'releaseSelectionChanged', releaseSelection)
+        fetch(`data/${releaseSelection}/Tree.json`)
+            .then(response => response.json())
+            .then(state.setData.bind(state))
+    }
+
+    dataChanged(data) {
+        console.log(this.clazz, 'dataChanged', data)
+        state.setSelection(NavTools.currentPath(), location.hash)
+    }
+
 }
 
 class Header extends Viewable {
@@ -376,29 +375,18 @@ class Footer extends Viewable {
 
 class Main extends Viewable {
 
+    clazz = 'Main'
+
     constructor() {
         super()
-        state.addReleaseSelectionListener(this)
         state.addSelectionListener(this)
         this.chapters = new Chapters()
         this.chapter = new Chapter()
         this.view = N('main', this.chapters)
-        this.loadReleases()
-    }
-
-    loadReleases() {
-        fetch('data/Releases.json')
-            .then(response => response.json())
-            .then(state.setReleases.bind(state))
-    }
-
-    releaseSelectionChanged(releaseSelection) {
-        fetch(`data/${releaseSelection}/Tree.json`)
-            .then(response => response.json())
-            .then(state.setData.bind(state))
     }
 
     selectionChanged(selection, content) {
+        console.log(this.clazz, 'selectionChanged', selection)
         return this.clear().append(selection === ROOT
             ? this.chapters
             : this.chapter.selectionChanged(selection, content)
@@ -407,187 +395,17 @@ class Main extends Viewable {
 
 }
 
-class Transformer {
-
-    static tree2map(map, tree, parent, level) {
-        tree.parent = parent
-        tree.level = level
-        map[tree.path] = tree
-        if (tree.children)
-            tree.children.forEach(child => Transformer.tree2map(map, child, tree, level + 1))
-        return map
-    }
-
-}
-
-class NavTools {
-
-    static currentPath() {
-        const url = new URL(window.location)
-        return url.searchParams.get('path')
-    }
-
-    static pushState(item) {
-        const url = new URL(window.location)
-        const path = url.searchParams.get('path')
-        if (path !== item.path) {
-            //console.log('path', path, item.path)
-            url.searchParams.set('path', item.path)
-            const title = `CX Docs - ${item.name}`
-            window.history.pushState(item.path, title, url)
-            document.getElementsByTagName('title')[0].firstChild.data = title
-        }
-    }
-
-    static popState(e) {
-        state.setSelection(e.state)
-    }
-
-}
-
-class State {
-
-    listener = {
-        data: [],
-        selection: [],
-        menuOpen: [],
-        releases: [],
-        releaseSelection: [],
-    }
-
-    data = {}
-    pendingSelection = undefined
-    selection = undefined
-    menuOpen = true
-    releases = undefined
-    releaseSelection = DEFAULT_BRANCH
-
-    addListener(key, listener) {
-        this.listener[key] = [...new Set([...this.listener[key], ...(typeof listener === 'Array' ? listener : [listener])])]
-        return this
-    }
-
-    addDataListener(listener) {
-        return this.addListener('data', listener)
-    }
-
-    fireDataChanged() {
-        this.listener.data.forEach(l => l.dataChanged(this.data))
-        return this
-    }
-
-    setData(data) {
-        console.log('data', data)
-        data.name = 'Home'
-        data.map = Transformer.tree2map({}, data, undefined, 0)
-        this.data = data
-        this.fireDataChanged(data)
-        this.setSelection(this.pendingSelection || this.data.path)
-        return this
-    }
-
-    getItem(path) {
-        return this.data.map[path]
-    }
-
-    addSelectionListener(listener) {
-        this.addListener('selection', listener)
-        return this
-    }
-
-    fireSelectionChanged() {
-        this.listener.selection.forEach(l => l.selectionChanged(
-            this.selection,
-            this.data.map[this.selection]
-        ))
-        return this
-    }
-
-    setSelection(selection) {
-        //console.log('selection', selection)
-        if (selection === this.selection)
-            return
-        if (!this.data.map) {
-            this.pendingSelection = selection
-            return
-        }
-        const content = this.getItem(selection)
-        if (!content) {
-            console.warn(`invalid selection`, selection)
-            return
-        }
-        NavTools.pushState(content)
-        this.selection = content.path
-        this.fireSelectionChanged()
-        this.pendingSelection = undefined
-        return this
-    }
-
-    addMenuOpenListener(listener) {
-        return this.addListener('menuOpen', listener)
-    }
-
-    fireMenuOpenChanged() {
-        this.listener.menuOpen.forEach(l => l.menuOpenChanged(this.menuOpen))
-        return this
-    }
-
-    setMenuOpen(menuOpen) {
-        this.menuOpen = menuOpen
-        this.fireMenuOpenChanged(menuOpen)
-        return this
-    }
-
-    addReleasesListener(listener) {
-        return this.addListener('releases', listener)
-    }
-
-    fireReleasesChanged() {
-        this.listener.releases.forEach(l => l.releasesChanged(this.releases))
-        return this
-    }
-
-    setReleases(releases) {
-        this.releases = [{ name: DEFAULT_BRANCH }]
-            .concat(releases.reverse().map(item => {
-                item.name = item.ref.split('/').slice(-1)[0]
-                return item
-            }))
-        this.fireReleasesChanged(this.releases)
-        return this
-    }
-
-    addReleaseSelectionListener(listener) {
-        return this.addListener('releaseSelection', listener)
-    }
-
-    fireReleaseSelectionChanged() {
-        this.listener.releaseSelection.forEach(l => l.releaseSelectionChanged(this.releaseSelection))
-        return this
-    }
-
-    setReleaseSelection(releaseSelection) {
-        this.releaseSelection = releaseSelection
-        this.fireReleaseSelectionChanged(releaseSelection)
-        return this
-    }
-
-}
-
 const state = new State()
 
 addEvents(
-    window, 
+    window,
     {
         popstate: NavTools.popState,
         load: () => {
-            new Page()
+            new App()
                 .append(new Header())
                 .append(new Main())
                 .append(new Footer())
-            state.setSelection(NavTools.currentPath())
-            state.setReleaseSelection(DEFAULT_BRANCH)
         }
     }
 )
-
