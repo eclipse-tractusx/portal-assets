@@ -93,6 +93,7 @@ In the Step 2 of the publishing process, the app detail page is getting filled
 #### Step 3 - Terms & Conditions / Consent
 
 Under Step 3 - the user needs to agree to the terms and conditions of the app publish rules before getting on the marketplace. This section is mandatory and displays areement documents; if any documents are linked to the relevant agreement types
+<br>
 
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/94133633/215896971-e9d452c6-c4a8-465f-9f8f-20f6ba215d1a.png">
   
@@ -101,8 +102,18 @@ Under Step 3 - the user needs to agree to the terms and conditions of the app pu
 
 #### Step 4 - Technical Integration
 
-<image></image>
-  
+For technical integration, the app roles get loaded inside the step 4. Those roles are necessary to enable in the customer subscription scenario the possible user federation including assigned user roles. 
+With the technical integration feature, the user can
+
+* upload those app user roles via csv file
+* preview uploadable roles
+* trigger the role creation for the app (roles can get later updated again via the app change process)
+* delete uploaded roles
+
+<br>
+
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/94133633/216191033-a17490ec-2815-4e47-9f19-e58d2d2f04bc.png">
+
 <br>
 <br>
 
