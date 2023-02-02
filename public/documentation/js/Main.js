@@ -249,10 +249,6 @@ class Content extends Viewable {
         return this
     }
 
-    renderOverview(content) {
-        return N('ul', content.children.map((chapter) => N('li', new ChapterCard(chapter))), { class: 'subchapter' })
-    }
-
     replaceLinks() {
         const root = this.zeromd.shadowRoot
         const a = root.querySelectorAll('a');
@@ -286,7 +282,13 @@ class Content extends Viewable {
         return this.zeromd
     }
 
+    renderOverview(content) {
+        return N('ul', content.children.map((chapter) => N('li', new ChapterCard(chapter))), { class: 'subchapter' })
+    }
+
     renderArticle(content) {
+        if (!location.hash)
+            window.scrollTo(0,0)
         if (!content.children)
             return this.renderMD(content)
         if (content.children.filter(item => item.name === 'index.md').length > 0)
