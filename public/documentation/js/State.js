@@ -79,7 +79,7 @@ class State {
     }
 
     setSelection(selection, hash) {
-        console.log(this.clazz, 'setSelection', selection, hash)
+        //console.log(this.clazz, 'setSelection', selection, hash)
         selection = (this.data.map && this.data.map.hasOwnProperty(selection)) ? selection : Settings.ROOT
         if (selection === this.selection)
             return

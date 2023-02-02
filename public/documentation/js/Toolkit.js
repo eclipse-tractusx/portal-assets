@@ -99,7 +99,7 @@ export class NavTools {
             url.searchParams.set('path', item.path)
             const title = `CX Docs - ${item.name}`
             const newurl =  `${location.pathname}?${url.searchParams.toString()}${item.hash ? '#'+item.hash : ''}`
-            console.log(NavTools.clazz, 'pushState', item, title, newurl)
+            //console.log(NavTools.clazz, 'pushState', item, title, newurl)
             history.pushState(item.path, title, newurl)
             document.getElementsByTagName('title')[0].firstChild.data = title
         }

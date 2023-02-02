@@ -254,27 +254,24 @@ class Content extends Viewable {
     }
 
     replaceLinks() {
-        console.log('replace links')
-    }
-
-    checkLoaded() {
-        if (++this.checkLoadedCount > 2) {
-            clearInterval(this.checkLoadedTimer)
-        }
-        //console.log('check loaded', this.checkLoadedCount)
         const root = this.zeromd.shadowRoot
-        const a = root.querySelectorAll('a')
-        console.log('links', a, a.length);
-        [...a].map(link => { console.log(link.href) })
-        //if (a) {
-        //    clearInterval(this.checkLoadedTimer)
-        //}
+        const a = root.querySelectorAll('a');
+        [...a].map(link => addEvents(
+            link,
+            {
+                click: (e) => {
+                    e.preventDefault()
+                    state.setSelection(decodeURI(link.href).replace(`${Settings.DOCBASE}/${state.releaseSelection}/`, '').replace(/\/$/,''))
+                }
+            }
+        ))
     }
 
     renderMD(content) {
         this.zeromd = N('zero-md', null, { src: `${Settings.DOCBASE}/${state.releaseSelection}/${content.path}` })
         this.checkLoadedCount = 0
-        //this.checkLoadedTimer = setInterval(this.checkLoaded.bind(this), 500)
+        // we don't get an onload event so waiting one sec before replacing the links
+        this.checkLoadedTimer = setTimeout(this.replaceLinks.bind(this), 1000)
         return this.zeromd
     }
 
@@ -315,8 +312,9 @@ class App extends Viewable {
     constructor() {
         super()
         this.view = document.body
-        while (this.view.childNodes.length > 0)
+        while (this.view.childNodes.length > 0) {
             this.view.removeChild(this.view.lastChild)
+        }
         state.addReleasesListener(this)
         state.addReleaseSelectionListener(this)
         state.addDataListener(this)
@@ -385,7 +383,7 @@ class Main extends Viewable {
     }
 
     selectionChanged(selection, content) {
-        console.log(this.clazz, 'selectionChanged', selection)
+        //console.log(this.clazz, 'selectionChanged', selection)
         return this.clear().append(selection === Settings.ROOT
             ? this.chapters
             : this.chapter.selectionChanged(selection, content)
