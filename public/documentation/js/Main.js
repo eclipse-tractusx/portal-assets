@@ -91,7 +91,7 @@ class ChapterCard extends Viewable {
 
     getImage(chapter) {
         return addEvents(
-            N('img', null, { alt: chapter.name, src: `images/level-${chapter.level}.png` }),
+            N('img', null, { alt: chapter.name, src: `images/book.png` }),
             {
                 error: (e) => { e.target.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' }
             }
