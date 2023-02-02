@@ -140,18 +140,18 @@ nav.menu.open button::before {
     content: '«';
 }
 
-nav ul li a {
+nav a {
     cursor: pointer;
     color: rgb(15, 113, 203);
     text-decoration: none;
     font-weight: bold;
 }
 
-nav ul li a:hover {
+nav a:hover {
     color: #004488;
 }
 
-nav ul li a.selected {
+nav a.selected {
     border-bottom: 2px solid rgb(15, 113, 203, 0.7);
 }
 

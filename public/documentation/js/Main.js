@@ -22,7 +22,7 @@ import { state } from "./State.js"
 import { Settings } from "./Settings.js"
 
 const createSelectLink = (item) => addEvents(
-    N('a', item.name.replace(/(_|\.md$)/g, ' '), item.path === state.selection && { class: 'selected' }),
+    N('a', item.name.replace(/(^\d+\s+|_|\.md$)/g, ' '), item.path === state.selection && { class: 'selected' }),
     {
         click: () => {
             state.setSelection(item.path, undefined)
@@ -201,8 +201,8 @@ class Navigation extends Viewable {
     createSubnav(category) {
         return N('li', category.children
             ? [
-                category.name,
-                N('ul', category.children.map(this.createItem.bind(this)), { class: 'level2' })
+                createSelectLink(category),
+                N('ul', category.children.filter(item => item.name !== 'index.md').map(this.createItem.bind(this)), { class: 'level2' })
             ]
             : createSelectLink(category)
         )
@@ -214,8 +214,8 @@ class Navigation extends Viewable {
         while (start.level > 1) {
             start = start.parent
         }
-        [].concat(start.children
-            ? start.children.map(this.createSubnav.bind(this))
+        [this.createItem(start)].concat(start.children
+            ? start.children.filter(item => item.name !== 'index.md').map(this.createSubnav.bind(this))
             : [document.createTextNode('')]
         ).forEach(item => this.menu.appendChild(item))
         return this
@@ -281,7 +281,7 @@ class Content extends Viewable {
     renderArticle(content) {
         if (!content.children)
             return this.renderMD(content)
-        if (content.children.filter(item => item.name==='index.md').length > 0)
+        if (content.children.filter(item => item.name === 'index.md').length > 0)
             return this.renderMD({ ...content, path: `${content.path}/index.md` })
         return this.renderOverview(content)
     }
