@@ -279,9 +279,11 @@ class Content extends Viewable {
     }
 
     renderArticle(content) {
-        return content.children
-            ? this.renderOverview(content)
-            : this.renderMD(content)
+        if (!content.children)
+            return this.renderMD(content)
+        if (content.children.filter(item => item.name==='index.md').length > 0)
+            return this.renderMD({ ...content, path: `${content.path}/index.md` })
+        return this.renderOverview(content)
     }
 
 }
