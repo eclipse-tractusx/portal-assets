@@ -29,7 +29,7 @@
        "title": "Warum ist es sinnvoll bei Traceability zu partizipieren?",
        "description": "",
        "imageUrl": "traceability_contribution(de).png",
-       "backgroundColor": "#F9F9F9",
+       "backgroundColor": "#FFFFFF",
        "id": "contribution-id",
        "template": "TextImageCenterAligned"
      },
@@ -45,7 +45,7 @@
        "title": "Traceability unterteilt die Datenmodelle je Lebenszyklusphase",
        "description": "",
        "imageUrl": "traceability_datamodels(de).png",
-       "backgroundColor": "#F9F9F9",
+       "backgroundColor": "#FFFFFF",
        "id": "details-id",
        "template": "TextImageCenterAligned"
      },
@@ -89,8 +89,8 @@
             "title": "Minimal Setup",
             "imageUrl": "rectangle-image.png",
             "description": "Nutzung von Web-Services zur Datenbereitstellung für die Rückverfolgbarkeit…",
-            "readMore": "",
-            "readMoreTitle": "Direct link (coming soon)",
+            "readMore": "/appdetail/d0ea773a-8fa0-481b-9ae3-d0e9c22a8628",
+            "readMoreTitle": "Details öffnen",
             "backgroundColor": "#f9f9f9",
             "align": "center"
           },
@@ -118,7 +118,7 @@
           "imageUrl": "rectangle-image.png",
           "description": "Ermöglicht die lückenlose Rückverfolgbarkeit von Teilen über die Lieferkette von n.tier – visualisiert detaillierte Informationen über die Komponenten von direkten Lieferanten und Direktkunden.",
           "readMore": "/appdetail/ac1cf001-7fbc-1f2f-817f-bce0572c0007",
-          "readMoreTitle": "Get to the app",
+          "readMoreTitle": "App Details öffnen",
           "backgroundColor": "#f9f9f9",
           "align": "center"
         },
@@ -126,8 +126,8 @@
           "title": "Smart MOM",
           "imageUrl": "rectangle-image.png",
           "description": "Konsolidiert alle Produktionsprozesse und Systeme zur Steuerung von Herstellungsprozessen…",
-          "readMore": "",
-          "readMoreTitle": "Get to the app",
+          "readMore": "/appdetail/5cf74ef8-e0b7-4984-a872-474828beb5d1",
+          "readMoreTitle": "App Details öffnen",
           "backgroundColor": "#f9f9f9",
           "align": "center"
         },
@@ -135,8 +135,8 @@
           "title": "SAP BN MT",
           "imageUrl": "rectangle-image.png",
           "description": "stellt eine Lösung zur unternehmensübergreifenden Lieferkettentransparenz und Material Rückverfolgbarkeit dar…",
-          "readMore": "",
-          "readMoreTitle": "Get to the app",
+          "readMore": "/appdetail/5cf74ef8-e0b7-4984-a872-474828beb5d7",
+          "readMoreTitle": "App Details öffnen",
           "backgroundColor": "#f9f9f9",
           "align": "center"
         },
@@ -144,8 +144,8 @@
           "title": "Trusted Traceability",
           "imageUrl": "rectangle-image.png",
           "description": "ist als vollständig verwaltetes System (Software-as-a-Service) verfügbar und ermöglicht die Einführung der Rückverfolgbarkeit…",
-          "readMore": "",
-          "readMoreTitle": "Get to the app",
+          "readMore": "/appdetail/ac1cf001-7fbc-1f2f-817f-bce05748000d",
+          "readMoreTitle": "App Details öffnen",
           "backgroundColor": "#f9f9f9",
           "align": "center"
          }
