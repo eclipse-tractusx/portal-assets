@@ -10,7 +10,7 @@
   "description": "...als Basis und integraler Bestandteil zum Aufbau von digitalen Datenketten und Befähiger von datenketten-fokussierter Use Cases",
   "sections": [
     {
-      "title": "Introduction",
+      "title": "Einführung",
       "description": "Der Use-Case Rückverfolgbarkeit hat das Ziel, durchgängige Datenketten aufzubauen: vom Rohstoff über Zwischenprodukte bis zum fertigen Fahrzeug beim OEM bzw. dessen Wiederverwertung im Recycling. Partner im Use Case sind sowohl Hersteller von Produkten bis hin zu Automobilherstellern als auch Zulieferer von Material und Teilen.",
       "videoUrl": "https://www.youtube.com/embed/g-NVjP2srw4",
       "id": "intro-id",
