@@ -29,7 +29,7 @@
         "title": "How to contribute to Traceability and why?",
         "description": "",
         "imageUrl": "traceability_contribution(en).png",
-        "backgroundColor": "#F9F9F9",
+        "backgroundColor": "#FFFFFF",
         "id": "contribution-id",
         "template": "TextImageCenterAligned"
       },
@@ -45,7 +45,7 @@
         "title": "Traceability subdivides the data models for each life cycle phase",
         "description": "",
         "imageUrl": "traceability_datamodels(en).png",
-        "backgroundColor": "#F9F9F9",
+        "backgroundColor": "#FFFFFF",
         "id": "details-id",
         "template": "TextImageCenterAligned"
       },
@@ -89,8 +89,8 @@
             "title": "Minimal Setup",
             "imageUrl": "rectangle-image.png",
             "description": "Use of web services to provide data for traceability..",
-            "readMore": "",
-            "readMoreTitle": "Direct link (coming soon)",
+            "readMore": "/appdetail/d0ea773a-8fa0-481b-9ae3-d0e9c22a8628",
+            "readMoreTitle": "Get Details",
             "backgroundColor": "#f9f9f9",
             "align": "center"
           },
@@ -99,7 +99,7 @@
             "imageUrl": "rectangle-image.png",
             "description": "Use of business applications with full traceability functions...",
             "readMore": "",
-            "readMoreTitle": "Direct link (coming soon)",
+            "readMoreTitle": "Get Details",
             "backgroundColor": "#f9f9f9",
             "align": "center"
           }
@@ -126,7 +126,8 @@
             "title": "Smart MOM",
             "imageUrl": "rectangle-image.png",
             "description": "Consolidates all production processes and systems to control manufacturing processes...",
-            "readMore": "",
+            "readMore": "/appdetail/5cf74ef8-e0b7-4984-a872-474828beb5d1",
+            "readMoreTitle": "Get to the app",
             "backgroundColor": "#f9f9f9",
             "align": "center"
           },
@@ -134,7 +135,8 @@
             "title": "SAP BN MT",
             "imageUrl": "rectangle-image.png",
             "description": "is a solution for cross-company supply chain transparency and material traceability...",
-            "readMore": "",
+            "readMore": "/appdetail/5cf74ef8-e0b7-4984-a872-474828beb5d7",
+            "readMoreTitle": "Get to the app",
             "backgroundColor": "#f9f9f9",
             "align": "center"
           },
@@ -142,7 +144,8 @@
             "title": "Trusted Traceability",
             "imageUrl": "rectangle-image.png",
             "description": "is a fully managed system (software-as-a-service) and enables the introduction of traceability...",
-            "readMore": "",
+            "readMore": "/appdetail/ac1cf001-7fbc-1f2f-817f-bce05748000d",
+            "readMoreTitle": "Get to the app",
             "backgroundColor": "#f9f9f9",
             "align": "center"
           }
