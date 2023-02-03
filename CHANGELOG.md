@@ -1,3 +1,19 @@
+## 1.0.0-RC4
+
+### Change
+* Documentation v4 released (service subscription; registration approval flow and  docu)
+* Use Case introduction content updated and enhanced
+
+### Feature
+* help/documentation web application released (based on md file content)
+
+### Technical Support
+n/a
+
+### Bugfix
+n/a
+
+
 ## 1.0.0-RC3
 
 ### Change
