@@ -75,7 +75,7 @@ class ChapterCard extends Viewable {
             N('div',
                 N('div', [
                     this.getImage(chapter),
-                    N('div', chapter.name.replace(/(_|\.md$)/g, ' '), { class: 'chapter-card-title' }),
+                    N('div', chapter.name.replace(/(^\d+\s+|_|\.md$)/g, ' '), { class: 'chapter-card-title' }),
                 ], {
                     href: chapter.path
                 }),
@@ -91,7 +91,7 @@ class ChapterCard extends Viewable {
 
     getImage(chapter) {
         return addEvents(
-            N('img', null, { alt: chapter.name, src: `images/book.png` }),
+            N('img', null, { alt: chapter.name, src: `/assets/images/icons/book.svg` }),
             {
                 error: (e) => { e.target.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' }
             }
@@ -272,12 +272,15 @@ class Content extends Viewable {
             }
             item.style.cursor = 'pointer'
         })
+        root.styleSheets[0].insertRule('h1:hover, h2:hover, h3:hover, h4:hover, h5:hover { text-decoration: underline; }')
     }
 
     renderMD(content) {
         this.zeromd = N('zero-md', null, { src: `${Settings.DOCBASE}/${state.releaseSelection}/${content.path}` })
         this.checkLoadedCount = 0
-        // we don't get an onload event so waiting one sec before replacing the links
+        // we don't get an onload event from zero-md so waiting one sec before replacing the links
+        // as a future improvement we might load the md separately and then initialize zero-md with the content
+        // this would also allow to show a loading icon which is currently difficult
         this.checkLoadedTimer = setTimeout(this.replaceLinks.bind(this), 1000)
         return this.zeromd
     }
@@ -411,7 +414,6 @@ addEvents(
         popstate: (e) => state.setSelection(e.state, undefined),
         load: () => {
             new App()
-                .append(new Header())
                 .append(new Main())
                 .append(new Footer())
         }

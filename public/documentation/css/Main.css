@@ -28,7 +28,7 @@ html {
 }
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,sans-serif;
     background-image: url(/assets/images/frame/Home.jpg);
     background-position: 0px 0px;
     background-repeat: no-repeat;
@@ -42,25 +42,6 @@ body {
 }
 
 /* HEADER */
-
-header {
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 auto;
-    width: 100%;
-    min-height: 80px;
-}
-
-.logo {
-    background-image: url(/assets/images/logos/cx-text.svg);
-    background-position: 20px 20px;
-    background-repeat: no-repeat;
-    background-size: auto 40px;
-    width: 240px;
-    height: 80px;
-}
 
 .release-selection {
     width: 100%;
@@ -76,14 +57,23 @@ header {
 /* MAIN */
 
 main {
-    margin: 80px auto 0px auto;
+    margin: 60px auto 0px auto;
     width: 100%;
 }
 
 main h1 {
+    font-size: 32px;
     text-align: center;
     width: 100%;
-    margin: 40px 0 40px 0;
+}
+
+.chapters {
+    max-width: 1330px;
+    margin: 0px auto;
+    background-image: url(/assets/images/logos/cx-text.svg);
+    background-position: 40px 0px;
+    background-repeat: no-repeat;
+    background-size: auto 40px;
 }
 
 .chapters ul {
@@ -95,8 +85,7 @@ main h1 {
     padding-inline-start: 0;
     margin-block-start: 0;
     margin-block-end: 0;
-    margin: 60px auto 0px auto;
-    max-width: 1330px;
+    margin: 40px auto 0px auto;
 }
 
 .chapter-card {
@@ -105,7 +94,7 @@ main h1 {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
     cursor: pointer;
-    margin: 32px 16px;
+    margin: 16px 16px;
     transition: all 0.1s ease-out;
     transform: scale(0.9);
 }
