@@ -1,7 +1,7 @@
 ## 1.0.0-RC4
 
 ### Change
-* Documentation v4 released (service subscription; registration approval flow and  docu)
+* Documentation v4 released (service subscription; registration approval flow and docu)
 * Use Case introduction content updated and enhanced
 
 ### Feature
