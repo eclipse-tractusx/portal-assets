@@ -1,6 +1,26 @@
 # Implementation
 <br>
 
+
+## Registration Login
+
+With the login of the user to the registration, first the application record with status is getting loaded via the portal db.
+Based on the fetched status; the frontend logic will decide how the user proceeds.  
+<br>
+
+1. If the status is any status before "SUBMITTED" (< id "7"); the company registration form gets displayed; starting with the introduction screen.  
+If company registration data have been previously added/saved already, the data will be displayed inside the registration form; otherwise an empty registration form woll be displayed. 
+3. If the status is in status "SUBMITTED" (= id "7"); the information screen "application in validation" screen is getting displayed.  
+   <img width="443" alt="image" src="https://user-images.githubusercontent.com/94133633/216842731-5a2097ac-240c-44fe-aa0b-8396d0474690.png">
+
+5. If the status is in status "APPROVED" (= id "8"); the user should get redirected to the portal "home" page  
+
+7. If the status is in status "DECLINED" (= id "9"); the information screen "application declined and closed" screen is getting displayed  
+
+
+<br>
+<br>
+
 ## Enter / Verify Company Data
 <br>
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/94133633/210187915-d4adf4a4-ac0f-4512-b4f6-f53d7e3bc7d8.png">
@@ -48,31 +68,49 @@ Details about the BPDM data call can get found in the Interface / API Call speci
 The company unique identifier is a company specific identifier which is used to help companies to prove their identity. In Catena-X registration party needs to add minimum one unqiue identifier which is later used inside the application verification flow to identifier the companies identity.
 To support the user entry and ensure that human errors are reduced, an endpoint to fetch the allowed unique identifier (per country) as well as field input validations are implemented.
 
-###### GET allowed Unique Identifier
 
-```diff
+##### Logic implemented for the country specific identifier
+
+The unique identifier is a location based attribute; means, after the user entered a country code; the FE needs to fetch the possible company identifier via an api call an display them inside the new FE dropdown field (see details below)
+
+initially when opening the registration form step 1 "company data"; the unique identifier section is not displayed. 
+Only when entering the country code; the unique id section is getting displayed (see screen below)
+
+<img width="401" alt="image" src="https://user-images.githubusercontent.com/94133633/216842872-4891a050-00f3-4ba4-a97e-b223f22a5170.png">
+
+```dif
 ! GET /api/registration/company/country/{alpha2Code}/uniqueidentifiers
 ```
 
-Response example
+###### API Response
 
-			[
-			  {
-			    "id": 5,
-			    "label": "EORI"
-			  },
-			  {
-			    "id": 1,
-			    "label": "COMMERCIAL_REG_NUMBER"
-			  },
-			  {
-			    "id": 2,
-			    "label": "VAT_ID"
-			  }
-			]
+		[
+		  {
+		    "id": 1,
+		    "label": "COMMERCIAL_REG_NUMBER"
+		  },
+		  {
+		    "id": 2,
+		    "label": "VAT_ID"
+		  }
+		] 
+
+###### Result on UI
+
+<img width="855" alt="image" src="https://user-images.githubusercontent.com/94133633/216842966-d590263b-8793-43cb-bba5-8f9fcdd06b2e.png">
+
+Translation of technical api response keys to human readable titles:
+
+   <img width="357" alt="image" src="https://user-images.githubusercontent.com/94133633/216842986-eea5153f-318d-466b-b9f1-8775f64ee7cc.png">
+
+###### Implemented Pattern
+
+<img width="1012" alt="image" src="https://user-images.githubusercontent.com/94133633/216843013-8601c1eb-372a-4f39-87ec-f849fbfb4d20.png">
+
 
 <br>
 <br>
+
 
 ###### POST allowed Unique Identifier
 
@@ -80,11 +118,6 @@ no post call existing. The data will get stored as part of the POST /companyDeta
 
 <br>
 <br>
-
-###### Input validations
-currently only FE supported
-
-.....to be added.....
 
 
 ##### Store / Save Company Data Registration Details
@@ -95,6 +128,8 @@ Via the post request, all company details will get stored/saved inside the porta
 ```diff
 ! POST /api/registration/application/{applicationId}/companyDetailsWithAddress
 ```
+
+<br>
 
 >Validation
 >
