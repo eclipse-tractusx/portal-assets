@@ -22,9 +22,17 @@ import { state } from "./State.js"
 import { Patterns, Settings } from "./Settings.js"
 
 const createSelectLink = (item) => addEvents(
-    N('a', item.name.replace(Patterns.DISPLAY, ' '), item.path === state.selection && { class: 'selected' }),
+    N(
+        'a',
+        item.name.replace(Patterns.DISPLAY, ' '),
+        {
+            ... { href: `.?path=${item.path}` },
+            ... (item.path === state.selection ? { class: 'selected' } : {})
+        }
+    ),
     {
-        click: () => {
+        click: (e) => {
+            e.preventDefault()
             state.setSelection(item.path, undefined)
         }
     }
@@ -78,17 +86,19 @@ class SearchOutput extends Viewable {
     }
 
     renderResult(result) {
-        return N('span',
-            result.path.split('/').slice(-1).map(seg => N('span', seg.replace(Patterns.DISPLAY, '') + ' > '))
-                .concat([createSelectLink(result)])
-        )
+        const path = result.path.split('/').slice(1)
+        return path
+            .map((_seg, i) =>
+                createSelectLink(state.data.map[
+                    ([Settings.ROOT].concat(path.slice(0, i + 1)).join('/'))
+                ])
+            )
     }
 
     searchChanged(results) {
-        console.log(results)
         try {
             this.parent.getView().removeChild(this.getView())
-        } catch {}
+        } catch { }
         if (results && results.length > 0) {
             this.clear().append(results.map(result => N('li', this.renderResult(result))))
             this.parent.getView().appendChild(this.getView())
@@ -116,8 +126,15 @@ class Search extends Viewable {
         if (!e) {
             state.setSearch([])
             return this
-        }            
-        const topics = Object.values(state.data.map).filter(item => item.name.toLocaleLowerCase().indexOf(e) > -1).slice(0,10)
+        }
+        const regex = new RegExp(`(${e.toLocaleLowerCase().replace(/[^a-z0-9]/g, ' ').trim().split(/\s+/).join('|')})`, 'ig')
+        const count = (expr) => ((expr || '').match(regex) || []).length
+        // search in names
+        const topics = Object.values(state.data.map)
+            .filter(item => item.name.match(regex))
+            .map(item => ({ ...item, matches: count(item.name) }))
+            .sort((a, b) => (b.matches - a.matches) || (a.level - b.level))
+            .slice(0, 16)
         state.setSearch(topics)
         return this
     }
@@ -166,7 +183,7 @@ class Chapters extends Viewable {
         state.addDataListener(this)
         this.items = N('div')
         this.view = N('section', [
-            N('h1', 'Portal Documentation'),
+            N('h1', 'Catena-X Help Desk'),
             this.items
         ], { class: 'chapters' })
     }
@@ -393,7 +410,10 @@ class App extends Viewable {
 
     constructor() {
         super()
-        this.view = document.body
+        this.view = addEvents(
+            document.body,
+            { click: () => { state.setSearch([]) } }
+        )
         while (this.view.childNodes.length > 0) {
             this.view.removeChild(this.view.lastChild)
         }
