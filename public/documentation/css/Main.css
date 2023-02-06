@@ -54,8 +54,9 @@ header {
 }
 
 .release-selection {
-    margin-left: 520px;
-    width: 100px;
+    margin-left: 500px;
+    margin-right: 4px;
+    width: 120px;
     text-align: right;
 }
 
@@ -70,8 +71,9 @@ header {
     border: 1px solid lightgray
 }
 
-.search-input {
-    border: 1px solid lightgray;
+.search input {    
+    padding: 4px 10px;
+    line-height: 17px;
 }
 
 .search-output {
@@ -90,6 +92,11 @@ header {
     line-height: 24px;
 }
 
+.search-output li:hover {
+    line-height: 24px;
+    background-color: #f8f8f8;
+}
+
 .search-output span {
     color: #aaa;
 }
@@ -101,11 +108,18 @@ header {
     font-weight: bold;
 }
 
-.search-output a:hover {
-    color: #004488;
-    background-color: #f8f8f8;
+.search-output a:not(:last-child) {
+    font-weight: normal;
 }
 
+.search-output a::before {
+    color: lightgray;
+    content: ' » ';
+}
+
+.search-output a:hover {
+    color: #004488;
+}
 
 /* MAIN */
 
