@@ -43,21 +43,74 @@ body {
 
 /* HEADER */
 
-.release-selection {
-    width: 100%;
-    margin: 20px auto;
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    max-width: 1240px;
+    margin: 6px auto 0px auto;
+    height: 40px;
+    z-index: 9;
 }
 
-.release-selection select {    
+.release-selection {
+    margin-left: 520px;
+    width: 100px;
+    text-align: right;
+}
+
+.search {
+    width: 580px;
+}
+
+.release-selection select,
+.search input {    
     padding: 4px;
     border-radius: 4px;
     border: 1px solid lightgray
 }
 
+.search-input {
+    border: 1px solid lightgray;
+}
+
+.search-output {
+    font-size: 11px;
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+
+.search-output li {
+    line-height: 24px;
+}
+
+.search-output span {
+    color: #aaa;
+}
+
+.search-output a {
+    cursor: pointer;
+    color: rgb(15, 113, 203);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.search-output a:hover {
+    color: #004488;
+    background-color: #f8f8f8;
+}
+
+
 /* MAIN */
 
 main {
-    margin: 60px auto 0px auto;
+    margin: 0px auto;
     width: 100%;
 }
 

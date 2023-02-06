@@ -30,6 +30,7 @@ class State {
         menuOpen: [],
         releases: [],
         releaseSelection: [],
+        search: []
     }
 
     data = {}
@@ -37,6 +38,7 @@ class State {
     menuOpen = true
     releases = undefined
     releaseSelection = undefined
+    search = undefined
 
     addListener(key, listener) {
         this.listener[key] = [...new Set([...this.listener[key], ...(typeof listener === 'Array' ? listener : [listener])])]
@@ -135,6 +137,21 @@ class State {
     setReleaseSelection(releaseSelection) {
         this.releaseSelection = releaseSelection
         this.fireReleaseSelectionChanged(releaseSelection)
+        return this
+    }
+
+    addSearchListener(listener) {
+        return this.addListener('search', listener)
+    }
+
+    fireSearchChanged() {
+        this.listener.search.forEach(l => l.searchChanged(this.search))
+        return this
+    }
+
+    setSearch(search) {
+        this.search = search
+        this.fireSearchChanged()
         return this
     }
 
