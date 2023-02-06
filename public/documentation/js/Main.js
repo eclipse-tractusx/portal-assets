@@ -30,7 +30,7 @@ const createSelectLink = (item) => addEvents(
     }
 )
 
-function debounce(func, timeout = 220) {
+function debounce(func, timeout = 500) {
     let timer
     return (...args) => {
         clearTimeout(timer)
@@ -38,25 +38,26 @@ function debounce(func, timeout = 220) {
     }
 }
 
-const processChange = debounce((e) => Selector.filter(e))
+const processChange = debounce((e) => search.filter(e))
 
 class SearchInput extends Viewable {
 
-    constructor(providers) {
+    constructor(search) {
         super()
+        this.search = search
         this.input = addEvents(
             N('input', null, {
                 type: 'search',
                 class: 'search',
                 placeholder: 'Search for help topics',
-                value: getSelectedIDP(providers),
+                value: '',
             }),
             {
                 keyup: (e) => processChange(e.target.value),
                 search: (e) => processChange(e.target.value),
             }
         )
-        this.view = N('div', this.input, { class: 'search-container' })
+        this.view = N('div', this.input, { class: 'search-input' })
         this.view.firstChild.select()
     }
 
@@ -66,6 +67,64 @@ class SearchInput extends Viewable {
     }
 
 }
+
+class SearchOutput extends Viewable {
+
+    constructor(parent) {
+        super()
+        this.parent = parent
+        state.addSearchListener(this)
+        this.view = N('ol', null, { class: 'search-output' })
+    }
+
+    renderResult(result) {
+        return N('span',
+            result.path.split('/').slice(-1).map(seg => N('span', seg.replace(Patterns.DISPLAY, '') + ' > '))
+                .concat([createSelectLink(result)])
+        )
+    }
+
+    searchChanged(results) {
+        console.log(results)
+        try {
+            this.parent.getView().removeChild(this.getView())
+        } catch {}
+        if (results && results.length > 0) {
+            this.clear().append(results.map(result => N('li', this.renderResult(result))))
+            this.parent.getView().appendChild(this.getView())
+        }
+        return this
+    }
+
+}
+
+class Search extends Viewable {
+
+    clazz = 'Search'
+
+    constructor() {
+        super()
+        this.view = N('div', [
+            new SearchInput(),
+            new SearchOutput(this)
+        ], { class: 'search' })
+        state.setSearch('')
+    }
+
+    filter(e) {
+        //console.log(this.clazz, e)
+        if (!e) {
+            state.setSearch([])
+            return this
+        }            
+        const topics = Object.values(state.data.map).filter(item => item.name.toLocaleLowerCase().indexOf(e) > -1).slice(0,10)
+        state.setSearch(topics)
+        return this
+    }
+
+}
+
+const search = new Search()
 
 class ChapterCard extends Viewable {
 
@@ -378,6 +437,7 @@ class Header extends Viewable {
             [
                 N('div', null, { class: 'logo' }),
                 new ReleaseSelection(),
+                search
             ]
         )
     }
@@ -421,6 +481,7 @@ addEvents(
         popstate: (e) => state.setSelection(e.state, undefined),
         load: () => {
             new App()
+                .append(new Header())
                 .append(new Main())
                 .append(new Footer())
         }
