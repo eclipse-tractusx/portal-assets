@@ -1,5 +1,3 @@
-# Technical User - How to (Functional explanation)
-
 ## Create a new technical user
 User with the respective user management rights can access the user management via the top right user navigation.
 As soon as the user management is displayed, a button "Technical User Management" shows up to switch from real users to technical users.  
@@ -28,25 +26,10 @@ With the shared user_id and secret, the technical user can get used to authentic
 <br>
 
 Please note - in the current implementation the endpoint for the respective CX modules such as digital twin and semantic hub are not visible in the technical user creation.  
-endpoints of the cx core components can get found under following links (please make sure your refer to the right env.) API Documentation. 
+endpoints of the cx core components can get found under following links (please make sure your refer to the right env.) API Documentation.
 and the endpoint to get a technical user token inside the int env is following:
 * dev: https://centralidp.dev.demo.catena-x.net/auth/realms/CX-Central/protocol/openid-connect/token
 * int: https://centralidp.int.demo.catena-x.net/auth/realms/CX-Central/protocol/openid-connect/token
 
 <br>
 <br>
-
-## Delete an user
-Technical users created under the same company id can get deleted by user administrators.
-To delete an user, just open up the user details and click the "delete" button.
-
-<img width="558" alt="image" src="https://user-images.githubusercontent.com/94133633/210966679-5997f888-c7af-4ff4-b2e9-474c1e0f9009.png">
-
-<br>
-<br>
-<br>
-<br>
-
-#### Currently not supported:
-
-update technical user secret

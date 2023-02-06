@@ -3,11 +3,524 @@
   "name": "docs",
   "children": [
     {
-      "path": "docs/App(s)",
-      "name": "App(s)",
+      "path": "docs/01. Onboarding",
+      "name": "01. Onboarding",
       "children": [
         {
-          "path": "docs/App(s)/App-Change-Process.md",
+          "path": "docs/01. Onboarding/01. Registration Invite",
+          "name": "01. Registration Invite",
+          "children": [
+            {
+              "path": "docs/01. Onboarding/01. Registration Invite/FAQ.md",
+              "name": "FAQ.md",
+              "chapter": [
+                "# FAQ",
+                "## How can I invite a potential new Catena-X member?",
+                "## Can I identify already invited members?"
+              ]
+            },
+            {
+              "path": "docs/01. Onboarding/01. Registration Invite/Implementation.md",
+              "name": "Implementation.md",
+              "chapter": [
+                "# Implementation",
+                "## 1 Get Invited Companies",
+                "#### API Details",
+                "## 2 Invite Companies",
+                "#### API Details",
+                "## 3  Search"
+              ]
+            },
+            {
+              "path": "docs/01. Onboarding/01. Registration Invite/Summary.md",
+              "name": "Summary.md",
+              "chapter": [
+                "## Summary"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "docs/01. Onboarding/02. Registration",
+          "name": "02. Registration",
+          "children": [
+            {
+              "path": "docs/01. Onboarding/02. Registration/01. Login.md",
+              "name": "01. Login.md",
+              "chapter": [
+                "# Intro",
+                "#### Registration Login"
+              ]
+            },
+            {
+              "path": "docs/01. Onboarding/02. Registration/02. Add Company Data.md",
+              "name": "02. Add Company Data.md",
+              "chapter": [
+                "#### Add Company Data"
+              ]
+            },
+            {
+              "path": "docs/01. Onboarding/02. Registration/03. Add Additional User(s).md",
+              "name": "03. Add Additional User(s).md",
+              "chapter": [
+                "#### Invite additional users",
+                "#optional step#"
+              ]
+            },
+            {
+              "path": "docs/01. Onboarding/02. Registration/04. Company Role & Consent.md",
+              "name": "04. Company Role & Consent.md",
+              "chapter": [
+                "#### Company Role & Terms and Conditions"
+              ]
+            },
+            {
+              "path": "docs/01. Onboarding/02. Registration/05. Document Upload.md",
+              "name": "05. Document Upload.md",
+              "chapter": [
+                "#### Document upload"
+              ]
+            },
+            {
+              "path": "docs/01. Onboarding/02. Registration/06. Verify Registration Data.md",
+              "name": "06. Verify Registration Data.md",
+              "chapter": [
+                "#### Submit company data"
+              ]
+            },
+            {
+              "path": "docs/01. Onboarding/02. Registration/07. FAQ.md",
+              "name": "07. FAQ.md",
+              "chapter": [
+                "# FAQ",
+                "## For what are the registration data used for?",
+                "## What will happen after the registration?",
+                "## Do I need to do the registration in one flow or can i pause in between?",
+                "## What can I do, if I dont have all necessary information available, which are needed to register my company?",
+                "## Why do I always receive a message / warning screen when logging in to the registration form of my company."
+              ]
+            }
+          ]
+        },
+        {
+          "path": "docs/01. Onboarding/03. Registration Approval",
+          "name": "03. Registration Approval",
+          "children": [
+            {
+              "path": "docs/01. Onboarding/03. Registration Approval/FAQ.md",
+              "name": "FAQ.md",
+              "chapter": [
+                "# FAQ"
+              ]
+            },
+            {
+              "path": "docs/01. Onboarding/03. Registration Approval/Functional Details.md",
+              "name": "Functional Details.md",
+              "chapter": [
+                "# Functional Details",
+                "### Display Application Details",
+                "### Approval Flow",
+                "##### Details \"Manual Validation\"",
+                "###### Scenario: Approve",
+                "###### Scenario: Decline",
+                "##### Details \"Create Business Partner Number (if necessary)\"",
+                "###### Scenario 1 - Registration with BPN",
+                "###### Scenario 2 - Registration without BPN",
+                "###### Scenario 3 - manually add BPN as operator (interim supported workflow)",
+                "##### Details \"Create Managed Identity Wallet\"",
+                "##### Details \"Clearinghouse Check\"",
+                "###### Step 1 - manually add BPN as operator (interim supported workflow)",
+                "###### Step 2 - Clearinghouse response",
+                "##### Details \"Self-Description Creation LegalPerson\"",
+                "###### DB Table Content",
+                "##### Details \"Activation\"",
+                "### Add/Update BPN for the registration company"
+              ]
+            },
+            {
+              "path": "docs/01. Onboarding/03. Registration Approval/Implementation.md",
+              "name": "Implementation.md",
+              "chapter": [
+                "# Implementation",
+                "## 1 Get Applications",
+                "###### Filtering",
+                "###### Search",
+                "#### Logical flow of the service",
+                "#### API Details",
+                "## 2 Get Application Details",
+                "#### API Details",
+                "## 3 Confirm/Approve Application",
+                "#### Logical flow of the service",
+                "#### API Details",
+                "## 4 Decline Application",
+                "#### Logical flow of the service",
+                "#### API Details",
+                "## 5 Download Documents",
+                "#### Logical flow of the service",
+                "#### API Details",
+                "## 6 Add bpn to a company registration",
+                "#### Logical flow of the service",
+                "#### API Details"
+              ]
+            },
+            {
+              "path": "docs/01. Onboarding/03. Registration Approval/Summary.md",
+              "name": "Summary.md",
+              "chapter": [
+                "## Summary"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "docs/02. Technical Integration",
+      "name": "02. Technical Integration",
+      "children": [
+        {
+          "path": "docs/02. Technical Integration/01. Connector Registration",
+          "name": "01. Connector Registration",
+          "children": [
+            {
+              "path": "docs/02. Technical Integration/01. Connector Registration/01. Summary.md",
+              "name": "01. Summary.md",
+              "chapter": [
+                "# Summary"
+              ]
+            },
+            {
+              "path": "docs/02. Technical Integration/01. Connector Registration/02. Implementation.md",
+              "name": "02. Implementation.md",
+              "chapter": [
+                "# Implementation",
+                "## 1 Get all MY Connector Registrations",
+                "#### Logical flow of the service",
+                "#### API Details",
+                "## 2 Create new Connector Registration - self-owned",
+                "#### Logical flow of the service",
+                "#### API Details",
+                "## 3 Create new Connector Registration - managed ",
+                "#### Logical flow of the service",
+                "#### API Details",
+                "## 4 Retrigger DAPS",
+                "#### API Details",
+                "## 5 Delete Connector",
+                "#### API Details",
+                "## DB Model"
+              ]
+            },
+            {
+              "path": "docs/02. Technical Integration/01. Connector Registration/03. FAQ.md",
+              "name": "03. FAQ.md",
+              "chapter": [
+                "## FAQ",
+                "### How to register a connector inside the network?",
+                "### Whats the difference of a OWNED and a MANAGED connector?",
+                "### How can a connector get deleted?",
+                "### What is a \"PENDING\" connector?",
+                "### Why is my connector authentication icon green or grey?",
+                "### Whats a public key and how do I create the public key?",
+                "##### Steps to install OpenSSL on mac with brew:",
+                "###### Step 1: Install brew",
+                "###### Step 2:  Add Homebrew to your path and install openssl",
+                "###### Step 3:  Navigate to the folder having openssl.cnf and run the command"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "docs/02. Technical Integration/02. Identity Provider Management",
+          "name": "02. Identity Provider Management",
+          "children": [
+            {
+              "path": "docs/02. Technical Integration/02. Identity Provider Management/01. Summary.md",
+              "name": "01. Summary.md",
+              "chapter": [
+                "# Summary"
+              ]
+            },
+            {
+              "path": "docs/02. Technical Integration/02. Identity Provider Management/02. User Description.md",
+              "name": "02. User Description.md",
+              "chapter": [
+                "# User Description",
+                "### Register your company IdP",
+                "#### Create the new idp record",
+                "#### Migrate existing user accounts to the new created IdP"
+              ]
+            },
+            {
+              "path": "docs/02. Technical Integration/02. Identity Provider Management/03. FAQ.md",
+              "name": "03. FAQ.md",
+              "chapter": [
+                "### FAQ",
+                "#### <question<?",
+                "#### <question<?",
+                "#### <question<?"
+              ]
+            },
+            {
+              "path": "docs/02. Technical Integration/02. Identity Provider Management/Implementation.md",
+              "name": "Implementation.md",
+              "chapter": [
+                "# Implementation",
+                "## 1 Get all MY Connector Registrations",
+                "#### Logical flow of the service",
+                "#### API Details",
+                "## 2 Create new Connector Registration - self-owned",
+                "#### Logical flow of the service",
+                "#### API Details",
+                "## 3 Create new Connector Registration - managed ",
+                "#### Logical flow of the service",
+                "#### API Details",
+                "## 4 Retrigger DAPS",
+                "#### API Details",
+                "## 5 Delete Connector",
+                "#### API Details",
+                "## DB Model"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "docs/02. Technical Integration/index.md",
+          "name": "index.md",
+          "chapter": [
+            "# Technical Integration"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "docs/03. User Management",
+      "name": "03. User Management",
+      "children": [
+        {
+          "path": "docs/03. User Management/1 User Account",
+          "name": "1 User Account",
+          "children": [
+            {
+              "path": "docs/03. User Management/1 User Account/1 FAQ.md",
+              "name": "1 FAQ.md",
+              "chapter": [
+                "# FAQ\r",
+                "#### Can I delete an user of another company?\r",
+                "#### How can I delete an user account which is company IdP federated?\r",
+                "#### Can I revert a user deletion?\r",
+                "#### If my/a user has 2 idp connections, will the user deletion delete both idp connections?\r"
+              ]
+            },
+            {
+              "path": "docs/03. User Management/1 User Account/2 HowTo.md",
+              "name": "2 HowTo.md",
+              "chapter": [
+                "# How To",
+                "## View company user accounts",
+                "## Create a new user account (single)",
+                "## Create a new user account (bulk)"
+              ]
+            },
+            {
+              "path": "docs/03. User Management/1 User Account/3 Implementation.md",
+              "name": "3 Implementation.md",
+              "chapter": [
+                "# Implementation"
+              ]
+            },
+            {
+              "path": "docs/03. User Management/1 User Account/4 Summary.md",
+              "name": "4 Summary.md",
+              "chapter": [
+                "# Summary"
+              ]
+            },
+            {
+              "path": "docs/03. User Management/1 User Account/index.md",
+              "name": "index.md",
+              "chapter": [
+                "# User Account"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "docs/03. User Management/2 Edit User Account",
+          "name": "2 Edit User Account",
+          "children": [
+            {
+              "path": "docs/03. User Management/2 Edit User Account/1 Design.md",
+              "name": "1 Design.md",
+              "chapter": [
+                "# User Account Details",
+                "# My CX Account"
+              ]
+            },
+            {
+              "path": "docs/03. User Management/2 Edit User Account/2 Password Reset.md",
+              "name": "2 Password Reset.md",
+              "chapter": [
+                "# Password Reset",
+                "### Error message handling for password reset",
+                "### Password reset policy"
+              ]
+            },
+            {
+              "path": "docs/03. User Management/2 Edit User Account/3 User Permissions.md",
+              "name": "3 User Permissions.md",
+              "chapter": [
+                "# User Permissions",
+                "## API Details",
+                "### #1 Get MY user details"
+              ]
+            },
+            {
+              "path": "docs/03. User Management/2 Edit User Account/4 Add & Delete BPN.md",
+              "name": "4 Add & Delete BPN.md",
+              "chapter": [
+                "# Add BPN",
+                "### Details",
+                "### Validations",
+                "### Success/Error Messages",
+                "# Delete BPN",
+                "### Details",
+                "### Success/Error Messages",
+                "# API Details",
+                "### #1 API Endpoint Details: Add BPN",
+                "### #2 API Endpoint Details: Delete BPN"
+              ]
+            },
+            {
+              "path": "docs/03. User Management/2 Edit User Account/5 Suspend User.md",
+              "name": "5 Suspend User.md",
+              "chapter": [
+                "# Suspend User"
+              ]
+            },
+            {
+              "path": "docs/03. User Management/2 Edit User Account/6 Delete User.md",
+              "name": "6 Delete User.md",
+              "chapter": [
+                "# Delete User",
+                "## Own User Deletion Flow",
+                "## Company User Deletion Flow",
+                "## Functionality and impacted Keycloak layers",
+                "## API Details",
+                "### #1 Delete my user",
+                "### #2 Delete user {userId}"
+              ]
+            },
+            {
+              "path": "docs/03. User Management/2 Edit User Account/index.md",
+              "name": "index.md",
+              "chapter": [
+                "# Summary\r"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "docs/03. User Management/3 Technical User",
+          "name": "3 Technical User",
+          "children": [
+            {
+              "path": "docs/03. User Management/3 Technical User/01 Create Technical User.md",
+              "name": "01 Create Technical User.md",
+              "chapter": [
+                "## Create a new technical user"
+              ]
+            },
+            {
+              "path": "docs/03. User Management/3 Technical User/02 Delete Technical User.md",
+              "name": "02 Delete Technical User.md",
+              "chapter": [
+                "## Delete an user",
+                "#### Currently not supported:"
+              ]
+            },
+            {
+              "path": "docs/03. User Management/3 Technical User/03 FAQ.md",
+              "name": "03 FAQ.md",
+              "chapter": []
+            },
+            {
+              "path": "docs/03. User Management/3 Technical User/2 Design.md",
+              "name": "2 Design.md",
+              "chapter": [
+                "# Design"
+              ]
+            },
+            {
+              "path": "docs/03. User Management/3 Technical User/4 Implementation.md",
+              "name": "4 Implementation.md",
+              "chapter": [
+                "# Implementation - API Details",
+                "### #1 Get Service Accounts",
+                "#### Get Service Account Role Profiles",
+                "### #2 Create Service Account",
+                "### #3 Show Tech. Service Account Details (of just created Account)",
+                "### #4 Delete Service Account",
+                "### #5 Service Accounts Created via service/app subscription"
+              ]
+            },
+            {
+              "path": "docs/03. User Management/3 Technical User/5 Summary.md",
+              "name": "5 Summary.md",
+              "chapter": [
+                "# Summary",
+                "### Customer Functionalities covered in the function",
+                "### Available technical user roles"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "docs/03. User Management/4 App Access Management",
+          "name": "4 App Access Management",
+          "children": [
+            {
+              "path": "docs/03. User Management/4 App Access Management/1 Design.md",
+              "name": "1 Design.md",
+              "chapter": [
+                "# Design"
+              ]
+            },
+            {
+              "path": "docs/03. User Management/4 App Access Management/2 Implementation.md",
+              "name": "2 Implementation.md",
+              "chapter": [
+                "# Implementation",
+                "### #1 Get App Roles and Descriptions",
+                "### #2 Get Company App Users & Serach",
+                "### #3 Add App Role",
+                "### #4 Update App Role"
+              ]
+            },
+            {
+              "path": "docs/03. User Management/4 App Access Management/3 Summary.md",
+              "name": "3 Summary.md",
+              "chapter": [
+                "# Summary",
+                "#### Pre-Requisite"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "docs/03. User Management/index.md",
+          "name": "index.md",
+          "chapter": [
+            "# User Management"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "docs/04. App(s)",
+      "name": "04. App(s)",
+      "children": [
+        {
+          "path": "docs/04. App(s)/App-Change-Process.md",
           "name": "App-Change-Process.md",
           "chapter": [
             "# Summary",
@@ -16,11 +529,11 @@
           ]
         },
         {
-          "path": "docs/App(s)/App-Management",
+          "path": "docs/04. App(s)/App-Management",
           "name": "App-Management",
           "children": [
             {
-              "path": "docs/App(s)/App-Management/App Management Board - App Provider.md",
+              "path": "docs/04. App(s)/App-Management/App Management Board - App Provider.md",
               "name": "App Management Board - App Provider.md",
               "chapter": [
                 "# Summary",
@@ -36,7 +549,7 @@
               ]
             },
             {
-              "path": "docs/App(s)/App-Management/App Management Board - Operator.md",
+              "path": "docs/04. App(s)/App-Management/App Management Board - Operator.md",
               "name": "App Management Board - Operator.md",
               "chapter": [
                 "# Summary",
@@ -52,11 +565,11 @@
           ]
         },
         {
-          "path": "docs/App(s)/App-Subscription",
+          "path": "docs/04. App(s)/App-Subscription",
           "name": "App-Subscription",
           "children": [
             {
-              "path": "docs/App(s)/App-Subscription/App_Subscription_Management_Board.md",
+              "path": "docs/04. App(s)/App-Subscription/App_Subscription_Management_Board.md",
               "name": "App_Subscription_Management_Board.md",
               "chapter": [
                 "# Summary",
@@ -72,7 +585,7 @@
               ]
             },
             {
-              "path": "docs/App(s)/App-Subscription/Company_App_Subscription.md",
+              "path": "docs/04. App(s)/App-Subscription/Company_App_Subscription.md",
               "name": "Company_App_Subscription.md",
               "chapter": [
                 "# Summary",
@@ -86,7 +599,7 @@
               ]
             },
             {
-              "path": "docs/App(s)/App-Subscription/FAQ.md",
+              "path": "docs/04. App(s)/App-Subscription/FAQ.md",
               "name": "FAQ.md",
               "chapter": [
                 "### FAQ",
@@ -99,11 +612,11 @@
           ]
         },
         {
-          "path": "docs/App(s)/Marketplace",
+          "path": "docs/04. App(s)/Marketplace",
           "name": "Marketplace",
           "children": [
             {
-              "path": "docs/App(s)/Marketplace/Design.md",
+              "path": "docs/04. App(s)/Marketplace/Design.md",
               "name": "Design.md",
               "chapter": [
                 "## App Favorites",
@@ -113,7 +626,7 @@
               ]
             },
             {
-              "path": "docs/App(s)/Marketplace/FAQ.md",
+              "path": "docs/04. App(s)/Marketplace/FAQ.md",
               "name": "FAQ.md",
               "chapter": [
                 "### FAQ",
@@ -123,7 +636,7 @@
               ]
             },
             {
-              "path": "docs/App(s)/Marketplace/Implementation.md",
+              "path": "docs/04. App(s)/Marketplace/Implementation.md",
               "name": "Implementation.md",
               "chapter": [
                 "# Summary",
@@ -137,7 +650,7 @@
               ]
             },
             {
-              "path": "docs/App(s)/Marketplace/User_Description.md",
+              "path": "docs/04. App(s)/Marketplace/User_Description.md",
               "name": "User_Description.md",
               "chapter": [
                 "## App Favorites",
@@ -149,11 +662,11 @@
           ]
         },
         {
-          "path": "docs/App(s)/Release-Process",
+          "path": "docs/04. App(s)/Release-Process",
           "name": "Release-Process",
           "children": [
             {
-              "path": "docs/App(s)/Release-Process/App Release Details (process screen).md",
+              "path": "docs/04. App(s)/Release-Process/App Release Details (process screen).md",
               "name": "App Release Details (process screen).md",
               "chapter": [
                 "# Summary",
@@ -165,7 +678,7 @@
               ]
             },
             {
-              "path": "docs/App(s)/Release-Process/App Release Workflow.md",
+              "path": "docs/04. App(s)/Release-Process/App Release Workflow.md",
               "name": "App Release Workflow.md",
               "chapter": [
                 "# Summary",
@@ -183,7 +696,7 @@
               ]
             },
             {
-              "path": "docs/App(s)/Release-Process/App-Design_guidelines.md",
+              "path": "docs/04. App(s)/Release-Process/App-Design_guidelines.md",
               "name": "App-Design_guidelines.md",
               "chapter": [
                 "# App Design Guidelines",
@@ -198,7 +711,7 @@
               ]
             },
             {
-              "path": "docs/App(s)/Release-Process/App-Release_guidelines.md",
+              "path": "docs/04. App(s)/Release-Process/App-Release_guidelines.md",
               "name": "App-Release_guidelines.md",
               "chapter": [
                 "# App Release Guidelines",
@@ -210,7 +723,7 @@
               ]
             },
             {
-              "path": "docs/App(s)/Release-Process/Implementation.md",
+              "path": "docs/04. App(s)/Release-Process/Implementation.md",
               "name": "Implementation.md",
               "chapter": [
                 "# Summary",
@@ -251,11 +764,11 @@
           ]
         },
         {
-          "path": "docs/App(s)/Subscription-Management",
+          "path": "docs/04. App(s)/Subscription-Management",
           "name": "Subscription-Management",
           "children": [
             {
-              "path": "docs/App(s)/Subscription-Management/Design.md",
+              "path": "docs/04. App(s)/Subscription-Management/Design.md",
               "name": "Design.md",
               "chapter": [
                 "# Summary",
@@ -267,7 +780,7 @@
               ]
             },
             {
-              "path": "docs/App(s)/Subscription-Management/FAQ.md",
+              "path": "docs/04. App(s)/Subscription-Management/FAQ.md",
               "name": "FAQ.md",
               "chapter": [
                 "### FAQ",
@@ -277,7 +790,7 @@
               ]
             },
             {
-              "path": "docs/App(s)/Subscription-Management/Implementation.md",
+              "path": "docs/04. App(s)/Subscription-Management/Implementation.md",
               "name": "Implementation.md",
               "chapter": [
                 "# Summary",
@@ -287,7 +800,7 @@
               ]
             },
             {
-              "path": "docs/App(s)/Subscription-Management/User_Description.md",
+              "path": "docs/04. App(s)/Subscription-Management/User_Description.md",
               "name": "User_Description.md",
               "chapter": [
                 "# Summary",
@@ -301,7 +814,7 @@
           ]
         },
         {
-          "path": "docs/App(s)/Summary.md",
+          "path": "docs/04. App(s)/Summary.md",
           "name": "Summary.md",
           "chapter": [
             "# Summary",
@@ -312,111 +825,326 @@
       ]
     },
     {
-      "path": "docs/Architecture",
-      "name": "Architecture",
+      "path": "docs/05. Service(s)",
+      "name": "05. Service(s)",
       "children": [
         {
-          "path": "docs/Architecture/Architecture Constraints.md",
-          "name": "Architecture Constraints.md",
-          "chapter": [
-            "# Architecture Constraints",
-            "## General",
-            "## Developer",
-            "## Code analysis, linting and code coverage"
+          "path": "docs/05. Service(s)/Marketplace",
+          "name": "Marketplace",
+          "children": [
+            {
+              "path": "docs/05. Service(s)/Marketplace/Design.md",
+              "name": "Design.md",
+              "chapter": [
+                "# Summary",
+                "# Functionality",
+                "### Service Marketplace Overview",
+                "### Service Marketplace - Service Details"
+              ]
+            },
+            {
+              "path": "docs/05. Service(s)/Marketplace/FAQ.md",
+              "name": "FAQ.md",
+              "chapter": [
+                "### FAQ"
+              ]
+            },
+            {
+              "path": "docs/05. Service(s)/Marketplace/Implementation.md",
+              "name": "Implementation.md",
+              "chapter": [
+                "# Summary",
+                "# Implementation",
+                "### #1 Search",
+                "### #2 Filter",
+                "### #3 Sorting",
+                "### #4 Get all active services",
+                "### #5 Get Service Offer Details",
+                "### #6 Get Service Order Details"
+              ]
+            },
+            {
+              "path": "docs/05. Service(s)/Marketplace/User_Description.md",
+              "name": "User_Description.md",
+              "chapter": [
+                "# Summary",
+                "# Functionality",
+                "### Service Marketplace Overview",
+                "### Service Marketplace - Service Details"
+              ]
+            }
           ]
         },
         {
-          "path": "docs/Architecture/Building block view.md",
-          "name": "Building block view.md",
-          "chapter": [
-            "# Building Block View"
+          "path": "docs/05. Service(s)/Release-Process",
+          "name": "Release-Process",
+          "children": [
+            {
+              "path": "docs/05. Service(s)/Release-Process/Design.md",
+              "name": "Design.md",
+              "chapter": [
+                "# Summary",
+                "# Design Flow"
+              ]
+            },
+            {
+              "path": "docs/05. Service(s)/Release-Process/FAQ.md",
+              "name": "FAQ.md",
+              "chapter": [
+                "### FAQ",
+                "### How can I submit a new service offer for marketplace publishing?"
+              ]
+            },
+            {
+              "path": "docs/05. Service(s)/Release-Process/Implementation.md",
+              "name": "Implementation.md",
+              "chapter": [
+                "# Summary",
+                "# Implementation",
+                "### #1 Create Service Offering",
+                "### #2 Update Service Offering",
+                "### #3 Submit new Service Offering for release/publishing",
+                "### #4 Approve Service Request",
+                "### #5 Decline Service Request"
+              ]
+            },
+            {
+              "path": "docs/05. Service(s)/Release-Process/User_Description.md",
+              "name": "User_Description.md",
+              "chapter": [
+                "# Summary"
+              ]
+            }
           ]
         },
         {
-          "path": "docs/Architecture/Context and scope.md",
-          "name": "Context and scope.md",
-          "chapter": [
-            "# Content and Scope",
-            "## Business Context",
-            "## Technical Context"
-          ]
-        },
-        {
-          "path": "docs/Architecture/Development Concept.md",
-          "name": "Development Concept.md",
-          "chapter": [
-            "# Development Concept",
-            "## Build, test, deploy",
-            "## Development Guidelines",
-            "#### Swagger",
-            "## Migration",
-            "## Configurability"
-          ]
-        },
-        {
-          "path": "docs/Architecture/Requirements.md",
-          "name": "Requirements.md",
-          "chapter": [
-            "# Requirements overview",
-            "## What is the Portal & Marketplace Product?",
-            "## Requirements"
-          ]
-        },
-        {
-          "path": "docs/Architecture/Solution strategy.md",
-          "name": "Solution strategy.md",
-          "chapter": [
-            "# Solution Strategy"
-          ]
-        },
-        {
-          "path": "docs/Architecture/Whitebox Overall System.md",
-          "name": "Whitebox Overall System.md",
-          "chapter": [
-            "# Whitebox Overall System",
-            "## Summary",
-            "## Contained Building Blocks",
-            "### Portal",
-            "### Registration (Company Onboarding)",
-            "### Central IdP & Shared IdP",
-            "### Marketplace",
-            "### Important Interfaces"
-          ]
-        },
-        {
-          "path": "docs/Architecture/operational-concept.md",
-          "name": "operational-concept.md",
-          "chapter": [
-            "# Operational concepts",
-            "## Administration",
-            "### Configuration",
-            "### appsettings.json",
-            "### Helm Chart",
-            "### DB Migration File",
-            "## Disaster-Recovery",
-            "## Scaling",
-            "## Clustering",
-            "## Logging",
-            "## Monitoring"
+          "path": "docs/05. Service(s)/Subscription",
+          "name": "Subscription",
+          "children": [
+            {
+              "path": "docs/05. Service(s)/Subscription/Design.md",
+              "name": "Design.md",
+              "chapter": [
+                "# Summary",
+                "# Design Flow",
+                "# Connected Documentation"
+              ]
+            },
+            {
+              "path": "docs/05. Service(s)/Subscription/FAQ.md",
+              "name": "FAQ.md",
+              "chapter": [
+                "### FAQ",
+                "#### Can I trigger a second service subscription request?",
+                "#### I dont have subscription rights - how can I receive the necessary rights?",
+                "#### I triggered a service request what do I need to do now?"
+              ]
+            },
+            {
+              "path": "docs/05. Service(s)/Subscription/Implementation.md",
+              "name": "Implementation.md",
+              "chapter": [
+                "# Summary",
+                "# Implementation",
+                "### #1 Get Service Agreements",
+                "### #2 Post Subscription Request",
+                "### #3 Activate Subscription & Tenant"
+              ]
+            },
+            {
+              "path": "docs/05. Service(s)/Subscription/User_Description.md",
+              "name": "User_Description.md",
+              "chapter": [
+                "# Summary",
+                "# Connected Documentation"
+              ]
+            }
           ]
         }
       ]
     },
     {
-      "path": "docs/Developer_Documentation",
-      "name": "Developer_Documentation",
+      "path": "docs/99. Developer_Documentation",
+      "name": "99. Developer_Documentation",
       "children": [
         {
-          "path": "docs/Developer_Documentation/Auditing.md",
-          "name": "Auditing.md",
-          "chapter": [
-            "# Audit Logging",
-            "## PostgreSQL Session Logging (pgAudit)",
-            "## Application Audit Logging"
+          "path": "docs/99. Developer_Documentation/01. Onboarding",
+          "name": "01. Onboarding",
+          "children": [
+            {
+              "path": "docs/99. Developer_Documentation/01. Onboarding/01. Registration",
+              "name": "01. Registration",
+              "children": [
+                {
+                  "path": "docs/99. Developer_Documentation/01. Onboarding/01. Registration/01. Login.md",
+                  "name": "01. Login.md",
+                  "chapter": [
+                    "# Implementation",
+                    "## Registration Login"
+                  ]
+                },
+                {
+                  "path": "docs/99. Developer_Documentation/01. Onboarding/01. Registration/02. Add Company Data.md",
+                  "name": "02. Add Company Data.md",
+                  "chapter": [
+                    "# Implementation",
+                    "## Enter / Verify Company Data",
+                    "#### API Details",
+                    "##### Display Company Data Registration Details (pre-saved)",
+                    "###### a) via BPN search and automatic data load",
+                    "###### a) adding the data manually",
+                    "##### Unique Identifier",
+                    "##### Logic implemented for the country specific identifier",
+                    "###### API Response",
+                    "###### Result on UI",
+                    "#A - no unique identifier",
+                    "#B - only one unique identifier (happy path)",
+                    "#C - multiple identifier",
+                    "###### Implemented Pattern",
+                    "###### POST allowed Unique Identifier",
+                    "##### Store / Save Company Data Registration Details"
+                  ]
+                },
+                {
+                  "path": "docs/99. Developer_Documentation/01. Onboarding/01. Registration/03. Add Additional Users.md",
+                  "name": "03. Add Additional Users.md",
+                  "chapter": [
+                    "# Implementation",
+                    "## Add Aditional Users",
+                    "#### API Details"
+                  ]
+                },
+                {
+                  "path": "docs/99. Developer_Documentation/01. Onboarding/01. Registration/04. Company Role & Consent.md",
+                  "name": "04. Company Role & Consent.md",
+                  "chapter": [
+                    "# Implementation",
+                    "## Select company role & sign terms and conditions",
+                    "#### API Details",
+                    "#1 Roles and agreements are fetched from the consent endpoint",
+                    "#2 Consent Post"
+                  ]
+                },
+                {
+                  "path": "docs/99. Developer_Documentation/01. Onboarding/01. Registration/05. Document Upload.md",
+                  "name": "05. Document Upload.md",
+                  "chapter": [
+                    "# Implementation",
+                    "## Upload registration relevant documents",
+                    "#### API Details",
+                    "##### #1 API Get Documents",
+                    "##### #2 API Upload Document",
+                    "##### #3 API Delete Document",
+                    "##### #4 API Download Document"
+                  ]
+                },
+                {
+                  "path": "docs/99. Developer_Documentation/01. Onboarding/01. Registration/06. Verify Registration Data.md",
+                  "name": "06. Verify Registration Data.md",
+                  "chapter": [
+                    "# Implementation",
+                    "## Verify your data",
+                    "##### #1 Get application data",
+                    "##### #2 Submit Registration"
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
-          "path": "docs/Developer_Documentation/Document_Management.md",
+          "path": "docs/99. Developer_Documentation/Architecture",
+          "name": "Architecture",
+          "children": [
+            {
+              "path": "docs/99. Developer_Documentation/Architecture/Architecture Constraints.md",
+              "name": "Architecture Constraints.md",
+              "chapter": [
+                "# Architecture Constraints",
+                "## General",
+                "## Developer",
+                "## Code analysis, linting and code coverage"
+              ]
+            },
+            {
+              "path": "docs/99. Developer_Documentation/Architecture/Building block view.md",
+              "name": "Building block view.md",
+              "chapter": [
+                "# Building Block View"
+              ]
+            },
+            {
+              "path": "docs/99. Developer_Documentation/Architecture/Context and scope.md",
+              "name": "Context and scope.md",
+              "chapter": [
+                "# Content and Scope",
+                "## Business Context",
+                "## Technical Context"
+              ]
+            },
+            {
+              "path": "docs/99. Developer_Documentation/Architecture/Development Concept.md",
+              "name": "Development Concept.md",
+              "chapter": [
+                "# Development Concept",
+                "## Build, test, deploy",
+                "## Development Guidelines",
+                "#### Swagger",
+                "## Migration",
+                "## Configurability"
+              ]
+            },
+            {
+              "path": "docs/99. Developer_Documentation/Architecture/Requirements.md",
+              "name": "Requirements.md",
+              "chapter": [
+                "# Requirements overview",
+                "## What is the Portal & Marketplace Product?",
+                "## Requirements"
+              ]
+            },
+            {
+              "path": "docs/99. Developer_Documentation/Architecture/Solution strategy.md",
+              "name": "Solution strategy.md",
+              "chapter": [
+                "# Solution Strategy"
+              ]
+            },
+            {
+              "path": "docs/99. Developer_Documentation/Architecture/Whitebox Overall System.md",
+              "name": "Whitebox Overall System.md",
+              "chapter": [
+                "# Whitebox Overall System",
+                "## Summary",
+                "## Contained Building Blocks",
+                "### Portal",
+                "### Registration (Company Onboarding)",
+                "### Central IdP & Shared IdP",
+                "### Marketplace",
+                "### Important Interfaces"
+              ]
+            },
+            {
+              "path": "docs/99. Developer_Documentation/Architecture/operational-concept.md",
+              "name": "operational-concept.md",
+              "chapter": [
+                "# Operational concepts",
+                "## Administration",
+                "### Configuration",
+                "### appsettings.json",
+                "### Helm Chart",
+                "### DB Migration File",
+                "## Disaster-Recovery",
+                "## Scaling",
+                "## Clustering",
+                "## Logging",
+                "## Monitoring"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "docs/99. Developer_Documentation/Document_Management.md",
           "name": "Document_Management.md",
           "chapter": [
             "# Summary",
@@ -433,7 +1161,7 @@
           ]
         },
         {
-          "path": "docs/Developer_Documentation/Email Templates.md",
+          "path": "docs/99. Developer_Documentation/Email Templates.md",
           "name": "Email Templates.md",
           "chapter": [
             "# Email Templates",
@@ -450,11 +1178,11 @@
           ]
         },
         {
-          "path": "docs/Developer_Documentation/IdP",
+          "path": "docs/99. Developer_Documentation/IdP",
           "name": "IdP",
           "children": [
             {
-              "path": "docs/Developer_Documentation/IdP/Email Configuration.md",
+              "path": "docs/99. Developer_Documentation/IdP/Email Configuration.md",
               "name": "Email Configuration.md",
               "chapter": [
                 "# IdP Email Configuration",
@@ -472,7 +1200,7 @@
               ]
             },
             {
-              "path": "docs/Developer_Documentation/IdP/Event Logging.md",
+              "path": "docs/99. Developer_Documentation/IdP/Event Logging.md",
               "name": "Event Logging.md",
               "chapter": [
                 "# Event Logging",
@@ -486,7 +1214,7 @@
               ]
             },
             {
-              "path": "docs/Developer_Documentation/IdP/Password Policy.md",
+              "path": "docs/99. Developer_Documentation/IdP/Password Policy.md",
               "name": "Password Policy.md",
               "chapter": [
                 "# Password Policy",
@@ -510,7 +1238,115 @@
           ]
         },
         {
-          "path": "docs/Developer_Documentation/Multi Language.md",
+          "path": "docs/99. Developer_Documentation/Interface Contracts",
+          "name": "Interface Contracts",
+          "children": [
+            {
+              "path": "docs/99. Developer_Documentation/Interface Contracts/BPDM (2).md",
+              "name": "BPDM (2).md",
+              "chapter": [
+                "# Business Partner Data Management",
+                "## Interface Summary",
+                "## Architecture Overview",
+                "## Description of the functional interface (WHAT)",
+                "## Description of the physical interfaces (HOW)",
+                "### Get Business Partner data",
+                "#### Data Mapping for Company Data",
+                "#### Get Membership Flag",
+                "#### Data Mapping for Company Data"
+              ]
+            },
+            {
+              "path": "docs/99. Developer_Documentation/Interface Contracts/BPDM.md",
+              "name": "BPDM.md",
+              "chapter": [
+                "# Business Partner Data Management",
+                "## Interface Summary",
+                "## Architecture Overview",
+                "## Description of the functional interface (WHAT)",
+                "## Description of the physical interfaces (HOW)",
+                "### Service Call via BPN",
+                "#### Data Mapping for Company Data",
+                "### Service Call via CompanyName"
+              ]
+            },
+            {
+              "path": "docs/99. Developer_Documentation/Interface Contracts/CX-Membership.md",
+              "name": "CX-Membership.md",
+              "chapter": [
+                "# CX-Membership",
+                "## Interface / API / Service Summary",
+                "## Architecture Overview",
+                "## Implementation",
+                "### #1 CX Membership Discovery",
+                "###### Request Body",
+                "###### Response Body"
+              ]
+            },
+            {
+              "path": "docs/99. Developer_Documentation/Interface Contracts/Dataspace-Discovery.md",
+              "name": "Dataspace-Discovery.md",
+              "chapter": [
+                "# Dataspace Discovery",
+                "## Interface / API / Service Summary",
+                "## Architecture Overview",
+                "## Implementation",
+                "### #1 EDC Discovery",
+                "###### Request Body",
+                "###### Response Body"
+              ]
+            },
+            {
+              "path": "docs/99. Developer_Documentation/Interface Contracts/Managed Wallets.md",
+              "name": "Managed Wallets.md",
+              "chapter": [
+                "# Managed Wallets",
+                "## Interface Summary",
+                "## Architecture Overview",
+                "### #1 Company Registration",
+                "### #2 Company Registration",
+                "## Authentication Flow / Details",
+                "## Description of the functional interface (WHAT)",
+                "## Description of the physical interfaces (HOW)",
+                "## APIs"
+              ]
+            },
+            {
+              "path": "docs/99. Developer_Documentation/Interface Contracts/Offer-Autosetup.md",
+              "name": "Offer-Autosetup.md",
+              "chapter": [
+                "# Offer Autosetup",
+                "## Interface / API / Service Summary",
+                "## Architecture Overview",
+                "### #1 Highlevel Architecture picture",
+                "### #2 Details",
+                "## Implementation",
+                "### #1 PUT Service URL",
+                "### #2 POST Service Request",
+                "### #3 POST Service Instance"
+              ]
+            },
+            {
+              "path": "docs/99. Developer_Documentation/Interface Contracts/Self Description.md",
+              "name": "Self Description.md",
+              "chapter": [
+                "# Self Description",
+                "## Interface Summary",
+                "## Architecture Overview",
+                "## Description of the functional interface (WHAT)",
+                "## Description of the physical interfaces (HOW)",
+                "## 1. Self Description Creation",
+                "### 1.1 Participant (Type of SD is \"LegalPerson\")",
+                "### 1.2 Service (Type of SD is \"ServiceOffering\")",
+                "## 2. Self Description Storage",
+                "## 3. Self Description Deletion",
+                "## 4. Self Description Discovery"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "docs/99. Developer_Documentation/Multi Language.md",
           "name": "Multi Language.md",
           "chapter": [
             "# Multi Language",
@@ -521,7 +1357,7 @@
           ]
         },
         {
-          "path": "docs/Developer_Documentation/Notifications.md",
+          "path": "docs/99. Developer_Documentation/Notifications.md",
           "name": "Notifications.md",
           "chapter": [
             "## Summary",
@@ -554,553 +1390,43 @@
           ]
         },
         {
-          "path": "docs/Developer_Documentation/test.md",
+          "path": "docs/99. Developer_Documentation/Operations",
+          "name": "Operations",
+          "children": [
+            {
+              "path": "docs/99. Developer_Documentation/Operations/Auditing.md",
+              "name": "Auditing.md",
+              "chapter": [
+                "# Audit Logging",
+                "## PostgreSQL Session Logging (pgAudit)",
+                "## Application Audit Logging"
+              ]
+            },
+            {
+              "path": "docs/99. Developer_Documentation/Operations/Release-Process.md",
+              "name": "Release-Process.md",
+              "chapter": [
+                "# Release Process",
+                "## Preparation",
+                "#### 1. Update changelog file",
+                "#### 2. Update dependencies file",
+                "#### 3. Version bump (frontend repos only)",
+                "#### 4. Merge from dev into main branch",
+                "## Build of a versioned image",
+                "## Release of a new helm chart version",
+                "## Merge upstream to eclipse-tractusx"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "docs/99. Developer_Documentation/test.md",
           "name": "test.md",
           "chapter": [
             "## Summary",
             "## Unit Tests",
             "## Test Automation",
             "## Manual Tests"
-          ]
-        }
-      ]
-    },
-    {
-      "path": "docs/Interface Contracts",
-      "name": "Interface Contracts",
-      "children": [
-        {
-          "path": "docs/Interface Contracts/BPDM (2).md",
-          "name": "BPDM (2).md",
-          "chapter": [
-            "# Business Partner Data Management",
-            "## Interface Summary",
-            "## Architecture Overview",
-            "## Description of the functional interface (WHAT)",
-            "## Description of the physical interfaces (HOW)",
-            "### Get Business Partner data",
-            "#### Data Mapping for Company Data",
-            "#### Get Membership Flag",
-            "#### Data Mapping for Company Data"
-          ]
-        },
-        {
-          "path": "docs/Interface Contracts/BPDM.md",
-          "name": "BPDM.md",
-          "chapter": [
-            "# Business Partner Data Management",
-            "## Interface Summary",
-            "## Architecture Overview",
-            "## Description of the functional interface (WHAT)",
-            "## Description of the physical interfaces (HOW)",
-            "### Service Call via BPN",
-            "#### Data Mapping for Company Data",
-            "### Service Call via CompanyName"
-          ]
-        },
-        {
-          "path": "docs/Interface Contracts/CX-Membership.md",
-          "name": "CX-Membership.md",
-          "chapter": [
-            "# CX-Membership",
-            "## Interface / API / Service Summary",
-            "## Architecture Overview",
-            "## Implementation",
-            "### #1 CX Membership Discovery",
-            "###### Request Body",
-            "###### Response Body"
-          ]
-        },
-        {
-          "path": "docs/Interface Contracts/Dataspace-Discovery.md",
-          "name": "Dataspace-Discovery.md",
-          "chapter": [
-            "# Dataspace Discovery",
-            "## Interface / API / Service Summary",
-            "## Architecture Overview",
-            "## Implementation",
-            "### #1 EDC Discovery",
-            "###### Request Body",
-            "###### Response Body"
-          ]
-        },
-        {
-          "path": "docs/Interface Contracts/Managed Wallets.md",
-          "name": "Managed Wallets.md",
-          "chapter": [
-            "# Managed Wallets",
-            "## Interface Summary",
-            "## Architecture Overview",
-            "### #1 Company Registration",
-            "### #2 Company Registration",
-            "## Authentication Flow / Details",
-            "## Description of the functional interface (WHAT)",
-            "## Description of the physical interfaces (HOW)",
-            "## APIs"
-          ]
-        },
-        {
-          "path": "docs/Interface Contracts/Offer-Autosetup.md",
-          "name": "Offer-Autosetup.md",
-          "chapter": [
-            "# Offer Autosetup",
-            "## Interface / API / Service Summary",
-            "## Architecture Overview",
-            "### #1 Highlevel Architecture picture",
-            "### #2 Details",
-            "## Implementation",
-            "### #1 PUT Service URL",
-            "### #2 POST Service Request",
-            "### #3 POST Service Instance"
-          ]
-        },
-        {
-          "path": "docs/Interface Contracts/Self Description.md",
-          "name": "Self Description.md",
-          "chapter": [
-            "# Self Description",
-            "## Interface Summary",
-            "## Architecture Overview",
-            "## Description of the functional interface (WHAT)",
-            "## Description of the physical interfaces (HOW)",
-            "## 1. Self Description Creation",
-            "### 1.1 Participant (Type of SD is \"LegalPerson\")",
-            "### 1.2 Service (Type of SD is \"ServiceOffering\")",
-            "## 2. Self Description Storage",
-            "## 3. Self Description Deletion",
-            "## 4. Self Description Discovery"
-          ]
-        }
-      ]
-    },
-    {
-      "path": "docs/Onboarding",
-      "name": "Onboarding",
-      "children": [
-        {
-          "path": "docs/Onboarding/Connector Registration",
-          "name": "Connector Registration",
-          "children": [
-            {
-              "path": "docs/Onboarding/Connector Registration/FAQ.md",
-              "name": "FAQ.md",
-              "chapter": [
-                "## FAQ",
-                "### How to register a connector inside the network?",
-                "### Whats the difference of a OWNED and a MANAGED connector?",
-                "### How can a connector get deleted?",
-                "### What is a \"PENDING\" connector?",
-                "### Why is my connector authentication icon green or grey?",
-                "### Whats a public key and how do I create the public key?",
-                "##### Steps to install OpenSSL on mac with brew:",
-                "###### Step 1: Install brew",
-                "###### Step 2:  Add Homebrew to your path and install openssl",
-                "###### Step 3:  Navigate to the folder having openssl.cnf and run the command"
-              ]
-            },
-            {
-              "path": "docs/Onboarding/Connector Registration/Implementation.md",
-              "name": "Implementation.md",
-              "chapter": [
-                "# Implementation",
-                "## 1 Get all MY Connector Registrations",
-                "#### Logical flow of the service",
-                "#### API Details",
-                "## 2 Create new Connector Registration - self-owned",
-                "#### Logical flow of the service",
-                "#### API Details",
-                "## 3 Create new Connector Registration - managed ",
-                "#### Logical flow of the service",
-                "#### API Details",
-                "## 4 Retrigger DAPS",
-                "#### API Details",
-                "## 5 Delete Connector",
-                "#### API Details",
-                "## DB Model"
-              ]
-            },
-            {
-              "path": "docs/Onboarding/Connector Registration/Summary.md",
-              "name": "Summary.md",
-              "chapter": [
-                "# Summary"
-              ]
-            }
-          ]
-        },
-        {
-          "path": "docs/Onboarding/Identity_Provider_Switch",
-          "name": "Identity_Provider_Switch",
-          "children": [
-            {
-              "path": "docs/Onboarding/Identity_Provider_Switch/FAQ.md",
-              "name": "FAQ.md",
-              "chapter": [
-                "### FAQ",
-                "#### <question<?",
-                "#### <question<?",
-                "#### <question<?"
-              ]
-            },
-            {
-              "path": "docs/Onboarding/Identity_Provider_Switch/Implementation.md",
-              "name": "Implementation.md",
-              "chapter": [
-                "# Implementation",
-                "## 1 Get all MY Connector Registrations",
-                "#### Logical flow of the service",
-                "#### API Details",
-                "## 2 Create new Connector Registration - self-owned",
-                "#### Logical flow of the service",
-                "#### API Details",
-                "## 3 Create new Connector Registration - managed ",
-                "#### Logical flow of the service",
-                "#### API Details",
-                "## 4 Retrigger DAPS",
-                "#### API Details",
-                "## 5 Delete Connector",
-                "#### API Details",
-                "## DB Model"
-              ]
-            },
-            {
-              "path": "docs/Onboarding/Identity_Provider_Switch/Summary.md",
-              "name": "Summary.md",
-              "chapter": [
-                "# Summary"
-              ]
-            },
-            {
-              "path": "docs/Onboarding/Identity_Provider_Switch/User Description.md",
-              "name": "User Description.md",
-              "chapter": [
-                "# User Description",
-                "### Register your company IdP",
-                "#### Create the new idp record",
-                "#### Migrate existing user accounts to the new created IdP"
-              ]
-            }
-          ]
-        },
-        {
-          "path": "docs/Onboarding/Invite",
-          "name": "Invite",
-          "children": [
-            {
-              "path": "docs/Onboarding/Invite/FAQ.md",
-              "name": "FAQ.md",
-              "chapter": [
-                "# FAQ",
-                "## How can I invite a potential new Catena-X member?",
-                "## Can I identify already invited members?"
-              ]
-            },
-            {
-              "path": "docs/Onboarding/Invite/Implementation.md",
-              "name": "Implementation.md",
-              "chapter": [
-                "# Implementation",
-                "## 1 Get Invited Companies",
-                "#### API Details",
-                "## 2 Invite Companies",
-                "#### API Details",
-                "## 3  Search"
-              ]
-            },
-            {
-              "path": "docs/Onboarding/Invite/Summary.md",
-              "name": "Summary.md",
-              "chapter": [
-                "## Summary"
-              ]
-            }
-          ]
-        },
-        {
-          "path": "docs/Onboarding/Registration",
-          "name": "Registration",
-          "children": [
-            {
-              "path": "docs/Onboarding/Registration/FAQ.md",
-              "name": "FAQ.md",
-              "chapter": [
-                "# FAQ",
-                "## For what are the registration data used for?",
-                "## What will happen after the registration?",
-                "## Do I need to do the registration in one flow or can i pause in between?",
-                "## What can I do, if I dont have all necessary information available, which are needed to register my company?"
-              ]
-            },
-            {
-              "path": "docs/Onboarding/Registration/Implementation.md",
-              "name": "Implementation.md",
-              "chapter": [
-                "# Implementation",
-                "## Enter / Verify Company Data",
-                "#### API Details",
-                "##### Display Company Data Registration Details",
-                "##### Unique Identifier",
-                "###### GET allowed Unique Identifier",
-                "###### POST allowed Unique Identifier",
-                "###### Input validations",
-                "##### Store / Save Company Data Registration Details",
-                "## Add Aditional Users",
-                "#### API Details",
-                "## Select company role & sign terms and conditions",
-                "#### API Details",
-                "#1 Roles and agreements are fetched from the consent endpoint",
-                "#2 Consent Post",
-                "## Upload registration relevant documents",
-                "#### API Details",
-                "##### #1 API Get Documents",
-                "##### #2 API Upload Document",
-                "##### #3 API Delete Document",
-                "##### #4 API Download Document",
-                "## Verify your data",
-                "##### #1 Get application data",
-                "##### #2 Submit Registration"
-              ]
-            },
-            {
-              "path": "docs/Onboarding/Registration/Summary.md",
-              "name": "Summary.md",
-              "chapter": [
-                "# Summary",
-                "### Registration Steps",
-                "#### Registration Login",
-                "#### Introduction",
-                "#### Add Company Data",
-                "#### Invite additional users",
-                "#optional step#",
-                "#### Company Role & Terms and Conditions",
-                "#### Document upload",
-                "#### Submit company data"
-              ]
-            }
-          ]
-        },
-        {
-          "path": "docs/Onboarding/Registration Approval",
-          "name": "Registration Approval",
-          "children": [
-            {
-              "path": "docs/Onboarding/Registration Approval/FAQ.md",
-              "name": "FAQ.md",
-              "chapter": [
-                "# FAQ"
-              ]
-            },
-            {
-              "path": "docs/Onboarding/Registration Approval/Functional Details.md",
-              "name": "Functional Details.md",
-              "chapter": [
-                "# Functional Details",
-                "### Display Application Details",
-                "### Approval Flow",
-                "##### Details \"Manual Validation\"",
-                "###### Scenario: Approve",
-                "###### Scenario: Decline",
-                "##### Details \"Create Business Partner Number (if necessary)\"",
-                "###### Scenario 1 - Registration with BPN",
-                "###### Scenario 2 - Registration without BPN",
-                "###### Scenario 3 - manually add BPN as operator (interim supported workflow)",
-                "##### Details \"Create Managed Identity Wallet\"",
-                "##### Details \"Clearinghouse Check\"",
-                "###### Step 1 - manually add BPN as operator (interim supported workflow)",
-                "###### Step 2 - Clearinghouse response",
-                "##### Details \"Self-Description Creation LegalPerson\"",
-                "###### DB Table Content",
-                "##### Details \"Activation\"",
-                "### Add/Update BPN for the registration company"
-              ]
-            },
-            {
-              "path": "docs/Onboarding/Registration Approval/Implementation.md",
-              "name": "Implementation.md",
-              "chapter": [
-                "# Implementation",
-                "## 1 Get Applications",
-                "###### Filtering",
-                "###### Search",
-                "#### Logical flow of the service",
-                "#### API Details",
-                "## 2 Get Application Details",
-                "#### API Details",
-                "## 3 Confirm/Approve Application",
-                "#### Logical flow of the service",
-                "#### API Details",
-                "## 4 Decline Application",
-                "#### Logical flow of the service",
-                "#### API Details",
-                "## 5 Download Documents",
-                "#### Logical flow of the service",
-                "#### API Details",
-                "## 6 Add bpn to a company registration",
-                "#### Logical flow of the service",
-                "#### API Details"
-              ]
-            },
-            {
-              "path": "docs/Onboarding/Registration Approval/Summary.md",
-              "name": "Summary.md",
-              "chapter": [
-                "## Summary"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "path": "docs/Release-Process.md",
-      "name": "Release-Process.md",
-      "chapter": [
-        "# Release Process",
-        "## Preparation",
-        "#### 1. Update changelog file",
-        "#### 2. Update dependencies file",
-        "#### 3. Version bump (frontend repos only)",
-        "#### 4. Merge from dev into main branch",
-        "## Build of a versioned image",
-        "## Release of a new helm chart version",
-        "## Merge upstream to eclipse-tractusx"
-      ]
-    },
-    {
-      "path": "docs/Service(s)",
-      "name": "Service(s)",
-      "children": [
-        {
-          "path": "docs/Service(s)/Marketplace",
-          "name": "Marketplace",
-          "children": [
-            {
-              "path": "docs/Service(s)/Marketplace/Design.md",
-              "name": "Design.md",
-              "chapter": [
-                "# Summary",
-                "# Functionality",
-                "### Service Marketplace Overview",
-                "### Service Marketplace - Service Details"
-              ]
-            },
-            {
-              "path": "docs/Service(s)/Marketplace/FAQ.md",
-              "name": "FAQ.md",
-              "chapter": [
-                "### FAQ"
-              ]
-            },
-            {
-              "path": "docs/Service(s)/Marketplace/Implementation.md",
-              "name": "Implementation.md",
-              "chapter": [
-                "# Summary",
-                "# Implementation",
-                "### #1 Search",
-                "### #2 Filter",
-                "### #3 Sorting",
-                "### #4 Get all active services",
-                "### #5 Get Service Offer Details",
-                "### #6 Get Service Order Details"
-              ]
-            },
-            {
-              "path": "docs/Service(s)/Marketplace/User_Description.md",
-              "name": "User_Description.md",
-              "chapter": [
-                "# Summary",
-                "# Functionality",
-                "### Service Marketplace Overview",
-                "### Service Marketplace - Service Details"
-              ]
-            }
-          ]
-        },
-        {
-          "path": "docs/Service(s)/Release-Process",
-          "name": "Release-Process",
-          "children": [
-            {
-              "path": "docs/Service(s)/Release-Process/Design.md",
-              "name": "Design.md",
-              "chapter": [
-                "# Summary",
-                "# Design Flow"
-              ]
-            },
-            {
-              "path": "docs/Service(s)/Release-Process/FAQ.md",
-              "name": "FAQ.md",
-              "chapter": [
-                "### FAQ",
-                "### How can I submit a new service offer for marketplace publishing?"
-              ]
-            },
-            {
-              "path": "docs/Service(s)/Release-Process/Implementation.md",
-              "name": "Implementation.md",
-              "chapter": [
-                "# Summary",
-                "# Implementation",
-                "### #1 Create Service Offering",
-                "### #2 Update Service Offering",
-                "### #3 Submit new Service Offering for release/publishing",
-                "### #4 Approve Service Request",
-                "### #5 Decline Service Request"
-              ]
-            },
-            {
-              "path": "docs/Service(s)/Release-Process/User_Description.md",
-              "name": "User_Description.md",
-              "chapter": [
-                "# Summary"
-              ]
-            }
-          ]
-        },
-        {
-          "path": "docs/Service(s)/Subscription",
-          "name": "Subscription",
-          "children": [
-            {
-              "path": "docs/Service(s)/Subscription/Design.md",
-              "name": "Design.md",
-              "chapter": [
-                "# Summary",
-                "# Design Flow",
-                "# Connected Documentation"
-              ]
-            },
-            {
-              "path": "docs/Service(s)/Subscription/FAQ.md",
-              "name": "FAQ.md",
-              "chapter": [
-                "### FAQ",
-                "#### Can I trigger a second service subscription request?",
-                "#### I dont have subscription rights - how can I receive the necessary rights?",
-                "#### I triggered a service request what do I need to do now?"
-              ]
-            },
-            {
-              "path": "docs/Service(s)/Subscription/Implementation.md",
-              "name": "Implementation.md",
-              "chapter": [
-                "# Summary",
-                "# Implementation",
-                "### #1 Get Service Agreements",
-                "### #2 Post Subscription Request",
-                "### #3 Activate Subscription & Tenant"
-              ]
-            },
-            {
-              "path": "docs/Service(s)/Subscription/User_Description.md",
-              "name": "User_Description.md",
-              "chapter": [
-                "# Summary",
-                "# Connected Documentation"
-              ]
-            }
           ]
         }
       ]
@@ -1127,224 +1453,6 @@
             "### Implementation  ",
             "#### New Page creation",
             "#### Enhancing an existing page"
-          ]
-        }
-      ]
-    },
-    {
-      "path": "docs/User Management",
-      "name": "User Management",
-      "children": [
-        {
-          "path": "docs/User Management/1 User Account",
-          "name": "1 User Account",
-          "children": [
-            {
-              "path": "docs/User Management/1 User Account/1 FAQ.md",
-              "name": "1 FAQ.md",
-              "chapter": [
-                "# FAQ\r",
-                "#### Can I delete an user of another company?\r",
-                "#### How can I delete an user account which is company IdP federated?\r",
-                "#### Can I revert a user deletion?\r",
-                "#### If my/a user has 2 idp connections, will the user deletion delete both idp connections?\r"
-              ]
-            },
-            {
-              "path": "docs/User Management/1 User Account/2 HowTo.md",
-              "name": "2 HowTo.md",
-              "chapter": [
-                "# How To",
-                "## View company user accounts",
-                "## Create a new user account (single)",
-                "## Create a new user account (bulk)"
-              ]
-            },
-            {
-              "path": "docs/User Management/1 User Account/3 Implementation.md",
-              "name": "3 Implementation.md",
-              "chapter": [
-                "# Implementation"
-              ]
-            },
-            {
-              "path": "docs/User Management/1 User Account/4 Summary.md",
-              "name": "4 Summary.md",
-              "chapter": [
-                "# Summary"
-              ]
-            },
-            {
-              "path": "docs/User Management/1 User Account/index.md",
-              "name": "index.md",
-              "chapter": [
-                "# User Account"
-              ]
-            }
-          ]
-        },
-        {
-          "path": "docs/User Management/2 Edit User Account",
-          "name": "2 Edit User Account",
-          "children": [
-            {
-              "path": "docs/User Management/2 Edit User Account/1 Design.md",
-              "name": "1 Design.md",
-              "chapter": [
-                "# User Account Details",
-                "# My CX Account"
-              ]
-            },
-            {
-              "path": "docs/User Management/2 Edit User Account/2 Password Reset.md",
-              "name": "2 Password Reset.md",
-              "chapter": [
-                "# Password Reset",
-                "### Error message handling for password reset",
-                "### Password reset policy"
-              ]
-            },
-            {
-              "path": "docs/User Management/2 Edit User Account/3 User Permissions.md",
-              "name": "3 User Permissions.md",
-              "chapter": [
-                "# User Permissions",
-                "## API Details",
-                "### #1 Get MY user details"
-              ]
-            },
-            {
-              "path": "docs/User Management/2 Edit User Account/4 Add & Delete BPN.md",
-              "name": "4 Add & Delete BPN.md",
-              "chapter": [
-                "# Add BPN",
-                "### Details",
-                "### Validations",
-                "### Success/Error Messages",
-                "# Delete BPN",
-                "### Details",
-                "### Success/Error Messages",
-                "# API Details",
-                "### #1 API Endpoint Details: Add BPN",
-                "### #2 API Endpoint Details: Delete BPN"
-              ]
-            },
-            {
-              "path": "docs/User Management/2 Edit User Account/5 Suspend User.md",
-              "name": "5 Suspend User.md",
-              "chapter": [
-                "# Suspend User"
-              ]
-            },
-            {
-              "path": "docs/User Management/2 Edit User Account/6 Delete User.md",
-              "name": "6 Delete User.md",
-              "chapter": [
-                "# Delete User",
-                "## Own User Deletion Flow",
-                "## Company User Deletion Flow",
-                "## Functionality and impacted Keycloak layers",
-                "## API Details",
-                "### #1 Delete my user",
-                "### #2 Delete user {userId}"
-              ]
-            },
-            {
-              "path": "docs/User Management/2 Edit User Account/7 Summary.md",
-              "name": "7 Summary.md",
-              "chapter": [
-                "# Summary\r"
-              ]
-            }
-          ]
-        },
-        {
-          "path": "docs/User Management/3 Technical User",
-          "name": "3 Technical User",
-          "children": [
-            {
-              "path": "docs/User Management/3 Technical User/1 FAQ.md",
-              "name": "1 FAQ.md",
-              "chapter": []
-            },
-            {
-              "path": "docs/User Management/3 Technical User/2 Design.md",
-              "name": "2 Design.md",
-              "chapter": [
-                "# Design"
-              ]
-            },
-            {
-              "path": "docs/User Management/3 Technical User/3 HowTo.md",
-              "name": "3 HowTo.md",
-              "chapter": [
-                "# Technical User - How to (Functional explanation)",
-                "## Create a new technical user",
-                "## Delete an user",
-                "#### Currently not supported:"
-              ]
-            },
-            {
-              "path": "docs/User Management/3 Technical User/4 Implementation.md",
-              "name": "4 Implementation.md",
-              "chapter": [
-                "# Implementation - API Details",
-                "### #1 Get Service Accounts",
-                "#### Get Service Account Role Profiles",
-                "### #2 Create Service Account",
-                "### #3 Show Tech. Service Account Details (of just created Account)",
-                "### #4 Delete Service Account",
-                "### #5 Service Accounts Created via service/app subscription"
-              ]
-            },
-            {
-              "path": "docs/User Management/3 Technical User/5 Summary.md",
-              "name": "5 Summary.md",
-              "chapter": [
-                "# Summary",
-                "### Customer Functionalities covered in the function",
-                "### Available technical user roles"
-              ]
-            }
-          ]
-        },
-        {
-          "path": "docs/User Management/4 App Access Management",
-          "name": "4 App Access Management",
-          "children": [
-            {
-              "path": "docs/User Management/4 App Access Management/1 Design.md",
-              "name": "1 Design.md",
-              "chapter": [
-                "# Design"
-              ]
-            },
-            {
-              "path": "docs/User Management/4 App Access Management/2 Implementation.md",
-              "name": "2 Implementation.md",
-              "chapter": [
-                "# Implementation",
-                "### #1 Get App Roles and Descriptions",
-                "### #2 Get Company App Users & Serach",
-                "### #3 Add App Role",
-                "### #4 Update App Role"
-              ]
-            },
-            {
-              "path": "docs/User Management/4 App Access Management/3 Summary.md",
-              "name": "3 Summary.md",
-              "chapter": [
-                "# Summary",
-                "#### Pre-Requisite"
-              ]
-            }
-          ]
-        },
-        {
-          "path": "docs/User Management/index.md",
-          "name": "index.md",
-          "chapter": [
-            "# User Management"
           ]
         }
       ]
