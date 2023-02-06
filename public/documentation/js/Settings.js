@@ -23,3 +23,7 @@ export const Settings = {
     DEFAULT_BRANCH: 'main',
     ROOT: 'docs',
 }
+
+export const Patterns = {
+    DISPLAY: /(^\d+[.-_]?\s+|_|\.md$)/g
+}

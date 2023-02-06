@@ -19,10 +19,10 @@
 
 import { clear, addEvents, N, Viewable, NavTools } from "./Toolkit.js"
 import { state } from "./State.js"
-import { Settings } from "./Settings.js"
+import { Patterns, Settings } from "./Settings.js"
 
 const createSelectLink = (item) => addEvents(
-    N('a', item.name.replace(/(^\d+\s+|_|\.md$)/g, ' '), item.path === state.selection && { class: 'selected' }),
+    N('a', item.name.replace(Patterns.DISPLAY, ' '), item.path === state.selection && { class: 'selected' }),
     {
         click: () => {
             state.setSelection(item.path, undefined)
@@ -75,7 +75,7 @@ class ChapterCard extends Viewable {
             N('div',
                 N('div', [
                     this.getImage(chapter),
-                    N('div', chapter.name.replace(/(^\d+\s+|_|\.md$)/g, ' '), { class: 'chapter-card-title' }),
+                    N('div', chapter.name.replace(Patterns.DISPLAY, ' '), { class: 'chapter-card-title' }),
                 ], {
                     href: chapter.path
                 }),
@@ -158,7 +158,7 @@ class Breadcrumb extends Viewable {
     }
 
     renderLink(content) {
-        return N('a', N('img', null, {src: 'https://github.githubassets.com/favicons/favicon-dark.svg'}), {
+        return N('a', N('img', null, { src: 'https://github.githubassets.com/favicons/favicon-dark.svg' }), {
             class: 'github',
             target: 'github',
             alt: 'Open in GitHub',
@@ -265,7 +265,7 @@ class Content extends Viewable {
             {
                 click: (e) => {
                     e.preventDefault()
-                    const path = decodeURI(link.href).replace(`${Settings.DOCBASE}/${state.releaseSelection}/`, '').replace(/\/$/,'')
+                    const path = decodeURI(link.href).replace(`${Settings.DOCBASE}/${state.releaseSelection}/`, '').replace(/\/$/, '')
                     e.target.href = `.?path=${path}`
                     //console.log(link.href, path)
                     state.setSelection(path)
@@ -274,7 +274,7 @@ class Content extends Viewable {
         ));
         [...root.querySelectorAll('h1, h2, h3, h4, h5, h6')].map(item => {
             item.onclick = () => {
-                history.replaceState({}, document.getElementsByTagName('title').content, location.href.split('#')[0]+(item.id ? '#'+item.id: ''))
+                history.replaceState({}, document.getElementsByTagName('title').content, location.href.split('#')[0] + (item.id ? '#' + item.id : ''))
                 item.scrollIntoView()
             }
             item.style.cursor = 'pointer'
@@ -298,7 +298,7 @@ class Content extends Viewable {
 
     renderArticle(content) {
         if (!location.hash)
-            window.scrollTo(0,0)
+            window.scrollTo(0, 0)
         if (!content.children)
             return this.renderMD(content)
         if (content.children.filter(item => item.name === 'index.md').length > 0)
