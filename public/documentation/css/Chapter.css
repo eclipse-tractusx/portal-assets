@@ -140,6 +140,23 @@ nav.menu.open button::before {
     content: '«';
 }
 
+article.content a.github {
+    display: block;
+    width: 100%;
+    text-align: right;
+}
+
+article.content a.github img {
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg"/%3E');
+    background-color: #f0f0f0;
+}
+
+article.content a.github img:hover {
+    background-color: #d0d0d0;
+}
+
 nav a {
     cursor: pointer;
     color: rgb(15, 113, 203);

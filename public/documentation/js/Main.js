@@ -157,6 +157,15 @@ class Breadcrumb extends Viewable {
         this.view = N('nav', null, { class: 'breadcrumb' })
     }
 
+    renderLink(content) {
+        return N('a', N('img', null, {src: 'https://github.githubassets.com/favicons/favicon-dark.svg'}), {
+            class: 'github',
+            target: 'github',
+            alt: 'Open in GitHub',
+            href: `${Settings.SRCBASE}/${content.name.endsWith('.md') ? 'blob' : 'tree'}/${state.releaseSelection}/${content.path}`
+        })
+    }
+
     createItem(item) {
         return N('li', createSelectLink(item))
     }
@@ -168,7 +177,7 @@ class Breadcrumb extends Viewable {
         }
         return this.clear().append(
             N('ul', list.map(item => this.createItem(item)))
-        )
+        ).append(this.renderLink(content))
     }
 
 }
@@ -250,9 +259,8 @@ class Content extends Viewable {
     }
 
     replaceLinks() {
-        const root = this.zeromd.shadowRoot
-        const a = root.querySelectorAll('a');
-        [...a].map(link => addEvents(
+        const root = this.zeromd.shadowRoot;
+        [...root.querySelectorAll('a')].map(link => addEvents(
             link,
             {
                 click: (e) => {
@@ -263,9 +271,8 @@ class Content extends Viewable {
                     state.setSelection(path)
                 }
             }
-        ))
-        const h = root.querySelectorAll('h1, h2, h3, h4, h5');
-        [...h].map(item => {
+        ));
+        [...root.querySelectorAll('h1, h2, h3, h4, h5, h6')].map(item => {
             item.onclick = () => {
                 history.replaceState({}, document.getElementsByTagName('title').content, location.href.split('#')[0]+(item.id ? '#'+item.id: ''))
                 item.scrollIntoView()
