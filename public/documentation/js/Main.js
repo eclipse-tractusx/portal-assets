@@ -48,7 +48,7 @@ class SearchInput extends Viewable {
             N('input', null, {
                 type: 'search',
                 class: 'search',
-                placeholder: 'Enter your company name',
+                placeholder: 'Search for help topics',
                 value: getSelectedIDP(providers),
             }),
             {
