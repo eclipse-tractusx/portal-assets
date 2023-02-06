@@ -137,10 +137,6 @@ main h1 {
 .chapters {
     max-width: 1330px;
     margin: 0px auto;
-    background-image: url(/assets/images/logos/cx-text.svg);
-    background-position: 40px 0px;
-    background-repeat: no-repeat;
-    background-size: auto 40px;
 }
 
 .chapters ul {
@@ -226,4 +222,33 @@ footer .links a {
 
 footer .copy {
     font-size: 12px;
+}
+
+.subheadline {
+    position: relative;
+}
+
+.subheadline a,
+.home a {
+    position: absolute;
+    display: block;
+    left: 0px;
+    top: 0px;
+    background-image: url(/assets/images/logos/cx-text.svg);
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.subheadline a {
+    left: 50px;
+    width: 220px;
+    height: 51px;
+}
+
+.home a {
+    left: 20px;
+    top: 20px;
+    width: 192px;
+    height: 45px;
 }

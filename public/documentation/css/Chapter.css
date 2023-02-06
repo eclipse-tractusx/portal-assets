@@ -41,10 +41,6 @@ nav.menu {
     display: flex;
     flex-direction: row;
     min-height: 800px;
-    background-image: url(/assets/images/logos/cx-text.svg);
-    background-position: 20px 20px;
-    background-repeat: no-repeat;
-    background-size: auto 40px;
     transition: width 0.1s;
 }
 
@@ -52,7 +48,8 @@ nav.menu.open {
     width: 272px;
 }
 
-nav.menu.closed {
+nav.menu.closed,
+nav.menu.closed .home a {
     width: 0px;
     max-height: 80vh;
 }
@@ -100,6 +97,12 @@ nav.menu > ul.level1 > li {
     padding-top: 16px;
 }
 
+nav.breadcrumb {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 nav.menu ul.level1,
 nav.breadcrumb ul {
     padding-inline-start: 0;
@@ -142,7 +145,6 @@ nav.menu.open button::before {
 
 article.content a.github {
     display: block;
-    width: 100%;
     text-align: right;
 }
 

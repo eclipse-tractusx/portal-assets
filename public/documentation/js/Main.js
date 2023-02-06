@@ -183,7 +183,10 @@ class Chapters extends Viewable {
         state.addDataListener(this)
         this.items = N('div')
         this.view = N('section', [
-            N('h1', 'Catena-X Help Desk'),
+            N('div', [
+                createSelectLink({ name: '', path: Settings.ROOT }),
+                N('h1', 'Catena-X Help Desk'),
+            ], { class: 'subheadline'}),
             this.items
         ], { class: 'chapters' })
     }
@@ -265,7 +268,11 @@ class Navigation extends Viewable {
         state.addMenuOpenListener(this)
         this.menu = N('ul', null, { class: 'level1' })
         this.toggle = this.createToggleButton()
-        this.view = N('nav', [this.menu, this.toggle], { class: 'menu open' })
+        this.view = N('nav', [
+            N('div', createSelectLink({ name: '', path: Settings.ROOT }), { class: 'home'}),
+            this.menu,
+            this.toggle
+        ], { class: 'menu open' })
     }
 
     createToggleButton() {
@@ -320,6 +327,7 @@ class Content extends Viewable {
         state.addMenuOpenListener(this)
         this.breadcrumb = new Breadcrumb()
         this.view = N('article', null, { class: 'content small' })
+        this.ghlink
     }
 
     selectionChanged(selection, content) {
@@ -332,6 +340,30 @@ class Content extends Viewable {
     menuOpenChanged(menuOpen) {
         this.view.className = menuOpen ? 'content small' : 'content large'
         return this
+    }
+
+    renderLink(content, hash) {
+        return N('a', N('img', null, { src: 'https://github.githubassets.com/favicons/favicon.svg' }), {
+            class: 'github',
+            target: 'github',
+            alt: 'Open in GitHub',
+            href: `${Settings.SRCBASE}/${content.name.endsWith('.md') ? 'blob' : 'tree'}/${state.releaseSelection}/${content.path}#${hash}`
+        })
+    }
+
+    replaceLink(item) {
+        const newItem = N('div', null, { class: 'headline' })
+        const link = this.renderLink(this.content, item.id)
+        item.parentElement.insertBefore(newItem, item)
+        item.parentElement.removeChild(item)
+        newItem.appendChild(item)
+        newItem.appendChild(link)
+        newItem.onmouseover = () => link.style.display = 'block'
+        newItem.onmouseout = () => link.style.display = 'none'
+        item.onclick = () => {
+            history.replaceState({}, document.getElementsByTagName('title').content, location.href.split('#')[0] + (item.id ? '#' + item.id : ''))
+            item.scrollIntoView()
+        }
     }
 
     replaceLinks() {
@@ -348,17 +380,14 @@ class Content extends Viewable {
                 }
             }
         ));
-        [...root.querySelectorAll('h1, h2, h3, h4, h5, h6')].map(item => {
-            item.onclick = () => {
-                history.replaceState({}, document.getElementsByTagName('title').content, location.href.split('#')[0] + (item.id ? '#' + item.id : ''))
-                item.scrollIntoView()
-            }
-            item.style.cursor = 'pointer'
-        })
-        root.styleSheets[0].insertRule('h1:hover, h2:hover, h3:hover, h4:hover, h5:hover { text-decoration: underline; }')
+        [...root.querySelectorAll('h1, h2, h3, h4, h5, h6')].map(this.replaceLink.bind(this))
+        root.styleSheets[0].insertRule('h1:hover, h2:hover, h3:hover, h4:hover, h5:hover { text-decoration: underline; cursor: pointer; }')
+        root.styleSheets[0].insertRule('.headline { position: relative; }')
+        root.styleSheets[0].insertRule('a.github { position: absolute; width: 20px; height: 20px; bottom: 15%; right: 0px; background-color: #888888; display: none; }')
     }
 
     renderMD(content) {
+        this.content = content
         this.zeromd = N('zero-md', null, { src: `${Settings.DOCBASE}/${state.releaseSelection}/${content.path}` })
         this.checkLoadedCount = 0
         // we don't get an onload event from zero-md so waiting one sec before replacing the links
