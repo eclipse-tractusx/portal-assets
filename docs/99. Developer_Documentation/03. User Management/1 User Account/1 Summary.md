@@ -1,0 +1,8 @@
+# Summary
+
+Company Administrators as well as IT Administrators of the company can create new user accounts.
+With the Catena-X user account, the user can access the Catena-X Portal including the apps marketspace, direct access to subscribed company apps, semantic data models, digital twins, service offers, etc.
+
+<br>
+<br>
+

@@ -1,0 +1,26 @@
+# Password Reset
+
+The "Reset password" button is available in the user account detail page and can get triggered by the administrator with the respective (modify_user_account) right.  
+The picture below includes the service details
+<br>
+<br>
+
+<img width="1134" alt="image" src="https://user-images.githubusercontent.com/94133633/210904746-1ea35390-8908-416a-9ebc-9c00b5313551.png">
+
+### Error message handling for password reset
+
+* If the reset is triggered 10 times already, the next time an error will get submitted with which the FE can submit the message "You have triggered the maximum time of password resets, please try it later again". For that, the backend need to respond with an error that FE can display the right error message
+* For any other errors, the error message will be "The password reset was unsuccessful. We phased an issue, please try It later again"
+* If policy is failing (company is using ownIdP), the backend service will enable the FE to submit a scenario specific error message
+<br>
+<br>
+
+### Password reset policy
+
+* User for whom password reset is triggered needs to be under the same org/tenant => to be checked as part of the service
+* Before triggering the password reset, check the company id => password reset is only valid for SharedIdP customers. Check in table identity_providers if the identity_provider_category_id for the company is Shared IdP (value: '1')
+* SharedIdP user id need to get retrieved via the user token and transferred to the sharedIdP user ID
+  * take user id handed over by FE
+  * transfer the user id to the centralIdP user id (via iam_user) table
+  * transfer centralIdP user id to sharedIdP user id
+
