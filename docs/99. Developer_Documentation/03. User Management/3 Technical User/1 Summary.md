@@ -1,0 +1,29 @@
+# Summary
+
+The CX Portal User Management is enhanced by the technical user management which is used to manage technical users for a company. Technical users are relevant for backend to backend service connections.  
+Example use case: register Digital Twins via the DFT to the digital twin registry.
+<br>
+<br>
+Technical user permissions are created by the operator and need to get loaded as part of the static data.
+<br>
+Currently the portal doesn't support the technical user permission creation by an administrator operator board. In future releases, the functionality is planned to get implemented. Till that, technical users need to get deployed to keycloak as well as the portal db.
+<br>
+<br>
+CX Member companies can create their technical users on their needs and map them to the pre-defined roles.
+<br>
+<br>
+
+### Customer Functionalities covered in the function
+* Create new technical user under my org
+* View all my technical users (including technical user details)
+* Delete a technical user
+
+
+### Available technical user roles
+* Connector User
+* Identity Wallet Management
+* BPDM Management
+* BPDM Gateway
+* Dataspace Discvoery 
+* App Tech User
+* Service Management
