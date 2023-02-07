@@ -1,3 +1,17 @@
+## 1.0.0-RC5
+
+### Change
+* Documentation v5 released (restructuring, adding developer docu, etc.)
+
+### Feature
+* help/documentation web application updated with search mechanism and document tree structure
+
+### Technical Support
+n/a
+
+### Bugfix
+n/a
+
 ## 1.0.0-RC4
 
 ### Change
