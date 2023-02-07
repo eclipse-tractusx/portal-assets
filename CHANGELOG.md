@@ -1,3 +1,9 @@
+## Unreleased
+
+### Change
+* Split user and developer documentation
+
+
 ## 1.0.0-RC5
 
 ### Change
@@ -11,6 +17,7 @@ n/a
 
 ### Bugfix
 n/a
+
 
 ## 1.0.0-RC4
 

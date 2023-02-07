@@ -24,7 +24,7 @@ import { Patterns, Settings } from "./Settings.js"
 const createSelectLink = (item) => addEvents(
     N(
         'a',
-        item.name.replace(Patterns.DISPLAY, ' '),
+        item.level === 0 ? 'Home' : item.name.replace(Patterns.DISPLAY, ' '),
         {
             ... { href: `.?path=${item.path}` },
             ... (item.path === state.selection ? { class: 'selected' } : {})
@@ -90,7 +90,7 @@ class SearchOutput extends Viewable {
         return path
             .map((_seg, i) =>
                 createSelectLink(state.data.map[
-                    ([Settings.ROOT].concat(path.slice(0, i + 1)).join('/'))
+                    ([NavTools.getRoot()].concat(path.slice(0, i + 1)).join('/'))
                 ])
             )
     }
@@ -182,11 +182,12 @@ class Chapters extends Viewable {
         super()
         state.addDataListener(this)
         this.items = N('div')
+        this.title = N('h1', 'Catena-X Help Desk')
         this.view = N('section', [
             N('div', [
-                createSelectLink({ name: '', path: Settings.ROOT }),
-                N('h1', 'Catena-X Help Desk'),
-            ], { class: 'subheadline'}),
+                createSelectLink({ name: '', path: NavTools.getRoot() }),
+                this.title,
+            ], { class: 'subheadline' }),
             this.items
         ], { class: 'chapters' })
     }
@@ -194,6 +195,7 @@ class Chapters extends Viewable {
     dataChanged(data) {
         //console.log('chapters', data)
         clear(this.items)
+        this.title.firstChild.data = data.name
         return this.items.appendChild(
             N('ul', data.children.map((chapter) => N('li', new ChapterCard(chapter))))
         )
@@ -269,7 +271,7 @@ class Navigation extends Viewable {
         this.menu = N('ul', null, { class: 'level1' })
         this.toggle = this.createToggleButton()
         this.view = N('nav', [
-            N('div', createSelectLink({ name: '', path: Settings.ROOT }), { class: 'home'}),
+            N('div', createSelectLink({ name: '', path: NavTools.getRoot() }), { class: 'home' }),
             this.menu,
             this.toggle
         ], { class: 'menu open' })
@@ -453,26 +455,27 @@ class App extends Viewable {
     }
 
     loadReleases() {
-        console.log(this.clazz, 'loadReleases')
+        //console.log(this.clazz, 'loadReleases')
         fetch('data/Releases.json')
             .then(response => response.json())
             .then((releases) => state.setReleases([{ ref: `/${Settings.DEFAULT_BRANCH}` }].concat(releases.reverse())))
     }
 
     releasesChanged(releases) {
-        console.log(this.clazz, 'releasesChanged', releases)
+        //console.log(this.clazz, 'releasesChanged', releases)
         state.setReleaseSelection(Settings.DEFAULT_BRANCH)
     }
 
     releaseSelectionChanged(releaseSelection) {
-        console.log(this.clazz, 'releaseSelectionChanged', releaseSelection)
-        fetch(`data/${releaseSelection}/Tree.json`)
+        //console.log(this.clazz, 'releaseSelectionChanged', releaseSelection)
+        fetch(`data/${releaseSelection}/${NavTools.getRoot()}.json`)
             .then(response => response.json())
             .then(state.setData.bind(state))
+            .catch(() => { location.href = '.' })
     }
 
     dataChanged(data) {
-        console.log(this.clazz, 'dataChanged', data)
+        //console.log(this.clazz, 'dataChanged', data)
         state.setSelection(NavTools.currentPath(), location.hash)
     }
 
@@ -516,7 +519,7 @@ class Main extends Viewable {
 
     selectionChanged(selection, content) {
         //console.log(this.clazz, 'selectionChanged', selection)
-        return this.clear().append(selection === Settings.ROOT
+        return this.clear().append(selection === NavTools.getRoot()
             ? this.chapters
             : this.chapter.selectionChanged(selection, content)
         )

@@ -17,6 +17,8 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
+import { Patterns, Settings } from "./Settings.js"
+
 export const append = (n, c) => {
     if (!(c instanceof Array)) c = [c]
     for (let i in c) {
@@ -86,9 +88,13 @@ export class NavTools {
 
     clazz = 'NavTools'
 
-    static currentPath() {
-        const url = new URL(location)
-        return url.searchParams.get('path')
+    static currentPath() {        
+        return new URL(location).searchParams.get('path')
+    }
+
+    static getRoot() {
+        const path = NavTools.currentPath()
+        return path ? path.split('/')[0] : Settings.DEFAULT_ROOT
     }
 
     static pushState(item) {
@@ -97,7 +103,7 @@ export class NavTools {
         if (path !== item.path) {
             //console.log('path', path, item.path)
             url.searchParams.set('path', item.path)
-            const title = `CX Docs - ${item.name}`
+            const title = `Docs - ${item.name.replace(Patterns.DISPLAY, '')}`
             const newurl =  `${location.pathname}?${url.searchParams.toString()}${item.hash ? '#'+item.hash : ''}`
             //console.log(NavTools.clazz, 'pushState', item, title, newurl)
             history.pushState(item.path, title, newurl)

@@ -18,7 +18,6 @@
  ********************************************************************************/
 
 const fs = require('fs')
-const { parse } = require('path')
 
 class Transformer {
 
@@ -30,8 +29,6 @@ class Transformer {
             tree.children.forEach(child => Transformer.tree2map(map, child, tree, level + 1))
         return map
     }
-
-
 
 }
 
@@ -72,7 +69,22 @@ class TreeHelper {
 
 }
 
-const tree = TreeHelper.readDirTree('docs')
-//console.log(tree)
-const md = new MDHelper()
-console.log(JSON.stringify(md.extractChapterTree(tree), null, 2))
+const DOCS = {
+    docs: 'Catena-X Help Desk',
+    developer: 'Catena-X Developer Documentation',
+}
+
+Object.entries(DOCS).forEach(item => {
+    const tree = new MDHelper().extractChapterTree(
+        TreeHelper.readDirTree(item[0])
+    )
+    tree.name = item[1]
+    fs.writeFileSync(
+        `./public/documentation/data/main/${item[0]}.json`,
+        JSON.stringify(
+            tree,
+            null,
+            2
+        )
+    )
+})
