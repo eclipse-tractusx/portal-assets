@@ -134,9 +134,13 @@ main h1 {
     width: 100%;
 }
 
+.chapters h1 {
+    padding-top: 3px;
+}
+
 .chapters {
-    max-width: 1330px;
-    margin: 0px auto;
+    max-width: 1200px;
+    margin: -7px auto 0px auto;
 }
 
 .chapters ul {
@@ -232,8 +236,10 @@ footer .copy {
 .home a {
     position: absolute;
     display: block;
-    left: 0px;
-    top: 0px;
+    left: 20px;
+    top: 20px;
+    width: 192px;
+    height: 45px;
     background-image: url(/assets/images/logos/cx-text.svg);
     background-position: 0 0;
     background-size: cover;
@@ -241,14 +247,5 @@ footer .copy {
 }
 
 .subheadline a {
-    left: 50px;
-    width: 220px;
-    height: 51px;
-}
-
-.home a {
-    left: 20px;
-    top: 20px;
-    width: 192px;
-    height: 45px;
+    top: 0;
 }

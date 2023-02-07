@@ -1,3 +1,8 @@
+## Unreleased
+
+### Change
+* Split user and developer documentation
+
 ## 1.0.0-RC4
 
 ### Change

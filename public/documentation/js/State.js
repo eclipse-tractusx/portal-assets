@@ -56,7 +56,6 @@ class State {
 
     setData(data) {
         //console.log(this.clazz, 'setData', data)
-        data.name = 'Home'
         data.map = Transformer.tree2map({}, data, undefined, 0)
         this.data = data
         this.fireDataChanged(data)
@@ -82,7 +81,7 @@ class State {
 
     setSelection(selection, hash) {
         //console.log(this.clazz, 'setSelection', selection, hash)
-        selection = (this.data.map && this.data.map.hasOwnProperty(selection)) ? selection : Settings.ROOT
+        selection = (this.data.map && this.data.map.hasOwnProperty(selection)) ? selection : NavTools.getRoot()
         if (selection === this.selection)
             return
         const content = this.getItem(selection)

@@ -28,5 +28,15 @@
       "type": "tag",
       "url": "https://api.github.com/repos/catenax-ng/tx-portal-assets/git/tags/feb26cc5d69489659020d76d76e624a213419474"
     }
+  },
+  {
+    "ref": "refs/tags/1.0.0-RC4",
+    "node_id": "REF_kwDOIe7Dt7NyZWZzL3RhZ3MvMS4wLjAtUkM0",
+    "url": "https://api.github.com/repos/catenax-ng/tx-portal-assets/git/refs/tags/1.0.0-RC4",
+    "object": {
+      "sha": "2e0ebf994eba2c020bcec93e4d349e5d2dfe9758",
+      "type": "tag",
+      "url": "https://api.github.com/repos/catenax-ng/tx-portal-assets/git/tags/2e0ebf994eba2c020bcec93e4d349e5d2dfe9758"
+    }
   }
 ]
