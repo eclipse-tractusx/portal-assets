@@ -11,31 +11,19 @@
           "name": "01. Registration Invite",
           "children": [
             {
-              "path": "docs/01. Onboarding/01. Registration Invite/FAQ.md",
-              "name": "FAQ.md",
+              "path": "docs/01. Onboarding/01. Registration Invite/01. Summary.md",
+              "name": "01. Summary.md",
+              "chapter": [
+                "## Summary"
+              ]
+            },
+            {
+              "path": "docs/01. Onboarding/01. Registration Invite/02. FAQ.md",
+              "name": "02. FAQ.md",
               "chapter": [
                 "# FAQ",
                 "## How can I invite a potential new Catena-X member?",
                 "## Can I identify already invited members?"
-              ]
-            },
-            {
-              "path": "docs/01. Onboarding/01. Registration Invite/Implementation.md",
-              "name": "Implementation.md",
-              "chapter": [
-                "# Implementation",
-                "## 1 Get Invited Companies",
-                "#### API Details",
-                "## 2 Invite Companies",
-                "#### API Details",
-                "## 3  Search"
-              ]
-            },
-            {
-              "path": "docs/01. Onboarding/01. Registration Invite/Summary.md",
-              "name": "Summary.md",
-              "chapter": [
-                "## Summary"
               ]
             }
           ]
@@ -107,15 +95,15 @@
           "name": "03. Registration Approval",
           "children": [
             {
-              "path": "docs/01. Onboarding/03. Registration Approval/FAQ.md",
-              "name": "FAQ.md",
+              "path": "docs/01. Onboarding/03. Registration Approval/01. Summary .md",
+              "name": "01. Summary .md",
               "chapter": [
-                "# FAQ"
+                "## Summary"
               ]
             },
             {
-              "path": "docs/01. Onboarding/03. Registration Approval/Functional Details.md",
-              "name": "Functional Details.md",
+              "path": "docs/01. Onboarding/03. Registration Approval/02. Functional Details.md",
+              "name": "02. Functional Details.md",
               "chapter": [
                 "# Functional Details",
                 "### Display Application Details",
@@ -138,36 +126,10 @@
               ]
             },
             {
-              "path": "docs/01. Onboarding/03. Registration Approval/Implementation.md",
-              "name": "Implementation.md",
+              "path": "docs/01. Onboarding/03. Registration Approval/03. FAQ.md",
+              "name": "03. FAQ.md",
               "chapter": [
-                "# Implementation",
-                "## 1 Get Applications",
-                "###### Filtering",
-                "###### Search",
-                "#### Logical flow of the service",
-                "#### API Details",
-                "## 2 Get Application Details",
-                "#### API Details",
-                "## 3 Confirm/Approve Application",
-                "#### Logical flow of the service",
-                "#### API Details",
-                "## 4 Decline Application",
-                "#### Logical flow of the service",
-                "#### API Details",
-                "## 5 Download Documents",
-                "#### Logical flow of the service",
-                "#### API Details",
-                "## 6 Add bpn to a company registration",
-                "#### Logical flow of the service",
-                "#### API Details"
-              ]
-            },
-            {
-              "path": "docs/01. Onboarding/03. Registration Approval/Summary.md",
-              "name": "Summary.md",
-              "chapter": [
-                "## Summary"
+                "# FAQ"
               ]
             }
           ]
@@ -182,13 +144,6 @@
           "path": "docs/02. Technical Integration/01. Connector Registration",
           "name": "01. Connector Registration",
           "children": [
-            {
-              "path": "docs/02. Technical Integration/01. Connector Registration/01. Summary.md",
-              "name": "01. Summary.md",
-              "chapter": [
-                "# Summary"
-              ]
-            },
             {
               "path": "docs/02. Technical Integration/01. Connector Registration/02. Implementation.md",
               "name": "02. Implementation.md",
@@ -211,8 +166,22 @@
               ]
             },
             {
-              "path": "docs/02. Technical Integration/01. Connector Registration/03. FAQ.md",
-              "name": "03. FAQ.md",
+              "path": "docs/02. Technical Integration/01. Connector Registration/03. DAPS Retrigger.md",
+              "name": "03. DAPS Retrigger.md",
+              "chapter": [
+                "#### DAPS Retriggering"
+              ]
+            },
+            {
+              "path": "docs/02. Technical Integration/01. Connector Registration/03. SelfDescription Retrigger.md",
+              "name": "03. SelfDescription Retrigger.md",
+              "chapter": [
+                "#### Self Description Retrigger"
+              ]
+            },
+            {
+              "path": "docs/02. Technical Integration/01. Connector Registration/04. FAQ.md",
+              "name": "04. FAQ.md",
               "chapter": [
                 "## FAQ",
                 "### How to register a connector inside the network?",
@@ -241,8 +210,8 @@
               ]
             },
             {
-              "path": "docs/02. Technical Integration/02. Identity Provider Management/02. User Description.md",
-              "name": "02. User Description.md",
+              "path": "docs/02. Technical Integration/02. Identity Provider Management/02. Configure Company IdP.md",
+              "name": "02. Configure Company IdP.md",
               "chapter": [
                 "# User Description",
                 "### Register your company IdP",
@@ -251,8 +220,15 @@
               ]
             },
             {
-              "path": "docs/02. Technical Integration/02. Identity Provider Management/03. FAQ.md",
-              "name": "03. FAQ.md",
+              "path": "docs/02. Technical Integration/02. Identity Provider Management/03. User Migration.md",
+              "name": "03. User Migration.md",
+              "chapter": [
+                "#### Migrate existing user accounts to the new created IdP"
+              ]
+            },
+            {
+              "path": "docs/02. Technical Integration/02. Identity Provider Management/04. FAQ.md",
+              "name": "04. FAQ.md",
               "chapter": [
                 "### FAQ",
                 "#### <question<?",

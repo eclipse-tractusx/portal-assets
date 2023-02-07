@@ -12,7 +12,7 @@
   },
   "scripts": {
     "build:latest": "source ./scripts/repo.sh && tx-asset-checkout-tag",
-    "build:docs": "node src/documentation/Tree.js docs > public/documentation/data/main/docs.json && node src/documentation/Tree.js developer > public/documentation/data/main/developer.json",
+    "build:docs": "node src/documentation/Tree.js",
     "start": "yarn run open",
     "open": "concurrently \"http-server -a localhost -p 3000\" \"open http://localhost:3000/\""
   }
