@@ -38,5 +38,15 @@
       "type": "tag",
       "url": "https://api.github.com/repos/catenax-ng/tx-portal-assets/git/tags/2e0ebf994eba2c020bcec93e4d349e5d2dfe9758"
     }
+  },
+  {
+    "ref": "refs/tags/1.0.0-RC5",
+    "node_id": "REF_kwDOIe7Dt7NyZWZzL3RhZ3MvMS4wLjAtUkM1",
+    "url": "https://api.github.com/repos/catenax-ng/tx-portal-assets/git/refs/tags/1.0.0-RC5",
+    "object": {
+      "sha": "6312a9414dfdef29aacd094ba4885ddeb8eb7b43",
+      "type": "tag",
+      "url": "https://api.github.com/repos/catenax-ng/tx-portal-assets/git/tags/6312a9414dfdef29aacd094ba4885ddeb8eb7b43"
+    }
   }
 ]
