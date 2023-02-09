@@ -19,6 +19,10 @@
 
 import { Patterns, Settings } from "./Settings.js"
 
+const getNodeOrViewable = (c) => c.hasOwnProperty('view') ? c.view : c
+
+const getTextNode = (c, tc) => document.createTextNode(tc === 'string' ? c : '' + c)
+
 export const append = (n, c) => {
     if (!(c instanceof Array)) c = [c]
     for (let i in c) {
@@ -27,8 +31,8 @@ export const append = (n, c) => {
             try {
                 n.appendChild(
                     tc === 'object'
-                        ? (c[i].hasOwnProperty('view') ? c[i].view : c[i])
-                        : document.createTextNode(tc === 'string' ? c[i] : '' + c[i])
+                        ? getNodeOrViewable(c[i])
+                        : getTextNode(c[i], tc)
                 )
             } catch (e) {
                 const pre = document.createElement('pre')
