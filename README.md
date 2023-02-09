@@ -5,5 +5,5 @@ This repository contains the documenation and static image content for Catena-X 
 Steps to run local
 
     yarn
-    yarn build:docs
+    yarn build
     yarn start

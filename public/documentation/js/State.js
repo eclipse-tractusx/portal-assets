@@ -41,7 +41,7 @@ class State {
     search = undefined
 
     addListener(key, listener) {
-        this.listener[key] = [...new Set([...this.listener[key], ...(typeof listener === 'Array' ? listener : [listener])])]
+        this.listener[key] = [...new Set([...this.listener[key], ...(Array.isArray(listener) ? listener : [listener])])]
         return this
     }
 

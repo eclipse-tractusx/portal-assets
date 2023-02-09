@@ -532,3 +532,8 @@ yargs@^17.3.1:
     string-width "^4.2.3"
     y18n "^5.0.5"
     yargs-parser "^21.1.1"
+
+zero-md@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/zero-md/-/zero-md-2.4.0.tgz#2ffd6acb27c3fd420e2f4519f6a766508c7a7f10"
+  integrity sha512-flU6nSaKJLQllrF+vKCDNbOdMZ2Cm9dgF3qOKEK/8ChjP0+4pjOK/W55EJ4A+d3hMsBVjowHYktB8uuXfGASYw==
