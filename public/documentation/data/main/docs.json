@@ -14,7 +14,8 @@
               "path": "docs/01. Onboarding/01. Registration Invite/01. Summary.md",
               "name": "01. Summary.md",
               "chapter": [
-                "## Summary"
+                "## Summary",
+                "#### Operator Invite Flow"
               ]
             },
             {
@@ -145,6 +146,29 @@
           "name": "01. Connector Registration",
           "children": [
             {
+              "path": "docs/02. Technical Integration/01. Connector Registration/00. Summary.md",
+              "name": "00. Summary.md",
+              "chapter": [
+                "## Summary"
+              ]
+            },
+            {
+              "path": "docs/02. Technical Integration/01. Connector Registration/01. Connector Overview.md",
+              "name": "01. Connector Overview.md",
+              "chapter": [
+                "## Connector Overview"
+              ]
+            },
+            {
+              "path": "docs/02. Technical Integration/01. Connector Registration/02. Connector Registration.md",
+              "name": "02. Connector Registration.md",
+              "chapter": [
+                "## Connector Registration",
+                "#### Create new Connector Registration - self-owned",
+                "#### Create new Connector Registration - managed "
+              ]
+            },
+            {
               "path": "docs/02. Technical Integration/01. Connector Registration/02. Implementation.md",
               "name": "02. Implementation.md",
               "chapter": [
@@ -166,10 +190,10 @@
               ]
             },
             {
-              "path": "docs/02. Technical Integration/01. Connector Registration/03. DAPS Retrigger.md",
-              "name": "03. DAPS Retrigger.md",
+              "path": "docs/02. Technical Integration/01. Connector Registration/03. DAPS Registration.md",
+              "name": "03. DAPS Registration.md",
               "chapter": [
-                "#### DAPS Retriggering"
+                "## 4 DAPS Registration"
               ]
             },
             {

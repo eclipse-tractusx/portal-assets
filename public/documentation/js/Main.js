@@ -329,14 +329,12 @@ class Content extends Viewable {
         state.addMenuOpenListener(this)
         this.breadcrumb = new Breadcrumb()
         this.view = N('article', null, { class: 'content small' })
-        this.ghlink
     }
 
     selectionChanged(selection, content) {
         return this.clear()
             .append(this.breadcrumb.selectionChanged(selection, content))
             .append(this.renderArticle(content))
-        return this
     }
 
     menuOpenChanged(menuOpen) {
@@ -370,7 +368,7 @@ class Content extends Viewable {
 
     replaceLinks() {
         const root = this.zeromd.shadowRoot;
-        [...root.querySelectorAll('a')].map(link => addEvents(
+        [...root.querySelectorAll('a')].forEach(link => addEvents(
             link,
             {
                 click: (e) => {
@@ -382,7 +380,7 @@ class Content extends Viewable {
                 }
             }
         ));
-        [...root.querySelectorAll('h1, h2, h3, h4, h5, h6')].map(this.replaceLink.bind(this))
+        [...root.querySelectorAll('h1, h2, h3, h4, h5, h6')].forEach(this.replaceLink.bind(this))
         root.styleSheets[0].insertRule('h1:hover, h2:hover, h3:hover, h4:hover, h5:hover { text-decoration: underline; cursor: pointer; }')
         root.styleSheets[0].insertRule('.headline { position: relative; }')
         root.styleSheets[0].insertRule('a.github { position: absolute; width: 20px; height: 20px; bottom: 15%; right: 0px; background-color: #888888; display: none; }')
