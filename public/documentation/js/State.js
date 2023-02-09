@@ -18,7 +18,6 @@
  ********************************************************************************/
 
 import { NavTools, Transformer } from './Toolkit.js'
-import { Settings } from './Settings.js'
 
 class State {
 
