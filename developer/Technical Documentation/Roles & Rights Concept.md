@@ -1,0 +1,258 @@
+## 1. General details
+
+
+### 1.1 Scope and binding force of the document
+
+The Roles & Rights concept is part of the System Implementation for Catena-X. It specifies the roles, authorizations and controls which must be implemented in Catena-X. 
+<br>
+The Roles & Rights Concept aims at providing a high-level description with respect to the planning and implementation of roles and rights in the context of Catena-X. The Roles & Rights concept is supposed to define required functions, structures and basic principles. Therefore only an illustrative description of specific roles and associated rights is provided. This concept document is high level description of the implemented roles and rights. However, the included roles and rights give a sufficient representation of the relevant functions, structures and principles. 
+<br>
+
+### 1.2 Affected application
+
+Registration // Portal // Managed Wallet // DFT // BPDM
+
+<br>
+<br>
+
+### 1.3 Referenced documents
+
+n/a
+
+<br>
+<br>
+
+## 2. Authorization structure and role model
+This chapter explains the business, organizational, and technical principles of the role and authorization definition, thereby illustrating the relationship between business function and authorization structure. The objective is to make the actual authorizations and authorization assignments granted in the new Catena-X solution verifiable against the business, technical, and organizational specifications, specified in this document.
+<br>
+<br>
+
+### 2.1 Underlying business processes and roles:
+n/a
+
+<br>
+<br>
+
+### 2.2 Basic principles
+n/a
+
+<br>
+<br>
+
+### 2.3 Individual privileges and authorization framework
+n/a
+
+<br>
+<br>
+
+### 2.4 Role definition
+In the concept of the roles and rights management we are differentiating between roles and permissions.
+
+Permissions are the lowest level which a user can have. Several permissions are collected to a role. 
+
+The assignment of rights to an actual user is happening on the role level itself.
+<br>
+<br>
+
+It is suggested to setup naming convention for roles and permissions to ensure that they can get clearly defined.
+
+On the CX Portal side the conventions are setup the following *please note that this is not mandatorily needed to be followed by 3rd Party Providers
+
+
+
+    Naming Convention:
+
+    - Permissions
+    - always lowercase
+    - no spaces, only use underscore
+    - task/role needs to be clearly understandable
+    - don't use any "Umlaute" (special character) such as: ä, ü, ö
+    - a permission can get assigned to several roles, but one is the minimum role to which it need to be assigned
+
+
+    Roles:
+
+    - capital letters to be used for 1st character
+    - spaces are allowed
+    - role should be identifiable
+    - don't use any "Umlaute" (special character) such as: ä, ü, ö
+    - a role needs as a minimum 1 permission assigned to it
+
+<br>
+<br>
+
+### 2.5 Role/Permission Matrix
+This role concept covers all roles related to
+
+- Registration/Onboarding Process Roles
+- Portal Roles
+
+<br>
+<br>
+
+<img width="1223" alt="image" src="https://user-images.githubusercontent.com/94133633/218096814-6375299a-7212-465b-a62d-ddf4ca465756.png">
+
+<br>
+<br>
+
+#### 2.5.1 Technical User (portal internal)
+
+<img width="450" alt="image" src="https://user-images.githubusercontent.com/94133633/218146575-065b818f-3718-48d1-bed5-d4b58e15eb29.png">
+
+<br>
+<br>
+
+#### 2.5.2 Registration Application
+
+<img width="650" alt="image" src="https://user-images.githubusercontent.com/94133633/218146676-a31cfc87-5908-4a2f-8de8-9270c903ae7e.png">
+
+<br>
+<br>
+
+#### 2.5.3 Portal Application
+
+<img width="1257" alt="image" src="https://user-images.githubusercontent.com/94133633/218146931-41d6097b-7c12-4fd9-a650-725df843a284.png">
+<img width="1253" alt="image" src="https://user-images.githubusercontent.com/94133633/218147002-7c3c184c-7687-4f81-835b-19a1e94d9f4b.png">
+<img width="1252" alt="image" src="https://user-images.githubusercontent.com/94133633/218147177-327bacff-04c8-4e1e-9d8b-8533f15fb551.png">
+
+<br>
+<br> 
+
+#### 2.5.3b Technical User Accounts
+
+<img width="1381" alt="image" src="https://user-images.githubusercontent.com/94133633/218147738-fc9ba459-be7f-4770-8173-ff8d336767c7.png">
+
+<br>
+<br> 
+
+#### 2.5.4 Managed Wallets
+
+<img width="1339" alt="image" src="https://user-images.githubusercontent.com/94133633/218147674-63b4865d-fb3d-4e51-9320-890b4efa743a.png">
+
+<br>
+<br>
+*depending on the need, technical user will have a subset of the selected roles in the role table "Managed Wallets".
+
+For example:
+
+* SD Hub: view and update wallets
+* Portal: view and add wallets
+* EDC Extension: view and update wallet (technical user needs BPN as user attribute)
+
+<br>
+<br>
+
+#### 2.5.5 BPDM
+
+<img width="1341" alt="image" src="https://user-images.githubusercontent.com/94133633/218147996-b5591354-81ec-498a-99d5-eaf43344aa40.png">
+
+<br>
+<br> 
+
+#### 2.5.6 BPDM Gate
+
+<img width="1345" alt="image" src="https://user-images.githubusercontent.com/94133633/218148122-a4b4f666-09c2-4959-ba0d-9e3e4e357f7b.png">
+
+<br>
+<br> 
+
+#### 2.5.7 BPDMShare
+no roles
+<br>
+Note regarding the role setup in context of CPLP-121 - Registration App: Invite additional Registration Participants (FE/BE) CLOSED :
+
+* the inviting party needs to have the role "manage users" to be able to create users
+* the invited party needs to have the role "view users" to be able to see the own roles in the upper right corner of the registration portal
+Note regarding the role setup in context of  CPLP-225 - Registration Service - Add Users: Roles to be fetched from Keycloak CLOSED :
+
+The user needs to have the role "view clients" to be able to see the available composite roles in the dropdown. Also, the user needs to have the role "view users" to be able to see the own composite roles in the upper right corner of the registration portal.
+
+Long term solution: a concept needs to be defined and implemented for technical identities (backend services which gather the composite roles should be executed with technical users, not require the user to have elevated rights).
+
+<br>
+<br>
+
+### 2.6 Segregation of duties
+Segregation of duties is the concept of having more than one person or role required to complete a task. Currently there is no such scenario inside the portal existing.
+
+<br>
+<br>
+
+## 3. Global subjects
+This chapter explains how the Catena-X Platform is embedded into the Business Partner application landscape and what infrastructure components are connected to it in terms of authorization management. Furthermore, technical restrictions, naming conventions, audit logging and the authentication mechanisms are outlined in more detail.
+
+<br>
+<br>
+
+### 3.1 Authorization management connections
+Authorization management is handled in CX central IdP.
+
+<br>
+<br>
+
+### 3.2 Used infrastructure components
+-
+
+<br>
+<br>
+
+### 3.3 Privileged and technical user accounts
+Technical users are used for backend to backend connections. Inside CX but also outbound between member companies and CX components.
+
+E.g. Central registry connection by a third party app.
+
+<br>
+<br>
+
+### 3.4 Technical restrictions
+For a detailed description of how the internal security system works please refer to Security Concept. In terms of the Catena-X Platform, this approach brings the following technical restrictions:
+
+A new login is required for user rights changes to take effect 
+The fact that the rights for a particular user are only read at user login and then cached for the session implicates, that changes to rights can only take effect after a new user login. 
+
+<br>
+<br>
+
+
+### 3.5 Logging the use
+Logging actions that can lead to granting or revocation of authorizations must observe the legal privacy specifications. Access to the logs is restricted. This is allowed only if there is legitimate interest and if it is according to the legal regulations for privacy.
+
+For the Catena-X Platform, there are three types of logging the use:
+
+System internal audit history 
+
+System external monitoring system
+
+System technical server logs
+
+Internal audit history, an on screen audit record is available for key screens. This functionality is restricted to particular roles (see section 2.5). The following information can be viewed tabular within the System:
+
+..
+
+<br>
+<br>
+
+All internal audit and access logs are saved ???. The retention period for audit history is 7 years. After this period the audit history can be deleted, however this is not mandatory in legal terms. 
+
+Finally, each infrastructure component and all surrounding systems have their own logging solutions in use. This includes the logging of grants and revoked of user access rights in the central BMW access management system. However, details on these technical logging solutions are out of scope for the Roles & Rights concept.
+
+<br>
+<br>
+
+## 4. Authorization procedure
+User permission / access withdrawal are possible via
+
+* Company IT Admin is able to withdraw user rights/permissions
+* Company IT Admin can delete company users under the same org
+* Company User can delete his/her own user account
+* App provider can withdraw app usage for a company, but not for a single user
+
+<br>
+<br>
+
+## 5. Appendix
+
+<br>
+<br>
+
+
