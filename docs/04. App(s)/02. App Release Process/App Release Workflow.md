@@ -1,4 +1,4 @@
-# Summary
+## App Release Process
 
 The "App Release Publishing Process" is accessible via the "App Release Process" as well as the "App Management".  
 <br>
@@ -14,22 +14,27 @@ The app publishing process includes the submission of relevant app details, addi
 <br>
 <br>
 
-
-# Implementation
-
 #### Trigger the Publishing Process
 
-Option 1: Via the app management page
+<strong> Option 1: Via the app management page </strong>
 <br>
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/94133633/211014835-71e80d17-06d3-42c9-ac67-739447336112.png">
+Access the "App Overview" page via the top navigation "App Management" 
+<br>
+<br>
+
+<img width="222" alt="image" src="https://user-images.githubusercontent.com/94133633/218282685-019ea98f-e77d-4fe8-a811-46d4cdf0a2d3.png">
 
 <br>
 <br>
 
-Option 2: Via the App Release Process
+<strong> Option 2: Via the App Release Process </strong>
 <br>
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/94133633/211015053-19b10f2d-9d8c-40f0-aa0f-30a25cd9b893.png">
+Access the "App Overview" page on the "App Release Process"
+and click on
+<br>
+<br>
 
+<img width="187" alt="image" src="https://user-images.githubusercontent.com/94133633/218282773-a7d2479e-5e90-456c-b70b-ed54730440bf.png">
 
 <br>
 <br>
@@ -46,14 +51,20 @@ In the Step 1 of the publishing process, the app card details are getting filled
 * etc.
 <br>
 
+<p align="center">
 <img width="373" alt="image" src="https://user-images.githubusercontent.com/94133633/211015263-2fc2adf5-df18-4559-9f6f-c2e90e7f8495.png">
-
+</p>
+  
 The input fields for language, sales manager as well as the use case selection supports the user with pre-selectable values.
 
 ###### App language
 The app language need to get set to ensure that customers can identifier the app supported language. Select all supported app language tags inside the dropdown by scrolling through all the available language tags or add the language inside the input field to activate the auto complete search.
 
+<br>
+
+<p align="center">
 <img width="320" alt="image" src="https://user-images.githubusercontent.com/94133633/215895679-b32f7b5a-139f-4ae1-993a-c7f89e446de1.png">
+</p>
 
 <br>
 
@@ -61,7 +72,11 @@ The app language need to get set to ensure that customers can identifier the app
 The use case selection provides the possibility to specify the app supported use cases. 
 Customers will have the chance to look up use case specific apps. Select app covered use cases by scrolling through all the available dropdown records or add the use case inside the input field to activate the auto complete search.
 
+<br>
+
+<p align="center">
 <img width="320" alt="image" src="https://user-images.githubusercontent.com/94133633/215896099-d2b30434-16cc-47cb-8755-e7cfcc3ef189.png">
+</p>
 
 <br>
 
@@ -70,7 +85,11 @@ The sales manager is a field which enables the user to select the app sales mana
 
 In case there is no Sales Manager available or in case the app provider doesnt wanna use the option, "none" can get selected.
 
+<br>
+
+<p align="center">
 <img width="320" alt="image" src="https://user-images.githubusercontent.com/94133633/215896485-b6b4b6f0-103c-40a5-a529-1c77f3f2843a.png">
+</p>
 
 <br>
 <br>
@@ -84,8 +103,11 @@ In the Step 2 of the publishing process, the app detail page is getting filled
 * documents/contract information
 * etc.
 
+<br>
 
+<p align="center">
 <img width="750" alt="image" src="https://user-images.githubusercontent.com/94133633/215898791-b832d31c-8c37-4483-af45-53b263c649c4.png">
+</p>
 
 <br>
 <br>
@@ -93,10 +115,13 @@ In the Step 2 of the publishing process, the app detail page is getting filled
 #### Step 3 - Terms & Conditions / Consent
 
 Under Step 3 - the user needs to agree to the terms and conditions of the app publish rules before getting on the marketplace. This section is mandatory and displays areement documents; if any documents are linked to the relevant agreement types
+
 <br>
 
+<p align="center">
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/94133633/215896971-e9d452c6-c4a8-465f-9f8f-20f6ba215d1a.png">
-  
+</p>
+
 <br>
 <br>
 
@@ -112,7 +137,9 @@ With the technical integration feature, the user can
 
 <br>
 
+<p align="center">
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/94133633/216191033-a17490ec-2815-4e47-9f19-e58d2d2f04bc.png">
+</p>
 
 <br>
 <br>
