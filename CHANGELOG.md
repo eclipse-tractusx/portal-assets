@@ -1,8 +1,21 @@
 ## Unreleased
 
-### Change
-* Split user and developer documentation
 
+## 1.0.0-RC6
+
+### Change
+* Documentation v5 released (content and structural updates along the whole documentation)
+* Split of user and developer documentation
+* added web application search functionality across all the md files / documentation files
+
+### Feature
+n/a
+
+### Technical Support
+n/a
+
+### Bugfix
+* fixed security findings
 
 ## 1.0.0-RC5
 
