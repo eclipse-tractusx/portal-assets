@@ -12,7 +12,7 @@
 n/a
 
 ### Technical Support
-n/a
+* temp fix for cve-2023-0286
 
 ### Bugfix
 * fixed security findings
