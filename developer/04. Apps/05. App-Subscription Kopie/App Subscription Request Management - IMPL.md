@@ -23,6 +23,22 @@ Links:
 
 # Implementation
 
+### Function: View Subscriptions (Requests and Active)
+
+=> Requests: https://portal-backend.dev.demo.catena-x.net/api/Apps/provided/subscription-status?page=0&size=15&statusId=PENDING
+=> Active: https://portal-backend.dev.demo.catena-x.net/api/Apps/provided/subscription-status?page=0&size=15&statusId=ACTIVE
+
+<br>
+<br>
+
+### Function: Sorting
+
+=> By Customer A-Z: https://portal-backend.dev.demo.catena-x.net/api/Apps/provided/subscription-status?page=0&size=15&sorting=CompanyNameDesc
+=> By Offer: https://portal-backend.dev.demo.catena-x.net/api/Apps/provided/subscription-status?page=0&size=15&sorting=OfferIdAsc
+
+<br>
+<br>
+
 ### #1 View Subscriptions
 The endpont shows all subscription requests and active subscriptions.  
 <br>
