@@ -5,7 +5,7 @@ yarn licenses v1.5.1
 │     ├─ VendorName: Domenic Denicola
 │     └─ VendorUrl: https://domenic.me/
 ├─ 0BSD
-│  └─ tslib@2.4.1
+│  └─ tslib@2.5.0
 │     ├─ URL: https://github.com/Microsoft/tslib.git
 │     ├─ VendorName: Microsoft Corp.
 │     └─ VendorUrl: https://www.typescriptlang.org/
@@ -30,9 +30,13 @@ yarn licenses v1.5.1
 │  │  ├─ URL: https://github.com/yargs/y18n.git
 │  │  ├─ VendorName: Ben Coe
 │  │  └─ VendorUrl: https://github.com/yargs/y18n
-│  └─ yargs-parser@21.1.1
-│     ├─ URL: https://github.com/yargs/yargs-parser.git
-│     └─ VendorName: Ben Coe
+│  ├─ yargs-parser@21.1.1
+│  │  ├─ URL: https://github.com/yargs/yargs-parser.git
+│  │  └─ VendorName: Ben Coe
+│  └─ zero-md@2.4.0
+│     ├─ URL: https://github.com/zerodevx/zero-md.git
+│     ├─ VendorName: Jason Lee
+│     └─ VendorUrl: https://zerodevx.github.io/zero-md/
 └─ MIT
    ├─ ansi-regex@5.0.1
    │  ├─ URL: https://github.com/chalk/ansi-regex.git
@@ -224,7 +228,7 @@ yarn licenses v1.5.1
    │  ├─ URL: https://github.com/vdemedes/secure-compare.git
    │  ├─ VendorName: Vadim Demedes
    │  └─ VendorUrl: https://github.com/vdemedes/secure-compare
-   ├─ shell-quote@1.7.4
+   ├─ shell-quote@1.8.0
    │  ├─ URL: http://github.com/ljharb/shell-quote.git
    │  ├─ VendorName: James Halliday
    │  └─ VendorUrl: https://github.com/ljharb/shell-quote
@@ -289,4 +293,4 @@ yarn licenses v1.5.1
    └─ yargs@17.6.2
       ├─ URL: https://github.com/yargs/yargs.git
       └─ VendorUrl: https://yargs.js.org/
-Done in 2.02s.
+Done in 0.23s.
