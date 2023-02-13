@@ -1,14 +1,5 @@
 ## Implementation 
 
-### DB implementation
-
-To support the app subscription status, the portal db model was enhanced by a new table "Subscription_status" and the status attribute which got added inside the company_assigned_apps table
-
-<img width="612" alt="image" src="https://user-images.githubusercontent.com/94133633/211090678-e3d559fb-d6a5-466c-917b-840329a3d3de.png">
-
-<br>
-<br>
-
 ### #1 POST Subscribe Request
 
 The post subscribe request is triggered by the customer / interested company via the app marketplace "Subscribe" function.
