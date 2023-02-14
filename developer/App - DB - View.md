@@ -39,3 +39,12 @@ With the app release date future scenarios such as: release app before publishin
 
 <br>
 <br>
+
+#### App Use Case
+
+app offers are aways use_case linked. 
+Table relation use_cases - 1:m - app_assigned_use_cases - m:1 - offers
+
+
+
+
