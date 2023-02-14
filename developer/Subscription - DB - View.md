@@ -6,3 +6,22 @@
 
 <br>
 <br>
+
+#### Difference Offer_Subscription and App_Subscriptionn_Details
+
+The offer_subscription table is holding all subscription requests; active subscriptions as well as inactive subscriptions.
+When a user is triggering the subscription request for anything on the marketplace; the request/record will get saved inside the offer_subscription table.  
+<br>
+The app_subscription_details table is only used when an app subscription request is getting activated. In that case; the app subscription details (such as the tenant url) is getting stored inside this table.
+Endpoints such as "My Busines Application" are using those details to provide the right tenant/url to the respective user.
+
+<br>
+<br>
+
+#### Display Name
+
+Currently not used but will be needed in future as preparation for multi tenant subscription/purchasing.
+Planned release 3.2
+
+<br>
+<br>
