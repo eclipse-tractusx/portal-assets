@@ -1,4 +1,4 @@
-# Summary
+## Summary
 
 
 The app change process is implemented to support app providers to change apps which are active.
@@ -19,7 +19,7 @@ On purpose, the change scenarios are kept limited for the first release of "app 
 <br>
 <br>
 
-# Function
+## Function
 
 Inside the App Overview (see following page for details: ) the app change process start got implemented:
 
@@ -48,10 +48,5 @@ Open up the sub-menu
 
 <br>
 <br>
-
-# Implementation
-
-![Tag](https://img.shields.io/static/v1?label=&message=ImplementationOngoing&color=yellow&style=flat)
-
 
 
