@@ -1,10 +1,23 @@
 ## Unreleased
 
+## 1.0.0-RC7
+
+### Change
+* Documentation v7 released (content and structural updates along the whole documentation)
+
+### Feature
+n/a
+
+### Technical Support
+n/a
+
+### Bugfix
+n/a
 
 ## 1.0.0-RC6
 
 ### Change
-* Documentation v5 released (content and structural updates along the whole documentation)
+* Documentation v6 released (content and structural updates along the whole documentation)
 * Split of user and developer documentation
 * added web application search functionality across all the md files / documentation files
 
