@@ -1,0 +1,25 @@
+## Summary
+
+
+The app deactivation function allows users to easily and conveniently deactivate their app from the app marketplace. This feature gives users the power to control their own offers and allows them to easily stop or start offer whenever they like. 
+
+<br>
+
+To deactivate an app, select "Deactivate" via the app management app card sub-menu  
+<br>
+<img width="180" alt="image" src="https://user-images.githubusercontent.com/94133633/219168086-092084df-f7d1-4010-96e9-07591d4e4dc7.png">
+<br>
+<br>
+the app provider can deactivate the app provided inside the marketplace.
+Important; the process is currently not reversable. The app is getting deactivated in the marketplace, but ecisting acces of subscription companies does still work.
+
+<br>
+<br>
+
+<p align="center">
+<img width="802" alt="image" src="https://user-images.githubusercontent.com/94133633/219163164-3cc202d8-ce8b-463c-8087-02b4e5790ab6.png">
+</p>
+
+<br>
+<br>
+
