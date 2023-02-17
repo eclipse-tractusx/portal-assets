@@ -46,6 +46,8 @@ nav.menu {
 
 nav.menu.open {
     width: 272px;
+    max-height: calc(100vh - 60px);
+    overflow-y: scroll;
 }
 
 nav.menu.closed,
