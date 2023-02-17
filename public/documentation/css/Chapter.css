@@ -40,7 +40,6 @@ nav.menu {
     position: fixed;
     display: flex;
     flex-direction: row;
-    min-height: 800px;
     transition: width 0.1s;
 }
 
@@ -53,7 +52,7 @@ nav.menu.open {
 nav.menu.closed,
 nav.menu.closed .home a {
     width: 0px;
-    max-height: 80vh;
+    max-height: 80vh !important;
 }
 
 nav.menu.closed ul {

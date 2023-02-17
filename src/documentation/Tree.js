@@ -21,12 +21,12 @@ const fs = require('fs')
 
 class Transformer {
 
-    static tree2map(map, tree, parent, level) {
+    static tree2map(map, tree, parent, level, order) {
         tree.parent = parent
         tree.level = level
         map[tree.path] = tree
         if (tree.children)
-            tree.children.forEach(child => Transformer.tree2map(map, child, tree, level + 1))
+            tree.children.forEach((child, order) => Transformer.tree2map(map, child, tree, level + 1, order))
         return map
     }
 
@@ -63,7 +63,7 @@ class TreeHelper {
     static readDirTree(root) {
         const dirTree = require('directory-tree')
         const tree = dirTree(root)
-        //const tree = Transformer.tree2map({}, dirTree(root), undefined, 0)
+        //const tree = Transformer.tree2map({}, dirTree(root), undefined, 0, 0)
         return tree
     }
 
