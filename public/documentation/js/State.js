@@ -55,7 +55,7 @@ class State {
 
     setData(data) {
         //console.log(this.clazz, 'setData', data)
-        data.map = Transformer.tree2map({}, data, undefined, 0)
+        data.map = Transformer.tree2map({}, data, undefined, data, 0, 0)
         this.data = data
         this.fireDataChanged(data)
         return this

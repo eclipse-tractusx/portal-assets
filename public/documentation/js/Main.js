@@ -21,13 +21,15 @@ import { clear, addEvents, N, Viewable, NavTools } from "./Toolkit.js"
 import { state } from "./State.js"
 import { Patterns, Settings } from "./Settings.js"
 
+const normalize = (path) => path.replace(/[^a-zA-Z0-9_-]/g, '_')
+
 const createSelectLink = (item) => addEvents(
     N(
         'a',
         item.level === 0 ? 'Home' : item.name.replace(Patterns.DISPLAY, ' '),
         {
+            class: `${normalize(item.path)}${item.path === state.selection ? ' selected' : ''}`,
             ... { href: `.?path=${item.path}` },
-            ... (item.path === state.selection ? { class: 'selected' } : {})
         }
     ),
     {
@@ -277,6 +279,24 @@ class Navigation extends Viewable {
         ], { class: 'menu open' })
     }
 
+    select(content) {
+        try {
+            [...this.menu.getElementsByClassName('selected')].forEach(item => item.classList.remove('selected'));
+            [...this.menu.getElementsByClassName(normalize(content.path))].forEach(item => item.classList.add('selected'))
+            setTimeout(this.scrollToSelected.bind(this), 30)
+            this.content = content
+        } catch (e) {
+        }
+
+    }
+
+    scrollToSelected() {
+        try {
+            this.menu.getElementsByClassName('selected').item(0).scrollIntoView({ behavior: 'smooth', block: 'center' })
+        } catch (e) {
+        }
+    }
+
     createToggleButton() {
         return addEvents(
             N('button'),
@@ -303,15 +323,12 @@ class Navigation extends Viewable {
     }
 
     selectionChanged(selection, content) {
-        clear(this.menu)
-        let start = content
-        while (start.level > 1) {
-            start = start.parent
-        }
-        [this.createItem(start)].concat(start.children
-            ? start.children.filter(item => item.name !== 'index.md').map(this.createSubnav.bind(this))
+        clear(this.menu);
+        [this.createItem(content.toplevel)].concat(content.toplevel.children
+            ? content.toplevel.children.filter(item => item.name !== 'index.md').map(this.createSubnav.bind(this))
             : [document.createTextNode('')]
         ).forEach(item => this.menu.appendChild(item))
+        this.select(content)
         return this
     }
 
@@ -425,6 +442,12 @@ class Chapter extends Viewable {
         ], { class: 'chapter' })
     }
 
+    select(content) {
+        this.navigation.select(content)
+        this.content.selectionChanged(content.path, content)
+        return this
+    }
+
     selectionChanged(selection, content) {
         this.navigation.selectionChanged(selection, content)
         this.content.selectionChanged(selection, content)
@@ -516,11 +539,16 @@ class Main extends Viewable {
     }
 
     selectionChanged(selection, content) {
-        //console.log(this.clazz, 'selectionChanged', selection)
-        return this.clear().append(selection === NavTools.getRoot()
-            ? this.chapters
-            : this.chapter.selectionChanged(selection, content)
-        )
+        if (!this.content || this.content.toplevel !== content.toplevel) {
+            this.clear().append(selection === NavTools.getRoot()
+                ? this.chapters
+                : this.chapter.selectionChanged(selection, content)
+            )
+        } else {
+            this.chapter.select(content)
+        }
+        this.content = content
+        return this
     }
 
 }

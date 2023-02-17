@@ -119,12 +119,15 @@ export class NavTools {
 
 export class Transformer {
 
-    static tree2map(map, tree, parent, level) {
+    static tree2map(map, tree, parent, toplevel, level, order) {
         tree.parent = parent
+        tree.toplevel = toplevel
         tree.level = level
+        tree.order = order
         map[tree.path] = tree
         if (tree.children)
-            tree.children.forEach(child => Transformer.tree2map(map, child, tree, level + 1))
+            tree.children.forEach((child, order) =>
+                Transformer.tree2map(map, child, tree, level < 1 ? child : toplevel, level + 1, order))
         return map
     }
 
