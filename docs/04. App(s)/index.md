@@ -9,28 +9,12 @@ The owner of the marketplace offered services is not the marketplace owner, it i
 
 Key Functions
 
-- [App List (Browse)](#app-list-browse)
-- [App List (Search)](#app-list-search)
-- [App Service Consume / Access](#app-service-consume--access)
-- [App Release](#app-release)
-- [App Upgrade](#app-upgrade)
-- [App Off-boarding](#app-off-boarding)
-- [App Review & Rate](#app-review--rate)
-
-<br>
-<br>
-
-### Service Marketplace in Catena-X
-
-The service marketplace is used for service provider offerings to enable users to get access to infrastructure / core component services.
-Similar like the app marketplace, only published services via the "Service Release Process" will be shown in the service marketplace.
-
-Key Functions
-
-- [Service List (Browse)](#service-list-browse)
-- [Service List (Search)](#service-list-search)
-- [Service Consume / Access](#app-service-consume--access)
-- [Service Release](#app-release)
+- [App Marketplace](/01.%20TMarketplace/)
+- [App Release Process](/02.%20App%20Release%20Process/)
+- [App Release Approval](/03.%20App%20Release%20Approval/)
+- [App Provider Management Board(s)](/04.%20App%20Provider%20Management%20Board(s)/)
+- [App Subscription](/05.%20App-Subscription/)
+- [App Review & Rate](/06.%20App%20Change%20Process/)
 
 
 <br>

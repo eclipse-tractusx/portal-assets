@@ -32,9 +32,9 @@ to be added
 
 to be added
 
-- [ ] App Lead Picture Guidelines - [App Design Guidelines](https://github.com/catenax-ng/tx-portal-assets/blob/0b1a5e9052e619813f82cdb32aa70b95f7e8a1bb/docs/Marketplace(s)/App-Design_guidelines.md)
-- [ ] CX IP App Guidelines - [App Design Guidelines](https://github.com/catenax-ng/tx-portal-assets/blob/0b1a5e9052e619813f82cdb32aa70b95f7e8a1bb/docs/Marketplace(s)/App-Design_guidelines.md)
-- [ ] CX IP App Language Support - [App Design Guidelines](https://github.com/catenax-ng/tx-portal-assets/blob/0b1a5e9052e619813f82cdb32aa70b95f7e8a1bb/docs/Marketplace(s)/App-Design_guidelines.md)
+- [ ] App Lead Picture Guidelines - [App Design Guidelines](./App-Design_guidelines.md/)
+- [ ] CX IP App Guidelines - [App Design Guidelines](./App-Design_guidelines.md/)
+- [ ] CX IP App Language Support - [App Design Guidelines](./App-Design_guidelines.md/)
 - [ ] ...
 - [ ] ...
 
