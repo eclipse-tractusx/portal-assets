@@ -38,6 +38,7 @@ class State {
     releases = undefined
     releaseSelection = undefined
     search = undefined
+    refresh = false
 
     addListener(key, listener) {
         this.listener[key] = [...new Set([...this.listener[key], ...(Array.isArray(listener) ? listener : [listener])])]
@@ -81,8 +82,9 @@ class State {
     setSelection(selection, hash) {
         //console.log(this.clazz, 'setSelection', selection, hash)
         selection = (this.data.map && this.data.map.hasOwnProperty(selection)) ? selection : NavTools.getRoot()
-        if (selection === this.selection)
+        if (selection === this.selection && !this.refresh)
             return
+        this.refresh = false
         const content = this.getItem(selection)
         NavTools.pushState({...content, hash})
         this.selection = content.path
@@ -135,6 +137,7 @@ class State {
     setReleaseSelection(releaseSelection) {
         this.releaseSelection = releaseSelection
         this.fireReleaseSelectionChanged(releaseSelection)
+        this.refresh = true
         return this
     }
 

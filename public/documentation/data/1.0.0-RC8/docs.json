@@ -134,14 +134,28 @@
               ]
             },
             {
-              "path": "docs/01. Onboarding/03. Registration Approval/04. FAQ.md",
-              "name": "04. FAQ.md",
+              "path": "docs/01. Onboarding/03. Registration Approval/04. Decline Application.md",
+              "name": "04. Decline Application.md",
+              "chapter": [
+                "## Decline Company Application"
+              ]
+            },
+            {
+              "path": "docs/01. Onboarding/03. Registration Approval/05. FAQ.md",
+              "name": "05. FAQ.md",
               "chapter": [
                 "## FAQ",
                 "### What happens if I decline an application?",
                 "### Can I as a registration company view my registration status?"
               ]
             }
+          ]
+        },
+        {
+          "path": "docs/01. Onboarding/index.md",
+          "name": "index.md",
+          "chapter": [
+            "## Onboarding"
           ]
         }
       ]
@@ -165,7 +179,10 @@
               "path": "docs/02. Technical Integration/01. Connector Registration/01. Connector Overview.md",
               "name": "01. Connector Overview.md",
               "chapter": [
-                "## Connector Overview"
+                "## Connector Overview",
+                "#### DAPS Auth Status",
+                "#### SelfDescription Status",
+                "#### Connector Status"
               ]
             },
             {
@@ -173,29 +190,8 @@
               "name": "02. Connector Registration.md",
               "chapter": [
                 "## Connector Registration",
-                "#### Create new Connector Registration - self-owned",
-                "#### Create new Connector Registration - managed "
-              ]
-            },
-            {
-              "path": "docs/02. Technical Integration/01. Connector Registration/02. Implementation.md",
-              "name": "02. Implementation.md",
-              "chapter": [
-                "# Implementation",
-                "## 1 Get all MY Connector Registrations",
-                "#### Logical flow of the service",
-                "#### API Details",
-                "## 2 Create new Connector Registration - self-owned",
-                "#### Logical flow of the service",
-                "#### API Details",
-                "## 3 Create new Connector Registration - managed ",
-                "#### Logical flow of the service",
-                "#### API Details",
-                "## 4 Retrigger DAPS",
-                "#### API Details",
-                "## 5 Delete Connector",
-                "#### API Details",
-                "## DB Model"
+                "### Create new Connector Registration - self-owned",
+                "### Create new Connector Registration - managed "
               ]
             },
             {
@@ -206,27 +202,42 @@
               ]
             },
             {
-              "path": "docs/02. Technical Integration/01. Connector Registration/03. SelfDescription Retrigger.md",
-              "name": "03. SelfDescription Retrigger.md",
+              "path": "docs/02. Technical Integration/01. Connector Registration/04. SelfDescription Retrigger.md",
+              "name": "04. SelfDescription Retrigger.md",
               "chapter": [
                 "#### Self Description Retrigger"
               ]
             },
             {
-              "path": "docs/02. Technical Integration/01. Connector Registration/04. FAQ.md",
-              "name": "04. FAQ.md",
+              "path": "docs/02. Technical Integration/01. Connector Registration/05. Delete Connector.md",
+              "name": "05. Delete Connector.md",
+              "chapter": [
+                "## 5 Delete Connector"
+              ]
+            },
+            {
+              "path": "docs/02. Technical Integration/01. Connector Registration/06. OpenAPI.md",
+              "name": "06. OpenAPI.md",
+              "chapter": [
+                "## Open API - Create new Connector Registration - managed ",
+                "##### API Details",
+                "##### Request Body",
+                "###### Provider BPN",
+                "###### Certificate"
+              ]
+            },
+            {
+              "path": "docs/02. Technical Integration/01. Connector Registration/07. FAQ.md",
+              "name": "07. FAQ.md",
               "chapter": [
                 "## FAQ",
                 "### How to register a connector inside the network?",
                 "### Whats the difference of a OWNED and a MANAGED connector?",
                 "### How can a connector get deleted?",
-                "### What is a \"PENDING\" connector?",
+                "### Why is my connector \"PENDING\"?",
                 "### Why is my connector authentication icon green or grey?",
                 "### Whats a public key and how do I create the public key?",
-                "##### Steps to install OpenSSL on mac with brew:",
-                "###### Step 1: Install brew",
-                "###### Step 2:  Add Homebrew to your path and install openssl",
-                "###### Step 3:  Navigate to the folder having openssl.cnf and run the command"
+                "#### Steps to install OpenSSL on mac with brew:"
               ]
             }
           ]
@@ -271,6 +282,41 @@
           ]
         },
         {
+          "path": "docs/02. Technical Integration/03. CX Membership",
+          "name": "03. CX Membership",
+          "children": [
+            {
+              "path": "docs/02. Technical Integration/03. CX Membership/01. Open API.md",
+              "name": "01. Open API.md",
+              "chapter": [
+                "## Open API - CX-Membership ",
+                "### Architecture Overview",
+                "### #1 application programming interface (API)",
+                "###### Request Body",
+                "###### Response Body"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "docs/02. Technical Integration/04. Dataspace Discovery",
+          "name": "04. Dataspace Discovery",
+          "children": [
+            {
+              "path": "docs/02. Technical Integration/04. Dataspace Discovery/01. Open API.md",
+              "name": "01. Open API.md",
+              "chapter": [
+                "## Open API - Connector Discovery ",
+                "## Interface/API/Service Summary",
+                "### Architecture Overview",
+                "### EDC Discovery - application programming interface (API)",
+                "###### Request Body",
+                "###### Response Body"
+              ]
+            }
+          ]
+        },
+        {
           "path": "docs/02. Technical Integration/index.md",
           "name": "index.md",
           "chapter": [
@@ -284,39 +330,39 @@
       "name": "03. User Management",
       "children": [
         {
-          "path": "docs/03. User Management/1 User Account",
-          "name": "1 User Account",
+          "path": "docs/03. User Management/01. User Account",
+          "name": "01. User Account",
           "children": [
             {
-              "path": "docs/03. User Management/1 User Account/01. Summary.md",
+              "path": "docs/03. User Management/01. User Account/01. Summary.md",
               "name": "01. Summary.md",
               "chapter": [
                 "# Summary"
               ]
             },
             {
-              "path": "docs/03. User Management/1 User Account/02. User Account.md",
+              "path": "docs/03. User Management/01. User Account/02. User Account.md",
               "name": "02. User Account.md",
               "chapter": [
                 "## View company user accounts"
               ]
             },
             {
-              "path": "docs/03. User Management/1 User Account/03. Create new user account (single).md",
+              "path": "docs/03. User Management/01. User Account/03. Create new user account (single).md",
               "name": "03. Create new user account (single).md",
               "chapter": [
                 "## Create a new user account (single)"
               ]
             },
             {
-              "path": "docs/03. User Management/1 User Account/04. Create new user account (bulk).md",
+              "path": "docs/03. User Management/01. User Account/04. Create new user account (bulk).md",
               "name": "04. Create new user account (bulk).md",
               "chapter": [
                 "## Create a new user account (bulk)"
               ]
             },
             {
-              "path": "docs/03. User Management/1 User Account/05. FAQ.md",
+              "path": "docs/03. User Management/01. User Account/05. FAQ.md",
               "name": "05. FAQ.md",
               "chapter": [
                 "# FAQ\r",
@@ -327,7 +373,7 @@
               ]
             },
             {
-              "path": "docs/03. User Management/1 User Account/index.md",
+              "path": "docs/03. User Management/01. User Account/index.md",
               "name": "index.md",
               "chapter": [
                 "# User Account"
@@ -336,11 +382,11 @@
           ]
         },
         {
-          "path": "docs/03. User Management/2 Edit User Account",
-          "name": "2 Edit User Account",
+          "path": "docs/03. User Management/02. Modify User Account",
+          "name": "02. Modify User Account",
           "children": [
             {
-              "path": "docs/03. User Management/2 Edit User Account/01. Summary.md",
+              "path": "docs/03. User Management/02. Modify User Account/01. Summary.md",
               "name": "01. Summary.md",
               "chapter": [
                 "# User Account Details",
@@ -348,7 +394,7 @@
               ]
             },
             {
-              "path": "docs/03. User Management/2 Edit User Account/02. Password Reset.md",
+              "path": "docs/03. User Management/02. Modify User Account/02. Password Reset.md",
               "name": "02. Password Reset.md",
               "chapter": [
                 "## Password Reset",
@@ -357,14 +403,14 @@
               ]
             },
             {
-              "path": "docs/03. User Management/2 Edit User Account/03. User Permissions - UPDATE NEEDED.md",
+              "path": "docs/03. User Management/02. Modify User Account/03. User Permissions - UPDATE NEEDED.md",
               "name": "03. User Permissions - UPDATE NEEDED.md",
               "chapter": [
                 "## User Permissions"
               ]
             },
             {
-              "path": "docs/03. User Management/2 Edit User Account/04. Manage user assigned BPN.md",
+              "path": "docs/03. User Management/02. Modify User Account/04. Manage user assigned BPN.md",
               "name": "04. Manage user assigned BPN.md",
               "chapter": [
                 "## Add BPN",
@@ -372,14 +418,14 @@
               ]
             },
             {
-              "path": "docs/03. User Management/2 Edit User Account/05. Suspend User.md",
+              "path": "docs/03. User Management/02. Modify User Account/05. Suspend User.md",
               "name": "05. Suspend User.md",
               "chapter": [
                 "# Suspend User"
               ]
             },
             {
-              "path": "docs/03. User Management/2 Edit User Account/06. Delete User.md",
+              "path": "docs/03. User Management/02. Modify User Account/06. Delete User.md",
               "name": "06. Delete User.md",
               "chapter": [
                 "## Delete User",
@@ -388,7 +434,7 @@
               ]
             },
             {
-              "path": "docs/03. User Management/2 Edit User Account/index.md",
+              "path": "docs/03. User Management/02. Modify User Account/index.md",
               "name": "index.md",
               "chapter": [
                 "# Summary\r"
@@ -397,34 +443,35 @@
           ]
         },
         {
-          "path": "docs/03. User Management/3 Technical User",
-          "name": "3 Technical User",
+          "path": "docs/03. User Management/03. Technical User",
+          "name": "03. Technical User",
           "children": [
             {
-              "path": "docs/03. User Management/3 Technical User/00. Summary.md",
+              "path": "docs/03. User Management/03. Technical User/00. Summary.md",
               "name": "00. Summary.md",
               "chapter": [
                 "# Summary",
-                "### Customer Functionalities covered in the function",
-                "### Available technical user roles"
+                "### Customer Functionalities covered in the function"
               ]
             },
             {
-              "path": "docs/03. User Management/3 Technical User/01. View Technical User - UPDATE NEEDED.md",
+              "path": "docs/03. User Management/03. Technical User/01. View Technical User - UPDATE NEEDED.md",
               "name": "01. View Technical User - UPDATE NEEDED.md",
               "chapter": [
                 "## Create a new technical user"
               ]
             },
             {
-              "path": "docs/03. User Management/3 Technical User/02. Create Technical User.md",
+              "path": "docs/03. User Management/03. Technical User/02. Create Technical User.md",
               "name": "02. Create Technical User.md",
               "chapter": [
+                "## Introduction",
+                "#### Available technical user roles",
                 "## Create a new technical user"
               ]
             },
             {
-              "path": "docs/03. User Management/3 Technical User/03. Delete Technical User.md",
+              "path": "docs/03. User Management/03. Technical User/03. Delete Technical User.md",
               "name": "03. Delete Technical User.md",
               "chapter": [
                 "## Delete an user",
@@ -432,39 +479,39 @@
               ]
             },
             {
-              "path": "docs/03. User Management/3 Technical User/04. FAQ.md",
+              "path": "docs/03. User Management/03. Technical User/04. FAQ.md",
               "name": "04. FAQ.md",
               "chapter": []
             }
           ]
         },
         {
-          "path": "docs/03. User Management/4 App Access Management",
-          "name": "4 App Access Management",
+          "path": "docs/03. User Management/04. App Access Management",
+          "name": "04. App Access Management",
           "children": [
             {
-              "path": "docs/03. User Management/4 App Access Management/01. Summary.md",
+              "path": "docs/03. User Management/04. App Access Management/01. Summary.md",
               "name": "01. Summary.md",
               "chapter": [
                 "# Summary"
               ]
             },
             {
-              "path": "docs/03. User Management/4 App Access Management/02. App Role Management Overview - UPDATE NEEDED.md",
+              "path": "docs/03. User Management/04. App Access Management/02. App Role Management Overview - UPDATE NEEDED.md",
               "name": "02. App Role Management Overview - UPDATE NEEDED.md",
               "chapter": [
                 "## Assign App Role"
               ]
             },
             {
-              "path": "docs/03. User Management/4 App Access Management/03. Assign App Role.md",
+              "path": "docs/03. User Management/04. App Access Management/03. Assign App Role.md",
               "name": "03. Assign App Role.md",
               "chapter": [
                 "## Assign App Role"
               ]
             },
             {
-              "path": "docs/03. User Management/4 App Access Management/04. FAQ.md",
+              "path": "docs/03. User Management/04. App Access Management/04. FAQ.md",
               "name": "04. FAQ.md",
               "chapter": []
             }
@@ -564,15 +611,17 @@
               "path": "docs/04. App(s)/02. App Release Process/App-Design_guidelines.md",
               "name": "App-Design_guidelines.md",
               "chapter": [
-                "# App Design Guidelines",
+                "## App Design Guidelines",
                 "### The App Picture",
-                "#### Support Information",
-                "##### App Picture Layout Template",
-                "##### App Color Guidelines",
-                "##### App Picture Icon Template",
-                "### In-App Design (Catena-X Apps)",
-                "#### App Typography",
-                "#### Language Support"
+                "### Support Information",
+                "#### App Picture Layout Template",
+                "#### App Color Guidelines",
+                "###### Do's",
+                "###### Dont's",
+                "#### App Picture Icon Template",
+                "#### In-App Design (Catena-X Apps)",
+                "##### App Typography",
+                "##### Language Support"
               ]
             },
             {
@@ -602,15 +651,22 @@
               ]
             },
             {
-              "path": "docs/04. App(s)/03. App Release Approval/02. Approve App Release.md",
-              "name": "02. Approve App Release.md",
+              "path": "docs/04. App(s)/03. App Release Approval/02. App Details.md",
+              "name": "02. App Details.md",
+              "chapter": [
+                "## App details"
+              ]
+            },
+            {
+              "path": "docs/04. App(s)/03. App Release Approval/03. Approve App Release.md",
+              "name": "03. Approve App Release.md",
               "chapter": [
                 "## Approve App Release"
               ]
             },
             {
-              "path": "docs/04. App(s)/03. App Release Approval/03. Decline App Release.md",
-              "name": "03. Decline App Release.md",
+              "path": "docs/04. App(s)/03. App Release Approval/04. Decline App Release.md",
+              "name": "04. Decline App Release.md",
               "chapter": [
                 "## Decline App Release"
               ]
@@ -682,8 +738,16 @@
           "name": "06. App Change Process",
           "children": [
             {
-              "path": "docs/04. App(s)/06. App Change Process/App Deactivation.md",
-              "name": "App Deactivation.md",
+              "path": "docs/04. App(s)/06. App Change Process/01. Summary.md",
+              "name": "01. Summary.md",
+              "chapter": [
+                "## Summary",
+                "## Function"
+              ]
+            },
+            {
+              "path": "docs/04. App(s)/06. App Change Process/02. App Deactivation.md",
+              "name": "02. App Deactivation.md",
               "chapter": [
                 "## Summary"
               ]
@@ -691,11 +755,22 @@
           ]
         },
         {
-          "path": "docs/04. App(s)/App-Change-Process.md",
-          "name": "App-Change-Process.md",
-          "chapter": [
-            "## Summary",
-            "## Function"
+          "path": "docs/04. App(s)/07. App Provider Management",
+          "name": "07. App Provider Management",
+          "children": [
+            {
+              "path": "docs/04. App(s)/07. App Provider Management/01. Open API.md",
+              "name": "01. Open API.md",
+              "chapter": [
+                "## Open API - Offer Autosetup",
+                "## Interface / API / Service Summary",
+                "## Architecture Overview",
+                "## Implementation",
+                "### #1 PUT Service URL",
+                "### #2 POST Service Request",
+                "### #3 POST Service Instance"
+              ]
+            }
           ]
         },
         {
@@ -703,8 +778,7 @@
           "name": "index.md",
           "chapter": [
             "# Summary",
-            "### App Marketplace in Catena-X",
-            "### Service Marketplace in Catena-X"
+            "### App Marketplace in Catena-X"
           ]
         }
       ]
@@ -714,11 +788,11 @@
       "name": "05. Service(s)",
       "children": [
         {
-          "path": "docs/05. Service(s)/Service Marketplace",
-          "name": "Service Marketplace",
+          "path": "docs/05. Service(s)/01. Service Marketplace",
+          "name": "01. Service Marketplace",
           "children": [
             {
-              "path": "docs/05. Service(s)/Service Marketplace/01. Service Marketplace.md",
+              "path": "docs/05. Service(s)/01. Service Marketplace/01. Service Marketplace.md",
               "name": "01. Service Marketplace.md",
               "chapter": [
                 "## Summary",
@@ -727,14 +801,14 @@
               ]
             },
             {
-              "path": "docs/05. Service(s)/Service Marketplace/02. Service Details.md",
+              "path": "docs/05. Service(s)/01. Service Marketplace/02. Service Details.md",
               "name": "02. Service Details.md",
               "chapter": [
                 "## Service Offer Details"
               ]
             },
             {
-              "path": "docs/05. Service(s)/Service Marketplace/03. FAQ.md",
+              "path": "docs/05. Service(s)/01. Service Marketplace/03. FAQ.md",
               "name": "03. FAQ.md",
               "chapter": [
                 "### FAQ"
@@ -743,18 +817,18 @@
           ]
         },
         {
-          "path": "docs/05. Service(s)/Service Release Process",
-          "name": "Service Release Process",
+          "path": "docs/05. Service(s)/02. Service Release Process",
+          "name": "02. Service Release Process",
           "children": [
             {
-              "path": "docs/05. Service(s)/Service Release Process/01. Release Flow.md",
+              "path": "docs/05. Service(s)/02. Service Release Process/01. Release Flow.md",
               "name": "01. Release Flow.md",
               "chapter": [
                 "## Summary"
               ]
             },
             {
-              "path": "docs/05. Service(s)/Service Release Process/02. FAQ.md",
+              "path": "docs/05. Service(s)/02. Service Release Process/02. FAQ.md",
               "name": "02. FAQ.md",
               "chapter": [
                 "### FAQ",
@@ -764,11 +838,11 @@
           ]
         },
         {
-          "path": "docs/05. Service(s)/Service Subscription",
-          "name": "Service Subscription",
+          "path": "docs/05. Service(s)/03. Service Subscription",
+          "name": "03. Service Subscription",
           "children": [
             {
-              "path": "docs/05. Service(s)/Service Subscription/01. Service Subscription.md",
+              "path": "docs/05. Service(s)/03. Service Subscription/01. Service Subscription.md",
               "name": "01. Service Subscription.md",
               "chapter": [
                 "## Summary",
@@ -776,7 +850,7 @@
               ]
             },
             {
-              "path": "docs/05. Service(s)/Service Subscription/02. FAQ.md",
+              "path": "docs/05. Service(s)/03. Service Subscription/02. FAQ.md",
               "name": "02. FAQ.md",
               "chapter": [
                 "### FAQ",
@@ -785,6 +859,13 @@
                 "#### I triggered a service request what do I need to do now?"
               ]
             }
+          ]
+        },
+        {
+          "path": "docs/05. Service(s)/index.md",
+          "name": "index.md",
+          "chapter": [
+            "## Service Marketplace in Catena-X"
           ]
         }
       ]
