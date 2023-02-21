@@ -78,7 +78,7 @@
         "detailsWithImageRow1": [
           {
             "title": "Self/Local Setup",
-            "imageUrl": "rectangle-image.png",
+            "imageUrl": "teaser.png",
             "description": "Individual and independent connection to traceability...",
             "readMore": "",
             "readMoreTitle": "Direct link (coming soon)",
@@ -87,7 +87,7 @@
           },
           {
             "title": "Minimal Setup",
-            "imageUrl": "rectangle-image.png",
+            "imageUrl": "teaser.png",
             "description": "Use of web services to provide data for traceability..",
             "readMore": "/appdetail/d0ea773a-8fa0-481b-9ae3-d0e9c22a8628",
             "readMoreTitle": "Get Details",
@@ -96,7 +96,7 @@
           },
           {
             "title": "Complete Setup",
-            "imageUrl": "rectangle-image.png",
+            "imageUrl": "teaser.png",
             "description": "Use of business applications with full traceability functions...",
             "readMore": "",
             "readMoreTitle": "Get Details",
@@ -115,7 +115,7 @@
         "detailsWithImageRow1": [
           {
             "title": "Trace X",
-            "imageUrl": "rectangle-image.png",
+            "imageUrl": "teaser.png",
             "description": "Enables seamless traceability of parts across n.tier's supply chain - visualizes...",
             "readMore": "/appdetail/ac1cf001-7fbc-1f2f-817f-bce0572c0007",
             "readMoreTitle": "Get to the app",
@@ -124,7 +124,7 @@
           },
           {
             "title": "Smart MOM",
-            "imageUrl": "rectangle-image.png",
+            "imageUrl": "teaser.png",
             "description": "Consolidates all production processes and systems to control manufacturing processes...",
             "readMore": "/appdetail/5cf74ef8-e0b7-4984-a872-474828beb5d1",
             "readMoreTitle": "Get to the app",
@@ -133,7 +133,7 @@
           },
           {
             "title": "SAP BN MT",
-            "imageUrl": "rectangle-image.png",
+            "imageUrl": "teaser.png",
             "description": "is a solution for cross-company supply chain transparency and material traceability...",
             "readMore": "/appdetail/5cf74ef8-e0b7-4984-a872-474828beb5d7",
             "readMoreTitle": "Get to the app",
@@ -142,7 +142,7 @@
           },
           {
             "title": "Trusted Traceability",
-            "imageUrl": "rectangle-image.png",
+            "imageUrl": "teaser.png",
             "description": "is a fully managed system (software-as-a-service) and enables the introduction of traceability...",
             "readMore": "/appdetail/ac1cf001-7fbc-1f2f-817f-bce05748000d",
             "readMoreTitle": "Get to the app",
