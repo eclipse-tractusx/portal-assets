@@ -48,6 +48,12 @@ jobs:
       - name: Output versions
         run: echo building relase from git ${{ steps.git-tag.outputs.git-version }}
 
+      - name: Install Dependencies
+        run: yarn
+
+      - name: Build Library and Portal
+        run: yarn build
+
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v1
         with:
