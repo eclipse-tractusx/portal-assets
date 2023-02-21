@@ -1,5 +1,20 @@
 ## Unreleased
 
+## 1.0.0-RC8
+
+### Change
+* Documentation v8 released (content and structural updates along the whole documentation and OpenAPI docu added)
+
+### Feature
+n/a
+
+### Technical Support
+n/a
+
+### Bugfix
+n/a
+
+
 ## 1.0.0-RC7
 
 ### Change
@@ -13,6 +28,7 @@ n/a
 
 ### Bugfix
 n/a
+
 
 ## 1.0.0-RC6
 
@@ -29,6 +45,7 @@ n/a
 
 ### Bugfix
 * fixed security findings
+
 
 ## 1.0.0-RC5
 
