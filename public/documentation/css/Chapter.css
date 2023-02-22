@@ -57,6 +57,7 @@ nav.menu.open .home {
 }
 
 nav.menu.open .scroller {
+    width: 100%;
     margin-top: 76px;
     position: relative;
 }
@@ -64,7 +65,7 @@ nav.menu.open .scroller {
 nav.menu.closed,
 nav.menu.closed .home a {
     width: 0px;
-    max-height: 80vh !important;
+    max-height: 90vh !important;
 }
 
 nav.menu.closed .scroller {
@@ -76,6 +77,10 @@ nav.menu button {
     padding: 2px;
     border: 0;
     background-color: rgba(255, 255, 255, 0.8);
+}
+
+nav.menu.open button.toggle {
+    margin: 10px 0;
 }
 
 nav.menu button.scroll {
