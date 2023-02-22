@@ -272,11 +272,41 @@ class Navigation extends Viewable {
         state.addMenuOpenListener(this)
         this.menu = N('ul', null, { class: 'level1' })
         this.toggle = this.createToggleButton()
+        this.scrollTop = this.createScrollTopButton()
+        this.scrollBottom = this.createScrollBottomButton()
+        this.scroller = N('div', [
+            this.menu,
+            this.scrollTop,
+            this.scrollBottom,
+        ], { class: 'scroller' })
         this.view = N('nav', [
             N('div', createSelectLink({ name: '', path: NavTools.getRoot() }), { class: 'home' }),
-            this.menu,
-            this.toggle
+            this.scroller,
+            this.toggle,
         ], { class: 'menu open' })
+    }
+
+    watchScroll() {
+        const onIntersection = (entries) => entries.forEach(entry => {
+            if (entry.target === this.menu.firstChild) {
+                if (entry.intersectionRatio > 0.9)
+                    this.scrollTop.classList.add('hidden')
+                else
+                    this.scrollTop.classList.remove('hidden')
+            }
+            else if (entry.target === this.menu.lastChild) {
+                if (entry.intersectionRatio > 0.9)
+                    this.scrollBottom.classList.add('hidden')
+                else
+                    this.scrollBottom.classList.remove('hidden')
+            }
+        })
+        const observer = new IntersectionObserver(onIntersection.bind(this), {
+            root: this.scroller,
+            threshold: 0.9
+        })
+        observer.observe(this.menu.firstChild)
+        observer.observe(this.menu.lastChild)
     }
 
     select(content) {
@@ -299,11 +329,33 @@ class Navigation extends Viewable {
 
     createToggleButton() {
         return addEvents(
-            N('button'),
+            N('button', '', { class: 'toggle' }),
             {
                 click: () => {
                     state.setMenuOpen(!state.menuOpen)
                 }
+            }
+        )
+    }
+
+    createScrollTopButton() {
+        return addEvents(
+            N('button', '⏶', { class: 'scroll' }),
+            {
+                click: (() => {
+                    this.menu.scrollTo({ top: 0, behavior: 'smooth' })
+                }).bind(this)
+            }
+        )
+    }
+
+    createScrollBottomButton() {
+        return addEvents(
+            N('button', '⏷', { class: 'scroll' }),
+            {
+                click: (() => {
+                    this.menu.scrollTo({ top: this.menu.scrollHeight, behavior: 'smooth' })
+                }).bind(this)
             }
         )
     }
@@ -328,6 +380,7 @@ class Navigation extends Viewable {
             ? content.toplevel.children.filter(item => item.name !== 'index.md').map(this.createSubnav.bind(this))
             : [document.createTextNode('')]
         ).forEach(item => this.menu.appendChild(item))
+        this.watchScroll()
         this.select(content)
         return this
     }
@@ -401,6 +454,7 @@ class Content extends Viewable {
         root.styleSheets[0].insertRule('h1:hover, h2:hover, h3:hover, h4:hover, h5:hover { text-decoration: underline; cursor: pointer; }')
         root.styleSheets[0].insertRule('.headline { position: relative; }')
         root.styleSheets[0].insertRule('a.github { position: absolute; width: 20px; height: 20px; bottom: 15%; right: 0px; background-color: #888888; display: none; }')
+        root.styleSheets[0].insertRule('.markdown-body { margin-top: -24px; }')
     }
 
     renderMD(content) {
@@ -464,7 +518,9 @@ class App extends Viewable {
         super()
         this.view = addEvents(
             document.body,
-            { click: () => { state.setSearch([]) } }
+            {
+                click: () => { state.setSearch([]) },
+            }
         )
         while (this.view.childNodes.length > 0) {
             this.view.removeChild(this.view.lastChild)
@@ -476,19 +532,16 @@ class App extends Viewable {
     }
 
     loadReleases() {
-        //console.log(this.clazz, 'loadReleases')
         fetch('data/Releases.json')
             .then(response => response.json())
             .then((releases) => state.setReleases([{ ref: `/${Settings.DEFAULT_BRANCH}` }].concat(releases.reverse())))
     }
 
     releasesChanged(releases) {
-        //console.log(this.clazz, 'releasesChanged', releases)
         state.setReleaseSelection(Settings.DEFAULT_BRANCH)
     }
 
     releaseSelectionChanged(releaseSelection) {
-        //console.log(this.clazz, 'releaseSelectionChanged', releaseSelection)
         fetch(`data/${releaseSelection}/${NavTools.getRoot()}.json`)
             .then(response => response.json())
             .then(state.setData.bind(state))
@@ -496,8 +549,59 @@ class App extends Viewable {
     }
 
     dataChanged(data) {
-        //console.log(this.clazz, 'dataChanged', data)
         state.setSelection(NavTools.currentPath(), location.hash)
+    }
+
+}
+
+class ScrollHelper extends Viewable {
+
+    constructor(header, footer) {
+        super()
+        this.header = header.getView()
+        this.footer = footer.getView()
+        this.scrollTop = addEvents(
+            N('button', '⏶'),
+            {
+                click: () => window.scrollTo({ top: 0, behavior: 'smooth' })
+            }
+        )
+        this.scrollBottom = addEvents(
+            N('button', '⏷'),
+            {
+                click: () => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
+            }
+        )
+        this.view = N(
+            'div',
+            [
+                this.scrollTop,
+                this.scrollBottom
+            ],
+            { class: 'scroll-helper' }
+        )
+        this.watchScroll()
+    }
+
+    setVisible(item, visible) {
+        if (visible)
+            item.classList.remove('hidden')
+        else
+            item.classList.add('hidden')
+    }
+
+    watchScroll() {
+        const onIntersection = (entries) => entries.forEach(entry => {
+            if (entry.target === this.header)
+                this.setVisible(this.scrollTop, entry.intersectionRatio < 0.1)
+            else if (entry.target === this.footer)
+                this.setVisible(this.scrollBottom, entry.intersectionRatio < 0.1)
+        })
+        const observer = new IntersectionObserver(onIntersection.bind(this), {
+            threshold: 0.1
+        })
+        observer.observe(this.header)
+        observer.observe(this.footer)
     }
 
 }
@@ -558,10 +662,13 @@ addEvents(
     {
         popstate: (e) => state.setSelection(e.state, undefined),
         load: () => {
+            const header = new Header()
+            const footer = new Footer()
             new App()
-                .append(new Header())
+                .append(header)
                 .append(new Main())
-                .append(new Footer())
+                .append(footer)
+                .append(new ScrollHelper(header, footer))
         }
     }
 )

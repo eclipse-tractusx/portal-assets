@@ -35,6 +35,10 @@ nav.menu button {
     border-radius: 15px;
 }
 
+nav.menu button {
+    color: lightgray;
+}
+
 nav.menu {
     font-size: 12px;
     position: fixed;
@@ -45,8 +49,20 @@ nav.menu {
 
 nav.menu.open {
     width: 272px;
-    max-height: calc(100vh - 60px);
-    overflow-y: scroll;
+}
+
+nav.menu.open ul.level1 {
+    max-height: calc(100vh - 160px);
+}
+
+nav.menu.open .home {
+    display: block;
+    height: 80px;
+}
+
+nav.menu.open .scroller {
+    margin-top: 76px;
+    position: relative;
 }
 
 nav.menu.closed,
@@ -55,7 +71,7 @@ nav.menu.closed .home a {
     max-height: 80vh !important;
 }
 
-nav.menu.closed ul {
+nav.menu.closed .scroller {
     overflow: hidden;
 }
 
@@ -65,37 +81,38 @@ nav.menu button {
     background-color: rgba(255, 255, 255, 0.8);
 }
 
-nav.menu.open button {
-    margin: 20px 0;
+nav.menu button.scroll {
+    position: absolute;
+    width: 98%;
 }
 
-nav.menu.closed button {
-    margin: 0;
+nav.menu button.scroll:first-of-type {
+    top: 0px;
+}
+
+nav.menu button.scroll:last-of-type {
+    bottom: 0px;
 }
 
 nav.menu button:hover {
-    background-color: #fdfdfd;
+    background-color: rgba(250, 250, 250, 0.8);
 }
 
 nav.menu ul {
-    margin: 0px 0px 16px 0px;
     width: 100%;
 }
 
-nav.menu ul.level1:first-of-type {
-    margin-top: 70px;
-}
-
-nav.menu ul.level1:last-of-type {
-    margin-bottom: 30px;
+nav.menu ul.level1 {
+    position: relative;
+    overflow-y: scroll;
 }
 
 nav.menu ul li {
     margin: 14px;
 }
 
-nav.menu > ul.level1 > li {
-    padding-top: 16px;
+nav.menu ul.level1 > li {
+    padding: 5px 0px;
 }
 
 nav.breadcrumb {
@@ -133,14 +150,12 @@ nav.breadcrumb ul li {
     margin-right: 20px;
 }
 
-nav.menu.closed button::before,
+nav.menu.closed button.toggle::before,
 nav.breadcrumb ul li::before {
-    color: lightgray;
     content: '» ';
 }
 
-nav.menu.open button::before {
-    color: lightgray;
+nav.menu.open button.toggle::before {
     content: '«';
 }
 
