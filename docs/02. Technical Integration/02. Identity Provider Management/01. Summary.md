@@ -1,0 +1,13 @@
+# Summary
+
+The IdP Switch function is used to integrate / connect company idp's or switch back to catena-x shared idp usage.  
+<br>
+
+The integration of company idp's is suspected to be the most used scenario when considering the use of idp switch. Companies which want to use their own company authentication can connect their company idp with the catena-x shared idp by using user federation.  
+<br>
+
+In this scenario - authentication is delivered by the company idp and authorization is still managed inside keycloak.  
+<br>
+
+The biggest positive element on ownCompany idp usage is the comfort of the login, as well as the user credentials which are not shared with an operator.  
+<br>

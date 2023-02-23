@@ -1,0 +1,26 @@
+# FAQ
+
+#### Can I delete an user of another company?
+
+No, it is not possible to delete an user which is assigned to another company account.
+
+The person which is triggering the deletion needs to belong to the same company or it has to be the user itself which triggers the deletion for the own account.
+
+
+
+#### How can I delete an user account which is company IdP federated?
+
+In the scenario of federated company IdP user accounts, the user deletion will only be effective inside the Catena-X idp. The company IdP wont be effective on the company IdP; only the shadow user with the assigned roles inside Catena-X will get deleted.
+
+
+
+#### Can I revert a user deletion?
+
+No, user deletions can't get reverted.
+
+
+
+#### If my/a user has 2 idp connections, will the user deletion delete both idp connections?
+
+Yes, even with multiple idp connections, the user deletion will work as planned. The user access will get reverted and the user account details will get deleted.
+

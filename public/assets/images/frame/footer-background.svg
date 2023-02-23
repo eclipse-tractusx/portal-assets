@@ -1,0 +1,4 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 360">
+<defs><linearGradient id="g1" x1="1130.9" y1="-461" x2="1663.4" y2="426.4" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffb326"/><stop offset="1" stop-color="#ff782c"/></linearGradient></defs>
+<path style="fill:url(#g1)" d="m1270.5 31.8l0.3-0.1c56.4-10.7 112.8-21.4 169.2-31.7v360h-1440v-237.4q359.8 37.7 719.5-1.2c183.7-19.9 367.3-54.8 551-89.6z"/>
+</svg>

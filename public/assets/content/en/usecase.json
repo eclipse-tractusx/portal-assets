@@ -1,0 +1,156 @@
+{
+  "subNavigation": {
+    "link1Label": "Intro",
+    "link2Label": "Core Values",
+    "link3Label": "Details",
+    "link4Label": "Business Applications"
+  },
+  "traceability": {
+    "title": "Traceablity",
+    "description": "...as basis for building digital data chains and enabling data chain-focused use cases",
+    "sections": [
+      {
+        "title": "Introduction",
+        "description": "The aim of the use case traceability is to establish continuous data chains: from raw materials via components to the finished vehicle at the OEM or its recycling within the recycling company. Partners in the use case include manufacturers of components, automotive manufacturers as well as suppliers of materials and parts.",
+        "videoUrl": "https://www.youtube.com/embed/g-NVjP2srw4",
+        "id": "intro-id",
+        "backgroundColor": "#FFFFFF",
+        "template": "TextVideoSideBySide"
+      },
+      {
+        "title": "Core Values of Catena-X represented in Traceability",
+        "description": "",
+        "imageUrl": "traceability_core_values(en).png",
+        "backgroundColor": "#F9F9F9",
+        "id": "core-id",
+        "template": "TextImageCenterAligned"
+      },
+      {
+        "title": "How to contribute to Traceability and why?",
+        "description": "",
+        "imageUrl": "traceability_contribution(en).png",
+        "backgroundColor": "#FFFFFF",
+        "id": "contribution-id",
+        "template": "TextImageCenterAligned"
+      },
+      {
+        "title": "Brief explanation of most important terms",
+        "description": "",
+        "imageUrl": "traceability_terms(en).png",
+        "backgroundColor": "#F9F9F9",
+        "id": "context-id",
+        "template": "TextImageCenterAligned"
+      },
+      {
+        "title": "Traceability subdivides the data models for each life cycle phase",
+        "description": "",
+        "imageUrl": "traceability_datamodels(en).png",
+        "backgroundColor": "#FFFFFF",
+        "id": "details-id",
+        "template": "TextImageCenterAligned"
+      },
+      {
+        "title": "Details to the data exchange",
+        "description": "",
+        "imageUrl": "traceability_dataexchange(en).png",
+        "backgroundColor": "#F9F9F9",
+        "id": "details2-id",
+        "template": "TextImageCenterAligned"
+      },
+      {
+        "title": "",
+        "subTitles": [
+          "In this example, an “SME” produces components that have a part number (PRT-12345) and the batch (XX1235509). After manufacturing the parts, the SME creates a UUID for the produced batch via App A and automatically registers it in the Digital Twin Registry as a digital twin. The “Batch” aspect model is used for this purpose. On the digital level, a contract is concluded via the SME and the customer's EDC connectors to exchange this data. The physical components (e.g. sensors) are then sent to the 'customer'.",
+          "The 'customer' is the manufacturer of an assembly. He creates a UUID for his manufactured serialized item (item number 5A52429 and serial number 21B294301268) via App B and registers it as a digital twin using the 'SerialPartTypization' aspect model. The assembly relationship with the supplier's batch is established using the 'AssemblyPartRelation' aspect model. He scans the components of the 'SME' and the identified data is linked to the digital twin of its serialized component. On the digital level, a contract is concluded via the EDC connectors of the 'customer' and the 'OEM' to exchange this data. The physical component (e.g. transmission) is then sent to the 'OEM'.",
+          "During the assembly process, the OEM scans the parts to link the vehicle (VIN/VAN = Vehicle Identification Number) to the serialized part. The OEM can then find the digital twin of the component with the information about the serial number and item number and thus read out the digital twin via the UUID. He then creates a UUID for his manufactured vehicle and registers it in the Digital Twin Registry as a digital twin and establishes the assembly relationship with the installed part of the 'customer' using the 'AssemblyPartRelation' aspect model."
+          ],
+        "id": "details3-id",
+        "backgroundColor": "#f9f9f9",
+        "template": "TextCenterAlignedBody2"
+      },
+      {
+        "title": "Opportunities to participate in Use Case Traceability",
+        "description": "Based on individual company needs, traceability offers various ways to participate in the use case. You can decide for yourself in which role (e.g. data provider and/or data consumer) and to what extent you participate in the use case.",
+        "backgroundColor": "#FFFFFF",
+        "id": "setup-id",
+        "grid": 3,
+        "template": "TextCenterAlignedWithCardGrid",
+        "detailsWithImageRow1": [
+          {
+            "title": "Self/Local Setup",
+            "imageUrl": "teaser.png",
+            "description": "Individual and independent connection to traceability...",
+            "readMore": "",
+            "readMoreTitle": "Direct link (coming soon)",
+            "backgroundColor": "#f9f9f9",
+            "align": "center"
+          },
+          {
+            "title": "Minimal Setup",
+            "imageUrl": "teaser.png",
+            "description": "Use of web services to provide data for traceability..",
+            "readMore": "/appdetail/d0ea773a-8fa0-481b-9ae3-d0e9c22a8628",
+            "readMoreTitle": "Get Details",
+            "backgroundColor": "#f9f9f9",
+            "align": "center"
+          },
+          {
+            "title": "Complete Setup",
+            "imageUrl": "teaser.png",
+            "description": "Use of business applications with full traceability functions...",
+            "readMore": "",
+            "readMoreTitle": "Get Details",
+            "backgroundColor": "#f9f9f9",
+            "align": "center"
+          }
+        ]
+      },
+      {
+        "title": "Business Applications inside Traceability",
+        "description": "The traceability use case is strengthened by a number of business apps which help the user to visualize and easy access the treaceability chain. Below you can find an overview of all available apps. Use the direct link to open the app details page.",
+        "backgroundColor": "#FFFFFF",
+        "id": "business-id",
+        "grid": 4,
+        "template": "TextCenterAlignedWithCardGrid",
+        "detailsWithImageRow1": [
+          {
+            "title": "Trace X",
+            "imageUrl": "teaser.png",
+            "description": "Enables seamless traceability of parts across n.tier's supply chain - visualizes...",
+            "readMore": "/appdetail/ac1cf001-7fbc-1f2f-817f-bce0572c0007",
+            "readMoreTitle": "Get to the app",
+            "backgroundColor": "#f9f9f9",
+            "align": "center"
+          },
+          {
+            "title": "Smart MOM",
+            "imageUrl": "teaser.png",
+            "description": "Consolidates all production processes and systems to control manufacturing processes...",
+            "readMore": "/appdetail/5cf74ef8-e0b7-4984-a872-474828beb5d1",
+            "readMoreTitle": "Get to the app",
+            "backgroundColor": "#f9f9f9",
+            "align": "center"
+          },
+          {
+            "title": "SAP BN MT",
+            "imageUrl": "teaser.png",
+            "description": "is a solution for cross-company supply chain transparency and material traceability...",
+            "readMore": "/appdetail/5cf74ef8-e0b7-4984-a872-474828beb5d7",
+            "readMoreTitle": "Get to the app",
+            "backgroundColor": "#f9f9f9",
+            "align": "center"
+          },
+          {
+            "title": "Trusted Traceability",
+            "imageUrl": "teaser.png",
+            "description": "is a fully managed system (software-as-a-service) and enables the introduction of traceability...",
+            "readMore": "/appdetail/ac1cf001-7fbc-1f2f-817f-bce05748000d",
+            "readMoreTitle": "Get to the app",
+            "backgroundColor": "#f9f9f9",
+            "align": "center"
+          }
+        ]
+      }
+    ]
+  }
+}
