@@ -9,9 +9,7 @@
   "devDependencies": {
     "concurrently": "^7.6.0",
     "directory-tree": "^3.5.1",
-    "http-server": "^14.1.1",
-    "https-proxy-agent": "^5.0.1",
-    "proxy-agent": "^5.0.0"
+    "http-server": "^14.1.1"
   },
   "dependencies": {
     "zero-md": "^2.4.0"
