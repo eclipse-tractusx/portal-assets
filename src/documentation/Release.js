@@ -17,13 +17,27 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-export const Settings = {
-    DOCBASE: 'https://raw.githubusercontent.com/catenax-ng/tx-portal-assets',
-    SRCBASE: 'https://github.com/catenax-ng/tx-portal-assets',
-    DEFAULT_BRANCH: 'main',
-    DEFAULT_ROOT: 'docs',
+import { getJSON } from './https-proxy-get.js'
+import fs from 'fs'
+
+const Settings = {
+    BASE: 'https://api.github.com',
+    OWNER: 'catenax-ng',
+    REPO: 'tx-portal-assets',
 }
 
-export const Patterns = {
-    DISPLAY: /(^\d+[.-_]?\s+|_|\.md$)/g
-}
+const url = `${Settings.BASE}/repos/${Settings.OWNER}/${Settings.REPO}/git/refs/tags`;
+
+(async () => {
+    fs.writeFileSync(
+        './public/documentation/data/Releases.json',
+        JSON.stringify(
+            (await getJSON(url))
+                .map(item => item.ref)
+                .concat(process.argv.slice(2).map(arg => `refs/tags/${arg}`))
+                .reverse(),
+            null,
+            2
+        )
+    )
+})()
