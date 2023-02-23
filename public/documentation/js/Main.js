@@ -467,8 +467,8 @@ class Content extends Viewable {
         [...root.querySelectorAll('h1, h2, h3, h4, h5, h6')].forEach(this.replaceLink.bind(this))
         root.styleSheets[0].insertRule('h1:hover, h2:hover, h3:hover, h4:hover, h5:hover { text-decoration: underline; cursor: pointer; }')
         root.styleSheets[0].insertRule('.headline { position: relative; }')
-        root.styleSheets[0].insertRule('a.github { position: absolute; width: 20px; height: 20px; bottom: 15%; right: 0px; background-color: #888888; display: none; }');
-        root.styleSheets[0].insertRule('.markdown-body { margin-top: -24px; }');
+        root.styleSheets[0].insertRule('a.github { position: absolute; width: 20px; height: 20px; bottom: 15%; right: 0px; background-color: #888888; display: none; }')
+        root.styleSheets[0].insertRule('.markdown-body { margin-top: -24px; }')
     }
 
     renderMD(content) {
