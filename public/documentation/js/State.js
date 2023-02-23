@@ -86,7 +86,7 @@ class State {
             return
         this.refresh = false
         const content = this.getItem(selection)
-        NavTools.pushState({...content, hash})
+        NavTools.pushState({ ...content, hash })
         this.selection = content.path
         this.fireSelectionChanged()
         return this
@@ -117,10 +117,11 @@ class State {
     }
 
     setReleases(releases) {
-        this.releases = releases.map(item => {
-                item.name = item.ref.split('/').slice(-1)[0]
-                return item
-            })
+        this.releases = releases.sort().map(ref => ({
+            ref,
+            name: ref.split('/').slice(-1)[0]
+        }))
+        console.log(this.releases)
         this.fireReleasesChanged(this.releases)
         return this
     }

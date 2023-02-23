@@ -569,15 +569,17 @@ class App extends Viewable {
     loadReleases() {
         fetch('data/Releases.json')
             .then(response => response.json())
-            .then((releases) => state.setReleases([{ ref: `/${Settings.DEFAULT_BRANCH}` }].concat(releases.reverse())))
+            .then((releases) => state.setReleases(
+                Array.from(new Set([...[Settings.DEFAULT_BRANCH], ...releases])
+            )))
     }
 
     releasesChanged(releases) {
         state.setReleaseSelection(Settings.DEFAULT_BRANCH)
     }
 
-    releaseSelectionChanged(releaseSelection) {
-        fetch(`data/${releaseSelection}/${NavTools.getRoot()}.json`)
+    releaseSelectionChanged(releaseSelection) {        
+        fetch(`data/${releaseSelection.split('/').slice(-1)[0]}/${NavTools.getRoot()}.json`)
             .then(response => response.json())
             .then(state.setData.bind(state))
             .catch(() => { location.href = '.' })
