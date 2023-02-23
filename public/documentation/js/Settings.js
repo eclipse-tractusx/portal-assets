@@ -20,7 +20,7 @@
 export const Settings = {
     DOCBASE: 'https://raw.githubusercontent.com/catenax-ng/tx-portal-assets',
     SRCBASE: 'https://github.com/catenax-ng/tx-portal-assets',
-    DEFAULT_BRANCH: 'main',
+    DEFAULT_BRANCH: 'refs/tags/1.0.0',
     DEFAULT_ROOT: 'docs',
 }
 

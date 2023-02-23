@@ -41,6 +41,7 @@ nav.menu {
     display: flex;
     flex-direction: row;
     transition: width 0.1s;
+    min-height: 35vh;
 }
 
 nav.menu.open {
@@ -122,6 +123,7 @@ nav.breadcrumb {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 nav.menu ul.level1,
@@ -139,14 +141,19 @@ nav.menu ul.level2 {
 }
 
 nav.breadcrumb ul {
+    display: flex;
+    flex-direction: row;
     padding-inline-start: 0;
     margin-block-start: 0;
     margin-block-end: 0;
     list-style-type: none;
     margin-bottom: 30px;
     font-size: 12px;
-    display: flex;
-    flex-direction: row;
+    margin-top: 10px;
+}
+
+nav.breadcrumb a.github img {
+    margin-top: 10px;
 }
 
 nav.breadcrumb ul li {
@@ -199,15 +206,25 @@ article.content {
 }
 
 article.content.small {
-    padding: 40px 60px 60px 60px;
+    padding: 30px 60px 60px 60px;
     width: 800px;
     margin-left: 280px;
 }
 
 article.content.large {
-    padding: 40px 60px 60px 60px;
+    padding: 30px 60px 60px 60px;
     width: 1072px;
     margin-left: 20px;
+}
+
+article.content > div {
+    position: relative;
+}
+
+article.content .loader {
+    position: absolute;
+    top: 0px;
+    right: 0px;
 }
 
 ul.subchapter {

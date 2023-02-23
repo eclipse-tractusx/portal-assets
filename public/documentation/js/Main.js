@@ -124,14 +124,12 @@ class Search extends Viewable {
     }
 
     filter(e) {
-        //console.log(this.clazz, e)
         if (!e) {
             state.setSearch([])
             return this
         }
         const regex = new RegExp(`(${e.toLocaleLowerCase().replace(/[^a-z0-9]/g, ' ').trim().split(/\s+/).join('|')})`, 'ig')
         const count = (expr) => ((expr || '').match(regex) || []).length
-        // search in names
         const topics = Object.values(state.data.map)
             .filter(item => item.name.match(regex))
             .map(item => ({ ...item, matches: count(item.name) }))
@@ -232,7 +230,6 @@ class ReleaseSelection extends Viewable {
 
 }
 
-
 class Breadcrumb extends Viewable {
 
     constructor() {
@@ -254,6 +251,7 @@ class Breadcrumb extends Viewable {
     }
 
     selectionChanged(selection, content) {
+        clear(this.view)
         const list = [content]
         while (list[0].parent) {
             list.unshift(list[0].parent)
@@ -398,17 +396,33 @@ class Content extends Viewable {
         super()
         state.addMenuOpenListener(this)
         this.breadcrumb = new Breadcrumb()
-        this.view = N('article', null, { class: 'content small' })
-    }
-
-    selectionChanged(selection, content) {
-        return this.clear()
-            .append(this.breadcrumb.selectionChanged(selection, content))
-            .append(this.renderArticle(content))
+        this.markdown = N('script', ' ', { type: 'text/markdown' })
+        this.page = N('zero-md', this.markdown)
+        this.loader = N('div', '', { class: 'loader hidden' })
+        this.view = N('article', [
+            N('div', [
+                this.breadcrumb,
+                this.loader,
+            ]),
+            this.page,
+        ], { class: 'content small' })
     }
 
     menuOpenChanged(menuOpen) {
         this.view.className = menuOpen ? 'content small' : 'content large'
+        return this
+    }
+
+    selectionChanged(selection, content) {
+        this.breadcrumb.selectionChanged(selection, content)
+        return this.renderArticle(content)
+    }
+
+    replacePage(page) {
+        const parent = this.page.parentElement
+        parent.removeChild(this.page)
+        parent.appendChild(page)
+        this.page = page
         return this
     }
 
@@ -437,7 +451,7 @@ class Content extends Viewable {
     }
 
     replaceLinks() {
-        const root = this.zeromd.shadowRoot;
+        const root = this.page.shadowRoot;
         [...root.querySelectorAll('a')].forEach(link => addEvents(
             link,
             {
@@ -445,7 +459,6 @@ class Content extends Viewable {
                     e.preventDefault()
                     const path = decodeURI(link.href).replace(`${Settings.DOCBASE}/${state.releaseSelection}/`, '').replace(/\/$/, '')
                     e.target.href = `.?path=${path}`
-                    //console.log(link.href, path)
                     state.setSelection(path)
                 }
             }
@@ -459,17 +472,38 @@ class Content extends Viewable {
 
     renderMD(content) {
         this.content = content
-        this.zeromd = N('zero-md', null, { src: `${Settings.DOCBASE}/${state.releaseSelection}/${content.path}` })
-        this.checkLoadedCount = 0
+        const url = `${Settings.DOCBASE}/${state.releaseSelection}/${content.path}`
+        this.loader.classList.remove('hidden')
+        fetch(url)
+            .then(response => response.text())
+            .then(this.mdFromText.bind(this))
+        return this
+    }
+
+    mdFromText(text) {
+        this.replacePage(
+            N('zero-md', N('script', text, { type: 'text/markdown' }))
+        )
+        setTimeout(this.replaceLinks.bind(this), 100)
+        this.loader.classList.add('hidden')
+        return this
+    }
+
+    mdFromURL(url) {
+        this.replacePage(
+            N('zero-md', null, { src: url })
+        )
         // we don't get an onload event from zero-md so waiting one sec before replacing the links
-        // as a future improvement we might load the md separately and then initialize zero-md with the content
-        // this would also allow to show a loading icon which is currently difficult
-        this.checkLoadedTimer = setTimeout(this.replaceLinks.bind(this), 1000)
-        return this.zeromd
+        setTimeout(this.replaceLinks.bind(this), 1000)
+        return this
     }
 
     renderOverview(content) {
-        return N('ul', content.children.map((chapter) => N('li', new ChapterCard(chapter))), { class: 'subchapter' })
+        return this.replacePage(
+            N('ul', content.children.map((chapter) =>
+                N('li', new ChapterCard(chapter))
+            ), { class: 'subchapter' })
+        )
     }
 
     renderArticle(content) {
@@ -534,15 +568,17 @@ class App extends Viewable {
     loadReleases() {
         fetch('data/Releases.json')
             .then(response => response.json())
-            .then((releases) => state.setReleases([{ ref: `/${Settings.DEFAULT_BRANCH}` }].concat(releases.reverse())))
+            .then((releases) => state.setReleases(
+                Array.from(new Set([...[Settings.DEFAULT_BRANCH], ...releases])
+            )))
     }
 
     releasesChanged(releases) {
         state.setReleaseSelection(Settings.DEFAULT_BRANCH)
     }
 
-    releaseSelectionChanged(releaseSelection) {
-        fetch(`data/${releaseSelection}/${NavTools.getRoot()}.json`)
+    releaseSelectionChanged(releaseSelection) {        
+        fetch(`data/${releaseSelection.split('/').slice(-1)[0]}/${NavTools.getRoot()}.json`)
             .then(response => response.json())
             .then(state.setData.bind(state))
             .catch(() => { location.href = '.' })
