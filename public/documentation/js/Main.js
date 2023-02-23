@@ -436,7 +436,7 @@ class Content extends Viewable {
     }
 
     replaceLink(item) {
-        const newItem = N('div', null, { class: 'headline', style: { height: item.height } })
+        const newItem = N('div', null, { class: 'headline' })
         const link = this.renderLink(this.content, item.id)
         item.parentElement.insertBefore(newItem, item)
         item.parentElement.removeChild(item)
@@ -444,8 +444,7 @@ class Content extends Viewable {
         newItem.appendChild(link)
         newItem.onmouseover = () => link.style.display = 'block'
         newItem.onmouseout = () => link.style.display = 'none'
-        item.onclick = (e) => {
-            //e.preventDefault()
+        item.onclick = () => {
             history.replaceState({}, document.getElementsByTagName('title').content, location.href.split('#')[0] + (item.id ? '#' + item.id : ''))
             item.scrollIntoView()
         }
