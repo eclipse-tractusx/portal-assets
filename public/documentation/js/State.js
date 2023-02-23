@@ -121,7 +121,6 @@ class State {
             ref,
             name: ref.split('/').slice(-1)[0]
         }))
-        console.log(this.releases)
         this.fireReleasesChanged(this.releases)
         return this
     }
