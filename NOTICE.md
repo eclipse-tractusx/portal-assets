@@ -31,13 +31,13 @@ The project maintains the following source code repositories in the GitHub organ
 
 ## Third-party Content
 
-See DEPENDENCIES file.
-
 This project leverages the following third party content:
 
 * License: Open Font License 1.1
 * Licence Path: https://github.com/impallari/Libre-Franklin/blob/master/OFL.txt
 * Source URL: https://github.com/impallari/Libre-Franklin
+
+See DEPENDENCIES file.
 
 ## Cryptography
 
