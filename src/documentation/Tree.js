@@ -17,7 +17,8 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-const fs = require('fs')
+import fs from 'fs'
+import dirTree from 'directory-tree'
 
 class Transformer {
 
@@ -61,7 +62,6 @@ class MDHelper {
 class TreeHelper {
 
     static readDirTree(root) {
-        const dirTree = require('directory-tree')
         const tree = dirTree(root)
         //const tree = Transformer.tree2map({}, dirTree(root), undefined, 0, 0)
         return tree
