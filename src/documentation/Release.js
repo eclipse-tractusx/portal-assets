@@ -26,18 +26,19 @@ const Settings = {
     REPO: 'tx-portal-assets',
 }
 
-const url = `${Settings.BASE}/repos/${Settings.OWNER}/${Settings.REPO}/git/refs/tags`;
+const url = `${Settings.BASE}/repos/${Settings.OWNER}/${Settings.REPO}/git/refs/tags`
 
-(async () => {
-    fs.writeFileSync(
-        './public/documentation/data/Releases.json',
-        JSON.stringify(
-            (await getJSON(url))
-                .map(item => item.ref)
-                .concat(process.argv.slice(2).map(arg => `refs/tags/${arg}`))
-                .reverse(),
-            null,
-            2
-        )
-    )
-})()
+const saveLocal = (data) => fs.writeFileSync(
+    './public/documentation/data/Releases.json',
+    JSON.stringify(data
+        .map(item => item.ref)
+        .concat(process.argv.slice(2).map(arg => `refs/tags/${arg}`))
+        .reverse(),
+        null, 2)
+);
+
+//(async () => saveLocal(await getJSON(url)))()
+
+fetch(url)
+    .then((response) => response.json())
+    .then(saveLocal)
