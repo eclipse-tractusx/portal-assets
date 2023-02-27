@@ -43,7 +43,7 @@ jobs:
       - name: Install Dependencies
         run: yarn
 
-      - name: Build Library and Portal
+      - name: Build Application
         run: yarn build
 
       - name: Login to GitHub Container Registry

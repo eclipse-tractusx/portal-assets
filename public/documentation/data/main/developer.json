@@ -121,15 +121,6 @@
           "name": "03. Registration Approval",
           "children": [
             {
-              "path": "developer/01. Onboarding/03. Registration Approval/01. Summary.md",
-              "name": "01. Summary.md",
-              "chapter": [
-                "## Summary",
-                "## Functional Details",
-                "### Display Application Details"
-              ]
-            },
-            {
               "path": "developer/01. Onboarding/03. Registration Approval/02. View Company Application(s).md",
               "name": "02. View Company Application(s).md",
               "chapter": [
@@ -186,6 +177,15 @@
               "chapter": [
                 "## Decline Company Application",
                 "##### API Implementation"
+              ]
+            },
+            {
+              "path": "developer/01. Onboarding/03. Registration Approval/index.md",
+              "name": "index.md",
+              "chapter": [
+                "## Summary",
+                "## Functional Details",
+                "### Display Application Details"
               ]
             }
           ]
@@ -972,6 +972,13 @@
           "path": "developer/Technical Documentation/Identity & Access",
           "name": "Identity & Access",
           "children": [
+            {
+              "path": "developer/Technical Documentation/Identity & Access/00. External Identity Provider.md",
+              "name": "00. External Identity Provider.md",
+              "chapter": [
+                "## How does the external IdP connection work?"
+              ]
+            },
             {
               "path": "developer/Technical Documentation/Identity & Access/01. Introduction.md",
               "name": "01. Introduction.md",

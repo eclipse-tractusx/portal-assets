@@ -97,13 +97,6 @@
           "name": "03. Registration Approval",
           "children": [
             {
-              "path": "docs/01. Onboarding/03. Registration Approval/01. Summary .md",
-              "name": "01. Summary .md",
-              "chapter": [
-                "## Summary"
-              ]
-            },
-            {
               "path": "docs/01. Onboarding/03. Registration Approval/02. View Company Application(s).md",
               "name": "02. View Company Application(s).md",
               "chapter": [
@@ -116,6 +109,7 @@
               "name": "03. Registration Approval Process.md",
               "chapter": [
                 "## Registration Approval Flow",
+                "### Checklist Stepper",
                 "##### Details \"Manual Validation\"",
                 "###### Scenario: Approve",
                 "###### Scenario: Decline",
@@ -147,6 +141,13 @@
                 "## FAQ",
                 "### What happens if I decline an application?",
                 "### Can I as a registration company view my registration status?"
+              ]
+            },
+            {
+              "path": "docs/01. Onboarding/03. Registration Approval/index.md",
+              "name": "index.md",
+              "chapter": [
+                "## Summary"
               ]
             }
           ]
