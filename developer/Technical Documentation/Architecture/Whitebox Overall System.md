@@ -12,7 +12,7 @@
 ### Portal
 <br>
 Integration: Portal, Marketplace, Backend, Wallets, BPDM, SD Factory, AutoSetup, Discovery and more:
-<img width="600" alt="image" src="https://user-images.githubusercontent.com/94133633/209236749-3b0cafba-5a62-4d5e-b9ec-fe55f5a658df.png">
+<img width="900" alt="image" src="https://user-images.githubusercontent.com/94133633/221978498-e25bc47c-9d06-4c9d-90d3-8929ca66755a.png">
 <br>
 <br>
 
