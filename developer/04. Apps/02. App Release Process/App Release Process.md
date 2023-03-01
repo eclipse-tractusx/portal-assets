@@ -349,19 +349,103 @@ Description
 
 ##### Implementation Details
 
-to be added
+With submitting the app for marketplace publishing, the 
+* app status is getting updated to "IN_REVIEW"
+* CX Admin is informed (via notification) about the needed app release review
+* documents linked to the app are set to "LOCKED"
 
 <br>
 <br>
 
 ##### API Details
 
-###### #1 ...
+###### #1 Get App Details
 Description
 
 ```diff
-! endpoint
+! GET: /api/apps/appreleaseprocess/{appId}/appStatus
+```
+
+<br>
+
+    {
+      "title": "string",
+      "provider": "string",
+      "leadPictureId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "providerName": "string",
+      "useCase": [
+        "string"
+      ],
+      "descriptions": [
+        {
+          "languageCode": "string",
+          "longDescription": "string",
+          "shortDescription": "string"
+        }
+      ],
+      "agreements": [
+        {
+          "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+          "name": "string",
+          "consentStatus": "string"
+        }
+      ],
+      "supportedLanguageCodes": [
+        "string"
+      ],
+      "price": "string",
+      "images": [
+        "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+      ],
+      "providerUri": "string",
+      "contactEmail": "string",
+      "contactNumber": "string",
+      "documents": {
+        "additionalProp1": [
+          {
+            "documentId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+            "documentName": "string"
+          }
+        ],
+        "additionalProp2": [
+          {
+            "documentId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+            "documentName": "string"
+          }
+        ],
+        "additionalProp3": [
+          {
+            "documentId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+            "documentName": "string"
+          }
+        ]
+      },
+      "salesManagerId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "privacyPolicies": [
+        "COMPANY_DATA"
+      ]
+    }
+
+<br>
+<br>
+
+###### #2 Submit App for Marketrelease
+Description
+
+```diff
+! PUT /api/apps/appreleaseprocess/{appId}/submit
 ```
 
 <br>
 <br>
+
+###### #3 Download Document
+Description
+
+```diff
+! tbd
+```
+
+<br>
+<br>
+
