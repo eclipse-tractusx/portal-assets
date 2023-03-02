@@ -29,7 +29,7 @@ const createSelectLink = (item) => addEvents(
         item.level === 0 ? 'Home' : item.name.replace(Patterns.DISPLAY, ' '),
         {
             class: `${normalize(item.path)}${item.path === state.selection ? ' selected' : ''}`,
-            ... { href: `.?path=${item.path}` },
+            ... { href: `.?path=${encodeURIComponent(item.path)}` },
         }
     ),
     {
@@ -457,7 +457,9 @@ class Content extends Viewable {
             {
                 click: (e) => {
                     e.preventDefault()
-                    const path = decodeURI(link.href).replace(`${Settings.DOCBASE}/${state.releaseSelection}/`, '').replace(/\/$/, '')
+                    const path = decodeURI(link.href)
+                        .replace(`${Settings.DOCBASE}/${state.releaseSelection}/`, '')
+                        .replace(/\/$/, '')
                     e.target.href = `.?path=${path}`
                     state.setSelection(path)
                 }
@@ -480,11 +482,17 @@ class Content extends Viewable {
         return this
     }
 
+    filterText(text) {
+        const path = state.selection.split('/').map(encodeURIComponent).join('/')
+        return text.replaceAll('](.',`](${Settings.DOCBASE}/${state.releaseSelection}/${path}`)
+    }
+
     mdFromText(text) {
+        const filterText = this.filterText(text)
         this.replacePage(
-            N('zero-md', N('script', text, { type: 'text/markdown' }))
+            N('zero-md', N('script', filterText, { type: 'text/markdown' }))
         )
-        setTimeout(this.replaceLinks.bind(this), 100)
+        setTimeout(this.replaceLinks.bind(this), 1000)
         this.loader.classList.add('hidden')
         return this
     }
