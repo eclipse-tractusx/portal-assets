@@ -80,10 +80,7 @@ class State {
     }
 
     setSelection(selection, hash) {
-        console.log(this.clazz, 'setSelection', selection, hash)
-        if (selection) {
-            selection = selection.replace(/\/$/, '')
-        }
+        //console.log(this.clazz, 'setSelection', selection, hash)
         selection = (this.data.map && this.data.map.hasOwnProperty(selection)) ? selection : NavTools.getRoot()
         if (selection === this.selection && !this.refresh)
             return
