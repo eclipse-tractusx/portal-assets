@@ -103,7 +103,8 @@ export class NavTools {
 
     static pushState(item) {
         const url = new URL(location)
-        const path = url.searchParams.get('path')
+        const path = url.searchParams.get('path').replace(/\/$/,'')
+        console.log('path', path)
         if (path !== item.path) {
             //console.log('path', path, item.path)
             url.searchParams.set('path', item.path)
