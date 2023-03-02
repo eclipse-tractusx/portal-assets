@@ -11,21 +11,21 @@
       {
         "title": "Marketplace",
         "description": "The marketplace is structured into 2 different areaa - Apps and Services. Depending on your need you can access the marketplace and receive an overview of available apps/services of a wide range of providers.",
-        "imageUrl": "teaser.png",
+        "imagePath": "/images/content/teaser.png",
         "backgroundColor": "#DAE3EB",
         "id": "provider-id",
         "template": "TextImageSideBySideWithCardGrid",
         "detailsWithImageRow1": [
           {
             "title": "App Marketplace",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "The app marketplace offers business applications supporting your business in the daily live. Have a look into the marketplace and use filter options such as use case based views.",
             "readMore": "",
             "backgroundColor": "#F9F9F9"
           },
           {
             "title": "Service Marketplace",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "The service marketplace offers technical and consultancy support to enable you and your company to participate in the catena-x dataspace.",
             "readMore": "",
             "backgroundColor": "#F9F9F9"
@@ -57,14 +57,14 @@
       {
         "title": "Marketplace Subscriptions",
         "description": "Inside the app and service marketplace, subscriptions to avialable offers can get made. Find out more how this works by following the details below",
-        "imageUrl": "teaser.png",
+        "imagePath": "/images/content/teaser.png",
         "id": "operations-id",
         "backgroundColor": "#F9F9F9",
         "template": "TextImageSideBySideWithCardGrid",
         "detailsWithImageRow1": [
           {
             "title": "Subscription Authority",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "This are the details which I will still add",
             "readMore": "",
             "backgroundColor": "#FFFFFF",
@@ -72,7 +72,7 @@
           },
           {
             "title": "Subscription Flow",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "This are the details which I will still add",
             "readMore": "",
             "backgroundColor": "#FFFFFF",
@@ -106,21 +106,21 @@
       {
         "title": "Dataspace participants",
         "description": "Details regarding the dataspace ",
-        "imageUrl": "teaser.png",
+        "imagePath": "/images/content/teaser.png",
         "id": "participant-id",
         "backgroundColor": "#FFFFFF",
         "template": "TextImageSideBySideWithCardGrid",
         "detailsWithImageRow1": [
           {
             "title": "Simply lorem Ipsum Text",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
             "readMore": "",
             "backgroundColor": "#F9F9F9"
           },
           {
             "title": "Simply lorem Ipsum Text",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
             "readMore": "",
             "backgroundColor": "#F9F9F9"
@@ -156,21 +156,21 @@
       {
         "title": "Marketplace",
         "description": "The marketplace is structured into 2 different areaa - Apps and Services. Depending on your need you can access the marketplace and receive an overview of available apps/services of a wide range of providers.",
-        "imageUrl": "teaser.png",
+        "imagePath": "/images/content/teaser.png",
         "backgroundColor": "#DAE3EB",
         "template": "TextImageSideBySideWithCardGrid",
         "id": "provider-id",
         "detailsWithImageRow1": [
           {
             "title": "App Marketplace",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "The app marketplace offers business applications supporting your business in the daily live. Have a look into the marketplace and use filter options such as use case based views.",
             "readMore": "",
             "backgroundColor": "#F9F9F9"
           },
           {
             "title": "Service Marketplace",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "The service marketplace offers technical and consultancy support to enable you and your company to participate in the catena-x dataspace.",
             "readMore": "",
             "backgroundColor": "#F9F9F9"
@@ -202,14 +202,14 @@
       {
         "title": "Marketplace Subscriptions",
         "description": "Inside the app and service marketplace, subscriptions to avialable offers can get made. Find out more how this works by following the details below",
-        "imageUrl": "teaser.png",
+        "imagePath": "/images/content/teaser.png",
         "id": "operations-id",
         "template": "TextImageSideBySideWithCardGrid",
         "backgroundColor": "#F9F9F9",
         "detailsWithImageRow1": [
           {
             "title": "Subscription Authority",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "This are the details which I will still add",
             "readMore": "",
             "backgroundColor": "#FFFFFF",
@@ -217,7 +217,7 @@
           },
           {
             "title": "Subscription Flow",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "This are the details which I will still add",
             "readMore": "",
             "backgroundColor": "#FFFFFF",
@@ -251,21 +251,21 @@
       {
         "title": "Dataspace participants",
         "description": "Details regarding the dataspace ",
-        "imageUrl": "teaser.png",
+        "imagePath": "/images/content/teaser.png",
         "id": "participant-id",
         "template": "TextImageSideBySideWithCardGrid",
         "backgroundColor": "#FFFFFF",
         "detailsWithImageRow1": [
           {
             "title": "Simply lorem Ipsum Text",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
             "readMore": "",
             "backgroundColor": "#F9F9F9"
           },
           {
             "title": "Simply lorem Ipsum Text",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
             "readMore": "",
             "backgroundColor": "#F9F9F9"
@@ -301,14 +301,14 @@
       {
         "title": "Catena-X Marketplace",
         "description": "The CX marketplace(s) are separated between apps and services. Both the marketplaces offer customer oriented offers to enable the customer to participate inside the network as well as support the daily business by use case specific business applications.",
-        "imageUrl": "teaser.png",
+        "imagePath": "/images/content/teaser.png",
         "backgroundColor": "#FFFFFF",
         "id": "provider-id",
         "template": "TextImageSideBySideWithCardGrid",
         "detailsWithImageRow1": [
           {
             "title": "App Marketplace",
-            "imageUrl": "MarketplaceIntro.png",
+            "imagePath": "/images/content/MarketplaceIntro.png",
             "description": "The app marketplace offers use case driven business applications.",
             "readMore": "/appmarketplace",
             "readMoreTitle": "Get there...",
@@ -316,7 +316,7 @@
           },
           {
             "title": "Service Marketplace",
-            "imageUrl": "ServiceMarketplaceIntro.png",
+            "imagePath": "/images/content/ServiceMarketplaceIntro.png",
             "description": "Service offerings to enable CX members to participate in the dataspace.",
             "readMore": "/servicemarketplace",
             "readMoreTitle": "Get there...",
@@ -324,7 +324,7 @@
           },
           {
             "title": "more to come",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "Lorem Lipsum",
             "readMore": "",
             "readMoreTitle": "more to come",
@@ -357,14 +357,14 @@
       {
         "title": "Marketplace Subscriptions",
         "description": "Inside the app and service marketplace, subscriptions to avialable offers can get made. Find out more how this works by following the details below",
-        "imageUrl": "teaser.png",
+        "imagePath": "/images/content/teaser.png",
         "id": "operations-id",
         "backgroundColor": "#F9F9F9",
         "template": "TextImageSideBySideWithCardGrid",
         "detailsWithImageRow1": [
           {
             "title": "Subscription Authority",
-            "imageUrl": "circle-image.png",
+            "imagePath": "/images/content/circle-image.png",
             "description": "This are the details which I will still add",
             "readMore": "",
             "backgroundColor": "#FFFFFF",
@@ -372,7 +372,7 @@
           },
           {
             "title": "Subscription Flow",
-            "imageUrl": "circle-image.png",
+            "imagePath": "/images/content/circle-image.png",
             "description": "This are the details which I will still add",
             "readMore": "",
             "backgroundColor": "#FFFFFF",
@@ -406,21 +406,21 @@
       {
         "title": "Dataspace participants",
         "description": "Details regarding the dataspace ",
-        "imageUrl": "teaser.png",
+        "imagePath": "/images/content/teaser.png",
         "id": "participant-id",
         "backgroundColor": "#FFFFFF",
         "template": "TextImageSideBySideWithCardGrid",
         "detailsWithImageRow1": [
           {
             "title": "Simply lorem Ipsum Text",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
             "readMore": "",
             "backgroundColor": "#F9F9F9"
           },
           {
             "title": "Simply lorem Ipsum Text",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
             "readMore": "",
             "backgroundColor": "#F9F9F9"
@@ -456,21 +456,21 @@
       {
         "title": "Marketplace",
         "description": "The marketplace is structured into 2 different areaa - Apps and Services. Depending on your need you can access the marketplace and receive an overview of available apps/services of a wide range of providers.",
-        "imageUrl": "teaser.png",
+        "imagePath": "/images/content/teaser.png",
         "backgroundColor": "#DAE3EB",
         "id": "provider-id",
         "template": "TextImageSideBySideWithCardGrid",
         "detailsWithImageRow1": [
           {
             "title": "App Marketplace",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "The app marketplace offers business applications supporting your business in the daily live. Have a look into the marketplace and use filter options such as use case based views.",
             "readMore": "",
             "backgroundColor": "#F9F9F9"
           },
           {
             "title": "Service Marketplace",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "The service marketplace offers technical and consultancy support to enable you and your company to participate in the catena-x dataspace.",
             "readMore": "",
             "backgroundColor": "#F9F9F9"
@@ -502,14 +502,14 @@
       {
         "title": "Marketplace Subscriptions",
         "description": "Inside the app and service marketplace, subscriptions to avialable offers can get made. Find out more how this works by following the details below",
-        "imageUrl": "teaser.png",
+        "imagePath": "/images/content/teaser.png",
         "id": "operations-id",
         "template": "TextImageSideBySideWithCardGrid",
         "backgroundColor": "#F9F9F9",
         "detailsWithImageRow1": [
           {
             "title": "Subscription Authority",
-            "imageUrl": "circle-image.png",
+            "imagePath": "/images/content/circle-image.png",
             "description": "This are the details which I will still add",
             "readMore": "",
             "backgroundColor": "#FFFFFF",
@@ -517,7 +517,7 @@
           },
           {
             "title": "Subscription Flow",
-            "imageUrl": "circle-image.png",
+            "imagePath": "/images/content/circle-image.png",
             "description": "This are the details which I will still add",
             "readMore": "",
             "backgroundColor": "#FFFFFF",
@@ -550,21 +550,21 @@
       {
         "title": "Dataspace participants",
         "description": "Details regarding the dataspace ",
-        "imageUrl": "teaser.png",
+        "imagePath": "/images/content/teaser.png",
         "id": "participant-id",
         "template": "TextImageSideBySideWithCardGrid",
         "backgroundColor": "#FFFFFF",
         "detailsWithImageRow1": [
           {
             "title": "Simply lorem Ipsum Text",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
             "readMore": "",
             "backgroundColor": "#F9F9F9"
           },
           {
             "title": "Simply lorem Ipsum Text",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
             "readMore": "",
             "backgroundColor": "#F9F9F9"
