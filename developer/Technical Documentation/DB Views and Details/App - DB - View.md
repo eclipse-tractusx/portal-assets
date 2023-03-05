@@ -4,8 +4,8 @@
 
 #### App DB Connection
 
-<img width="800" alt="image" src="https://user-images.githubusercontent.com/94133633/217113666-7ef17e1f-3698-49bc-a4fa-59141366a530.png">
-
+<br>
+<img width="1684" alt="image" src="https://user-images.githubusercontent.com/94133633/222970951-6e813f26-fd44-4b8c-87ee-7c33050ae661.png">
 
 <br>
 <br>
