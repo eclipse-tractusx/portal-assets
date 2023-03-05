@@ -45,6 +45,27 @@ With the app release date future scenarios such as: release app before publishin
 app offers are aways use_case linked. 
 Table relation use_cases - 1:m - app_assigned_use_cases - m:1 - offers
 
+<br>
+<br>
 
+#### App Privacy Policy
+
+"Privacy Policy" information can get collected / stored for offers with type "APP".  
+<br>
+
+Related Endpoints:
+- POST: /api/apps/appreleaseprocess/createapp 
+- PUT: /api/apps/appreleaseprocess/{appId} 
+- GET: /api/apps/{appId}
+- GET: /api/apps/appreleaseprocess/{appId}/appStatus
+- GET: /api/apps/privacyPolicy
+<br>
+
+Privacy policy types / labels:
+* Company_Data
+* User_Data
+* Location
+* Browser_History
+* None
 
 
