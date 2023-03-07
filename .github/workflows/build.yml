@@ -66,7 +66,7 @@ jobs:
           file: .conf/Dockerfile
           push: true
           # build tag :main with commit-sha and latest
-          tags: ${{ steps.meta.outputs.tags }}_${{ env.COMMIT_SHA }}, ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.COMMIT_SHA }}, ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:main
           labels: ${{ steps.meta.outputs.labels }}
 
   auth-and-dispatch:
@@ -92,5 +92,5 @@ jobs:
             --url https://api.github.com/repos/catenax-ng/tx-portal-cd/actions/workflows/portal-assets-image-update.yml/dispatches \
             --header "authorization: Bearer $TOKEN" \
             --header "Accept: application/vnd.github.v3+json" \
-            --data '{"ref":"helm-environments", "inputs": { "new-image":"${{ github.ref_name }}_${{ env.COMMIT_SHA }}" }}' \
+            --data '{"ref":"helm-environments", "inputs": { "new-image":"${{ env.COMMIT_SHA }}" }}' \
             --fail
