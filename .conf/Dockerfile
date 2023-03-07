@@ -38,9 +38,9 @@ RUN find . -type f | cut -c 3- | sort > index.txt
 
 # Step 2
 FROM nginxinc/nginx-unprivileged:alpine
-# temp fix for CVE-2023-0286
+# temp fix for CVE-2023-23916
 USER root
-RUN apk upgrade --no-cache libssl3 libcrypto3
+RUN apk upgrade --no-cache curl libcurl
 COPY .conf/nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build-step /public/assets /usr/share/nginx/html/assets
 COPY --from=build-step /public/documentation /usr/share/nginx/html/documentation
