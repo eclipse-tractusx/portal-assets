@@ -411,25 +411,55 @@ Type: CONFORMITY_APPROVAL_BUSINESS_APPS
 
 #### Step 4 - Integration - Role Upload
 
-<image></image>
-  
-<text></text>
+<br>
 
+<p align="center">
+<img width="464" alt="image" src="https://user-images.githubusercontent.com/94133633/223825655-10abc8f9-815e-4bb2-9c4a-33347e763716.png">
+</p>
 
-##### Implementation Details
+The Role Upload is a mandatory app release process step where the app provider can upload a csv file (template attached) to load user roles and description.
+With uploading the csv via the dropzone, a preview section will display the respective roles to be uploaded.
 
-to be added
+<p align="center">
+<img width="464" alt="image" src="https://user-images.githubusercontent.com/94133633/223828948-02846247-2389-4d45-8d93-95c71dba4e01.png">
+</p>
+ 
+With approving the upload with the button "Create App Roles" the roles are stored in the portal DB. Keycloak is untouched, since role creation in keycloak will only be relevant if the app instance/client is getting created.
 
 <br>
 <br>
 
 ##### API Details
 
-###### #1 ...
-Description
+###### #1 Upload Roles
 
 ```diff
-! endpoint
+! POST /api/apps/appreleaseprocess/{appId}/role
+```
+
+<br>
+
+Request Body
+
+    [
+      {
+        "role": "string",
+        "descriptions": [
+          {
+            "languageCode": "string",
+            "description": "string"
+          }
+        ]
+      }
+    ]
+
+<br>
+<br>
+
+###### #2 Delete Roles
+
+```diff
+! DELETE: /api/apps/appreleaseprocess/{appId}/role/{roleId}
 ```
 
 <br>
@@ -437,26 +467,11 @@ Description
 
 #### Step 5 - Beta Test Runs
 
-<image></image>
+<img width="636" alt="image" src="https://user-images.githubusercontent.com/94133633/223830906-9f682f43-bd7d-4579-881b-53694d7d8611.png">
   
-<text></text>
-
-
-##### Implementation Details
-
-to be added
-
-<br>
 <br>
 
-##### API Details
-
-###### #1 ...
-Description
-
-```diff
-! endpoint
-```
+Only a preview for now
 
 <br>
 <br>
