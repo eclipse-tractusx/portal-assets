@@ -107,7 +107,40 @@ Supported formats: JPEG and PNG
 <br>
 <br>
 
-###### #5 Create App
+###### #5 DELETE Image
+In case the user identifiers that a wrong image is loaded or the image doesnt fit/has changed; the DELETE endpoint is used to delete doucments linked to the app.
+Important: the deletion is not reversable - since the app is still under DRAFT, all app related details will get deleted immediately.
+
+```diff
+! Delete: /api/apps/appreleaseprocess/documents/{documentId}
+```
+
+<br>
+
+Validations:
+
+* first, check if the user requesting the document deletion belongs to the same company as the user who has initially uploaded the document (acting user company relation needed + the user which is stored in the documents table for the respective document_if as company_user_id
+* afterwards; check if the document is assigned to an app (via table offer_assigned_documents)
+  * if yes proceed
+  * if no, error "document not found"
+* next check if the app is in status "CREATED" 
+  * if yes proceed
+  * if no, error "app is locked"
+* check if the document_type is any of the following APP_IMAGE; APP_CONTRACT, ADDITIONAL_DETAILS, APP_LEADIMAGE, APP_TECHNICAL_INFORMATION
+  * if yes, proceed
+  * if no; error "incorrect document type - not supported for apps"
+* validate if the document is unlocked
+  * if yes; proceed
+  * if no; error  "document is locked"
+ 
+
+Deletion Flow (if all validations have been successful):
+* delete the document (including the relation / link in table offer_assigned_documents)
+
+<br>
+<br>
+
+###### #6 Create App
 Created a new app for the current active app provider
 
 ```diff
@@ -206,12 +239,35 @@ Description
 <br>
 
 
-###### #2 ...
-Description
+###### #2 DELETE Image/Documents
+In case the user identifiers that a wrong image is loaded or the image doesnt fit/has changed; the DELETE endpoint is used to delete doucments linked to the app.
+Important: the deletion is not reversable - since the app is still under DRAFT, all app related details will get deleted immediately.
 
 ```diff
-! endpoint
+! Delete: /api/apps/appreleaseprocess/documents/{documentId}
 ```
+
+<br>
+
+Validations:
+
+* first, check if the user requesting the document deletion belongs to the same company as the user who has initially uploaded the document (acting user company relation needed + the user which is stored in the documents table for the respective document_if as company_user_id
+* afterwards; check if the document is assigned to an app (via table offer_assigned_documents)
+  * if yes proceed
+  * if no, error "document not found"
+* next check if the app is in status "CREATED" 
+  * if yes proceed
+  * if no, error "app is locked"
+* check if the document_type is any of the following APP_IMAGE; APP_CONTRACT, ADDITIONAL_DETAILS, APP_LEADIMAGE, APP_TECHNICAL_INFORMATION
+  * if yes, proceed
+  * if no; error "incorrect document type - not supported for apps"
+* validate if the document is unlocked
+  * if yes; proceed
+  * if no; error  "document is locked"
+ 
+
+Deletion Flow (if all validations have been successful):
+* delete the document (including the relation / link in table offer_assigned_documents)
 
 <br>
 <br>
