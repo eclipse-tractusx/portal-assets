@@ -252,11 +252,11 @@ Endpoint exception handling:
 >* Short Description (de) - minlength: 10, maxlength: 255; pattern
 > * a-zA-ZÀ-ÿ0-9 !?@&#'"()_-=/*.,;:
 > 
->* Use Case/Category - Dropdown element (see also https://portal.dev.demo.catena-x.net/_storybook/?path=/story/form--multi-select-list) - pattern:
+>* Use Case/Category - Dropdown element - pattern:
 > * A-Z
 > * a-z
 > 
->* App Language - Multi Select List (see also https://portal.dev.demo.catena-x.net/_storybook/?path=/story/form--multi-select-list) - pattern:
+>* App Language - Multi Select List - pattern:
 > * A-Z
 > * a-z
 > * space
@@ -269,7 +269,7 @@ Endpoint exception handling:
 > * €
 > * space
 > 
->* App Icon/Image - dropzone (see also https://portal.dev.demo.catena-x.net/_storybook/?path=/story/dropzone–dropzone)
+>* App Icon/Image - dropzone
 > * only png und jpeg allowed
 
 <br>
