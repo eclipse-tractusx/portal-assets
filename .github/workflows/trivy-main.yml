@@ -24,7 +24,7 @@ name: "Trivy Main"
 
 on:
   push:
-  # branches: [ main ]
+    branches: [ main ]
   # pull_request:
   # The branches below must be a subset of the branches above
   # paths-ignore:
