@@ -22,8 +22,8 @@ name: Veracode
 
 # run on manual trigger or once a week
 on:
-  push:
-    branches: [main]
+  # push:
+  #   branches: [main]
   workflow_dispatch:
   schedule:
     - cron: "0 0 * * 0"
