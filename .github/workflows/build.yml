@@ -43,6 +43,9 @@ jobs:
       - name: Install Dependencies
         run: yarn
 
+      - name: Create metadata for branch main
+        run: yarn build:release
+
       - name: Build Application
         run: yarn build
 

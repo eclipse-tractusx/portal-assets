@@ -15,9 +15,8 @@
     "zero-md": "^2.4.0"
   },
   "scripts": {
-    "build:docs": "node src/documentation/Tree.js",
-    "build:tag": "yarn build:docs && ./scripts/create-tag.sh ${1}",
-    "build": "yarn build:tag && mkdir -p ./public/documentation/js/lib && cp -R ./node_modules/zero-md/dist/zero-md.min* ./public/documentation/js/lib/",
+    "build:release": "node src/documentation/Release.js ${1}",
+    "build": "mkdir -p ./public/documentation/js/lib && cp -R ./node_modules/zero-md/dist/zero-md.min* ./public/documentation/js/lib/",
     "build:sources": "zip -r portal-assets.zip src package.json yarn.lock -x '*.stories.*' -x '*.test.*' -x '*.ttf' -x '*.svg' -x '*.png'",
     "start": "yarn run open",
     "open": "concurrently \"http-server -a localhost -p 3000\" \"open http://localhost:3000/\""
