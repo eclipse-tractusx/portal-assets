@@ -1,4 +1,4 @@
-# Summary
+## Summary
 
 The "App Release Publishing Process" is accessible via the "App Release Process" as well as the "App Management".  
 <br>
@@ -7,7 +7,7 @@ The App Provider has access to both of the start screens to trigger a new app fo
 The app publishing process includes the submission of relevant app details, adding app images, documents as well as testing and technical connection (where suitable).  
 
 
-# Implementation
+## Implementation
 
 #### Trigger the Publishing Process
 
@@ -65,6 +65,22 @@ Get language api endpoint is used to provide the user a dropdown function in whi
 ```
 
 <br>
+
+Response Body
+   
+     [
+      {
+       "languageShortName": "string",
+       "languageLongNames": {
+         "de": "string",
+         "en": "string"
+       }
+      }
+     ]
+   
+
+
+<br>
 <br>
 
 ###### #2 Get Use Cases
@@ -77,6 +93,19 @@ Get use cases api endpoint is used to provide the user a dropdown function in wh
 ```
 
 <br>
+
+Response Body
+
+    [
+     {
+       "useCaseId": "uuid",
+       "name": "string",
+       "shortname": "string"
+     }
+    ]
+
+
+<br>
 <br>
 
 ###### #3 Get Sales Manager
@@ -85,6 +114,18 @@ Get possible sales manager (under my company) which I can add as Sales Manager o
 ```diff
 ! GET /api/apps/appreleaseprocess/ownCompany/salesManager
 ```
+
+<br>
+
+Response Body
+
+    [
+     {
+       "userId": "uuid",
+       "firstName": "string",
+       "lastName": "string"
+     }
+    ]
 
 <br>
 <br>
@@ -147,14 +188,41 @@ Created a new app for the current active app provider
 ! POST /api/apps/createapp
 ```
 
+<br>
+
+Request Body
+
+     {
+       "title": "string",
+       "provider": "string",
+       "salesManagerId": "uuid",
+       "useCaseIds": [
+         "uuid"
+       ],
+       "descriptions": [
+         {
+           "languageCode": "alpha2code",
+           "longDescription": "string",
+           "shortDescription": "string"
+         }
+       ],
+       "supportedLanguageCodes": [
+         "string"
+       ],
+       "price": "string",
+       "privacyPolicies": [
+         e.g. "COMPANY_DATA"
+       ]
+     }
+
+<br>
+
 Endpoint exception handling:
 
-....more to add....
- SalesManaer
-can be NULL
-validate if the SalesManager uuid is a valid uuid of an user with the role "SalesManager"
-validation is needed if the SalesManager belongs to the same company as the acting user 
-
+* SalesManager can be NULL
+* validate if the SalesManager uuid is a valid uuid of an user with the role "SalesManager"
+* validation is needed if the SalesManager belongs to the same company as the acting user 
+* PrivacyPolicies must be one of the allowed values as per the static data table
 
 <br>
 <br>
@@ -184,11 +252,11 @@ validation is needed if the SalesManager belongs to the same company as the acti
 >* Short Description (de) - minlength: 10, maxlength: 255; pattern
 > * a-zA-ZÀ-ÿ0-9 !?@&#'"()_-=/*.,;:
 > 
->* Use Case/Category - Dropdown element (see also https://portal.dev.demo.catena-x.net/_storybook/?path=/story/form--multi-select-list) - pattern:
+>* Use Case/Category - Dropdown element - pattern:
 > * A-Z
 > * a-z
 > 
->* App Language - Multi Select List (see also https://portal.dev.demo.catena-x.net/_storybook/?path=/story/form--multi-select-list) - pattern:
+>* App Language - Multi Select List - pattern:
 > * A-Z
 > * a-z
 > * space
@@ -201,7 +269,7 @@ validation is needed if the SalesManager belongs to the same company as the acti
 > * €
 > * space
 > 
->* App Icon/Image - dropzone (see also https://portal.dev.demo.catena-x.net/_storybook/?path=/story/dropzone–dropzone)
+>* App Icon/Image - dropzone
 > * only png und jpeg allowed
 
 <br>
@@ -228,12 +296,43 @@ to be added
 
 ##### API Details
 
-###### #1 ...
+###### #1 Update App Details
 Description
 
 ```diff
-! endpoint
+! PUT /api/apps/appreleaseprocess/{appId}
 ```
+
+<br>
+
+Request Body
+
+    {
+      "title": "string",
+      "provider": "string",
+      "salesManagerId": "uuid",
+      "useCaseIds": [
+        "uuid"
+      ],
+      "descriptions": [
+        {
+          "languageCode": "alpha2code",
+          "longDescription": "string",
+          "shortDescription": "string"
+        }
+      ],
+      "supportedLanguageCodes": [
+        "string"
+      ],
+      "price": "string",
+      "privacyPolicies": [
+        e.g. "COMPANY_DATA"
+      ]
+    }
+
+<br>
+
+Please note: if a value is send empty, the existing possible saved value will get overwritten with an empty/NULL value.
 
 <br>
 <br>
@@ -272,100 +371,95 @@ Deletion Flow (if all validations have been successful):
 <br>
 <br>
 
-
-###### #3 ...
-Description
-
-```diff
-! endpoint
-```
-
-<br>
-<br>
-
->Input Validations
->
->* LongDescription (en) - maxlength: 2000; pattern:
-> * a-zA-Z0-9 !?@&#'"()[]_-+=<>/*.,;:
-> 
->* LongDescription (de) - maxlength: 2000; pattern:
-> * a-zA-ZÀ-ÿ0-9 !?@&#'"()[]_-+=<>/*.,;:
->* Image
-> * only png and jpeg are allowed
->* Provider Homepage
-> * A-Z
-> * a-z
-> * .
-> * :
-> * @
-> * 0-9
-> * !
-> * &
->* Email Contact
-> * A-Z
-> * a-z
-> * .
-> * :
-> * @
-> * 0-9
-> * !
-> * &
->* Phone Contact
-> * +
-> * (
-> * )
-> * 0-9
-
-<br>
-<br>
-
 #### Step 3 - Terms & Conditions / Consent
 
-<image></image>
-  
-<text></text>
-
-
-##### Implementation Details
-
-to be added
+<img width="576" alt="image" src="https://user-images.githubusercontent.com/94133633/223786562-6cc80a68-5299-4708-bc1d-1899dcf3cd23.png">
 
 <br>
-<br>
 
-##### API Details
-
-###### #1 ...
-Description
+###### #1 Retrieve Terms & Conditions
+Terms and Conditions are fetched via the endpoint 
 
 ```diff
-! endpoint
+! GET: /api/apps/appreleaseprocess/agreementData
 ```
 
 <br>
+
+Response Body
+
+    [
+      {
+        "agreementId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "name": "string",
+        "documentId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+      }
+    ]
+
+
+###### #2 Upload document
+The user has to upload the app conformity document.
+
+```diff
+! PUT: /api/apps/appreleaseprocess/updateappdoc/{appId}/documentType/{documentTypeId}/documents
+```
+
+Type: CONFORMITY_APPROVAL_BUSINESS_APPS
+
+<br>
 <br>
 
-#### Step 4 - Tenant Concept and Integration
+#### Step 4 - Integration - Role Upload
 
-<image></image>
-  
-<text></text>
+<br>
 
+<p align="center">
+<img width="464" alt="image" src="https://user-images.githubusercontent.com/94133633/223825655-10abc8f9-815e-4bb2-9c4a-33347e763716.png">
+</p>
 
-##### Implementation Details
+The Role Upload is a mandatory app release process step where the app provider can upload a csv file (template attached) to load user roles and description.
+With uploading the csv via the dropzone, a preview section will display the respective roles to be uploaded.
 
-to be added
+<p align="center">
+<img width="464" alt="image" src="https://user-images.githubusercontent.com/94133633/223828948-02846247-2389-4d45-8d93-95c71dba4e01.png">
+</p>
+ 
+With approving the upload with the button "Create App Roles" the roles are stored in the portal DB. Keycloak is untouched, since role creation in keycloak will only be relevant if the app instance/client is getting created.
 
 <br>
 <br>
 
 ##### API Details
 
-###### #1 ...
-Description
+###### #1 Upload Roles
 
 ```diff
-! endpoint
+! POST /api/apps/appreleaseprocess/{appId}/role
+```
+
+<br>
+
+Request Body
+
+    [
+      {
+        "role": "string",
+        "descriptions": [
+          {
+            "languageCode": "string",
+            "description": "string"
+          }
+        ]
+      }
+    ]
+
+<br>
+<br>
+
+###### #2 Delete Roles
+
+```diff
+! DELETE: /api/apps/appreleaseprocess/{appId}/role/{roleId}
 ```
 
 <br>
@@ -373,26 +467,11 @@ Description
 
 #### Step 5 - Beta Test Runs
 
-<image></image>
+<img width="636" alt="image" src="https://user-images.githubusercontent.com/94133633/223830906-9f682f43-bd7d-4579-881b-53694d7d8611.png">
   
-<text></text>
-
-
-##### Implementation Details
-
-to be added
-
-<br>
 <br>
 
-##### API Details
-
-###### #1 ...
-Description
-
-```diff
-! endpoint
-```
+Only a preview for now
 
 <br>
 <br>
@@ -478,7 +557,7 @@ Description
       },
       "salesManagerId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
       "privacyPolicies": [
-        "COMPANY_DATA"
+        e.g. "COMPANY_DATA"
       ]
     }
 
