@@ -575,12 +575,12 @@ class App extends Viewable {
         fetch('data/Releases.json')
             .then(response => response.json())
             .then((releases) => state.setReleases(
-                Array.from(new Set([...[Settings.DEFAULT_BRANCH], ...releases])
-            )))
+                Array.from(new Set(releases))
+            ))
     }
 
     releasesChanged(releases) {
-        state.setReleaseSelection(Settings.DEFAULT_BRANCH)
+        state.setReleaseSelection(releases[0].name)
     }
 
     releaseSelectionChanged(releaseSelection) {        
