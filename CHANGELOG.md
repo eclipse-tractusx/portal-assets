@@ -1,5 +1,37 @@
 ## Unreleased
 
+## 1.1.0
+
+### Change
+* Developer 
+  * app release process docu updated
+  * roles & rights matrix updated
+  * registration flow documentation updated with new data fields
+  * identity & access user management docu enhanced
+  * updated arc42 whitebox view
+* User Docu 
+  * technical user creation updated
+  * registration flow documentation updated with new data fields
+  * connector registration doucmentation enhanced
+
+### Feature
+* User Docu
+  * service release process added
+* Developer 
+  * db data layer concept added
+  * app deletion docu added
+  * added db schema views
+  * registration error handling .md added
+  * external identitiy provider handling .md added
+* Added new content folder for static template images (moved from portal to asset repo)
+
+### Technical Support
+* fix(cve-2023-23916): add package upgrade as temp fix 
+* md file interlinking handling updated for help web page
+
+### Bugfix
+n/a
+
 ## 1.0.0-RC8
 
 ### Change
