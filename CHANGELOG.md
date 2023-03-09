@@ -12,7 +12,7 @@
 * User Docu 
   * technical user creation updated
   * registration flow documentation updated with new data fields
-  * connector registration doucmentation enhanced
+  * connector registration documentation enhanced
 
 ### Feature
 * User Docu
@@ -22,11 +22,11 @@
   * app deletion docu added
   * added db schema views
   * registration error handling .md added
-  * external identitiy provider handling .md added
+  * external identity provider handling .md added
 * Added new content folder for static template images (moved from portal to asset repo)
 
 ### Technical Support
-* fix(cve-2023-23916): add package upgrade as temp fix 
+* Added temp fix for CVE-2023-23916
 * md file interlinking handling updated for help web page
 
 ### Bugfix
