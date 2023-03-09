@@ -188,7 +188,7 @@ yarn licenses v1.5.1
    │  ├─ URL: https://github.com/broofa/node-mime
    │  ├─ VendorName: Robert Kieffer
    │  └─ VendorUrl: http://github.com/broofa
-   ├─ minimist@1.2.7
+   ├─ minimist@1.2.8
    │  ├─ URL: git://github.com/minimistjs/minimist.git
    │  ├─ VendorName: James Halliday
    │  └─ VendorUrl: https://github.com/minimistjs/minimist
@@ -290,7 +290,7 @@ yarn licenses v1.5.1
    │  ├─ URL: https://github.com/chalk/wrap-ansi.git
    │  ├─ VendorName: Sindre Sorhus
    │  └─ VendorUrl: https://sindresorhus.com
-   └─ yargs@17.6.2
+   └─ yargs@17.7.1
       ├─ URL: https://github.com/yargs/yargs.git
       └─ VendorUrl: https://yargs.js.org/
-Done in 0.23s.
+Done in 0.42s.
