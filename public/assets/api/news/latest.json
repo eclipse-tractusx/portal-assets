@@ -1,9 +1,9 @@
 [
   {
     "id": "1",
-    "title": "EDC 0.3.0 Major Verison",
+    "title": "EDC 0.3.0 Major Version",
     "subtitle": "Catena-X",
-    "description": "With March 2023 - the new EDC Version 0.3.x will be available and used for any upcoming 3.1 e2e tests",
+    "description": "With March 2023 - the new EDC Version 0.3.x will be available and is to be used for upcoming 3.1 e2e tests",
     "readMoreText": "Get Change Details",
     "readMoreLink": "https://github.com/catenax-ng/product-edc/blob/develop/CHANGELOG.md#030---2023-02-20",
     "image": {
@@ -13,7 +13,7 @@
   },
   {
     "id": "2",
-    "title": "Test Release 3.1 Starting 03rd of April",
+    "title": "Test of Release 3.1 starting on 03rd of April",
     "subtitle": "Catena-X",
     "description": "Next round of e2e Test is starting soon. Contact the Test Management to get part of it",
     "readMoreText": "",
