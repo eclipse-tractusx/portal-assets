@@ -480,9 +480,15 @@ class Content extends Viewable {
         return this
     }
 
+    filterText(text) {
+        const path = state.selection.split('/').map(encodeURIComponent).join('/')
+        return text.replaceAll('](.',`](${Settings.DOCBASE}/${state.releaseSelection}/${path}`)
+    }
+
     mdFromText(text) {
+        const filterText = this.filterText(text)
         this.replacePage(
-            N('zero-md', N('script', text, { type: 'text/markdown' }))
+            N('zero-md', N('script', filterText, { type: 'text/markdown' }))
         )
         setTimeout(this.replaceLinks.bind(this), 100)
         this.loader.classList.add('hidden')
@@ -569,12 +575,12 @@ class App extends Viewable {
         fetch('data/Releases.json')
             .then(response => response.json())
             .then((releases) => state.setReleases(
-                Array.from(new Set([...[Settings.DEFAULT_BRANCH], ...releases])
-            )))
+                Array.from(new Set(releases))
+            ))
     }
 
     releasesChanged(releases) {
-        state.setReleaseSelection(Settings.DEFAULT_BRANCH)
+        state.setReleaseSelection(releases[0].name)
     }
 
     releaseSelectionChanged(releaseSelection) {        

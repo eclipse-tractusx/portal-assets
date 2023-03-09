@@ -6,7 +6,7 @@
     "link4Label": "Business Applications"
   },
   "traceability": {
-    "title": "Traceablity",
+    "title": "Traceability",
     "description": "...as basis for building digital data chains and enabling data chain-focused use cases",
     "sections": [
       {
@@ -20,7 +20,7 @@
       {
         "title": "Core Values of Catena-X represented in Traceability",
         "description": "",
-        "imageUrl": "traceability_core_values(en).png",
+        "imagePath": "/images/content/traceability_core_values(en).png",
         "backgroundColor": "#F9F9F9",
         "id": "core-id",
         "template": "TextImageCenterAligned"
@@ -28,7 +28,7 @@
       {
         "title": "How to contribute to Traceability and why?",
         "description": "",
-        "imageUrl": "traceability_contribution(en).png",
+        "imagePath": "/images/content/traceability_contribution(en).png",
         "backgroundColor": "#FFFFFF",
         "id": "contribution-id",
         "template": "TextImageCenterAligned"
@@ -36,7 +36,7 @@
       {
         "title": "Brief explanation of most important terms",
         "description": "",
-        "imageUrl": "traceability_terms(en).png",
+        "imagePath": "/images/content/traceability_terms(en).png",
         "backgroundColor": "#F9F9F9",
         "id": "context-id",
         "template": "TextImageCenterAligned"
@@ -44,7 +44,7 @@
       {
         "title": "Traceability subdivides the data models for each life cycle phase",
         "description": "",
-        "imageUrl": "traceability_datamodels(en).png",
+        "imagePath": "/images/content/traceability_datamodels(en).png",
         "backgroundColor": "#FFFFFF",
         "id": "details-id",
         "template": "TextImageCenterAligned"
@@ -52,7 +52,7 @@
       {
         "title": "Details to the data exchange",
         "description": "",
-        "imageUrl": "traceability_dataexchange(en).png",
+        "imagePath": "/images/content/traceability_dataexchange(en).png",
         "backgroundColor": "#F9F9F9",
         "id": "details2-id",
         "template": "TextImageCenterAligned"
@@ -78,7 +78,7 @@
         "detailsWithImageRow1": [
           {
             "title": "Self/Local Setup",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "Individual and independent connection to traceability...",
             "readMore": "",
             "readMoreTitle": "Direct link (coming soon)",
@@ -87,7 +87,7 @@
           },
           {
             "title": "Minimal Setup",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "Use of web services to provide data for traceability..",
             "readMore": "/appdetail/d0ea773a-8fa0-481b-9ae3-d0e9c22a8628",
             "readMoreTitle": "Get Details",
@@ -96,7 +96,7 @@
           },
           {
             "title": "Complete Setup",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "Use of business applications with full traceability functions...",
             "readMore": "",
             "readMoreTitle": "Get Details",
@@ -115,7 +115,7 @@
         "detailsWithImageRow1": [
           {
             "title": "Trace X",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "Enables seamless traceability of parts across n.tier's supply chain - visualizes...",
             "readMore": "/appdetail/ac1cf001-7fbc-1f2f-817f-bce0572c0007",
             "readMoreTitle": "Get to the app",
@@ -124,7 +124,7 @@
           },
           {
             "title": "Smart MOM",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "Consolidates all production processes and systems to control manufacturing processes...",
             "readMore": "/appdetail/5cf74ef8-e0b7-4984-a872-474828beb5d1",
             "readMoreTitle": "Get to the app",
@@ -133,7 +133,7 @@
           },
           {
             "title": "SAP BN MT",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "is a solution for cross-company supply chain transparency and material traceability...",
             "readMore": "/appdetail/5cf74ef8-e0b7-4984-a872-474828beb5d7",
             "readMoreTitle": "Get to the app",
@@ -142,7 +142,7 @@
           },
           {
             "title": "Trusted Traceability",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "is a fully managed system (software-as-a-service) and enables the introduction of traceability...",
             "readMore": "/appdetail/ac1cf001-7fbc-1f2f-817f-bce05748000d",
             "readMoreTitle": "Get to the app",

@@ -17,7 +17,8 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-const fs = require('fs')
+import fs from 'fs'
+import dirTree from 'directory-tree'
 
 class Transformer {
 
@@ -61,7 +62,6 @@ class MDHelper {
 class TreeHelper {
 
     static readDirTree(root) {
-        const dirTree = require('directory-tree')
         const tree = dirTree(root)
         //const tree = Transformer.tree2map({}, dirTree(root), undefined, 0, 0)
         return tree
@@ -69,22 +69,72 @@ class TreeHelper {
 
 }
 
-const DOCS = {
-    docs: 'Catena-X Help Desk',
-    developer: 'Catena-X Developer Documentation',
+const createReleaseSelection = (version) => {
+
+    const Settings = {
+        BASE: 'https://api.github.com',
+        OWNER: 'catenax-ng',
+        REPO: 'tx-portal-assets',
+    }
+
+    const url = `${Settings.BASE}/repos/${Settings.OWNER}/${Settings.REPO}/git/refs/tags`
+
+    const writeReleases = (releases) => fs.writeFileSync(
+        './public/documentation/data/Releases.json',
+        JSON.stringify(releases, null, 2)
+    )
+
+    const saveTags = (data) => writeReleases(
+        data.map(item => item.ref)
+            .concat('main')
+            .reverse()
+    )
+
+    //(async () => saveLocal(await getJSON(url)))()
+
+    if (version) {
+        writeReleases(
+            [version === 'main' ? version : `ref/tags/${version}`]
+        )
+    } else {
+        fetch(url)
+            .then((response) => response.json())
+            .then(saveTags)
+            .catch(() => writeReleases(['main']))
+    }
+
 }
 
-Object.entries(DOCS).forEach(item => {
-    const tree = new MDHelper().extractChapterTree(
-        TreeHelper.readDirTree(item[0])
-    )
-    tree.name = item[1]
-    fs.writeFileSync(
-        `./public/documentation/data/main/${item[0]}.json`,
-        JSON.stringify(
-            tree,
-            null,
-            2
+const createDocsMetadata = (version) => {
+
+    version ||= 'main'
+
+    const DOCS = {
+        docs: 'Catena-X Help Desk',
+        developer: 'Catena-X Developer Documentation',
+    }
+
+    Object.entries(DOCS).forEach(item => {
+        const tree = new MDHelper().extractChapterTree(
+            TreeHelper.readDirTree(item[0])
         )
-    )
-})
+        tree.name = item[1]
+        const path = `./public/documentation/data/${version}`
+        if (!fs.existsSync(path)) {
+            fs.mkdirSync(path)
+        }
+        fs.writeFileSync(
+            `${path}/${item[0]}.json`,
+            JSON.stringify(
+                tree,
+                null,
+                2
+            )
+        )
+    })
+
+}
+
+const version = process.argv[2]
+createReleaseSelection(version)
+createDocsMetadata(version)

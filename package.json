@@ -1,10 +1,11 @@
 {
   "name": "cx-portal-assets",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Shared frontend content and static assets for the Catena-X Portal",
   "main": "index.js",
   "repository": "git@github.com:eclipse-tractusx/portal-assets.git",
   "license": "Apache-2.0",
+  "type": "module",
   "devDependencies": {
     "concurrently": "^7.6.0",
     "directory-tree": "^3.5.1",
@@ -14,9 +15,8 @@
     "zero-md": "^2.4.0"
   },
   "scripts": {
-    "build:latest": "source ./scripts/repo.sh && tx-asset-get-latest",
-    "build:docs": "node src/documentation/Tree.js",
-    "build": "yarn build:docs && mkdir -p ./public/documentation/js/lib && cp -R ./node_modules/zero-md/dist/zero-md.min* ./public/documentation/js/lib/",
+    "build:release": "node src/documentation/Release.js ${1}",
+    "build": "mkdir -p ./public/documentation/js/lib && cp -R ./node_modules/zero-md/dist/zero-md.min* ./public/documentation/js/lib/",
     "build:sources": "zip -r portal-assets.zip src package.json yarn.lock -x '*.stories.*' -x '*.test.*' -x '*.ttf' -x '*.svg' -x '*.png'",
     "start": "yarn run open",
     "open": "concurrently \"http-server -a localhost -p 3000\" \"open http://localhost:3000/\""

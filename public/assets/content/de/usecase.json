@@ -20,7 +20,7 @@
     {
        "title": "Kernwerte von Catena-X werden in der Traceability umgesetzt",
        "description": "",
-       "imageUrl": "traceability_core_values(de).png",
+       "imagePath": "/images/content/traceability_core_values(de).png",
        "backgroundColor": "#F9F9F9",
        "id": "core-id",
        "template": "TextImageCenterAligned"
@@ -28,7 +28,7 @@
      {
        "title": "Warum ist es sinnvoll bei Traceability zu partizipieren?",
        "description": "",
-       "imageUrl": "traceability_contribution(de).png",
+       "imagePath": "/images/content/traceability_contribution(de).png",
        "backgroundColor": "#FFFFFF",
        "id": "contribution-id",
        "template": "TextImageCenterAligned"
@@ -36,7 +36,7 @@
      {
        "title": "Die wichtigsten Begrifflichkeiten kurz erläutert",
        "description": "",
-       "imageUrl": "traceability_terms(de).png",
+       "imagePath": "/images/content/traceability_terms(de).png",
        "backgroundColor": "#F9F9F9",
        "id": "context-id",
        "template": "TextImageCenterAligned"
@@ -44,7 +44,7 @@
      {
        "title": "Traceability unterteilt die Datenmodelle je Lebenszyklusphase",
        "description": "",
-       "imageUrl": "traceability_datamodels(de).png",
+       "imagePath": "/images/content/traceability_datamodels(de).png",
        "backgroundColor": "#FFFFFF",
        "id": "details-id",
        "template": "TextImageCenterAligned"
@@ -52,7 +52,7 @@
      {
        "title": "Wie funktioniert der Datenaustausch bei der Traceability?",
        "description": "",
-       "imageUrl": "traceability_dataexchange(de).png",
+       "imagePath": "/images/content/traceability_dataexchange(de).png",
        "backgroundColor": "#F9F9F9",
        "id": "details2-id",
        "template": "TextImageCenterAligned"
@@ -78,7 +78,7 @@
         "detailsWithImageRow1": [
           {
             "title": "Self/Local Setup",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "Individuelle und eigenständige Anbindung an die Rückverfolgbarkeit…",
             "readMore": "",
             "readMoreTitle": "Direct link (coming soon)",
@@ -87,7 +87,7 @@
           },
           {
             "title": "Minimal Setup",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "Nutzung von Web-Services zur Datenbereitstellung für die Rückverfolgbarkeit…",
             "readMore": "/appdetail/d0ea773a-8fa0-481b-9ae3-d0e9c22a8628",
             "readMoreTitle": "Details öffnen",
@@ -96,7 +96,7 @@
           },
           {
             "title": "Complete Setup",
-            "imageUrl": "teaser.png",
+            "imagePath": "/images/content/teaser.png",
             "description": "Nutzung von Business Anwendungen mit vollem Funktionsumfang der Rückverfolgbarkeit...",
             "readMore": "",
             "readMoreTitle": "Direct link (coming soon)",
@@ -115,7 +115,7 @@
       "detailsWithImageRow1": [
         {
           "title": "Trace X",
-          "imageUrl": "teaser.png",
+          "imagePath": "/images/content/teaser.png",
           "description": "Ermöglicht die lückenlose Rückverfolgbarkeit von Teilen über die Lieferkette von n.tier – visualisiert detaillierte Informationen über die Komponenten von direkten Lieferanten und Direktkunden.",
           "readMore": "/appdetail/ac1cf001-7fbc-1f2f-817f-bce0572c0007",
           "readMoreTitle": "App Details öffnen",
@@ -124,7 +124,7 @@
         },
         {
           "title": "Smart MOM",
-          "imageUrl": "teaser.png",
+          "imagePath": "/images/content/teaser.png",
           "description": "Konsolidiert alle Produktionsprozesse und Systeme zur Steuerung von Herstellungsprozessen…",
           "readMore": "/appdetail/5cf74ef8-e0b7-4984-a872-474828beb5d1",
           "readMoreTitle": "App Details öffnen",
@@ -133,7 +133,7 @@
         },
         {
           "title": "SAP BN MT",
-          "imageUrl": "teaser.png",
+          "imagePath": "/images/content/teaser.png",
           "description": "stellt eine Lösung zur unternehmensübergreifenden Lieferkettentransparenz und Material Rückverfolgbarkeit dar…",
           "readMore": "/appdetail/5cf74ef8-e0b7-4984-a872-474828beb5d7",
           "readMoreTitle": "App Details öffnen",
@@ -142,7 +142,7 @@
         },
         {
           "title": "Trusted Traceability",
-          "imageUrl": "teaser.png",
+          "imagePath": "/images/content/teaser.png",
           "description": "ist als vollständig verwaltetes System (Software-as-a-Service) verfügbar und ermöglicht die Einführung der Rückverfolgbarkeit…",
           "readMore": "/appdetail/ac1cf001-7fbc-1f2f-817f-bce05748000d",
           "readMoreTitle": "App Details öffnen",

@@ -16,5 +16,6 @@ The Catena-X Portal is designed to work with the [Catena-X IAM](https://github.c
 ## Steps to run local
 
     yarn
+    yarn build:release
     yarn build
     yarn start

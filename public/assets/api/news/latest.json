@@ -1,37 +1,37 @@
 [
   {
     "id": "1",
-    "title": "CX Design launched!",
+    "title": "EDC 0.3.0 Major Version",
     "subtitle": "Catena-X",
-    "description": "The new Catena-X Portal designed launched successfully in Catena-X NG",
-    "readMoreText": "Read more",
-    "readMoreLink": "#",
+    "description": "With March 2023 - the new EDC Version 0.3.x will be available and is to be used for upcoming 3.1 e2e tests",
+    "readMoreText": "Get Change Details",
+    "readMoreLink": "https://github.com/catenax-ng/product-edc/blob/develop/CHANGELOG.md#030---2023-02-20",
+    "image": {
+      "src": "https://portal.dev.demo.catena-x.net/assets/images/samples/s006.jpg",
+      "alt": "EDC New Version"
+    }
+  },
+  {
+    "id": "2",
+    "title": "Test of Release 3.1 starting on 03rd of April",
+    "subtitle": "Catena-X",
+    "description": "Next round of e2e Test is starting soon. Contact the Test Management to get part of it",
+    "readMoreText": "",
+    "readMoreLink": "",
     "image": {
       "src": "https://portal.dev.demo.catena-x.net/assets/images/samples/s006.jpg",
       "alt": "BMW New Stuff"
     }
   },
   {
-    "id": "2",
-    "title": "Catena-X Network of Networks started",
-    "subtitle": "Catena-X",
-    "description": "Lets get started! The Network of Networks team will start with first PoCs.",
-    "readMoreText": "Read more",
-    "readMoreLink": "#",
-    "image": {
-      "src": "https://portal.dev.demo.catena-x.net/assets/images/samples/s007.jpg",
-      "alt": "BMW New Stuff"
-    }
-  },
-  {
     "id": "3",
-    "title": "HMI Preparation Ongoing",
+    "title": "Lorem ipsum",
     "subtitle": "Catena-X",
-    "description": "The HMI (Hannover Fair) preparation are ongoing and looking forward to see you there.",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
     "readMoreText": "Read more",
     "readMoreLink": "#",
     "image": {
-      "src": "https://portal.dev.demo.catena-x.net/assets/images/samples/s008.jpg",
+      "src": "https://portal.dev.demo.catena-x.net/assets/images/samples/s006.jpg",
       "alt": "BMW New Stuff"
     }
   }

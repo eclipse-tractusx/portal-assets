@@ -117,7 +117,7 @@ class State {
     }
 
     setReleases(releases) {
-        this.releases = releases.sort().map(ref => ({
+        this.releases = releases.map(ref => ({
             ref,
             name: ref.split('/').slice(-1)[0]
         }))

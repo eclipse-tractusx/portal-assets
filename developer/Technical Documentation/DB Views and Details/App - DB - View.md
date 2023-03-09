@@ -4,8 +4,8 @@
 
 #### App DB Connection
 
-<img width="800" alt="image" src="https://user-images.githubusercontent.com/94133633/217113666-7ef17e1f-3698-49bc-a4fa-59141366a530.png">
-
+<br>
+<img width="1684" alt="image" src="https://user-images.githubusercontent.com/94133633/222970951-6e813f26-fd44-4b8c-87ee-7c33050ae661.png">
 
 <br>
 <br>
@@ -45,6 +45,27 @@ With the app release date future scenarios such as: release app before publishin
 app offers are aways use_case linked. 
 Table relation use_cases - 1:m - app_assigned_use_cases - m:1 - offers
 
+<br>
+<br>
 
+#### App Privacy Policy
+
+"Privacy Policy" information can get collected / stored for offers with type "APP".  
+<br>
+
+Related Endpoints:
+- POST: /api/apps/appreleaseprocess/createapp 
+- PUT: /api/apps/appreleaseprocess/{appId} 
+- GET: /api/apps/{appId}
+- GET: /api/apps/appreleaseprocess/{appId}/appStatus
+- GET: /api/apps/privacyPolicy
+<br>
+
+Privacy policy types / labels:
+* Company_Data
+* User_Data
+* Location
+* Browser_History
+* None
 
 
