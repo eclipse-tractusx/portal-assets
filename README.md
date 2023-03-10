@@ -19,3 +19,10 @@ The Catena-X Portal is designed to work with the [Catena-X IAM](https://github.c
     yarn build:release
     yarn build
     yarn start
+
+This will start the assets and documentation on
+
+* https://localhost:3003/assets/
+* https://localhost:3003/documentation/
+
+Note: if you'd like to run the complete frontend application, follow the 'Run frontend on localhost' guide within the developer documentation which is available within this repository.

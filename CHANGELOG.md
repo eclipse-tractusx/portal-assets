@@ -1,4 +1,11 @@
+# Changelog
+
+New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
+
 ## Unreleased
+
+* Technical Support
+  * reverse proxy server to run the entire portal frontend on local machine
 
 ## 1.1.0
 
