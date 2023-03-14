@@ -1,4 +1,4 @@
-# Frontend Environment
+# Run frontend locally
 
 ## Introduction
 
@@ -10,7 +10,7 @@ The portal frontend is divided into three parts
 
 ![Schema of a local frontend environment](https://raw.githubusercontent.com/catenax-ng/tx-portal-assets/main/public/assets/images/docs/frontend-localhost.svg)
 
-Each of these is running as a separate web server process. In the final deployment the Kubernetes ingress controllers redirect requests to the according servers based on URL paths. To the client the application appears as one origin, so no CORS problems arise. To run the entire Fronend on your local machine follow these steps.
+Each of these is running as a separate web server process. In the final deployment the Kubernetes ingress controllers redirect requests to the according servers based on URL paths. To the client the application appears as one origin, so no CORS problems arise. To run the entire frontend on your local machine follow these steps.
 
 ## Set up a local development environment
 
