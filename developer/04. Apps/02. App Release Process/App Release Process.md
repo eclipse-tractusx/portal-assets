@@ -506,10 +506,13 @@ Description
     {
       "title": "string",
       "provider": "string",
-      "leadPictureId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "leadPictureId": "uuid",
       "providerName": "string",
       "useCase": [
-        "string"
+        {
+          "id": "uuid",
+          "label": "string"
+        }
       ],
       "descriptions": [
         {
@@ -520,7 +523,7 @@ Description
       ],
       "agreements": [
         {
-          "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+          "id": "uuid",
           "name": "string",
           "consentStatus": "string"
         }
@@ -530,7 +533,7 @@ Description
       ],
       "price": "string",
       "images": [
-        "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+        "uuid"
       ],
       "providerUri": "string",
       "contactEmail": "string",
@@ -538,24 +541,12 @@ Description
       "documents": {
         "additionalProp1": [
           {
-            "documentId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-            "documentName": "string"
-          }
-        ],
-        "additionalProp2": [
-          {
-            "documentId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-            "documentName": "string"
-          }
-        ],
-        "additionalProp3": [
-          {
-            "documentId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+            "documentId": "uuid",
             "documentName": "string"
           }
         ]
       },
-      "salesManagerId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "salesManagerId": "uuid",
       "privacyPolicies": [
         e.g. "COMPANY_DATA"
       ]
