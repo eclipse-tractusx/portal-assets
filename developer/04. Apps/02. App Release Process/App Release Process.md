@@ -371,6 +371,25 @@ Deletion Flow (if all validations have been successful):
 <br>
 <br>
 
+###### #3 Display PrivacyPolicies
+
+Privacy Policy options/enums are fetched from the portal db to display the select option to the user.
+
+```diff
+! GET /api/apps/appreleaseprocess/privacyPolicies
+```
+
+<br>
+
+    {
+      "privacyPolicies": [
+        "COMPANY_DATA"
+      ]
+    }
+
+<br>
+<br>
+
 #### Step 3 - Terms & Conditions / Consent
 
 <img width="576" alt="image" src="https://user-images.githubusercontent.com/94133633/223786562-6cc80a68-5299-4708-bc1d-1899dcf3cd23.png">
