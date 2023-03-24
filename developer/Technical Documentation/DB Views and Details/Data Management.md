@@ -123,7 +123,7 @@ Central Keycloak Instance
 
 * Technical Users
 
-<img width="1108" alt="image" src="https://user-images.githubusercontent.com/94133633/223837217-0cfcc5d8-9f1d-486e-bbf3-0a418d65f2b5.png">
+<img width="1108" alt="image" src="https://user-images.githubusercontent.com/94133633/227553850-ac6c3985-2514-43ee-8f72-b302c66bbf0d.png">
 
 
 
