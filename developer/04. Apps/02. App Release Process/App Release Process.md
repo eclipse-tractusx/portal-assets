@@ -531,7 +531,7 @@ Only a preview for now
 
 #### Step 6 - Validate & Submit for Publishing check
 
-<image></image>
+<img width="224" alt="image" src="https://user-images.githubusercontent.com/94133633/227897141-2c901956-f60d-4880-839f-682cfcc307d2.png">
   
 <text></text>
 
