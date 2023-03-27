@@ -394,6 +394,8 @@ Privacy Policy options/enums are fetched from the portal db to display the selec
 
 <img width="576" alt="image" src="https://user-images.githubusercontent.com/94133633/223786562-6cc80a68-5299-4708-bc1d-1899dcf3cd23.png">
 
+Depending on the response of the endpoint #1 GET agreements, the user will be enabled to download related documents from the portal to read through the relevant agreement details. Expected formats are pdf, however other formats can get supported as well.
+
 <br>
 
 ###### #1 Retrieve Terms & Conditions
@@ -414,6 +416,20 @@ Response Body
         "documentId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
       }
     ]
+
+<br>
+
+Style
+
+If documentId inside response body is != NULL display the respective agreement as link - example:
+
+<img width="591" alt="image" src="https://user-images.githubusercontent.com/94133633/227883098-1043fd68-3461-4318-9c02-bbddf9ca8719.png">
+
+<br>
+
+If the documentId is NULL, the agreement is displayed without link (as currently implemented) - example:
+
+<img width="590" alt="image" src="https://user-images.githubusercontent.com/94133633/227883308-8d933e1f-7b57-4bb4-a67d-4aed662c6d21.png">
 
 <br>
 <br>
