@@ -1,0 +1,32 @@
+[{
+  "title": "Common Roles",
+  "subTitles": [
+    "Company Admin",
+    "IT Admin",
+    "CX User",
+    "Business Admin",
+    "Purchaser"
+    ],
+  "descriptions": [
+    "The Company Admin is the company admin for the company administration. Company Administrators are able to do the <strong>Company Registration</strong>, <strong>Connector Registration</strong>, <strong>Company Configuration</strong> and <strong>User Management</strong>",
+    "The IT Admin is the company admin for IT administration between the company network and catena-x. IT Admins are able to <strong>Configure the IdP</strong>, <strong>User Management</strong> and <strong>Connector Registration</strong>.",
+    "This is the role description fetched from the locale file. Ideally this is located in a standalone local file, I would not suggest to use existing files.",
+    "This is the role description fetched from the locale file. Ideally this is located in a standalone local file, I would not suggest to use existing files.",
+    "This is the role description fetched from the locale file. Ideally this is located in a standalone local file, I would not suggest to use existing files."
+    ]
+},
+ {
+  "title": "Company role specific roles: App Provider",
+  "subTitles": [
+    "App Manager",
+    "App Developer",
+    "Service Manager",
+    "Sales Manager"
+    ],
+  "descriptions": [
+    "This is the role description fetched from the locale file. Ideally this is located in a standalone local file, I would not suggest to use existing files.",
+    "This is the role description fetched from the locale file. Ideally this is located in a standalone local file, I would not suggest to use existing files.",
+    "This is the role description fetched from the locale file. Ideally this is located in a standalone local file, I would not suggest to use existing files.",
+    "This is the role description fetched from the locale file. Ideally this is located in a standalone local file, I would not suggest to use existing files."
+    ]
+}]

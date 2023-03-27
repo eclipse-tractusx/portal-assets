@@ -980,6 +980,18 @@
               ]
             },
             {
+              "path": "developer/Technical Documentation/Dev Process/05. Run frontend on localhost.md",
+              "name": "05. Run frontend on localhost.md",
+              "chapter": [
+                "# Frontend Environment",
+                "## Introduction",
+                "## Set up a local development environment",
+                "#### 1. Start the portal webserver instance on local port 3001",
+                "#### 2. Start the registration app webserver instance on local port 3002",
+                "#### 3. Start the reverse proxy and assets webserver instance on ports 3000 and 3003"
+              ]
+            },
+            {
               "path": "developer/Technical Documentation/Dev Process/Enumeration Handling.md",
               "name": "Enumeration Handling.md",
               "chapter": [

@@ -18,8 +18,7 @@ n/a
 ### #1 EDC Discovery
 The edc discovery endpoint can get triggered via technical as well as real users, if relevant roles are available.  
 For technical user, a company can request the user creation with the technical user creation feature inside the portal.  
-For details, click following link: 
-[Technical User Management](/docs/03.%20User%20Management/3%20Technical%20User/02.%20Create%20Technical%20User.md#create-a-new-technical-user)  
+For details, click following link: [Technical User Management](/docs/03.%20User%20Management/03.%20Technical%20User/02.%20Create%20Technical%20User.md#create-a-new-technical-user)  
 <br>
 
 ```diff
