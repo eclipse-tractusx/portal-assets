@@ -4,8 +4,30 @@ New features, fixed bugs, known defects and other noteworthy changes to each rel
 
 ## Unreleased
 
-* Technical Support
-  * reverse proxy server to run the entire portal frontend on local machine
+
+## 1.2.0
+
+### Change
+* User Docu
+  * service release process enhanced
+* Developer
+  * updated developer contribution process introduction
+  * enhanced details on app marketplace implementations
+  * enhanced app admin board operator implementation details
+
+### Feature
+* User Docu
+  * added user role description details/role matrix
+* Developer
+  * multi-branch developer process released
+
+### Technical Support
+* reverse proxy server to run the entire portal frontend on local machine
+* trg: added repo metafile
+* trivy: fixed container registry
+
+### Bugfix
+n/a
 
 ## 1.1.0
 
