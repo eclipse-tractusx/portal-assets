@@ -12,12 +12,13 @@ The process builds on the development flow which takes place within the forks fr
 
 The relevant frontend repositories are the following:
 
-* https://github.com/catenax-ng/tx-portal-frontend
-* https://github.com/catenax-ng/tx-portal-frontend-registration
-* https://github.com/catenax-ng/tx-portal-assets
+* <https://github.com/catenax-ng/tx-portal-frontend>
+* <https://github.com/catenax-ng/tx-portal-frontend-registration>
+* <https://github.com/catenax-ng/tx-portal-assets>
 
 The relevant backend repository is the following:
-* https://github.com/catenax-ng/tx-portal-backend
+
+* <https://github.com/catenax-ng/tx-portal-backend>
 
 For assigning and incrementing **version** numbers [Semantic Versioning](https://semver.org) is followed.
 
@@ -26,7 +27,20 @@ For assigning and incrementing **version** numbers [Semantic Versioning](https:/
 Checking out from the dev branch (or main for portal-assets) a release branch (release/{to be released version} e.g. release/1.2.0) is created.
 On the release branch the following steps are executed:
 
-### 1. Update changelog file
+### 1. Version bump
+
+For the frontend repos, the version in the 'package.json' files needs to get bumped, the following statement can be used:
+
+```bash
+yarn version
+```
+
+For the backend repo, the version needs to be updated within the 'Directory.Build.props' file.
+
+Example for commit message:
+
+*release: bump version for vx.x.x*
+### 2. Update changelog file
 
 The changelog file tracks all notable changes since the last released version.
 During development every developer should extend the changelog under the 'Unreleased' section when raising a pull request to main or dev.
@@ -40,9 +54,11 @@ In the released version, the changelog is structured as following:
 
 In case of breaking change, the breaking change will get highlighted with a breaking change tag => ![Tag](https://img.shields.io/static/v1?label=&message=BreakingChange&color=yellow&style=flat)
 
-Example for commit message: *release: update changelog for vx.x.x*
+Example for commit message:
 
-### 2. Update dependencies file
+*release: update changelog for vx.x.x*
+
+### 3. Update dependencies file
 
 In order to have an up-to-date list, of the used third-party libraries, the dependencies file needs to be updated.
 
@@ -62,17 +78,9 @@ awk -i inplace '!seen[$0]++' DEPENDENCIES
 
 Only commit the updated dependencies file, not the 'DEPENDENCIES-PREP' file.
 
-Example for commit message: *release: update dependencies file for vx.x.x*
+Example for commit message:
 
-### 3. Version bump (frontend repos only)
-
-The version in the 'package.json' files needs to get bumped, the following statement can be used:
-
-```bash
-yarn version
-```
-
-Example for commit message: *release: bump version for vx.x.x*
+*release: update dependencies file for vx.x.x*
 
 ### 4. Aggregate migrations (backend repo only)
 
@@ -87,16 +95,18 @@ It's important to pull the latest state of the release branch locally in every r
 Then create and push a tag for the released version.
 The push of the tag triggers the release workflow action (available in every repository) which creates the versioned image/s.
 
-Example tag frontend repos:
-*1.2.0*
+Example for tag:
 
-Example tag backend repo:
 *v1.2.0*
 
 Examples for tag messages:
+
 *Version 1.2.0: Frontend Portal for the Catena-X*
+
 *Version 1.2.0: Frontend Registration for the Catena-X*
+
 *Version 1.1.0: Assets for the Catena-X Portal*
+
 *Version 1.1.0: Backend for the Catena-X Portal*
 
 ## Merge release branch
@@ -106,14 +116,16 @@ Afterwards, main into dev. This is only necessary for repositories with a dev br
 Those merges need to happen via PRs.
 
 Example for PR titles:
+
 *release(1.2.0): merge release into main*
+
 *release(1.2.0): merge main to dev*
 
 ## Release of a new helm chart version (consortia / helm-environments)
 
 Once the versioned images are available, they can be referenced in the portal helm chart and a new version of the chart can be released.
-The consortia specific helm chart is released from the 'helm environments' branch available in the https://github.com/catenax-ng/tx-portal-cd fork.
-The official portal helm chart is released from the main branch of https://github.com/eclipse-tractusx/portal-cd after the merge upstream.
+The consortia specific helm chart is released from the 'helm environments' branch available in the <https://github.com/catenax-ng/tx-portal-cd> fork.
+The official portal helm chart is released from the main branch of <https://github.com/eclipse-tractusx/portal-cd> after the merge upstream.
 
 Check out a release branch from 'helm environments'.
 On the release branch the following steps are executed:
@@ -144,18 +156,24 @@ Once a new image version has been tagged in the fork and as a resulted built, it
 
 The relevant frontend repositories are the following:
 
-* https://github.com/eclipse-tractusx/portal-frontend
-* https://github.com/eclipse-tractusx/portal-frontend-registration
-* https://github.com/eclipse-tractusx/portal-assets
+* <https://github.com/eclipse-tractusx/portal-frontend>
+* <https://github.com/eclipse-tractusx/portal-frontend-registration>
+* <https://github.com/eclipse-tractusx/portal-assets>
 
 The relevant backend repository is the following:
 
-* https://github.com/eclipse-tractusx/portal-backend
+* <https://github.com/eclipse-tractusx/portal-backend>
 
-Example for PR title: *feat!: merge upstream v1.2.0*
+Example for PR title:
+
+*feat!: merge upstream v1.2.0*
 
 Example for PR description:
-*The last merge into main was for v1.2.0. This PR contains the delta up to v1.1.0. All changes can be found in the changelog*
+
+*The last merge into main was for v1.2.0.*
+*This PR contains the delta up to v1.1.0.*
+*All changes can be found in the changelog*
+*Reviewed-By: {name lastname e-mail}*
 
 ### Upstream for portal-cd
 
@@ -169,7 +187,9 @@ Then copy all the relevant changes from the 'helm environments' branch into the 
 * **.git**
 
 Merge the release branch into main via PR.
-Example for PR title: *release(1.2.0): add helm-environments updates*
+Example for PR title:
+
+*release(1.2.0): add helm-environments updates*
 
 Then upstream main.
 
