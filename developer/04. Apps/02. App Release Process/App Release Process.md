@@ -415,8 +415,26 @@ Response Body
       }
     ]
 
+<br>
+<br>
 
-###### #2 Upload document
+###### #2 Retrieve Documents
+Terms and Conditions with an document ID in API endpoint #1 can get retrieved via the document endpoint GET /frameDocuments/{documentId}
+
+```diff
+Get: /api/administration/documents/frameDocuments/{documentId}
+```
+
+<br>
+
+Response Body
+
+    document file
+
+<br>
+<br>
+
+###### #3 Upload document
 The user has to upload the app conformity document.
 
 ```diff
