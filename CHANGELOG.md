@@ -10,20 +10,21 @@ New features, fixed bugs, known defects and other noteworthy changes to each rel
 ### Change
 * User Docu
   * service release process enhanced
-* Developer 
+* Developer
   * updated developer contribution process introduction
-  * enhanced details on app marketplace implementatations
+  * enhanced details on app marketplace implementations
   * enhanced app admin board operator implementation details
 
 ### Feature
 * User Docu
   * added user role description details/role matrix
-* Developer 
+* Developer
   * multi-branch developer process released
 
 ### Technical Support
 * reverse proxy server to run the entire portal frontend on local machine
-* trg and trivy: added repo metafile and fixed container registry
+* trg: added repo metafile
+* trivy: fixed container registry
 
 ### Bugfix
 n/a
