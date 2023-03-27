@@ -450,7 +450,7 @@ Response Body
 <br>
 <br>
 
-###### #3 Upload document
+###### #3 Upload Document
 The user has to upload the app conformity document.
 
 ```diff
@@ -458,6 +458,16 @@ The user has to upload the app conformity document.
 ```
 
 Type: CONFORMITY_APPROVAL_BUSINESS_APPS
+
+<br>
+
+###### #4 DELETE Document
+In case the user identifiers that a wrong document got uploaded in the respective step, the DELETE endpoint is used to delete doucments linked to the app.
+Important: the deletion is not reversable - since the app is still under DRAFT, all app related details will get deleted immediately.
+
+```diff
+! Delete: /api/apps/appreleaseprocess/documents/{documentId}
+```
 
 <br>
 <br>
@@ -619,10 +629,11 @@ Description
 <br>
 
 ###### #3 Download Document
-Description
+Conformity Document as well as the app specific documents can get downloaded by the user by clicking on the document name.
+The GET document endpoint is getting triggered and document downloaded.
 
 ```diff
-! tbd
+! GET /api/apps/{appId}/appDocuments/{documentId}
 ```
 
 <br>
