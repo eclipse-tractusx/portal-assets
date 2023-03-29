@@ -1,25 +1,7 @@
 ## Summary
 
-With the version 1.3.0, a couple of breaking changes got introduced which result into migration/db impact.
-In the document below, the impact got described including description of the change, possible issues, mitigation/solutions
-
-<br>
-<br>
-
-#### Service Details - NEW (interim) - 1.3.0
-
-* NEW: table "service_details"
-
-New service_detail table released to manage technical user need for services with a true/false flag.
-Attributes
-* service_id 
-* service_type_id (connected to portal.service_types)
-* technical_user_needed (true/false flag)
-
-<img width="376" alt="image" src="https://user-images.githubusercontent.com/94133633/228341713-1bbc0354-0ebf-42f7-bc37-135567037b60.png">
-
-Impact on existing data:
-Migration script existing, based on the service type, the technical_user_needed attribute is set to "true" for "DATASPACE_SERVICE" services and "false" for "CONSULTANCE_SERVICE"
+The file describes portal database changes and impact on transactional data. Depending on the impact, possible risks/impediments on upgrades as well as mitigation plans are described.
+Each section includes the respective change details, impact on existing data and the respective release with which the change is getting active.
 
 <br>
 <br>
@@ -45,6 +27,42 @@ Additionally check if all stored documents are supported by the types migrated i
 * REMOVED: removed table application_assigned_process_steps
 
 Impact on existing data:
-Existing company registration will automatically get enhanced with the respective attributes. No manual intervention needed. Active 
+?? Existing company registration data currently under validation are automatically expanded with the respective attribute values for the new tables/attributes ??
+* processes
+* process_types
+* checklist_process_id
+* process_id
 
+No manual intervention needed.
+For company applications currently in status "under creation" (means not yet submitted for validation) the change has no impact, since the process_id is created as part of the registration submitted. As soon as the participant submits the registration, the new process with the process_id will apply.
+
+<br>
+<br>
+
+#### Service Details - NEW (interim) - 1.1.0
+
+* NEW: table "service_details"
+* REMOVED: table service_assigned_service_types
+
+New service_detail table released to manage technical user need for services with a true/false flag.
+Attributes
+* service_id 
+* service_type_id (connected to portal.service_types and replacing table service_assigned_service_types)
+* technical_user_needed (true/false flag)
+
+<img width="376" alt="image" src="https://user-images.githubusercontent.com/94133633/228341713-1bbc0354-0ebf-42f7-bc37-135567037b60.png">
+
+Impact on existing data:
+Migration script existing, based on the service type which is fetched for all existing data from portal table service_assigned_service_types, the technical_user_needed attribute is set to "true" for "DATASPACE_SERVICE" services and "false" for "CONSULTANCE_SERVICE".
+Transactional data are automatically updated/migrated. 
+
+Migration script existing, based on the service type which is fetched for all existing data from portal table service_assigned_service_types, the technical_user_needed attribute is set to "true" for "DATASPACE_SERVICE" services and "false" for "CONSULTANCE_SERVICE".
+
+
+```dif
+Please note, thats an interim solution only an expected to get replaced again in version 1.4.0
+```
+
+<br>
+<br>
 
