@@ -31,7 +31,7 @@ Migration script existing, based on the service type, the technical_user_needed 
 
 Impact on existing data:
 As part of the migration, the existing file ending/type available in documents.name will be used to set the media_type_id. Important: check beforehand if all documents have a document type added inside the document name. If not, add the document type or delete the document.
-Additionally check if all stored documents are supported by the types migrated in table porta.media_type. In case any other document type is currently loaded/stored, the migration will fail. In this case dleete the document beforehand or enhance the migration script media types supported.
+Additionally check if all stored documents are supported by the types migrated in table porta.media_type. In case any other document type is currently loaded/stored, the migration will fail. In this case delete the document beforehand or enhance the migration script media types supported.
 
 <br>
 <br>
