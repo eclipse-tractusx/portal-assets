@@ -394,6 +394,8 @@ Privacy Policy options/enums are fetched from the portal db to display the selec
 
 <img width="576" alt="image" src="https://user-images.githubusercontent.com/94133633/223786562-6cc80a68-5299-4708-bc1d-1899dcf3cd23.png">
 
+Depending on the response of the endpoint #1 GET agreements, the user will be enabled to download related documents from the portal to read through the relevant agreement details. Expected formats are pdf, however other formats can get supported as well.
+
 <br>
 
 ###### #1 Retrieve Terms & Conditions
@@ -415,8 +417,40 @@ Response Body
       }
     ]
 
+<br>
 
-###### #2 Upload document
+Style
+
+If documentId inside response body is != NULL display the respective agreement as link - example:
+
+<img width="591" alt="image" src="https://user-images.githubusercontent.com/94133633/227883098-1043fd68-3461-4318-9c02-bbddf9ca8719.png">
+
+<br>
+
+If the documentId is NULL, the agreement is displayed without link (as currently implemented) - example:
+
+<img width="590" alt="image" src="https://user-images.githubusercontent.com/94133633/227883308-8d933e1f-7b57-4bb4-a67d-4aed662c6d21.png">
+
+<br>
+<br>
+
+###### #2 Retrieve Documents
+Terms and Conditions with an document ID in API endpoint #1 can get retrieved via the document endpoint GET /frameDocuments/{documentId}
+
+```diff
+Get: /api/administration/documents/frameDocuments/{documentId}
+```
+
+<br>
+
+Response Body
+
+    document file
+
+<br>
+<br>
+
+###### #3 Upload Document
 The user has to upload the app conformity document.
 
 ```diff
@@ -424,6 +458,16 @@ The user has to upload the app conformity document.
 ```
 
 Type: CONFORMITY_APPROVAL_BUSINESS_APPS
+
+<br>
+
+###### #4 DELETE Document
+In case the user identifiers that a wrong document got uploaded in the respective step, the DELETE endpoint is used to delete doucments linked to the app.
+Important: the deletion is not reversable - since the app is still under DRAFT, all app related details will get deleted immediately.
+
+```diff
+! Delete: /api/apps/appreleaseprocess/documents/{documentId}
+```
 
 <br>
 <br>
@@ -497,7 +541,7 @@ Only a preview for now
 
 #### Step 6 - Validate & Submit for Publishing check
 
-<image></image>
+<img width="224" alt="image" src="https://user-images.githubusercontent.com/94133633/227897141-2c901956-f60d-4880-839f-682cfcc307d2.png">
   
 <text></text>
 
@@ -585,10 +629,11 @@ Description
 <br>
 
 ###### #3 Download Document
-Description
+Conformity Document as well as the app specific documents can get downloaded by the user by clicking on the document name.
+The GET document endpoint is getting triggered and document downloaded.
 
 ```diff
-! tbd
+! GET /api/apps/{appId}/appDocuments/{documentId}
 ```
 
 <br>
