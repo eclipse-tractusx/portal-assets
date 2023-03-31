@@ -17,12 +17,12 @@
 # SPDX-License-Identifier: Apache-2.0
 ###############################################################
 
-name: build
+name: release candidate
 
 on:
   push:
     branches:
-      - 'main'
+      - 'release/1.3.0*'
   workflow_dispatch:
 
 env:
@@ -31,7 +31,7 @@ env:
   COMMIT_SHA: ${{ github.sha }}
 
 jobs:
-  build-and-push-image:
+  build-and-push-release:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -40,6 +40,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
 
       - name: Install Dependencies
         run: yarn
@@ -69,15 +71,15 @@ jobs:
           context: .
           file: .conf/Dockerfile
           push: true
-          # build tag :main with commit-sha and latest
-          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.COMMIT_SHA }}, ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:main
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.COMMIT_SHA }}, ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:rc
           labels: ${{ steps.meta.outputs.labels }}
 
   auth-and-dispatch:
-    needs: build-and-push-image
+    needs: build-and-push-release
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Get token
         id: get_workflow_token
         uses: peter-murray/workflow-application-token-action@v2
@@ -85,7 +87,6 @@ jobs:
           application_id: ${{ secrets.ORG_PORTAL_DISPATCH_APPID }}
           application_private_key: ${{ secrets.ORG_PORTAL_DISPATCH_KEY }}
 
-      # The triggered workflow isn't enabled for branch names / github.ref_name containing special characters like '/' for example 'feature/...'
       - name: Trigger workflow
         id: call_action
         env:
@@ -93,8 +94,8 @@ jobs:
         run: |
           curl -v \
             --request POST \
-            --url https://api.github.com/repos/catenax-ng/tx-portal-cd/actions/workflows/portal-assets-image-update.yml/dispatches \
+            --url https://api.github.com/repos/catenax-ng/tx-portal-cd/actions/workflows/portal-assets-rc-image-update.yml/dispatches \
             --header "authorization: Bearer $TOKEN" \
             --header "Accept: application/vnd.github.v3+json" \
-            --data '{"ref":"helm-environments", "inputs": { "new-image":"${{ env.COMMIT_SHA }}" }}' \
+            --data '{"ref":"release-candidate", "inputs": { "new-image":"${{ env.COMMIT_SHA }}" }}' \
             --fail

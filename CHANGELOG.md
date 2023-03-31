@@ -2,8 +2,28 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
-## Unreleased
+## 1.3.0 RC1
 
+### Change
+* User Docu
+  * user management -> technical user -> FAQ updated with details to technical user token creation
+* Developer
+  * release process documentation enhanced (license checks & publish shared-ui-components to npm)
+  * roles & rights matrix updated (technical user)
+  * technical user roles architecture portal, portal db and keycloak connection - visualization image updated
+  * user management -> technical user -> FAQ added with details to technical user token creation
+  * app release process enhanced (fetch portal frame documents, verify app details, delete documents)
+
+### Feature
+n/a
+
+### Technical Support
+* added temp fix for CVE-2023-0464
+* added build workflow for v1.3.0 release candidate phase
+* updated actions workflows
+
+### Bugfix
+n/a
 
 ## 1.2.0
 

@@ -1,12 +1,13 @@
 # Release Process
 
-The release process for a new version can roughly be divided in the following steps:
+The release process for a new version can roughly be divided into the following steps:
 
-* Preparations on the release branch
-* Tag and build of a versioned image
-* Merge release branch
-* Release of a new helm chart version (consortia / helm-environments)
-* Maintain upstream (eclipse-tractusx)
+* [Preparations on the release branch](#preparations-on-the-release-branch)
+* [Tag and build of a versioned image](#tag-and-build-of-a-versioned-image)
+* [Merge release branch](#merge-release-branch)
+* [Release of a new consortia helm chart version](#release-of-a-new-consortia-helm-chart-version)
+* [Maintain upstream (eclipse-tractusx)](#maintain-upstream-eclipse-tractusx)
+* [Publish new version of Shared UI Components to npm](#publish-new-version-of-shared-ui-components-to-npm)
 
 The process builds on the development flow which takes place within the forks from eclipse-tractusx, located in the catenax-ng organization.
 
@@ -40,6 +41,7 @@ For the backend repo, the version needs to be updated within the 'Directory.Buil
 Example for commit message:
 
 *release: bump version for vx.x.x*
+
 ### 2. Update changelog file
 
 The changelog file tracks all notable changes since the last released version.
@@ -60,6 +62,7 @@ Example for commit message:
 
 ### 3. Update dependencies file
 
+Make sure that the [version bump](#1-version-bump) happened beforehand (relevant for [portal-frontend](https://github.com/catenax-ng/tx-portal-frontend) repo, using the shared-components).
 In order to have an up-to-date list, of the used third-party libraries, the dependencies file needs to be updated.
 
 For the frontend repositories this can be done by running the following statement:
@@ -121,7 +124,7 @@ Example for PR titles:
 
 *release(1.2.0): merge main to dev*
 
-## Release of a new helm chart version (consortia / helm-environments)
+## Release of a new consortia helm chart version
 
 Once the versioned images are available, they can be referenced in the portal helm chart and a new version of the chart can be released.
 The consortia specific helm chart is released from the 'helm environments' branch available in the <https://github.com/catenax-ng/tx-portal-cd> fork.
@@ -144,11 +147,38 @@ helm-docs --chart-search-root [charts-dir] --sort-values-order file
 
 Copy updated README file on chart level to root level.
 
-Once the steps done, create a PR to merge the release branch into 'helm-environments'.
+Example for commit message:
+
+*release: update readme for vx.x.x*
+
+Once the steps are done, create a PR to merge the release branch into 'helm-environments'.
+
+Example for PR title:
+
+*release(1.2.0): merge release into helm-environments*
 
 After the merge, execute the 'Release Chart' action via workflow dispatch on the 'helm-environments' to release the new chart.
+At the release of the chart, besides the chart itself, there is also created a 'portal-x.x.x' tag. This tag is currently used to install or upgrade the version via AgroCD on the K8s cluster.
 
 ## Maintain upstream (eclipse-tractusx)
+
+### License check with the Eclipse Dash License Tool
+
+Before merging upstream, make sure that the new or updated 3rd party libraries are license-vetted, by using the [Eclipse Dash License Tool](https://github.com/eclipse/dash-licenses).
+
+For the frontend repos, the yarn.lock file needs to be checked by the tool:
+
+```bash
+java -jar org.eclipse.dash.licenses-xxx.jar yarn.lock -project automotive.tractusx
+```
+
+For the backend repo, the DEPENDENCIES file needs to be checked by the tool:
+
+```bash
+java -jar org.eclipse.dash.licenses-xxx.jar DEPENDENCIES -project automotive.tractusx
+```
+
+If the tool identifies libraries that require further review, create [IP Team Review Requests](https://github.com/eclipse/dash-licenses#automatic-ip-team-review-requests) automatically (eclipse-tractusx committers only)
 
 ### Upstream for source code repositories
 
@@ -175,10 +205,27 @@ Example for PR description:
 *All changes can be found in the changelog*
 *Reviewed-By: {name lastname e-mail}*
 
+Examples for tagging:
+
+```bash
+git tag -a v1.2.0 6cbf803 -m "Version 1.2.0: Frontend Portal for the Catena-X"
+git tag -a v1.2.0 5771cc9 -m "Version 1.2.0: Frontend Registration for the Catena-X"
+git tag -a v1.2.0 eb67121 -m "Version 1.2.0: Backend for the Catena-X Portal"
+git tag -a v1.2.0 1bf8ab5 -m "Version 1.2.0: Assets for the Catena-X Portal"
+```
+
 ### Upstream for portal-cd
 
-Checking out from the main branch in the fork a *release(x.x.x e.g. 1.2.0)/add-helm-env-updates-to-main* branch is created.
-Then copy all the relevant changes from the 'helm environments' branch into the release branch. Essentially, everything should be copied with the exception of the following:
+Checking out from the main branch of the fork, a *release(x.x.x e.g. 1.2.0)/add-helm-env-updates-to-main* branch needs to be created.
+Then copy all the relevant changes from the 'portal-x.x.x' tag (which was created in [helm chart for consortia](#release-of-a-new-consortia-helm-chart-version) step) into the release branch.
+
+Example for checking out from tag:
+
+```bash
+git checkout tags/portal-1.2.0 -b release/portal-1.2.0
+```
+
+Essentially, everything from the checked out version tag should be copied with the exception of the following:
 
 * environment specific values files in the portal chart directory
 * argocd-*
@@ -186,11 +233,37 @@ Then copy all the relevant changes from the 'helm environments' branch into the 
 * scripts
 * **.git**
 
-Merge the release branch into main via PR.
-Example for PR title:
+Example for commit message to release branch:
 
 *release(1.2.0): add helm-environments updates*
 
-Then upstream main.
+Merge the release branch into main via PR.
 
-After the merge, execute the 'Release Chart' action via workflow dispatch on main to release the new chart.
+Then merge main upstream.
+
+After the merge, execute the 'Release Chart' action via workflow dispatch on main to release the new official portal helm chart.
+
+## Publish new version of Shared UI Components to npm
+
+Make sure that you have a [npm-account](https://www.npmjs.com/login) and login:
+
+```bash
+npm login
+```
+
+Also, you must have been invited to collaborate on the [Shared UI Components](https://www.npmjs.com/package/cx-portal-shared-components).
+
+Checkout the new version from tag in the [portal-frontend](https://github.com/eclipse-tractusx/portal-frontend) repo
+:
+```bash
+git checkout tags/v1.2.0 -b npm/v1.2.0
+```
+
+Execute the following commands:
+
+```bash
+yarn
+yarn build:lib
+cd cx-portal-shared-components
+npm publish
+```
