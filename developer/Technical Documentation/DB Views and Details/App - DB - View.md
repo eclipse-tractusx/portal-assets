@@ -53,6 +53,12 @@ Table relation use_cases - 1:m - app_assigned_use_cases - m:1 - offers
 "Privacy Policy" information can get collected / stored for offers with type "APP".  
 <br>
 
+<p align="center">
+<img width="610" alt="image" src="https://user-images.githubusercontent.com/94133633/229378877-a4b6bddc-d77a-46d5-a9a1-1ab17f04b536.png">
+</p>
+
+<br>
+
 Related Endpoints:
 - POST: /api/apps/appreleaseprocess/createapp 
 - PUT: /api/apps/appreleaseprocess/{appId} 
