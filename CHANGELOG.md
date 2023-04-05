@@ -2,6 +2,30 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
+## 1.3.0 RC2
+
+### Change
+* User Docu
+  * App Release Process documentation enhanced (privacy policy function, document handling, improved/enhanced docu in general)
+* Developer
+  * App Release Process documentation enhanced (privacy policy function, document handling, improved/enhanced docu in general)
+  * Document Service documentation enhanced
+
+### Feature
+* Developer Docu
+  * Company Config - Preferred Use Case docu released
+  * User role assignment (apps and portal roles)
+* User Docu
+  * User role assignment - change user roles "how to" released (apps and portal roles)
+  * Service Release Process - released process "how to"
+
+### Technical Support
+n/a
+
+### Bugfix
+* User & DevDocu
+  * Technical User Profile Matrix corrected (permission assignment overview)
+
 ## 1.3.0 RC1
 
 ### Change
