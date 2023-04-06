@@ -318,6 +318,41 @@
               ]
             }
           ]
+        },
+        {
+          "path": "developer/02. Technical Integration/03. Company Configuration",
+          "name": "03. Company Configuration",
+          "children": [
+            {
+              "path": "developer/02. Technical Integration/03. Company Configuration/01. Summary.md",
+              "name": "01. Summary.md",
+              "chapter": []
+            },
+            {
+              "path": "developer/02. Technical Integration/03. Company Configuration/02. View Preferred Use Cases.md",
+              "name": "02. View Preferred Use Cases.md",
+              "chapter": [
+                "## View Company Preferred Use Cases",
+                "### Details"
+              ]
+            },
+            {
+              "path": "developer/02. Technical Integration/03. Company Configuration/03. Add new Use Case.md",
+              "name": "03. Add new Use Case.md",
+              "chapter": [
+                "## Add New Preferred Use Case",
+                "### Details"
+              ]
+            },
+            {
+              "path": "developer/02. Technical Integration/03. Company Configuration/04. Delete Preferred Use Case.md",
+              "name": "04. Delete Preferred Use Case.md",
+              "chapter": [
+                "## Delete Company Preferred Use Cases",
+                "### Details"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -384,13 +419,21 @@
               ]
             },
             {
-              "path": "developer/03. User Management/02. Edit User Account/03. User Permissions - UPDATE NEEDED.md",
-              "name": "03. User Permissions - UPDATE NEEDED.md",
+              "path": "developer/03. User Management/02. Edit User Account/03. User Permissions.md",
+              "name": "03. User Permissions.md",
               "chapter": [
                 "## User Permissions",
-                "## API Details",
-                "### #1 Get company user details",
-                "### #1 Get company user details"
+                "### Portal Assigned Roles",
+                "### API Details",
+                "#### #1 Get company user details",
+                "#### #2 Fetch Portal roles",
+                "#### #3 Assign/Unassign roles",
+                "### App Assigned Roles",
+                "### API Details",
+                "#### #1 Get company user details",
+                "#### #2 Get company user details",
+                "#### #3 Fetch App Roles",
+                "#### #4 Update user assigned App Roles"
               ]
             },
             {
@@ -480,6 +523,13 @@
                 "#### Currently not supported:",
                 "### Delete Service Account"
               ]
+            },
+            {
+              "path": "developer/03. User Management/03. Technical User/05. FAQ.md",
+              "name": "05. FAQ.md",
+              "chapter": [
+                "### How to retrieve a technical user token?"
+              ]
             }
           ]
         },
@@ -547,7 +597,9 @@
               "chapter": [
                 "## Summary",
                 "## Implementation",
-                "### #1 App Details"
+                "### #1 App Details",
+                "### #2 Subscription Management",
+                "### #3 App Policy Data"
               ]
             },
             {
@@ -608,9 +660,12 @@
                 "##### API Details",
                 "###### #1 Update App Details",
                 "###### #2 DELETE Image/Documents",
+                "###### #3 Display PrivacyPolicies",
                 "#### Step 3 - Terms & Conditions / Consent",
                 "###### #1 Retrieve Terms & Conditions",
-                "###### #2 Upload document",
+                "###### #2 Retrieve Documents",
+                "###### #3 Upload Document",
+                "###### #4 DELETE Document",
                 "#### Step 4 - Integration - Role Upload",
                 "##### API Details",
                 "###### #1 Upload Roles",
@@ -644,9 +699,11 @@
               "path": "developer/04. Apps/03. App Release Approval/02. App Details.md",
               "name": "02. App Details.md",
               "chapter": [
-                "## App details",
+                "## App Details",
                 "### #1 Display App details",
-                "### #2 Display Images"
+                "### #2 Display Images",
+                "### #3 Download Documents",
+                "### #4 App Policy Data"
               ]
             },
             {
@@ -756,7 +813,8 @@
                 "## Service Offer Details",
                 "## Implementation Details",
                 "### #1 Get Service Offer Details",
-                "### #2 Get Service Order Details"
+                "### #2 Get Service Order Details",
+                "### #3 Download service related documents"
               ]
             }
           ]
@@ -771,10 +829,31 @@
               "chapter": [
                 "## Summary",
                 "## Implementation",
-                "### #1 Create Service Offering",
-                "### #2 Update Service Offering",
-                "### #3 Update Service Documentation / Additional Details",
-                "### #4 Submit new Service Offering for release/publishing"
+                "### Trigger the Publishing Process",
+                "#### Step 1 - Service Card Details",
+                "##### API Details",
+                "###### #1 Get Service Type",
+                "###### #2 Create Service Offering",
+                "###### #3 Get Service Details",
+                "###### #4 Update Service Offering",
+                "#### Step 2 - Service Page Details",
+                "##### Implementation Details",
+                "##### API Details",
+                "###### #1 Update Service Offering",
+                "###### #2 GET Service Details",
+                "#### Step 3 - Terms & Conditions / Consent",
+                "##### Implementation Details",
+                "##### API Details",
+                "###### #1 Retrieve Terms & Conditions",
+                "###### #2 Retrieve Documents",
+                "###### #3 Store Consent for Agreements",
+                "#### Step 4 - Validate & Submit for Publishing check",
+                "##### Implementation Details",
+                "##### API Details",
+                "###### #1 Get Service Details",
+                "###### #2 Submit new Service Offering for release/publishing",
+                "#### Others",
+                "###### #1 Update Service Documentation / Additional Details"
               ]
             },
             {
@@ -784,7 +863,9 @@
                 "## Summary",
                 "## Implementation",
                 "### #1 Approve Service Request",
-                "### #2 Decline Service Request"
+                "### #2 Decline Service Request",
+                "### #3 Service Details",
+                "### #4 Download service related documents"
               ]
             }
           ]
@@ -802,6 +883,24 @@
                 "### #1 Get Service Agreements",
                 "### #2 Post Subscription Request",
                 "### #3 Activate Subscription & Tenant"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "developer/05. Service(s)/04. Service Provider Management Board(s)",
+          "name": "04. Service Provider Management Board(s)",
+          "children": [
+            {
+              "path": "developer/05. Service(s)/04. Service Provider Management Board(s)/01. App Board.md",
+              "name": "01. App Board.md",
+              "chapter": [
+                "## Service Board",
+                "### #1 Service Overview",
+                "### #2 Service Details",
+                "#### Scenario: Service in Status \"ACTIVE\" or \"INACTIVE\"",
+                "#### Scenario: Service in Status \"IN PROGRESS\"",
+                "### #3 Download service related documents"
               ]
             }
           ]
@@ -961,34 +1060,17 @@
           "name": "Dev Process",
           "children": [
             {
-              "path": "developer/Technical Documentation/Dev Process/01. Development-Deployment (CI-CD).md",
-              "name": "01. Development-Deployment (CI-CD).md",
+              "path": "developer/Technical Documentation/Dev Process/Dev-flow_deploy-dev-env.md",
+              "name": "Dev-flow_deploy-dev-env.md",
               "chapter": [
-                "## Development / Deployment (CI/CD)"
+                "# Dev flow with deployment to dev environment"
               ]
             },
             {
-              "path": "developer/Technical Documentation/Dev Process/02. How to contribute.md",
-              "name": "02. How to contribute.md",
+              "path": "developer/Technical Documentation/Dev Process/Dev-flow_git-diagram.md",
+              "name": "Dev-flow_git-diagram.md",
               "chapter": [
-                "## Contribution details",
-                "### #1 Login",
-                "### #2 Open the repo",
-                "### #3 Create a fork",
-                "### #4 Fork setup",
-                "### #5 Fork work & commit"
-              ]
-            },
-            {
-              "path": "developer/Technical Documentation/Dev Process/05. Run frontend on localhost.md",
-              "name": "05. Run frontend on localhost.md",
-              "chapter": [
-                "# Frontend Environment",
-                "## Introduction",
-                "## Set up a local development environment",
-                "#### 1. Start the portal webserver instance on local port 3001",
-                "#### 2. Start the registration app webserver instance on local port 3002",
-                "#### 3. Start the reverse proxy and assets webserver instance on ports 3000 and 3003"
+                "# Dev flow (git diagram)"
               ]
             },
             {
@@ -1002,6 +1084,21 @@
               ]
             },
             {
+              "path": "developer/Technical Documentation/Dev Process/How to contribute.md",
+              "name": "How to contribute.md",
+              "chapter": [
+                "# Contribution details",
+                "## How To Contribute",
+                "### 1 Create a fork",
+                "### 2 Fork setup",
+                "### 3 Commit",
+                "## Commit and PR guidelines",
+                "### Commits",
+                "### PR title",
+                "### PR description"
+              ]
+            },
+            {
               "path": "developer/Technical Documentation/Dev Process/Multi Language.md",
               "name": "Multi Language.md",
               "chapter": [
@@ -1010,6 +1107,18 @@
                 "## Technical Implementation",
                 "### Portal-Registration",
                 "### CX-Portal"
+              ]
+            },
+            {
+              "path": "developer/Technical Documentation/Dev Process/Run frontend on localhost.md",
+              "name": "Run frontend on localhost.md",
+              "chapter": [
+                "# Run frontend locally",
+                "## Introduction",
+                "## Set up a local development environment",
+                "#### 1. Start the portal webserver instance on local port 3001",
+                "#### 2. Start the registration app webserver instance on local port 3002",
+                "#### 3. Start the reverse proxy and assets webserver instance on ports 3000 and 3003"
               ]
             }
           ]
@@ -1344,19 +1453,24 @@
               "name": "Release-Process.md",
               "chapter": [
                 "# Release Process",
-                "## Preparation",
-                "#### 1. Update changelog file",
-                "#### 2. Update dependencies file",
-                "#### 3. Version bump (frontend repos only)",
-                "#### 4. Merge from dev into main branch",
-                "## Build of a versioned image",
-                "## Release of a new helm chart version",
-                "## Merge upstream to eclipse-tractusx"
+                "## Preparations on the release branch",
+                "### 1. Version bump",
+                "### 2. Update changelog file",
+                "### 3. Update dependencies file",
+                "### 4. Aggregate migrations (backend repo only)",
+                "## Tag and build of a versioned image",
+                "## Merge release branch",
+                "## Release of a new consortia helm chart version",
+                "## Maintain upstream (eclipse-tractusx)",
+                "### License check with the Eclipse Dash License Tool",
+                "### Upstream for source code repositories",
+                "### Upstream for portal-cd",
+                "## Publish new version of Shared UI Components to npm"
               ]
             },
             {
-              "path": "developer/Technical Documentation/Operations/test.md",
-              "name": "test.md",
+              "path": "developer/Technical Documentation/Operations/Tests.md",
+              "name": "Tests.md",
               "chapter": [
                 "## Summary",
                 "## Unit Tests",
