@@ -1,6 +1,6 @@
 ## Summary
 
-The file describes portal database changes and impact on transactional data. Depending on the impact, possible risks/impediments on upgrades as well as mitigation plans are described.
+This document describes the portal database changes and its impact on transactional data. Depending on the impact, possible risks/impediments on upgrades as well as mitigation plans are described.
 Each section includes the respective change details, impact on existing data and the respective release with which the change is getting active.
 
 <br>
@@ -13,7 +13,7 @@ Each section includes the respective change details, impact on existing data and
 
 Impact on existing data:
 As part of the migration, the existing file ending/type available in documents.name will be used to set the media_type_id. Important: check beforehand if all documents have a document type added inside the document name. If not, add the document type or delete the document.
-Additionally check if all stored documents are supported by the types migrated in table porta.media_type. In case any other document type is currently loaded/stored, the migration will fail. In this case delete the document beforehand or enhance the migration script media types supported.
+Additionally check if all stored documents are supported by the types migrated in table portal.media_type. In case any other document type is currently loaded/stored, the migration will fail. In this case delete the document beforehand or enhance the migration script media types supported.
 
 <br>
 <br>
@@ -34,7 +34,7 @@ Impact on existing data:
 * process_id
 
 No manual intervention needed.
-For company applications currently in status "under creation" (means not yet submitted for validation) the change has no impact, since the process_id is created as part of the registration submitted. As soon as the participant submits the registration, the new process with the process_id will apply.
+For company applications currently in status "under creation" (which means not yet submitted for validation) the change has no impact, since the process_id is created as part of the registration submitted. As soon as the participant submits the registration, the new process with the process_id will apply.
 
 <br>
 <br>
@@ -46,7 +46,7 @@ For company applications currently in status "under creation" (means not yet sub
 
 New service_detail table released to manage technical user need for services with a true/false flag.
 Attributes
-* service_id 
+* service_id
 * service_type_id (connected to portal.service_types and replacing table service_assigned_service_types)
 * technical_user_needed (true/false flag)
 
@@ -58,11 +58,6 @@ Transactional data are automatically updated/migrated.
 
 Migration script existing, based on the service type which is fetched for all existing data from portal table service_assigned_service_types, the technical_user_needed attribute is set to "true" for "DATASPACE_SERVICE" services and "false" for "CONSULTANCE_SERVICE".
 
-
 ```dif
-Please note, thats an interim solution only an expected to get replaced again in version 1.4.0
+Please note, that it's an interim solution, which is expected to get replaced again in version 1.4.0
 ```
-
-<br>
-<br>
-
