@@ -83,14 +83,27 @@ Inside the registration sizes can be following:
 
 # Implementation Details
 
-## #1 Get Documents
-
-Documents can get retrieved in the registration and administration service backend for a specific application id.
 <br>
 
-```diff
-! GET /api/registration/application/{applicationId}/documentType/{documentTypeId}/documents
-```
+## #1 Get Documents
+
+Overview of all document related GET Endpoints:
+<br>
+
+WHAT              |Endpoint                                                         | Who can call the endpoint | What can I retrieve                 |
+----------------- | --------------------------------------------------------------- | ------------------------- | ----------------------------------- |
+CX Frame Docs     | GET: /api/registration/registrationDocuments/{documentId}       | All                       | All CX Frame flagged documents      |
+CX Frame Docs     | GET: /api/administration/frameDocuments/{documentId}            | All                       | All CX Frame flagged documents      |
+Registration Docs | GET: /api/registration/documents/{documentId}                   | All                       | Only my Company Docs                |
+Registration Docs | GET: /api/administration/documents/{documentID}                 | All                       | Only my Company Docs                |
+Registration Docs | GET: /api/administration/registration/documents/{documentId}    | Operator                  | Registration docus of all companies |
+Registration Docs | GET: /api/administration/documents/selfDescription/{documentId} | All                       | All SDs flagged documents           |
+App Documents     | GET: /api/apps/{appId}/appDocuments/{documentId}                | All                       | All app offer assigned docs         |
+Service Documents | GET: /api/services/{serviceId}/serviceDocuments/{documentId}    | All                       | All service offer assigned docs     |
+
+<br>
+
+In all those endpoints, the document itself will get retrived (e.g. pdf, json, png, etc.)
 
 <br>
 <br>

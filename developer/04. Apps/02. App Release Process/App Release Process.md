@@ -388,6 +388,31 @@ Privacy Policy options/enums are fetched from the portal db to display the selec
     }
 
 <br>
+
+following translation for the privacy policy tags
+
+DB Response | UI Tag Name 
+--- | --- 
+"COMPANY_DATA“ | Company Data
+"USER_DATA“ | User Data 
+"LOCATION" | Location 
+"BROWSER_HISTORY"	| Browser History 
+"NONE"	| None 
+
+<br>
+
+Design:
+
+<img width="676" alt="image" src="https://user-images.githubusercontent.com/94133633/229377043-5572bcde-a84c-41de-a44e-0f8115539a83.png">
+
+<br>
+
+In case the privacy policies can not get loaded, the response will look like defined below:
+
+<img width="658" alt="image" src="https://user-images.githubusercontent.com/94133633/229377086-7529cb89-4df4-442c-a531-13483c308554.png">
+
+
+<br>
 <br>
 
 #### Step 3 - Terms & Conditions / Consent
