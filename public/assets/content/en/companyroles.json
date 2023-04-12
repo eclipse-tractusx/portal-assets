@@ -301,7 +301,7 @@
       {
         "title": "Catena-X Marketplace",
         "description": "The CX marketplace is separated into two marketplaces - apps and services/tools. Both the marketplaces offer customer oriented offers to enable the customer to participate inside the network (services/tools) as well as support the daily business by use case specific business applications.",
-        "imagePath": "/images/content/CXMarketplace_Teaser.png",
+        "imagePath": "/images/content/CXMarketplace_Teaser.svg",
         "backgroundColor": "#FFFFFF",
         "id": "provider-id",
         "template": "TextImageSideBySideWithCardGrid",
@@ -350,7 +350,7 @@
       {
         "title": "Subscriptions",
         "description": "Inside the app and service marketplace, subscriptions to avialable offers can get made. Find out more how this works by following the details below",
-        "imagePath": "/images/content/CXSubscription_Teaser.png",
+        "imagePath": "/images/content/CXSubscription_Teaser.svg",
         "id": "operations-id",
         "backgroundColor": "#F9F9F9",
         "template": "TextImageSideBySideWithCardGrid",
