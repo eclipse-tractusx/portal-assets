@@ -14,12 +14,13 @@
     "http-server": "^14.1.1"
   },
   "dependencies": {
+    "mermaid": "^10.0.2",
     "zero-md": "^2.4.0"
   },
   "scripts": {
     "build:release": "node src/documentation/Release.js ${1}",
-    "build": "mkdir -p ./public/documentation/js/lib && cp -R ./node_modules/zero-md/dist/zero-md.min* ./public/documentation/js/lib/",
-    "build:sources": "zip -r portal-assets.zip src package.json yarn.lock -x '*.stories.*' -x '*.test.*' -x '*.ttf' -x '*.svg' -x '*.png'",
+    "build": "./scripts/build.sh",
+    "build:sources": "zip -r portal-assets.zip src package.json yarn.lock -x '*.stories.*' -x '*.test.*' -x '*.ttf' -x '*.svg' -x '*.png' -x '*.jpg'",
     "start": "concurrently \"yarn start:assets\" \"yarn start:proxy\" \"open http://localhost:3000/\"",
     "start:proxy": "node src/proxy/index.cjs",
     "start:assets": "http-server -a 127.0.0.1 -p 3003"

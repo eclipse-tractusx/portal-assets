@@ -20,6 +20,7 @@
 import { clear, addEvents, N, Viewable, NavTools } from "./Toolkit.js"
 import { state } from "./State.js"
 import { Patterns, Settings } from "./Settings.js"
+import mermaid from "./lib/mermaid/mermaid.esm.min.mjs"
 
 const normalize = (path) => path.replace(/[^a-zA-Z0-9_-]/g, '_')
 
@@ -399,12 +400,14 @@ class Content extends Viewable {
         this.markdown = N('script', ' ', { type: 'text/markdown' })
         this.page = N('zero-md', this.markdown)
         this.loader = N('div', '', { class: 'loader hidden' })
+        this.diags = N('div', null, { style: 'visibility: hidden' })
         this.view = N('article', [
             N('div', [
                 this.breadcrumb,
                 this.loader,
             ]),
             this.page,
+            this.diags,
         ], { class: 'content small' })
     }
 
@@ -416,6 +419,52 @@ class Content extends Viewable {
     selectionChanged(selection, content) {
         this.breadcrumb.selectionChanged(selection, content)
         return this.renderArticle(content)
+    }
+
+    getRoot() {
+        return this.page
+    }
+
+    getMD() {
+        return this.page.lastChild.firstChild.data
+    }
+
+    zeromdReady() {
+        this.pageHasLoaded()
+    }
+
+    pageHasLoaded() {
+        if (!this.page.shadowRoot.styleSheets[0]) {
+            setTimeout(this.pageHasLoaded.bind(this), 10)
+            return
+        }
+        this.replaceLinks()
+        this.renderMermaid()
+    }
+
+    async renderMermaidDef(node, def) {
+        const diag = N('pre', def, { class: 'mermaid' })
+        this.diags.appendChild(diag)
+        try {
+            await mermaid.run({
+                nodes: [diag]
+            })
+            node.replaceWith(diag)
+        } catch (e) {
+            console.log(e)
+            this.diags.removeChild(diag)
+        }
+        return diag
+    }
+
+    async renderMermaid() {
+        const blocks = [...this.page.shadowRoot.querySelectorAll('pre.language-mermaid')]
+        if (blocks.length === 0) {
+            return
+        }
+        const defs = this.page.lastChild.firstChild.data.split('```').filter((block) => block.startsWith('mermaid')).map(block => block.substring(8))
+        mermaid.initialize()
+        blocks.forEach((block, i) => this.renderMermaidDef(block, defs[i]))
     }
 
     replacePage(page) {
@@ -451,7 +500,7 @@ class Content extends Viewable {
     }
 
     replaceLink(link) {
-        const path = decodeURI(link.href).replace(/^.*docs\//,'docs/').replace(/\/$/, '')
+        const path = decodeURI(link.href).replace(/^.*docs\//, 'docs/').replace(/\/$/, '')
         link.setAttribute('href', `.?path=${encodeURI(path)}`)
         return link
     }
@@ -478,7 +527,7 @@ class Content extends Viewable {
 
     filterText(text) {
         const path = state.selection.split('/').map(encodeURIComponent).join('/')
-        return text.replaceAll('](.',`](${Settings.DOCBASE}/${state.releaseSelection}/${path}`)
+        return text.replaceAll('](.', `](${Settings.DOCBASE}/${state.releaseSelection}/${path}`)
     }
 
     mdFromText(text) {
@@ -486,17 +535,17 @@ class Content extends Viewable {
         this.replacePage(
             N('zero-md', N('script', filterText, { type: 'text/markdown' }))
         )
-        setTimeout(this.replaceLinks.bind(this), 100)
+        setTimeout(this.pageHasLoaded.bind(this), 10)
         this.loader.classList.add('hidden')
         return this
     }
 
     mdFromURL(url) {
         this.replacePage(
-            N('zero-md', null, { src: url })
+            N('zero-md', null)
         )
         // we don't get an onload event from zero-md so waiting one sec before replacing the links
-        setTimeout(this.replaceLinks.bind(this), 1000)
+        setTimeout(this.pageHasLoaded.bind(this), 10)
         return this
     }
 
@@ -579,7 +628,7 @@ class App extends Viewable {
         state.setReleaseSelection(releases[0].name)
     }
 
-    releaseSelectionChanged(releaseSelection) {        
+    releaseSelectionChanged(releaseSelection) {
         fetch(`data/${releaseSelection.split('/').slice(-1)[0]}/${NavTools.getRoot()}.json`)
             .then(response => response.json())
             .then(state.setData.bind(state))
