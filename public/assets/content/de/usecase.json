@@ -115,7 +115,7 @@
       "detailsWithImageRow1": [
         {
           "title": "Trace X",
-          "imagePath": "/images/content/teaser.png",
+          "imagePath": "/images/content/CX.jpg",
           "description": "Ermöglicht die lückenlose Rückverfolgbarkeit von Teilen über die Lieferkette von n.tier – visualisiert detaillierte Informationen über die Komponenten von direkten Lieferanten und Direktkunden.",
           "readMore": "/appdetail/ac1cf001-7fbc-1f2f-817f-bce0572c0007",
           "readMoreTitle": "App Details öffnen",
@@ -124,7 +124,7 @@
         },
         {
           "title": "Smart MOM",
-          "imagePath": "/images/content/teaser.png",
+          "imagePath": "/images/content/GEC.jpg",
           "description": "Konsolidiert alle Produktionsprozesse und Systeme zur Steuerung von Herstellungsprozessen…",
           "readMore": "/appdetail/5cf74ef8-e0b7-4984-a872-474828beb5d1",
           "readMoreTitle": "App Details öffnen",
@@ -133,7 +133,7 @@
         },
         {
           "title": "SAP BN MT",
-          "imagePath": "/images/content/teaser.png",
+          "imagePath": "/images/content/SAP.jpg",
           "description": "stellt eine Lösung zur unternehmensübergreifenden Lieferkettentransparenz und Material Rückverfolgbarkeit dar…",
           "readMore": "/appdetail/5cf74ef8-e0b7-4984-a872-474828beb5d7",
           "readMoreTitle": "App Details öffnen",
@@ -142,7 +142,7 @@
         },
         {
           "title": "Trusted Traceability",
-          "imagePath": "/images/content/teaser.png",
+          "imagePath": "/images/content/Siemens.jpg",
           "description": "ist als vollständig verwaltetes System (Software-as-a-Service) verfügbar und ermöglicht die Einführung der Rückverfolgbarkeit…",
           "readMore": "/appdetail/ac1cf001-7fbc-1f2f-817f-bce05748000d",
           "readMoreTitle": "App Details öffnen",
