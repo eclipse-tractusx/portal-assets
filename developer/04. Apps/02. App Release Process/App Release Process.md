@@ -327,7 +327,10 @@ Request Body
       "price": "string",
       "privacyPolicies": [
         e.g. "COMPANY_DATA"
-      ]
+      ],
+      "providerUri": "string",
+      "contactEmail": "string",
+      "contactNumber": "string"  
     }
 
 <br>
