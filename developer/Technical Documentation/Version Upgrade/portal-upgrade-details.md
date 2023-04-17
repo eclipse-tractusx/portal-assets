@@ -27,7 +27,7 @@ Additionally check if all stored documents are supported by the types migrated i
 * REMOVED: removed table application_assigned_process_steps
 
 Impact on existing data:
-?? Existing company registration data currently under validation are automatically expanded with the respective attribute values for the new tables/attributes ??
+Existing company registration data currently under validation are automatically expanded with the respective attribute values for the new tables/attributes
 * processes
 * process_types
 * checklist_process_id
