@@ -4,9 +4,14 @@ This document describes the portal database changes and its impact on transactio
 Each section includes the respective change details, impact on existing data and the respective release with which the change is getting active.
 
 <br>
+
+> **_INFO:_** inside the detailed descriptions below, the definition 'migration script' refers to the term 'migrations' as it is defined by the ef-core framework: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations
+
+
+<br>
 <br>
 
-#### Mediatype - NEW & ENHANCED - 1.3.0
+#### Mediatype - NEW & ENHANCED - 1.2.0
 
 * NEW: table "media_types"
 * ENHANCED: table portal.documents "media_type_id" added
@@ -18,7 +23,7 @@ Additionally check if all stored documents are supported by the types migrated i
 <br>
 <br>
 
-#### Application Checklist - ENHANCED - 1.2.0
+#### Application Checklist - ENHANCED - 1.1.0
 
 * NEW: portal.processes
 * NEW: portal.process_types
@@ -58,6 +63,9 @@ Transactional data are automatically updated/migrated.
 
 Migration script existing, based on the service type which is fetched for all existing data from portal table service_assigned_service_types, the technical_user_needed attribute is set to "true" for "DATASPACE_SERVICE" services and "false" for "CONSULTANCE_SERVICE".
 
-```dif
-Please note, that it's an interim solution, which is expected to get replaced again in version 1.4.0
-```
+<br>
+
+> **_INFO:_** Please note: this is an interim solution which is expected to get replaced/changed in version 1.4.0
+
+<br>
+<br>
