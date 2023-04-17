@@ -17,8 +17,27 @@ Each section includes the respective change details, impact on existing data and
 * ENHANCED: table portal.documents "media_type_id" added
 
 Impact on existing data:
-As part of the migration, the existing file ending/type available in documents.name will be used to set the media_type_id. Important: check beforehand if all documents have a document type added inside the document name. If not, add the document type or delete the document.
+As part of the migration, for all existing documents stored in the table portal.documents, the filename extension will be used to define and store the media_type_id of the respective document inside the new table attribute. Important: check beforehand if all documents have a document type added inside the document name. If not, add the document type or delete the document.
 Additionally check if all stored documents are supported by the types migrated in table portal.media_type. In case any other document type is currently loaded/stored, the migration will fail. In this case delete the document beforehand or enhance the migration script media types supported.
+
+<br>
+
+Supported document types:
+
+media_type_id | media_type 
+--- | --- 
+1 | .jpg 
+1 | .jpeg
+2 | .gif
+3 | .png
+4 | .svg
+5 | .tif
+6 | .pdf
+7 | .json
+8 | .pem
+9 | .ca_cert
+10 | .pkx_cer
+11 | .octet
 
 <br>
 <br>
