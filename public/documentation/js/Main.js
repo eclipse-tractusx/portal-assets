@@ -418,6 +418,14 @@ class Content extends Viewable {
         return this.renderArticle(content)
     }
 
+    pageHasLoaded() {
+        if (!this.page.shadowRoot.styleSheets[0]) {
+            setTimeout(this.pageHasLoaded.bind(this), 10)
+            return
+        }
+        this.replaceLinks()
+    }
+
     replacePage(page) {
         const parent = this.page.parentElement
         parent.removeChild(this.page)
@@ -435,7 +443,7 @@ class Content extends Viewable {
         })
     }
 
-    replaceLink(item) {
+    addHeadlineLink(item) {
         const newItem = N('div', null, { class: 'headline' })
         const link = this.renderLink(this.content, item.id)
         item.parentElement.insertBefore(newItem, item)
@@ -450,20 +458,16 @@ class Content extends Viewable {
         }
     }
 
+    replaceLink(link) {
+        const path = decodeURI(link.href).replace(/^.*docs\//,'docs/').replace(/\/$/, '')
+        link.setAttribute('href', `.?path=${encodeURI(path)}`)
+        return link
+    }
+
     replaceLinks() {
         const root = this.page.shadowRoot;
-        [...root.querySelectorAll('a')].forEach(link => addEvents(
-            link,
-            {
-                click: (e) => {
-                    e.preventDefault()
-                    const path = decodeURI(link.href).replace(`${Settings.DOCBASE}/${state.releaseSelection}/`, '').replace(/\/$/, '')
-                    e.target.href = `.?path=${path}`
-                    state.setSelection(path)
-                }
-            }
-        ));
-        [...root.querySelectorAll('h1, h2, h3, h4, h5, h6')].forEach(this.replaceLink.bind(this))
+        [...root.querySelectorAll('a')].forEach(this.replaceLink.bind(this));
+        [...root.querySelectorAll('h1, h2, h3, h4, h5, h6')].forEach(this.addHeadlineLink.bind(this))
         root.styleSheets[0].insertRule('h1:hover, h2:hover, h3:hover, h4:hover, h5:hover { text-decoration: underline; cursor: pointer; }')
         root.styleSheets[0].insertRule('.headline { position: relative; }')
         root.styleSheets[0].insertRule('a.github { position: absolute; width: 20px; height: 20px; bottom: 15%; right: 0px; background-color: #888888; display: none; }')
@@ -490,7 +494,7 @@ class Content extends Viewable {
         this.replacePage(
             N('zero-md', N('script', filterText, { type: 'text/markdown' }))
         )
-        setTimeout(this.replaceLinks.bind(this), 100)
+        setTimeout(this.pageHasLoaded.bind(this), 10)
         this.loader.classList.add('hidden')
         return this
     }
@@ -500,7 +504,7 @@ class Content extends Viewable {
             N('zero-md', null, { src: url })
         )
         // we don't get an onload event from zero-md so waiting one sec before replacing the links
-        setTimeout(this.replaceLinks.bind(this), 1000)
+        setTimeout(this.pageHasLoaded.bind(this), 10)
         return this
     }
 
