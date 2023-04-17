@@ -8,11 +8,11 @@
     "Purchaser"
     ],
   "descriptions": [
-    "The Company Admin is the company admin for the company administration. Company Administrators are able to do the Company Registration, Connector Registration, Company Configuration and User Management",
-    "The IT Admin is the company admin for IT administration between the company network and catena-x. IT Admins are able to Configure the IdP, User Management and Connector Registration.",
-    "The CX User is a standard user in the network and will be used for most users. This users can not create agreements or order services, but they can explore available services and access there business applications",
-    "The Business Admin is able to subscribe an app in the name of the company.",
-    "The Purchase is able to subscribe an app in the name of the company."
+    "Der Unternehmensadministrator ist der Unternehmensadministrator für die Unternehmensverwaltung. Unternehmensadministratoren können die Unternehmensregistrierung, Connector-Registrierung, Unternehmenskonfiguration und Benutzerverwaltung durchführen.",
+    "Der IT-Admin ist der Firmen-Admin für die IT-Administration zwischen dem Firmennetzwerk und catena-x. IT-Administratoren können den IdP, die Benutzerverwaltung und die Connector-Registrierung konfigurieren.",
+    "Der CX-Benutzer ist ein Standardbenutzer im Netzwerk und wird für die meisten Benutzer verwendet. Diese Benutzer können keine Vereinbarungen erstellen oder Dienste bestellen, aber sie können verfügbare Dienste erkunden und auf ihre Geschäftsanwendungen zugreifen.",
+    "Der Business-Admin kann eine App im Namen des Unternehmens abonnieren.",
+    "Der Einkäufer kann eine App im Namen des Unternehmens abonnieren."
     ]
 },
  {
@@ -24,9 +24,9 @@
     "Sales Manager"
     ],
   "descriptions": [
-    "The App Manager is able to add, delete and change an app",
-    "App Developer is able to explore the network (like the CX User) and has on top access to the developer guidlines.",
-    "The Service Manager is the user which is managing the offered service. Add new services, assign Sales Manager and retire services.",
-    "The Sales Manager is the user which is involved in the app/service sales process. The Sales Manager is linked to the app inside th marketplace and will receive notifications for subscription requests."
+    "Der App Manager kann eine App hinzufügen, löschen und ändern",
+    "Der App-Entwickler kann das Netzwerk erkunden (wie der CX-Benutzer) und hat zusätzlich Zugriff auf die Richtlinien für Entwickler.",
+    "Der Service Manager ist der Benutzer, der den angebotenen Service verwaltet. Fügen Sie neue Services hinzu, weisen Sie Sales Manager zu und ziehen Sie Services zurück.",
+    "Der Sales Manager ist der Benutzer, der am App-/Service-Verkaufsprozess beteiligt ist. Der Vertriebsleiter ist mit der App innerhalb des Marktplatzes verknüpft und erhält Benachrichtigungen für Abonnementanfragen."
     ]
 }]
