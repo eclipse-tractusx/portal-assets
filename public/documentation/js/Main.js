@@ -20,7 +20,7 @@
 import { clear, addEvents, N, Viewable, NavTools } from "./Toolkit.js"
 import { state } from "./State.js"
 import { Patterns, Settings } from "./Settings.js"
-import mermaid from "./lib/mermaid/mermaid.esm.min.mjs"
+import mermaid from "./lib/mermaid/mermaid.esm.min.js"
 
 const normalize = (path) => path.replace(/[^a-zA-Z0-9_-]/g, '_')
 
