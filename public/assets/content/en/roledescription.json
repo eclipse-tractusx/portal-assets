@@ -8,11 +8,11 @@
     "Purchaser"
     ],
   "descriptions": [
-    "The Company Admin is the company admin for the company administration. Company Administrators are able to do the <strong>Company Registration</strong>, <strong>Connector Registration</strong>, <strong>Company Configuration</strong> and <strong>User Management</strong>",
-    "The IT Admin is the company admin for IT administration between the company network and catena-x. IT Admins are able to <strong>Configure the IdP</strong>, <strong>User Management</strong> and <strong>Connector Registration</strong>.",
-    "This is the role description fetched from the locale file. Ideally this is located in a standalone local file, I would not suggest to use existing files.",
-    "This is the role description fetched from the locale file. Ideally this is located in a standalone local file, I would not suggest to use existing files.",
-    "This is the role description fetched from the locale file. Ideally this is located in a standalone local file, I would not suggest to use existing files."
+    "The Company Admin is the company admin for the company administration. Company Administrators are able to do the Company Registration, Connector Registration, Company Configuration and User Management",
+    "The IT Admin is the company admin for IT administration between the company network and catena-x. IT Admins are able to Configure the IdP, User Management and Connector Registration.",
+    "The CX User is a standard user in the network and will be used for most users. This users can not create agreements or order services, but they can explore available services and access there business applications",
+    "The Business Admin is able to subscribe an app in the name of the company.",
+    "The Purchase is able to subscribe an app in the name of the company."
     ]
 },
  {
@@ -24,9 +24,9 @@
     "Sales Manager"
     ],
   "descriptions": [
-    "This is the role description fetched from the locale file. Ideally this is located in a standalone local file, I would not suggest to use existing files.",
-    "This is the role description fetched from the locale file. Ideally this is located in a standalone local file, I would not suggest to use existing files.",
-    "This is the role description fetched from the locale file. Ideally this is located in a standalone local file, I would not suggest to use existing files.",
-    "This is the role description fetched from the locale file. Ideally this is located in a standalone local file, I would not suggest to use existing files."
+    "The App Manager is able to add, delete and change an app",
+    "App Developer is able to explore the network (like the CX User) and has on top access to the developer guidlines.",
+    "The Service Manager is the user which is managing the offered service. Add new services, assign Sales Manager and retire services.",
+    "The Sales Manager is the user which is involved in the app/service sales process. The Sales Manager is linked to the app inside th marketplace and will receive notifications for subscription requests."
     ]
 }]

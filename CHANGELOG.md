@@ -2,6 +2,28 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
+
+## 1.3.0 RC3
+
+### Change
+* Role Description Content
+  * removed markups
+  * updated translation file (de)
+* Use Case Introduction
+  * exchanged images for the use case introduction page and reduced image size
+* Developer Docu
+  * enhanced connector registration documentation related to daps
+  * enhanced app release process docu - endpoint request body for change app
+
+### Feature
+n/a
+
+### Technical Support
+n/a
+
+### Bugfix
+n/a
+
 ## 1.3.0 RC2
 
 ### Change
