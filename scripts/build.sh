@@ -24,5 +24,19 @@ copy-dist() {
     cp -R ./node_modules/$1/dist/* ./public/documentation/js/lib/$1    
 }
 
+workarounds() {
+    # Kubernetes ingress controllers don't deliver .mjs with correct MIME type: text/javascript
+    # so we rename from .mjs to .js
+    # Error in browser
+    # Failed to load module script: Expected a JavaScript module script but the server responded
+    # with a MIME type of "application/octet-stream". Strict MIME type checking is enforced for
+    # module scripts per HTML spec.
+    MM_PATH=./public/documentation/js/lib/mermaid
+    cp $MM_PATH/mermaid.esm.min.mjs $MM_PATH/mermaid.esm.min.js 
+    cp $MM_PATH/mermaid.esm.min.mjs.map $MM_PATH/mermaid.esm.min.js.map
+}
+
 copy-dist zero-md
 copy-dist mermaid
+
+workarounds
