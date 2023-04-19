@@ -13,7 +13,7 @@
         "description": "The marketplace is structured into 2 different areaa - Apps and Services. Depending on your need you can access the marketplace and receive an overview of available apps/services of a wide range of providers.",
         "imagePath": "/images/content/teaser.png",
         "backgroundColor": "#DAE3EB",
-        "id": "provider-id",
+        "id": "intro-id",
         "template": "TextImageSideBySideWithCardGrid",
         "detailsWithImageRow1": [
           {
@@ -58,7 +58,7 @@
         "title": "Marketplace Subscriptions",
         "description": "Inside the app and service marketplace, subscriptions to avialable offers can get made. Find out more how this works by following the details below",
         "imagePath": "/images/content/teaser.png",
-        "id": "operations-id",
+        "id": "data-id",
         "backgroundColor": "#F9F9F9",
         "template": "TextImageSideBySideWithCardGrid",
         "detailsWithImageRow1": [
@@ -107,7 +107,7 @@
         "title": "Dataspace participants",
         "description": "Details regarding the dataspace ",
         "imagePath": "/images/content/teaser.png",
-        "id": "participant-id",
+        "id": "business-id",
         "backgroundColor": "#FFFFFF",
         "template": "TextImageSideBySideWithCardGrid",
         "detailsWithImageRow1": [
@@ -159,7 +159,7 @@
         "imagePath": "/images/content/teaser.png",
         "backgroundColor": "#DAE3EB",
         "template": "TextImageSideBySideWithCardGrid",
-        "id": "provider-id",
+        "id": "intro-id",
         "detailsWithImageRow1": [
           {
             "title": "App Marketplace",
@@ -203,7 +203,7 @@
         "title": "Marketplace Subscriptions",
         "description": "Inside the app and service marketplace, subscriptions to avialable offers can get made. Find out more how this works by following the details below",
         "imagePath": "/images/content/teaser.png",
-        "id": "operations-id",
+        "id": "data-id",
         "template": "TextImageSideBySideWithCardGrid",
         "backgroundColor": "#F9F9F9",
         "detailsWithImageRow1": [
@@ -252,7 +252,7 @@
         "title": "Dataspace participants",
         "description": "Details regarding the dataspace ",
         "imagePath": "/images/content/teaser.png",
-        "id": "participant-id",
+        "id": "business-id",
         "template": "TextImageSideBySideWithCardGrid",
         "backgroundColor": "#FFFFFF",
         "detailsWithImageRow1": [
@@ -303,7 +303,7 @@
         "description": "The CX marketplace(s) are separated between apps and services. Both the marketplaces offer customer oriented offers to enable the customer to participate inside the network as well as support the daily business by use case specific business applications.",
         "imagePath": "/images/content/teaser.png",
         "backgroundColor": "#FFFFFF",
-        "id": "provider-id",
+        "id": "intro-id",
         "template": "TextImageSideBySideWithCardGrid",
         "detailsWithImageRow1": [
           {
@@ -358,7 +358,7 @@
         "title": "Marketplace Subscriptions",
         "description": "Inside the app and service marketplace, subscriptions to avialable offers can get made. Find out more how this works by following the details below",
         "imagePath": "/images/content/teaser.png",
-        "id": "operations-id",
+        "id": "data-id",
         "backgroundColor": "#F9F9F9",
         "template": "TextImageSideBySideWithCardGrid",
         "detailsWithImageRow1": [
@@ -407,7 +407,7 @@
         "title": "Dataspace participants",
         "description": "Details regarding the dataspace ",
         "imagePath": "/images/content/teaser.png",
-        "id": "participant-id",
+        "id": "business-id",
         "backgroundColor": "#FFFFFF",
         "template": "TextImageSideBySideWithCardGrid",
         "detailsWithImageRow1": [
@@ -458,7 +458,7 @@
         "description": "The marketplace is structured into 2 different areaa - Apps and Services. Depending on your need you can access the marketplace and receive an overview of available apps/services of a wide range of providers.",
         "imagePath": "/images/content/teaser.png",
         "backgroundColor": "#DAE3EB",
-        "id": "provider-id",
+        "id": "intro-id",
         "template": "TextImageSideBySideWithCardGrid",
         "detailsWithImageRow1": [
           {
@@ -503,7 +503,7 @@
         "title": "Marketplace Subscriptions",
         "description": "Inside the app and service marketplace, subscriptions to avialable offers can get made. Find out more how this works by following the details below",
         "imagePath": "/images/content/teaser.png",
-        "id": "operations-id",
+        "id": "data-id",
         "template": "TextImageSideBySideWithCardGrid",
         "backgroundColor": "#F9F9F9",
         "detailsWithImageRow1": [
@@ -551,7 +551,7 @@
         "title": "Dataspace participants",
         "description": "Details regarding the dataspace ",
         "imagePath": "/images/content/teaser.png",
-        "id": "participant-id",
+        "id": "business-id",
         "template": "TextImageSideBySideWithCardGrid",
         "backgroundColor": "#FFFFFF",
         "detailsWithImageRow1": [

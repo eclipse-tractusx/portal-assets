@@ -1,6 +1,6 @@
 {
   "name": "cx-portal-assets",
-  "version": "v1.3.0-RC2",
+  "version": "v1.3.0-RC3",
   "description": "Shared frontend content and static assets for the Catena-X Portal",
   "main": "index.js",
   "repository": "git@github.com:eclipse-tractusx/portal-assets.git",
