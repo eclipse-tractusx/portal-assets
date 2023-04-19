@@ -115,7 +115,7 @@
         "detailsWithImageRow1": [
           {
             "title": "Trace X",
-            "imagePath": "/images/content/teaser.png",
+            "imagePath": "/images/content/CX.jpg",
             "description": "Enables seamless traceability of parts across n.tier's supply chain - visualizes...",
             "readMore": "/appdetail/ac1cf001-7fbc-1f2f-817f-bce0572c0007",
             "readMoreTitle": "Get to the app",
@@ -124,7 +124,7 @@
           },
           {
             "title": "Smart MOM",
-            "imagePath": "/images/content/teaser.png",
+            "imagePath": "/images/content/GEC.jpg",
             "description": "Consolidates all production processes and systems to control manufacturing processes...",
             "readMore": "/appdetail/5cf74ef8-e0b7-4984-a872-474828beb5d1",
             "readMoreTitle": "Get to the app",
@@ -133,7 +133,7 @@
           },
           {
             "title": "SAP BN MT",
-            "imagePath": "/images/content/teaser.png",
+            "imagePath": "/images/content/SAP.jpg",
             "description": "is a solution for cross-company supply chain transparency and material traceability...",
             "readMore": "/appdetail/5cf74ef8-e0b7-4984-a872-474828beb5d7",
             "readMoreTitle": "Get to the app",
@@ -142,7 +142,7 @@
           },
           {
             "title": "Trusted Traceability",
-            "imagePath": "/images/content/teaser.png",
+            "imagePath": "/images/content/Siemens.jpg",
             "description": "is a fully managed system (software-as-a-service) and enables the introduction of traceability...",
             "readMore": "/appdetail/ac1cf001-7fbc-1f2f-817f-bce05748000d",
             "readMoreTitle": "Get to the app",

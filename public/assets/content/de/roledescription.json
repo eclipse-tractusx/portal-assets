@@ -8,11 +8,11 @@
     "Purchaser"
     ],
   "descriptions": [
-    "The Company Admin is the company admin for the company administration. Company Administrators are able to do the <strong>Company Registration</strong>, <strong>Connector Registration</strong>, <strong>Company Configuration</strong> and <strong>User Management</strong>",
-    "The IT Admin is the company admin for IT administration between the company network and catena-x. IT Admins are able to <strong>Configure the IdP</strong>, <strong>User Management</strong> and <strong>Connector Registration</strong>.",
-    "This is the role description fetched from the locale file. Ideally this is located in a standalone local file, I would not suggest to use existing files.",
-    "This is the role description fetched from the locale file. Ideally this is located in a standalone local file, I would not suggest to use existing files.",
-    "This is the role description fetched from the locale file. Ideally this is located in a standalone local file, I would not suggest to use existing files."
+    "Der Unternehmensadministrator ist der Unternehmensadministrator für die Unternehmensverwaltung. Unternehmensadministratoren können die Unternehmensregistrierung, Connector-Registrierung, Unternehmenskonfiguration und Benutzerverwaltung durchführen.",
+    "Der IT-Admin ist der Firmen-Admin für die IT-Administration zwischen dem Firmennetzwerk und catena-x. IT-Administratoren können den IdP, die Benutzerverwaltung und die Connector-Registrierung konfigurieren.",
+    "Der CX-Benutzer ist ein Standardbenutzer im Netzwerk und wird für die meisten Benutzer verwendet. Diese Benutzer können keine Vereinbarungen erstellen oder Dienste bestellen, aber sie können verfügbare Dienste erkunden und auf ihre Geschäftsanwendungen zugreifen.",
+    "Der Business-Admin kann eine App im Namen des Unternehmens abonnieren.",
+    "Der Einkäufer kann eine App im Namen des Unternehmens abonnieren."
     ]
 },
  {
@@ -24,9 +24,9 @@
     "Sales Manager"
     ],
   "descriptions": [
-    "This is the role description fetched from the locale file. Ideally this is located in a standalone local file, I would not suggest to use existing files.",
-    "This is the role description fetched from the locale file. Ideally this is located in a standalone local file, I would not suggest to use existing files.",
-    "This is the role description fetched from the locale file. Ideally this is located in a standalone local file, I would not suggest to use existing files.",
-    "This is the role description fetched from the locale file. Ideally this is located in a standalone local file, I would not suggest to use existing files."
+    "Der App Manager kann eine App hinzufügen, löschen und ändern",
+    "Der App-Entwickler kann das Netzwerk erkunden (wie der CX-Benutzer) und hat zusätzlich Zugriff auf die Richtlinien für Entwickler.",
+    "Der Service Manager ist der Benutzer, der den angebotenen Service verwaltet. Fügen Sie neue Services hinzu, weisen Sie Sales Manager zu und ziehen Sie Services zurück.",
+    "Der Sales Manager ist der Benutzer, der am App-/Service-Verkaufsprozess beteiligt ist. Der Vertriebsleiter ist mit der App innerhalb des Marktplatzes verknüpft und erhält Benachrichtigungen für Abonnementanfragen."
     ]
 }]
