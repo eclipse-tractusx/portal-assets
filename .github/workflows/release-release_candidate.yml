@@ -96,7 +96,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Set env
         run: echo "RELEASE_VERSION=${{ env.TAG_NAME }}" >> $GITHUB_ENV
 
