@@ -81,8 +81,6 @@ Impact on existing data:
 Migration script existing, based on the service type which is fetched for all existing data from portal table service_assigned_service_types, the technical_user_needed attribute is set to "true" for "DATASPACE_SERVICE" services and "false" for "CONSULTANCE_SERVICE".
 Transactional data are automatically updated/migrated. 
 
-Migration script existing, based on the service type which is fetched for all existing data from portal table service_assigned_service_types, the technical_user_needed attribute is set to "true" for "DATASPACE_SERVICE" services and "false" for "CONSULTANCE_SERVICE".
-
 <br>
 
 > **_INFO:_** Please note: this is an interim solution which is expected to get replaced/changed in version 1.4.0
