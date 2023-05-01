@@ -314,9 +314,11 @@ Missing inside the documentation:
 
 ![Tag](https://img.shields.io/static/v1?label=&message=UnderDevelopment&color=bluew&style=flat)
 
-Notification "Done" state is available as automatic "Done" Flag in case a "Action Required" notification was successfully accomblished, while the notification is still visible in the respective user notification inbox.
+Notification "Done" state is available as automatic "Done" Flag in case a "Action Required" notification was successfully accomblished, while the notification is still visible in the respective user notification inbox.  
+<br>
+In the scenario of the following notification types, the notification table attribute "done" is tagged as "false" as soon as the notification is created. If one of the below defined endpoints is triggered for the respective notification object, the notification is getting set to "true" (for attribute "done")
 
-In the scenario of the following notification types, the notification is getting set to "DONE" if th notification is and of the below notification types and respective necessary endpoint is triggered
+<br>
 
 Notification Type | Endpoint triggering the "DONE" Flag | Comment 
 ----------------- | ----------------------------------- | -------- 
@@ -324,6 +326,10 @@ Notification Type | Endpoint triggering the "DONE" Flag | Comment
 11	        | PUT: /api/apps/appreleaseprocess/{appId}/approveApp <br> PUT: /api/apps/appreleaseprocess/{appId}/declineApp | 
 13	        | POST: /api/services/autoSetup	 | 
 17	        | PUT: /api/services/servicerelease/{serviceId}/approveService <br> PUT: /api/services/servicerelease/{serviceId}/declineService | 
+
+<br>
+
+For any other notifications, the attribute "done" inside the table portal.notifications will be "NULL"
 
 <br>
 <br>
