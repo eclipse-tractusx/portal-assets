@@ -307,4 +307,24 @@ Missing inside the documentation:
 * CONNECTOR_REGISTERED
 * APP_RELEASE_REQUEST
 
+<br>
+<br>
+
+## Notification "Done" State
+
+![Tag](https://img.shields.io/static/v1?label=&message=UnderDevelopment&color=bluew&style=flat)
+
+Notification "Done" state is available as automatic "Done" Flag in case a "Action Required" notification was successfully accomblished, while the notification is still visible in the respective user notification inbox.
+
+In the scenario of the following notification types, the notification is getting set to "DONE" if th notification is and of the below notification types and respective necessary endpoint is triggered
+
+Notification Type | Endpoint triggering the "DONE" Flag | Comment 
+----------------- | ----------------------------------- | -------- 
+8                 |	POST: /api/apps/autoSetup <br> 	      |  
+11	        | PUT: /api/apps/appreleaseprocess/{appId}/approveApp <br> PUT: /api/apps/appreleaseprocess/{appId}/declineApp | 
+13	        | POST: /api/services/autoSetup	 | 
+17	        | PUT: /api/services/servicerelease/{serviceId}/approveService <br> PUT: /api/services/servicerelease/{serviceId}/declineService | 
+
+<br>
+<br>
 
