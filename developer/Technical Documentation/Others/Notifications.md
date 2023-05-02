@@ -275,6 +275,8 @@ https://portal-backend.dev.demo.catena-x.net/api/Notification?page=0&size=15&onl
 Welcome Messages, triggered by the api endpoint
 * PUT api/administration/registration/application/{applicationId}/approveRequest 
 
+<br>
+
 1 | 2 | 3 | 4 | 5
 -------- | -------- | -------- | -------- | --------
 INFO | WELCOME | n/a	| Triggered from the FE locales file<br>Welcome to the Catena-X Network. To easily get you onboarded, a number of notifications / onboarding steps have been defined. Please check your notifications and start the configuration of your company area inside the portal to have a network experience based on your need. | New Registered Company Admin
@@ -282,6 +284,22 @@ INFO | WELCOME_USE_CASES | n/a	| Triggered from the FE locales file<br>The netwo
 INFO | WELCOME_SERVICE_PROVIDER | n/a	| Triggered from the FE locales file<br>If you need a service provider to help you with setting up your dataspace or an EDC, just follow us to the Service Provider Marketplace LINK | New Registered Company Admin
 INFO | WELCOME_CONNECTOR_REGISTRATION | n/a	| Triggered from the FE locales file<br>You do not have any registered Connector so far – have a look at the connector offers and get your connector to participate. LINK | New Registered Company Admin
 INFO | WELCOME_APP_MARKETPLACE | n/a	| Triggered from the FE locales file<br>Get a first inside into available apps, just follow us to the marketplace for apps. LINK | New Registered Company Admin
+
+<br>
+<br>
+
+#### Offer Release Request
+Offer Release Approval Messages, triggered by the api endpoint
+
+* PUT /api/apps/appreleaseprocess/{appId}/submit
+* PUT: /api/services/servicerelease/{serviceId}/submit
+
+<br>
+
+1 | 2 | 3 | 4 | 5
+-------- | -------- | -------- | -------- | --------
+OFFER | APP_RELEASE_REQUEST | OfferId: {offer.id}<br>RequestorCompanyName:{companies.name}<br>OfferName: {offer.name} | Triggered from the FE locales file<br>{CompanyName} created a new app to get published to the catena-x marketplace. Please review the app release request and approve or decline the app release." here: LINK | CX Admin
+OFFER | SERVICE_RELEASE_REQUEST | OfferId: {offer.id}<br>RequestorCompanyName:{companies.name}<br>OfferName: {offer.name} | Triggered from the FE locales file<br>{CompanyName} created a new service to get published to the catena-x marketplace. Please review the service release request and approve or decline the service release." here: LINK | CX Admin
 
 <br>
 <br>
@@ -294,6 +312,8 @@ Offer Subscription Messages, triggered by the api endpoint
 * PUT api/apps/{appID}/subscription/company/{companyId}/activate
 * ----autosetup----
 
+<br>
+
 1 | 2 | 3 | 4 | 5
 -------- | -------- | -------- | -------- | --------
 OFFER | APP_SUBSCRIPTION_REQUEST | OfferId: {offer.id}<br>CompanyName: {companies.name}<br>OfferName: {offer.name} | Triggered from the FE locales file<br>A new app subscription request was triggered by {requestorCompanyName}. Get in contact with {userEmail} to agree on the app usage and setup guidelines. As soon as this is done, you can activate the app for {requestorCompanyName} here: LINK | App Provider - User documented as "Sales Manager"
@@ -302,9 +322,10 @@ OFFER | SERVICE_SUBSCRIPTION_REQUEST | OfferId: {offer.id}<br>RequestorCompanyNa
 ?? | TECHNICAL_USER_CREATION |  | Triggered from the FE locales file<br>??? | Service Subscription Requester
 OFFER | SERVICE_SUBSCRIPTION_ACTIVATION | OfferId: {offer.id} | Triggered from the FE locales file | Service {ServiceName} go activated. Manage your subscriptions via the following service management panel: LINK | Service Subscription Requester
 
+<br>
+<br>
 
 Missing inside the documentation:
 * CONNECTOR_REGISTERED
-* APP_RELEASE_REQUEST
 
 
