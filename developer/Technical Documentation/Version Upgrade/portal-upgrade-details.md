@@ -88,7 +88,7 @@ Transactional data are automatically updated/migrated.
 <br>
 <br>
 
-#### License Types - NEW & ENHANCED- 1.1.0
+#### License Types - NEW & ENHANCED- 1.4.0
 
 * NEW: table "license_types"
 * ENHANCED: table portal.offers "license_type_id" added
