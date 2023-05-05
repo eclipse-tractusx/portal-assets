@@ -11,6 +11,29 @@ Each section includes the respective change details, impact on existing data and
 <br>
 <br>
 
+#### License Types - NEW & ENHANCED- 1.4.0
+
+* NEW: table "license_types"
+* ENHANCED: table portal.offers "license_type_id" added
+
+New license_types table released to manage license need for app/services with a COTS/FOSS label.
+
+
+Impact on existing data:
+As part of the migration, for all existing offer stored in the table portal.offers, the license_type_id will be used to define license need for apps and services for respective offer where default value of license_type_id is 1 i.e COTS. 
+
+<br>
+
+Supported license types:
+
+license_type_id | license_type 
+--- | --- 
+1 | COTS
+2 | FOSS
+
+<br>
+<br>
+
 #### Mediatype - NEW & ENHANCED - 1.2.0
 
 * NEW: table "media_types"
