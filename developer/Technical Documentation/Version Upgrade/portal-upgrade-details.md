@@ -11,6 +11,35 @@ Each section includes the respective change details, impact on existing data and
 <br>
 <br>
 
+#### Technical User Profiles - NEW - 1.4.0
+
+> **_INFO:_** Please note: the technical user profiles will remove the interim solution of technical_user_needed within the service_details table, which was introduced in 1.1.0
+
+* NEW: portal.technical_user_profiles
+* NEW: portal.technical_user_assigned_user_roles
+
+New technical_user_profiles table released to provide technical user profiles for apps and dataspace services.
+New technical_user_assigned_user_roles table to assign multiple roles to a technical user proile.
+
+Until the corresponding endpoint is implemented to add technical user profiles, you can use the following script, please make sure the ids used in appTechnicalUserRole and serviceTechnicalUserRole are correct and existing in the database:
+
+``` sql
+DO $$
+    DECLARE appTechnicalUserRole uuid = '607818be-4978-41f4-bf63-fa8d2de51169';
+    DECLARE serviceTechnicalUserRole uuid = '607818be-4978-41f4-bf63-fa8d2de51155';
+    DECLARE appTuProfileIds uuid[];
+    DECLARE serviceTuProfileIds uuid[];
+BEGIN
+    INSERT INTO portal.technical_user_profiles (id, offer_id) SELECT gen_random_uuid(), o.id FROM portal.offers as o LEFT JOIN portal.technical_user_profiles as tup ON o.id = tup.offer_id WHERE tup.offer_id IS NULL AND offer_type_id = 1 RETURNING id into appTuProfileIds;
+    INSERT INTO portal.technical_user_profiles (id, offer_id) SELECT gen_random_uuid(), service_id FROM portal.service_details as sd LEFT JOIN portal.technical_user_profiles as tup ON sd.service_id = tup.offer_id WHERE tup.offer_id IS NULL AND sd.service_type_id = 1 RETURNING id into serviceTuProfileIds;
+    INSERT INTO portal.technical_user_profile_assigned_user_roles (technical_user_profile_id, user_role_id) SELECT a.id, appTechnicalUserRole FROM (SELECT unnest(appTuProfileIds) AS id) as a;
+    INSERT INTO portal.technical_user_profile_assigned_user_roles (technical_user_profile_id, user_role_id) SELECT s.id, serviceTechnicalUserRole FROM (SELECT unnest(serviceTuProfileIds) AS id) as s;
+END $$;
+```
+
+<br>
+<br>
+
 #### License Types - NEW & ENHANCED- 1.4.0
 
 * NEW: table "license_types"
