@@ -37,8 +37,8 @@ on:
   # Trigger manually
 
 env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: catenax-ng/tx-portal-assets
+  IMAGE_NAMESPACE: "tractusx"
+  IMAGE_NAME: "portal-assets"
 
 jobs:
   analyze-config:
@@ -90,7 +90,7 @@ jobs:
         uses: aquasecurity/trivy-action@master
         with:
           # Path to Docker image
-          image-ref: "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:main"
+          image-ref: "${{ env.IMAGE_NAMESPACE }}/${{ env.IMAGE_NAME }}:main"
           format: "sarif"
           output: "trivy-results2.sarif"
           exit-code: "1"
