@@ -17,12 +17,12 @@
 # SPDX-License-Identifier: Apache-2.0
 ###############################################################
 
-name: release candidate
+name: release candidate (RC)
 
 on:
   push:
     branches:
-      - 'release/1.3.0*'
+      - 'release/*.*.*-RC*'
   workflow_dispatch:
 
 env:
@@ -79,7 +79,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Get token
         id: get_workflow_token
         uses: peter-murray/workflow-application-token-action@v2

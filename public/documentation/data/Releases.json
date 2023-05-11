@@ -1,3 +1,16 @@
 [
-  "main"
+  "main",
+  "refs/tags/1.1.0",
+  "refs/tags/1.0.0",
+  "refs/tags/1.0.0-RC8",
+  "refs/tags/1.0.0-RC7",
+  "refs/tags/1.0.0-RC6",
+  "refs/tags/1.0.0-RC5",
+  "refs/tags/1.0.0-RC4",
+  "refs/tags/1.0.0-RC3",
+  "refs/tags/1.0.0-RC2",
+  "refs/tags/1.0.0-RC1",
+  "refs/tags/v1.3.0-RC2",
+  "refs/tags/v1.3.0-RC1",
+  "refs/tags/v1.2.0"
 ]
