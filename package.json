@@ -14,7 +14,6 @@
     "http-server": "^14.1.1"
   },
   "dependencies": {
-    "mermaid": "^10.0.2",
     "zero-md": "^2.4.0"
   },
   "scripts": {
