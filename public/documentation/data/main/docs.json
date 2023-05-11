@@ -353,7 +353,8 @@
               "path": "docs/03. User Management/01. User Account/03. Create new user account (single).md",
               "name": "03. Create new user account (single).md",
               "chapter": [
-                "## Create a new user account (single)"
+                "## Create a new user account (single)",
+                "### Role Description/Details"
               ]
             },
             {
@@ -405,10 +406,12 @@
               ]
             },
             {
-              "path": "docs/03. User Management/02. Modify User Account/03. User Permissions - UPDATE NEEDED.md",
-              "name": "03. User Permissions - UPDATE NEEDED.md",
+              "path": "docs/03. User Management/02. Modify User Account/03. User Permissions.md",
+              "name": "03. User Permissions.md",
               "chapter": [
-                "## User Permissions"
+                "## User Permissions",
+                "### Portal Assigned Roles",
+                "### App Assigned Roles"
               ]
             },
             {
@@ -477,7 +480,8 @@
               "path": "docs/03. User Management/03. Technical User/04. FAQ.md",
               "name": "04. FAQ.md",
               "chapter": [
-                "### As a service or app provider, am I able to create a technical user in the name of my app/service customer?"
+                "### As a service or app provider, am I able to create a technical user in the name of my app/service customer?",
+                "### How to retrieve a technical user token?"
               ]
             },
             {
@@ -612,7 +616,11 @@
                 "###### App language",
                 "###### Use Case",
                 "###### Sales Manager",
+                "###### App Lead Picture Image",
                 "#### Step 2 - App Page Details",
+                "###### App Details Images",
+                "###### App Ddocuments",
+                "###### Privacy Policy",
                 "#### Step 3 - Terms & Conditions / Consent",
                 "#### Step 4 - Technical Integration",
                 "#### Step 5 - Beta Test Runs",
@@ -839,8 +847,7 @@
                 "## Service Release Process",
                 "#### Trigger the Publishing Process",
                 "#### Step 1 - Service Card Details",
-                "###### Sales Manager",
-                "#### Step 2 - Offer Page Details",
+                "#### Step 2 - Service Page Details",
                 "#### Step 3 - Terms & Conditions / Consent",
                 "#### Step 4 - Validate & Submit for Publishing check"
               ]

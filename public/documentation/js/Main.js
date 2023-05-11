@@ -418,6 +418,18 @@ class Content extends Viewable {
         return this.renderArticle(content)
     }
 
+    getRoot() {
+        return this.page
+    }
+
+    getMD() {
+        return this.page.lastChild.firstChild.data
+    }
+
+    zeromdReady() {
+        this.pageHasLoaded()
+    }
+
     pageHasLoaded() {
         if (!this.page.shadowRoot.styleSheets[0]) {
             setTimeout(this.pageHasLoaded.bind(this), 10)
@@ -459,7 +471,7 @@ class Content extends Viewable {
     }
 
     replaceLink(link) {
-        const path = decodeURI(link.href).replace(/^.*docs\//,'docs/').replace(/\/$/, '')
+        const path = decodeURI(link.href).replace(/^.*docs\//, 'docs/').replace(/\/$/, '')
         link.setAttribute('href', `.?path=${encodeURI(path)}`)
         return link
     }
@@ -486,7 +498,7 @@ class Content extends Viewable {
 
     filterText(text) {
         const path = state.selection.split('/').map(encodeURIComponent).join('/')
-        return text.replaceAll('](.',`](${Settings.DOCBASE}/${state.releaseSelection}/${path}`)
+        return text.replaceAll('](.', `](${Settings.DOCBASE}/${state.releaseSelection}/${path}`)
     }
 
     mdFromText(text) {
@@ -501,7 +513,7 @@ class Content extends Viewable {
 
     mdFromURL(url) {
         this.replacePage(
-            N('zero-md', null, { src: url })
+            N('zero-md', null)
         )
         // we don't get an onload event from zero-md so waiting one sec before replacing the links
         setTimeout(this.pageHasLoaded.bind(this), 10)
@@ -587,7 +599,7 @@ class App extends Viewable {
         state.setReleaseSelection(releases[0].name)
     }
 
-    releaseSelectionChanged(releaseSelection) {        
+    releaseSelectionChanged(releaseSelection) {
         fetch(`data/${releaseSelection.split('/').slice(-1)[0]}/${NavTools.getRoot()}.json`)
             .then(response => response.json())
             .then(state.setData.bind(state))
