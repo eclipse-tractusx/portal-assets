@@ -30,7 +30,7 @@ env:
   IMAGE_NAME: "portal-assets"
 
 jobs:
-  build-and-push-release:
+  build-and-push-image:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -84,7 +84,7 @@ jobs:
           readme-filepath: ".conf/notice-assets.md"
 
   auth-and-dispatch:
-    needs: build-and-push-release
+    needs: build-and-push-image
     runs-on: ubuntu-latest
 
     steps:
