@@ -7,12 +7,9 @@ CX Member companies can create technical users on their need(s) and map them to 
 <br>
 
 ### Customer Functionalities covered in the function
-* Create new technical user under my org
-* View all my technical users (including technical user details)
-* Delete a technical user
+* Create new technical user under my org - [Details to "How to create a technical user"](../02.%20Create%20Technical%20User.md)
+* View all my technical users (including technical user details) - [Details to "View Technical User Details"](../01.%20Technical%20User%20Overview.md)
+* Delete a technical user - [Details to "How to delete a technical user"](../03.%20Delete%20Technical%20User.md)
 
-<br>
-<br>
-<img width="1361" alt="image" src="https://user-images.githubusercontent.com/94133633/210963262-76d5e1c6-5076-4087-9816-0bd0ed11655a.png">
 <br>
 <br>
