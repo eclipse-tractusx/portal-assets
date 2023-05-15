@@ -180,19 +180,7 @@ This will impact the notification count of #1. Since #1 will only show those not
 <br>
 <br>
 
-### #5 POST User notification
-
-The post user notification API is a input api only. Means its used in the current project phase to validate the notification service/behavior.
-<br>
-
-```diff
-! POST /api/notification/{companyUserId:guid}
-```
-
-<br>
-<br>
-
-### #6 DELETE User notification 
+### #5 DELETE User notification 
 
 With the delete user notification, a notification can get deleted. The function is triggered by the user himself and will be executed without any chance for notification recovery.
 <br>
@@ -204,7 +192,7 @@ With the delete user notification, a notification can get deleted. The function 
 <br>
 <br>
 
-### #7 Implemented Sorting feature
+### #6 Implemented Sorting feature
 
 User can sort results based on given sorting possibilities. The sorting will act jointly with the view component.  
 Means, if the user did selected the view "Info Only" and now wants to also sort the results; the sorting will get executed on the view "info only" and not on all notifications.  
@@ -240,7 +228,7 @@ Unread first: {hostname}/api/Notification?page=0&size=15& notificationTopic=ACTI
 <br>
 <br>
 
-### #8 Implemented Views
+### #7 Implemented Views
 
 ....
 <br>
