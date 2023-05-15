@@ -180,19 +180,7 @@ This will impact the notification count of #1. Since #1 will only show those not
 <br>
 <br>
 
-### #5 POST User notification
-
-The post user notification API is a input api only. Means its used in the current project phase to validate the notification service/behavior.
-<br>
-
-```diff
-! POST /api/notification/{companyUserId:guid}
-```
-
-<br>
-<br>
-
-### #6 DELETE User notification 
+### #5 DELETE User notification 
 
 With the delete user notification, a notification can get deleted. The function is triggered by the user himself and will be executed without any chance for notification recovery.
 <br>
@@ -204,7 +192,7 @@ With the delete user notification, a notification can get deleted. The function 
 <br>
 <br>
 
-### #7 Implemented Sorting feature
+### #6 Implemented Sorting feature
 
 User can sort results based on given sorting possibilities. The sorting will act jointly with the view component.  
 Means, if the user did selected the view "Info Only" and now wants to also sort the results; the sorting will get executed on the view "info only" and not on all notifications.  
@@ -240,7 +228,7 @@ Unread first: {hostname}/api/Notification?page=0&size=15& notificationTopic=ACTI
 <br>
 <br>
 
-### #8 Implemented Views
+### #7 Implemented Views
 
 ....
 <br>
@@ -275,7 +263,7 @@ https://portal-backend.dev.demo.catena-x.net/api/Notification?page=0&size=15&onl
 Welcome Messages, triggered by the api endpoint
 * PUT api/administration/registration/application/{applicationId}/approveRequest 
 
-1 | 2 | 3 | 4 | 5
+Topic | Notification Type | Content | UI Message | Receiver
 -------- | -------- | -------- | -------- | --------
 INFO | WELCOME | n/a	| Triggered from the FE locales file<br>Welcome to the Catena-X Network. To easily get you onboarded, a number of notifications / onboarding steps have been defined. Please check your notifications and start the configuration of your company area inside the portal to have a network experience based on your need. | New Registered Company Admin
 INFO | WELCOME_USE_CASES | n/a	| Triggered from the FE locales file<br>The network is quite huge, we want to ensure that you can focus on your preferred use cases. Select your preferred use case from the table below. | New Registered Company Admin
@@ -294,7 +282,7 @@ Offer Subscription Messages, triggered by the api endpoint
 * PUT api/apps/{appID}/subscription/company/{companyId}/activate
 * ----autosetup----
 
-1 | 2 | 3 | 4 | 5
+Topic | Notification Type | Content | UI Message | Receiver
 -------- | -------- | -------- | -------- | --------
 OFFER | APP_SUBSCRIPTION_REQUEST | OfferId: {offer.id}<br>CompanyName: {companies.name}<br>OfferName: {offer.name} | Triggered from the FE locales file<br>A new app subscription request was triggered by {requestorCompanyName}. Get in contact with {userEmail} to agree on the app usage and setup guidelines. As soon as this is done, you can activate the app for {requestorCompanyName} here: LINK | App Provider - User documented as "Sales Manager"
 OFFER | APP_SUBSCRIPTION_ACTIVATION | OfferId: {offer.id} | Triggered from the FE locales file<br>App {AppName} go activated, you can now assign user permission to this app. LINK | App Subscription Requester
@@ -302,10 +290,19 @@ OFFER | SERVICE_SUBSCRIPTION_REQUEST | OfferId: {offer.id}<br>RequestorCompanyNa
 ?? | TECHNICAL_USER_CREATION |  | Triggered from the FE locales file<br>??? | Service Subscription Requester
 OFFER | SERVICE_SUBSCRIPTION_ACTIVATION | OfferId: {offer.id} | Triggered from the FE locales file | Service {ServiceName} go activated. Manage your subscriptions via the following service management panel: LINK | Service Subscription Requester
 
+<br>
+<br>
 
-Missing inside the documentation:
-* CONNECTOR_REGISTERED
-* APP_RELEASE_REQUEST
+#### User Role Change
+Role Change Messages, triggered by the api endpoint
+
+* PUT: api/administration/user/owncompany/users/{companyUserId}/coreoffers/{offerId}/roles
+* PUT: api/administration/user/owncompany/users/{companyUserId}/apps/{appId}/roles
+
+Topic | Notification Type | Content | UI Message | Receiver
+-------- | -------- | -------- | -------- | --------
+INFO | ROLE_UPDATE_CORE_OFFER | CoreOfferName: "Portal"<br>Username: "{firstname} {lastname}"<br>RemovedRoles: "" (multiple roles possible)<br>AddedRoles: "" (multiple roles possible) | Triggered from the FE locales file<br>Dear {username},<br>your portal user roles got updated by your company administrator. With the change of the role assignment your access rights have changed. You can find more details regarding the role change impact by having a look at the portal role matrix and role description [Role Matrix]{ {hostname}/role-details}<br>New Roles: {add here the new AddedRoles}<br>Removed Roles: {add here the RemovedRoles} | User for which the role was added/deleted
+INFO | ROLE_UPDATE_APP_OFFER | appName: "offer.name"<br>offerId: "offer.id"<br>Username: "{firstname} {lastname}"<br>RemovedRoles: "" (multiple roles possible)<br>AddedRoles: "" (multiple roles possible) | Triggered from the FE locales file<br>"Dear {username},<br>your app user roles got updated by your company administrator. With the change of the role assignment your access rights have changed. You can find all details regarding the role change below.<br>New Roles: {add here the new AddedRoles}<br>Removed Roles: {add here the RemovedRoles}" | User for which the role was added/deleted
 
 <br>
 <br>
@@ -334,3 +331,9 @@ For any other notifications, the attribute "done" inside the table portal.notifi
 <br>
 <br>
 
+Missing documentation:
+* CONNECTOR_REGISTERED
+* APP_RELEASE_REQUEST
+
+<br>
+<br>

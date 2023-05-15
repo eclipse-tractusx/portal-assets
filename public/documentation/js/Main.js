@@ -20,7 +20,6 @@
 import { clear, addEvents, N, Viewable, NavTools } from "./Toolkit.js"
 import { state } from "./State.js"
 import { Patterns, Settings } from "./Settings.js"
-import mermaid from "./lib/mermaid/mermaid.esm.min.js"
 
 const normalize = (path) => path.replace(/[^a-zA-Z0-9_-]/g, '_')
 
@@ -400,14 +399,12 @@ class Content extends Viewable {
         this.markdown = N('script', ' ', { type: 'text/markdown' })
         this.page = N('zero-md', this.markdown)
         this.loader = N('div', '', { class: 'loader hidden' })
-        this.diags = N('div', null, { style: 'visibility: hidden' })
         this.view = N('article', [
             N('div', [
                 this.breadcrumb,
                 this.loader,
             ]),
             this.page,
-            this.diags,
         ], { class: 'content small' })
     }
 
@@ -439,32 +436,6 @@ class Content extends Viewable {
             return
         }
         this.replaceLinks()
-        this.renderMermaid()
-    }
-
-    async renderMermaidDef(node, def) {
-        const diag = N('pre', def, { class: 'mermaid' })
-        this.diags.appendChild(diag)
-        try {
-            await mermaid.run({
-                nodes: [diag]
-            })
-            node.replaceWith(diag)
-        } catch (e) {
-            console.log(e)
-            this.diags.removeChild(diag)
-        }
-        return diag
-    }
-
-    async renderMermaid() {
-        const blocks = [...this.page.shadowRoot.querySelectorAll('pre.language-mermaid')]
-        if (blocks.length === 0) {
-            return
-        }
-        const defs = this.page.lastChild.firstChild.data.split('```').filter((block) => block.startsWith('mermaid')).map(block => block.substring(8))
-        mermaid.initialize()
-        blocks.forEach((block, i) => this.renderMermaidDef(block, defs[i]))
     }
 
     replacePage(page) {
