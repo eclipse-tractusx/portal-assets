@@ -5,7 +5,7 @@ flowchart LR
     subgraph local
     D(Developer)
     end
-    subgraph eclipse-tractusx or fork
+    subgraph eclipse-tractusx
         direction LR
         subgraph CI repos
             D -- PR to dev* --> PF(portal-frontend**)
@@ -20,17 +20,20 @@ flowchart LR
         subgraph CI+CD repo
             direction TB
             D -- PR* to main for !=charts --> PI(portal-iam****)
-            D -- PR* to -b helm-environments for charts --> PI
-            PI --> PICD(portal-iam -b helm-environments)
-            click PI "https://github.com/eclipse-tractusx/portal-iam"
+            D -- PR* to -b dev for charts --> PI
+            subgraph eclipse-tractusx fork
+                direction TB
+                PI --> PICD(portal-iam -b helm-environments)
+                click PI "https://github.com/eclipse-tractusx/portal-iam"
+            end
         end
         subgraph CD repo for auto-deploy to dev
             direction LR
-            PF --> CD(portal-cd***** -b helm-environments)
+            PF --> CD(portal-cd***** -b dev)
             PR --> CD
             PB --> CD
             PA --> CD
-            D -- PR* to -b helm-environments for chart --> CD
+            D -- PR* to -b dev for chart --> CD
             click CD "https://github.com/eclipse-tractusx/portal-cd"
         end
     end
