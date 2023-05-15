@@ -37,6 +37,10 @@ BEGIN
 END $$;
 ```
 
+Impact on existing data:
+
+As part of the migration the `technical_user_needed` flag within the `service_details` table will be removed. Therefore all existing apps and services in the offer table needs to be manually updated, if they should keep a technical user profile. See the above mentioned script as an option.
+
 <br>
 <br>
 
@@ -49,7 +53,7 @@ New license_types table released to manage license need for app/services with a 
 
 
 Impact on existing data:
-As part of the migration, for all existing offer stored in the table portal.offers, the license_type_id will be used to define license need for apps and services for respective offer where default value of license_type_id is 1 i.e COTS. 
+As part of the migration, for all existing offer stored in the table portal.offers, the license_type_id will be used to define license need for apps and services for respective offer where default value of license_type_id is 1 i.e COTS.
 
 <br>
 
