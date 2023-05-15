@@ -263,6 +263,8 @@ https://portal-backend.dev.demo.catena-x.net/api/Notification?page=0&size=15&onl
 Welcome Messages, triggered by the api endpoint
 * PUT api/administration/registration/application/{applicationId}/approveRequest 
 
+<br>
+
 Topic | Notification Type | Content | UI Message | Receiver
 -------- | -------- | -------- | -------- | --------
 INFO | WELCOME | n/a	| Triggered from the FE locales file<br>Welcome to the Catena-X Network. To easily get you onboarded, a number of notifications / onboarding steps have been defined. Please check your notifications and start the configuration of your company area inside the portal to have a network experience based on your need. | New Registered Company Admin
@@ -274,6 +276,22 @@ INFO | WELCOME_APP_MARKETPLACE | n/a	| Triggered from the FE locales file<br>Get
 <br>
 <br>
 
+#### Offer Release Request
+Offer Release Approval Messages, triggered by the api endpoint
+
+* PUT /api/apps/appreleaseprocess/{appId}/submit
+* PUT: /api/services/servicerelease/{serviceId}/submit
+
+<br>
+
+Topic | Notification Type | Content | UI Message | Receiver
+-------- | -------- | -------- | -------- | --------
+OFFER | APP_RELEASE_REQUEST | OfferId: {offer.id}<br>RequestorCompanyName:{companies.name}<br>OfferName: {offer.name} | Triggered from the FE locales file<br>{CompanyName} created a new app to get published to the catena-x marketplace. Please review the app release request and approve or decline the app release." here: LINK | CX Admin
+OFFER | SERVICE_RELEASE_REQUEST | OfferId: {offer.id}<br>RequestorCompanyName:{companies.name}<br>OfferName: {offer.name} | Triggered from the FE locales file<br>{CompanyName} created a new service to get published to the catena-x marketplace. Please review the service release request and approve or decline the service release." here: LINK | CX Admin
+
+<br>
+<br>
+
 #### Offer Subscription
 Offer Subscription Messages, triggered by the api endpoint
 
@@ -281,6 +299,8 @@ Offer Subscription Messages, triggered by the api endpoint
 * POST api/apps/{serviceID}/subscribe
 * PUT api/apps/{appID}/subscription/company/{companyId}/activate
 * ----autosetup----
+
+<br>
 
 Topic | Notification Type | Content | UI Message | Receiver
 -------- | -------- | -------- | -------- | --------
@@ -309,7 +329,6 @@ INFO | ROLE_UPDATE_APP_OFFER | appName: "offer.name"<br>offerId: "offer.id"<br>U
 
 Missing documentation:
 * CONNECTOR_REGISTERED
-* APP_RELEASE_REQUEST
 
 <br>
 <br>
