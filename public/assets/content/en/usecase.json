@@ -79,7 +79,7 @@
           {
             "title": "Self/Local Setup",
             "imagePath": "/images/content/teaser.png",
-            "description": "Individual and independent connection to traceability...",
+            "description": "Individual and independent connection to traceability using the “do it yourself” guidelines.",
             "readMore": "https://catena-x.net/en/catena-x-einfuehren-umsetzen/einfuehrung-von-catena-x",
             "readMoreTitle": "Direct link",
             "backgroundColor": "#f9f9f9",
@@ -88,8 +88,8 @@
           {
             "title": "Minimal Setup",
             "imagePath": "/images/content/teaser.png",
-            "description": "Use of web services to provide data for traceability..",
-            "readMore": "https://portal.int.demo.catena-x.net/appdetail/6e756fd1-c3d1-4c4a-ba0a-31acf28be2ad",
+            "description": "Use of web services to set up the EDC and provide data via file upload for traceability as a minimal scenario.",
+            "readMore": "/appdetail/6e756fd1-c3d1-4c4a-ba0a-31acf28be2ad",
             "readMoreTitle": "Get Details",
             "backgroundColor": "#f9f9f9",
             "align": "center"
