@@ -70,7 +70,7 @@
       },
       {
         "title": "Opportunities to participate in Use Case Traceability",
-        "description": "Based on individual company needs, traceability offers various ways to participate in the use case. You can decide for yourself in which role (e.g. data provider and/or data consumer) and to what extent you participate in the use case.",
+        "description": "Based on individual company needs, traceability offers various ways to participate in the use case. You can decide for yourself in which role (e.g. data provider and/or data consumer) and to what extent you participate in the use case. There are currently three options to connect your company and set up the required core components, such as the EDC.",
         "backgroundColor": "#FFFFFF",
         "id": "setup-id",
         "grid": 3,
@@ -80,7 +80,7 @@
             "title": "Self/Local Setup",
             "imagePath": "/images/content/teaser.png",
             "description": "Individual and independent connection to traceability...",
-            "readMore": "",
+            "readMore": "https://catena-x.net/en/catena-x-einfuehren-umsetzen/einfuehrung-von-catena-x",
             "readMoreTitle": "Direct link (coming soon)",
             "backgroundColor": "#f9f9f9",
             "align": "center"
@@ -89,7 +89,7 @@
             "title": "Minimal Setup",
             "imagePath": "/images/content/teaser.png",
             "description": "Use of web services to provide data for traceability..",
-            "readMore": "/appdetail/d0ea773a-8fa0-481b-9ae3-d0e9c22a8628",
+            "readMore": "https://portal.int.demo.catena-x.net/appdetail/6e756fd1-c3d1-4c4a-ba0a-31acf28be2ad",
             "readMoreTitle": "Get Details",
             "backgroundColor": "#f9f9f9",
             "align": "center"
@@ -116,7 +116,7 @@
           {
             "title": "Trace X",
             "imagePath": "/images/content/CX.jpg",
-            "description": "Enables seamless traceability of parts across n.tier's supply chain - visualizes...",
+            "description": "Trace-X represents the open source application developed in the consortium. It enables seamless traceability of parts via the N-Tier supply chain.",
             "readMore": "/appdetail/ac1cf001-7fbc-1f2f-817f-bce0572c0007",
             "readMoreTitle": "Get to the app",
             "backgroundColor": "#f9f9f9",
@@ -125,16 +125,16 @@
           {
             "title": "Smart MOM",
             "imagePath": "/images/content/GEC.jpg",
-            "description": "Consolidates all production processes and systems to control manufacturing processes...",
+            "description": "Is the solution via an edge device that consolidates all production processes and systems for controlling manufacturing processes.",
             "readMore": "/appdetail/5cf74ef8-e0b7-4984-a872-474828beb5d1",
             "readMoreTitle": "Get to the app",
             "backgroundColor": "#f9f9f9",
             "align": "center"
           },
           {
-            "title": "SAP BN MT",
+            "title": "SAP Business Network . Material Traceability",
             "imagePath": "/images/content/SAP.jpg",
-            "description": "is a solution for cross-company supply chain transparency and material traceability...",
+            "description": "Enables cross-enterprise material traceability along the supply chain with seamless ERP integration and helps to identify and process affected products quickly and precisely with relevant business partners.",
             "readMore": "/appdetail/5cf74ef8-e0b7-4984-a872-474828beb5d7",
             "readMoreTitle": "Get to the app",
             "backgroundColor": "#f9f9f9",
@@ -143,7 +143,7 @@
           {
             "title": "Trusted Traceability",
             "imagePath": "/images/content/Siemens.jpg",
-            "description": "is a fully managed system (software-as-a-service) and enables the introduction of traceability...",
+            "description": "links relevant data through a trust-layer across business partners and enables the required transparency.",
             "readMore": "/appdetail/ac1cf001-7fbc-1f2f-817f-bce05748000d",
             "readMoreTitle": "Get to the app",
             "backgroundColor": "#f9f9f9",
