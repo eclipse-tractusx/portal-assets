@@ -89,7 +89,7 @@
             "title": "Minimal Setup",
             "imagePath": "/images/content/teaser.png",
             "description": "Nutzung von Web-Services zur Datenbereitstellung für die Rückverfolgbarkeit…",
-            "readMore": "https://portal.int.demo.catena-x.net/appdetail/6e756fd1-c3d1-4c4a-ba0a-31acf28be2ad",
+            "readMore": "/appdetail/6e756fd1-c3d1-4c4a-ba0a-31acf28be2ad",
             "readMoreTitle": "Details öffnen",
             "backgroundColor": "#f9f9f9",
             "align": "center"
