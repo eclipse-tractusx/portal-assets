@@ -11,7 +11,7 @@
     "sections": [
       {
         "title": "Introduction",
-        "description": "The aim of the use case traceability is to establish continuous data chains: from raw materials via components to the finished vehicle at the OEM or its recycling within the recycling company. Partners in the use case include manufacturers of components, automotive manufacturers as well as suppliers of materials and parts.",
+        "description": "The aim of the use case traceability is to establish continuous data chains to track products, materials, automotive components and software along the value chain to empower use cases across the automotive supply chain. This is achieved via standardized registration of digital twins of components and vehicles as well as the logical linking of their parts lists (Bill of Material, BoM).",
         "videoUrl": "https://eclipse-tractusx.github.io/video/traceability-video-9min-UT.mp4",
         "id": "intro-id",
         "backgroundColor": "#FFFFFF",
