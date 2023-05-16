@@ -20,7 +20,7 @@
     {
        "title": "Kernwerte von Catena-X werden in der Traceability umgesetzt",
        "description": "",
-       "imagePath": "/images/content/traceability_core_values(de).png",
+       "imagePath": "/images/content/traceability_core_values(de).svg",
        "backgroundColor": "#F9F9F9",
        "id": "core-id",
        "template": "TextImageCenterAligned"
@@ -44,7 +44,7 @@
      {
        "title": "Traceability unterteilt die Datenmodelle je Lebenszyklusphase",
        "description": "",
-       "imagePath": "/images/content/traceability_datamodels(de).png",
+       "imagePath": "/images/content/traceability_datamodels(de).svg",
        "backgroundColor": "#FFFFFF",
        "id": "details-id",
        "template": "TextImageCenterAligned"
