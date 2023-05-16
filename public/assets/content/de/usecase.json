@@ -11,8 +11,7 @@
   "sections": [
     {
       "title": "Einführung",
-      "description": "Ziel ist die Rückverfolgung von Produkten, Materialien, Komponenten und Software entlang der automobilen Wertschöpfungskette zur Befähigung N-Tier übergreifender Use-Cases. Dies erfolgt über die standardisierte Erstellung von digitalen Zwillingen von Komponenten und Fahrzeugen sowie die logische Verknüpfung von deren Stücklisten (Bill of Material, BoM). 
-",
+      "description": "Ziel ist die Rückverfolgung von Produkten, Materialien, Komponenten und Software entlang der automobilen Wertschöpfungskette zur Befähigung N-Tier übergreifender Use-Cases. Dies erfolgt über die standardisierte Erstellung von digitalen Zwillingen von Komponenten und Fahrzeugen sowie die logische Verknüpfung von deren Stücklisten (Bill of Material, BoM).",
       "videoUrl": "https://eclipse-tractusx.github.io/video/traceability-video-9min-UT.mp4",
       "id": "intro-id",
       "backgroundColor": "#FFFFFF",
