@@ -32,8 +32,8 @@ The three most common image file formats for web pages are SVG, PNG and JPEG. Wh
 
 Those are images in a fixed resolution that try to store the image pixel colors in an efficient way. There we have
 
-* JPEG - known to most people as the common format for pictures taken with digital cameras or mobile phones. It uses a lossy compression meaning the image size can be reduced but some details are possibly lost. The quality of the images can be chosen quite freely from 1 to 100 percent. Very useful to find a good tradeoff between file size and image quality. On the downside it doesn't support tranparency and tends to show compression artifacts on documents or illustrations that are composed of mostly flat colors.
-* PNG - are more versatile loss free image format that also addresses some of JPEGs other issues. It supports two encoding modes
+* JPEG - known to most people as the common format for pictures taken with digital cameras or mobile phones. It uses a lossy compression meaning the image size can be reduced but some details are possibly lost. The quality of the images can be chosen quite freely from 1 to 100 percent. Very useful to find a good tradeoff between file size and image quality. On the downside it doesn't support transparency and tends to show compression artifacts on documents or illustrations that are composed of mostly flat colors.
+* PNG - a more versatile loss free image format that also addresses some of JPEGs other issues. It supports two encoding modes
   * RGB - storing the absolute pixel values which results in usually larger file sizes than the other formats. 
   * Indexed Colors - very interesting for images that unlike photographs have a limited number of different colors like for example scanned documents. Reducing the image to something like 16 different colors and storing pixels as color index can reduce the file sizes drastically. This option makes PNG the best format for some kinds of images.
 
