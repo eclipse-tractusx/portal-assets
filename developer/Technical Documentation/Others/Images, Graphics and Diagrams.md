@@ -26,20 +26,20 @@ Overall, it's important to consider these potential drawbacks when incorporating
 
 ## File Formats
 
-The three most common image file formats for web pages are SVG, PNG and JPEG. What's the difference? Fundamentally we can distinguish beween Vector and Bitmap images.
+The three most common image file formats for web pages are SVG, PNG and JPEG. What's the difference? Fundamentally we can distinguish between Vector and Bitmap images.
 
 ### Bitmap images
 
-Those are images in a fixed resolution that try to store the image pixel colors in an efficient way. There we have
+Those are images in a fixed resolution that try to store the image pixel colors in an efficient way. There we have the following:
 
 * JPEG - known to most people as the common format for pictures taken with digital cameras or mobile phones. It uses a lossy compression meaning the image size can be reduced but some details are possibly lost. The quality of the images can be chosen quite freely from 1 to 100 percent. Very useful to find a good tradeoff between file size and image quality. On the downside it doesn't support transparency and tends to show compression artifacts on documents or illustrations that are composed of mostly flat colors.
 * PNG - a more versatile loss free image format that also addresses some of JPEGs other issues. It supports two encoding modes
-  * RGB - storing the absolute pixel values which results in usually larger file sizes than the other formats. 
+  * RGB - storing the absolute pixel values which results in usually larger file sizes than the other formats.
   * Indexed Colors - very interesting for images that unlike photographs have a limited number of different colors like for example scanned documents. Reducing the image to something like 16 different colors and storing pixels as color index can reduce the file sizes drastically. This option makes PNG the best format for some kinds of images.
 
 ### Vector images
 
-SVG follows a complete different approach to store the image information: desbribing the composition of its elements. Instead of pixel values the image contains (textual) information about the elements like "draw a circle at position x,y with radius r and line width 5 and yellow color". This has two main advantages - not only takes the information usually much less space than the pixels, the image can also be scaled up to any resolution and the lines drawn will be always sharp.
+SVG follows a complete different approach to store the image information: describing the composition of its elements. Instead of pixel values the image contains (textual) information about the elements like "draw a circle at position x,y with radius r and line width 5 and yellow color". This has two main advantages - not only takes the information usually much less space than the pixels, the image can also be scaled up to any resolution and the lines drawn will be always sharp.
 
 <br/>
 
@@ -60,7 +60,7 @@ SVG follows a complete different approach to store the image information: desbri
 
 ### Examples
 
-Some examples of different image types in different file formats and encodings
+Some examples of different image types in different file formats and encodings:
 
 | Example      | SVG | PNG (RGB) | PNG (Indexed Color) | JPEG (95% Quality) | JPEG (30% Quality) |
 |--------------|-----|-----|-----|------|------|
@@ -108,7 +108,7 @@ There are a lot of tools available to convert between file formats or encodings.
 
 ## Caching
 
-Images are large and often we don't want to send them over the network every time. So it can be a huge gain in user experience and overall performance to set the caching right. Images like teasers don't contain valuable information and can be stored on the client device for some time instead of transferring everytime again. A caching time from several weeks to months is usually appropriate.
+Images are large and often we don't want to send them over the network every time. So it can be a huge gain in user experience and overall performance to set the caching right. Images like teasers don't contain valuable information and can be stored on the client device for some time instead of transferring again and again. A caching time of several weeks to months is usually appropriate.
 
 <br/>
 
@@ -116,4 +116,4 @@ Images are large and often we don't want to send them over the network every tim
 
 <img width="800px" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/public/assets/images/docs/graphics/image-formats.svg"/>
 
-Choosing an image for use on a web page is a trade-off between file size and quality of display. The file format has the biggest impact on the result. High quality, high resolution bitmap images look very beautiful on the screen but often come as big files that takes very long to load. Always try to keep the file size as small as possible while preserving an acceptable quality for the user. As a rule of thumb the file size of any image should not exceed 100kB. Whenever the image type allows to use SVG then use SVG as it usually is the best choice combining the smallest file size together with best image quality. 
+Choosing an image for use on a web page is a trade-off between file size and quality of display. The file format has the biggest impact on the result. High quality, high resolution bitmap images look very beautiful on the screen but often come as big files that takes very long to load. Always try to keep the file size as small as possible while preserving an acceptable quality for the user. As a rule of thumb, the file size of any image should not exceed 100kB. Whenever the image type allows to use SVG, then use SVG as it usually is the best choice combining the smallest file size together with best image quality.
