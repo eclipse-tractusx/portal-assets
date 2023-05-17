@@ -2,6 +2,42 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
+## 1.4.0
+
+### Change
+* Content files
+  * use case introduction content file and images updated
+* Developer docu
+  * User Management - app access management docu added
+  * Connector Registration - table error handling/support docu added
+
+### Feature
+* Company Configuration - Company Role Change
+  * added static company role config content file (inside assets) to enable new portal frontend application feature "Company Configuration - Company Role Change"
+* Technical Documentation - Notifications
+  * added notification documentation for new supported notification types "User Role Change" and "Offer Release Request"
+  * added developer documentation for notification "done" state
+* User Management - Technical User Accounts
+  * technical user permissions mapped to company roles to better manage available technical user permission based on the participant company role
+* Service Release Documentation
+  * service release flow with developer and end user documentation released
+* Connector Registration
+  * released managed connector developer and end user documentation
+  * released developer documentation for technical user and connector mapping
+
+### Technical Support
+* added release workflow for release-candidates
+* Enabled tag retrieval from github.ref_name
+* Operator upgrade docu enhanced with recent changes for portal page (migration script)
+  * License Types - NEW & ENHANCED
+  * Technical User Profiles - NEW
+* changed release workflow to retrieve tag from github.ref_name (set-output command deprecated)
+* changed container registry to Docker Hub
+* added pull request template
+
+### Bugfix
+n/a
+
 ## 1.3.0
 
 ### Change
