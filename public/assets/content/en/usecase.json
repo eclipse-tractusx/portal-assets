@@ -11,7 +11,7 @@
     "sections": [
       {
         "title": "Introduction",
-        "description": "The aim of the use case traceability is to establish continuous data chains: from raw materials via components to the finished vehicle at the OEM or its recycling within the recycling company. Partners in the use case include manufacturers of components, automotive manufacturers as well as suppliers of materials and parts.",
+        "description": "The aim of the use case traceability is to establish continuous data chains to track products, materials, automotive components and software along the value chain to empower use cases across the automotive supply chain. This is achieved via standardized registration of digital twins of components and vehicles as well as the logical linking of their parts lists (Bill of Material, BoM).",
         "videoUrl": "https://eclipse-tractusx.github.io/video/traceability-video-9min-UT.mp4",
         "id": "intro-id",
         "backgroundColor": "#FFFFFF",
@@ -20,7 +20,7 @@
       {
         "title": "Core Values of Catena-X represented in Traceability",
         "description": "",
-        "imagePath": "/images/content/traceability_core_values(en).png",
+        "imagePath": "/images/content/traceability_core_values(en).svg",
         "backgroundColor": "#F9F9F9",
         "id": "core-id",
         "template": "TextImageCenterAligned"
@@ -36,7 +36,7 @@
       {
         "title": "Brief explanation of most important terms",
         "description": "",
-        "imagePath": "/images/content/traceability_terms(en).png",
+        "imagePath": "/images/content/traceability_terms(en).svg",
         "backgroundColor": "#F9F9F9",
         "id": "context-id",
         "template": "TextImageCenterAligned"
@@ -44,7 +44,7 @@
       {
         "title": "Traceability subdivides the data models for each life cycle phase",
         "description": "",
-        "imagePath": "/images/content/traceability_datamodels(en).png",
+        "imagePath": "/images/content/traceability_datamodels(en).svg",
         "backgroundColor": "#FFFFFF",
         "id": "details-id",
         "template": "TextImageCenterAligned"
@@ -70,7 +70,7 @@
       },
       {
         "title": "Opportunities to participate in Use Case Traceability",
-        "description": "Based on individual company needs, traceability offers various ways to participate in the use case. You can decide for yourself in which role (e.g. data provider and/or data consumer) and to what extent you participate in the use case.",
+        "description": "Based on individual company needs, traceability offers various ways to participate in the use case. You can decide for yourself in which role (e.g. data provider and/or data consumer) and to what extent you participate in the use case. There are currently three options to connect your company and set up the required core components, such as the EDC.",
         "backgroundColor": "#FFFFFF",
         "id": "setup-id",
         "grid": 3,
@@ -79,17 +79,17 @@
           {
             "title": "Self/Local Setup",
             "imagePath": "/images/content/teaser.png",
-            "description": "Individual and independent connection to traceability...",
-            "readMore": "",
-            "readMoreTitle": "Direct link (coming soon)",
+            "description": "Individual and independent connection to traceability using the “do it yourself” guidelines.",
+            "readMore": "https://catena-x.net/en/catena-x-einfuehren-umsetzen/einfuehrung-von-catena-x",
+            "readMoreTitle": "Direct link",
             "backgroundColor": "#f9f9f9",
             "align": "center"
           },
           {
             "title": "Minimal Setup",
             "imagePath": "/images/content/teaser.png",
-            "description": "Use of web services to provide data for traceability..",
-            "readMore": "/appdetail/d0ea773a-8fa0-481b-9ae3-d0e9c22a8628",
+            "description": "Use of web services to set up the EDC and provide data via file upload for traceability as a minimal scenario.",
+            "readMore": "/appdetail/6e756fd1-c3d1-4c4a-ba0a-31acf28be2ad",
             "readMoreTitle": "Get Details",
             "backgroundColor": "#f9f9f9",
             "align": "center"
@@ -107,7 +107,7 @@
       },
       {
         "title": "Business Applications inside Traceability",
-        "description": "The traceability use case is strengthened by a number of business apps which help the user to visualize and easy access the treaceability chain. Below you can find an overview of all available apps. Use the direct link to open the app details page.",
+        "description": "The traceability use case is strengthened by a number of business apps which help the user to visualize and easy access the traceability chain. Below you can find an overview of all available apps. Use the direct link to open the app details page.",
         "backgroundColor": "#FFFFFF",
         "id": "business-id",
         "grid": 4,
@@ -116,7 +116,7 @@
           {
             "title": "Trace X",
             "imagePath": "/images/content/CX.jpg",
-            "description": "Enables seamless traceability of parts across n.tier's supply chain - visualizes...",
+            "description": "Trace-X represents the open source application developed in the consortium. It enables seamless traceability of parts via the N-Tier supply chain.",
             "readMore": "/appdetail/ac1cf001-7fbc-1f2f-817f-bce0572c0007",
             "readMoreTitle": "Get to the app",
             "backgroundColor": "#f9f9f9",
@@ -125,16 +125,16 @@
           {
             "title": "Smart MOM",
             "imagePath": "/images/content/GEC.jpg",
-            "description": "Consolidates all production processes and systems to control manufacturing processes...",
+            "description": "Is the solution via an edge device that consolidates all production processes and systems for controlling manufacturing processes.",
             "readMore": "/appdetail/5cf74ef8-e0b7-4984-a872-474828beb5d1",
             "readMoreTitle": "Get to the app",
             "backgroundColor": "#f9f9f9",
             "align": "center"
           },
           {
-            "title": "SAP BN MT",
+            "title": "SAP Business Network . Material Traceability",
             "imagePath": "/images/content/SAP.jpg",
-            "description": "is a solution for cross-company supply chain transparency and material traceability...",
+            "description": "Enables cross-enterprise material traceability along the supply chain with seamless ERP integration and helps to identify and process affected products quickly and precisely with relevant business partners.",
             "readMore": "/appdetail/5cf74ef8-e0b7-4984-a872-474828beb5d7",
             "readMoreTitle": "Get to the app",
             "backgroundColor": "#f9f9f9",
@@ -143,7 +143,7 @@
           {
             "title": "Trusted Traceability",
             "imagePath": "/images/content/Siemens.jpg",
-            "description": "is a fully managed system (software-as-a-service) and enables the introduction of traceability...",
+            "description": "links relevant data through a trust-layer across business partners and enables the required transparency.",
             "readMore": "/appdetail/ac1cf001-7fbc-1f2f-817f-bce05748000d",
             "readMoreTitle": "Get to the app",
             "backgroundColor": "#f9f9f9",

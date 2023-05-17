@@ -6,12 +6,12 @@
     "link4Label": "Business Applications"
  },
 "traceability": {
-  "title": "Traceablity",
+  "title": "Traceability",
   "description": "...als Basis und integraler Bestandteil zum Aufbau von digitalen Datenketten und Befähiger von datenketten-fokussierter Use Cases",
   "sections": [
     {
       "title": "Einführung",
-      "description": "Der Use-Case Rückverfolgbarkeit hat das Ziel, durchgängige Datenketten aufzubauen: vom Rohstoff über Zwischenprodukte bis zum fertigen Fahrzeug beim OEM bzw. dessen Wiederverwertung im Recycling. Partner im Use Case sind sowohl Hersteller von Produkten bis hin zu Automobilherstellern als auch Zulieferer von Material und Teilen.",
+      "description": "Ziel ist die Rückverfolgung von Produkten, Materialien, Komponenten und Software entlang der automobilen Wertschöpfungskette zur Befähigung N-Tier übergreifender Use-Cases. Dies erfolgt über die standardisierte Erstellung von digitalen Zwillingen von Komponenten und Fahrzeugen sowie die logische Verknüpfung von deren Stücklisten (Bill of Material, BoM).",
       "videoUrl": "https://eclipse-tractusx.github.io/video/traceability-video-9min-UT.mp4",
       "id": "intro-id",
       "backgroundColor": "#FFFFFF",
@@ -20,7 +20,7 @@
     {
        "title": "Kernwerte von Catena-X werden in der Traceability umgesetzt",
        "description": "",
-       "imagePath": "/images/content/traceability_core_values(de).png",
+       "imagePath": "/images/content/traceability_core_values(de).svg",
        "backgroundColor": "#F9F9F9",
        "id": "core-id",
        "template": "TextImageCenterAligned"
@@ -44,7 +44,7 @@
      {
        "title": "Traceability unterteilt die Datenmodelle je Lebenszyklusphase",
        "description": "",
-       "imagePath": "/images/content/traceability_datamodels(de).png",
+       "imagePath": "/images/content/traceability_datamodels(de).svg",
        "backgroundColor": "#FFFFFF",
        "id": "details-id",
        "template": "TextImageCenterAligned"
@@ -80,8 +80,8 @@
             "title": "Self/Local Setup",
             "imagePath": "/images/content/teaser.png",
             "description": "Individuelle und eigenständige Anbindung an die Rückverfolgbarkeit…",
-            "readMore": "",
-            "readMoreTitle": "Direct link (coming soon)",
+            "readMore": "https://catena-x.net/en/catena-x-einfuehren-umsetzen/einfuehrung-von-catena-x",
+            "readMoreTitle": "Direct link",
             "backgroundColor": "#f9f9f9",
             "align": "center"
           },
@@ -89,7 +89,7 @@
             "title": "Minimal Setup",
             "imagePath": "/images/content/teaser.png",
             "description": "Nutzung von Web-Services zur Datenbereitstellung für die Rückverfolgbarkeit…",
-            "readMore": "/appdetail/d0ea773a-8fa0-481b-9ae3-d0e9c22a8628",
+            "readMore": "/appdetail/6e756fd1-c3d1-4c4a-ba0a-31acf28be2ad",
             "readMoreTitle": "Details öffnen",
             "backgroundColor": "#f9f9f9",
             "align": "center"
@@ -107,7 +107,7 @@
       },
      {
       "title": "Business Anwendungen innerhalb der Traceability",
-      "description": "Es stehen verschiedene Anwendungen zur Nutzung des Funktionsumfangs der Traceability zur Verfügung – von Open Source-Anwendungen bis hin zu kommerziellen Lösungen mit vollständiger ERP-Integration. Nutzen Sie die Links für detaillierte Informationen zu den Anwendungen.",
+      "description": "Für den vollen Funktionsumfang der Rückverfolgbarkeits-Lösungen, von Datenbereitstellung bis hin zu standardisierten Benachrichtigungen im Qualitätsprozess (Alerting-Prozess), stehen verschiedene Anwendungen zur Verfügung. Das Angebot reicht von Open Source-Anwendungen bis hin zu kommerziellen Lösungen mit vollständiger ERP-Integration. Nutzen Sie die Links für detaillierte Informationen zu den Anwendungen.",
       "backgroundColor": "#FFFFFF",
       "id": "business-id",
       "grid": 4,
@@ -116,7 +116,7 @@
         {
           "title": "Trace X",
           "imagePath": "/images/content/CX.jpg",
-          "description": "Ermöglicht die lückenlose Rückverfolgbarkeit von Teilen über die Lieferkette von n.tier – visualisiert detaillierte Informationen über die Komponenten von direkten Lieferanten und Direktkunden.",
+          "description": "Trace-X stellt die im Konsortium entwickelte Open-Source Anwendung dar. Es wird eine lückenlose Rückverfolgbarkeit von Teilen über die N-Tier Lieferkette ermöglicht.",
           "readMore": "/appdetail/ac1cf001-7fbc-1f2f-817f-bce0572c0007",
           "readMoreTitle": "App Details öffnen",
           "backgroundColor": "#f9f9f9",
@@ -125,16 +125,16 @@
         {
           "title": "Smart MOM",
           "imagePath": "/images/content/GEC.jpg",
-          "description": "Konsolidiert alle Produktionsprozesse und Systeme zur Steuerung von Herstellungsprozessen…",
+          "description": "Ist die Lösung über ein Edge Device, welcher alle Produktionsprozesse und Systeme zur Steuerung von Herstellungsprozessen konsolidiert.",
           "readMore": "/appdetail/5cf74ef8-e0b7-4984-a872-474828beb5d1",
           "readMoreTitle": "App Details öffnen",
           "backgroundColor": "#f9f9f9",
           "align": "center"
         },
         {
-          "title": "SAP BN MT",
+          "title": "SAP Business Network Material Traceability",
           "imagePath": "/images/content/SAP.jpg",
-          "description": "stellt eine Lösung zur unternehmensübergreifenden Lieferkettentransparenz und Material Rückverfolgbarkeit dar…",
+          "description": "Ermöglicht eine unternehmensübergreifende Materialrückverfolgbarkeit entlang der Lieferkette mit nahtloser ERP-Integration und hilft betroffene Teile schnell und präzise mit relevanten Geschäftspartnern zu identifizieren und zu bearbeiten.",
           "readMore": "/appdetail/5cf74ef8-e0b7-4984-a872-474828beb5d7",
           "readMoreTitle": "App Details öffnen",
           "backgroundColor": "#f9f9f9",
@@ -143,7 +143,7 @@
         {
           "title": "Trusted Traceability",
           "imagePath": "/images/content/Siemens.jpg",
-          "description": "ist als vollständig verwaltetes System (Software-as-a-Service) verfügbar und ermöglicht die Einführung der Rückverfolgbarkeit…",
+          "description": "Verknüpft relevante Daten über eine Vertrauensebene zwischen Geschäftspartnern und sorgt für die erforderliche Transparenz.",
           "readMore": "/appdetail/ac1cf001-7fbc-1f2f-817f-bce05748000d",
           "readMoreTitle": "App Details öffnen",
           "backgroundColor": "#f9f9f9",
