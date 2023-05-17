@@ -18,8 +18,8 @@
  ********************************************************************************/
 
 export const Settings = {
-    DOCBASE: 'https://raw.githubusercontent.com/catenax-ng/tx-portal-assets',
-    SRCBASE: 'https://github.com/catenax-ng/tx-portal-assets',
+    DOCBASE: 'https://raw.githubusercontent.com/eclipse-tractusx/portal-assets',
+    SRCBASE: 'https://github.com/eclipse-tractusx/portal-assets',
     DEFAULT_ROOT: 'docs',
 }
 

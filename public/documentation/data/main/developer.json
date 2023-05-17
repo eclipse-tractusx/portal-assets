@@ -231,7 +231,10 @@
                 "##### SD Registration:",
                 "##### Host:",
                 "## Implementation/APIs",
-                "### 1 Get all MY Connector Registrations",
+                "### 1 Get all \"my\" Connector Registrations",
+                "#### Logical flow of the service",
+                "#### API Details",
+                "### 2 Get all \"my\" Connector Registrations hosted for customers/3rd parties",
                 "#### Logical flow of the service",
                 "#### API Details"
               ]
@@ -242,6 +245,7 @@
               "chapter": [
                 "## 1. Create new Connector Registration - self-owned",
                 "#### Details to the DAPS",
+                "##### API Details",
                 "#### Details to the SD",
                 "##### #1 Self description request",
                 "##### #2 Self description response (asynchron)",
@@ -276,6 +280,17 @@
               "chapter": [
                 "## 5 Delete Connector",
                 "#### API Details"
+              ]
+            },
+            {
+              "path": "developer/02. Technical Integration/01. Connector Registration/07. Error Handling.md",
+              "name": "07. Error Handling.md",
+              "chapter": [
+                "## Connector Registration Error Handling",
+                "### View Connector Table",
+                "#### #1 Scenario: No Data available",
+                "#### #2 Scenario: Endpoints are responding with an 500 error",
+                "#### #3 Scenario: Endpoints are responding with an 4xx error"
               ]
             }
           ]
@@ -541,8 +556,9 @@
               "path": "developer/03. User Management/04. App Access Management/01. Summary.md",
               "name": "01. Summary.md",
               "chapter": [
-                "# Summary",
-                "#### Pre-Requisite"
+                "## Summary",
+                "#### Pre-Requisite",
+                "### App Access Management"
               ]
             },
             {
@@ -866,6 +882,49 @@
                 "### #2 Decline Service Request",
                 "### #3 Service Details",
                 "### #4 Download service related documents"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "developer/05. Service(s)/03. Service Release Approval",
+          "name": "03. Service Release Approval",
+          "children": [
+            {
+              "path": "developer/05. Service(s)/03. Service Release Approval/01. Service Approval Board Overview.md",
+              "name": "01. Service Approval Board Overview.md",
+              "chapter": [
+                "## Service Approval Board",
+                "### #1 Service Release Overview",
+                "#### Sorting",
+                "#### Views"
+              ]
+            },
+            {
+              "path": "developer/05. Service(s)/03. Service Release Approval/02. Service Details.md",
+              "name": "02. Service Details.md",
+              "chapter": [
+                "## Service Details",
+                "### #1 Display Service details",
+                "### #2 Display Images",
+                "### #3 Download Documents"
+              ]
+            },
+            {
+              "path": "developer/05. Service(s)/03. Service Release Approval/03. Approve Service Release.md",
+              "name": "03. Approve Service Release.md",
+              "chapter": [
+                "## Implementation",
+                "### #1 Approve Service Release"
+              ]
+            },
+            {
+              "path": "developer/05. Service(s)/03. Service Release Approval/04. Decline Service Release.md",
+              "name": "04. Decline Service Release.md",
+              "chapter": [
+                "## Service Decline Details",
+                "### #1 Decline Service Release",
+                "##### Email Example"
               ]
             }
           ]
@@ -1457,14 +1516,12 @@
                 "### 1. Version bump",
                 "### 2. Update changelog file",
                 "### 3. Update dependencies file",
-                "### 4. Aggregate migrations (backend repo only)",
-                "## Tag and build of a versioned image",
+                "### 4. License check with the Eclipse Dash License Tool",
+                "### 5. Aggregate migrations (backend repo only)",
+                "## Tag and build of versioned images",
                 "## Merge release branch",
-                "## Release of a new consortia helm chart version",
-                "## Maintain upstream (eclipse-tractusx)",
-                "### License check with the Eclipse Dash License Tool",
-                "### Upstream for source code repositories",
-                "### Upstream for portal-cd",
+                "## Release new helm chart version",
+                "## Create releases from tags",
                 "## Publish new version of Shared UI Components to npm"
               ]
             },
@@ -1519,6 +1576,23 @@
               ]
             },
             {
+              "path": "developer/Technical Documentation/Others/Images, Graphics and Diagrams.md",
+              "name": "Images, Graphics and Diagrams.md",
+              "chapter": [
+                "# Images, Graphics and Diagrams",
+                "## Introduction",
+                "## File Formats",
+                "### Bitmap images",
+                "### Vector images",
+                "### Comparison",
+                "### Examples",
+                "## Scaling",
+                "## Creating and Manipulating Images",
+                "## Caching",
+                "## Final Considerations"
+              ]
+            },
+            {
               "path": "developer/Technical Documentation/Others/Notifications.md",
               "name": "Notifications.md",
               "chapter": [
@@ -1537,18 +1611,38 @@
                 "### #2 Get User Notification Count-Details",
                 "### #3 Get User Notification Details",
                 "### #4 PUT User Notification \"read\" / \"unread\"",
-                "### #5 POST User notification",
-                "### #6 DELETE User notification ",
-                "### #7 Implemented Sorting feature",
+                "### #5 DELETE User notification ",
+                "### #6 Implemented Sorting feature",
                 "###### VIEW ALL (inside the filter)",
                 "###### VIEW APP  (inside the filter)",
                 "###### VIEW Info (inside the filter) ",
                 "###### View Action Required  (inside the filter)",
-                "### #8 Implemented Views",
+                "### #7 Implemented Views",
                 "## Configuration",
                 "### Notification Types / Messages",
                 "#### Welcome",
-                "#### Offer Subscription"
+                "#### Offer Release Request",
+                "#### Offer Subscription",
+                "#### User Role Change",
+                "## Notification \"Done\" State"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "developer/Technical Documentation/Version Upgrade",
+          "name": "Version Upgrade",
+          "children": [
+            {
+              "path": "developer/Technical Documentation/Version Upgrade/portal-upgrade-details.md",
+              "name": "portal-upgrade-details.md",
+              "chapter": [
+                "## Summary",
+                "#### Technical User Profiles - NEW - 1.4.0",
+                "#### License Types - NEW & ENHANCED- 1.4.0",
+                "#### Mediatype - NEW & ENHANCED - 1.2.0",
+                "#### Application Checklist - ENHANCED - 1.1.0",
+                "#### Service Details - NEW (interim) - 1.1.0"
               ]
             }
           ]
