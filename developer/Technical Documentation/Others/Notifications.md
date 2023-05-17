@@ -92,7 +92,7 @@ Via the user token, all relevant information will get fetched from the portal db
 <br>
 
 ```diff
-! GET /api/notification/count-details
+! GET /api/notification/count
 ```
 
 <br>
@@ -109,11 +109,25 @@ The endpoint is a pure calculation/counting of the different metadata found belo
 * infoUnread
 * offerUnread
 * actionRequired
+* unreadActionRequired
 <br>
 
 ```diff
 ! GET /api/notification/count-details
 ```
+
+<br>
+
+Response Body
+
+          {
+            "read": 18,
+            "unread": 30,
+            "infoUnread": 11,
+            "offerUnread": 1,
+            "actionRequired": 25,
+            "unreadActionRequired": 18
+          }
 
 <br>
 <br>
