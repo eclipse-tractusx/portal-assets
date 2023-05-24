@@ -255,6 +255,7 @@ footer .copy {
     background-size: cover;
     background-repeat: no-repeat;
     display: none;
+    top: 0;
 }
 
 .home a {
@@ -268,10 +269,6 @@ footer .copy {
     background-position: 0 0;
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-.subheadline a {
-    top: 0;
 }
 
 .subheadline h1 {
