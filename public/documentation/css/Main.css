@@ -79,7 +79,6 @@ header {
     font-size: 20px;
     border-radius: 16px;
     border: 1px solid lightgray;
-    font-size: 20px;
     min-width: 500px;
     text-align: left;
     margin-left: 20px;
@@ -245,7 +244,19 @@ footer .copy {
     position: relative;
 }
 
-.subheadline a,
+.subheadline a {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 192px;
+    height: 45px;
+    background-image: url(/assets/images/logos/cx-text.svg);
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: none;
+}
+
 .home a {
     position: absolute;
     display: block;
@@ -257,7 +268,6 @@ footer .copy {
     background-position: 0 0;
     background-size: cover;
     background-repeat: no-repeat;
-    display: none;
 }
 
 .subheadline a {
