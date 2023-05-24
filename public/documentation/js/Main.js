@@ -150,7 +150,6 @@ class ChapterCard extends Viewable {
         this.view = addEvents(
             N('div',
                 N('div', [
-                    this.getImage(chapter),
                     N('div', chapter.name.replace(Patterns.DISPLAY, ' '), { class: 'chapter-card-title' }),
                 ], {
                     href: chapter.path
