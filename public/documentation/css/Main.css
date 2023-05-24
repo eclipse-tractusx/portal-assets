@@ -247,7 +247,6 @@ footer .copy {
 .subheadline a {
     position: absolute;
     left: 20px;
-    top: 20px;
     width: 192px;
     height: 45px;
     background-image: url(/assets/images/logos/cx-text.svg);
