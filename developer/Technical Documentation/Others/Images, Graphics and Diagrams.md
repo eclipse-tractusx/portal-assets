@@ -35,11 +35,18 @@ Those are images in a fixed resolution that try to store the image pixel colors 
 * JPEG - known to most people as the common format for pictures taken with digital cameras or mobile phones. It uses a lossy compression meaning the image size can be reduced but some details are possibly lost. The quality of the images can be chosen quite freely from 1 to 100 percent. Very useful to find a good tradeoff between file size and image quality. On the downside it doesn't support transparency and tends to show compression artifacts on documents or illustrations that are composed of mostly flat colors.
 * PNG - a more versatile loss free image format that also addresses some of JPEGs other issues. It supports two encoding modes
   * RGB - storing the absolute pixel values which results in usually larger file sizes than the other formats.
-  * Indexed Colors - very interesting for images that unlike photographs have a limited number of different colors like for example scanned documents. Reducing the image to something like 16 different colors and storing pixels as color index can reduce the file sizes drastically. This option makes PNG the best format for some kinds of images.
+  * Indexed Colors - very interesting for images that unlike photographs have a limited number of different colors like for example scanned documents or presentation slides. Reducing the image to something like 16 different colors and storing pixels as color index can reduce the file sizes drastically. This option makes PNG the best choice for some kinds of images.
 
 ### Vector images
 
-SVG follows a complete different approach to store the image information: describing the composition of its elements. Instead of pixel values the image contains (textual) information about the elements like "draw a circle at position x,y with radius r and line width 5 and yellow color". This has two main advantages - not only takes the information usually much less space than the pixels, the image can also be scaled up to any resolution and the lines drawn will be always sharp.
+SVG follows a complete different approach to store the image information:
+instead of pixel values the image contains (textual) information about the composition of elements like
+
+    <circle r="12" cx="60" cy="40" stroke-width="2" stroke="blue" fill="yellow"/>
+
+This has two main advantages - not only takes the information usually much less space than the pixels, the image can also be scaled to any resolution and the lines drawn will be always sharp. 
+On the other side only a few tools support exporting SVG and converting a bitmap into SVG is currently not possible.
+And obviously there is no way to represent unstructured image content like photographs.
 
 <br/>
 
@@ -73,8 +80,11 @@ Some examples of different image types in different file formats and encodings:
 
 ## Scaling
 
-Most of the time it's the best idea to scale bitmap images to the display size - when they are scaled down we transfer unnecessary large data and
-when scaled up to a higher resolution they will become blurry because the detail information is missing and the browser will interpolate the missing pixels. Vector images like SVG will look sharp at any resolution because the image is "drawn" from scratch again.
+Most of the time it's the best idea to scale bitmap images to the display size -
+when they will be scaled down to a lower resolution we transfer unnecessary large data and
+when scaled up to a higher resolution they will become blurry because the detail information
+is missing and the browser will interpolate the missing pixels.
+Vector images like SVG will look sharp at any resolution because the image is "drawn" from scratch again.
 
 JPEG Bitmap, 30% Quality, 4x size<br/>
 Extreme lossy compression results in a small file size but poor image quality with heavy artifacts.<br/>
@@ -103,6 +113,7 @@ Smallest file size and best quality.<br/>
 There are some tools to generate SVG images but none of them are really comfortable to use, so we created the SVGs on this page with a simple text editor with preview function. Bitmap images are usually not created from scratch but can come from any source, like screenshots, digital cameras, exported from another application, downloaded from the web, etc.
 
 There are a lot of tools available to convert between file formats or encodings. Only a few support generating the indexed color PNG encoding which is the top choice for bitmap images that don't have too many different colors. Our recommendation is to use the free Gimp https://www.gimp.org/ application.
+For quick conversion there are online tools like https://tinypng.com/ - but keep in mind that for best results the image should be scaled to a reasonable resolution before compression.
 
 <br/>
 
@@ -114,6 +125,8 @@ Images are large and often we don't want to send them over the network every tim
 
 ## Final Considerations
 
-<img width="800px" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/public/assets/images/docs/graphics/image-formats.svg"/>
+Follow this (SVG) decision diagram to find the optimal image encoding.
+
+<img width="1280px" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/public/assets/images/docs/graphics/image-formats.svg"/>
 
 Choosing an image for use on a web page is a trade-off between file size and quality of display. The file format has the biggest impact on the result. High quality, high resolution bitmap images look very beautiful on the screen but often come as big files that takes very long to load. Always try to keep the file size as small as possible while preserving an acceptable quality for the user. As a rule of thumb, the file size of any image should not exceed 100kB. Whenever the image type allows to use SVG, then use SVG as it usually is the best choice combining the smallest file size together with best image quality.

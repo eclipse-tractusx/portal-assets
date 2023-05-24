@@ -183,7 +183,8 @@
                 "## Connector Overview",
                 "#### DAPS Auth Status",
                 "#### SelfDescription Status",
-                "#### Connector Status"
+                "#### Connector Status",
+                "#### Connector Providers"
               ]
             },
             {
@@ -858,6 +859,41 @@
               "chapter": [
                 "### FAQ",
                 "### How can I submit a new service offer for marketplace publishing?"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "docs/05. Service(s)/03. Service Release Approval",
+          "name": "03. Service Release Approval",
+          "children": [
+            {
+              "path": "docs/05. Service(s)/03. Service Release Approval/01. Service Approval Board.md",
+              "name": "01. Service Approval Board.md",
+              "chapter": [
+                "## Summary",
+                "### Page Design  "
+              ]
+            },
+            {
+              "path": "docs/05. Service(s)/03. Service Release Approval/02. Service Details.md",
+              "name": "02. Service Details.md",
+              "chapter": [
+                "## Service Details"
+              ]
+            },
+            {
+              "path": "docs/05. Service(s)/03. Service Release Approval/03. Approve Service Release.md",
+              "name": "03. Approve Service Release.md",
+              "chapter": [
+                "## Approve Service Release"
+              ]
+            },
+            {
+              "path": "docs/05. Service(s)/03. Service Release Approval/04. Decline Service Release.md",
+              "name": "04. Decline Service Release.md",
+              "chapter": [
+                "## Decline Service Release"
               ]
             }
           ]
