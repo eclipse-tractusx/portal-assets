@@ -73,8 +73,8 @@ const createReleaseSelection = (version) => {
 
     const Settings = {
         BASE: 'https://api.github.com',
-        OWNER: 'catenax-ng',
-        REPO: 'tx-portal-assets',
+        OWNER: 'eclipse-tractusx',
+        REPO: 'portal-assets',
     }
 
     const url = `${Settings.BASE}/repos/${Settings.OWNER}/${Settings.REPO}/git/refs/tags`
