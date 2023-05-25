@@ -46,7 +46,7 @@ jobs:
       - name: Install Dependencies
         run: yarn
 
-      - name: Create metadata for branch main
+      - name: Create metadata
         run: yarn build:release
 
       - name: Add content to Legal Notice
