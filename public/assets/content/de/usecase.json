@@ -28,7 +28,7 @@
      {
        "title": "Warum ist es sinnvoll bei Traceability zu partizipieren?",
        "description": "",
-       "imagePath": "/images/content/traceability_contribution(de).png",
+       "imagePath": "/images/content/traceability_contribution(de).svg",
        "backgroundColor": "#FFFFFF",
        "id": "contribution-id",
        "template": "TextImageCenterAligned"
@@ -52,7 +52,7 @@
      {
        "title": "Wie funktioniert der Datenaustausch bei der Traceability?",
        "description": "",
-       "imagePath": "/images/content/traceability_dataexchange(de).png",
+       "imagePath": "/images/content/traceability_dataexchange(de).svg",
        "backgroundColor": "#F9F9F9",
        "id": "details2-id",
        "template": "TextImageCenterAligned"

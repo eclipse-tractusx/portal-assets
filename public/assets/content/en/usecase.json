@@ -28,7 +28,7 @@
       {
         "title": "How to contribute to Traceability and why?",
         "description": "",
-        "imagePath": "/images/content/traceability_contribution(en).png",
+        "imagePath": "/images/content/traceability_contribution(en).svg",
         "backgroundColor": "#FFFFFF",
         "id": "contribution-id",
         "template": "TextImageCenterAligned"
@@ -52,7 +52,7 @@
       {
         "title": "Details to the data exchange",
         "description": "",
-        "imagePath": "/images/content/traceability_dataexchange(en).png",
+        "imagePath": "/images/content/traceability_dataexchange(en).svg",
         "backgroundColor": "#F9F9F9",
         "id": "details2-id",
         "template": "TextImageCenterAligned"
