@@ -4,69 +4,69 @@
     "link2Label": "Core Values",
     "link3Label": "Details",
     "link4Label": "Business Applications"
- },
-"traceability": {
-  "title": "Traceability",
-  "description": "...als Basis und integraler Bestandteil zum Aufbau von digitalen Datenketten und Befähiger von datenketten-fokussierter Use Cases",
-  "sections": [
-    {
-      "title": "Einführung",
-      "description": "Ziel ist die Rückverfolgung von Produkten, Materialien, Komponenten und Software entlang der automobilen Wertschöpfungskette zur Befähigung N-Tier übergreifender Use-Cases. Dies erfolgt über die standardisierte Erstellung von digitalen Zwillingen von Komponenten und Fahrzeugen sowie die logische Verknüpfung von deren Stücklisten (Bill of Material, BoM).",
-      "videoUrl": "https://eclipse-tractusx.github.io/video/traceability-video-9min-UT.mp4",
-      "id": "intro-id",
-      "backgroundColor": "#FFFFFF",
-      "template": "TextVideoSideBySide"
-    },
-    {
-       "title": "Kernwerte von Catena-X werden in der Traceability umgesetzt",
-       "description": "",
-       "imagePath": "/images/content/traceability_core_values(de).svg",
-       "backgroundColor": "#F9F9F9",
-       "id": "core-id",
-       "template": "TextImageCenterAligned"
-     },
-     {
-       "title": "Warum ist es sinnvoll bei Traceability zu partizipieren?",
-       "description": "",
-       "imagePath": "/images/content/traceability_contribution(de).svg",
-       "backgroundColor": "#FFFFFF",
-       "id": "contribution-id",
-       "template": "TextImageCenterAligned"
-     },
-     {
-       "title": "Die wichtigsten Begrifflichkeiten kurz erläutert",
-       "description": "",
-       "imagePath": "/images/content/traceability_terms(de).png",
-       "backgroundColor": "#F9F9F9",
-       "id": "context-id",
-       "template": "TextImageCenterAligned"
-     },
-     {
-       "title": "Traceability unterteilt die Datenmodelle je Lebenszyklusphase",
-       "description": "",
-       "imagePath": "/images/content/traceability_datamodels(de).svg",
-       "backgroundColor": "#FFFFFF",
-       "id": "details-id",
-       "template": "TextImageCenterAligned"
-     },
-     {
-       "title": "Wie funktioniert der Datenaustausch bei der Traceability?",
-       "description": "",
-       "imagePath": "/images/content/traceability_dataexchange(de).svg",
-       "backgroundColor": "#F9F9F9",
-       "id": "details2-id",
-       "template": "TextImageCenterAligned"
-     },
-     {
-       "title": "",
-       "subTitles": [
+  },
+  "traceability": {
+    "title": "Traceability",
+    "description": "...als Basis und integraler Bestandteil zum Aufbau von digitalen Datenketten und Befähiger von datenketten-fokussierter Use Cases",
+    "sections": [
+      {
+        "title": "Einführung",
+        "description": "Ziel ist die Rückverfolgung von Produkten, Materialien, Komponenten und Software entlang der automobilen Wertschöpfungskette zur Befähigung N-Tier übergreifender Use-Cases. Dies erfolgt über die standardisierte Erstellung von digitalen Zwillingen von Komponenten und Fahrzeugen sowie die logische Verknüpfung von deren Stücklisten (Bill of Material, BoM).",
+        "videoUrl": "https://eclipse-tractusx.github.io/video/traceability-video-9min-UT.mp4",
+        "id": "intro-id",
+        "backgroundColor": "#FFFFFF",
+        "template": "TextVideoSideBySide"
+      },
+      {
+        "title": "Kernwerte von Catena-X werden in der Traceability umgesetzt",
+        "description": "",
+        "imagePath": "/images/content/traceability_core_values(de).svg",
+        "backgroundColor": "#F9F9F9",
+        "id": "core-id",
+        "template": "TextImageCenterAligned"
+      },
+      {
+        "title": "Warum ist es sinnvoll bei Traceability zu partizipieren?",
+        "description": "",
+        "imagePath": "/images/content/traceability_contribution(de).svg",
+        "backgroundColor": "#FFFFFF",
+        "id": "contribution-id",
+        "template": "TextImageCenterAligned"
+      },
+      {
+        "title": "Die wichtigsten Begrifflichkeiten kurz erläutert",
+        "description": "",
+        "imagePath": "/images/content/traceability_terms(de).png",
+        "backgroundColor": "#F9F9F9",
+        "id": "context-id",
+        "template": "TextImageCenterAligned"
+      },
+      {
+        "title": "Traceability unterteilt die Datenmodelle je Lebenszyklusphase",
+        "description": "",
+        "imagePath": "/images/content/traceability_datamodels(de).svg",
+        "backgroundColor": "#FFFFFF",
+        "id": "details-id",
+        "template": "TextImageCenterAligned"
+      },
+      {
+        "title": "Wie funktioniert der Datenaustausch bei der Traceability?",
+        "description": "",
+        "imagePath": "/images/content/traceability_dataexchange(de).svg",
+        "backgroundColor": "#F9F9F9",
+        "id": "details2-id",
+        "template": "TextImageCenterAligned"
+      },
+      {
+        "title": "",
+        "subTitles": [
           "Im Beispiel fertigt ein KMU eine Charge von Zahnrädern mit der Chargennummer XX1235509 und der Sachnummer 5A52625. Nach Fertigung der Teile legt das KMU gemäß der Catena-X Standards für diese Charge mittels des Datenmodells <strong class='tooltip'>Batch<0>Bildet Stammdaten einer Charge nach Verbau ab. Relevant für Hersteller von Bauteilen mit großen Losgrößen, die zu gleichen Herstellungsbedingungen produziert und in einer Chargennummer gebündelt werden.</0></strong> einen digitalen Zwilling in der <strong class='tooltip'>Digital Twin Registry<0>Jedes rückverfolgbare Objekt wird über einen Digitalen Zwilling abgebildet und in der „Digital Twin Registry“ registriert.</0></strong> an. Darüber hinaus wird für die eindeutige Identifizierbarkeit im Catena-X Ökosystem eine <strong class='tooltip'>Catena-X Unique-ID<0>Catena-X ID - Universally Unique Identifier (UUID):Jedes Objekt (Rohstoff, Bauteil od. Fahrzeug) erhält zur eindeutigen Identifikation im Catena-X Datenraum eine eindeutige Catena-X ID.</0></strong> für die Charge erzeugt. Dem Kunden wird über den  <strong class='tooltip'>EDC<0>Der Eclipse Dataspace Connector (EDC) ist der Standard-Konnektor im Netzwerk, der einen sicheren und souveränen Datenaustausch sicherstellt</0></strong> ein Datenangebot zum Abruf dieser Daten des Digitalen Zwillings zur Verfügung gestellt. Die physischen Bauteile (Zahnräder) werden anschließend an den Kunden verschickt.<1></1><1></1><1></1>",
           "Der Kunde empfängt die Charge der Zahnräder des KMUs und scannt diese bei der Fertigung des Getriebes. Für das Getriebe (Seriennummer 21B294301258, Sachnummer 5A52479) erstellt er ebenfalls einen digitalen Zwilling und eine Catena-X Unique-ID. Für die Registrierung seines Digitalen Zwillings nutzt er das Datenmodell <strong class='tooltip'>SerialPartTypization<0>Bildet Stammdaten eines Bauteils mit eigener Seriennummer nach Verbau ab. Relevant für Hersteller von serialisierten Einzelteilen oder Fahrzeughersteller.</0></strong>. Die Informationen des Digitalen Zwilling stellt er über ein entsprechendes Datenangebot im EDC seinem Kunden, in diesem Fall dem OEM zur Verfügung. Für die logische Verknüpfung der beiden digitalen Zwillinge (Charge von Zahnrädern zu Getriebe) wird über einen Look-Up in der Digital Twin Registry die Catena-X Unique-ID der Charge ermittelt und mittels des Datenmodells <strong class='tooltip'>AssemblyPartRelation<0>Bildet die Verbaubeziehungen zwischen den Bauteilen ab. Beispielsweise welche Charge (Zahnrad, Rohstoff) in welchem Serialisierten Teil (Getriebe) in welchem Fahrzeug verbaut ist.</0></strong> im digitalen Zwilling des Getriebes gespeichert. Durch diese logische Verknüpfung entsteht die Catena-X Datenkette.<1></1><1></1><1></1>",
           "Derselbe Prozess geschieht auf allen Ebenen, wie im obigen Beispiel auch zwischen Kunde und dem OEM.<1></1><1></1><1></1>"
-         ],
-       "id": "details3-id",
-       "backgroundColor": "#f9f9f9",
-       "template": "TextCenterAlignedBody2"
+          ],
+        "id": "details3-id",
+        "backgroundColor": "#f9f9f9",
+        "template": "TextCenterAlignedBody2"
       },
       {
         "title": "Möglichkeiten zur Teilnahme am Use Case Traceability",
@@ -105,52 +105,52 @@
           }
         ]
       },
-     {
-      "title": "Business Anwendungen innerhalb der Traceability",
-      "description": "Für den vollen Funktionsumfang der Rückverfolgbarkeits-Lösungen, von Datenbereitstellung bis hin zu standardisierten Benachrichtigungen im Qualitätsprozess (Alerting-Prozess), stehen verschiedene Anwendungen zur Verfügung. Das Angebot reicht von Open Source-Anwendungen bis hin zu kommerziellen Lösungen mit vollständiger ERP-Integration. Nutzen Sie die Links für detaillierte Informationen zu den Anwendungen.",
-      "backgroundColor": "#FFFFFF",
-      "id": "business-id",
-      "grid": 4,
-      "template": "TextCenterAlignedWithCardGrid",
-      "detailsWithImageRow1": [
-        {
-          "title": "Trace X",
-          "imagePath": "/images/content/CX.jpg",
-          "description": "Trace-X stellt die im Konsortium entwickelte Open-Source Anwendung dar. Es wird eine lückenlose Rückverfolgbarkeit von Teilen über die N-Tier Lieferkette ermöglicht.",
-          "readMore": "/appdetail/ac1cf001-7fbc-1f2f-817f-bce0572c0007",
-          "readMoreTitle": "App Details öffnen",
-          "backgroundColor": "#f9f9f9",
-          "align": "center"
-        },
-        {
-          "title": "Smart MOM",
-          "imagePath": "/images/content/GEC.jpg",
-          "description": "Ist die Lösung über ein Edge Device, welcher alle Produktionsprozesse und Systeme zur Steuerung von Herstellungsprozessen konsolidiert.",
-          "readMore": "/appdetail/5cf74ef8-e0b7-4984-a872-474828beb5d1",
-          "readMoreTitle": "App Details öffnen",
-          "backgroundColor": "#f9f9f9",
-          "align": "center"
-        },
-        {
-          "title": "SAP Business Network Material Traceability",
-          "imagePath": "/images/content/SAP.jpg",
-          "description": "Ermöglicht eine unternehmensübergreifende Materialrückverfolgbarkeit entlang der Lieferkette mit nahtloser ERP-Integration und hilft betroffene Teile schnell und präzise mit relevanten Geschäftspartnern zu identifizieren und zu bearbeiten.",
-          "readMore": "/appdetail/5cf74ef8-e0b7-4984-a872-474828beb5d7",
-          "readMoreTitle": "App Details öffnen",
-          "backgroundColor": "#f9f9f9",
-          "align": "center"
-        },
-        {
-          "title": "Trusted Traceability",
-          "imagePath": "/images/content/Siemens.jpg",
-          "description": "Verknüpft relevante Daten über eine Vertrauensebene zwischen Geschäftspartnern und sorgt für die erforderliche Transparenz.",
-          "readMore": "/appdetail/ac1cf001-7fbc-1f2f-817f-bce05748000d",
-          "readMoreTitle": "App Details öffnen",
-          "backgroundColor": "#f9f9f9",
-          "align": "center"
-         }
-       ]
-     }
-   ]
+      {
+        "title": "Business Anwendungen innerhalb der Traceability",
+        "description": "Für den vollen Funktionsumfang der Rückverfolgbarkeits-Lösungen, von Datenbereitstellung bis hin zu standardisierten Benachrichtigungen im Qualitätsprozess (Alerting-Prozess), stehen verschiedene Anwendungen zur Verfügung. Das Angebot reicht von Open Source-Anwendungen bis hin zu kommerziellen Lösungen mit vollständiger ERP-Integration. Nutzen Sie die Links für detaillierte Informationen zu den Anwendungen.",
+        "backgroundColor": "#FFFFFF",
+        "id": "business-id",
+        "grid": 4,
+        "template": "TextCenterAlignedWithCardGrid",
+        "detailsWithImageRow1": [
+          {
+            "title": "Trace X",
+            "imagePath": "/images/content/CX.jpg",
+            "description": "Trace-X stellt die im Konsortium entwickelte Open-Source Anwendung dar. Es wird eine lückenlose Rückverfolgbarkeit von Teilen über die N-Tier Lieferkette ermöglicht.",
+            "readMore": "/appdetail/ac1cf001-7fbc-1f2f-817f-bce0572c0007",
+            "readMoreTitle": "App Details öffnen",
+            "backgroundColor": "#f9f9f9",
+            "align": "center"
+          },
+          {
+            "title": "Smart MOM",
+            "imagePath": "/images/content/GEC.jpg",
+            "description": "Ist die Lösung über ein Edge Device, welcher alle Produktionsprozesse und Systeme zur Steuerung von Herstellungsprozessen konsolidiert.",
+            "readMore": "/appdetail/5cf74ef8-e0b7-4984-a872-474828beb5d1",
+            "readMoreTitle": "App Details öffnen",
+            "backgroundColor": "#f9f9f9",
+            "align": "center"
+          },
+          {
+            "title": "SAP Business Network Material Traceability",
+            "imagePath": "/images/content/SAP.jpg",
+            "description": "Ermöglicht eine unternehmensübergreifende Materialrückverfolgbarkeit entlang der Lieferkette mit nahtloser ERP-Integration und hilft betroffene Teile schnell und präzise mit relevanten Geschäftspartnern zu identifizieren und zu bearbeiten.",
+            "readMore": "/appdetail/5cf74ef8-e0b7-4984-a872-474828beb5d7",
+            "readMoreTitle": "App Details öffnen",
+            "backgroundColor": "#f9f9f9",
+            "align": "center"
+          },
+          {
+            "title": "Trusted Traceability",
+            "imagePath": "/images/content/Siemens.jpg",
+            "description": "Verknüpft relevante Daten über eine Vertrauensebene zwischen Geschäftspartnern und sorgt für die erforderliche Transparenz.",
+            "readMore": "/appdetail/ac1cf001-7fbc-1f2f-817f-bce05748000d",
+            "readMoreTitle": "App Details öffnen",
+            "backgroundColor": "#f9f9f9",
+            "align": "center"
+          }
+        ]
+      }
+    ]
   }
 }
