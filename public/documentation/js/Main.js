@@ -729,7 +729,7 @@ class LegalNoticeOverlay extends Viewable {
                         )
                     ], { class: 'aboutBody' }),
                     N('div', [
-                        N('p', content.commitId),
+                        N('p', 'Commit ID: ' + content.commitId),
                     ], { class: 'aboutBody' }),
                 ], { class: 'aboutComponent' }),
                 { class: 'aboutContainer' }),
