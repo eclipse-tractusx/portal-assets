@@ -754,10 +754,10 @@ class LegalNotice extends Viewable {
         fetch('/assets/notice/legal-notice.json')
             .then((data) => data.json())
             .then(this.setContent.bind(this))
+            .catch(() => {})
     }
 
     setContent(content) {
-        console.log(content)
         this.overlay = new LegalNoticeOverlay(content)
     }
 }
