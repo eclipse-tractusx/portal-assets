@@ -22,12 +22,12 @@ and click on the action button "Register your service"
 <br>
 <br>
 
-- [Step 1: Service Card](/01.%20Service%20Card.md)
-- [Step 2: Service Detail Page](/02.%20Service%20Detail%20Page.md)
-- [Step 3: Terms & Conditions](/03.%20Terms%20and%20Conditions.md)
-- [Step 4: Technical Integration](/04.%20Technical%20Integration.md)
-- [Step 5: Verify & Submit](/05.%20Verify%20&%20Submit.md)
-- [FAQ](/06.%20FAQ.md)
+- [Step 1: Service Card](./01.%20Service%20Card.md)
+- [Step 2: Service Detail Page](./02.%20Service%20Detail%20Page.md)
+- [Step 3: Terms & Conditions](./03.%20Terms%20and%20Conditions.md)
+- [Step 4: Technical Integration](./04.%20Technical%20Integration.md)
+- [Step 5: Verify & Submit](./05.%20Verify%20&%20Submit.md)
+- [FAQ](./06.%20FAQ.md)
 
 <br>
 <br>
