@@ -701,7 +701,7 @@ class LegalNoticeOverlay extends Viewable {
                         )
                     ], { class: 'aboutHeader' }),
                     N('div', [
-                        N('p', content.license),
+                        N('p', 'License ' + content.license),
                         addEvents(
                             N('img', null, { alt: content.license, src: `/assets/images/icons/newtab.png` }),
                             {

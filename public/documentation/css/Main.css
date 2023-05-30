@@ -383,7 +383,7 @@ footer .copy {
     color: rgb(17, 17, 17);
     letter-spacing: 0px;
     padding-right: 10px;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 .legalnotice .aboutHeader img,
