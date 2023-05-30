@@ -219,12 +219,19 @@ footer {
     text-align: center;
     padding-top: 1vw;
     padding-bottom: 20px;
+    display: flex;
+    place-content: center;
 }
 
 footer .links,
 footer .copy {
     line-height: 40px;
     min-height: 40px;
+}
+
+footer .about {
+    margin-left: 20px;
+    cursor: pointer;
 }
 
 footer .links {
@@ -330,6 +337,85 @@ footer .copy {
     border-radius: 50%;
     border: 5px solid rgb(15, 113, 203);
     animation: prixClipFix 4s linear infinite;
+}
+
+/* LEGAL NOTICE INFO */
+
+legalnotice {
+    position: absolute;
+    width: 100%;
+    background: rgba(0,0,0,0.3);
+    height: 100%;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+}
+
+legalnotice .aboutContainer {
+    position: relative;
+    width: 800px;
+    margin: 50px auto;
+    top: 20%;
+}
+
+legalnotice .aboutComponent {
+    background: #FFFFFF;
+    box-shadow: 0px 5px 10px rgb(80 80 80 / 30%);
+    width: 100%;
+    border-radius: 8px;
+}
+
+legalnotice .aboutHeader {
+    display: flex;
+    place-content: flex-start;
+    place-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+legalnotice .aboutHeader p {
+    margin: 0px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.5;
+    color: rgb(17, 17, 17);
+    letter-spacing: 0px;
+    padding-right: 10px;
+    text-transform: capitalize;
+}
+
+legalnotice .aboutHeader img,
+legalnotice .aboutBody img {
+    width: 20px;
+    height: 20px;
+    background: none;
+    border-radius: 0px;
+    border: 0px;
+}
+
+legalnotice .aboutBody {
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+legalnotice .aboutBody p {
+    margin: 0px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgb(17, 17, 17);
+    letter-spacing: 0px;
+    padding-right: 10px;
+    text-transform: capitalize;
+}
+
+legalnotice .title {
+    color: rgb(17, 17, 17);
 }
 
 @keyframes rotate {

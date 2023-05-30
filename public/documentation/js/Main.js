@@ -17,7 +17,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import { clear, addEvents, N, Viewable, NavTools } from "./Toolkit.js"
+import { clear, remove, addEvents, N, Viewable, NavTools } from "./Toolkit.js"
 import { state } from "./State.js"
 import { Patterns, Settings } from "./Settings.js"
 
@@ -677,12 +677,97 @@ class Header extends Viewable {
     }
 }
 
+class LegalNoticeOverlay extends Viewable {
+    constructor(content) {
+        super()
+        this.view = N('legalNotice',
+            N('div',
+                N('div', [
+                    N('div', [
+                        N('p', content.name),
+                        addEvents(
+                            N('img', null, { alt: content.name, src: `/assets/images/icons/newtab.png` }),
+                            {
+                                click: () => window.open(content.repositoryPath, '_blank')
+                            }
+                        ),
+                        addEvents(
+                            N('img', null, { alt: content.name, src: `/assets/images/icons/close.png`, class: 'close' }),
+                            {
+
+                                click: () => remove(this.getView())
+
+                            }
+                        )
+                    ], { class: 'aboutHeader' }),
+                    N('div', [
+                        N('p', content.license),
+                        addEvents(
+                            N('img', null, { alt: content.license, src: `/assets/images/icons/newtab.png` }),
+                            {
+                                click: () => window.open(content.licensePath, '_blank')
+                            }
+                        )
+                    ],
+                        { class: 'aboutBody' }),
+                    N('div', [
+                        N('p', 'Notice'),
+                        addEvents(
+                            N('img', null, { alt: 'Notice', src: `/assets/images/icons/newtab.png` }),
+                            {
+                                click: () => window.open(content.noticePath, '_blank')
+                            }
+                        )
+                    ], { class: 'aboutBody' }),
+                    N('div', [
+                        N('p', 'Source'),
+                        addEvents(
+                            N('img', null, { alt: 'Source', src: `/assets/images/icons/newtab.png` }),
+                            {
+                                click: () => window.open(content.sourcePath, '_blank')
+                            }
+                        )
+                    ], { class: 'aboutBody' }),
+                    N('div', [
+                        N('p', content.commitId),
+                    ], { class: 'aboutBody' }),
+                ], { class: 'aboutComponent' }),
+                { class: 'aboutContainer' })
+        )
+    }
+}
+
+class LegalNotice extends Viewable {
+    constructor() {
+        super()
+        this.view = addEvents(
+            this.view = N('div', 'About', { class: 'copy about' }),
+            {
+                click: (e) => this.overlay.appendTo(document.body)
+            }
+        )
+        this.loadData()
+    }
+
+    loadData() {
+        fetch('/assets/notice/legal-notice.json')
+            .then((data) => data.json())
+            .then(this.setContent.bind(this))
+    }
+
+    setContent(content) {
+        console.log(content)
+        this.overlay = new LegalNoticeOverlay(content)
+    }
+}
+
 class Footer extends Viewable {
     constructor() {
         super()
         this.view = N('footer', [
             N('div', '', { class: 'links' }),
-            N('div', 'Copyright © Catena-X Automotive Network.', { class: 'copy' })
+            N('div', 'Copyright © Catena-X Automotive Network.', { class: 'copy' }),
+            new LegalNotice()
         ])
     }
 }

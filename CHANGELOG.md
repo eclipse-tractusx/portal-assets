@@ -2,6 +2,9 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
+## unreleased
+* About - Legal info overlay is added
+
 ## 1.4.0
 
 ### Change
