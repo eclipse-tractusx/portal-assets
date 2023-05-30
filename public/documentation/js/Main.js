@@ -680,7 +680,7 @@ class Header extends Viewable {
 class LegalNoticeOverlay extends Viewable {
     constructor(content) {
         super()
-        this.view = N('legalNotice',
+        this.view = N('div',
             N('div',
                 N('div', [
                     N('div', [
@@ -732,7 +732,8 @@ class LegalNoticeOverlay extends Viewable {
                         N('p', content.commitId),
                     ], { class: 'aboutBody' }),
                 ], { class: 'aboutComponent' }),
-                { class: 'aboutContainer' })
+                { class: 'aboutContainer' }),
+            { class: 'legalnotice' }
         )
     }
 }

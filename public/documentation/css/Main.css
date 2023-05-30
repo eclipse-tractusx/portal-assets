@@ -341,7 +341,7 @@ footer .copy {
 
 /* LEGAL NOTICE INFO */
 
-legalnotice {
+.legalnotice {
     position: absolute;
     width: 100%;
     background: rgba(0,0,0,0.3);
@@ -353,21 +353,21 @@ legalnotice {
     right: 20px;
 }
 
-legalnotice .aboutContainer {
+.legalnotice .aboutContainer {
     position: relative;
     width: 800px;
     margin: 50px auto;
     top: 20%;
 }
 
-legalnotice .aboutComponent {
+.legalnotice .aboutComponent {
     background: #FFFFFF;
     box-shadow: 0px 5px 10px rgb(80 80 80 / 30%);
     width: 100%;
     border-radius: 8px;
 }
 
-legalnotice .aboutHeader {
+.legalnotice .aboutHeader {
     display: flex;
     place-content: flex-start;
     place-items: center;
@@ -375,7 +375,7 @@ legalnotice .aboutHeader {
     border-bottom: 1px solid #e3e3e3;
 }
 
-legalnotice .aboutHeader p {
+.legalnotice .aboutHeader p {
     margin: 0px;
     font-weight: 600;
     font-size: 24px;
@@ -386,8 +386,8 @@ legalnotice .aboutHeader p {
     text-transform: capitalize;
 }
 
-legalnotice .aboutHeader img,
-legalnotice .aboutBody img {
+.legalnotice .aboutHeader img,
+.legalnotice .aboutBody img {
     width: 20px;
     height: 20px;
     background: none;
@@ -395,7 +395,7 @@ legalnotice .aboutBody img {
     border: 0px;
 }
 
-legalnotice .aboutBody {
+.legalnotice .aboutBody {
     display: flex;
     justify-content: space-between;
     place-items: center;
@@ -403,7 +403,7 @@ legalnotice .aboutBody {
     border-bottom: 1px solid #e3e3e3;
 }
 
-legalnotice .aboutBody p {
+.legalnotice .aboutBody p {
     margin: 0px;
     font-weight: 400;
     font-size: 16px;
@@ -414,7 +414,7 @@ legalnotice .aboutBody p {
     text-transform: capitalize;
 }
 
-legalnotice .title {
+.legalnotice .title {
     color: rgb(17, 17, 17);
 }
 
