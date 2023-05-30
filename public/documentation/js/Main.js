@@ -742,7 +742,7 @@ class LegalNotice extends Viewable {
     constructor() {
         super()
         this.view = addEvents(
-            this.view = N('div', 'About', { class: 'copy about' }),
+            N('div', 'About', { class: 'copy about' }),
             {
                 click: (e) => this.overlay.appendTo(document.body)
             }
