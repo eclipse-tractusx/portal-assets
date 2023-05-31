@@ -60,7 +60,7 @@ header {
 .release-selection select {
     padding: 23px;
     line-height: 17px;
-    font-size: 20px;
+    font-size: 18px;
     border-radius: 16px;
     border: 1px solid lightgray;
     min-width: 200px;
@@ -76,7 +76,7 @@ header {
 .search input {
     padding: 20px;
     line-height: 17px;
-    font-size: 20px;
+    font-size: 18px;
     border-radius: 16px;
     border: 1px solid lightgray;
     min-width: 500px;
@@ -136,13 +136,13 @@ main {
     width: 100%;
 }
 
-main h1 {
-    font-size: 32px;
+main h3 {
+    font-size: 36px;
     text-align: center;
     width: 100%;
 }
 
-.chapters h1 {
+.chapters h3 {
     padding-top: 3px;
 }
 
@@ -165,6 +165,33 @@ main h1 {
 
 .chapters ul li {
     width: 33.33%
+}
+
+@media (max-width: 750px) {
+    header {
+        margin: 15px;
+    }
+
+    .chapters ul {
+        margin-top: 30px;
+    }
+
+    .chapters ul li {
+        width: 100%
+    }
+
+    .search input {
+        min-width: 300px;
+    }
+
+    .release-selection select {
+        min-width: 150px;
+    }
+
+    .release-selection {
+        position: absolute;
+        top: 85px;
+    }
 }
 
 .chapter-card {
@@ -196,7 +223,7 @@ main h1 {
 
 .chapter-card-title {
     padding: 35px;
-    font-size: 22px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -277,13 +304,13 @@ footer .copy {
     background-repeat: no-repeat;
 }
 
-.subheadline h1 {
+.subheadline h3 {
     font-weight: 400;
     font-size: 50px;
     padding-bottom: 30px;
 }
 
-.subheadline h1:after {
+.subheadline h3:after {
     border-bottom: 3px solid;
     bottom: 0;
     content: "";
@@ -355,7 +382,7 @@ footer .copy {
 
 .legalnotice .aboutContainer {
     position: relative;
-    width: 800px;
+    max-width: 800px;
     margin: 50px auto;
     top: 20%;
 }

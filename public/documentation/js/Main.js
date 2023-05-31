@@ -181,7 +181,7 @@ class Chapters extends Viewable {
         super()
         state.addDataListener(this)
         this.items = N('div')
-        this.title = N('h1', 'Catena-X Help Desk')
+        this.title = N('h3', 'Catena-X Help Desk')
         this.view = N('section', [
             N('div', [
                 createSelectLink({ name: '', path: NavTools.getRoot() }),
