@@ -94,6 +94,9 @@ header {
     background-color: white;
     border: 1px solid lightgray;
     border-radius: 10px;
+    position: absolute;
+    z-index: 9;
+    min-width: 500px;
 }
 
 .search-output li {
@@ -180,7 +183,8 @@ main h3 {
         width: 100%
     }
 
-    .search input {
+    .search input,
+    .search-output {
         min-width: 300px;
     }
 
