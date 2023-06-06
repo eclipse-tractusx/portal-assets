@@ -2,8 +2,34 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
-## unreleased
-* About - Legal info overlay is added
+## 1.5.0-RC1
+
+### Change
+* Help Application
+  * styling update (UI&UX) as well as responsiveness improved
+* UseCase content files updated, image types switched from .png to .svg to decrease the image sizes
+* Couple of index.md files added displaying child chapters/pages
+
+### Feature
+* Help Application
+  * About page for legal notice
+    * About card added
+    * About page added and linked in footer component
+    * card component integrated in About page
+* Developer docu "image handling" added
+* Service Release Process docu added for developers and end users
+* Service Subscription Activation docu added for developers and end users
+* App Subscription Activation docu added for developers and end users
+
+### Technical Support
+* Help Application
+  * Release.js & Setting.js updated to fetch documentation content from eclipse instead of forked repo
+  * Upgraded the dependent libraries to latest related library version(s)
+  * About page
+    * enabled build and release workflows to provide content
+
+### Bugfix
+n/a
 
 ## 1.4.0
 
