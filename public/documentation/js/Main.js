@@ -492,6 +492,7 @@ class Content extends Viewable {
         fetch(url)
             .then(response => response.text())
             .then(this.mdFromText.bind(this))
+            .catch(() => {})
         return this
     }
 
@@ -592,6 +593,7 @@ class App extends Viewable {
             .then((releases) => state.setReleases(
                 Array.from(new Set(releases))
             ))
+            .catch(() => {})
     }
 
     releasesChanged(releases) {
