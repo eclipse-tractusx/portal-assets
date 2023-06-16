@@ -1,6 +1,6 @@
 ## Summary
 
-The "App Release Publishing Process" is used to enable App Provider to offer app offerings inside the CX Dataspace. 
+The "App Release Publishing Process" is used to enable App Provider to offer app offerings inside the CX Dataspace.
 Via the "App Release Process" page, the app provider gets a transparent overview of the app process steps.
 
 Similar like for services, a publish form need to get filled to be able to release an app on the CX marketplace.
@@ -16,19 +16,18 @@ The "App Release Process" screen includes details about:
 <br>
 
 How to get there?
-Access the "App Publish Process" via the "App Release Process" or via the "App Management" page. Both sub-menus are available via the top menu "App Management".  
+Access the "App Publish Process" via the "App Release Process" or via the "App Management" page. Both sub-menus are available via the top menu "App Management".
 
 <br>
 <br>
 
 ### Trigger the Publishing Process
 
-Open the app release process via the top navigation menu "App Management" -> "App Release Process" 
-and click on the action button "Register your app"
+Open the app release process via the top navigation menu "App Management" -> "App Release Process" and click on the action button "Register your app"
 
 <strong> Option 1: Via the app management page </strong>
 <br>
-Access the "App Overview" page via the top navigation "App Management" 
+Access the "App Overview" page via the top navigation "App Management"
 <br>
 <br>
 

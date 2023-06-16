@@ -1,9 +1,9 @@
 # Offer Autosetup
 
 ## Interface / API / Service Summary
-For the case of a service setup / app, where an autosetup is available, CX will offer a standardized interface to push the relevant information to the service provider, which can trigger the service setup, if relevant.  
+For the case of a service setup / app, where an autosetup is available, CX will offer a standardized interface to push the relevant information to the service provider, which can trigger the service setup, if relevant.
 <br>
-Following interfaces are relevant to enable the autosetup  
+Following interfaces are relevant to enable the autosetup
 
 1. POST Service URL (Generic endpoint for service providers to store their autosetup - if available - url inside CX)
 2. POST Service Request (Specific endpoint to trigger customer subscription)
@@ -175,6 +175,4 @@ Response Body
 | 103<br>Single Instance Subscription Details Creation | Single Instance Subscription Details Creation | The process step is set to "DONE" <br>as soon as the url and instance is linked | | - | - | #105 |
 | 104<br>Offr Subscription Technical User Creation | Technical User creation in keycloak and metadata storage in portal db, additionally notification creation with technical client id | The process step is set to "DONE" <br>after technical user ot successfully created | Status "FAILED" if job was running on fail | Yes, in case of an 5xx by keycloak | Yes, in case of an 4xx by keycloak | #105 |
 | 105<br>Activate Subscription | Subscription record activation, notification creation and send email. | The process step is set to "DONE" <br>after xxx | xxx | Yes, in case of an 5xx for the email - auto "TO_DO" | - | Multi Instance: #106 <br> Single Instance: - |
-| 106<br>Trigger Provider Callback | Trigger provider callback url to share client and utech user. | The process step is set to "DONE" <br>after xxx | xxx | Yes, in case of an 5xx | Yes, in case of an 4xx | - |
-
-
+| 106<br>Trigger Provider Callback | Trigger provider callback url to share client and tech user. | The process step is set to "DONE" <br>after xxx | xxx | Yes, in case of an 5xx | Yes, in case of an 4xx | - |
