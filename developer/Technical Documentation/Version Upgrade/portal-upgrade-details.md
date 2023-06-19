@@ -10,18 +10,18 @@ Each section includes the respective change details, impact on existing data and
 #### Company Credential Details - NEW - x.x.x
 
 * NEW: portal.use_case_descriptions
-* NEW: portal.credential_types
-* NEW: portal.credential_type_kinds
-* NEW: portal.credential_type_assigned_kinds
+* NEW: portal.verified_credential_types
+* NEW: portal.verified_credential_type_kinds
+* NEW: portal.verified_credential_type_assigned_kinds
 * NEW: portal.use_case_participation_status
-* NEW: portal.company_credential_details
-* NEW: portal.credential_assigned_use_cases
+* NEW: portal.company_ssi_details
+* NEW: portal.verified_credential_type_assigned_use_cases
 
 New use_case_descriptions table released to be able to create translatable use case descriptions.
-New credential_types, credential_type_kinds & credential_type_assigned_kinds tables to store the type of the credentials as well as the kind of the type and have a mapping between the type and kind available.
+New verified_credential_types, verified_credential_type_kinds & verified_credential_type_assigned_kinds tables to store the type of the credentials as well as the kind of the type and have a mapping between the type and kind available.
 New use_case_participation_status table to have static data of the status.
-New company_credential_details table to be able to safe the credential details for a specific company.
-New credential_assigned_use_cases to map the company_credential_details to a specific use case.
+New company_ssi_details table to be able to safe the credential details for a specific company.
+New verified_credential_type_assigned_use_cases to map the verified_credential_type to a specific use case.
 
 <br>
 <br>

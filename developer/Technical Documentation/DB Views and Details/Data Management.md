@@ -76,7 +76,7 @@ Transactional data is created by operating the system in a market or testing act
 * Verified Credentials
   * Type
   * Kind
-* Company Credential
+* Use Case Paricipation
   * Status
 
 <br>
@@ -93,7 +93,7 @@ Transactional data is created by operating the system in a market or testing act
 * Offer
 * Subscription
 * App Instance
-* Company Credential Details
+* Company Ssi Details
 * etc.
 
 <br>
