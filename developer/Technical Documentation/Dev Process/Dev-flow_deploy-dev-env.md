@@ -10,8 +10,8 @@ flowchart LR
         subgraph CI repos
             D -- PR to dev* --> PF(portal-frontend**)
             D -- PR to dev* --> PR(portal-registration**)
-            D -- PR* to main --> PA(portal-assets**)
-            D -- PR* to dev--> PB(portal-backend***)
+            D -- PR* to main* --> PA(portal-assets**)
+            D -- PR* to dev*--> PB(portal-backend***)
             click PF "https://github.com/eclipse-tractusx/portal-frontend"
             click PR "https://github.com/eclipse-tractusx/portal-frontend-registration"
             click PA "https://github.com/eclipse-tractusx/portal-assets"
@@ -19,13 +19,9 @@ flowchart LR
         end
         subgraph CI+CD repo
             direction TB
-            D -- PR* to main for !=charts --> PI(portal-iam****)
-            D -- PR* to -b dev for charts --> PI
-            subgraph eclipse-tractusx fork
-                direction TB
-                PI --> PICD(portal-iam -b helm-environments)
-                click PI "https://github.com/eclipse-tractusx/portal-iam"
-            end
+            D -- PR* to main* --> PI(portal-iam****)
+            PI --> PICD(portal-iam -b main)
+            click PI "https://github.com/eclipse-tractusx/portal-iam"
         end
         subgraph CD repo for auto-deploy to dev
             direction LR
@@ -44,7 +40,7 @@ flowchart LR
     end
 ```
 
-Note* Every pull request (PR) requires at least one approving review by a peer
+Note* Every pull request (PR) requires at least one approving review by a committer
 
 Note** ESlint, unit tests and Sonarcloud runs at pull request, Trivy and KICS scans at merge as well as daily and Veracode scan runs weekly
 
