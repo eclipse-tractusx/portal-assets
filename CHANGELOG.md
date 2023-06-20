@@ -2,13 +2,23 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
-## 1.5.0-RC1
+## 1.5.0
 
 ### Change
 * Help Application
   * styling update (UI&UX) as well as responsiveness improved
 * UseCase content files updated, image types switched from .png to .svg to decrease the image sizes
 * Couple of index.md files added displaying child chapters/pages
+* Table of content added
+  * 01.Onboarding/01.Registration Invite/index.md
+  * 01.Onboarding/02.Registration/index.md
+  * 01.Onboarding/03.Registration Approval/index.md
+  * 02.User Management/03.Registration Approval/index.md
+* User Management
+  * edit user account used endpoints added inside the developer docu
+* Technical Documentation
+  * technical user roles and rights matrix updated
+* App & Service Subscription flow details and endpoint introduction added for end users and developers
 
 ### Feature
 * Help Application
