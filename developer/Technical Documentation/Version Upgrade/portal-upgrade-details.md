@@ -36,6 +36,28 @@ Company SSI Database Structure
 Use Case Database Structure
 ![Use Case Database Structure](/public/assets/images/docs/use-case-database.png)
 
+* NEW: table "language_long_names"
+* ENHANCED: table portal.languages "long_name_de" and "long_name_en" removed
+
+New language_long_names table released for multi language support.
+
+Impact on existing data:
+As part of the migration, for all existing language stored in the table portal.languages, the short name will be used to define language.Newly created table language_long_names
+will have foreign key relation with languages table where long name will be stored for each corresponding short name of language table in german and english language for e.g below
+
+<br>
+
+language_long_names:
+
+short_name | language_short_name | long_name
+--- | --- 
+ch | de | chinesisch
+ch | en | chinese
+fr | de | franzoesisch
+fr | en | french
+es | de | spanisch
+es | en | spanish
+
 <br>
 <br>
 
