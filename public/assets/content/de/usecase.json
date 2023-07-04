@@ -1,10 +1,26 @@
 {
-  "subNavigation": {
-    "link1Label": "Intro",
-    "link2Label": "Core Values",
-    "link3Label": "Details",
-    "link4Label": "Business Applications"
-  },
+  "subNavigation": [
+    {
+      "index": 1,
+      "title": "Intro",
+      "navigation": "intro-id"
+    },
+    {
+      "index": 2,
+      "title": "Core Values",
+      "navigation": "core-id"
+    },
+    {
+      "index": 3,
+      "title": "Details",
+      "navigation": "details-id"
+    },
+    {
+      "index": 4,
+      "title": "Business Applications",
+      "navigation": "business-id"
+    }
+  ],
   "traceability": {
     "title": "Traceability",
     "description": "...als Basis und integraler Bestandteil zum Aufbau von digitalen Datenketten und Befähiger von datenketten-fokussierter Use Cases",
