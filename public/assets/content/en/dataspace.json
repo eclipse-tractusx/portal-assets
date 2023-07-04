@@ -1,0 +1,75 @@
+{
+  "subNavigation": [
+    {
+      "index": 1,
+      "title": "Policy Intro",
+      "navigation": "intro-id"
+    },
+    {
+      "index": 2,
+      "title": "BPN",
+      "navigation": "bpn-id"
+    },
+    {
+      "index": 3,
+      "title": "Use Case",
+      "navigation": "usecase-id"
+    },
+    {
+      "index": 4,
+      "title": "Roles",
+      "navigation": "roles-id"
+    },
+    {
+      "index": 4,
+      "title": "Links",
+      "navigation": "links-id"
+    }
+  ],
+  "dataSpace": {
+    "title": "Catena-X Dataspace",
+    "description": "The base concept of catena-x is the data exchange in a standardized format. This is reached by data sovereignty (explanation needed) and interoperability (link needed). Via data policies you can decide who can access data offers on several different levels",
+    "sections": [
+      {
+        "title": "Policy Intro",
+        "description": "Policies are used to define data access policies as well as usage details.<1></1><1></1>Access means it defined who can access / see and request data offers. Usage defines the data ussage after the data are accessible. E.g. Company A can access vehicle data of company B but is only allowed to use them for manufacturing reasons and not marketing content<1></1><1></1>The following page provides details about the following access policies<1></1><1></1>* <2>BPN</2><1></1>* <2>Use Case</2><1></1>* <2>Role</2><1></1>",
+        "imagePath": "/images/content/traceability_core_values(en).svg",
+        "backgroundColor": "#F9F9F9",
+        "id": "core-id",
+        "template": "TextImageCenterAligned"
+      },
+      {
+        "title": "Data Access policy based on Business Partner Number",
+        "description": "The business partner number (every member of catena-x has ist own bpn) can be used to restrict data access.<1></1><1></1>Means, company a can define that company b is allowed to see/access a data contract while company c isnt.<1></1><1></1>While creating a data offer, company a needs to decide if the data offer is restricted for a number of companys (bpns) or not<1></1>>> List of Business Partners [link]<1></1>>> BPDM Use case details (coming soon)",
+        "imagePath": "/images/content/traceability_core_values(en).svg",
+        "backgroundColor": "#F9F9F9",
+        "id": "core-id",
+        "template": "TextImageCenterAligned"
+      },
+      {
+        "title": "Use Cases",
+        "description": "This text need to get added still<1></1><1></1>>> BPDM Use case details (coming soon)",
+        "imagePath": "/images/content/traceability_core_values(en).svg",
+        "backgroundColor": "#F9F9F9",
+        "id": "core-id",
+        "template": "TextImageCenterAligned"
+      },
+      {
+        "title": "Role",
+        "description": "This text need to get added still<1></1><1></1>>> Company Role/Certificate Upload (link to be added here)",
+        "imagePath": "/images/content/traceability_core_values(en).svg",
+        "backgroundColor": "#F9F9F9",
+        "id": "core-id",
+        "template": "TextImageCenterAligned"
+      },
+      {
+        "title": "Role",
+        "description": "Technical Details",
+        "imagePath": "/images/content/traceability_core_values(en).svg",
+        "backgroundColor": "#F9F9F9",
+        "id": "core-id",
+        "template": "TextImageCenterAligned"
+      }
+    ]
+  }
+}
