@@ -1,22 +1,22 @@
 {
-  "subNavigation": [
-    {
-      "index": 1,
-      "title": "marketplace",
-      "navigation": "intro-id"
-    },
-    {
-      "index": 2,
-      "link2Label": "marketplace subscriptions",
-      "navigation": "data-id"
-    },
-    {
-      "index": 3,
-      "link3Label": "dataspace participants",
-      "navigation": "business-id"
-    }
-  ],
   "appProvider": {
+    "subNavigation": [
+      {
+        "index": 1,
+        "title": "marketplace",
+        "navigation": "intro-id"
+      },
+      {
+        "index": 2,
+        "link2Label": "marketplace subscriptions",
+        "navigation": "data-id"
+      },
+      {
+        "index": 3,
+        "link3Label": "dataspace participants",
+        "navigation": "business-id"
+      }
+    ],
     "title": "Catena-X Data App Provider",
     "description": "The catena-x App Provider is the standard role inside the catena-x network. Companies sharing and receviing data as well as using service provider offers and app offers are usually 'App Provider' - active members of the network.",
     "sections": [
@@ -162,6 +162,23 @@
     ]
   },
   "serviceProvider": {
+    "subNavigation": [
+      {
+        "index": 1,
+        "title": "marketplace",
+        "navigation": "intro-id"
+      },
+      {
+        "index": 2,
+        "link2Label": "marketplace subscriptions",
+        "navigation": "data-id"
+      },
+      {
+        "index": 3,
+        "link3Label": "dataspace participants",
+        "navigation": "business-id"
+      }
+    ],
     "title": "Catena-X Data Service Provider",
     "description": "The catena-x Service Provider is the standard role inside the catena-x network. Companies sharing and receviing data as well as using service provider offers and app offers are usually 'Service Provider' - active members of the network.",
     "sections": [
@@ -600,6 +617,23 @@
     ]
   },
   "confirmity": {
+    "subNavigation": [
+      {
+        "index": 1,
+        "title": "marketplace",
+        "navigation": "intro-id"
+      },
+      {
+        "index": 2,
+        "link2Label": "marketplace subscriptions",
+        "navigation": "data-id"
+      },
+      {
+        "index": 3,
+        "link3Label": "dataspace participants",
+        "navigation": "business-id"
+      }
+    ],
     "title": "Catena-X Data Confirmity Body",
     "description": "The catena-x Confirmity Body is the standard role inside the catena-x network. Companies sharing and receviing data as well as using service provider offers and app offers are usually 'Confirmity Body' - active members of the network.",
     "sections": [
