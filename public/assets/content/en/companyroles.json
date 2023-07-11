@@ -1,9 +1,21 @@
 {
-  "subNavigation": {
-    "link1Label": "marketplace",
-    "link2Label": "subscriptions",
-    "link3Label": "dataspace participants"
-  },
+  "subNavigation": [
+    {
+      "index": 1,
+      "title": "marketplace",
+      "navigation": "intro-id"
+    },
+    {
+      "index": 2,
+      "title": "marketplace subscriptions",
+      "navigation": "data-id"
+    },
+    {
+      "index": 3,
+      "title": "dataspace participants",
+      "navigation": "business-id"
+    }
+  ],
   "appProvider": {
     "title": "Catena-X Data App Provider",
     "description": "The catena-x App Provider is the standard role inside the catena-x network. Companies sharing and receviing data as well as using service provider offers and app offers are usually 'App Provider' - active members of the network.",
