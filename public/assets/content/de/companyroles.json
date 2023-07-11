@@ -425,7 +425,7 @@
             "sectionLink": {
               "data": [
                 {
-                  "title": "Setup your company certificates",
+                  "title": ">> Setup your company certificates",
                   "id": "https://portal.int.demo.catena-x.net/documentation/?path=docs%2F02.+Technical+Integration%2F02.+Identity+Provider+Management",
                   "internal": false
                 }
@@ -439,7 +439,7 @@
             "sectionLink": {
               "data": [
                 {
-                  "title": "Sign the relevant use case frameworks.",
+                  "title": ">> Sign the relevant use case frameworks.",
                   "id": "https://portal.int.demo.catena-x.net/documentation/?path=docs%2F02.+Technical+Integration%2F02.+Identity+Provider+Management",
                   "internal": false
                 }
