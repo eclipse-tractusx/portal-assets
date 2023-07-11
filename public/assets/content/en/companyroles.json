@@ -1,22 +1,22 @@
 {
-  "subNavigation": [
-    {
-      "index": 1,
-      "title": "marketplace",
-      "navigation": "intro-id"
-    },
-    {
-      "index": 2,
-      "title": "marketplace subscriptions",
-      "navigation": "data-id"
-    },
-    {
-      "index": 3,
-      "title": "dataspace participants",
-      "navigation": "business-id"
-    }
-  ],
   "appProvider": {
+    "subNavigation": [
+      {
+        "index": 1,
+        "title": "marketplace",
+        "navigation": "intro-id"
+      },
+      {
+        "index": 2,
+        "link2Label": "marketplace subscriptions",
+        "navigation": "data-id"
+      },
+      {
+        "index": 3,
+        "link3Label": "dataspace participants",
+        "navigation": "business-id"
+      }
+    ],
     "title": "Catena-X Data App Provider",
     "description": "The catena-x App Provider is the standard role inside the catena-x network. Companies sharing and receviing data as well as using service provider offers and app offers are usually 'App Provider' - active members of the network.",
     "sections": [
@@ -162,6 +162,23 @@
     ]
   },
   "serviceProvider": {
+    "subNavigation": [
+      {
+        "index": 1,
+        "title": "marketplace",
+        "navigation": "intro-id"
+      },
+      {
+        "index": 2,
+        "link2Label": "marketplace subscriptions",
+        "navigation": "data-id"
+      },
+      {
+        "index": 3,
+        "link3Label": "dataspace participants",
+        "navigation": "business-id"
+      }
+    ],
     "title": "Catena-X Data Service Provider",
     "description": "The catena-x Service Provider is the standard role inside the catena-x network. Companies sharing and receving data as well as using service provider offers and app offers are usually 'Service Provider' - active members of the network.",
     "sections": [
@@ -307,154 +324,316 @@
     ]
   },
   "participant": {
-    "title": "Catena-X Participant",
-    "description": "The catena-x participant is the standard Catena-X membership role inside the network. Companies sharing and receviing data as well as using service provider offers and app offers are 'Participants' - active members of the network.",
+    "subNavigation": [
+      {
+        "index": 1,
+        "title": "Company Setting",
+        "navigation": "company-setting-id"
+      },
+      {
+        "index": 2,
+        "title": "Get Ready for Data Exchange",
+        "navigation": "data-excahnge-id"
+      },
+      {
+        "index": 3,
+        "title": "Prepare your Technical Integration",
+        "navigation": "tech-integration-id"
+      },
+      {
+        "index": 4,
+        "title": "Manage your Network",
+        "navigation": "network-id"
+      }
+    ],
+    "title": "Company Setting",
+    "description":
+      "Configure your company before participating fully inside the network.",
     "sections": [
       {
         "title": "Catena-X Marketplace",
-        "description": "The CX marketplace is separated into two marketplaces - apps and services/tools. Both the marketplaces offer customer oriented offers to enable the customer to participate inside the network (services/tools) as well as support the daily business by use case specific business applications.",
+        "description":
+          "The CX marketplace is separated into two marketplaces - apps and services/tools. Both the marketplaces offer customer oriented offers to enable the customer to participate inside the network (services/tools) as well as support the daily business by use case specific business applications<1></1><1></1>",
         "imagePath": "/images/content/CXMarketplace_Teaser.svg",
-        "backgroundColor": "#FFFFFF",
-        "id": "intro-id",
-        "template": "TextImageSideBySideWithCardGrid",
-        "detailsWithImageRow1": [
-          {
-            "title": "App Marketplace",
-            "imagePath": "/images/content/MarketplaceIntro.png",
-            "description": "The app marketplace offers use case driven business applications to support your daily business and make even more out of your business data.",
-            "readMore": "/appmarketplace",
-            "readMoreTitle": "..to the app marketplace",
-            "backgroundColor": "#F9F9F9"
-          },
-          {
-            "title": "Service Marketplace",
-            "imagePath": "/images/content/ServiceMarketplaceIntro.png",
-            "description": "Service/tools offerings to enable CX members to participate in the dataspace.",
-            "readMore": "/servicemarketplace",
-            "readMoreTitle": "..to the service marketplace",
-            "backgroundColor": "#F9F9F9"
-          }
-        ],
-        "detailsWithoutImageRow1": [
-          {
-            "title": "Help - App Markteplace",
-            "description": "to get details to the app marketplace and available app details, click on details below",
-            "readMore": "/documentation/?path=docs%2F04.+App%28s%29%2F01.+Marketplace%2F01.+App+Overview.md",
-            "readMoreTitle": "Details",
-            "backgroundColor": "#FFFFFF"
-          },
-          {
-            "title": "Help - Service Markteplace",
-            "description": "to get details to the service marketplace and available service details, click on details below",
-            "readMore": "/documentation/?path=docs%2F05.+Service%28s%29%2F01.+Service+Marketplace%2F01.+Service+Marketplace.md",
-            "readMoreTitle": "Details",
-            "backgroundColor": "#FFFFFF"
-          },
-          {
-            "title": "Highlight app favorites",
-            "description": "to find out how you can set 'Favorites' go to details",
-            "readMore": "/documentation/?path=docs%2F04.+App%28s%29%2F01.+Marketplace%2F03.+App+Favorites.md",
-            "readMoreTitle": "Details",
-            "backgroundColor": "#FFFFFF"
-          }
-        ]
-      },
-      {
-        "title": "Subscriptions",
-        "description": "Inside the app and service marketplace, subscriptions to avialable offers can get made. Find out more how this works by following the details below",
-        "imagePath": "/images/content/CXSubscription_Teaser.svg",
-        "id": "data-id",
         "backgroundColor": "#F9F9F9",
-        "template": "TextImageSideBySideWithCardGrid",
-        "detailsWithImageRow1": [
+        "id": "company-setting-id",
+        "template": "TextImageSideBySideWithSections",
+        "sectionLink": {
+          "data": [
+            {
+              "title": ">> IdP Config",
+              "id": "idp-id",
+              "internal": true
+            },
+            {
+              "title": ">> User Management",
+              "id": "user-id",
+              "internal": true
+            },
+            {
+              "title": ">> Company Certificates",
+              "id": "company-id",
+              "internal": true
+            },
+            {
+              "title": ">> Use Case Frameworks",
+              "id": "usecase-id",
+              "internal": true
+            }
+          ]
+        },
+        "subsections": [
           {
-            "title": "Subscription Authority",
-            "imagePath": "/images/content/circle-image.png",
-            "description": "This are the details which I will still add",
-            "readMore": "/documentation/?path=docs%2F04.+App%28s%29%2F05.+App-Subscription%2F01.+Subscription+Request+%28Customer%29.md",
-            "backgroundColor": "#FFFFFF",
-            "imageShape": "circle"
+            "title": "User Management",
+            "description":
+              "To add further members of your company as users to the portal, please proceed by reviewing the <strong>Role Descriptions</strong> and adding the desired colleagues via the <strong>User Management</strong><1></1><1></1>",
+            "id": "user-id",
+            "sectionLink": {
+              "data": [
+                {
+                  "title": ">> Role Descriptions",
+                  "id": "/role-details",
+                  "internal": false
+                },
+                {
+                  "title": ">> User Management",
+                  "id": "/usermanagement",
+                  "internal": false
+                }
+              ]
+            }
           },
           {
-            "title": "Subscription Flow",
-            "imagePath": "/images/content/circle-image.png",
-            "description": "This are the details which I will still add",
-            "readMore": "/documentation/?path=docs%2F04.+App%28s%29%2F05.+App-Subscription%2F01.+Subscription+Request+%28Customer%29.md",
-            "backgroundColor": "#FFFFFF",
-            "imageShape": "circle"
-          }
-        ],
-        "detailsWithoutImageRow1": [
-          {
-            "title": "Who can subscribe?",
-            "description": "the details will get added asap",
-            "readMore": "/documentation/?path=docs%2F04.+App%28s%29%2F05.+App-Subscription%2F01.+Subscription+Request+%28Customer%29.md",
-            "readMoreTitle": "Details",
-            "backgroundColor": "#FFFFFF"
+            "title": "Configure Company IdP (optional)",
+            "description":
+              "If your company would like to use their own company authentication to have the comfort of federated user login and user credentials not shared with an operator, you can connect your company IdP with the Catena-X shared IdP. Please refer to the following documentation to show you the necessary steps to configure your <strong>Company IdP</strong>.<1></1><1></1>",
+            "id": "idp-id",
+            "sectionLink": {
+              "data": [
+                {
+                  "title": ">> Configure your IdP",
+                  "id": "https://portal.int.demo.catena-x.net/documentation/?path=docs%2F02.+Technical+Integration%2F02.+Identity+Provider+Management",
+                  "internal": false
+                }
+              ]
+            }
           },
           {
-            "title": "What does the subscription flow look like?",
-            "description": "the details will get added asap",
-            "readMore": "/documentation/?path=docs%2F04.+App%28s%29%2F05.+App-Subscription%2F01.+Subscription+Request+%28Customer%29.md",
-            "readMoreTitle": "Details",
-            "backgroundColor": "#FFFFFF"
+            "title": "Company Certificates",
+            "description": "",
+            "id": "company-id",
+            "sectionLink": {
+              "data": [
+                {
+                  "title": ">> Setup your company certificates",
+                  "id": "https://portal.int.demo.catena-x.net/documentation/?path=docs%2F02.+Technical+Integration%2F02.+Identity+Provider+Management",
+                  "internal": false
+                }
+              ]
+            }
           },
           {
-            "title": "Where can I find my company subscriptions?",
-            "description": "the details will get added asap",
-            "readMore": "/documentation/?path=docs%2F04.+App%28s%29%2F05.+App-Subscription%2F01.+Subscription+Request+%28Customer%29.md",
-            "readMoreTitle": "Details",
-            "backgroundColor": "#FFFFFF"
+            "title": "Use Case Frameworks",
+            "description": "",
+            "id": "usecase-id",
+            "sectionLink": {
+              "data": [
+                {
+                  "title": ">> Sign the relevant use case frameworks.",
+                  "id": "https://portal.int.demo.catena-x.net/documentation/?path=docs%2F02.+Technical+Integration%2F02.+Identity+Provider+Management",
+                  "internal": false
+                }
+              ]
+            }
           }
         ]
       },
       {
-        "title": "Dataspace participants",
-        "description": "Details regarding the dataspace ",
-        "imagePath": "/images/content/teaser.png",
-        "id": "business-id",
+        "title": "Get Ready for data exchange",
+        "description":
+          "Use cases describe the value add you can achieve with Catena-X. To learn more about the Catena-X Use Cases please visit the Use Case pages. You can inform yourself on the use case(s) you are interested in, its core values and benefits as well as an overview of the relevant data models and a list of business apps available.<1></1><1></1>",
+        "imagePath": "",
+        "id": "data-excahnge-id",
         "backgroundColor": "#FFFFFF",
-        "template": "TextImageSideBySideWithCardGrid",
-        "detailsWithImageRow1": [
+        "template": "TextImageSideBySideWithSections",
+        "sectionLink": {
+          "data": [
+            {
+              "title": ">> Use Case",
+              "id": "/usecase",
+              "internal": false
+            }
+          ]
+        },
+        "subsections": [
           {
-            "title": "Simply lorem Ipsum Text",
-            "imagePath": "/images/content/teaser.png",
-            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
-            "readMore": "",
-            "backgroundColor": "#F9F9F9"
+            "title": "Marketplace",
+            "description":
+              "In the <strong>App Marketplace</strong>, you can inform yourself on existing business apps.<1></1><1></1>* If you are looking for a specific app, you can easily filter by name.<1></1>* Going to the Category View, you will find a list of apps for dedicated categories, e.g. for a specific use case.<1></1>* Remember that you can also inform yourself of use case specific business apps via the respective <strong>Use Case</strong> pages<1></1><1></1>",
+            "sectionLink": {
+              "data": [
+                {
+                  "title": ">> App Market Place",
+                  "id": "/appmarketplace",
+                  "internal": false
+                },
+                {
+                  "title": ">> Use cases",
+                  "id": "/usecase",
+                  "internal": false
+                }
+              ]
+            }
           },
           {
-            "title": "Simply lorem Ipsum Text",
-            "imagePath": "/images/content/teaser.png",
-            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
-            "readMore": "",
-            "backgroundColor": "#F9F9F9"
-          }
-        ],
-        "detailsWithoutImageRow1": [
-          {
-            "title": "Simply lorem Ipsum Text",
-            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
-            "readMore": "",
-            "backgroundColor": "#FFFFFF"
+            "title": "Semantic Hub",
+            "description":
+              "The <strong>Semantic Hub</strong> describe the Catena-X standardized data models. The given semantic models and their descriptions are required to understand which data and which format is needed for for each supported data object. You also find basic information on the use case specific data models in the details of the dedicated <strong>Use Case</strong> Pages<1></1><1></1>",
+            "sectionLink": {
+              "data": [
+                {
+                  "title": ">> Semantic Hub",
+                  "id": "/semantichub",
+                  "internal": false
+                },
+                {
+                  "title": ">> Use cases",
+                  "id": "/usecase",
+                  "internal": false
+                }
+              ]
+            }
           },
           {
-            "title": "Simply lorem Ipsum Text",
-            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
-            "readMore": "",
-            "backgroundColor": "#FFFFFF"
+            "title": "Data Mapping",
+            "description":
+              "In this step you need to map your internal data formats to the existing Catena-X standard models. To prepare for this, refer to the relevant specific semantic models for the dedicated use case(s) you are interested in.<1></1><1></1>You will find a basic business description of data models within the details of the respective use case pages.<1></1><1></1>For more technical background, check out the Semantic Hub as well.<1></1><1></1>",
+            "sectionLink": {
+              "data": [
+                {
+                  "title": ">> Semantic Hub",
+                  "id": "/semantichub",
+                  "internal": false
+                },
+                {
+                  "title": ">> Use cases",
+                  "id": "/usecase",
+                  "internal": false
+                }
+              ]
+            }
           },
           {
-            "title": "Simply lorem Ipsum Text",
-            "description": "",
-            "readMore": "",
-            "backgroundColor": "#FFFFFF"
+            "title": "Data Release",
+            "description":
+              "For Information on how to establish an inter-organizational data governance mechanism and orchestrate your data release process for exchange with external partners do check out the <strong>Data Governance Guide</strong> on the Association Website. This includes an overview of processes, roles and their respective responsibilities.<1></1><1></1>",
+            "sectionLink": {
+              "data": [
+                {
+                  "title": ">> Data Governance Guide",
+                  "id": "https://catena-x.net/en/catena-x-einfuehren-umsetzen/einfuehrung-von-catena-x",
+                  "internal": false
+                }
+              ]
+            }
           }
         ]
+      },
+      {
+        "title": "Prepare your technical integration",
+        "description":
+          "If you choose to manage the Catena-X components yourself and not use a Business Application or Managed Service,  you will need to set up the technical components yourself.<1></1>Technical Documentation, Tutorials and Guides how these components can be set up can be found in the  Shared Network KIT on <strong>Tractus-X</strong><1></1><1></1>",
+        "imagePath": "",
+        "subDescriptions": {
+          "title":
+            "To actively participate one or more of the Catena-X Use Cases, you will need to provide or consume data. To do so , you have multiple options:<1></1>",
+          "sections": [
+            {
+              "title":
+                "<2>* Use one of simple data exchange tools or middle ware solutions. To inform yourself on existing offers, check out the App Marketplace</2>",
+              "value": "App Marketplace",
+              "link": "/appmarketplace"
+            },
+            {
+              "title":
+                "<2>* Use one of simple data exchange tools or middle ware solutions. To inform yourself on existing offers, check out the Service Marketplace</2>",
+              "value": "Service Marketplace",
+              "link": "/servicemarketplace"
+            },
+            {
+              "title":
+                "<2>* Use a Business Application with data provisioning and consumption capabilities for the use case(s) you are interested in.</2>",
+              "value": "Business Application",
+              "link": "/appmarketplace"
+            },
+            {
+              "title":
+                "<2>* Connect your backend systems (e.g. Data Lake, Data Warehouse, …) and implement your integration pipelines individually based on the relevant semantic models.</2>",
+              "value": "Semantic Hub",
+              "link": "/semantichub"
+            }
+          ]
+        },
+        "id": "data-excahnge-id",
+        "backgroundColor": "#F9F9F9",
+        "template": "TextImageSideBySideWithSections",
+        "sectionLink": {
+          "data": [
+            {
+              "title": ">> Tractus-X",
+              "id": "https://eclipse-tractusx.github.io/",
+              "internal": false
+            }
+          ]
+        }
+      },
+      {
+        "title": "Manage your Network",
+        "description": "TBA<1></1><1></1>",
+        "imagePath": "",
+        "id": "network-id",
+        "backgroundColor": "#FFFFFF",
+        "template": "TextImageSideBySideWithSections",
+        "sectionLink": {
+          "data": [
+            {
+              "title": ">> Manage Subscriptions",
+              "id": "/appsubscription",
+              "internal": false
+            },
+            {
+              "title": ">> Manage Connectors",
+              "id": "/technicalsetup",
+              "internal": false
+            },
+            {
+              "title": ">> Manage your Data",
+              "id": "/",
+              "internal": false
+            }
+          ]
+        }
       }
     ]
   },
   "confirmity": {
+    "subNavigation": [
+      {
+        "index": 1,
+        "title": "marketplace",
+        "navigation": "intro-id"
+      },
+      {
+        "index": 2,
+        "link2Label": "marketplace subscriptions",
+        "navigation": "data-id"
+      },
+      {
+        "index": 3,
+        "link3Label": "dataspace participants",
+        "navigation": "business-id"
+      }
+    ],
     "title": "Catena-X Data Confirmity Body",
     "description": "The catena-x Confirmity Body is the standard role inside the catena-x network. Companies sharing and receviing data as well as using service provider offers and app offers are usually 'Confirmity Body' - active members of the network.",
     "sections": [
