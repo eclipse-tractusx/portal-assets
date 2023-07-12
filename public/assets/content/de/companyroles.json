@@ -8,12 +8,12 @@
       },
       {
         "index": 2,
-        "link2Label": "marketplace subscriptions",
+        "title": "marketplace subscriptions",
         "navigation": "data-id"
       },
       {
         "index": 3,
-        "link3Label": "dataspace participants",
+        "title": "dataspace participants",
         "navigation": "business-id"
       }
     ],
@@ -170,12 +170,12 @@
       },
       {
         "index": 2,
-        "link2Label": "marketplace subscriptions",
+        "title": "marketplace subscriptions",
         "navigation": "data-id"
       },
       {
         "index": 3,
-        "link3Label": "dataspace participants",
+        "title": "dataspace participants",
         "navigation": "business-id"
       }
     ],
@@ -625,12 +625,12 @@
       },
       {
         "index": 2,
-        "link2Label": "marketplace subscriptions",
+        "title": "marketplace subscriptions",
         "navigation": "data-id"
       },
       {
         "index": 3,
-        "link3Label": "dataspace participants",
+        "title": "dataspace participants",
         "navigation": "business-id"
       }
     ],
