@@ -82,7 +82,7 @@
       },
       {
         "title":"Use Cases",
-        "description":"This text need to get added still<1></1><1></1>>> BPDM Use case details (coming soon)",
+        "description":"Supported UseCase credentials: <1></1><1></1>>> Attribute - CredentialSubjectItem <1></1><1></1>>> FrameworkAgreement.pcf - PcfCredential <1></1><1></1>>> FrameworkAgreement.sustainability - SustainabilityCredential <1></1><1></1>>> FrameworkAgreement.quality - QualityCredential <1></1><1></1>>> FrameworkAgreement.traceability - TraceabilityCredential <1></1><1></1>>> FrameworkAgreement.behavioraltwin - BehaviorTwinCredential <1></1><1></1>",
         "imagePath":"/images/frame/AccessVsUsage.png",
         "backgroundColor":"#FFFFFFF",
         "id":"usecase-id",
@@ -90,7 +90,7 @@
       },
       {
         "title":"Roles",
-        "description":"This text need to get added still<1></1><1></1>>> Company Role/Certificate Upload (link to be added here)",
+        "description":"Supported UseCase credentials: <1></1><1></1>>> Attribute - CredentialSubjectItem <1></1><1></1>>> Dismantler - DismantlerCredential <1></1><1></1>",
         "imagePath":"/images/frame/AccessVsUsage.png",
         "backgroundColor":"#F9F9F9",
         "id":"roles-id",
@@ -106,19 +106,19 @@
         "linksRow1": [
           {
             "background": "#C498EF63",
-            "title": "Sample Name",
-            "navigate": "/"
+            "title": "Manage UseCase Credentials",
+            "navigate": "/usecase-participation"
           },
           {
             "background": "#C498EF63",
-            "title": "Sample Name",
-            "navigate": "/"
+            "title": "Manage Role Credentials",
+            "navigate": "/certificate-credential"
           }
         ],
         "linksRow2": [
           {
             "background": "#C498EF63",
-            "title": "Sample Name",
+            "title": "coming soon",
             "navigate": "/"
           }
         ]
