@@ -33,7 +33,7 @@
       {
         "title":"Policy Intro",
         "description":"Policies are used to define data access policies as well as usage details.<1></1><1></1>Access means it defined who can access / see and request data offers. Usage defines the data ussage after the data are accessible. E.g. Company A can access vehicle data of company B but is only allowed to use them for manufacturing reasons and not marketing content<1></1><1></1>The following page provides details about the following access policies<1></1><1></1>",
-        "imagePath":"/images/frame/AccessVsUsage.png",
+        "imagePath":"/images/logos/cx-text.svg",
         "backgroundColor":"#FFFFFFF",
         "id":"core-id",
         "template":"TextImageSideBySide",
@@ -83,7 +83,7 @@
       {
         "title":"Use Cases",
         "description":"Supported UseCase credentials: <1></1><1></1>>> Attribute - >>> CredentialSubjectItem <1></1><1></1>>> FrameworkAgreement.pcf - PcfCredential <1></1><1></1>>> FrameworkAgreement.sustainability - SustainabilityCredential <1></1><1></1>>> FrameworkAgreement.quality - QualityCredential <1></1><1></1>>> FrameworkAgreement.traceability - TraceabilityCredential <1></1><1></1>>> FrameworkAgreement.behavioraltwin - BehaviorTwinCredential <1></1><1></1>",
-        "imagePath":"/images/frame/AccessVsUsage.png",
+        "imagePath":"/images/logos/cx-text.svg",
         "backgroundColor":"#FFFFFFF",
         "id":"usecase-id",
         "template":"TextImageSideBySide"
@@ -91,7 +91,7 @@
       {
         "title":"Roles",
         "description":"Supported UseCase credentials: <1></1><1></1>>> Attribute - CredentialSubjectItem <1></1><1></1>>> Dismantler - DismantlerCredential <1></1><1></1>",
-        "imagePath":"/images/frame/AccessVsUsage.png",
+        "imagePath":"/images/logos/cx-text.svg",
         "backgroundColor":"#F9F9F9",
         "id":"roles-id",
         "template":"TextImageSideBySide"

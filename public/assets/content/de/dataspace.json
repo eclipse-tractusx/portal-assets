@@ -33,7 +33,7 @@
       {
         "title":"Policy Beschreibung",
         "description":"Policies werden verwendet, um Datenzugriffsrichtlinien sowie Nutzungsdetails zu definieren.<1></1><1></1>Zugriff bedeutet, dass definiert wird, wer auf Datenangebote zugreifen/sehen und diese anfordern kann. Die Nutzung definiert die Datennutzung, nachdem auf die Daten zugegriffen werden kann. Z.B. Unternehmen A kann auf Fahrzeugdaten von Unternehmen B zugreifen, darf diese jedoch nur für Herstellungszwecke und nicht für Marketinginhalte verwenden<1></1><1></1>Auf der folgenden Seite finden Sie Einzelheiten zu den folgenden Zugriffsrichtlinien<1> </1><1></1>",
-        "imagePath":"/images/frame/AccessVsUsage.png",
+        "imagePath":"/images/logos/cx-text.svg",
         "backgroundColor":"#FFFFFFF",
         "id":"core-id",
         "template":"TextImageSideBySide",
@@ -83,7 +83,7 @@
       {
         "title":"Use Cases",
         "description":"Unterstützte UseCase-Anmeldeinformationen: <1></1><1></1>>> Attribute - >>> CredentialSubjectItem <1></1><1></1>>> FrameworkAgreement.pcf - PcfCredential <1></1><1></1>>> FrameworkAgreement.sustainability - SustainabilityCredential <1></1><1></1>>> FrameworkAgreement.quality - QualityCredential <1></1><1></1>>> FrameworkAgreement.traceability - TraceabilityCredential <1></1><1></1>>> FrameworkAgreement.behavioraltwin - BehaviorTwinCredential <1></1><1></1>",
-        "imagePath":"/images/frame/AccessVsUsage.png",
+        "imagePath":"/images/logos/cx-text.svg",
         "backgroundColor":"#FFFFFFF",
         "id":"usecase-id",
         "template":"TextImageSideBySide"
@@ -91,7 +91,7 @@
       {
         "title":"Rollen",
         "description":"Dieser Text muss noch hinzugefügt werden.",
-        "imagePath":"/images/frame/AccessVsUsage.png",
+        "imagePath":"/images/logos/cx-text.svg",
         "backgroundColor":"#F9F9F9",
         "id":"roles-id",
         "template":"TextImageSideBySide"
