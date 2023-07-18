@@ -33,7 +33,7 @@
       {
         "title":"Policy Beschreibung",
         "description":"Policies werden verwendet, um Datenzugriffsrichtlinien sowie Nutzungsdetails zu definieren.<1></1><1></1>Zugriff bedeutet, dass definiert wird, wer auf Datenangebote zugreifen/sehen und diese anfordern kann. Die Nutzung definiert die Datennutzung, nachdem auf die Daten zugegriffen werden kann. Z.B. Unternehmen A kann auf Fahrzeugdaten von Unternehmen B zugreifen, darf diese jedoch nur für Herstellungszwecke und nicht für Marketinginhalte verwenden<1></1><1></1>Auf der folgenden Seite finden Sie Einzelheiten zu den folgenden Zugriffsrichtlinien<1> </1><1></1>",
-        "imagePath":"/images/logos/cx-text.svg",
+        "imagePath":"/images/frame/AccessVsUsage.png",
         "backgroundColor":"#FFFFFFF",
         "id":"core-id",
         "template":"TextImageSideBySide",

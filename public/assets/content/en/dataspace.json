@@ -33,7 +33,7 @@
       {
         "title":"Policy Intro",
         "description":"Policies are used to define data access policies as well as usage details.<1></1><1></1>Access means it defined who can access / see and request data offers. Usage defines the data ussage after the data are accessible. E.g. Company A can access vehicle data of company B but is only allowed to use them for manufacturing reasons and not marketing content<1></1><1></1>The following page provides details about the following access policies<1></1><1></1>",
-        "imagePath":"/images/logos/cx-text.svg",
+        "imagePath":"/images/frame/AccessVsUsage.png",
         "backgroundColor":"#FFFFFFF",
         "id":"core-id",
         "template":"TextImageSideBySide",
