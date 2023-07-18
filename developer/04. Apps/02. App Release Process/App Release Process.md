@@ -68,17 +68,23 @@ Get language api endpoint is used to provide the user a dropdown function in whi
 
 Response Body
    
-     [
-      {
-       "languageShortName": "string",
-       "languageLongNames": {
-         "de": "string",
-         "en": "string"
-       }
-      }
+    [
+          {
+             "language": "de",
+             "languageLongNames": [
+                 {
+                    "language": "de",
+                    "long_description": "deutsch"
+                 },
+                 {
+                    "language": "en",
+                    "long_description": "german"
+                 }
+             ]
+          },
+        ...
      ]
    
-
 
 <br>
 <br>
