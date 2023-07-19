@@ -351,7 +351,7 @@
       "Configure your company before participating fully inside the network.",
     "sections": [
       {
-        "title": "Catena-X Marketplace",
+        "title": "Make your Company Ready",
         "description":
           "The CX marketplace is separated into two marketplaces - apps and services/tools. Both the marketplaces offer customer oriented offers to enable the customer to participate inside the network (services/tools) as well as support the daily business by use case specific business applications<1></1><1></1>",
         "imagePath": "/images/content/CXMarketplace_Teaser.svg",
@@ -574,7 +574,7 @@
             }
           ]
         },
-        "id": "data-excahnge-id",
+        "id": "tech-integration-id",
         "backgroundColor": "#F9F9F9",
         "template": "TextImageSideBySideWithSections",
         "sectionLink": {
@@ -589,30 +589,11 @@
       },
       {
         "title": "Manage your Network",
-        "description": "TBA<1></1><1></1>",
+        "description": "Coming soon<1></1><1></1>",
         "imagePath": "",
         "id": "network-id",
         "backgroundColor": "#FFFFFF",
-        "template": "TextImageSideBySideWithSections",
-        "sectionLink": {
-          "data": [
-            {
-              "title": ">> Manage Subscriptions",
-              "id": "/appsubscription",
-              "internal": false
-            },
-            {
-              "title": ">> Manage Connectors",
-              "id": "/technicalsetup",
-              "internal": false
-            },
-            {
-              "title": ">> Manage your Data",
-              "id": "/",
-              "internal": false
-            }
-          ]
-        }
+        "template": "TextImageSideBySideWithSections"
       }
     ]
   },
