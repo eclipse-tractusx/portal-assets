@@ -123,8 +123,26 @@ Central Keycloak Instance
 
 * Technical Users
 
-<img width="1108" alt="image" src="https://user-images.githubusercontent.com/94133633/227553850-ac6c3985-2514-43ee-8f72-b302c66bbf0d.png">
+Following technical users are part of the base setup of the portal and will be automatically deployed:
 
+| **ID** | **Name** | **Description** | **Service** | **Assigned Roles** |
+|---|---|---|---|---|
+| 1 | sa-reg-1 | Portal technical user to connect to central idp. | Central IdP (Core) | to be added |
+| 2 | sa-reg-2 | Portal technical user to connect to shared idp. | Shared IdP (Core) | to be added |
+| 3 | sa-cl5-custodian-1 | Technical user of SD Factory to wallet | SD Factory (Core) | to be added |
+| 4 | sa-cl5-custodian-2 | Portal technical user to connect to wallet. | Managed Wallets (Core) | to be added |
+| 5 | sa-cl3-cx-1 | Portal technical user to connect GitHub and Semantic Hub. | Semantic Hub (Core) | to be added |
+| 6 | sa-cl7-cx-5 | User for Portal to access BPDM for company address publishing to the BPDM process | BPDM Connect (Core) | to be added |
+| 7 | **obsolete**<br>sa-cl6-cx-01 | DAPS connector registration | DAPS | to be added |
+| 8 | sa-cl8-cx-1 | Technical User for Portal to SD | SD Factory (Core) | to be added |
+| 9 | sa-cl2-01 | Technical User Clearinghouse update application | CH CX (3rd Party) | to be added |
+| 10 | sa-cl2-02 | Technical User SelfDescription (SD) update application | SD Factory (Core) | to be added |
+| 11 | sa-cl21-01 | Technical User used and owned by the platform operator to register discovery services| Discovery Finder (Core) | to be added |
+| 11 | sa-cl22-01 | Technical User used and owned by the platform operator to access the owned BPN discovery services | BPN Discovery (Core) | to be added |
+
+
+<br>
+<br>
 
 
 
