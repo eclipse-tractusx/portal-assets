@@ -68,17 +68,23 @@ Get language api endpoint is used to provide the user a dropdown function in whi
 
 Response Body
    
-     [
-      {
-       "languageShortName": "string",
-       "languageLongNames": {
-         "de": "string",
-         "en": "string"
-       }
-      }
+    [
+          {
+             "language": "de",
+             "languageLongNames": [
+                 {
+                    "language": "de",
+                    "long_description": "deutsch"
+                 },
+                 {
+                    "language": "en",
+                    "long_description": "german"
+                 }
+             ]
+          },
+        ...
      ]
    
-
 
 <br>
 <br>
@@ -646,12 +652,20 @@ Description
 <br>
 <br>
 
-###### #2 Submit App for Marketrelease
+###### #2 Submit App for Marketplace Release
 Description
 
 ```diff
 ! PUT /api/apps/appreleaseprocess/{appId}/submit
 ```
+
+Validations:
+
+* validates document upload (lead image, app image, confirmity document)
+* validates the signed agreements
+* validates if roles are uploaded
+* validates if technical user profile is configured
+* validates if privacy policy is set
 
 <br>
 <br>
