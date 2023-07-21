@@ -2,6 +2,28 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
+## 1.6.0-RC1
+
+### Change
+* Connector Discovery
+  * enhanced description with new endpoint function to allow empty string search
+* Static JSON Content files
+  * 'company participant' content updated and new styling/templates used
+* App Release Process
+  * updated the endpoint details to fetch app languages
+
+### Feature
+* Company Role config
+  * released end user and developer documentation of the company role config (add role(s))
+* Static JSON Content files
+  * released dataspace introduction content
+* End user documentation 'StyleGuide'
+  * Design style guide released with first set of components/elements (e.g. button, drop down, search, etc.)
+* Policy Management Examples added
+
+### Bugfix
+* Exchanged public/assets/images/content svg files due to breaking content because of the used fonts
+
 ## 1.5.0
 
 ### Change
