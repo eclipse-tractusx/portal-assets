@@ -346,12 +346,12 @@
         "navigation": "network-id"
       }
     ],
-    "title": "Company Setting",
+    "title": "Catena-X Participant",
     "description":
-      "Configure your company before participating fully inside the network.",
+      "The catena-x participant is the standard role inside the catena-x network. Companies sharing and receviing data as well as using service provider offers and app offers are usually 'participants' - active members of the network.",
     "sections": [
       {
-        "title": "Catena-X Marketplace",
+        "title": "Company Setting",
         "description":
           "The CX marketplace is separated into two marketplaces - apps and services/tools. Both the marketplaces offer customer oriented offers to enable the customer to participate inside the network (services/tools) as well as support the daily business by use case specific business applications<1></1><1></1>",
         "imagePath": "/images/content/CXMarketplace_Teaser.svg",
@@ -571,6 +571,11 @@
                 "<2>* Connect your backend systems (e.g. Data Lake, Data Warehouse, …) and implement your integration pipelines individually based on the relevant semantic models.</2>",
               "value": "Semantic Hub",
               "link": "/semantichub"
+            },
+            {
+              "title": "<2>* For information on different options and patterns for data integration, check out the Data Integration Pattern Guide available   on the Association Website.</2>",
+              "value": "Data Integration",
+              "link": "https://catena-x.net/en/catena-x-einfuehren-umsetzen/einfuehrung-von-catena-x"
             }
           ]
         },
@@ -589,30 +594,31 @@
       },
       {
         "title": "Manage your Network",
-        "description": "TBA<1></1><1></1>",
+        "description": "Coming soon<1></1><1></1>",
         "imagePath": "",
         "id": "network-id",
         "backgroundColor": "#FFFFFF",
         "template": "TextImageSideBySideWithSections",
-        "sectionLink": {
-          "data": [
-            {
-              "title": ">> Manage Subscriptions",
-              "id": "/appsubscription",
-              "internal": false
-            },
-            {
-              "title": ">> Manage Connectors",
-              "id": "/technicalsetup",
-              "internal": false
-            },
-            {
-              "title": ">> Manage your Data",
-              "id": "/",
-              "internal": false
-            }
-          ]
-        }
+        "detailsWithoutImageRow1": [
+          {
+            "title": "Manage Subscriptions",
+            "description": "Coming soon",
+            "readMore": "",
+            "backgroundColor": "#F9F9F9"
+          },
+          {
+            "title": "Manage Connectors",
+            "description": "Coming soon",
+            "readMore": "",
+            "backgroundColor": "#F9F9F9"
+          },
+          {
+            "title": "Manage your Data",
+            "description": "Coming soon",
+            "readMore": "",
+            "backgroundColor": "#F9F9F9"
+          }
+        ]
       }
     ]
   },

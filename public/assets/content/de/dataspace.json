@@ -27,12 +27,12 @@
     }
   ],
   "dataSpace": {
-    "title":"Catena-X Dataspace",
-    "description":"The base concept of catena-x is the data exchange in a standardized format. This is reached by data sovereignty (explanation needed) and interoperability (link needed). Via data policies you can decide who can access data offers on several different levels",
+    "title":"Catena-X Datenraum",
+    "description":"Das Grundkonzept von catena-x ist der Datenaustausch in einem standardisierten Format. Dies wird durch Datensouveränität und Interoperabilität erreicht. Über Datenrichtlinien können Sie auf mehreren Ebenen entscheiden, wer auf Datenangebote zugreifen kann.",
     "sections": [
       {
-        "title":"Policy Intro",
-        "description":"Policies are used to define data access policies as well as usage details.<1></1><1></1>Access means it defined who can access / see and request data offers. Usage defines the data ussage after the data are accessible. E.g. Company A can access vehicle data of company B but is only allowed to use them for manufacturing reasons and not marketing content<1></1><1></1>The following page provides details about the following access policies<1></1><1></1>",
+        "title":"Policy Beschreibung",
+        "description":"Policies werden verwendet, um Datenzugriffsrichtlinien sowie Nutzungsdetails zu definieren.<1></1><1></1>Zugriff bedeutet, dass definiert wird, wer auf Datenangebote zugreifen/sehen und diese anfordern kann. Die Nutzung definiert die Datennutzung, nachdem auf die Daten zugegriffen werden kann. Z.B. Unternehmen A kann auf Fahrzeugdaten von Unternehmen B zugreifen, darf diese jedoch nur für Herstellungszwecke und nicht für Marketinginhalte verwenden<1></1><1></1>Auf der folgenden Seite finden Sie Einzelheiten zu den folgenden Zugriffsrichtlinien<1> </1><1></1>",
         "imagePath":"/images/frame/AccessVsUsage.png",
         "backgroundColor":"#FFFFFFF",
         "id":"core-id",
@@ -50,7 +50,7 @@
               "internal": true
             },
             {
-              "title": "* Roles",
+              "title": "* Rollen",
               "id":"roles-id",
               "internal": true
             }
@@ -58,8 +58,8 @@
         }
       },
       {
-        "title":"Data Access policy based on Business Partner Number",
-        "description":"The business partner number (every member of catena-x has ist own bpn) can be used to restrict data access.<1></1><1></1>Means, company a can define that company b is allowed to see/access a data contract while company c isnt.<1></1><1></1>While creating a data offer, company a needs to decide if the data offer is restricted for a number of companys (bpns) or not<1></1><1></1>",
+        "title":"Datenzugriffsrichtlinie basierend auf der Geschäftspartnernummer",
+        "description":"Über die Geschäftspartnernummer (jedes Mitglied von catena-x hat einen eigenen BPN) kann der Datenzugriff eingeschränkt werden.<1></1><1></1>Das heißt, Firma a kann festlegen, dass Firma b dazu berechtigt ist Sehen Sie sich einen Datenvertrag an bzw. greifen Sie darauf zu, während Unternehmen c nicht da ist.<1></1><1></1>Beim Erstellen eines Datenangebots muss Unternehmen a entscheiden, ob das Datenangebot für eine Reihe von Unternehmen (bpns) beschränkt ist. oder nicht<1></1><1></1>",
         "imagePath":"/images/frame/BusinessPartnerNumber.png",
         "backgroundColor":"#F9F9F9",
         "id":"bpn-id",
@@ -67,13 +67,13 @@
         "sectionLink": {
           "data": [
             {
-              "title": "* List of Business Partners [link]",
+              "title": "* Ansicht aller Business Partner",
               "id":"/partnernetwork",
               "internal": false
 
             },
             {
-              "title": "* BPDM Use case details (coming soon)",
+              "title": "* BPDM Use Case Details (coming soon)",
               "id":"",
               "internal": false
             }
@@ -82,16 +82,16 @@
       },
       {
         "title":"Use Cases",
-        "description":"This text need to get added still<1></1><1></1>>> BPDM Use case details (coming soon)",
-        "imagePath":"/images/frame/AccessVsUsage.png",
+        "description":"Unterstützte UseCase-Anmeldeinformationen: <1></1><1></1>>> Attribute - >>> CredentialSubjectItem <1></1><1></1>>> FrameworkAgreement.pcf - PcfCredential <1></1><1></1>>> FrameworkAgreement.sustainability - SustainabilityCredential <1></1><1></1>>> FrameworkAgreement.quality - QualityCredential <1></1><1></1>>> FrameworkAgreement.traceability - TraceabilityCredential <1></1><1></1>>> FrameworkAgreement.behavioraltwin - BehaviorTwinCredential <1></1><1></1>",
+        "imagePath":"/images/logos/cx-text.svg",
         "backgroundColor":"#FFFFFFF",
         "id":"usecase-id",
         "template":"TextImageSideBySide"
       },
       {
-        "title":"Roles",
-        "description":"This text need to get added still<1></1><1></1>>> Company Role/Certificate Upload (link to be added here)",
-        "imagePath":"/images/frame/AccessVsUsage.png",
+        "title":"Rollen",
+        "description":"Dieser Text muss noch hinzugefügt werden.",
+        "imagePath":"/images/logos/cx-text.svg",
         "backgroundColor":"#F9F9F9",
         "id":"roles-id",
         "template":"TextImageSideBySide"
@@ -106,19 +106,19 @@
         "linksRow1": [
           {
             "background": "#C498EF63",
-            "title": "Sample Name",
-            "navigate": "/"
+            "title": "UseCase-Teilnahmeinformationen verwalten",
+            "navigate": "/usecase-participation"
           },
           {
             "background": "#C498EF63",
-            "title": "Sample Name",
-            "navigate": "/"
+            "title": "Rollen-Teilnahmeinformationen verwalten",
+            "navigate": "/certificate-credential"
           }
         ],
         "linksRow2": [
           {
             "background": "#C498EF63",
-            "title": "Sample Name",
+            "title": "coming soon",
             "navigate": "/"
           }
         ]
