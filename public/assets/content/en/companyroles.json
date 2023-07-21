@@ -352,9 +352,8 @@
     "sections": [
       {
         "title": "Company Setting",
-        "description":
-          "The CX marketplace is separated into two marketplaces - apps and services/tools. Both the marketplaces offer customer oriented offers to enable the customer to participate inside the network (services/tools) as well as support the daily business by use case specific business applications<1></1><1></1>",
-        "imagePath": "/images/content/CXMarketplace_Teaser.svg",
+        "description": "Configure your company before participating fully inside the network<1></1><1></1>",
+        "imagePath": "/images/logos/cx-text.svg",
         "backgroundColor": "#F9F9F9",
         "id": "company-setting-id",
         "template": "TextImageSideBySideWithSections",
@@ -450,22 +449,25 @@
       },
       {
         "title": "Get Ready for data exchange",
-        "description":
-          "Use cases describe the value add you can achieve with Catena-X. To learn more about the Catena-X Use Cases please visit the Use Case pages. You can inform yourself on the use case(s) you are interested in, its core values and benefits as well as an overview of the relevant data models and a list of business apps available.<1></1><1></1>",
+        "description": "",
         "imagePath": "",
         "id": "data-excahnge-id",
         "backgroundColor": "#FFFFFF",
         "template": "TextImageSideBySideWithSections",
-        "sectionLink": {
-          "data": [
-            {
-              "title": ">> Use Case",
-              "id": "/usecase",
-              "internal": false
-            }
-          ]
-        },
         "subsections": [
+          {
+            "title": "Use cases",
+            "description": "Use cases describe the value add you can achieve with Catena-X. To learn more about the Catena-X Use Cases please visit the Use Case pages. You can inform yourself on the use case(s) you are interested in, its core values and benefits as well as an overview of the relevant data models and a list of business apps available<1></1><1></1>",
+            "sectionLink": {
+              "data": [
+                {
+                  "title": ">> Use cases",
+                  "id": "/usecase",
+                  "internal": false
+                }
+              ]
+            }
+          },
           {
             "title": "Marketplace",
             "description":
