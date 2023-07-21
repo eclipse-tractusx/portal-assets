@@ -412,7 +412,7 @@
               "data": [
                 {
                   "title": ">> Configure your IdP",
-                  "id": "https://portal.int.demo.catena-x.net/documentation/?path=docs%2F02.+Technical+Integration%2F02.+Identity+Provider+Management",
+                  "id": "/documentation/?path=docs%2F02.+Technical+Integration%2F02.+Identity+Provider+Management",
                   "internal": false
                 }
               ]
@@ -426,7 +426,7 @@
               "data": [
                 {
                   "title": ">> Setup your company certificates",
-                  "id": "https://portal.int.demo.catena-x.net/documentation/?path=docs%2F02.+Technical+Integration%2F02.+Identity+Provider+Management",
+                  "id": "/documentation/?path=docs%2F02.+Technical+Integration%2F02.+Identity+Provider+Management",
                   "internal": false
                 }
               ]
@@ -440,7 +440,7 @@
               "data": [
                 {
                   "title": ">> Sign the relevant use case frameworks.",
-                  "id": "https://portal.int.demo.catena-x.net/documentation/?path=docs%2F02.+Technical+Integration%2F02.+Identity+Provider+Management",
+                  "id": "/documentation/?path=docs%2F02.+Technical+Integration%2F02.+Identity+Provider+Management",
                   "internal": false
                 }
               ]
