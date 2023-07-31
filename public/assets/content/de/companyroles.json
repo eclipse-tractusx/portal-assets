@@ -425,7 +425,7 @@
               "data": [
                 {
                   "title": ">> Setup your company certificates",
-                  "id": "https://portal.int.demo.catena-x.net/documentation/?path=docs%2F02.+Technical+Integration%2F02.+Identity+Provider+Management",
+                  "id": "/certificate-credential",
                   "internal": false
                 }
               ]
@@ -439,7 +439,7 @@
               "data": [
                 {
                   "title": ">> Sign the relevant use case frameworks.",
-                  "id": "https://portal.int.demo.catena-x.net/documentation/?path=docs%2F02.+Technical+Integration%2F02.+Identity+Provider+Management",
+                  "id": "/usecase-participation",
                   "internal": false
                 }
               ]
@@ -478,11 +478,6 @@
                   "title": ">> App Market Place",
                   "id": "/appmarketplace",
                   "internal": false
-                },
-                {
-                  "title": ">> Use cases",
-                  "id": "/usecase",
-                  "internal": false
                 }
               ]
             }
@@ -497,11 +492,6 @@
                   "title": ">> Semantic Hub",
                   "id": "/semantichub",
                   "internal": false
-                },
-                {
-                  "title": ">> Use cases",
-                  "id": "/usecase",
-                  "internal": false
                 }
               ]
             }
@@ -515,11 +505,6 @@
                 {
                   "title": ">> Semantic Hub",
                   "id": "/semantichub",
-                  "internal": false
-                },
-                {
-                  "title": ">> Use cases",
-                  "id": "/usecase",
                   "internal": false
                 }
               ]
@@ -553,30 +538,30 @@
             {
               "title":
                 "<2>* Use one of simple data exchange tools or middle ware solutions. To inform yourself on existing offers, check out the App Marketplace</2>",
-              "value": "App Marketplace",
+              "value": ">> App Marketplace",
               "link": "/appmarketplace"
             },
             {
               "title":
                 "<2>* Use one of simple data exchange tools or middle ware solutions. To inform yourself on existing offers, check out the Service Marketplace</2>",
-              "value": "Service Marketplace",
+              "value": ">> Service Marketplace",
               "link": "/servicemarketplace"
             },
             {
               "title":
                 "<2>* Use a Business Application with data provisioning and consumption capabilities for the use case(s) you are interested in.</2>",
-              "value": "Business Application",
+              "value": ">> Business Application",
               "link": "/appmarketplace"
             },
             {
               "title":
                 "<2>* Connect your backend systems (e.g. Data Lake, Data Warehouse, …) and implement your integration pipelines individually based on the relevant semantic models.</2>",
-              "value": "Semantic Hub",
+              "value": ">> Semantic Hub",
               "link": "/semantichub"
             },
             {
               "title": "<2>* For information on different options and patterns for data integration, check out the Data Integration Pattern Guide available   on the Association Website.</2>",
-              "value": "Data Integration",
+              "value": ">> Data Integration",
               "link": "https://catena-x.net/en/catena-x-einfuehren-umsetzen/einfuehrung-von-catena-x"
             }
           ]
