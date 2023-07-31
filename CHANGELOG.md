@@ -2,6 +2,17 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
+## 1.6.0-RC2
+
+### Change
+* Wallet Creation & Membership credential creation documentation as part of the technical registration approval documentation added
+* Connector registration documentation (technical und functional) updated, covering the new input fields and api calls
+
+### Feature
+* SSI Credential Management (Request Flow) added
+* App Instance URL change process added
+* Notification user documentation added
+
 ## 1.6.0-RC1
 
 ### Change
