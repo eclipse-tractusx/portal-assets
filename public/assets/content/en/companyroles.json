@@ -18,7 +18,7 @@
       }
     ],
     "title": "Catena-X Data App Provider",
-    "description": "The catena-x App Provider is the standard role inside the catena-x network. Companies sharing and receviing data as well as using service provider offers and app offers are usually 'App Provider' - active members of the network.",
+    "description": "The Catena-X App Provider is the standard role inside the Catena-X network. Companies sharing and receviing data as well as using service provider offers and app offers are usually 'App Provider' - active members of the network.",
     "sections": [
       {
         "title": "Marketplace",
@@ -38,7 +38,7 @@
           {
             "title": "Service Marketplace",
             "imagePath": "/images/content/teaser.png",
-            "description": "The service marketplace offers technical and consultancy support to enable you and your company to participate in the catena-x dataspace.",
+            "description": "The service marketplace offers technical and consultancy support to enable you and your company to participate in the Catena-X dataspace.",
             "readMore": "",
             "backgroundColor": "#F9F9F9"
           }
@@ -180,7 +180,7 @@
       }
     ],
     "title": "Catena-X Data Service Provider",
-    "description": "The catena-x Service Provider is the standard role inside the catena-x network. Companies sharing and receving data as well as using service provider offers and app offers are usually 'Service Provider' - active members of the network.",
+    "description": "The Catena-X Service Provider is the standard role inside the Catena-X network. Companies sharing and receving data as well as using service provider offers and app offers are usually 'Service Provider' - active members of the network.",
     "sections": [
       {
         "title": "Marketplace",
@@ -200,7 +200,7 @@
           {
             "title": "Service Marketplace",
             "imagePath": "/images/content/teaser.png",
-            "description": "The service marketplace offers technical and consultancy support to enable you and your company to participate in the catena-x dataspace.",
+            "description": "The service marketplace offers technical and consultancy support to enable you and your company to participate in the Catena-X dataspace.",
             "readMore": "",
             "backgroundColor": "#F9F9F9"
           }
@@ -348,7 +348,7 @@
     ],
     "title": "Catena-X Participant",
     "description":
-      "The catena-x participant is the standard role inside the catena-x network. Companies sharing and receviing data as well as using service provider offers and app offers are usually 'participants' - active members of the network.",
+      "The Catena-X participant is the standard role inside the Catena-X network. Companies sharing and receviing data as well as using service provider offers and app offers are usually 'participants' - active members of the network.",
     "sections": [
       {
         "title": "Company Setting",
@@ -643,7 +643,7 @@
       }
     ],
     "title": "Catena-X Data Confirmity Body",
-    "description": "The catena-x Confirmity Body is the standard role inside the catena-x network. Companies sharing and receviing data as well as using service provider offers and app offers are usually 'Confirmity Body' - active members of the network.",
+    "description": "The Catena-X Confirmity Body is the standard role inside the Catena-X network. Companies sharing and receviing data as well as using service provider offers and app offers are usually 'Confirmity Body' - active members of the network.",
     "sections": [
       {
         "title": "Marketplace",
@@ -663,7 +663,7 @@
           {
             "title": "Service Marketplace",
             "imagePath": "/images/content/teaser.png",
-            "description": "The service marketplace offers technical and consultancy support to enable you and your company to participate in the catena-x dataspace.",
+            "description": "The service marketplace offers technical and consultancy support to enable you and your company to participate in the Catena-X dataspace.",
             "readMore": "",
             "backgroundColor": "#F9F9F9"
           }
