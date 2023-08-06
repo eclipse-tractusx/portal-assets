@@ -2,6 +2,24 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
+## 1.6.0-RC3
+
+### Change
+* App subscription activation docu enhanced by added activation overlay screenshot as example/reference with new content body
+* Application checklist retrigger information added
+
+### Feature
+* App Change documentation released
+* Upgrade info added
+  * daps deletion
+
+### Bugfix
+* Dataspace Introduction - added missing direct links and deleted unnecesary links
+* Network Participant Introduction - typos fixed
+
+### Known Knowns
+* Help application - side menu botton scrolling blocked and rendering broken
+
 ## 1.6.0-RC2
 
 ### Change
