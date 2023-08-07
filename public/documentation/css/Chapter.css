@@ -49,7 +49,7 @@ nav.menu.open {
 }
 
 nav.menu.open ul.level1 {
-    max-height: calc(100vh - 160px);
+    max-height: calc(100vh - 190px);
 }
 
 nav.menu.open .home {
