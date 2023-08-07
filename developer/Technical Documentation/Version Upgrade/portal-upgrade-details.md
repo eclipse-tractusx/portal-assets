@@ -11,6 +11,14 @@ Each section includes the respective change details, impact on existing data and
 <br>
 <br>
 
+#### Connectors - CHANGED - 1.6.0
+
+* REMOVED: removed table connector_client_details
+* REMOVED: column daps_registration_successful
+
+The DAPS was completly removed from the portal services, hence the connector_client_details table was removed, as well as the daps_registration_successful column from the connector table.
+
+
 #### Technical User Profiles - NEW - 1.4.0
 
 > **_INFO:_** Please note: the technical user profiles will remove the interim solution of technical_user_needed within the service_details table, which was introduced in 1.1.0
