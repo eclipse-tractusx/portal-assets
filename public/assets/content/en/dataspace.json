@@ -69,7 +69,7 @@
       },
       {
         "title":"Data Access policy based on Membership",
-        "description":"The membership credential is used to validate if the data consumer is member of the dataspace. The membership credential is a "must configure" credential for all data offers.<1></1><1></1>",
+        "description":"The membership credential is used to validate if the data consumer is member of the dataspace. The membership credential is a 'must configure' credential for all data offers.<1></1><1></1>",
         "imagePath":"/images/logos/cx-text.svg",
         "backgroundColor":"#F9F9F9",
         "id":"membership-id",
