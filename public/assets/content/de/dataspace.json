@@ -7,21 +7,26 @@
     },
     {
       "index": 2,
+      "title":"Membership",
+      "navigation":"membership-id"
+    },
+    {
+      "index": 3,
       "title":"BPN",
       "navigation":"bpn-id"
     },
     {
-      "index": 3,
+      "index": 4,
       "title":"Use Case",
       "navigation":"usecase-id"
     },
     {
-      "index": 4,
+      "index": 5,
       "title":"Roles",
       "navigation":"roles-id"
     },
     {
-      "index": 4,
+      "index": 6,
       "title":"Links",
       "navigation":"links-id"
     }
@@ -39,6 +44,11 @@
         "template":"TextImageSideBySide",
         "sectionLink": {
           "data": [
+            {
+              "title": "* Membership",
+              "id":"membership-id",
+              "internal": true
+            },
             {
               "title": "* BPN",
               "id":"bpn-id",
@@ -58,10 +68,18 @@
         }
       },
       {
+        "title":"Datenzugriffsrichtlinie basierend auf dem Membership",
+        "description":"The membership credential is used to validate if the data consumer is member of the dataspace. The membership credential is a "must configure" credential for all data offers.<1></1><1></1>",
+        "imagePath":"/images/logos/cx-text.svg",
+        "backgroundColor":"#F9F9F9",
+        "id":"membership-id",
+        "template":"TextImageSideBySide",
+      },
+      {
         "title":"Datenzugriffsrichtlinie basierend auf der Geschäftspartnernummer",
         "description":"Über die Geschäftspartnernummer (jedes Mitglied von catena-x hat einen eigenen BPN) kann der Datenzugriff eingeschränkt werden.<1></1><1></1>Das heißt, Firma a kann festlegen, dass Firma b dazu berechtigt ist Sehen Sie sich einen Datenvertrag an bzw. greifen Sie darauf zu, während Unternehmen c nicht da ist.<1></1><1></1>Beim Erstellen eines Datenangebots muss Unternehmen a entscheiden, ob das Datenangebot für eine Reihe von Unternehmen (bpns) beschränkt ist. oder nicht<1></1><1></1>",
         "imagePath":"/images/frame/BusinessPartnerNumber.png",
-        "backgroundColor":"#F9F9F9",
+        "backgroundColor":"#FFFFFFF",
         "id":"bpn-id",
         "template":"TextImageSideBySide",
         "sectionLink": {
@@ -84,7 +102,7 @@
         "title":"Use Cases",
         "description":"Unterstützte UseCase-Anmeldeinformationen: <1></1><1></1>>> Attribute - >>> CredentialSubjectItem <1></1><1></1>>> FrameworkAgreement.pcf - PcfCredential <1></1><1></1>>> FrameworkAgreement.sustainability - SustainabilityCredential <1></1><1></1>>> FrameworkAgreement.quality - QualityCredential <1></1><1></1>>> FrameworkAgreement.traceability - TraceabilityCredential <1></1><1></1>>> FrameworkAgreement.behavioraltwin - BehaviorTwinCredential <1></1><1></1>",
         "imagePath":"/images/logos/cx-text.svg",
-        "backgroundColor":"#FFFFFFF",
+        "backgroundColor":"#F9F9F9",
         "id":"usecase-id",
         "template":"TextImageSideBySide"
       },
@@ -92,14 +110,14 @@
         "title":"Rollen",
         "description":"Dieser Text muss noch hinzugefügt werden.",
         "imagePath":"/images/logos/cx-text.svg",
-        "backgroundColor":"#F9F9F9",
+        "backgroundColor":"#FFFFFF",
         "id":"roles-id",
         "template":"TextImageSideBySide"
       },
       {
         "title": "",
         "description": "",
-        "backgroundColor": "#FFFFFF",
+        "backgroundColor": "#F9F9F9",
         "grid": 2,
         "id": "links-id",
         "template": "LinkButtonGrid",
@@ -118,8 +136,8 @@
         "linksRow2": [
           {
             "background": "#C498EF63",
-            "title": "coming soon",
-            "navigate": "/"
+            "title": "Hilfe zum aufsetzen von Policies im Datenangebot",
+            "navigate": "/documentation/?path=docs%2F02.+Technical+Integration%2F01.+Connector+Registration%2F08.+Policy+Management.md"
           }
         ]
       }
