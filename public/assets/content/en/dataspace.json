@@ -7,21 +7,26 @@
     },
     {
       "index": 2,
+      "title":"Membership",
+      "navigation":"membership-id"
+    },
+    {
+      "index": 3,
       "title":"BPN",
       "navigation":"bpn-id"
     },
     {
-      "index": 3,
+      "index": 4,
       "title":"Use Case",
       "navigation":"usecase-id"
     },
     {
-      "index": 4,
+      "index": 5,
       "title":"Roles",
       "navigation":"roles-id"
     },
     {
-      "index": 4,
+      "index": 6,
       "title":"Links",
       "navigation":"links-id"
     }
@@ -69,21 +74,6 @@
         "backgroundColor":"#F9F9F9",
         "id":"membership-id",
         "template":"TextImageSideBySide",
-        "sectionLink": {
-          "data": [
-            {
-              "title": "* List of Business Partners",
-              "id":"/partnernetwork",
-              "internal": false
-
-            },
-            {
-              "title": "* BPDM Use case details (coming soon)",
-              "id":"",
-              "internal": false
-            }
-          ]
-        }
       },
       {
         "title":"Data Access policy based on Business Partner Number",
@@ -146,8 +136,8 @@
         "linksRow2": [
           {
             "background": "#C498EF63",
-            "title": "coming soon",
-            "navigate": "/"
+            "title": "Help for setting up policies in the data supply",
+            "navigate": "/documentation/?path=docs%2F02.+Technical+Integration%2F01.+Connector+Registration%2F08.+Policy+Management.md"
           }
         ]
       }
