@@ -290,6 +290,22 @@ INFO | WELCOME_APP_MARKETPLACE | n/a	| Triggered from the FE locales file<br>Get
 <br>
 <br>
 
+#### Manage your company details
+Company detail change messages, triggered by the api endpoint
+
+* PUT /api/administration/companydata/credentials/{credentialId}/approval
+* PUT /api/administration/companydata/credentials/{credentialId}/reject
+
+<br>
+
+Topic | Notification Type | Content | UI Message | Receiver
+-------- | -------- | -------- | -------- | --------
+INFO | CREDENTIAL_APPROVAL | {"type":"{company_ssi_details.type}",<br>"credentialId":"{company_ssi_details.id}" | Triggered from the FE locales file<br> "Verified Credential {credentialType} assigned<br>Verified Credential {credentialType} got assigned to your company wallet." | VC Requester
+INFO | CREDENTIAL_REJECT | {"type":"{company_ssi_details.type}",<br>"credentialId":"{company_ssi_details.id}" | Triggered from the FE locales file<br> "Verified Credential {credentialType} declined<br>Verified Credential {credentialType} got declined. You can start a new request immediately." | VC Requester
+
+<br>
+<br>
+
 #### Offer Release Request
 Offer Release Approval Messages, triggered by the api endpoint
 
@@ -302,6 +318,22 @@ Topic | Notification Type | Content | UI Message | Receiver
 -------- | -------- | -------- | -------- | --------
 OFFER | APP_RELEASE_REQUEST | OfferId: {offer.id}<br>RequestorCompanyName:{companies.name}<br>OfferName: {offer.name} | Triggered from the FE locales file<br>{CompanyName} created a new app to get published to the catena-x marketplace. Please review the app release request and approve or decline the app release." here: LINK | CX Admin
 OFFER | SERVICE_RELEASE_REQUEST | OfferId: {offer.id}<br>RequestorCompanyName:{companies.name}<br>OfferName: {offer.name} | Triggered from the FE locales file<br>{CompanyName} created a new service to get published to the catena-x marketplace. Please review the service release request and approve or decline the service release." here: LINK | CX Admin
+
+<br>
+<br>
+
+#### Offer Change Process
+Offer Change Messages, triggered by the api endpoint
+
+* POST /api/apps/AppChange/{appId}/role/activeapp
+* PUT /api/apps/AppChange/{appId}/subscription/{subscriptionId}/tenantUrl
+
+<br>
+
+Topic | Notification Type | Content | UI Message | Receiver
+-------- | -------- | -------- | -------- | --------
+INFO | SUBSCRIPTION_URL_UPDATE | {"appId":"{offer.id}",<br>"appName":"{offer.name}",<br>"oldUrl":"{app_subscription_details.url}"<br>"newUrl":"{app_subscription_details.url}" | Triggered from the FE locales file<br> "App URL {appName} updated<br>The app provider has changed the stored App Instance URL for your subscribed app {AppName}." | tbd
+INFO | APP_ROLE_ADDED | not yet supported | not yet supported | not yet supported
 
 <br>
 <br>
