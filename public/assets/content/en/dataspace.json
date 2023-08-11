@@ -7,21 +7,26 @@
     },
     {
       "index": 2,
+      "title":"Membership",
+      "navigation":"membership-id"
+    },
+    {
+      "index": 3,
       "title":"BPN",
       "navigation":"bpn-id"
     },
     {
-      "index": 3,
+      "index": 4,
       "title":"Use Case",
       "navigation":"usecase-id"
     },
     {
-      "index": 4,
+      "index": 5,
       "title":"Roles",
       "navigation":"roles-id"
     },
     {
-      "index": 4,
+      "index": 6,
       "title":"Links",
       "navigation":"links-id"
     }
@@ -32,13 +37,18 @@
     "sections": [
       {
         "title":"Policy Intro",
-        "description":"Policies are used to define data access policies as well as usage details.<1></1><1></1>Access means it defined who can access / see and request data offers. Usage defines the data ussage after the data are accessible. E.g. Company A can access vehicle data of company B but is only allowed to use them for manufacturing reasons and not marketing content<1></1><1></1>The following page provides details about the following access policies<1></1><1></1>",
+        "description":"Policies are used to define data access policies as well as usage details.<1></1><1></1>Access means it defined who can view data offers. Usage defines the data access itself - means contract negotiations and data consumption. E.g. Company A can see that Company B has a Data Offer of last week produced vehicle data - however due to missing usage rights the company can not accept the agreement/data offer and can't access those data.<1></1><1></1>The following page provides details about the respective available access/usage policies<1></1><1></1>",
         "imagePath":"/images/frame/AccessVsUsage.png",
         "backgroundColor":"#FFFFFFF",
         "id":"core-id",
         "template":"TextImageSideBySide",
         "sectionLink": {
           "data": [
+            {
+              "title": "* Membership",
+              "id":"membership-id",
+              "internal": true
+            },
             {
               "title": "* BPN",
               "id":"bpn-id",
@@ -58,10 +68,18 @@
         }
       },
       {
+        "title":"Data Access policy based on Membership",
+        "description":"The membership credential is used to validate if the data consumer is member of the dataspace. The membership credential is a 'must configure' credential for all data offers.<1></1><1></1>",
+        "imagePath":"/images/logos/cx-text.svg",
+        "backgroundColor":"#F9F9F9",
+        "id":"membership-id",
+        "template":"TextImageSideBySide",
+      },
+      {
         "title":"Data Access policy based on Business Partner Number",
         "description":"The business partner number (every member of catena-x has ist own bpn) can be used to restrict data access.<1></1><1></1>Means, company a can define that company b is allowed to see/access a data contract while company c isnt.<1></1><1></1>While creating a data offer, company a needs to decide if the data offer is restricted for a number of companys (bpns) or not<1></1><1></1>",
         "imagePath":"/images/frame/BusinessPartnerNumber.png",
-        "backgroundColor":"#F9F9F9",
+        "backgroundColor":"#FFFFFFF",
         "id":"bpn-id",
         "template":"TextImageSideBySide",
         "sectionLink": {
@@ -84,7 +102,7 @@
         "title":"Use Cases",
         "description":"Supported UseCase credentials: <1></1><1></1>>> Attribute - >>> CredentialSubjectItem <1></1><1></1>>> FrameworkAgreement.pcf - PcfCredential <1></1><1></1>>> FrameworkAgreement.sustainability - SustainabilityCredential <1></1><1></1>>> FrameworkAgreement.quality - QualityCredential <1></1><1></1>>> FrameworkAgreement.traceability - TraceabilityCredential <1></1><1></1>>> FrameworkAgreement.behavioraltwin - BehaviorTwinCredential <1></1><1></1>",
         "imagePath":"/images/logos/cx-text.svg",
-        "backgroundColor":"#FFFFFFF",
+        "backgroundColor":"#F9F9F9",
         "id":"usecase-id",
         "template":"TextImageSideBySide"
       },
@@ -92,14 +110,14 @@
         "title":"Roles",
         "description":"Supported UseCase credentials: <1></1><1></1>>> Attribute - CredentialSubjectItem <1></1><1></1>>> Dismantler - DismantlerCredential <1></1><1></1>",
         "imagePath":"/images/logos/cx-text.svg",
-        "backgroundColor":"#F9F9F9",
+        "backgroundColor":"#FFFFFF",
         "id":"roles-id",
         "template":"TextImageSideBySide"
       },
       {
         "title": "",
         "description": "",
-        "backgroundColor": "#FFFFFF",
+        "backgroundColor": "#F9F9F9",
         "grid": 2,
         "id": "links-id",
         "template": "LinkButtonGrid",
@@ -118,8 +136,8 @@
         "linksRow2": [
           {
             "background": "#C498EF63",
-            "title": "coming soon",
-            "navigate": "/"
+            "title": "Help for setting up policies in the data supply",
+            "navigate": "/documentation/?path=docs%2F02.+Technical+Integration%2F01.+Connector+Registration%2F08.+Policy+Management.md"
           }
         ]
       }

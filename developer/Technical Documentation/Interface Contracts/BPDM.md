@@ -8,19 +8,15 @@ BPDM Data Pool provides an API (Reference Data API) to lookup business partner d
 API authentication is managed by API keys which is processed via HTTP header. This key manages also authorization, e.g., access to the CX data pool (instead of other community data).
 <br>
 <br>
-For the registration process we are using the BPDM data call to pull the company basic data.
-<br>
-2 Options are available for the data pull
-<br>
-* Via Company Name (Level 2 - not yet implemented)
-* Via BPN Number (BPN Generator: BPN Generator: Modes of Operation)
+For the registration process we are using the BPDM data call to pull the company basic data based on a BPNL data input.
 <br>
 <br>
 
 ## Architecture Overview
 To integrate the API into CX onboarding process, portal team just have to call the lookup REST endpoint and transform the response into a pick list for the portal user.
 <br>
-<img width="927" alt="image" src="https://user-images.githubusercontent.com/94133633/210436463-cdf5e063-b37c-4f28-b9c0-a78af52aaee4.png">
+<br>
+<img width="791" alt="image" src="https://github.com/catenax-ng/tx-portal-assets/assets/94133633/24cbe6d4-3108-4292-9edf-6d8017ff9636">
 <br>
 <br>
 
@@ -43,8 +39,20 @@ Retrieving company data from the CX mirror.
 ```
 
 <br>
-  idValue: {BPN-Number},
-  idType: BPN
+
+Request Body
+<br>
+
+    idValue: {BPN-Number},
+    idType: BPN
+
+<br>
+<br>
+
+The mentioned endpoint is provided by the registration service.
+Behind that, the BPDM endpoint {BPDM Host}/pool/api/catena/legal-entities/{idValue} is getting called.
+The portal is using an technical user for the authentication. The technical user bearer token is send via the api rest call to bpdm.
+
 <br>
 <br>
 
@@ -64,10 +72,5 @@ Retrieving company data from the CX mirror.
 <br>
 <br>
 
-### Service Call via CompanyName
-<br>
-currently not supported
-<br>
-<br>
 
 
