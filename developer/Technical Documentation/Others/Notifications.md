@@ -281,11 +281,11 @@ Welcome Messages, triggered by the api endpoint
 
 Topic | Notification Type | Content | UI Message | Receiver
 -------- | -------- | -------- | -------- | --------
-INFO | WELCOME | n/a	| Triggered from the FE locales file<br>Welcome to the Catena-X Network. To easily get you onboarded, a number of notifications / onboarding steps have been defined. Please check your notifications and start the configuration of your company area inside the portal to have a network experience based on your need. | New Registered Company Admin
-INFO | WELCOME_USE_CASES | n/a	| Triggered from the FE locales file<br>The network is quite huge, we want to ensure that you can focus on your preferred use cases. Select your preferred use case from the table below. | New Registered Company Admin
-INFO | WELCOME_SERVICE_PROVIDER | n/a	| Triggered from the FE locales file<br>If you need a service provider to help you with setting up your dataspace or an EDC, just follow us to the Service Provider Marketplace LINK | New Registered Company Admin
-INFO | WELCOME_CONNECTOR_REGISTRATION | n/a	| Triggered from the FE locales file<br>You do not have any registered Connector so far – have a look at the connector offers and get your connector to participate. LINK | New Registered Company Admin
-INFO | WELCOME_APP_MARKETPLACE | n/a	| Triggered from the FE locales file<br>Get a first inside into available apps, just follow us to the marketplace for apps. LINK | New Registered Company Admin
+INFO | WELCOME | n/a | Triggered from the FE locales file<br>Welcome to the Catena-X Network. To easily get you onboarded, a number of notifications / onboarding steps have been defined. Please check your notifications and start the configuration of your company area inside the portal to have a network experience based on your need. | New Registered Company Admin
+INFO | WELCOME_USE_CASES | n/a | Triggered from the FE locales file<br>The network is quite huge, we want to ensure that you can focus on your preferred use cases. Select your preferred use case from the table below. | New Registered Company Admin
+INFO | WELCOME_SERVICE_PROVIDER | n/a | Triggered from the FE locales file<br>If you need a service provider to help you with setting up your dataspace or an EDC, just follow us to the Service Provider Marketplace LINK | New Registered Company Admin
+INFO | WELCOME_CONNECTOR_REGISTRATION | n/a | Triggered from the FE locales file<br>You do not have any registered Connector so far – have a look at the connector offers and get your connector to participate. LINK | New Registered Company Admin
+INFO | WELCOME_APP_MARKETPLACE | n/a | Triggered from the FE locales file<br>Get a first inside into available apps, just follow us to the marketplace for apps. LINK | New Registered Company Admin
 
 <br>
 <br>
