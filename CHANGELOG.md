@@ -2,6 +2,13 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
+## 1.6.0-RC4
+
+### Change
+- Documentation of registration and technical integration updated (removal of all daps related documentation)
+- Added new notification types and messages inside the notification service documentation
+- Enhanced policy documentation as part of the user documentation of connectors
+
 ## 1.6.0-RC3
 
 ### Change

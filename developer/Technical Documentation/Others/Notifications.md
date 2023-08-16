@@ -281,11 +281,27 @@ Welcome Messages, triggered by the api endpoint
 
 Topic | Notification Type | Content | UI Message | Receiver
 -------- | -------- | -------- | -------- | --------
-INFO | WELCOME | n/a	| Triggered from the FE locales file<br>Welcome to the Catena-X Network. To easily get you onboarded, a number of notifications / onboarding steps have been defined. Please check your notifications and start the configuration of your company area inside the portal to have a network experience based on your need. | New Registered Company Admin
-INFO | WELCOME_USE_CASES | n/a	| Triggered from the FE locales file<br>The network is quite huge, we want to ensure that you can focus on your preferred use cases. Select your preferred use case from the table below. | New Registered Company Admin
-INFO | WELCOME_SERVICE_PROVIDER | n/a	| Triggered from the FE locales file<br>If you need a service provider to help you with setting up your dataspace or an EDC, just follow us to the Service Provider Marketplace LINK | New Registered Company Admin
-INFO | WELCOME_CONNECTOR_REGISTRATION | n/a	| Triggered from the FE locales file<br>You do not have any registered Connector so far – have a look at the connector offers and get your connector to participate. LINK | New Registered Company Admin
-INFO | WELCOME_APP_MARKETPLACE | n/a	| Triggered from the FE locales file<br>Get a first inside into available apps, just follow us to the marketplace for apps. LINK | New Registered Company Admin
+INFO | WELCOME | n/a | Triggered from the FE locales file<br>Welcome to the Catena-X Network. To easily get you onboarded, a number of notifications / onboarding steps have been defined. Please check your notifications and start the configuration of your company area inside the portal to have a network experience based on your need. | New Registered Company Admin
+INFO | WELCOME_USE_CASES | n/a | Triggered from the FE locales file<br>The network is quite huge, we want to ensure that you can focus on your preferred use cases. Select your preferred use case from the table below. | New Registered Company Admin
+INFO | WELCOME_SERVICE_PROVIDER | n/a | Triggered from the FE locales file<br>If you need a service provider to help you with setting up your dataspace or an EDC, just follow us to the Service Provider Marketplace LINK | New Registered Company Admin
+INFO | WELCOME_CONNECTOR_REGISTRATION | n/a | Triggered from the FE locales file<br>You do not have any registered Connector so far – have a look at the connector offers and get your connector to participate. LINK | New Registered Company Admin
+INFO | WELCOME_APP_MARKETPLACE | n/a | Triggered from the FE locales file<br>Get a first inside into available apps, just follow us to the marketplace for apps. LINK | New Registered Company Admin
+
+<br>
+<br>
+
+#### Manage your company details
+Company detail change messages, triggered by the api endpoint
+
+* PUT /api/administration/companydata/credentials/{credentialId}/approval
+* PUT /api/administration/companydata/credentials/{credentialId}/reject
+
+<br>
+
+Topic | Notification Type | Content | UI Message | Receiver
+-------- | -------- | -------- | -------- | --------
+INFO | CREDENTIAL_APPROVAL | {"type":"{company_ssi_details.type}",<br>"credentialId":"{company_ssi_details.id}" | Triggered from the FE locales file<br> "Verified Credential {credentialType} assigned<br>Verified Credential {credentialType} got assigned to your company wallet." | VC Requester
+INFO | CREDENTIAL_REJECT | {"type":"{company_ssi_details.type}",<br>"credentialId":"{company_ssi_details.id}" | Triggered from the FE locales file<br> "Verified Credential {credentialType} declined<br>Verified Credential {credentialType} got declined. You can start a new request immediately." | VC Requester
 
 <br>
 <br>
@@ -302,6 +318,22 @@ Topic | Notification Type | Content | UI Message | Receiver
 -------- | -------- | -------- | -------- | --------
 OFFER | APP_RELEASE_REQUEST | OfferId: {offer.id}<br>RequestorCompanyName:{companies.name}<br>OfferName: {offer.name} | Triggered from the FE locales file<br>{CompanyName} created a new app to get published to the catena-x marketplace. Please review the app release request and approve or decline the app release." here: LINK | CX Admin
 OFFER | SERVICE_RELEASE_REQUEST | OfferId: {offer.id}<br>RequestorCompanyName:{companies.name}<br>OfferName: {offer.name} | Triggered from the FE locales file<br>{CompanyName} created a new service to get published to the catena-x marketplace. Please review the service release request and approve or decline the service release." here: LINK | CX Admin
+
+<br>
+<br>
+
+#### Offer Change Process
+Offer Change Messages, triggered by the api endpoint
+
+* POST /api/apps/AppChange/{appId}/role/activeapp
+* PUT /api/apps/AppChange/{appId}/subscription/{subscriptionId}/tenantUrl
+
+<br>
+
+Topic | Notification Type | Content | UI Message | Receiver
+-------- | -------- | -------- | -------- | --------
+INFO | SUBSCRIPTION_URL_UPDATE | {"appId":"{offer.id}",<br>"appName":"{offer.name}",<br>"oldUrl":"{app_subscription_details.url}"<br>"newUrl":"{app_subscription_details.url}" | Triggered from the FE locales file<br> "App URL {appName} updated<br>The app provider has changed the stored App Instance URL for your subscribed app {AppName}." | tbd
+INFO | APP_ROLE_ADDED | not yet supported | not yet supported | not yet supported
 
 <br>
 <br>
