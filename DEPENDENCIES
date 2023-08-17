@@ -20,7 +20,7 @@ npm/npmjs/-/color-name/1.1.3, MIT, approved, clearlydefined
 npm/npmjs/-/color-name/1.1.4, MIT, approved, clearlydefined
 npm/npmjs/-/command-line-args/5.2.1, MIT, approved, clearlydefined
 npm/npmjs/-/command-line-usage/6.1.3, MIT, approved, clearlydefined
-npm/npmjs/-/concurrently/7.6.0, MIT, approved, clearlydefined
+npm/npmjs/-/concurrently/8.2.0, MIT, approved, clearlydefined
 npm/npmjs/-/content-disposition/0.5.4, MIT, approved, clearlydefined
 npm/npmjs/-/content-type/1.0.5, MIT, approved, #6950
 npm/npmjs/-/cookie-signature/1.0.6, MIT, approved, clearlydefined
@@ -98,7 +98,7 @@ npm/npmjs/-/qs/6.11.2, BSD-3-Clause, approved, #7556
 npm/npmjs/-/range-parser/1.2.1, MIT, approved, clearlydefined
 npm/npmjs/-/raw-body/2.5.1, MIT, approved, clearlydefined
 npm/npmjs/-/reduce-flatten/2.0.0, MIT, approved, clearlydefined
-npm/npmjs/-/regenerator-runtime/0.13.11, MIT, approved, #4978
+npm/npmjs/-/regenerator-runtime/0.14.0, MIT, approved, #9897
 npm/npmjs/-/require-directory/2.1.1, MIT, approved, clearlydefined
 npm/npmjs/-/requires-port/1.0.0, MIT, approved, clearlydefined
 npm/npmjs/-/rxjs/7.8.1, Apache-2.0 AND (0BSD AND Apache-2.0) AND 0BSD, approved, #5993
@@ -111,7 +111,7 @@ npm/npmjs/-/serve-static/1.15.0, MIT, approved, clearlydefined
 npm/npmjs/-/setprototypeof/1.2.0, ISC, approved, clearlydefined
 npm/npmjs/-/shell-quote/1.8.1, MIT, approved, #7044
 npm/npmjs/-/side-channel/1.0.4, MIT, approved, clearlydefined
-npm/npmjs/-/spawn-command/0.0.2-1, MIT, approved, #266
+npm/npmjs/-/spawn-command/0.0.2, MIT, approved, #266
 npm/npmjs/-/statuses/2.0.1, MIT, approved, clearlydefined
 npm/npmjs/-/string-width/4.2.3, MIT, approved, clearlydefined
 npm/npmjs/-/strip-ansi/6.0.1, MIT, approved, clearlydefined
@@ -122,7 +122,7 @@ npm/npmjs/-/table-layout/1.0.2, MIT, approved, clearlydefined
 npm/npmjs/-/to-regex-range/5.0.1, MIT, approved, clearlydefined
 npm/npmjs/-/toidentifier/1.0.1, MIT, approved, clearlydefined
 npm/npmjs/-/tree-kill/1.2.2, MIT, approved, clearlydefined
-npm/npmjs/-/tslib/2.5.2, 0BSD, approved, #6747
+npm/npmjs/-/tslib/2.6.1, 0BSD, approved, #9189
 npm/npmjs/-/type-is/1.6.18, MIT, approved, clearlydefined
 npm/npmjs/-/typical/4.0.0, MIT, approved, clearlydefined
 npm/npmjs/-/typical/5.2.0, MIT, approved, clearlydefined
@@ -137,7 +137,7 @@ npm/npmjs/-/wrap-ansi/7.0.0, MIT, approved, clearlydefined
 npm/npmjs/-/y18n/5.0.8, ISC, approved, clearlydefined
 npm/npmjs/-/yargs-parser/21.1.1, ISC, approved, clearlydefined
 npm/npmjs/-/yargs/17.7.2, MIT, approved, #8222
-npm/npmjs/-/zero-md/2.4.1, ISC, approved, #7067
-npm/npmjs/@babel/runtime/7.21.5, MIT AND (BSD-2-Clause AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #7349
+npm/npmjs/-/zero-md/2.5.2, ISC, approved, #10014
+npm/npmjs/@babel/runtime/7.22.10, MIT AND (BSD-2-Clause AND ISC AND MIT) AND BSD-2-Clause AND BSD-3-Clause, approved, #8730
 npm/npmjs/@types/http-proxy/1.17.11, MIT, approved, #8414
-npm/npmjs/@types/node/20.2.3, MIT, approved, clearlydefined
+npm/npmjs/@types/node/20.4.9, MIT, approved, clearlydefined
