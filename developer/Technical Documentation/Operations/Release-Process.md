@@ -7,7 +7,7 @@ The release process for a new version can roughly be divided into the following 
 * [Release new helm chart version](#release-new-helm-chart-version)
 * [RC: checkout release-candidate branch](#rc-checkout-release-candidate-branch)
 * [Merge release branch](#merge-release-branch)
-* [RC: provide successive RC branch](#rc-provide-successive-rc-branch)
+* [RC: provide successive RC branch and change base of open PRs](#rc-provide-successive-rc-branch-and-change-base-of-open-prs)
 * [Create releases from tags](#create-releases-from-tags)
 
 The process builds on the development flow which, usually, takes place within forks and leads to merged pull pull requests in the repositories of the eclipse-tractusx organization.
@@ -137,17 +137,19 @@ Then merge the release branch into 'main' and merge afterwards 'main' in 'dev'. 
 At the release of the chart, besides the official chart itself, there is also created a 'portal-x.x.x' tag.
 This tag is used to install (with the convenience of the argocd-app-templates) or upgrade the version via AgroCD on the consortia K8s clusters.
 
-## RC: provide successive RC branch
+## RC: provide successive RC branch and change base of open PRs
 
 During a release candidate phase, checkout the successive 'RC' branch and push it to the server, so that it can it used for further bugfixes.
 
 Example:
 
 ```bash
-git checkout tags/v1.2.0-RC1 -b release/v1.2.0-RC2
+git checkout tags/v1.2.0-RC2 -b release/v1.2.0-RC3
 ```
 
 Technically this step is already possible after [Tag and build of versioned images](#tag-and-build-of-versioned-images), but it's recommended to execute this step after [Release new helm chart version](#release-new-helm-chart-version), so that the image tag for the release in the release-candidate of [Portal CD](https://github.com/eclipse-tractusx/portal-cd) isn't overwritten by the push of the successive 'RC' branch.
+
+Also make sure to change the base of all open pull requests still pointing to the previous 'RC' branch to the newly pushed 'RC' branch.
 
 ## Merge release branch
 
