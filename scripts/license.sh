@@ -37,9 +37,12 @@ license-images() {
   do
     echo $file
     cat << EOF > $file.license
-Copyright (c) 2021, 2023 Contributors to the Eclipse Foundation
+This work is licensed under the [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode).
 
-SPDX-License-Identifier: CC-BY-4.0
+- SPDX-License-Identifier: CC-BY-4.0
+- SPDX-FileCopyrightText: Copyright (c) 2021, 2023 Contributors to the Eclipse Foundation
+- Source URL: https://github.com/eclipse-tractusx/portal-assets
+
 EOF
   done
 }
