@@ -30,7 +30,7 @@ For assigning and incrementing **version** numbers [Semantic Versioning](https:/
 
 ## Preparations on the release branch
 
-Checking out from the dev branch (or main for portal-assets) a release branch (release/{to be released version} e.g. release/v1.2.0, or respectively release/v1.2.0-RC1 for a release candidate.
+Checking out from the dev branch (or main for portal-assets) a release branch (release/{to be released version} e.g. release/v1.2.0, or respectively release/v1.2.0-RC1 for a release candidate).
 On the release branch the following steps are executed:
 
 ### 1. Version bump
