@@ -2,6 +2,16 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
+## 1.6.0-RC5
+
+### Technical Support
+- changed license notice for images
+- added second license
+
+### Bugfix
+- upgraded dependencies
+- reduced the height of side menu in the help section
+
 ## 1.6.0-RC4
 
 ### Change
