@@ -42,7 +42,7 @@ nav.menu {
     flex-direction: row;
     transition: width 0.1s;
     height: 75vh;
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 
 nav.menu.open {
@@ -50,7 +50,7 @@ nav.menu.open {
 }
 
 nav.menu.open ul.level1 {
-    max-height: calc(100vh - 10px);
+    max-height: 67vh;
 }
 
 nav.menu.open .home {
@@ -62,7 +62,7 @@ nav.menu.open .scroller {
     width: 100%;
     margin-top: 76px;
     position: relative;
-    height: 100%;
+    height: 89%;
 }
 
 nav.menu.closed,
@@ -97,7 +97,6 @@ nav.menu button.scroll:first-of-type {
 
 nav.menu button.scroll:last-of-type {
     bottom: 0px;
-    display: none;
 }
 
 nav.menu button:hover {
