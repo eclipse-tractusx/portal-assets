@@ -337,7 +337,7 @@ class Navigation extends Viewable {
 
     createScrollTopButton() {
         return addEvents(
-            N('button', '⏶', { class: 'scroll' }),
+            N('button', '↑', { class: 'scroll' }),
             {
                 click: (() => {
                     this.menu.scrollTo({ top: 0, behavior: 'smooth' })
@@ -348,7 +348,7 @@ class Navigation extends Viewable {
 
     createScrollBottomButton() {
         return addEvents(
-            N('button', '⏷', { class: 'scroll' }),
+            N('button', '↓', { class: 'scroll' }),
             {
                 click: (() => {
                     this.menu.scrollTo({ top: this.menu.scrollHeight, behavior: 'smooth' })
