@@ -9,13 +9,13 @@ The owner of the marketplace offered services is not the marketplace owner, it i
 
 Key Functions
 
-- [App Marketplace](/01.%20TMarketplace/)
-- [App Release Process](/02.%20App%20Release%20Process/)
-- [App Release Approval](/03.%20App%20Release%20Approval/)
-- [App Provider Management Board(s)](/04.%20App%20Provider%20Management%20Board(s)/)
-- [App Subscription](/05.%20App-Subscription/)
-- [App Review & Rate](/06.%20App%20Change%20Process/)
-
+- [App Marketplace](./01.%20Marketplace)
+- [App Release Process](./02.%20App%20Release%20Process)
+- [App Release Approval](./03.%20App%20Release%20Approval)
+- [App Provider Management Board(s)](./04.%20App%20Provider%20Management%20Board(s))
+- [App Subscription](./05.%20App%20Subscription)
+- [App Change Process](./06.%20App%20Change%20Process)
+- [App Provider Management](./07.%20App%20Provider%20Management)
 
 <br>
 <br>
