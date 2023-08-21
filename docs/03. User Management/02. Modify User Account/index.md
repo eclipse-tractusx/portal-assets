@@ -6,13 +6,6 @@ Inside the user account page, a number of services/actions can get triggered.
 <br>
 <br>
 
-* Add BPN
-* Delete BPN
-* Delete User
-* Password Reset
-* Suspend User
-* Change User Roles
-
 - [Summary](./01.%20Summary.md)
 - [Password Reset](./02.%20Password%20Reset.md)
 - [User Permissions](./03.%20User%20Permissions.md)
