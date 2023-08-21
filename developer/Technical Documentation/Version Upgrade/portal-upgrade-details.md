@@ -30,6 +30,12 @@ New company_ssi_details table to be able to safe the credential details for a sp
 New verified_credential_type_assigned_use_cases to map the verified_credential_type to a specific use case.
 New verified_credential_external_types, verified_credential_external_type_use_case_detail_versions and verified_credential_type_assigned_external_types tables to have the versions for each type including the link from the verified_credential_external_types of a specific version to the verified_credential_types
 
+Company SSI Database Structure
+![Company SSI Database Structure](/public/assets/images/docs/company-ssi-database.png)
+
+Use Case Database Structure
+![Use Case Database Structure](/public/assets/images/docs/use-case-database.png)
+
 <br>
 <br>
 
