@@ -470,8 +470,21 @@ class Content extends Viewable {
     }
 
     replaceLink(link) {
-        const path = decodeURI(link.href).replace(/^.*docs\//, 'docs/').replace(/\/$/, '')
-        link.setAttribute('href', `.?path=${encodeURI(path)}`)
+        const url = new URL(link.href)
+        const isLocalLink = url.origin === location.origin
+        const isRawLink = url.href.startsWith(Settings.DOCBASE)
+        const isAppLink = isLocalLink && url.pathname.startsWith('/documentation/')
+        const isDevLink = (isLocalLink && url.pathname.startsWith('/developer/')) || (isRawLink && url.pathname.includes('/developer/'))
+        const isDocsLink = (isLocalLink && url.pathname.startsWith('/docs/')) || (isRawLink && url.pathname.includes('/docs/'))
+        const isPageLink = isAppLink && url.search === location.search
+        if (isPageLink) {
+            // ignore
+        } else if (!(isLocalLink || isRawLink) || isAppLink) {
+            // ignore
+        } else if (isDocsLink || isDevLink) {
+            const path = decodeURI(link.href).replace(/^.*docs\//, 'docs/').replace(/^.*developer\//, 'developer/').replace(/\/$/, '')
+            link.setAttribute('href', `.?path=${encodeURI(path)}`)
+        }
         return link
     }
 
