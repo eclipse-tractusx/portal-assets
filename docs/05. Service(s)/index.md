@@ -5,9 +5,10 @@ Similar like the app marketplace, only published services via the "Service Relea
 
 Key Functions
 
-- [Service Marketplace](/01.%20Service%20Marketplace/)
-- [Service Release Process](/02.%20Service%20Release%20Process/)
-- [Service Subscription](/03.%20Service%20Subscription/)
+- [Service Marketplace](/01.%20Service%20Marketplace)
+- [Service Release Process](/02.%20Service%20Release%20Process)
+- [Service Release Approval](/03.%20Service%20Release%20Approval)
+- [Service Subscription](/03.%20Service%20Subscription)
 
 <br>
 <br>
