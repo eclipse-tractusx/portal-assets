@@ -26,8 +26,8 @@
               ]
             },
             {
-              "path": "developer/01. Onboarding/01. Invite/03. Invite Company : Create Application.md",
-              "name": "03. Invite Company : Create Application.md",
+              "path": "developer/01. Onboarding/01. Invite/03. Invite Company_Create Application.md",
+              "name": "03. Invite Company_Create Application.md",
               "chapter": [
                 "## Invite Company",
                 "#### API Details"
@@ -108,10 +108,10 @@
               "path": "developer/01. Onboarding/02. Registration/06. Verify Registration Data.md",
               "name": "06. Verify Registration Data.md",
               "chapter": [
-                "# Implementation",
-                "## Verify your data",
-                "##### #1 Get application data",
-                "##### #2 Submit Registration"
+                "## Verify Registration Data data",
+                "#### #1 Get application data",
+                "#### #2 Submit Registration",
+                "###### Validations"
               ]
             },
             {
@@ -182,7 +182,8 @@
                 "###### DB Table Content",
                 "##### Details \"Activation\"",
                 "### Add/Update BPN for the registration company",
-                "### Status endpoint - Checklist Details"
+                "### Status endpoint - Checklist Details",
+                "### Details for retrigger process"
               ]
             },
             {
@@ -244,23 +245,13 @@
               "name": "03. Create new Connector Registration.md",
               "chapter": [
                 "## 1. Create new Connector Registration - self-owned",
-                "#### Details to the DAPS",
-                "##### API Details",
                 "#### Details to the SD",
                 "##### #1 Self description request",
-                "##### #2 Self description response (asynchron)",
+                "##### #2 Self description response (asynchronous)",
                 "#### Logical flow of the service",
                 "#### API Details",
-                "## 2. Create new Connector Registration - managed ",
+                "## 2. Create new Connector Registration - managed",
                 "#### Logical flow of the service",
-                "#### API Details"
-              ]
-            },
-            {
-              "path": "developer/02. Technical Integration/01. Connector Registration/04. DAPS Registration.md",
-              "name": "04. DAPS Registration.md",
-              "chapter": [
-                "## 4 Retrigger DAPS",
                 "#### API Details"
               ]
             },
@@ -366,6 +357,52 @@
                 "## Delete Company Preferred Use Cases",
                 "### Details"
               ]
+            },
+            {
+              "path": "developer/02. Technical Integration/03. Company Configuration/05. Change Company Role.md",
+              "name": "05. Change Company Role.md",
+              "chapter": [
+                "### Change Company Role",
+                "#### Company Role Config Page",
+                "##### Data Mapping",
+                "#### Submit new company rol request"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "developer/02. Technical Integration/04. Credentials",
+          "name": "04. Credentials",
+          "children": [
+            {
+              "path": "developer/02. Technical Integration/04. Credentials/00. Wallet Creation.md",
+              "name": "00. Wallet Creation.md",
+              "chapter": [
+                "## Managed Identity Wallet",
+                "### Wallet Creation",
+                "### Initial Credentials"
+              ]
+            },
+            {
+              "path": "developer/02. Technical Integration/04. Credentials/01. Get UseCase Credential.md",
+              "name": "01. Get UseCase Credential.md",
+              "chapter": [
+                "## Use Case Credentials",
+                "### Process Flow",
+                "### Displaying available Credential Types",
+                "### Submit Credential request"
+              ]
+            },
+            {
+              "path": "developer/02. Technical Integration/04. Credentials/02. Other Certificates.md",
+              "name": "02. Other Certificates.md",
+              "chapter": [
+                "## Company Certificates",
+                "### Process Flow",
+                "### Display certificates and status",
+                "### Available Certificate Document Requests",
+                "### Submit Certificate request"
+              ]
             }
           ]
         }
@@ -387,13 +424,24 @@
               ]
             },
             {
+              "path": "developer/03. User Management/01. User Account/02. My User Account.md",
+              "name": "02. My User Account.md",
+              "chapter": [
+                "### User Permissions",
+                "#### #1 Get company user details",
+                "##### User Information",
+                "##### User Assigned Permissions"
+              ]
+            },
+            {
               "path": "developer/03. User Management/01. User Account/02. User Account.md",
               "name": "02. User Account.md",
               "chapter": [
-                "## User Permissions",
-                "## API Details",
-                "### #1 Get company user details",
-                "### #1 Get company user details"
+                "### User Permissions",
+                "#### #1 Get company user details",
+                "##### User Information",
+                "##### Change User Assigned CX Portal Roles",
+                "##### User Assigned Permissions"
               ]
             },
             {
@@ -515,7 +563,8 @@
               "chapter": [
                 "## View technical users",
                 "## Implementation - API Details",
-                "### #1 Get Service Accounts"
+                "### #1 Get Service Accounts",
+                "#### Data Mapping (example)"
               ]
             },
             {
@@ -691,7 +740,7 @@
                 "##### Implementation Details",
                 "##### API Details",
                 "###### #1 Get App Details",
-                "###### #2 Submit App for Marketrelease",
+                "###### #2 Submit App for Marketplace Release",
                 "###### #3 Download Document"
               ]
             }
@@ -757,31 +806,50 @@
           ]
         },
         {
-          "path": "developer/04. Apps/05. App-Subscription Kopie",
-          "name": "05. App-Subscription Kopie",
+          "path": "developer/04. Apps/05. App Subscription",
+          "name": "05. App Subscription",
           "children": [
             {
-              "path": "developer/04. Apps/05. App-Subscription Kopie/App Subscription Request Management - IMPL.md",
-              "name": "App Subscription Request Management - IMPL.md",
-              "chapter": [
-                "# Summary",
-                "# Implementation",
-                "### Function: View Subscriptions (Requests and Active)",
-                "### Function: Sorting",
-                "### #1 View Subscriptions",
-                "### #2 Subscription Activation"
-              ]
-            },
-            {
-              "path": "developer/04. Apps/05. App-Subscription Kopie/Subscription Flow - Implementation.md",
-              "name": "Subscription Flow - Implementation.md",
+              "path": "developer/04. Apps/05. App Subscription/01. Subscription Flow.md",
+              "name": "01. Subscription Flow.md",
               "chapter": [
                 "## Implementation ",
                 "### #1 POST Subscribe Request",
-                "### #2 Subscription Activation",
-                "### #3 Manage (own) App Subscription",
-                "### #4 Manage App Subscriptions",
+                "### #2 Manage (own) App Subscription",
+                "### #3 Manage App Subscriptions",
                 "### #4 Put Inactivate App Subscriptions"
+              ]
+            },
+            {
+              "path": "developer/04. Apps/05. App Subscription/01.App Subscription Request Management.md",
+              "name": "01.App Subscription Request Management.md",
+              "chapter": [
+                "## Summary",
+                "## Management Board",
+                "#### Design Details - Filter function",
+                "### Implementation Details",
+                "#### #1 Function: Search",
+                "#### #2 Function: Views (Requests and Active) / Sorting",
+                "##### Function: Views",
+                "##### Function: Sorting",
+                "#### #3 Filter",
+                "##### 3.1 Retrieve possible filters",
+                "##### 3.2 Select filter option",
+                "#### #4 Subscription Overview",
+                "#### #5 Subscription Details"
+              ]
+            },
+            {
+              "path": "developer/04. Apps/05. App Subscription/02. App Subscription Activation (Provider).md",
+              "name": "02. App Subscription Activation (Provider).md",
+              "chapter": [
+                "## App Subscription Activation",
+                "## Implementation",
+                "### Activation Overlay ",
+                "### Activation & Success",
+                "##### Data Mapping:",
+                "##### Result",
+                "##### Data Mapping:"
               ]
             }
           ]
@@ -791,11 +859,54 @@
           "name": "06. App Change Process",
           "children": [
             {
-              "path": "developer/04. Apps/06. App Change Process/App Deactivation.md",
-              "name": "App Deactivation.md",
+              "path": "developer/04. Apps/06. App Change Process/01. Summary.md",
+              "name": "01. Summary.md",
+              "chapter": [
+                "## Summary"
+              ]
+            },
+            {
+              "path": "developer/04. Apps/06. App Change Process/02. Change App Lead Image.md",
+              "name": "02. Change App Lead Image.md",
+              "chapter": [
+                "## Summary",
+                "## Implementation",
+                "#### Validation:",
+                "#### Logic:"
+              ]
+            },
+            {
+              "path": "developer/04. Apps/06. App Change Process/03. App Instance Url.md",
+              "name": "03. App Instance Url.md",
+              "chapter": [
+                "## App Tenant URL Change",
+                "### Trigger App Instance Url Switch"
+              ]
+            },
+            {
+              "path": "developer/04. Apps/06. App Change Process/03. Change App Description.md",
+              "name": "03. Change App Description.md",
+              "chapter": [
+                "## Summary",
+                "## Implementation",
+                "#### Validation:",
+                "#### Logic:"
+              ]
+            },
+            {
+              "path": "developer/04. Apps/06. App Change Process/04. App Deactivation.md",
+              "name": "04. App Deactivation.md",
               "chapter": [
                 "## Summary",
                 "## Implementation"
+              ]
+            },
+            {
+              "path": "developer/04. Apps/06. App Change Process/05. App Instance Url.md",
+              "name": "05. App Instance Url.md",
+              "chapter": [
+                "## App Tenant URL Change",
+                "### Trigger App Instance Url Switch"
               ]
             }
           ]
@@ -806,6 +917,14 @@
       "path": "developer/05. Service(s)",
       "name": "05. Service(s)",
       "children": [
+        {
+          "path": "developer/05. Service(s)/01. Service Change.md",
+          "name": "01. Service Change.md",
+          "chapter": [
+            "#### Others",
+            "###### #1 Update Service Documentation / Additional Details"
+          ]
+        },
         {
           "path": "developer/05. Service(s)/01. Service Marketplace",
           "name": "01. Service Marketplace",
@@ -840,36 +959,25 @@
           "name": "02. Service Release Process",
           "children": [
             {
-              "path": "developer/05. Service(s)/02. Service Release Process/01. Service Publish Process.md",
-              "name": "01. Service Publish Process.md",
+              "path": "developer/05. Service(s)/02. Service Release Process/01. Service Card.md",
+              "name": "01. Service Card.md",
               "chapter": [
-                "## Summary",
-                "## Implementation",
-                "### Trigger the Publishing Process",
-                "#### Step 1 - Service Card Details",
-                "##### API Details",
-                "###### #1 Get Service Type",
-                "###### #2 Create Service Offering",
-                "###### #3 Get Service Details",
-                "###### #4 Update Service Offering",
-                "#### Step 2 - Service Page Details",
-                "##### Implementation Details",
-                "##### API Details",
-                "###### #1 Update Service Offering",
-                "###### #2 GET Service Details",
-                "#### Step 3 - Terms & Conditions / Consent",
-                "##### Implementation Details",
-                "##### API Details",
-                "###### #1 Retrieve Terms & Conditions",
-                "###### #2 Retrieve Documents",
-                "###### #3 Store Consent for Agreements",
-                "#### Step 4 - Validate & Submit for Publishing check",
-                "##### Implementation Details",
-                "##### API Details",
-                "###### #1 Get Service Details",
-                "###### #2 Submit new Service Offering for release/publishing",
-                "#### Others",
-                "###### #1 Update Service Documentation / Additional Details"
+                "### Step 1 - Service Card Details",
+                "#### API Details",
+                "#### #1 Get Service Type",
+                "#### #2 Create Service Offering",
+                "#### #3 Get Service Details",
+                "#### #4 Update Service Offering"
+              ]
+            },
+            {
+              "path": "developer/05. Service(s)/02. Service Release Process/02. Service Detail Page.md",
+              "name": "02. Service Detail Page.md",
+              "chapter": [
+                "### Step 2 - Service Page Details",
+                "### Implementation Details",
+                "#### #1 Get Service Details",
+                "#### #2 Update Service Offering"
               ]
             },
             {
@@ -882,6 +990,44 @@
                 "### #2 Decline Service Request",
                 "### #3 Service Details",
                 "### #4 Download service related documents"
+              ]
+            },
+            {
+              "path": "developer/05. Service(s)/02. Service Release Process/03.Terms&Conditions.md",
+              "name": "03.Terms&Conditions.md",
+              "chapter": [
+                "### Step 3 - Terms & Conditions / Consent",
+                "### Implementation Details",
+                "#### #1 Retrieve Terms & Conditions",
+                "#### #2 Retrieve Documents",
+                "#### #3 Store Consent for Agreements"
+              ]
+            },
+            {
+              "path": "developer/05. Service(s)/02. Service Release Process/04.Technical Integration.md",
+              "name": "04.Technical Integration.md",
+              "chapter": [
+                "### Step 4 - Technical Integration",
+                "### #1 GET Available Technical User Permissions",
+                "### #2 Fetch previously service stored Tech User Profile",
+                "### #3 Store Tech User Profile"
+              ]
+            },
+            {
+              "path": "developer/05. Service(s)/02. Service Release Process/05.Verify & Submit.md",
+              "name": "05.Verify & Submit.md",
+              "chapter": [
+                "### Step 4 - Validate & Submit for Publishing check",
+                "#### Implementation Details",
+                "#### #1 Get Service Details",
+                "#### #2 Submit new Service Offering for release/publishing"
+              ]
+            },
+            {
+              "path": "developer/05. Service(s)/02. Service Release Process/index.md",
+              "name": "index.md",
+              "chapter": [
+                "## Summary"
               ]
             }
           ]
@@ -923,7 +1069,7 @@
               "name": "04. Decline Service Release.md",
               "chapter": [
                 "## Service Decline Details",
-                "### #1 Decline Service Release",
+                "### Decline Service Release",
                 "##### Email Example"
               ]
             }
@@ -937,11 +1083,24 @@
               "path": "developer/05. Service(s)/03. Service Subscription/01. Service Subscription.md",
               "name": "01. Service Subscription.md",
               "chapter": [
-                "# Summary",
+                "## Summary",
                 "# Implementation",
                 "### #1 Get Service Agreements",
                 "### #2 Post Subscription Request",
                 "### #3 Activate Subscription & Tenant"
+              ]
+            },
+            {
+              "path": "developer/05. Service(s)/03. Service Subscription/02. Service Subscription Activation (Provider).md",
+              "name": "02. Service Subscription Activation (Provider).md",
+              "chapter": [
+                "## Service Subscription Activation",
+                "## Implementation",
+                "### Activation Overlay",
+                "### Activation & Success",
+                "##### Data Mapping:",
+                "##### Result",
+                "##### Data Mapping:"
               ]
             }
           ]
@@ -1179,6 +1338,15 @@
                 "#### 2. Start the registration app webserver instance on local port 3002",
                 "#### 3. Start the reverse proxy and assets webserver instance on ports 3000 and 3003"
               ]
+            },
+            {
+              "path": "developer/Technical Documentation/Dev Process/Shared Components.md",
+              "name": "Shared Components.md",
+              "chapter": [
+                "# Developing Shared Components",
+                "## Introduction",
+                "## Developing Shared Components"
+              ]
             }
           ]
         },
@@ -1415,8 +1583,7 @@
                 "## Description of the functional interface (WHAT)",
                 "## Description of the physical interfaces (HOW)",
                 "### Service Call via BPN",
-                "#### Data Mapping for Company Data",
-                "### Service Call via CompanyName"
+                "#### Data Mapping for Company Data"
               ]
             },
             {
@@ -1472,7 +1639,8 @@
                 "## Implementation",
                 "### #1 PUT Service URL",
                 "### #2 POST Service Request",
-                "### #3 POST Service Instance"
+                "### #3 POST Service Instance",
+                "## Checklist Worker"
               ]
             },
             {
@@ -1515,14 +1683,13 @@
                 "## Preparations on the release branch",
                 "### 1. Version bump",
                 "### 2. Update changelog file",
-                "### 3. Update dependencies file",
-                "### 4. License check with the Eclipse Dash License Tool",
-                "### 5. Aggregate migrations (backend repo only)",
+                "### 3. Aggregate migrations (backend repo only)",
+                "## RC: checkout release-candidate branch",
                 "## Tag and build of versioned images",
-                "## Merge release branch",
                 "## Release new helm chart version",
-                "## Create releases from tags",
-                "## Publish new version of Shared UI Components to npm"
+                "## RC: provide successive RC branch and change base of open PRs",
+                "## Merge release branch",
+                "## Create releases from tags"
               ]
             },
             {
@@ -1621,10 +1788,137 @@
                 "## Configuration",
                 "### Notification Types / Messages",
                 "#### Welcome",
+                "#### Manage your company details",
                 "#### Offer Release Request",
+                "#### Offer Change Process",
                 "#### Offer Subscription",
                 "#### User Role Change",
                 "## Notification \"Done\" State"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "developer/Technical Documentation/TestAutomation",
+          "name": "TestAutomation",
+          "children": [
+            {
+              "path": "developer/Technical Documentation/TestAutomation/01. Summary.md",
+              "name": "01. Summary.md",
+              "chapter": [
+                "## How to run",
+                "## Users for TestAutomation",
+                "## Management of secrets and environment variables",
+                "## Structure",
+                "### Health Check Tests",
+                "#### [PortalHealthCheck](04.%20PortalHealthCheck.md)",
+                "#### [InterfacePartnerHealthCheck](03.%20InterfacePArtnerHealthCheck.md)",
+                "### Functional E2E Tests",
+                "#### [Registration scenarios](05.%20RegistrationScenarios.md)",
+                "#### [Notification initial scenario](NotificationInitSceanrio.md)",
+                "#### [Service Account CUD Scenarios](ServiceAccountCUDScenarios.md)",
+                "## Test Parametrization",
+                "## ReportPortal"
+              ]
+            },
+            {
+              "path": "developer/Technical Documentation/TestAutomation/02. Access Token Retrieval.md",
+              "name": "02. Access Token Retrieval.md",
+              "chapter": [
+                "# Access Token Retrieval",
+                "## Authentication Flow",
+                "### Authenticate existing and new users: Start",
+                "### Authenticate new users only: Update Password",
+                "### Authenticate existing and new users: End",
+                "## Use of disposable email addresses",
+                "### DeveloperMail API",
+                "### TempMail API"
+              ]
+            },
+            {
+              "path": "developer/Technical Documentation/TestAutomation/03. InterfacePartnerHealthCheck.md",
+              "name": "03. InterfacePartnerHealthCheck.md",
+              "chapter": [
+                "## BPDM",
+                "### Availability",
+                "## ClearingHouse",
+                "### Availability",
+                "## SD Factory",
+                "### Availability",
+                "## Wallet",
+                "### Availability",
+                "### Create and Duplication Check"
+              ]
+            },
+            {
+              "path": "developer/Technical Documentation/TestAutomation/04. PortalHealthCheck.md",
+              "name": "04. PortalHealthCheck.md",
+              "chapter": [
+                "## Base Data Load Check for Administration Service",
+                "## Registration Health Check for Registration Service"
+              ]
+            },
+            {
+              "path": "developer/Technical Documentation/TestAutomation/05. RegistrationScenarios.md",
+              "name": "05. RegistrationScenarios.md",
+              "chapter": [
+                "## Happy path - new registration without BPN",
+                "## Happy path - new registration with BPN",
+                "## In-Registration member invitation",
+                "## Company detail data update",
+                "## UnHappy path - new registration without document"
+              ]
+            },
+            {
+              "path": "developer/Technical Documentation/TestAutomation/06. NotificiationInitScenario.md",
+              "name": "06. NotificiationInitScenario.md",
+              "chapter": []
+            },
+            {
+              "path": "developer/Technical Documentation/TestAutomation/07. ServiceAccountCUDScenarios.md",
+              "name": "07. ServiceAccountCUDScenarios.md",
+              "chapter": [
+                "## Create a new service account",
+                "## Create a new service account and update the same",
+                "## Create a new service account and update the credentials",
+                "## Create and delete a new service account"
+              ]
+            },
+            {
+              "path": "developer/Technical Documentation/TestAutomation/08. TestDataFileSetup.md",
+              "name": "08. TestDataFileSetup.md",
+              "chapter": [
+                "## General instructions for working with the test data files",
+                "## Test data files for registration scenarios",
+                "### Scenario: Registration without Bpn",
+                "### Scenario: Update company detail data",
+                "## Test data file for service account CUD scenarios",
+                "## Test data file for create app scenario",
+                "## Test documents",
+                "## Hardcoded values in the test scenarios"
+              ]
+            },
+            {
+              "path": "developer/Technical Documentation/TestAutomation/09. CreateAppScenario.md",
+              "name": "09. CreateAppScenario.md",
+              "chapter": [
+                "## Actual E2E scenario",
+                "## Fetching relevant metadata",
+                "### Privacy policies",
+                "### Language tags",
+                "### Use cases",
+                "### Agreement consents",
+                "### Technical user profiles"
+              ]
+            },
+            {
+              "path": "developer/Technical Documentation/TestAutomation/10. ReportPortal.md",
+              "name": "10. ReportPortal.md",
+              "chapter": [
+                "# ReportPortal",
+                "## How to deploy ReportPortal",
+                "## Widget configuration",
+                "## Test Automation Integration"
               ]
             }
           ]
@@ -1638,6 +1932,7 @@
               "name": "portal-upgrade-details.md",
               "chapter": [
                 "## Summary",
+                "#### Connectors - CHANGED - 1.6.0",
                 "#### Technical User Profiles - NEW - 1.4.0",
                 "#### License Types - NEW & ENHANCED- 1.4.0",
                 "#### Mediatype - NEW & ENHANCED - 1.2.0",

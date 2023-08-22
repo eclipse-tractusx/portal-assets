@@ -471,22 +471,20 @@ class Content extends Viewable {
 
     replaceLink(link) {
         const url = new URL(link.href)
-        console.log(url)
-        console.log('-', url.href)
-        const page = location.origin + location.pathname + location.search
         const isLocalLink = url.origin === location.origin
+        const isRawLink = url.origin === 'https://raw.githubusercontent.com' && url.pathname.startsWith('/eclipse-tractusx/portal-assets/')
         const isAppLink = isLocalLink && url.pathname.startsWith('/documentation/')
-        const isDevLink = isLocalLink && url.pathname.startsWith('/developer/')
-        const isDocsLink = isLocalLink && url.pathname.startsWith('/docs/')
+        const isDevLink = (isLocalLink && url.pathname.startsWith('/developer/')) || (isRawLink && url.pathname.includes('/developer/'))
+        const isDocsLink = (isLocalLink && url.pathname.startsWith('/docs/')) || (isRawLink && url.pathname.includes('/docs/'))
         const isPageLink = isAppLink && url.search === location.search
-        console.log('isLocalLink', isLocalLink)
-        console.log('isApplLink', isAppLink)
-        console.log('isDevLink', isDevLink)
-        console.log('isDocsLink', isDocsLink)
-        console.log('isPageLink', isPageLink)
-        const path = decodeURI(link.href).replace(/^.*docs\//, 'docs/').replace(/\/$/, '')
-        link.setAttribute('href', `.?path=${encodeURI(path)}`)
-        console.log('+', link.href)
+        if (isPageLink) {
+            // ignore
+        } else if (!(isLocalLink || isRawLink) || isAppLink) {
+            // ignore
+        } else if (isDocsLink || isDevLink) {
+            const path = decodeURI(link.href).replace(/^.*docs\//, 'docs/').replace(/^.*developer\//, 'developer/').replace(/\/$/, '')
+            link.setAttribute('href', `.?path=${encodeURI(path)}`)
+        }
         return link
     }
 
