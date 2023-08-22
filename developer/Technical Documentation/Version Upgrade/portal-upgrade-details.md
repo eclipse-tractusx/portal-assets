@@ -7,6 +7,34 @@ Each section includes the respective change details, impact on existing data and
 
 > **_INFO:_** inside the detailed descriptions below, the definition 'migration script' refers to the term 'migrations' as it is defined by the ef-core framework: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations
 
+<br>
+<br>
+
+#### Company Credential Details - NEW - 1.6.0
+
+* NEW: portal.use_case_descriptions
+* NEW: portal.company_ssi_details
+* NEW: portal.company_ssi_detail_statuses
+* NEW: portal.verified_credential_types
+* NEW: portal.verified_credential_type_kinds
+* NEW: portal.verified_credential_type_assigned_kinds
+* NEW: portal.verified_credential_type_assigned_use_cases
+* NEW: portal.verified_credential_type_assigned_external_types
+* NEW: portal.verified_credential_external_types
+* NEW: portal.verified_credential_external_type_use_case_detail_versions
+
+New use_case_descriptions table released to be able to create translatable use case descriptions.
+New verified_credential_types, verified_credential_type_kinds & verified_credential_type_assigned_kinds tables to store the type of the credentials as well as the kind of the type and have a mapping between the type and kind available.
+New company_ssi_details_statuses table to have static data of the status.
+New company_ssi_details table to be able to safe the credential details for a specific company.
+New verified_credential_type_assigned_use_cases to map the verified_credential_type to a specific use case.
+New verified_credential_external_types, verified_credential_external_type_use_case_detail_versions and verified_credential_type_assigned_external_types tables to have the versions for each type including the link from the verified_credential_external_types of a specific version to the verified_credential_types
+
+Company SSI Database Structure
+![Company SSI Database Structure](/public/assets/images/docs/company-ssi-database.png)
+
+Use Case Database Structure
+![Use Case Database Structure](/public/assets/images/docs/use-case-database.png)
 
 <br>
 <br>
