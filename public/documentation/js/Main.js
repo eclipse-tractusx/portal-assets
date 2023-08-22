@@ -472,7 +472,7 @@ class Content extends Viewable {
     replaceLink(link) {
         const url = new URL(link.href)
         const isLocalLink = url.origin === location.origin
-        const isRawLink = url.origin === 'https://raw.githubusercontent.com' && url.pathname.startsWith('/eclipse-tractusx/portal-assets/')
+        const isRawLink = url.href.startsWith(Settings.DOCBASE)
         const isAppLink = isLocalLink && url.pathname.startsWith('/documentation/')
         const isDevLink = (isLocalLink && url.pathname.startsWith('/developer/')) || (isRawLink && url.pathname.includes('/developer/'))
         const isDocsLink = (isLocalLink && url.pathname.startsWith('/docs/')) || (isRawLink && url.pathname.includes('/docs/'))
