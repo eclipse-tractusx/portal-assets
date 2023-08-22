@@ -4,32 +4,33 @@ The release process for a new version can roughly be divided into the following 
 
 * [Preparations on the release branch](#preparations-on-the-release-branch)
 * [Tag and build of versioned images](#tag-and-build-of-versioned-images)
-* [Merge release branch](#merge-release-branch)
 * [Release new helm chart version](#release-new-helm-chart-version)
+* [RC: checkout release-candidate branch](#rc-checkout-release-candidate-branch)
+* [Merge release branch](#merge-release-branch)
+* [RC: provide successive RC branch and change base of open PRs](#rc-provide-successive-rc-branch-and-change-base-of-open-prs)
 * [Create releases from tags](#create-releases-from-tags)
-* [Publish new version of Shared UI Components to npm](#publish-new-version-of-shared-ui-components-to-npm)
 
 The process builds on the development flow which, usually, takes place within forks and leads to merged pull pull requests in the repositories of the eclipse-tractusx organization.
 
 Frontend repositories:
 
-* <https://github.com/eclipse-tractusx/portal-frontend>
-* <https://github.com/eclipse-tractusx/portal-frontend-registration>
-* <https://github.com/eclipse-tractusx/portal-assets>
+* [Portal Frontend](https://github.com/eclipse-tractusx/portal-frontend)
+* [Portal Frontend Registration](https://github.com/eclipse-tractusx/portal-frontend-registration)
+* [Portal Assets](https://github.com/eclipse-tractusx/portal-assets)
 
 Backend repository:
 
-* <https://github.com/eclipse-tractusx/portal-backend>
+* [Portal Backend](https://github.com/eclipse-tractusx/portal-backend)
 
 Continuous Deployment / CD repository (containing the portal helm chart)
 
-* <https://github.com/eclipse-tractusx/portal-cd>
+* [Portal CD](https://github.com/eclipse-tractusx/portal-cd)
 
 For assigning and incrementing **version** numbers [Semantic Versioning](https://semver.org) is followed.
 
 ## Preparations on the release branch
 
-Checking out from the dev branch (or main for portal-assets) a release branch (release/{to be released version} e.g. release/1.2.0) is created.
+Checking out from the dev branch (or main for portal-assets) a release branch (release/{to be released version} e.g. release/v1.2.0, or respectively release/v1.2.0-RC1 for a release candidate).
 On the release branch the following steps are executed:
 
 ### 1. Version bump
@@ -57,69 +58,31 @@ In the released version, the changelog is structured as following:
 * Features
 * Technical Support
 * Bug Fixes
+* Known Knowns
 
-In case of breaking change, the breaking change will get highlighted with a breaking change tag => ![Tag](https://img.shields.io/static/v1?label=&message=BreakingChange&color=yellow&style=flat)
+In case of breaking change, the breaking change will get highlighted with a breaking change tag =) ![Tag](https://img.shields.io/static/v1?label=&message=BreakingChange&color=yellow&style=flat)
 
 Example for commit message:
 
 *release: update changelog for vx.x.x*
 
-### 3. Update dependencies file
-
-Make sure that the [version bump](#1-version-bump) happened beforehand (relevant for [portal-frontend](https://github.com/catenax-ng/tx-portal-frontend) repo, using the shared-components).
-In order to have an up-to-date list, of the used third-party libraries, the dependencies file needs to be updated.
-
-For the frontend repositories this can be done by running the following statement:
-
-```bash
-yarn licenses list > DEPENDENCIES
-```
-
-For the backend repository the dependencies file can be updated by running the following statements:
-
-```bash
-dotnet list src package --include-transitive > DEPENDENCIES-PREP
-cat DEPENDENCIES-PREP | grep ">" | grep -Pv "\s(Org|Microsoft|NuGet|System|runtime|docker|Docker|NETStandard)" | sed -E -e "s/\s+> ([a-zA-Z\.\-]+).+\s([0-9]+\.[0-9]+\.[0-9]+)\s*/nuget\/nuget\/\-\/\1\/\2/g" > DEPENDENCIES
-awk -i inplace '!seen[$0]++' DEPENDENCIES
-```
-
-Only commit the updated dependencies file, not the 'DEPENDENCIES-PREP' file.
-
-Example for commit message:
-
-*release: update dependencies file for vx.x.x*
-
-### 4. License check with the Eclipse Dash License Tool
-
-Before releasing, make sure that the new or updated 3rd party libraries are license-vetted, by using the [Eclipse Dash License Tool](https://github.com/eclipse/dash-licenses).
-This is to be considered an additional and final check as licenses are vetted already at PR stage.
-
-For the frontend repos, the yarn.lock file needs to be checked by the tool:
-
-```bash
-java -jar org.eclipse.dash.licenses-xxx.jar yarn.lock -project automotive.tractusx
-```
-
-For the backend repo, the DEPENDENCIES file needs to be checked by the tool:
-
-```bash
-java -jar org.eclipse.dash.licenses-xxx.jar DEPENDENCIES -project automotive.tractusx
-```
-
-If the tool identifies libraries that require further review, pre-vet the libraries regarding license compatibility and availability of sources. If the check is successful, create [IP Team Review Requests](https://github.com/eclipse/dash-licenses#automatic-ip-team-review-requests).
-
-### 5. Aggregate migrations (backend repo only)
+### 3. Aggregate migrations (backend repo only)
 
 Migrations should be **aggregated in the case of releasing a new version**, in order to not release the entire history of migrations which accumulate during the development process.
 
 Once a version has been released, migrations **mustn't be aggregated** in order to ensure upgradeability this also applies to **release candidates > RC1 and hotfixes**.
 Be aware that migrations coming release branches for release candidates or from hotfix branches, will **need to be incorporated into dev and main**.
 
+## RC: checkout release-candidate branch
+
+If starting into a release candidate phase, make sure to checkout the release-candidate branch from dev branch of [Portal CD](https://github.com/eclipse-tractusx/portal-cd).
+
 ## Tag and build of versioned images
 
 It's important to pull the latest state of the release branch locally in every repository.
 Then create and push a tag for the released version.
 The push of the tag triggers the release workflow action (available in every repository) which creates the versioned image/s.
+The push also triggers the image tags to be updated in the helm chart: in the dev branch or respectively the release-candidate branch of the [Portal CD](https://github.com/eclipse-tractusx/portal-cd) repository.
 
 Example for tag:
 
@@ -135,24 +98,12 @@ Examples for tag messages:
 
 *Version 1.1.0: Backend for the Catena-X Portal*
 
-## Merge release branch
-
-Once the release tag has been pushed, the release branch should be is merged into main.
-Afterwards, main into dev. This is only necessary for repositories with a dev branch.
-Those merges need to happen via PRs.
-
-Example for PR titles:
-
-*release(1.2.0): merge release into main*
-
-*release(1.2.0): merge main to dev*
-
 ## Release new helm chart version
 
 Once the versioned images are available, a new version of the chart can be released.
-The helm chart is released from <https://github.com/eclipse-tractusx/portal-cd>.
+The helm chart is released from [Portal CD](https://github.com/eclipse-tractusx/portal-cd).
 
-Check out a release branch from 'dev'.
+Check out a release branch from the dev branch or from the release-candidate branch respectively.
 On the release branch the following steps are executed:
 
 1. Bump chart and image version (also for argocd-app-templates, needed for consortia-environments)
@@ -181,14 +132,42 @@ Example for PR title:
 
 Once the workflow ran successfully, release the new helm chart by running the 'Release Chart' action via workflow dispatch on the release branch.
 
-Then merge the release branch into 'main' and merge afterwards 'main' in 'dev'.
+Then merge the release branch into 'main' and merge afterwards 'main' in 'dev'. In the case of a release candidate, the release branch also needs to be merged into the release-candidate branch.
 
 At the release of the chart, besides the official chart itself, there is also created a 'portal-x.x.x' tag.
 This tag is used to install (with the convenience of the argocd-app-templates) or upgrade the version via AgroCD on the consortia K8s clusters.
 
+## RC: provide successive RC branch and change base of open PRs
+
+During a release candidate phase, checkout the successive 'RC' branch and push it to the server, so that it can it used for further bugfixes.
+
+Example:
+
+```bash
+git checkout tags/v1.2.0-RC2 -b release/v1.2.0-RC3
+```
+
+Technically this step is already possible after [Tag and build of versioned images](#tag-and-build-of-versioned-images), but it's recommended to execute this step after [Release new helm chart version](#release-new-helm-chart-version), so that the image tag for the release in the release-candidate of [Portal CD](https://github.com/eclipse-tractusx/portal-cd) isn't overwritten by the push of the successive 'RC' branch.
+
+Also make sure to change the base of all open pull requests still pointing to the previous 'RC' branch to the newly pushed 'RC' branch.
+
+## Merge release branch
+
+The release branches must be is merged into main.
+Afterwards, main into dev. This is only necessary for repositories with a dev branch.
+Those merges need to happen via PRs.
+
+Technically this step is already possible after [Tag and build of versioned images](#tag-and-build-of-versioned-images), but it's recommended to execute this step after [Release new helm chart version](#release-new-helm-chart-version), so that the image tag for the release isn't overwritten by the merge into dev or main respectively.
+
+Example for PR titles:
+
+*release(1.2.0): merge release into main*
+
+*release(1.2.0): merge main to dev*
+
 ## Create releases from tags
 
-Technically this step is already possible after [Tag and build of versioned images](#tag-and-build-of-versioned-images), but it's a recommendation to create the releases from the tags in the frontend and backend repositories only once the new helm chart version has been tested and released.
+Technically this step is already possible after [Tag and build of versioned images](#tag-and-build-of-versioned-images), but it's recommended to create the releases from the tags in the frontend and backend repositories only once the new helm chart version has been tested and released.
 
 Examples for release messages:
 
@@ -199,28 +178,3 @@ Examples for release messages:
 *Version 1.1.0: Assets for the Catena-X Portal*
 
 *Version 1.1.0: Backend for the Catena-X Portal*
-
-## Publish new version of Shared UI Components to npm
-
-Make sure that you have a [npm-account](https://www.npmjs.com/login) and login:
-
-```bash
-npm login
-```
-
-Also, you must have been invited to collaborate on the [Shared UI Components](https://www.npmjs.com/package/cx-portal-shared-components).
-
-Checkout the new version from tag in the [portal-frontend](https://github.com/eclipse-tractusx/portal-frontend) repo
-:
-```bash
-git checkout tags/v1.2.0 -b npm/v1.2.0
-```
-
-Execute the following commands:
-
-```bash
-yarn
-yarn build:lib
-cd cx-portal-shared-components
-npm publish
-```

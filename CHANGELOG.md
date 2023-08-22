@@ -2,6 +2,46 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
+## 1.6.0-RC6
+
+### Change
+* Documentation of registration and technical integration updated (removal of all daps related content)
+* Added new notification types and messages inside the notification service documentation
+* App subscription activation docu enhanced with activation overlay images with new content body
+* Application checklist retrigger flow and endpoint information added
+* Wallet Creation & Membership credential creation documentation as part of the technical registration approval documentation added
+* Connector registration documentation (technical und functional) updated, covering the new input fields and api calls
+* Connector Discovery description enhanced with new endpoint function to allow empty string search
+* Static JSON Content files
+  * 'company participant' content updated and new styling/templates used
+* App Release Process developer documentation updated incl. additional endpoint details to fetch app languages
+* index md files added for an synchronized sub-folder navigation inside the help application
+
+### Feature
+* App Change documentation released
+* Added policy documentation as part of the user documentation of connectors
+* SSI Credential Management (Request Flow & Admin Board) developer and end user documentation added
+* Notification user documentation added
+* Company Participant Role end user and developer documentation released (add role(s) & remove role(s))
+* Static JSON Content files
+  * released dataspace introduction content
+* End user documentation 'StyleGuide'
+  * Design style guide released with first set of components/elements (e.g. button, drop down, search, etc.)
+* Technical User developer and end user documentation enhanced by own/managed tech user endpoints
+
+### Technical Support
+* changed license notice for images
+* added second license
+* Removed references to demo environments inside the json consent files as well as system documentation
+* Upgrade details documentation enhanced by adding
+  * Company Credential Details (new SSI related DB schema updates and static data migration)
+  * Language table schema update to support multiple languages in future
+  
+### Bugfix
+* upgraded dependencies
+* reduced the height of side menu in the help section
+* exchanged public/assets/images/content svg files due to breaking content because of the used fonts inside the svg images
+
 ## 1.6.0-RC5
 
 ### Technical Support

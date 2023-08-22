@@ -73,6 +73,11 @@ Transactional data is created by operating the system in a market or testing act
   * Subscription Status
   * Service Type
 * Privacy Policy
+* Verified Credentials
+  * Type
+  * Kind
+* Use Case Paricipation
+  * Status
 
 <br>
 <br>
@@ -88,6 +93,7 @@ Transactional data is created by operating the system in a market or testing act
 * Offer
 * Subscription
 * App Instance
+* Company Ssi Details
 * etc.
 
 <br>
