@@ -73,7 +73,7 @@
         "imagePath":"/images/logos/cx-text.svg",
         "backgroundColor":"#F9F9F9",
         "id":"membership-id",
-        "template":"TextImageSideBySide",
+        "template":"TextImageSideBySide"
       },
       {
         "title":"Data Access policy based on Business Partner Number",
