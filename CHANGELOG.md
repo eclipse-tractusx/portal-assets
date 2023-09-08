@@ -2,7 +2,7 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
-## 1.6.0-RC6
+## 1.6.0
 
 ### Change
 * Documentation of registration and technical integration updated (removal of all daps related content)
@@ -10,12 +10,13 @@ New features, fixed bugs, known defects and other noteworthy changes to each rel
 * App subscription activation docu enhanced with activation overlay images with new content body
 * Application checklist retrigger flow and endpoint information added
 * Wallet Creation & Membership credential creation documentation as part of the technical registration approval documentation added
-* Connector registration documentation (technical und functional) updated, covering the new input fields and api calls
+* Connector registration documentation (technical and functional) updated, covering the new input fields and api calls
 * Connector Discovery description enhanced with new endpoint function to allow empty string search
 * Static JSON Content files
   * 'company participant' content updated and new styling/templates used
 * App Release Process developer documentation updated incl. additional endpoint details to fetch app languages
-* index md files added for an synchronized sub-folder navigation inside the help application
+* index md files added for a synchronized sub-folder navigation inside the help application
+* Rights & Roles concept updated
 
 ### Feature
 * App Change documentation released
@@ -31,9 +32,8 @@ New features, fixed bugs, known defects and other noteworthy changes to each rel
 
 ### Technical Support
 * changed license notice for images
-* added second license
-* Removed references to demo environments inside the json consent files as well as system documentation
-* Upgrade details documentation enhanced by adding
+* removed references to demo environments inside the json consent files as well as system documentation
+* enhanced upgrade details documentation by adding
   * Company Credential Details (new SSI related DB schema updates and static data migration)
   * Language table schema update to support multiple languages in future
   
@@ -41,74 +41,6 @@ New features, fixed bugs, known defects and other noteworthy changes to each rel
 * upgraded dependencies
 * reduced the height of side menu in the help section
 * exchanged public/assets/images/content svg files due to breaking content because of the used fonts inside the svg images
-
-## 1.6.0-RC5
-
-### Technical Support
-- changed license notice for images
-- added second license
-
-### Bugfix
-- upgraded dependencies
-- reduced the height of side menu in the help section
-
-## 1.6.0-RC4
-
-### Change
-- Documentation of registration and technical integration updated (removal of all daps related documentation)
-- Added new notification types and messages inside the notification service documentation
-- Enhanced policy documentation as part of the user documentation of connectors
-
-## 1.6.0-RC3
-
-### Change
-* App subscription activation docu enhanced by added activation overlay screenshot as example/reference with new content body
-* Application checklist retrigger information added
-
-### Feature
-* App Change documentation released
-* Upgrade info added
-  * daps deletion
-
-### Bugfix
-* Dataspace Introduction - added missing direct links and deleted unnecesary links
-* Network Participant Introduction - typos fixed
-
-### Known Knowns
-* Help application - side menu botton scrolling blocked and rendering broken
-
-## 1.6.0-RC2
-
-### Change
-* Wallet Creation & Membership credential creation documentation as part of the technical registration approval documentation added
-* Connector registration documentation (technical und functional) updated, covering the new input fields and api calls
-
-### Feature
-* SSI Credential Management (Request Flow) added
-* App Instance URL change process added
-* Notification user documentation added
-
-## 1.6.0-RC1
-
-### Change
-* Connector Discovery
-  * enhanced description with new endpoint function to allow empty string search
-* Static JSON Content files
-  * 'company participant' content updated and new styling/templates used
-* App Release Process
-  * updated the endpoint details to fetch app languages
-
-### Feature
-* Company Role config
-  * released end user and developer documentation of the company role config (add role(s))
-* Static JSON Content files
-  * released dataspace introduction content
-* End user documentation 'StyleGuide'
-  * Design style guide released with first set of components/elements (e.g. button, drop down, search, etc.)
-* Policy Management Examples added
-
-### Bugfix
-* Exchanged public/assets/images/content svg files due to breaking content because of the used fonts
 
 ## 1.5.0
 
