@@ -18,7 +18,7 @@
       }
     ],
     "title": "Catena-X Data App Provider",
-    "description": "The Catena-X App Provider is the standard role inside the Catena-X network. Companies sharing and receviing data as well as using service provider offers and app offers are usually 'App Provider' - active members of the network.",
+    "description": "The Catena-X App Provider is the standard role inside the Catena-X network. Companies sharing and receiving data as well as using service provider offers and app offers are usually 'App Provider' - active members of the network.",
     "sections": [
       {
         "title": "Marketplace",
@@ -180,7 +180,7 @@
       }
     ],
     "title": "Catena-X Data Service Provider",
-    "description": "The Catena-X Service Provider is the standard role inside the Catena-X network. Companies sharing and receviing data as well as using service provider offers and app offers are usually 'Service Provider' - active members of the network.",
+    "description": "The Catena-X Service Provider is the standard role inside the Catena-X network. Companies sharing and receiving data as well as using service provider offers and app offers are usually 'Service Provider' - active members of the network.",
     "sections": [
       {
         "title": "Marketplace",
@@ -327,7 +327,7 @@
     "subNavigation": [
       {
         "index": 1,
-        "title": "Company Setting",
+        "title": "Configure your company",
         "navigation": "company-setting-id"
       },
       {
@@ -348,10 +348,10 @@
     ],
     "title": "Catena-X Participant",
     "description":
-      "The Catena-X participant is the standard role inside the Catena-X network. Companies sharing and receviing data as well as using service provider offers and app offers are usually 'participants' - active members of the network.",
+      "The Catena-X participant is the standard role inside the Catena-X network. Companies sharing and receiving data as well as using service provider offers and app offers are usually 'participants' - active members of the network.",
     "sections": [
       {
-        "title": "Company Setting",
+        "title": "Configure your company",
         "description": "Configure your company before participating fully inside the network<1></1><1></1>",
         "imagePath": "/images/logos/cx-text.svg",
         "backgroundColor": "#F9F9F9",
@@ -411,7 +411,7 @@
               "data": [
                 {
                   "title": ">> Configure your IdP",
-                  "id": "https://portal.int.demo.catena-x.net/documentation/?path=docs%2F02.+Technical+Integration%2F02.+Identity+Provider+Management",
+                  "id": "/documentation/?path=docs%2F02.+Technical+Integration%2F02.+Identity+Provider+Management",
                   "internal": false
                 }
               ]
@@ -425,7 +425,7 @@
               "data": [
                 {
                   "title": ">> Setup your company certificates",
-                  "id": "/certificate-credential",
+                  "id": "/documentation/?path=docs%2F06.+Certificates%2F02.+Other+Certificates.md",
                   "internal": false
                 }
               ]
@@ -439,7 +439,7 @@
               "data": [
                 {
                   "title": ">> Sign the relevant use case frameworks.",
-                  "id": "/usecase-participation",
+                  "id": "/documentation/?path=docs%2F06.+Certificates%2F01.+UseCase+Participation.md",
                   "internal": false
                 }
               ]
@@ -448,7 +448,7 @@
         ]
       },
       {
-        "title": "Get Ready for data exchange",
+        "title": "Get Ready for Data Exchange",
         "description": "",
         "imagePath": "",
         "id": "data-excahnge-id",
@@ -456,8 +456,8 @@
         "template": "TextImageSideBySideWithSections",
         "subsections": [
           {
-            "title": "Use cases",
-            "description": "Use cases describe the value add you can achieve with Catena-X. To learn more about the Catena-X Use Cases please visit the Use Case pages. You can inform yourself on the use case(s) you are interested in, its core values and benefits as well as an overview of the relevant data models and a list of business apps available<1></1><1></1>",
+            "title": "Use Cases",
+            "description": "Use cases describe the value add you can achieve with Catena-X. To learn more about the Catena-X Use Cases please visit the dedicated Use Case pages. You can inform yourself on the use case(s) you are interested in, its core values and benefits as well as an overview of the relevant data models and a list of business apps available<1></1><1></1>",
             "sectionLink": {
               "data": [
                 {
@@ -469,9 +469,9 @@
             }
           },
           {
-            "title": "Marketplace",
+            "title": "App Marketplace",
             "description":
-              "In the <strong>App Marketplace</strong>, you can inform yourself on existing business apps.<1></1><1></1>* If you are looking for a specific app, you can easily filter by name.<1></1>* Going to the Category View, you will find a list of apps for dedicated categories, e.g. for a specific use case.<1></1>* Remember that you can also inform yourself of use case specific business apps via the respective <strong>Use Case</strong> pages<1></1><1></1>",
+              "In the <strong>App Marketplace</strong>, you can inform yourself about existing business apps.<1></1><1></1>* If you are looking for a specific app, you can easily filter by name.<1></1>* Going to the Category View, you will find a list of apps for dedicated categories, e.g. for a specific use case.<1></1>* Remember that you can also inform yourself of use case specific business apps via the respective <strong>Use Case</strong> pages<1></1><1></1>",
             "sectionLink": {
               "data": [
                 {
@@ -485,7 +485,7 @@
           {
             "title": "Semantic Hub",
             "description":
-              "The <strong>Semantic Hub</strong> describe the Catena-X standardized data models. The given semantic models and their descriptions are required to understand which data and which format is needed for for each supported data object. You also find basic information on the use case specific data models in the details of the dedicated <strong>Use Case</strong> Pages<1></1><1></1>",
+              "The <strong>Semantic Hub</strong> describes the Catena-X standardized data models. The given semantic models and their descriptions are required to understand which data and which format is needed for each supported data object. You also find basic information on the use case specific data models in the details of the dedicated <strong>Use Case</strong> Pages.<1></1><1></1>",
             "sectionLink": {
               "data": [
                 {
@@ -533,11 +533,11 @@
         "imagePath": "",
         "subDescriptions": {
           "title":
-            "To actively participate one or more of the Catena-X Use Cases, you will need to provide or consume data. To do so , you have multiple options:<1></1>",
+            "To actively participate in one or more of the Catena-X Use Cases, you will need to provide or consume data. To do so , you have multiple options:<1></1>",
           "sections": [
             {
               "title":
-                "<2>* Use one of simple data exchange tools or middle ware solutions. To inform yourself on existing offers, check out the App Marketplace</2>",
+                "<2>* To inform yourself on existing offers, check out the App Marketplace</2>",
               "value": ">> App Marketplace",
               "link": "/appmarketplace"
             },
@@ -549,7 +549,7 @@
             },
             {
               "title":
-                "<2>* Use a Business Application with data provisioning and consumption capabilities for the use case(s) you are interested in.</2>",
+                "<2>* Use a Business Application with data provisioning and consumption capabilities for the use case(s) you are interested in. Find suitable solutions in the App Marketplace</2>",
               "value": ">> Business Application",
               "link": "/appmarketplace"
             },
@@ -561,7 +561,7 @@
             },
             {
               "title": "<2>* For information on different options and patterns for data integration, check out the Data Integration Pattern Guide available   on the Association Website.</2>",
-              "value": ">> Data Integration",
+              "value": ">> Data Integration Pattern Guide",
               "link": "https://catena-x.net/en/catena-x-einfuehren-umsetzen/einfuehrung-von-catena-x"
             }
           ]
@@ -628,7 +628,7 @@
       }
     ],
     "title": "Catena-X Data Confirmity Body",
-    "description": "The Catena-X Confirmity Body is the standard role inside the Catena-X network. Companies sharing and receviing data as well as using service provider offers and app offers are usually 'Confirmity Body' - active members of the network.",
+    "description": "The Catena-X Confirmity Body is the standard role inside the Catena-X network. Companies sharing and receiving data as well as using service provider offers and app offers are usually 'Confirmity Body' - active members of the network.",
     "sections": [
       {
         "title": "Marketplace",
