@@ -7,7 +7,7 @@ Wallets are <strong>the touchpoint of company/participant to SSI as the digital 
 Since SSI Wallets are not yet common on company level, Catena-X decided to create CX managed wallets for membership companies. This wallets can be used to enable the benefits of SSI for a number of services.
 <br>
 The Portal / Managed Service connection is implemented in 2 functions
-* Company Registration - initital wallet creation
+* Company Registration - initial wallet creation
 * EDC Registration - EDC Self-Description creation
 <br>
 <br>

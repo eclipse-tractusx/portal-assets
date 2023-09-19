@@ -155,7 +155,7 @@ Furthermore, it provides an implicit transaction functionality.
 
 The repositories themselves must not be registered for dependency injection in the corresponding startup; the method PortalRepositories.GetInstance<RepositoryType> provides the instance of a requested repository.
 
-In the repository itself, you should not work with SaveChanges, it should only be called via the PortalRespositories.SaveChanges to ensure that any transaction dependencies can be rolled back.
+In the repository itself, you should not work with SaveChanges, it should only be called via the PortalRepositories.SaveChanges to ensure that any transaction dependencies can be rolled back.
 
 Since EF-Core offers a change tracking feature, the database objects are modified in the business logic
 
@@ -196,4 +196,4 @@ The migration will consist of an initial migration as well as delta migration fi
 <br>
 
 ## Configurability
-Portal configuration is mainly possible via the appsetting files as well as the static data migration files.
+Portal configuration is mainly possible via the appsettings files as well as the static data migration files.
