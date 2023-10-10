@@ -346,7 +346,8 @@ Template Name: "TextImageSideBySide"
 Template Name: "TextCenterAlignedBody2"
 <br>
 
-<img width="1080" alt="image" src="">
+<img width="1217" alt="TextCenterAlignedBody2" src="https://github.com/catenax-ng/tx-portal-assets/assets/111366021/2eb4f51c-ad94-4790-996f-00bfa2d09bb9">
+
 
 <br>
 
@@ -375,7 +376,7 @@ Template Name: "TextCenterAlignedBody2"
 Template Name: "TextImageSideBySideWithLinks"
 <br>
 
-<img width="1080" alt="image" src="">
+<img width="1003" alt="TextImageSideBySideWithLinks" src="https://github.com/catenax-ng/tx-portal-assets/assets/111366021/9421e88e-a116-46ac-9a0f-35a21c4f1eb4">
 
 <br>
 
@@ -426,7 +427,8 @@ Template Name: "TextImageSideBySideWithLinks"
 Template Name: "TextImageSideBySideWithSections"
 <br>
 
-<img width="1080" alt="image" src="">
+<img width="1129" alt="TextImageSideBySideWithSections" src="https://github.com/catenax-ng/tx-portal-assets/assets/111366021/5ebbc22e-453b-4795-ad14-67592203a8f5">
+
 
 <br>
 
