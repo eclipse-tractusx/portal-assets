@@ -17,7 +17,7 @@ Below you can find an overview of all supported templates as well as the templat
 Template Name: "TextCenterAlignedWithCardGrid"
 <br>
 
-<img width="1080" alt="image" src="https://user-images.githubusercontent.com/94133633/211916164-7e6659c7-10b7-41de-96b9-74e6a7fd6828.png">
+<img width="1080" alt="image" src="../../public/assets/images/docs/static/TextCenterAlignedWithCardGrid.png">
 
 <br>
 
@@ -90,7 +90,7 @@ Template Name: "TextCenterAlignedWithCardGrid"
 Template Name: "TextCenterAlignedWithLinkButtonGrid"
 <br>
 
-<img width="1080" alt="image" src="https://user-images.githubusercontent.com/94133633/211919901-381dcc7b-bd19-4c10-b33a-e2da1c69f8e8.png">
+<img width="1080" alt="image" src="../../public/assets/images/docs/static/TextCenterAlignedWithLinkButtonGrid.png">
 
 
  <details>
@@ -138,7 +138,7 @@ Template Name: "TextCenterAlignedWithLinkButtonGrid"
 Template Name: "TextImageSideBySideWithCardGrid"
 <br>
 
-<img width="1080" alt="image" src="https://user-images.githubusercontent.com/94133633/211922125-4447c344-0c25-4c3f-859a-df1bc22af3d5.png">
+<img width="1080" alt="image" src="../../public/assets/images/docs/static/TextImageSideBySideWithCardGrid.png">
 
 <details>
   <summary>Structure Details</summary>
@@ -219,7 +219,7 @@ Template Name: "TextImageSideBySideWithCardGrid"
 Template Name: "TextVideoSideBySide"
 <br>
 
-<img width="1080" alt="image" src="https://user-images.githubusercontent.com/94133633/211922780-7e0d8f66-1e0d-4210-baf0-08e322ec1fe6.png">
+<img width="1080" alt="image" src="../../public/assets/images/docs/static/TextVideoSideBySide.png">
 
 <details>
   <summary>Structure Details</summary>
@@ -245,7 +245,7 @@ Template Name: "TextVideoSideBySide"
 Template Name: "VideoTextSideBySide"
 <br>
 
-<img width="1080" alt="image" src="https://user-images.githubusercontent.com/94133633/211922905-875e8531-17b4-467d-8c83-5215a1d86f4d.png">
+<img width="1080" alt="image" src="../../public/assets/images/docs/static/VideoTextSideBySide.png">
 
 <details>
   <summary>Structure Details</summary>
@@ -270,7 +270,7 @@ Template Name: "VideoTextSideBySide"
 Template Name: "TextImageCenterAligned"
 <br>
 
-<img width="1055" alt="image" src="https://user-images.githubusercontent.com/94133633/211923185-9ed617a1-6149-4795-8e84-ddf7f8a49864.png">
+<img width="1055" alt="image" src="../../public/assets/images/docs/static/TextImageCenterAligned.png">
 
 <details>
   <summary>Structure Details</summary>
@@ -296,7 +296,7 @@ Template Name: "TextImageCenterAligned"
 Template Name: "TextCenterAligned"
 <br>
 
-<img width="1080" alt="image" src="https://user-images.githubusercontent.com/94133633/211923185-9ed617a1-6149-4795-8e84-ddf7f8a49864.png">
+<img width="1080" alt="image" src="../../public/assets/images/docs/static/TextCenterAligned.png">
 
 <details>
   <summary>Structure Details</summary>
@@ -320,7 +320,7 @@ Template Name: "TextCenterAligned"
 Template Name: "TextImageSideBySide"
 <br>
 
-<img width="1080" alt="image" src="https://user-images.githubusercontent.com/94133633/211925359-6b0ad50b-7cba-4ef5-b8a9-27f1b63bff77.png">
+<img width="1080" alt="image" src="../../public/assets/images/docs/static/TextImageSideBySide.png">
 
 <details>
   <summary>Structure Details</summary>
@@ -346,7 +346,7 @@ Template Name: "TextImageSideBySide"
 Template Name: "TextCenterAlignedBody2"
 <br>
 
-<img width="1080" alt="image" src="">
+<img width="1080" alt="image" src="../../public/assets/images/docs/static/TextCenterAlignedBody2.png">
 
 <br>
 
@@ -375,7 +375,7 @@ Template Name: "TextCenterAlignedBody2"
 Template Name: "TextImageSideBySideWithLinks"
 <br>
 
-<img width="1080" alt="image" src="">
+<img width="1080" alt="image" src="../../public/assets/images/docs/static/TextImageSideBySideWithLinks.png">
 
 <br>
 
@@ -426,7 +426,7 @@ Template Name: "TextImageSideBySideWithLinks"
 Template Name: "TextImageSideBySideWithSections"
 <br>
 
-<img width="1080" alt="image" src="">
+<img width="1080" alt="image" src="../../public/assets/images/docs/static/TextImageSideBySideWithSections.png">
 
 <br>
 
