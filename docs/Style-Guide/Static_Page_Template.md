@@ -17,7 +17,7 @@ Below you can find an overview of all supported templates as well as the templat
 Template Name: "TextCenterAlignedWithCardGrid"
 <br>
 
-<img width="1080" alt="image" src="../../public/assets/images/docs/static/TextCenterAlignedWithCardGrid.png">
+<img width="1080" alt="image" src="../static/TextCenterAlignedWithCardGrid.png">
 
 <br>
 
@@ -90,7 +90,7 @@ Template Name: "TextCenterAlignedWithCardGrid"
 Template Name: "TextCenterAlignedWithLinkButtonGrid"
 <br>
 
-<img width="1080" alt="image" src="../../public/assets/images/docs/static/TextCenterAlignedWithLinkButtonGrid.png">
+<img width="1080" alt="image" src="../static/TextCenterAlignedWithLinkButtonGrid.png">
 
 
  <details>
@@ -138,7 +138,7 @@ Template Name: "TextCenterAlignedWithLinkButtonGrid"
 Template Name: "TextImageSideBySideWithCardGrid"
 <br>
 
-<img width="1080" alt="image" src="../../public/assets/images/docs/static/TextImageSideBySideWithCardGrid.png">
+<img width="1080" alt="image" src="../static/TextImageSideBySideWithCardGrid.png">
 
 <details>
   <summary>Structure Details</summary>
@@ -219,7 +219,7 @@ Template Name: "TextImageSideBySideWithCardGrid"
 Template Name: "TextVideoSideBySide"
 <br>
 
-<img width="1080" alt="image" src="../../public/assets/images/docs/static/TextVideoSideBySide.png">
+<img width="1080" alt="image" src="../static/TextVideoSideBySide.png">
 
 <details>
   <summary>Structure Details</summary>
@@ -245,7 +245,7 @@ Template Name: "TextVideoSideBySide"
 Template Name: "VideoTextSideBySide"
 <br>
 
-<img width="1080" alt="image" src="../../public/assets/images/docs/static/VideoTextSideBySide.png">
+<img width="1080" alt="image" src="../static/VideoTextSideBySide.png">
 
 <details>
   <summary>Structure Details</summary>
@@ -270,7 +270,7 @@ Template Name: "VideoTextSideBySide"
 Template Name: "TextImageCenterAligned"
 <br>
 
-<img width="1055" alt="image" src="../../public/assets/images/docs/static/TextImageCenterAligned.png">
+<img width="1055" alt="image" src="../static/TextImageCenterAligned.png">
 
 <details>
   <summary>Structure Details</summary>
@@ -296,7 +296,7 @@ Template Name: "TextImageCenterAligned"
 Template Name: "TextCenterAligned"
 <br>
 
-<img width="1080" alt="image" src="../../public/assets/images/docs/static/TextCenterAligned.png">
+<img width="1080" alt="image" src="../static/TextCenterAligned.png">
 
 <details>
   <summary>Structure Details</summary>
@@ -320,7 +320,7 @@ Template Name: "TextCenterAligned"
 Template Name: "TextImageSideBySide"
 <br>
 
-<img width="1080" alt="image" src="../../public/assets/images/docs/static/TextImageSideBySide.png">
+<img width="1080" alt="image" src="../static/TextImageSideBySide.png">
 
 <details>
   <summary>Structure Details</summary>
@@ -346,7 +346,7 @@ Template Name: "TextImageSideBySide"
 Template Name: "TextCenterAlignedBody2"
 <br>
 
-<img width="1080" alt="image" src="../../public/assets/images/docs/static/TextCenterAlignedBody2.png">
+<img width="1080" alt="image" src="../static/TextCenterAlignedBody2.png">
 
 <br>
 
@@ -375,7 +375,7 @@ Template Name: "TextCenterAlignedBody2"
 Template Name: "TextImageSideBySideWithLinks"
 <br>
 
-<img width="1080" alt="image" src="../../public/assets/images/docs/static/TextImageSideBySideWithLinks.png">
+<img width="1080" alt="image" src="../static/TextImageSideBySideWithLinks.png">
 
 <br>
 
@@ -426,7 +426,7 @@ Template Name: "TextImageSideBySideWithLinks"
 Template Name: "TextImageSideBySideWithSections"
 <br>
 
-<img width="1080" alt="image" src="../../public/assets/images/docs/static/TextImageSideBySideWithSections.png">
+<img width="1080" alt="image" src="../static/TextImageSideBySideWithSections.png">
 
 <br>
 
