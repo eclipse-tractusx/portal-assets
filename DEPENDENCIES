@@ -48,7 +48,7 @@ npm/npmjs/-/find-replace/3.0.0, MIT, approved, clearlydefined
 npm/npmjs/-/follow-redirects/1.15.3, MIT, approved, #10782
 npm/npmjs/-/forwarded/0.2.0, MIT, approved, clearlydefined
 npm/npmjs/-/fresh/0.5.2, MIT, approved, clearlydefined
-npm/npmjs/-/function-bind/1.1.1, MIT, approved, clearlydefined
+npm/npmjs/-/function-bind/1.1.1, MIT, approved, #11063
 npm/npmjs/-/get-caller-file/2.0.5, ISC, approved, clearlydefined
 npm/npmjs/-/get-intrinsic/1.2.1, MIT, approved, #8453
 npm/npmjs/-/has-flag/3.0.0, MIT, approved, clearlydefined
