@@ -1,160 +1,221 @@
 {
   "appProvider": {
-    "subNavigation": [
-      {
-        "index": 1,
-        "title": "marketplace",
-        "navigation": "intro-id"
-      },
-      {
-        "index": 2,
-        "title": "marketplace subscriptions",
-        "navigation": "data-id"
-      },
-      {
-        "index": 3,
-        "title": "dataspace participants",
-        "navigation": "business-id"
-      }
-    ],
+    "subNavigation": [],
     "title": "Catena-X Data App Provider",
     "description": "The Catena-X App Provider is the standard role inside the Catena-X network. Companies sharing and receiving data as well as using service provider offers and app offers are usually 'App Provider' - active members of the network.",
     "sections": [
       {
-        "title": "Marketplace",
-        "description": "The marketplace is structured into 2 different areaa - Apps and Services. Depending on your need you can access the marketplace and receive an overview of available apps/services of a wide range of providers.",
-        "imagePath": "/images/content/teaser.png",
+        "title": "Application Service Provider",
+        "description": "An application ** service ** provider (ASP) delivers application functionality and associated services across a network to multiple customers using a rental or usage-based transaction model<1></1><1></1>In the sub-chapters below the main functionalities and connections are explained for app provider companies:<1></1><1></1>",
+        "imagePath": "/images/logos/cx-text.svg",
         "backgroundColor": "#DAE3EB",
-        "id": "intro-id",
-        "template": "TextImageSideBySideWithCardGrid",
-        "detailsWithImageRow1": [
+        "id": "asp-id",
+        "template": "TextImageSideBySide",
+        "sectionLink": {
+          "data": [
+            {
+              "title": ">> App Release Process",
+              "id": "app-release-process-id",
+              "internal": true
+            },
+            {
+              "title": ">> App Subscription Process",
+              "id": "app-subscription-process-id",
+              "internal": true
+            },
+            {
+              "title": ">> App Change Process",
+              "id": "app-change-process-id",
+              "internal": true
+            },
+            {
+              "title": ">> Managed Connector Registration",
+              "id": "managed-connector-registration-id",
+              "internal": true
+            },
+            {
+              "title": ">> Technical User Management",
+              "id": "technical-user-management-id",
+              "internal": true
+            },
+            {
+              "title": ">> Open APIs",
+              "id": "open-apis-id",
+              "internal": true
+            }
+          ]
+        }
+      },
+      {
+        "title": "App Release Process",
+        "description": "The app release process enables the app provider to create provided application descriptions which get published on the CX marketplace. All other CX member companies can view this apps and subscribe the apps based on their needs.<1></1><1></1>",
+        "imagePath": "",
+        "id": "app-release-process-id",
+        "backgroundColor": "#FFFFFF",
+        "template": "TextImageSideBySideWithSections",
+        "sectionLink": {
+          "data": [
+            {
+              "title": ">> App Release Process",
+              "id": "/appreleaseprocess",
+              "internal": false
+            }
+          ]
+        },
+        "detailsWithoutImageRow1": [
+          {
+            "title": "App Release Process",
+            "description": "Details to the app release process flow can get found inside the help/user manual",
+            "readMore": "/home",
+            "readMoreTitle": "Get Details",
+            "backgroundColor": "#F9F9F9"
+          },
           {
             "title": "App Marketplace",
-            "imagePath": "/images/content/teaser.png",
-            "description": "The app marketplace offers business applications supporting your business in the daily live. Have a look into the marketplace and use filter options such as use case based views.",
-            "readMore": "",
+            "description": "Details to the app marketplace can get found inside the help/user manual",
+            "readMore": "/home",
+            "readMoreTitle": "Get Details",
             "backgroundColor": "#F9F9F9"
           },
           {
-            "title": "Service Marketplace",
-            "imagePath": "/images/content/teaser.png",
-            "description": "The service marketplace offers technical and consultancy support to enable you and your company to participate in the Catena-X dataspace.",
-            "readMore": "",
-            "backgroundColor": "#F9F9F9"
-          }
-        ],
-        "detailsWithoutImageRow1": [
-          {
-            "title": "to be defined",
-            "description": "to be defined",
-            "readMore": "",
-            "backgroundColor": "#F9F9F9"
-          },
-          {
-            "title": "How to get to the app marketplace",
-            "description": "to get to the marketplace, just follow the link below",
-            "readMore": "/appmarketplace",
-            "readMoreTitle": "Details",
-            "backgroundColor": "#F9F9F9"
-          },
-          {
-            "title": "How to get to the service marketplace",
-            "description": "to get to the marketplace, just follow the link below",
-            "readMore": "/servicemarketplace",
-            "readMoreTitle": "Details",
+            "title": "FAQs",
+            "description": "Additional FAQs related to the app release process.",
+            "readMore": "/home",
+            "readMoreTitle": "Get Details",
             "backgroundColor": "#F9F9F9"
           }
         ]
       },
       {
-        "title": "Marketplace Subscriptions",
-        "description": "Inside the app and service marketplace, subscriptions to avialable offers can get made. Find out more how this works by following the details below",
-        "imagePath": "/images/content/teaser.png",
-        "id": "data-id",
-        "backgroundColor": "#F9F9F9",
-        "template": "TextImageSideBySideWithCardGrid",
-        "detailsWithImageRow1": [
-          {
-            "title": "Subscription Authority",
-            "imagePath": "/images/content/teaser.png",
-            "description": "This are the details which I will still add",
-            "readMore": "",
-            "backgroundColor": "#FFFFFF",
-            "imageShape": "circle"
-          },
-          {
-            "title": "Subscription Flow",
-            "imagePath": "/images/content/teaser.png",
-            "description": "This are the details which I will still add",
-            "readMore": "",
-            "backgroundColor": "#FFFFFF",
-            "imageShape": "circle"
-          }
-        ],
-        "detailsWithoutImageRow1": [
-          {
-            "title": "Who can subscribe?",
-            "description": "the details will get added asap",
-            "readMore": "/help",
-            "readMoreTitle": "Details",
-            "backgroundColor": "#FFFFFF"
-          },
-          {
-            "title": "What happens after the subscription?",
-            "description": "the details will get added asap",
-            "readMore": "/help",
-            "readMoreTitle": "Details",
-            "backgroundColor": "#FFFFFF"
-          },
-          {
-            "title": "How can I use the service?",
-            "description": "the details will get added asap",
-            "readMore": "/help",
-            "readMoreTitle": "Details",
-            "backgroundColor": "#FFFFFF"
-          }
-        ]
+        "title": "App Change Process",
+        "description": "The app change process is available via the app management page. App Provider can update active apps via the self service.<1></1><1></1>Supported changes:<1></1>*  App Lead Image Change<1></1>*  App Description Change<1></1>*  App Role Image Change<1></1>*  App Document Image Change<1></1><1></1>",
+        "imagePath": "",
+        "backgroundColor": "#DAE3EB",
+        "id": "app-change-process-id",
+        "template": "TextImageSideBySide",
+        "sectionLink": {
+          "data": [
+            {
+              "title": ">> App Management",
+              "id": "/appmanagement",
+              "internal": false
+            },
+            {
+              "title": ">> Help",
+              "id": "/help",
+              "internal": false
+            }
+          ]
+        }
       },
       {
-        "title": "Dataspace participants",
-        "description": "Details regarding the dataspace ",
-        "imagePath": "/images/content/teaser.png",
-        "id": "business-id",
+        "title": "App Subscription Process",
+        "description": ".…information will get added here soon…..<1></1><1></1>",
+        "imagePath": "",
+        "id": "app-subscription-process-id",
         "backgroundColor": "#FFFFFF",
-        "template": "TextImageSideBySideWithCardGrid",
-        "detailsWithImageRow1": [
-          {
-            "title": "Simply lorem Ipsum Text",
-            "imagePath": "/images/content/teaser.png",
-            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
-            "readMore": "",
-            "backgroundColor": "#F9F9F9"
-          },
-          {
-            "title": "Simply lorem Ipsum Text",
-            "imagePath": "/images/content/teaser.png",
-            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
-            "readMore": "",
-            "backgroundColor": "#F9F9F9"
-          }
-        ],
+        "template": "TextImageSideBySideWithSections",
+        "sectionLink": {
+          "data": [
+            {
+              "title": ">> Subscription Management Board",
+              "id": "/appsubscription",
+              "internal": false
+            }
+          ]
+        },
         "detailsWithoutImageRow1": [
           {
-            "title": "Simply lorem Ipsum Text",
-            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
-            "readMore": "",
+            "title": "Subscription Request by the Customer",
+            "description": "",
+            "readMore": "/home",
+            "readMoreTitle": "Get Details",
             "backgroundColor": "#F9F9F9"
           },
           {
-            "title": "Simply lorem Ipsum Text",
-            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
-            "readMore": "",
+            "title": "Subscription Activation",
+            "description": "",
+            "readMore": "/home",
+            "readMoreTitle": "Get Details",
             "backgroundColor": "#F9F9F9"
           },
           {
-            "title": "Simply lorem Ipsum Text",
-            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
-            "readMore": "",
+            "title": "Subscription Management",
+            "description": "",
+            "readMore": "/home",
+            "readMoreTitle": "Get Details",
+            "backgroundColor": "#F9F9F9"
+          }
+        ]
+      },
+      {
+        "title": "Managed Connector Registration",
+        "description": "…information will get added here soon…..<1></1><1></1>",
+        "imagePath": "",
+        "backgroundColor": "#DAE3EB",
+        "id": "managed-connector-registration-id",
+        "template": "TextImageSideBySideWithSections",
+        "sectionLink": {
+          "data": [
+            {
+              "title": ">> Connector Details (coming soon)",
+              "id": "/",
+              "internal": false
+            }
+          ]
+        }
+      },
+      {
+        "title": "Technical User Management",
+        "description": "…information will get added here soon…..<1></1><1></1>",
+        "imagePath": "",
+        "backgroundColor": "#DAE3EB",
+        "id": "technical-user-management-id",
+        "template": "TextImageSideBySideWithSections",
+        "sectionLink": {
+          "data": [
+            {
+              "title": ">> Authentication Details (coming soon)",
+              "id": "/",
+              "internal": false
+            }
+          ]
+        }
+      },
+      {
+        "title": "Open APIs",
+        "description": ".…information will get added here soon…..<1></1><1></1>",
+        "imagePath": "",
+        "backgroundColor": "#FFFFFF",
+        "id": "open-apis-id",
+        "template": "TextImageSideBySideWithSections",
+        "detailsWithoutImageRow1": [
+          {
+            "title": "Dataspace Discovery",
+            "description": "Connector discovery endpoint to find connector endpoints",
+            "readMore": "/home",
+            "readMoreTitle": "Get Details",
+            "backgroundColor": "#F9F9F9"
+          },
+          {
+            "title": "App Autosetup",
+            "description": "Application autosetup endpoint to trigger app subscription activations",
+            "readMore": "/home",
+            "readMoreTitle": "Get Details",
+            "backgroundColor": "#F9F9F9"
+          },
+          {
+            "title": "App Autosetup",
+            "description": "Application autosetup endpoint to trigger app subscription activations",
+            "readMore": "/home",
+            "readMoreTitle": "Get Details",
+            "backgroundColor": "#F9F9F9"
+          },
+          {
+            "title": "BPN Discovery",
+            "description": "BPN Discovery endpoint to find provider BPN based on predefined assets",
+            "readMore": "/home",
+            "readMoreTitle": "Get Details",
             "backgroundColor": "#F9F9F9"
           }
         ]
@@ -347,8 +408,7 @@
       }
     ],
     "title": "Catena-X Participant",
-    "description":
-      "The Catena-X participant is the standard role inside the Catena-X network. Companies sharing and receiving data as well as using service provider offers and app offers are usually 'participants' - active members of the network.",
+    "description": "The Catena-X participant is the standard role inside the Catena-X network. Companies sharing and receiving data as well as using service provider offers and app offers are usually 'participants' - active members of the network.",
     "sections": [
       {
         "title": "Configure your company",
@@ -384,8 +444,7 @@
         "subsections": [
           {
             "title": "User Management",
-            "description":
-              "To add further members of your company as users to the portal, please proceed by reviewing the <strong>Role Descriptions</strong> and adding the desired colleagues via the <strong>User Management</strong><1></1><1></1>",
+            "description": "To add further members of your company as users to the portal, please proceed by reviewing the <strong>Role Descriptions</strong> and adding the desired colleagues via the <strong>User Management</strong><1></1><1></1>",
             "id": "user-id",
             "sectionLink": {
               "data": [
@@ -404,8 +463,7 @@
           },
           {
             "title": "Configure Company IdP (optional)",
-            "description":
-              "If your company would like to use their own company authentication to have the comfort of federated user login and user credentials not shared with an operator, you can connect your company IdP with the Catena-X shared IdP. Please refer to the following documentation to show you the necessary steps to configure your <strong>Company IdP</strong>.<1></1><1></1>",
+            "description": "If your company would like to use their own company authentication to have the comfort of federated user login and user credentials not shared with an operator, you can connect your company IdP with the Catena-X shared IdP. Please refer to the following documentation to show you the necessary steps to configure your <strong>Company IdP</strong>.<1></1><1></1>",
             "id": "idp-id",
             "sectionLink": {
               "data": [
@@ -470,8 +528,7 @@
           },
           {
             "title": "App Marketplace",
-            "description":
-              "In the <strong>App Marketplace</strong>, you can inform yourself about existing business apps.<1></1><1></1>* If you are looking for a specific app, you can easily filter by name.<1></1>* Going to the Category View, you will find a list of apps for dedicated categories, e.g. for a specific use case.<1></1>* Remember that you can also inform yourself of use case specific business apps via the respective <strong>Use Case</strong> pages<1></1><1></1>",
+            "description": "In the <strong>App Marketplace</strong>, you can inform yourself about existing business apps.<1></1><1></1>* If you are looking for a specific app, you can easily filter by name.<1></1>* Going to the Category View, you will find a list of apps for dedicated categories, e.g. for a specific use case.<1></1>* Remember that you can also inform yourself of use case specific business apps via the respective <strong>Use Case</strong> pages<1></1><1></1>",
             "sectionLink": {
               "data": [
                 {
@@ -484,8 +541,7 @@
           },
           {
             "title": "Semantic Hub",
-            "description":
-              "The <strong>Semantic Hub</strong> describes the Catena-X standardized data models. The given semantic models and their descriptions are required to understand which data and which format is needed for each supported data object. You also find basic information on the use case specific data models in the details of the dedicated <strong>Use Case</strong> Pages.<1></1><1></1>",
+            "description": "The <strong>Semantic Hub</strong> describes the Catena-X standardized data models. The given semantic models and their descriptions are required to understand which data and which format is needed for each supported data object. You also find basic information on the use case specific data models in the details of the dedicated <strong>Use Case</strong> Pages.<1></1><1></1>",
             "sectionLink": {
               "data": [
                 {
@@ -498,8 +554,7 @@
           },
           {
             "title": "Data Mapping",
-            "description":
-              "In this step you need to map your internal data formats to the existing Catena-X standard models. To prepare for this, refer to the relevant specific semantic models for the dedicated use case(s) you are interested in.<1></1><1></1>You will find a basic business description of data models within the details of the respective use case pages.<1></1><1></1>For more technical background, check out the Semantic Hub as well.<1></1><1></1>",
+            "description": "In this step you need to map your internal data formats to the existing Catena-X standard models. To prepare for this, refer to the relevant specific semantic models for the dedicated use case(s) you are interested in.<1></1><1></1>You will find a basic business description of data models within the details of the respective use case pages.<1></1><1></1>For more technical background, check out the Semantic Hub as well.<1></1><1></1>",
             "sectionLink": {
               "data": [
                 {
@@ -512,8 +567,7 @@
           },
           {
             "title": "Data Release",
-            "description":
-              "For Information on how to establish an inter-organizational data governance mechanism and orchestrate your data release process for exchange with external partners do check out the <strong>Data Governance Guide</strong> on the Association Website. This includes an overview of processes, roles and their respective responsibilities.<1></1><1></1>",
+            "description": "For Information on how to establish an inter-organizational data governance mechanism and orchestrate your data release process for exchange with external partners do check out the <strong>Data Governance Guide</strong> on the Association Website. This includes an overview of processes, roles and their respective responsibilities.<1></1><1></1>",
             "sectionLink": {
               "data": [
                 {
@@ -528,34 +582,28 @@
       },
       {
         "title": "Prepare your technical integration",
-        "description":
-          "If you choose to manage the Catena-X components yourself and not use a Business Application or Managed Service,  you will need to set up the technical components yourself.<1></1>Technical Documentation, Tutorials and Guides how these components can be set up can be found in the  Shared Network KIT on <strong>Tractus-X</strong><1></1><1></1>",
+        "description": "If you choose to manage the Catena-X components yourself and not use a Business Application or Managed Service,  you will need to set up the technical components yourself.<1></1>Technical Documentation, Tutorials and Guides how these components can be set up can be found in the  Shared Network KIT on <strong>Tractus-X</strong><1></1><1></1>",
         "imagePath": "",
         "subDescriptions": {
-          "title":
-            "To actively participate in one or more of the Catena-X Use Cases, you will need to provide or consume data. To do so , you have multiple options:<1></1>",
+          "title": "To actively participate in one or more of the Catena-X Use Cases, you will need to provide or consume data. To do so , you have multiple options:<1></1>",
           "sections": [
             {
-              "title":
-                "<2>* To inform yourself on existing offers, check out the App Marketplace</2>",
+              "title": "<2>* To inform yourself on existing offers, check out the App Marketplace</2>",
               "value": ">> App Marketplace",
               "link": "/appmarketplace"
             },
             {
-              "title":
-                "<2>* Use one of simple data exchange tools or middle ware solutions. To inform yourself on existing offers, check out the Service Marketplace</2>",
+              "title": "<2>* Use one of simple data exchange tools or middle ware solutions. To inform yourself on existing offers, check out the Service Marketplace</2>",
               "value": ">> Service Marketplace",
               "link": "/servicemarketplace"
             },
             {
-              "title":
-                "<2>* Use a Business Application with data provisioning and consumption capabilities for the use case(s) you are interested in. Find suitable solutions in the App Marketplace</2>",
+              "title": "<2>* Use a Business Application with data provisioning and consumption capabilities for the use case(s) you are interested in. Find suitable solutions in the App Marketplace</2>",
               "value": ">> Business Application",
               "link": "/appmarketplace"
             },
             {
-              "title":
-                "<2>* Connect your backend systems (e.g. Data Lake, Data Warehouse, …) and implement your integration pipelines individually based on the relevant semantic models.</2>",
+              "title": "<2>* Connect your backend systems (e.g. Data Lake, Data Warehouse, …) and implement your integration pipelines individually based on the relevant semantic models.</2>",
               "value": ">> Semantic Hub",
               "link": "/semantichub"
             },
@@ -767,6 +815,95 @@
             "backgroundColor": "#F9F9F9"
           }
         ]
+      }
+    ]
+  },
+  "ospProvider": {
+    "subNavigation": [],
+    "title": "Catena-X Onboarding Service Provider ",
+    "description": ".…information will get added here soon…..",
+    "sections": [
+      {
+        "title": "Onboarding Service Provider (OSP)",
+        "description": "An Onboarding Service Provider (OSP) is a dataspace party (certified by the CX organization) which provides dataspace registration/onboarding services to supposed customers. Multiple onboarding service provider are possible; the new CX participant can decide by themself with which OSP the CX registration is planned. This might be due to existing supplier relationships, technologies offered and pricing be different.<1></1><1></1>Inside the core, the OSP can use following services:<1></1><1></1>",
+        "imagePath": "",
+        "backgroundColor": "#FFFFFF",
+        "id": "osp-id",
+        "template": "TextImageSideBySideWithSections",
+        "sectionLink": {
+          "data": [
+            {
+              "title": ">> Manage IdPs",
+              "id": "manage-idps-id",
+              "internal": true
+            },
+            {
+              "title": ">> Register Companies",
+              "id": "register-companies-id",
+              "internal": true
+            },
+            {
+              "title": ">> Get Status",
+              "id": "get-status-id",
+              "internal": true
+            }
+          ]
+        }
+      },
+      {
+        "title": "Manage IdPs",
+        "description": "Additionally to the standard IdP federations, the OSP can on top create manage IdP connections. Managed IdP connections refering to IdP federations where the IdP is managed by the OSP for a third party. An OSP needs to register minimum one managed IdP successfully, before the registration service can get activated.<1></1><1></1>",
+        "imagePath": "",
+        "id": "app-release-process-id",
+        "backgroundColor": "#DAE3EB",
+        "template": "TextImageSideBySideWithSections",
+        "sectionLink": {
+          "data": [
+            {
+              "title": ">> manage IdP page (coming soon)",
+              "id": "/",
+              "internal": false
+            },
+            {
+              "title": ">> Help",
+              "id": "/help",
+              "internal": false
+            }
+          ]
+        }
+      },
+      {
+        "title": "Register Companies",
+        "description": "In the first implementation level provided with end of 2023, the OSP is able to push registrations of new CX members via an CSP provided partnerRegistration endpoint.<1></1><1></1>To call the endpoint, the OSP needs to follow the endpoint strutcure and create an technical user which is used for the endpoint authentication.<1></1><1></1>The technical user can get found in the technical user self-service<1></1><1></1>",
+        "imagePath": "",
+        "backgroundColor": "#FFFFFF",
+        "id": "register-companies-id",
+        "template": "TextImageSideBySideWithSections",
+        "subDescriptions": {
+          "title": "With the submission of the registration request the registration record is getting created on CSP side; as well as the user, company and the connection to the OSP.<1></1>As soon as those steps are done, the registration company contact (which was added as user inside the partnerRegistration API call) gets informed about the successful registration request created and is asked to approve the T&Cs before the registration validation process will get pushed. As part of the registration validation process the standard process of<1></1><1></1>* Wallet tenant creation<1></1>* Membership VC creation<1></1>* Company Data check<1></1>* Self-Description creation<1></1><1></1>will take place. Currently all those steps are handled by the CSP but supposed to move to the OSP in future.<1></1>"
+        },
+        "sectionLink": {
+          "data": [
+            {
+              "title": ">> Technical User Self Service",
+              "id": "/",
+              "internal": false
+            },
+            {
+              "title": ">> Endpoint Structure Details",
+              "id": "/help",
+              "internal": false
+            }
+          ]
+        }
+      },
+      {
+        "title": "Status CallBack",
+        "description": "The OSP has two options to receive submitted registration record status updates<1></1><1></1>1. Via Interface<1></1>2. Via the CSP provided management panel<1></1><1></1>In case the interface option is used, the OSP needs to configure inside the CSP components his callback url as well as the authentication details.<1></1>",
+        "imagePath": "",
+        "backgroundColor": "#FFFFFF",
+        "id": "get-status-id",
+        "template": "TextImageSideBySideWithSections"
       }
     ]
   }
