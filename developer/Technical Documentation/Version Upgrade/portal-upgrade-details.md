@@ -10,6 +10,120 @@ Each section includes the respective change details, impact on existing data and
 <br>
 <br>
 
+#### Database Constrains - UPDATE - 1.7.0
+
+before updating the database from v14 to v15 the following script should be executed on the database to make sure that the database dump can be imported without any problems and errors.
+
+```sql
+ALTER TABLE portal.connector_assigned_offer_subscriptions DROP CONSTRAINT IF EXISTS CK_Connector_ConnectorType_IsManaged;
+DROP FUNCTION IF EXISTS portal.is_connector_managed;
+
+ALTER TABLE portal.verified_credential_type_assigned_use_cases DROP CONSTRAINT IF EXISTS CK_VCTypeAssignedUseCase_VerifiedCredentialType_UseCase;
+DROP FUNCTION IF EXISTS portal.is_credential_type_use_case;
+
+ALTER TABLE portal.company_ssi_details DROP CONSTRAINT IF EXISTS CK_VC_ExternalType_DetailId_UseCase;
+DROP FUNCTION IF EXISTS portal.is_external_type_use_case;
+
+DROP TRIGGER IF EXISTS ct_is_connector_managed ON portal.connector_assigned_offer_subscriptions;
+DROP FUNCTION IF EXISTS portal.tr_is_connector_managed;
+
+DROP TRIGGER IF EXISTS ct_is_credential_type_use_case ON portal.verified_credential_type_assigned_use_cases;
+DROP FUNCTION IF EXISTS portal.tr_is_credential_type_use_case;
+
+DROP TRIGGER IF EXISTS ct_is_external_type_use_case ON portal.company_ssi_details;
+DROP FUNCTION IF EXISTS portal.tr_is_external_type_use_case;
+
+CREATE FUNCTION portal.tr_is_connector_managed()
+RETURNS trigger
+VOLATILE
+COST 100
+AS $$
+BEGIN
+IF EXISTS(
+    SELECT 1
+    FROM portal.connectors
+    WHERE Id = NEW.connector_id
+    AND type_id = 2
+)
+THEN RETURN NEW;
+END IF;
+RAISE EXCEPTION 'the connector % is not managed', NEW.connector_id;
+END
+$$ LANGUAGE plpgsql;
+
+CREATE CONSTRAINT TRIGGER ct_is_connector_managed
+AFTER INSERT
+ON portal.connector_assigned_offer_subscriptions
+INITIALLY DEFERRED
+FOR EACH ROW
+EXECUTE PROCEDURE portal.tr_is_connector_managed();
+
+CREATE FUNCTION portal.tr_is_credential_type_use_case()
+RETURNS trigger
+VOLATILE
+COST 100
+AS $$
+BEGIN
+IF EXISTS (
+    SELECT 1
+    FROM portal.verified_credential_types
+    WHERE Id = NEW.verified_credential_type_id
+    AND NEW.verified_credential_type_id IN (
+        SELECT verified_credential_type_id
+        FROM portal.verified_credential_type_assigned_kinds
+        WHERE verified_credential_type_kind_id = '1'
+    )
+)
+THEN RETURN NEW;
+END IF;
+RAISE EXCEPTION 'The credential % is not a use case', NEW.verified_credential_type_id;
+END
+$$ LANGUAGE plpgsql;
+
+CREATE CONSTRAINT TRIGGER ct_is_credential_type_use_case
+AFTER INSERT
+ON portal.verified_credential_type_assigned_use_cases
+INITIALLY DEFERRED
+FOR EACH ROW
+EXECUTE PROCEDURE portal.tr_is_credential_type_use_case();
+
+CREATE FUNCTION portal.tr_is_external_type_use_case()
+RETURNS trigger
+VOLATILE
+COST 100
+AS $$
+BEGIN
+IF NEW.verified_credential_external_type_use_case_detail_id IS NULL
+THEN RETURN NEW;
+END IF;
+IF EXISTS (
+    SELECT 1
+    FROM portal.verified_credential_external_type_use_case_detail_versions
+    WHERE Id = NEW.verified_credential_external_type_use_case_detail_id
+    AND verified_credential_external_type_id IN (
+        SELECT verified_credential_external_type_id
+        FROM portal.verified_credential_type_assigned_external_types
+        WHERE verified_credential_type_id IN (
+            SELECT verified_credential_type_id
+            FROM portal.verified_credential_type_assigned_kinds
+            WHERE verified_credential_type_kind_id = '1'
+        )
+    )
+)
+THEN RETURN NEW;
+END IF;
+RAISE EXCEPTION 'the detail % is not an use case', NEW.verified_credential_external_type_use_case_detail_id;
+END
+$$ LANGUAGE plpgsql;
+
+CREATE CONSTRAINT TRIGGER ct_is_external_type_use_case
+AFTER INSERT
+ON portal.company_ssi_details
+INITIALLY DEFERRED
+FOR EACH ROW
+EXECUTE PROCEDURE portal.tr_is_external_type_use_case();
+```
+
 #### Company Credential Details - NEW - 1.6.0
 
 * NEW: portal.use_case_descriptions
