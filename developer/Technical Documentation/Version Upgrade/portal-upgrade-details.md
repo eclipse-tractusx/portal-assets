@@ -8,15 +8,12 @@ Each section includes the respective change details, impact on existing data and
 > **_INFO:_** inside the detailed descriptions below, the definition 'migration script' refers to the term 'migrations' as it is defined by the ef-core framework: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations
 
 <br>
-<br>
 
 #### Enable OSP Provider IdPs - Update - 1.7.0
 
 The `identity_providers` table has been adjusted to provide the possibility to safe the owner of the idp.
 
 <img width="779" alt="image" src="https://github.com/catenax-ng/tx-portal-assets/assets/94133633/57447ebf-1d56-48e4-a3ee-d8a017a2e605">
-
-<br>
 
 - added "Identity_Provider_Types" table which is connected to portal.identity_providers table
 - added inside the new table "Identity_Provider_Types" an id as well as a label. Labels are defined below:
@@ -29,11 +26,21 @@ The `identity_providers` table has been adjusted to provide the possibility to s
   - in case the type is "shared" - the owner is the same company as the IdP connected company
 
 the identity_providers.owner is important to define which companies are able to create users linked to this idp
-<br>
+
+- added new process_type PARTNER_REGISTRATION and new process_step_types:
+  - SYNCHRONIZE_USER
+  - RETRIGGER_SYNCHRONIZE_USER
+  - TRIGGER_CALLBACK_OSP_SUBMITTED
+  - TRIGGER_CALLBACK_OSP_APPROVED
+  - TRIGGER_CALLBACK_OSP_DECLINED
+  - RETRIGGER_CALLBACK_OSP_SUBMITTED
+  - RETRIGGER_CALLBACK_OSP_APPROVED
+  - RETRIGGER_CALLBACK_OSP_DECLINED
+
 
 Migration
 
-For each esiting idp data set inside the table xxxxx; the following values will get set:
+For each existing idp data set inside the table identity_providers; the following values will get set:
 * idp owner
 * idp type
  
@@ -46,8 +53,6 @@ Logic:
 * all "OIDC" & "SAML" IdPs got the idp type "1" set ("1" = "owned")
 * all "OIDC" and "SAML"  IdPs need to have the "Customer" set as IdP owner
 
-<br>
-<br>
 
 #### Enable Application Types - NEW - 1.7.0
 
@@ -59,6 +64,18 @@ The `company_applications` table has been expanded. New columns `company_applica
 
 "onboarding_service_provider_id" => nullable
 "external" => enum; 1 = "INTERNAL", 2 = "EXTERNAL"
+
+#### Enable Onboarding Service Provider - NEW 1.7.0
+
+* NEW: portal.company_user_assigned_identity_providers
+* NEW: portal.network_registrations
+* NEW: portal.onboarding_service_provider_details
+* EXTEND: portal.identity_user_statuses
+
+NEW portal.company_user_assigned_identity_providers table to be able to link a user to an identity provider
+NEW portal.network_registrations to safe the network registrations of an onboarding service provider or operator
+NEW portal.onboarding_service_provider_details to safe information of the onboarding service provider such as the auth_url to authenticate the technical users as well as the callback url
+
 <br>
 <br>
 
