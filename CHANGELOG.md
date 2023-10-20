@@ -2,6 +2,17 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
+## 1.6.1
+
+### Change
+* Technical documentation enhanced
+* Typos for company roles fixed
+
+### Technical Support
+* Build images also for arm64, in addition to amd64
+* Security.md updated
+* npm-get-version action updated 
+
 ## 1.6.0
 
 ### Change
