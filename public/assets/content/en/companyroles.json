@@ -1,12 +1,38 @@
 {
   "appProvider": {
-    "subNavigation": [],
+    "subNavigation": [
+      {
+        "index": 1,
+        "title": "release process",
+        "navigation": "app-release-process-id"
+      },
+      {
+        "index": 2,
+        "title": "subscription process",
+        "navigation": "app-subscription-process-id"
+      },
+      {
+        "index": 3,
+        "title": "change process",
+        "navigation": "app-change-process-id"
+      },
+      {
+        "index": 1,
+        "title": "connector registration",
+        "navigation": "managed-connector-registration-id"
+      },
+      {
+        "index": 2,
+        "title": "technical user management",
+        "navigation": "technical-user-management-id"
+      }
+    ],
     "title": "Catena-X Data App Provider",
     "description": "The Catena-X App Provider is the standard role inside the Catena-X network. Companies sharing and receiving data as well as using service provider offers and app offers are usually 'App Provider' - active members of the network.",
     "sections": [
       {
         "title": "Application Service Provider",
-        "description": "An application ** service ** provider (ASP) delivers application functionality and associated services across a network to multiple customers using a rental or usage-based transaction model<1></1><1></1>In the sub-chapters below the main functionalities and connections are explained for app provider companies:<1></1><1></1>",
+        "description": "An <strong>application service provider (ASP)</strong> delivers application functionality and associated services across a network to multiple customers using a rental or usage-based transaction model<1></1><1></1>In the sub-chapters below the main functionalities and connections are explained for app provider companies:<1></1><1></1>",
         "imagePath": "/images/logos/cx-text.svg",
         "backgroundColor": "#DAE3EB",
         "id": "asp-id",
@@ -66,21 +92,21 @@
           {
             "title": "App Release Process",
             "description": "Details to the app release process flow can get found inside the help/user manual",
-            "readMore": "/home",
+            "readMore": "/documentation/?path=docs%2F04.+App%28s%29%2F02.+App+Release+Process",
             "readMoreTitle": "Get Details",
             "backgroundColor": "#F9F9F9"
           },
           {
             "title": "App Marketplace",
             "description": "Details to the app marketplace can get found inside the help/user manual",
-            "readMore": "/home",
+            "readMore": "/documentation/?path=docs%2F04.+App%28s%29%2F01.+Marketplace",
             "readMoreTitle": "Get Details",
             "backgroundColor": "#F9F9F9"
           },
           {
             "title": "FAQs",
             "description": "Additional FAQs related to the app release process.",
-            "readMore": "/home",
+            "readMore": "/documentation/?path=docs%2F04.+App%28s%29",
             "readMoreTitle": "Get Details",
             "backgroundColor": "#F9F9F9"
           }
@@ -102,7 +128,7 @@
             },
             {
               "title": ">> Help",
-              "id": "/help",
+              "id": "/documentation/?path=docs%2F04.+App%28s%29%2F06.+App+Change+Process",
               "internal": false
             }
           ]
@@ -126,23 +152,23 @@
         },
         "detailsWithoutImageRow1": [
           {
-            "title": "Subscription Request by the Customer",
+            "title": "Subscription Request by the Customer(Coming soon)",
             "description": "",
-            "readMore": "/home",
+            "readMore": "",
             "readMoreTitle": "Get Details",
             "backgroundColor": "#F9F9F9"
           },
           {
-            "title": "Subscription Activation",
+            "title": "Subscription Activation(Coming soon)",
             "description": "",
-            "readMore": "/home",
+            "readMore": "",
             "readMoreTitle": "Get Details",
             "backgroundColor": "#F9F9F9"
           },
           {
-            "title": "Subscription Management",
+            "title": "Subscription Management(Coming soon)",
             "description": "",
-            "readMore": "/home",
+            "readMore": "",
             "readMoreTitle": "Get Details",
             "backgroundColor": "#F9F9F9"
           }
@@ -193,28 +219,21 @@
           {
             "title": "Dataspace Discovery",
             "description": "Connector discovery endpoint to find connector endpoints",
-            "readMore": "/home",
+            "readMore": "",
             "readMoreTitle": "Get Details",
             "backgroundColor": "#F9F9F9"
           },
           {
             "title": "App Autosetup",
             "description": "Application autosetup endpoint to trigger app subscription activations",
-            "readMore": "/home",
-            "readMoreTitle": "Get Details",
-            "backgroundColor": "#F9F9F9"
-          },
-          {
-            "title": "App Autosetup",
-            "description": "Application autosetup endpoint to trigger app subscription activations",
-            "readMore": "/home",
+            "readMore": "",
             "readMoreTitle": "Get Details",
             "backgroundColor": "#F9F9F9"
           },
           {
             "title": "BPN Discovery",
             "description": "BPN Discovery endpoint to find provider BPN based on predefined assets",
-            "readMore": "/home",
+            "readMore": "",
             "readMoreTitle": "Get Details",
             "backgroundColor": "#F9F9F9"
           }
@@ -819,7 +838,23 @@
     ]
   },
   "ospProvider": {
-    "subNavigation": [],
+    "subNavigation": [
+      {
+        "index": 1,
+        "title": "manage idps",
+        "navigation": "manage-idps-id"
+      },
+      {
+        "index": 2,
+        "title": "register companies",
+        "navigation": "register-companies-id"
+      },
+      {
+        "index": 3,
+        "title": "get status",
+        "navigation": "get-status-id"
+      }
+    ],
     "title": "Catena-X Onboarding Service Provider ",
     "description": ".…information will get added here soon…..",
     "sections": [
@@ -854,19 +889,19 @@
         "title": "Manage IdPs",
         "description": "Additionally to the standard IdP federations, the OSP can on top create manage IdP connections. Managed IdP connections refering to IdP federations where the IdP is managed by the OSP for a third party. An OSP needs to register minimum one managed IdP successfully, before the registration service can get activated.<1></1><1></1>",
         "imagePath": "",
-        "id": "app-release-process-id",
+        "id": "manage-idps-id",
         "backgroundColor": "#DAE3EB",
         "template": "TextImageSideBySideWithSections",
         "sectionLink": {
           "data": [
             {
               "title": ">> manage IdP page (coming soon)",
-              "id": "/",
+              "id": "",
               "internal": false
             },
             {
               "title": ">> Help",
-              "id": "/help",
+              "id": "",
               "internal": false
             }
           ]
@@ -886,12 +921,12 @@
           "data": [
             {
               "title": ">> Technical User Self Service",
-              "id": "/",
+              "id": "",
               "internal": false
             },
             {
               "title": ">> Endpoint Structure Details",
-              "id": "/help",
+              "id": "",
               "internal": false
             }
           ]
