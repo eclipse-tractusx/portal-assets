@@ -10,9 +10,9 @@ Each section includes the respective change details, impact on existing data and
 <br>
 <br>
 
-#### Database Constrains - UPDATE - 1.7.0
+#### Database Constrains - UPDATE
 
-before updating the database from v14 to v15 the following script should be executed on the database to make sure that the database dump can be imported without any problems and errors.
+If you're running on release 1.6.0-rc1 up to 1.7.0-rc1 and want to upgrade the database from v14 to v15 you should executed the following script on the database to make sure that the database dump can be imported without any problems and errors.
 
 ```sql
 ALTER TABLE portal.connector_assigned_offer_subscriptions DROP CONSTRAINT IF EXISTS CK_Connector_ConnectorType_IsManaged;
