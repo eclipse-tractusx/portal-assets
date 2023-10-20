@@ -45,7 +45,7 @@ npm/npmjs/-/express/4.18.2, MIT, approved, clearlydefined
 npm/npmjs/-/fill-range/7.0.1, MIT, approved, clearlydefined
 npm/npmjs/-/finalhandler/1.2.0, MIT, approved, clearlydefined
 npm/npmjs/-/find-replace/3.0.0, MIT, approved, clearlydefined
-npm/npmjs/-/follow-redirects/1.15.3, MIT, approved, #10782
+npm/npmjs/-/follow-redirects/1.15.2, MIT, approved, #10782
 npm/npmjs/-/forwarded/0.2.0, MIT, approved, clearlydefined
 npm/npmjs/-/fresh/0.5.2, MIT, approved, clearlydefined
 npm/npmjs/-/function-bind/1.1.1, MIT, approved, #11063
