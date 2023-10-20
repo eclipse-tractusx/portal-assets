@@ -1,4 +1,5 @@
 # Business Partner Data Management
+
 <br>
 
 ## Interface Summary
@@ -13,6 +14,7 @@ For the registration process we are using the BPDM data call to pull the company
 <br>
 
 ## Architecture Overview
+
 To integrate the API into CX onboarding process, portal team just have to call the lookup REST endpoint and transform the response into a pick list for the portal user.
 <br>
 <br>
@@ -21,17 +23,20 @@ To integrate the API into CX onboarding process, portal team just have to call t
 <br>
 
 ## Description of the functional interface (WHAT)
+
 Retrieving company data from the CX mirror.
 <br>
 <br>
 
 ## Description of the physical interfaces (HOW)
+
 <br>
 <img width="1200" alt="image" src="https://user-images.githubusercontent.com/94133633/210436060-929f9d50-0af3-47c7-aabd-16526f4dd7af.png">
 <br>
 <br>
 
 ### Service Call via BPN
+
 <br>
 
 ```diff
@@ -57,20 +62,18 @@ The portal is using an technical user for the authentication. The technical user
 <br>
 
 #### Data Mapping for Company Data
-<br>
-
-|Data Field Name Portal|Data Field on CX Data Pool|Example|
-|--------|--------|--------|
-|BPN|"bpn": (first response line)|BPNL0MVP000000Q7|
-|Organization Name|"names": [ { "value}]|German Car Factory|
-|Registered Name |"names": [ { "value}]|German Car Factory|
-|International Name |"names": [ { "value}]|German Car Factory|
-|Street & House Number|addresses "country": [ { "technicalKey":}]|DE|
-|Country|addresses "postCodes": [ { "value":}]|80809|
-|Postal Code|addresses "localities": [ { "value":}]|Munich|
 
 <br>
+
+| Data Field Name Portal | Data Field on CX Data Pool                 | Example            |
+| ---------------------- | ------------------------------------------ | ------------------ |
+| BPN                    | "bpn": (first response line)               | BPNL0MVP000000Q7   |
+| Organization Name      | "names": [ { "value}]                      | German Car Factory |
+| Registered Name        | "names": [ { "value}]                      | German Car Factory |
+| International Name     | "names": [ { "value}]                      | German Car Factory |
+| Street & House Number  | addresses "country": [ { "technicalKey":}] | DE                 |
+| Country                | addresses "postCodes": [ { "value":}]      | 80809              |
+| Postal Code            | addresses "localities": [ { "value":}]     | Munich             |
+
 <br>
-
-
-
+<br>

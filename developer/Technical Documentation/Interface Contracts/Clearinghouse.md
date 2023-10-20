@@ -1,18 +1,19 @@
 ## Clearinghouse
+
 <br>
 
 ### Interface Summary
 
 The Gaia-X Clearinghouse provides two key services
 
-* trust (validation of corporate data by verifying data from legal entities, according to the Gaia-X Trust Framework)
-* conformity assessment (SD Documents via teh compliance check)
-
+- trust (validation of corporate data by verifying data from legal entities, according to the Gaia-X Trust Framework)
+- conformity assessment (SD Documents via teh compliance check)
 
 <br>
 <br>
 
 ### Architecture Overview
+
 <br>
 
 #### #1 Notarization Check
@@ -33,6 +34,7 @@ Both the flows are identical and displayed below:
 <br>
 
 ### Authentication Flow / Details
+
 <br>
 <br>
 <p align="center">
@@ -42,15 +44,15 @@ Both the flows are identical and displayed below:
 <br>
 
 ### Description of the functional interface (WHAT) and the physical interfaces (HOW)
+
 The Clearinghouse is triggered by the respective CX service (depending on the scenario by portal or SD Factory) and processes the data.
 The response is provided back to the portal in both the cases.
 Since the interface is asynchron - a response delay of 60 seconds have been agreed. In special cases it could take longer.
 
 Endpoints used by the CH for response:
 
-* /api/administration/registration/clearinghouse/selfDescription
-* /api/administration/Connectors/clearinghouse/selfDescription
+- /api/administration/registration/clearinghouse/selfDescription
+- /api/administration/Connectors/clearinghouse/selfDescription
 
 <br>
 <br>
-

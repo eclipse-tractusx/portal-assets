@@ -6,11 +6,11 @@ Documents are managed inside the postgresql db.
 
 Mainly 4 tables are used for the documents itself
 
-* documents
-* document_types
-* document_status
-* offer_assigned_documents
-* agreement_assigned_documents
+- documents
+- document_types
+- document_status
+- offer_assigned_documents
+- agreement_assigned_documents
 
 <br>
 

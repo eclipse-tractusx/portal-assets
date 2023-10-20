@@ -79,7 +79,7 @@ If unread messages are > 0 AND the actionRequired are > 0; the user icon with no
 
 <br>
 
-Important: the notification message is not available/stored inside the database; instead the db is only storing message metadata and the actual message text is handled inside the FE translation file located in the following repo structure. 
+Important: the notification message is not available/stored inside the database; instead the db is only storing message metadata and the actual message text is handled inside the FE translation file located in the following repo structure.
 Front-End repo cx-portal/src/assets/locales/en/notification.json
 
 <br>
@@ -104,13 +104,13 @@ With the user notification details, read and unread count per filter can get fet
 <br>
 The endpoint is a pure calculation/counting of the different metadata found below:
 
-* read
-* unread
-* infoUnread
-* offerUnread
-* actionRequired
-* unreadActionRequired
-<br>
+- read
+- unread
+- infoUnread
+- offerUnread
+- actionRequired
+- unreadActionRequired
+  <br>
 
 ```diff
 ! GET /api/notification/count-details
@@ -141,12 +141,12 @@ The endpoint supports pagination inside the metadata section.
 
 Additionally the endpoint supports to
 
-* only get read messages
-* only get unread messages
-* get only a specific notification type
-* get only due notifications
-* sorting by date and read status
-<br>
+- only get read messages
+- only get unread messages
+- get only a specific notification type
+- get only due notifications
+- sorting by date and read status
+  <br>
 
 ```diff
 ! GET /api/notification
@@ -194,7 +194,7 @@ This will impact the notification count of #1. Since #1 will only show those not
 <br>
 <br>
 
-### #5 DELETE User notification 
+### #5 DELETE User notification
 
 With the delete user notification, a notification can get deleted. The function is triggered by the user himself and will be executed without any chance for notification recovery.
 <br>
@@ -214,30 +214,34 @@ Therefore following endpoints are implemented:
 <br>
 
 ###### VIEW ALL (inside the filter)
+
 Newest first: {hostname}/api/Notification?page=0&size=15&onlyDueDate=true&sorting=DateDesc  
 Oldest first. {hostname}/api/Notification?page=0&size=15&sorting=DateAsc  
-Unread first: {hostname}/api/Notification?page=0&size=15&sorting=ReadStatusAsc  
+Unread first: {hostname}/api/Notification?page=0&size=15&sorting=ReadStatusAsc
 
 <br>
 
-###### VIEW APP  (inside the filter)
+###### VIEW APP (inside the filter)
+
 Newest first: {hostname}/api/Notification?page=0&size=15&notificationTopic=OFFER&sorting=DateDesc  
 Oldest first. {hostname}/api/Notification?page=0&size=15&notificationTopic=OFFER&sorting=DateAsc  
-Unread first: {hostname}/api/Notification?page=0&size=15&notificationTopic=OFFER&sorting=ReadStatusAsc  
+Unread first: {hostname}/api/Notification?page=0&size=15&notificationTopic=OFFER&sorting=ReadStatusAsc
 
 <br>
 
-###### VIEW Info (inside the filter) 
+###### VIEW Info (inside the filter)
+
 Newest first: {hostname}/api/Notification?page=0&size=15&notificationTopic=INFO&sorting=DateDesc  
 Oldest first. {hostname}/api/Notification?page=0&size=15&notificationTopic=INFO&sorting=DateAsc  
-Unread first: {hostname}/api/Notification?page=0&size=15&notificationTopic=INFO&sorting=ReadStatusAsc  
+Unread first: {hostname}/api/Notification?page=0&size=15&notificationTopic=INFO&sorting=ReadStatusAsc
 
 <br>
 
-###### View Action Required  (inside the filter)
+###### View Action Required (inside the filter)
+
 Newest first: {hostname}/api/Notification?page=0&size=15 &notificationTopic=ACTION&sorting=DateDesc  
 Oldest first. {hostname}/api/Notification?page=0&size=15& notificationTopic=ACTION&sorting=DateAsc  
-Unread first: {hostname}/api/Notification?page=0&size=15& notificationTopic=ACTION&sorting=ReadStatusAsc  
+Unread first: {hostname}/api/Notification?page=0&size=15& notificationTopic=ACTION&sorting=ReadStatusAsc
 
 <br>
 <br>
@@ -264,7 +268,7 @@ https://portal-backend.dev.demo.catena-x.net/api/Notification?page=0&size=15¬if
 <br>
 
 When the user clicks on the view tag "messaged with action required" notification as per the endpoint are showing app:  
-https://portal-backend.dev.demo.catena-x.net/api/Notification?page=0&size=15&onlyDueDate=true&sorting=DateDesc  
+https://portal-backend.dev.demo.catena-x.net/api/Notification?page=0&size=15&onlyDueDate=true&sorting=DateDesc
 
 <br>
 <br>
@@ -272,103 +276,110 @@ https://portal-backend.dev.demo.catena-x.net/api/Notification?page=0&size=15&onl
 ## Configuration
 
 ### Notification Types / Messages
- 
+
 #### Welcome
+
 Welcome Messages, triggered by the api endpoint
-* PUT api/administration/registration/application/{applicationId}/approveRequest 
+
+- PUT api/administration/registration/application/{applicationId}/approveRequest
 
 <br>
 
-Topic | Notification Type | Content | UI Message | Receiver
--------- | -------- | -------- | -------- | --------
-INFO | WELCOME | n/a | Triggered from the FE locales file<br>Welcome to the Catena-X Network. To easily get you onboarded, a number of notifications / onboarding steps have been defined. Please check your notifications and start the configuration of your company area inside the portal to have a network experience based on your need. | New Registered Company Admin
-INFO | WELCOME_USE_CASES | n/a | Triggered from the FE locales file<br>The network is quite huge, we want to ensure that you can focus on your preferred use cases. Select your preferred use case from the table below. | New Registered Company Admin
-INFO | WELCOME_SERVICE_PROVIDER | n/a | Triggered from the FE locales file<br>If you need a service provider to help you with setting up your dataspace or an EDC, just follow us to the Service Provider Marketplace LINK | New Registered Company Admin
-INFO | WELCOME_CONNECTOR_REGISTRATION | n/a | Triggered from the FE locales file<br>You do not have any registered Connector so far – have a look at the connector offers and get your connector to participate. LINK | New Registered Company Admin
-INFO | WELCOME_APP_MARKETPLACE | n/a | Triggered from the FE locales file<br>Get a first inside into available apps, just follow us to the marketplace for apps. LINK | New Registered Company Admin
+| Topic | Notification Type              | Content | UI Message                                                                                                                                                                                                                                                                                                              | Receiver                     |
+| ----- | ------------------------------ | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- |
+| INFO  | WELCOME                        | n/a     | Triggered from the FE locales file<br>Welcome to the Catena-X Network. To easily get you onboarded, a number of notifications / onboarding steps have been defined. Please check your notifications and start the configuration of your company area inside the portal to have a network experience based on your need. | New Registered Company Admin |
+| INFO  | WELCOME_USE_CASES              | n/a     | Triggered from the FE locales file<br>The network is quite huge, we want to ensure that you can focus on your preferred use cases. Select your preferred use case from the table below.                                                                                                                                 | New Registered Company Admin |
+| INFO  | WELCOME_SERVICE_PROVIDER       | n/a     | Triggered from the FE locales file<br>If you need a service provider to help you with setting up your dataspace or an EDC, just follow us to the Service Provider Marketplace LINK                                                                                                                                      | New Registered Company Admin |
+| INFO  | WELCOME_CONNECTOR_REGISTRATION | n/a     | Triggered from the FE locales file<br>You do not have any registered Connector so far – have a look at the connector offers and get your connector to participate. LINK                                                                                                                                                 | New Registered Company Admin |
+| INFO  | WELCOME_APP_MARKETPLACE        | n/a     | Triggered from the FE locales file<br>Get a first inside into available apps, just follow us to the marketplace for apps. LINK                                                                                                                                                                                          | New Registered Company Admin |
 
 <br>
 <br>
 
 #### Manage your company details
+
 Company detail change messages, triggered by the api endpoint
 
-* PUT /api/administration/companydata/credentials/{credentialId}/approval
-* PUT /api/administration/companydata/credentials/{credentialId}/reject
+- PUT /api/administration/companydata/credentials/{credentialId}/approval
+- PUT /api/administration/companydata/credentials/{credentialId}/reject
 
 <br>
 
-Topic | Notification Type | Content | UI Message | Receiver
--------- | -------- | -------- | -------- | --------
-INFO | CREDENTIAL_APPROVAL | {"type":"{company_ssi_details.type}",<br>"credentialId":"{company_ssi_details.id}" | Triggered from the FE locales file<br> "Verified Credential {credentialType} assigned<br>Verified Credential {credentialType} got assigned to your company wallet." | VC Requester
-INFO | CREDENTIAL_REJECT | {"type":"{company_ssi_details.type}",<br>"credentialId":"{company_ssi_details.id}" | Triggered from the FE locales file<br> "Verified Credential {credentialType} declined<br>Verified Credential {credentialType} got declined. You can start a new request immediately." | VC Requester
+| Topic | Notification Type   | Content                                                                            | UI Message                                                                                                                                                                            | Receiver     |
+| ----- | ------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| INFO  | CREDENTIAL_APPROVAL | {"type":"{company_ssi_details.type}",<br>"credentialId":"{company_ssi_details.id}" | Triggered from the FE locales file<br> "Verified Credential {credentialType} assigned<br>Verified Credential {credentialType} got assigned to your company wallet."                   | VC Requester |
+| INFO  | CREDENTIAL_REJECT   | {"type":"{company_ssi_details.type}",<br>"credentialId":"{company_ssi_details.id}" | Triggered from the FE locales file<br> "Verified Credential {credentialType} declined<br>Verified Credential {credentialType} got declined. You can start a new request immediately." | VC Requester |
 
 <br>
 <br>
 
 #### Offer Release Request
+
 Offer Release Approval Messages, triggered by the api endpoint
 
-* PUT /api/apps/appreleaseprocess/{appId}/submit
-* PUT: /api/services/servicerelease/{serviceId}/submit
+- PUT /api/apps/appreleaseprocess/{appId}/submit
+- PUT: /api/services/servicerelease/{serviceId}/submit
 
 <br>
 
-Topic | Notification Type | Content | UI Message | Receiver
--------- | -------- | -------- | -------- | --------
-OFFER | APP_RELEASE_REQUEST | OfferId: {offer.id}<br>RequestorCompanyName:{companies.name}<br>OfferName: {offer.name} | Triggered from the FE locales file<br>{CompanyName} created a new app to get published to the catena-x marketplace. Please review the app release request and approve or decline the app release." here: LINK | CX Admin
-OFFER | SERVICE_RELEASE_REQUEST | OfferId: {offer.id}<br>RequestorCompanyName:{companies.name}<br>OfferName: {offer.name} | Triggered from the FE locales file<br>{CompanyName} created a new service to get published to the catena-x marketplace. Please review the service release request and approve or decline the service release." here: LINK | CX Admin
+| Topic | Notification Type       | Content                                                                                 | UI Message                                                                                                                                                                                                                | Receiver |
+| ----- | ----------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| OFFER | APP_RELEASE_REQUEST     | OfferId: {offer.id}<br>RequestorCompanyName:{companies.name}<br>OfferName: {offer.name} | Triggered from the FE locales file<br>{CompanyName} created a new app to get published to the catena-x marketplace. Please review the app release request and approve or decline the app release." here: LINK             | CX Admin |
+| OFFER | SERVICE_RELEASE_REQUEST | OfferId: {offer.id}<br>RequestorCompanyName:{companies.name}<br>OfferName: {offer.name} | Triggered from the FE locales file<br>{CompanyName} created a new service to get published to the catena-x marketplace. Please review the service release request and approve or decline the service release." here: LINK | CX Admin |
 
 <br>
 <br>
 
 #### Offer Change Process
+
 Offer Change Messages, triggered by the api endpoint
 
-* POST /api/apps/AppChange/{appId}/role/activeapp
-* PUT /api/apps/AppChange/{appId}/subscription/{subscriptionId}/tenantUrl
+- POST /api/apps/AppChange/{appId}/role/activeapp
+- PUT /api/apps/AppChange/{appId}/subscription/{subscriptionId}/tenantUrl
 
 <br>
 
-Topic | Notification Type | Content | UI Message | Receiver
--------- | -------- | -------- | -------- | --------
-INFO | SUBSCRIPTION_URL_UPDATE | {"appId":"{offer.id}",<br>"appName":"{offer.name}",<br>"oldUrl":"{app_subscription_details.url}"<br>"newUrl":"{app_subscription_details.url}" | Triggered from the FE locales file<br> "App URL {appName} updated<br>The app provider has changed the stored App Instance URL for your subscribed app {AppName}." | tbd
-INFO | APP_ROLE_ADDED | not yet supported | not yet supported | not yet supported
+| Topic | Notification Type       | Content                                                                                                                                       | UI Message                                                                                                                                                        | Receiver          |
+| ----- | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| INFO  | SUBSCRIPTION_URL_UPDATE | {"appId":"{offer.id}",<br>"appName":"{offer.name}",<br>"oldUrl":"{app_subscription_details.url}"<br>"newUrl":"{app_subscription_details.url}" | Triggered from the FE locales file<br> "App URL {appName} updated<br>The app provider has changed the stored App Instance URL for your subscribed app {AppName}." | tbd               |
+| INFO  | APP_ROLE_ADDED          | not yet supported                                                                                                                             | not yet supported                                                                                                                                                 | not yet supported |
 
 <br>
 <br>
 
 #### Offer Subscription
+
 Offer Subscription Messages, triggered by the api endpoint
 
-* POST api/apps/{appID}/subscribe
-* POST api/apps/{serviceID}/subscribe
-* PUT api/apps/{appID}/subscription/company/{companyId}/activate
-* ----autosetup----
+- POST api/apps/{appID}/subscribe
+- POST api/apps/{serviceID}/subscribe
+- PUT api/apps/{appID}/subscription/company/{companyId}/activate
+- ----autosetup----
 
 <br>
 
-Topic | Notification Type | Content | UI Message | Receiver
--------- | -------- | -------- | -------- | --------
-OFFER | APP_SUBSCRIPTION_REQUEST | OfferId: {offer.id}<br>CompanyName: {companies.name}<br>OfferName: {offer.name} | Triggered from the FE locales file<br>A new app subscription request was triggered by {requestorCompanyName}. Get in contact with {userEmail} to agree on the app usage and setup guidelines. As soon as this is done, you can activate the app for {requestorCompanyName} here: LINK | App Provider - User documented as "Sales Manager"
-OFFER | APP_SUBSCRIPTION_ACTIVATION | OfferId: {offer.id} | Triggered from the FE locales file<br>App {AppName} go activated, you can now assign user permission to this app. LINK | App Subscription Requester
-OFFER | SERVICE_SUBSCRIPTION_REQUEST | OfferId: {offer.id}<br>RequestorCompanyName: {companies.name}<br>AppName: {offer.name}<br>UserEmail: {company_user.mail}<br>AutoSetupExecuted: {status}<br>AutoSetupError: {status} | Triggered from the FE locales file<br>A new app subscription request was triggered by {requestorCompanyName}. Get in contact with {userEmail} to agree on the app usage and setup guidelines. As soon as this is done, you can activate the service for {requestorCompanyName} here: LINK | Service Provider - User documented as "Sales Manager"
-?? | TECHNICAL_USER_CREATION |  | Triggered from the FE locales file<br>??? | Service Subscription Requester
-OFFER | SERVICE_SUBSCRIPTION_ACTIVATION | OfferId: {offer.id} | Triggered from the FE locales file | Service {ServiceName} go activated. Manage your subscriptions via the following service management panel: LINK | Service Subscription Requester
+| Topic | Notification Type               | Content                                                                                                                                                                             | UI Message                                                                                                                                                                                                                                                                                | Receiver                                                                                                       |
+| ----- | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| OFFER | APP_SUBSCRIPTION_REQUEST        | OfferId: {offer.id}<br>CompanyName: {companies.name}<br>OfferName: {offer.name}                                                                                                     | Triggered from the FE locales file<br>A new app subscription request was triggered by {requestorCompanyName}. Get in contact with {userEmail} to agree on the app usage and setup guidelines. As soon as this is done, you can activate the app for {requestorCompanyName} here: LINK     | App Provider - User documented as "Sales Manager"                                                              |
+| OFFER | APP_SUBSCRIPTION_ACTIVATION     | OfferId: {offer.id}                                                                                                                                                                 | Triggered from the FE locales file<br>App {AppName} go activated, you can now assign user permission to this app. LINK                                                                                                                                                                    | App Subscription Requester                                                                                     |
+| OFFER | SERVICE_SUBSCRIPTION_REQUEST    | OfferId: {offer.id}<br>RequestorCompanyName: {companies.name}<br>AppName: {offer.name}<br>UserEmail: {company_user.mail}<br>AutoSetupExecuted: {status}<br>AutoSetupError: {status} | Triggered from the FE locales file<br>A new app subscription request was triggered by {requestorCompanyName}. Get in contact with {userEmail} to agree on the app usage and setup guidelines. As soon as this is done, you can activate the service for {requestorCompanyName} here: LINK | Service Provider - User documented as "Sales Manager"                                                          |
+| ??    | TECHNICAL_USER_CREATION         |                                                                                                                                                                                     | Triggered from the FE locales file<br>???                                                                                                                                                                                                                                                 | Service Subscription Requester                                                                                 |
+| OFFER | SERVICE_SUBSCRIPTION_ACTIVATION | OfferId: {offer.id}                                                                                                                                                                 | Triggered from the FE locales file                                                                                                                                                                                                                                                        | Service {ServiceName} go activated. Manage your subscriptions via the following service management panel: LINK | Service Subscription Requester |
 
 <br>
 <br>
 
 #### User Role Change
+
 Role Change Messages, triggered by the api endpoint
 
-* PUT: api/administration/user/owncompany/users/{companyUserId}/coreoffers/{offerId}/roles
-* PUT: api/administration/user/owncompany/users/{companyUserId}/apps/{appId}/roles
+- PUT: api/administration/user/owncompany/users/{companyUserId}/coreoffers/{offerId}/roles
+- PUT: api/administration/user/owncompany/users/{companyUserId}/apps/{appId}/roles
 
-Topic | Notification Type | Content | UI Message | Receiver
--------- | -------- | -------- | -------- | --------
-INFO | ROLE_UPDATE_CORE_OFFER | CoreOfferName: "Portal"<br>Username: "{firstname} {lastname}"<br>RemovedRoles: "" (multiple roles possible)<br>AddedRoles: "" (multiple roles possible) | Triggered from the FE locales file<br>Dear {username},<br>your portal user roles got updated by your company administrator. With the change of the role assignment your access rights have changed. You can find more details regarding the role change impact by having a look at the portal role matrix and role description [Role Matrix]{ {hostname}/role-details}<br>New Roles: {add here the new AddedRoles}<br>Removed Roles: {add here the RemovedRoles} | User for which the role was added/deleted
-INFO | ROLE_UPDATE_APP_OFFER | appName: "offer.name"<br>offerId: "offer.id"<br>Username: "{firstname} {lastname}"<br>RemovedRoles: "" (multiple roles possible)<br>AddedRoles: "" (multiple roles possible) | Triggered from the FE locales file<br>"Dear {username},<br>your app user roles got updated by your company administrator. With the change of the role assignment your access rights have changed. You can find all details regarding the role change below.<br>New Roles: {add here the new AddedRoles}<br>Removed Roles: {add here the RemovedRoles}" | User for which the role was added/deleted
+| Topic | Notification Type      | Content                                                                                                                                                                      | UI Message                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Receiver                                  |
+| ----- | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| INFO  | ROLE_UPDATE_CORE_OFFER | CoreOfferName: "Portal"<br>Username: "{firstname} {lastname}"<br>RemovedRoles: "" (multiple roles possible)<br>AddedRoles: "" (multiple roles possible)                      | Triggered from the FE locales file<br>Dear {username},<br>your portal user roles got updated by your company administrator. With the change of the role assignment your access rights have changed. You can find more details regarding the role change impact by having a look at the portal role matrix and role description [Role Matrix]{ {hostname}/role-details}<br>New Roles: {add here the new AddedRoles}<br>Removed Roles: {add here the RemovedRoles} | User for which the role was added/deleted |
+| INFO  | ROLE_UPDATE_APP_OFFER  | appName: "offer.name"<br>offerId: "offer.id"<br>Username: "{firstname} {lastname}"<br>RemovedRoles: "" (multiple roles possible)<br>AddedRoles: "" (multiple roles possible) | Triggered from the FE locales file<br>"Dear {username},<br>your app user roles got updated by your company administrator. With the change of the role assignment your access rights have changed. You can find all details regarding the role change below.<br>New Roles: {add here the new AddedRoles}<br>Removed Roles: {add here the RemovedRoles}"                                                                                                           | User for which the role was added/deleted |
 
 <br>
 <br>
@@ -383,12 +394,12 @@ In the scenario of the following notification types, the notification table attr
 
 <br>
 
-Notification Type | Endpoint triggering the "DONE" Flag | Comment 
------------------ | ----------------------------------- | -------- 
-8                 |	POST: /api/apps/autoSetup <br> 	      |  
-11	        | PUT: /api/apps/appreleaseprocess/{appId}/approveApp <br> PUT: /api/apps/appreleaseprocess/{appId}/declineApp | 
-13	        | POST: /api/services/autoSetup	 | 
-17	        | PUT: /api/services/servicerelease/{serviceId}/approveService <br> PUT: /api/services/servicerelease/{serviceId}/declineService | 
+| Notification Type | Endpoint triggering the "DONE" Flag                                                                                            | Comment |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------- |
+| 8                 | POST: /api/apps/autoSetup <br>                                                                                                 |
+| 11                | PUT: /api/apps/appreleaseprocess/{appId}/approveApp <br> PUT: /api/apps/appreleaseprocess/{appId}/declineApp                   |
+| 13                | POST: /api/services/autoSetup                                                                                                  |
+| 17                | PUT: /api/services/servicerelease/{serviceId}/approveService <br> PUT: /api/services/servicerelease/{serviceId}/declineService |
 
 <br>
 
@@ -398,7 +409,8 @@ For any other notifications, the attribute "done" inside the table portal.notifi
 <br>
 
 Missing documentation:
-* CONNECTOR_REGISTERED
+
+- CONNECTOR_REGISTERED
 
 <br>
 <br>

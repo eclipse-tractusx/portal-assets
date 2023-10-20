@@ -4,9 +4,9 @@
 
 The portal frontend is divided into three parts
 
-* Portal -> (/)
-* Registration -> (/registration)
-* Assets -> (/assets, /documentation)
+- Portal -> (/)
+- Registration -> (/registration)
+- Assets -> (/assets, /documentation)
 
 ![Schema of a local frontend environment](https://raw.githubusercontent.com/catenax-ng/tx-portal-assets/main/public/assets/images/docs/frontend-localhost.svg)
 

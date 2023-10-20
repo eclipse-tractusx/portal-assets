@@ -1,7 +1,5 @@
 ## App
 
-
-
 #### App DB Connection
 
 <br>
@@ -11,6 +9,7 @@
 <br>
 
 #### App Images
+
 2 different types of app images do exist
 
 - app lead picture (used for the marketplace app card)
@@ -19,6 +18,7 @@
 Images are handled inside the portal db. Via the documents table and offer_assigned_documents available app images can get loaded.
 
 Related Endpoints:
+
 - POST: /api/apps/appreleaseprocess/createapp
 - PUT: /api/apps/appreleaseprocess/{appId}
 - GET /api/apps/appreleaseprocess/{appId}/appStatus
@@ -42,7 +42,7 @@ With the app release date future scenarios such as: release app before publishin
 
 #### App Use Case
 
-app offers are aways use_case linked. 
+app offers are aways use_case linked.
 Table relation use_cases - 1:m - app_assigned_use_cases - m:1 - offers
 
 <br>
@@ -60,18 +60,18 @@ Table relation use_cases - 1:m - app_assigned_use_cases - m:1 - offers
 <br>
 
 Related Endpoints:
-- POST: /api/apps/appreleaseprocess/createapp 
-- PUT: /api/apps/appreleaseprocess/{appId} 
+
+- POST: /api/apps/appreleaseprocess/createapp
+- PUT: /api/apps/appreleaseprocess/{appId}
 - GET: /api/apps/{appId}
 - GET: /api/apps/appreleaseprocess/{appId}/appStatus
 - GET: /api/apps/privacyPolicy
-<br>
+  <br>
 
 Privacy policy types / labels:
-* Company_Data
-* User_Data
-* Location
-* Browser_History
-* None
 
-
+- Company_Data
+- User_Data
+- Location
+- Browser_History
+- None

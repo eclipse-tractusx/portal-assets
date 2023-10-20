@@ -8,9 +8,9 @@ This chapter describes the app release process.
 
 The "App Release Process" screen includes details about:
 
-* "Publish Company App" - Start the app publishing process or jump into your own app overview.
-* "Process Guide" - A vertical screen process panel is used to show transparently the app release process steps which need to get processed to publish a app inside the marketplace.
-* "Outlook: Marketplace Requirements" - Soon upcoming new requirements are getting published here. This enables companies to prepare for future app release requirements.
+- "Publish Company App" - Start the app publishing process or jump into your own app overview.
+- "Process Guide" - A vertical screen process panel is used to show transparently the app release process steps which need to get processed to publish a app inside the marketplace.
+- "Outlook: Marketplace Requirements" - Soon upcoming new requirements are getting published here. This enables companies to prepare for future app release requirements.
 
 <br>
 <br>
@@ -44,7 +44,6 @@ and click on
 <br>
 
 <img width="187" alt="image" src="https://user-images.githubusercontent.com/94133633/218282773-a7d2479e-5e90-456c-b70b-ed54730440bf.png">
-
 
 <br>
 <br>

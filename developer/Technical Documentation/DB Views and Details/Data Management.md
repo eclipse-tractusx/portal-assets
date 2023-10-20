@@ -12,7 +12,7 @@ The CX Portal & Network Services system stores different types of data in the sa
 Layer 1: Environment Configuration / Product Data
 The first layer contains the system configuration and holds all items that are required to run the application in an environment. The artifacts of layer 1 are automatically deployed to the different environments via the CI/CD pipeline. Layer 1 represents the base software, which is the same for all environments in all markets. However, the required system configurations may differ slightly from environment to environment and must therefore be managed by the CI/CD pipeline.
 
-Layer 1 includes the following configuration items, but is not limited to these items: DB Setup, Network Paths, Authentication, Application Server Setup, Hostnames, Service Accounts, SSL Certificates. 
+Layer 1 includes the following configuration items, but is not limited to these items: DB Setup, Network Paths, Authentication, Application Server Setup, Hostnames, Service Accounts, SSL Certificates.
 
 <br>
 <br>
@@ -28,73 +28,73 @@ Those data are part of the CI/CD deployment chain.
 Layer 3: Transactional Data
 The fourth layer holds all transaction and master data, which is created on a daily basis in the system, such as users, apps and contracts. This data is always specific for one environment and is therefore not deployed by the CI/CD pipeline.
 
-Transactional data is created by operating the system in a market or testing activities. 
+Transactional data is created by operating the system in a market or testing activities.
 
 <br>
 <br>
 
 ## Master Data
 
-* Agreement
-  * Category
-  * Consent Status
-* Application 
-  * Invitation Status
-  * Checklist State
-  * Checklist Type
-  * Company Application Status
-  * Process Step Status
-  * Process Step Type
-* Countries
-* Language
-* Company 
-  * Status
-  * Role
-  * BPDM Identifier
-  * Unique Identifier
-* User
-  * Status
-* Service Account
-  * Status
-  * Type
-* Connector
-  * Status
-  * Type
-* Document
-  * Status
-  * Type
-* Identity Provider Status
-* Notification
-  * Type
-  * Topic
-* Offer
-  * Status
-  * Type
-  * Subscription Status
-  * Service Type
-* Privacy Policy
-* Verified Credentials
-  * Type
-  * Kind
-* Use Case Paricipation
-  * Status
+- Agreement
+  - Category
+  - Consent Status
+- Application
+  - Invitation Status
+  - Checklist State
+  - Checklist Type
+  - Company Application Status
+  - Process Step Status
+  - Process Step Type
+- Countries
+- Language
+- Company
+  - Status
+  - Role
+  - BPDM Identifier
+  - Unique Identifier
+- User
+  - Status
+- Service Account
+  - Status
+  - Type
+- Connector
+  - Status
+  - Type
+- Document
+  - Status
+  - Type
+- Identity Provider Status
+- Notification
+  - Type
+  - Topic
+- Offer
+  - Status
+  - Type
+  - Subscription Status
+  - Service Type
+- Privacy Policy
+- Verified Credentials
+  - Type
+  - Kind
+- Use Case Paricipation
+  - Status
 
 <br>
 <br>
 
 ## Transactional Data
 
-* Invitation
-* Companies
-* Users
-* Service Accounts
-* Identity provider
-* Connectors
-* Offer
-* Subscription
-* App Instance
-* Company Ssi Details
-* etc.
+- Invitation
+- Companies
+- Users
+- Service Accounts
+- Identity provider
+- Connectors
+- Offer
+- Subscription
+- App Instance
+- Company Ssi Details
+- etc.
 
 <br>
 <br>
@@ -117,39 +117,33 @@ Initial data load in regards of the different instances
 
 Central Keycloak Instance
 
-* Realm: 'Master' & 'Operator'
-* User: operator admin (master realm); CX Admins (operator realm)
-* Clients:
+- Realm: 'Master' & 'Operator'
+- User: operator admin (master realm); CX Admins (operator realm)
+- Clients:
 
 <br>
 <br>
 
 <img width="1115" alt="image" src="https://user-images.githubusercontent.com/94133633/223836590-5109c211-5565-465e-becb-3841f55d00c2.png">
 
-
-* Technical Users
+- Technical Users
 
 Following technical users are part of the base setup of the portal and will be automatically deployed:
 
-| **ID** | **Name** | **Description** | **Service** | **Assigned Roles** |
-|---|---|---|---|---|
-| 1 | sa-reg-1 | Portal technical user to connect to central idp. | Central IdP (Core) | to be added |
-| 2 | sa-reg-2 | Portal technical user to connect to shared idp. | Shared IdP (Core) | to be added |
-| 3 | sa-cl5-custodian-1 | Technical user of SD Factory to wallet | SD Factory (Core) | to be added |
-| 4 | sa-cl5-custodian-2 | Portal technical user to connect to wallet. | Managed Wallets (Core) | to be added |
-| 5 | sa-cl3-cx-1 | Portal technical user to connect GitHub and Semantic Hub. | Semantic Hub (Core) | to be added |
-| 6 | sa-cl7-cx-5 | User for Portal to access BPDM for company address publishing to the BPDM process | BPDM Connect (Core) | to be added |
-| 7 | **obsolete**<br>sa-cl6-cx-01 | DAPS connector registration | DAPS | to be added |
-| 8 | sa-cl8-cx-1 | Technical User for Portal to SD | SD Factory (Core) | to be added |
-| 9 | sa-cl2-01 | Technical User Clearinghouse update application | CH CX (3rd Party) | to be added |
-| 10 | sa-cl2-02 | Technical User SelfDescription (SD) update application | SD Factory (Core) | to be added |
-| 11 | sa-cl21-01 | Technical User used and owned by the platform operator to register discovery services| Discovery Finder (Core) | to be added |
-| 11 | sa-cl22-01 | Technical User used and owned by the platform operator to access the owned BPN discovery services | BPN Discovery (Core) | to be added |
-
+| **ID** | **Name**                     | **Description**                                                                                   | **Service**             | **Assigned Roles** |
+| ------ | ---------------------------- | ------------------------------------------------------------------------------------------------- | ----------------------- | ------------------ |
+| 1      | sa-reg-1                     | Portal technical user to connect to central idp.                                                  | Central IdP (Core)      | to be added        |
+| 2      | sa-reg-2                     | Portal technical user to connect to shared idp.                                                   | Shared IdP (Core)       | to be added        |
+| 3      | sa-cl5-custodian-1           | Technical user of SD Factory to wallet                                                            | SD Factory (Core)       | to be added        |
+| 4      | sa-cl5-custodian-2           | Portal technical user to connect to wallet.                                                       | Managed Wallets (Core)  | to be added        |
+| 5      | sa-cl3-cx-1                  | Portal technical user to connect GitHub and Semantic Hub.                                         | Semantic Hub (Core)     | to be added        |
+| 6      | sa-cl7-cx-5                  | User for Portal to access BPDM for company address publishing to the BPDM process                 | BPDM Connect (Core)     | to be added        |
+| 7      | **obsolete**<br>sa-cl6-cx-01 | DAPS connector registration                                                                       | DAPS                    | to be added        |
+| 8      | sa-cl8-cx-1                  | Technical User for Portal to SD                                                                   | SD Factory (Core)       | to be added        |
+| 9      | sa-cl2-01                    | Technical User Clearinghouse update application                                                   | CH CX (3rd Party)       | to be added        |
+| 10     | sa-cl2-02                    | Technical User SelfDescription (SD) update application                                            | SD Factory (Core)       | to be added        |
+| 11     | sa-cl21-01                   | Technical User used and owned by the platform operator to register discovery services             | Discovery Finder (Core) | to be added        |
+| 11     | sa-cl22-01                   | Technical User used and owned by the platform operator to access the owned BPN discovery services | BPN Discovery (Core)    | to be added        |
 
 <br>
 <br>
-
-
-
-

@@ -4,8 +4,7 @@ The "App Release Publishing Process" is accessible via the "App Release Process"
 <br>
 The App Provider has access to both of the start screens to trigger a new app for marketplace publishing.  
 <br>
-The app publishing process includes the submission of relevant app details, adding app images, documents as well as testing and technical connection (where suitable).  
-
+The app publishing process includes the submission of relevant app details, adding app images, documents as well as testing and technical connection (where suitable).
 
 ## Implementation
 
@@ -31,26 +30,25 @@ Option 2: Via the App Release Process
 
 In the Step 1 of the publishing process, the app card details are getting filled first
 
-* app name
-* provider
-* app lead picture
-* language support
-* pricing information
-* etc.
-
+- app name
+- provider
+- app lead picture
+- language support
+- pricing information
+- etc.
 
 ##### Implementation Details
 
-* create a new app in table portal.apps with the data send in the request body
-  * store the value "title" in the attribute name
-  * store the value "provider" in the attribute provider
-  * store the value "leadPictureUri" in the attribute thumbnail_url
-  * the status of the app is getting set to "CREATED" => "1"
-* portal.apps attribute provider_company_id is set based on the users company id
-* the "descriptions" in de and en are stored in the table portal.app_descriptions (linked to the table portal.apps via the new created app id)
-* the "supportedLanguageCodes" are stored in the table portal.app_languages (linked to the table portal.apps via the new created app id)
-* the "useCaseIds" (supported app use_case(s)) are stored in the portal.app_assigned_use_cases table (linked to the table portal.apps via the new created app id)
-* the "price" is stored in the portal.app_assigned_licenses table (linked to the table portal.apps via the new created app id)
+- create a new app in table portal.apps with the data send in the request body
+  - store the value "title" in the attribute name
+  - store the value "provider" in the attribute provider
+  - store the value "leadPictureUri" in the attribute thumbnail_url
+  - the status of the app is getting set to "CREATED" => "1"
+- portal.apps attribute provider_company_id is set based on the users company id
+- the "descriptions" in de and en are stored in the table portal.app_descriptions (linked to the table portal.apps via the new created app id)
+- the "supportedLanguageCodes" are stored in the table portal.app_languages (linked to the table portal.apps via the new created app id)
+- the "useCaseIds" (supported app use_case(s)) are stored in the portal.app_assigned_use_cases table (linked to the table portal.apps via the new created app id)
+- the "price" is stored in the portal.app_assigned_licenses table (linked to the table portal.apps via the new created app id)
 
 <br>
 <br>
@@ -58,6 +56,7 @@ In the Step 1 of the publishing process, the app card details are getting filled
 ##### API Details
 
 ###### #1 Get Languages
+
 Get language api endpoint is used to provide the user a dropdown function in which the provider can select which language the respective app supports
 
 ```diff
@@ -67,7 +66,7 @@ Get language api endpoint is used to provide the user a dropdown function in whi
 <br>
 
 Response Body
-   
+
     [
           {
              "language": "de",
@@ -84,12 +83,12 @@ Response Body
           },
         ...
      ]
-   
 
 <br>
 <br>
 
 ###### #2 Get Use Cases
+
 Get use cases api endpoint is used to provide the user a dropdown function in which the provider can select which use cases the respective app serves
 
 <img width="325" alt="image" src="https://user-images.githubusercontent.com/94133633/211015522-2b222613-61d9-4c9c-b1cf-343aff353628.png">
@@ -110,11 +109,11 @@ Response Body
      }
     ]
 
-
 <br>
 <br>
 
 ###### #3 Get Sales Manager
+
 Get possible sales manager (under my company) which I can add as Sales Manager of my app. The Sales Manager is useful to assign specific notifications when an app get's a subscribe request.
 
 ```diff
@@ -155,6 +154,7 @@ Supported formats: JPEG and PNG
 <br>
 
 ###### #5 DELETE Image
+
 In case the user identifiers that a wrong image is loaded or the image doesnt fit/has changed; the DELETE endpoint is used to delete doucments linked to the app.
 Important: the deletion is not reversable - since the app is still under DRAFT, all app related details will get deleted immediately.
 
@@ -166,28 +166,29 @@ Important: the deletion is not reversable - since the app is still under DRAFT, 
 
 Validations:
 
-* first, check if the user requesting the document deletion belongs to the same company as the user who has initially uploaded the document (acting user company relation needed + the user which is stored in the documents table for the respective document_if as company_user_id
-* afterwards; check if the document is assigned to an app (via table offer_assigned_documents)
-  * if yes proceed
-  * if no, error "document not found"
-* next check if the app is in status "CREATED" 
-  * if yes proceed
-  * if no, error "app is locked"
-* check if the document_type is any of the following APP_IMAGE; APP_CONTRACT, ADDITIONAL_DETAILS, APP_LEADIMAGE, APP_TECHNICAL_INFORMATION
-  * if yes, proceed
-  * if no; error "incorrect document type - not supported for apps"
-* validate if the document is unlocked
-  * if yes; proceed
-  * if no; error  "document is locked"
- 
+- first, check if the user requesting the document deletion belongs to the same company as the user who has initially uploaded the document (acting user company relation needed + the user which is stored in the documents table for the respective document_if as company_user_id
+- afterwards; check if the document is assigned to an app (via table offer_assigned_documents)
+  - if yes proceed
+  - if no, error "document not found"
+- next check if the app is in status "CREATED"
+  - if yes proceed
+  - if no, error "app is locked"
+- check if the document_type is any of the following APP_IMAGE; APP_CONTRACT, ADDITIONAL_DETAILS, APP_LEADIMAGE, APP_TECHNICAL_INFORMATION
+  - if yes, proceed
+  - if no; error "incorrect document type - not supported for apps"
+- validate if the document is unlocked
+  - if yes; proceed
+  - if no; error "document is locked"
 
 Deletion Flow (if all validations have been successful):
-* delete the document (including the relation / link in table offer_assigned_documents)
+
+- delete the document (including the relation / link in table offer_assigned_documents)
 
 <br>
 <br>
 
 ###### #6 Create App
+
 Created a new app for the current active app provider
 
 ```diff
@@ -225,58 +226,51 @@ Request Body
 
 Endpoint exception handling:
 
-* SalesManager can be NULL
-* validate if the SalesManager uuid is a valid uuid of an user with the role "SalesManager"
-* validation is needed if the SalesManager belongs to the same company as the acting user 
-* PrivacyPolicies must be one of the allowed values as per the static data table
+- SalesManager can be NULL
+- validate if the SalesManager uuid is a valid uuid of an user with the role "SalesManager"
+- validation is needed if the SalesManager belongs to the same company as the acting user
+- PrivacyPolicies must be one of the allowed values as per the static data table
 
 <br>
 <br>
 
->Input Validations
+> Input Validations
 >
->* App Title - minlength: 5, maxlength: 40; pattern:
-> * A-Z
-> * a-z
-> * .
-> * :
-> * _
-> * -
-> * @
-> * &
-> * 0-9
-> * space
->
->* App Provider - minlength: 3, maxlength: 30; pattern: 
-> * A-Z
-> * a-z
-> * space
->
->* Short Description (en) - minlength: 10, maxlength: 255; pattern:
-> * a-zA-Z0-9 !?@&#'"()_-=/*.,;:
-> 
->* Short Description (de) - minlength: 10, maxlength: 255; pattern
-> * a-zA-ZÀ-ÿ0-9 !?@&#'"()_-=/*.,;:
-> 
->* Use Case/Category - Dropdown element - pattern:
-> * A-Z
-> * a-z
-> 
->* App Language - Multi Select List - pattern:
-> * A-Z
-> * a-z
-> * space
-> 
->* Pricing Information - minlength: 1, maxlength: 15; pattern
-> * A-Z
-> * a-z
-> * 0-9
-> * /
-> * €
-> * space
-> 
->* App Icon/Image - dropzone
-> * only png und jpeg allowed
+> - App Title - minlength: 5, maxlength: 40; pattern:
+> - A-Z
+> - a-z
+> - .
+> - :
+> - \_
+> - -
+> - @
+> - &
+> - 0-9
+> - space
+> - App Provider - minlength: 3, maxlength: 30; pattern:
+> - A-Z
+> - a-z
+> - space
+> - Short Description (en) - minlength: 10, maxlength: 255; pattern:
+> - a-zA-Z0-9 !?@&#'"()\_-=/\*.,;:
+> - Short Description (de) - minlength: 10, maxlength: 255; pattern
+> - a-zA-ZÀ-ÿ0-9 !?@&#'"()\_-=/\*.,;:
+> - Use Case/Category - Dropdown element - pattern:
+> - A-Z
+> - a-z
+> - App Language - Multi Select List - pattern:
+> - A-Z
+> - a-z
+> - space
+> - Pricing Information - minlength: 1, maxlength: 15; pattern
+> - A-Z
+> - a-z
+> - 0-9
+> - /
+> - €
+> - space
+> - App Icon/Image - dropzone
+> - only png und jpeg allowed
 
 <br>
 <br>
@@ -287,11 +281,10 @@ Endpoint exception handling:
 
 In the Step 2 of the publishing process, the app detail page is getting filled
 
-* app description
-* app images
-* documents/contract information
-* etc.
-
+- app description
+- app images
+- documents/contract information
+- etc.
 
 ##### Implementation Details
 
@@ -303,6 +296,7 @@ to be added
 ##### API Details
 
 ###### #1 Update App Details
+
 Description
 
 ```diff
@@ -336,7 +330,7 @@ Request Body
       ],
       "providerUri": "string",
       "contactEmail": "string",
-      "contactNumber": "string"  
+      "contactNumber": "string"
     }
 
 <br>
@@ -346,8 +340,8 @@ Please note: if a value is send empty, the existing possible saved value will ge
 <br>
 <br>
 
-
 ###### #2 DELETE Image/Documents
+
 In case the user identifiers that a wrong image is loaded or the image doesnt fit/has changed; the DELETE endpoint is used to delete doucments linked to the app.
 Important: the deletion is not reversable - since the app is still under DRAFT, all app related details will get deleted immediately.
 
@@ -359,23 +353,23 @@ Important: the deletion is not reversable - since the app is still under DRAFT, 
 
 Validations:
 
-* first, check if the user requesting the document deletion belongs to the same company as the user who has initially uploaded the document (acting user company relation needed + the user which is stored in the documents table for the respective document_if as company_user_id
-* afterwards; check if the document is assigned to an app (via table offer_assigned_documents)
-  * if yes proceed
-  * if no, error "document not found"
-* next check if the app is in status "CREATED" 
-  * if yes proceed
-  * if no, error "app is locked"
-* check if the document_type is any of the following APP_IMAGE; APP_CONTRACT, ADDITIONAL_DETAILS, APP_LEADIMAGE, APP_TECHNICAL_INFORMATION
-  * if yes, proceed
-  * if no; error "incorrect document type - not supported for apps"
-* validate if the document is unlocked
-  * if yes; proceed
-  * if no; error  "document is locked"
- 
+- first, check if the user requesting the document deletion belongs to the same company as the user who has initially uploaded the document (acting user company relation needed + the user which is stored in the documents table for the respective document_if as company_user_id
+- afterwards; check if the document is assigned to an app (via table offer_assigned_documents)
+  - if yes proceed
+  - if no, error "document not found"
+- next check if the app is in status "CREATED"
+  - if yes proceed
+  - if no, error "app is locked"
+- check if the document_type is any of the following APP_IMAGE; APP_CONTRACT, ADDITIONAL_DETAILS, APP_LEADIMAGE, APP_TECHNICAL_INFORMATION
+  - if yes, proceed
+  - if no; error "incorrect document type - not supported for apps"
+- validate if the document is unlocked
+  - if yes; proceed
+  - if no; error "document is locked"
 
 Deletion Flow (if all validations have been successful):
-* delete the document (including the relation / link in table offer_assigned_documents)
+
+- delete the document (including the relation / link in table offer_assigned_documents)
 
 <br>
 <br>
@@ -400,13 +394,13 @@ Privacy Policy options/enums are fetched from the portal db to display the selec
 
 following translation for the privacy policy tags
 
-DB Response | UI Tag Name 
---- | --- 
-"COMPANY_DATA“ | Company Data
-"USER_DATA“ | User Data 
-"LOCATION" | Location 
-"BROWSER_HISTORY"	| Browser History 
-"NONE"	| None 
+| DB Response       | UI Tag Name     |
+| ----------------- | --------------- |
+| "COMPANY_DATA“    | Company Data    |
+| "USER_DATA“       | User Data       |
+| "LOCATION"        | Location        |
+| "BROWSER_HISTORY" | Browser History |
+| "NONE"            | None            |
 
 <br>
 
@@ -420,7 +414,6 @@ In case the privacy policies can not get loaded, the response will look like def
 
 <img width="658" alt="image" src="https://user-images.githubusercontent.com/94133633/229377086-7529cb89-4df4-442c-a531-13483c308554.png">
 
-
 <br>
 <br>
 
@@ -433,7 +426,8 @@ Depending on the response of the endpoint #1 GET agreements, the user will be en
 <br>
 
 ###### #1 Retrieve Terms & Conditions
-Terms and Conditions are fetched via the endpoint 
+
+Terms and Conditions are fetched via the endpoint
 
 ```diff
 ! GET: /api/apps/appreleaseprocess/agreementData
@@ -469,6 +463,7 @@ If the documentId is NULL, the agreement is displayed without link (as currently
 <br>
 
 ###### #2 Retrieve Documents
+
 Terms and Conditions with an document ID in API endpoint #1 can get retrieved via the document endpoint GET /frameDocuments/{documentId}
 
 ```diff
@@ -485,6 +480,7 @@ Response Body
 <br>
 
 ###### #3 Upload Document
+
 The user has to upload the app conformity document.
 
 ```diff
@@ -496,6 +492,7 @@ Type: CONFORMITY_APPROVAL_BUSINESS_APPS
 <br>
 
 ###### #4 DELETE Document
+
 In case the user identifiers that a wrong document got uploaded in the respective step, the DELETE endpoint is used to delete doucments linked to the app.
 Important: the deletion is not reversable - since the app is still under DRAFT, all app related details will get deleted immediately.
 
@@ -581,10 +578,11 @@ Only a preview for now
 
 ##### Implementation Details
 
-With submitting the app for marketplace publishing, the 
-* app status is getting updated to "IN_REVIEW"
-* CX Admin is informed (via notification) about the needed app release review
-* documents linked to the app are set to "LOCKED"
+With submitting the app for marketplace publishing, the
+
+- app status is getting updated to "IN_REVIEW"
+- CX Admin is informed (via notification) about the needed app release review
+- documents linked to the app are set to "LOCKED"
 
 <br>
 <br>
@@ -592,6 +590,7 @@ With submitting the app for marketplace publishing, the
 ##### API Details
 
 ###### #1 Get App Details
+
 Description
 
 ```diff
@@ -653,6 +652,7 @@ Description
 <br>
 
 ###### #2 Submit App for Marketplace Release
+
 Description
 
 ```diff
@@ -661,16 +661,17 @@ Description
 
 Validations:
 
-* validates document upload (lead image, app image, confirmity document)
-* validates the signed agreements
-* validates if roles are uploaded
-* validates if technical user profile is configured
-* validates if privacy policy is set
+- validates document upload (lead image, app image, confirmity document)
+- validates the signed agreements
+- validates if roles are uploaded
+- validates if technical user profile is configured
+- validates if privacy policy is set
 
 <br>
 <br>
 
 ###### #3 Download Document
+
 Conformity Document as well as the app specific documents can get downloaded by the user by clicking on the document name.
 The GET document endpoint is getting triggered and document downloaded.
 
@@ -680,4 +681,3 @@ The GET document endpoint is getting triggered and document downloaded.
 
 <br>
 <br>
-
