@@ -74,4 +74,28 @@ Privacy policy types / labels:
 * Browser_History
 * None
 
+#### App Date Last Changed
+The date_last_changed is getting automatically updated if any of the following endpoints is triggered:
 
+<br>
+
+###### App Change
+* /api/apps/AppChange/{appId}/role/activeapp
+* /api/apps/AppChange/{appId}/appupdate/description
+* /api/apps/AppChange/{appId}/appLeadImage
+* /api/apps/AppChange/{appId}/subscription/{subscriptionId}/tenantUrl
+
+ <br>
+
+###### App Release
+* /api/apps/AppReleaseProcess/updateappdoc/{appId}/documentType/{documentTypeId}/documents
+* /api/apps/AppReleaseProcess/{appId}/role
+* /api/apps/AppReleaseProcess/consent/{appId}/agreementConsents
+* /api/apps/AppReleaseProcess/createapp
+* /api/apps/AppReleaseProcess/{appId}
+* /api/apps/AppReleaseProcess/{appId}/technical-user-profiles
+
+<br>
+<br>
+
+  

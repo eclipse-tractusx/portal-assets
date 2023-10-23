@@ -17,7 +17,7 @@ Below you can find an overview of all supported templates as well as the templat
 Template Name: "TextCenterAlignedWithCardGrid"
 <br>
 
-<img width="1080" alt="image" src="https://user-images.githubusercontent.com/94133633/211916164-7e6659c7-10b7-41de-96b9-74e6a7fd6828.png">
+<img width="1080" alt="image" src="../static/TextCenterAlignedWithCardGrid.png">
 
 <br>
 
@@ -90,7 +90,7 @@ Template Name: "TextCenterAlignedWithCardGrid"
 Template Name: "TextCenterAlignedWithLinkButtonGrid"
 <br>
 
-<img width="1080" alt="image" src="https://user-images.githubusercontent.com/94133633/211919901-381dcc7b-bd19-4c10-b33a-e2da1c69f8e8.png">
+<img width="1080" alt="image" src="../static/TextCenterAlignedWithLinkButtonGrid.png">
 
 
  <details>
@@ -138,7 +138,7 @@ Template Name: "TextCenterAlignedWithLinkButtonGrid"
 Template Name: "TextImageSideBySideWithCardGrid"
 <br>
 
-<img width="1080" alt="image" src="https://user-images.githubusercontent.com/94133633/211922125-4447c344-0c25-4c3f-859a-df1bc22af3d5.png">
+<img width="1080" alt="image" src="../static/TextImageSideBySideWithCardGrid.png">
 
 <details>
   <summary>Structure Details</summary>
@@ -219,7 +219,7 @@ Template Name: "TextImageSideBySideWithCardGrid"
 Template Name: "TextVideoSideBySide"
 <br>
 
-<img width="1080" alt="image" src="https://user-images.githubusercontent.com/94133633/211922780-7e0d8f66-1e0d-4210-baf0-08e322ec1fe6.png">
+<img width="1080" alt="image" src="../static/TextVideoSideBySide.png">
 
 <details>
   <summary>Structure Details</summary>
@@ -245,7 +245,7 @@ Template Name: "TextVideoSideBySide"
 Template Name: "VideoTextSideBySide"
 <br>
 
-<img width="1080" alt="image" src="https://user-images.githubusercontent.com/94133633/211922905-875e8531-17b4-467d-8c83-5215a1d86f4d.png">
+<img width="1080" alt="image" src="../static/VideoTextSideBySide.png">
 
 <details>
   <summary>Structure Details</summary>
@@ -270,7 +270,7 @@ Template Name: "VideoTextSideBySide"
 Template Name: "TextImageCenterAligned"
 <br>
 
-<img width="1055" alt="image" src="https://user-images.githubusercontent.com/94133633/211923185-9ed617a1-6149-4795-8e84-ddf7f8a49864.png">
+<img width="1055" alt="image" src="../static/TextImageCenterAligned.png">
 
 <details>
   <summary>Structure Details</summary>
@@ -296,7 +296,7 @@ Template Name: "TextImageCenterAligned"
 Template Name: "TextCenterAligned"
 <br>
 
-<img width="1080" alt="image" src="https://user-images.githubusercontent.com/94133633/211923185-9ed617a1-6149-4795-8e84-ddf7f8a49864.png">
+<img width="1080" alt="image" src="../static/TextCenterAligned.png">
 
 <details>
   <summary>Structure Details</summary>
@@ -320,7 +320,7 @@ Template Name: "TextCenterAligned"
 Template Name: "TextImageSideBySide"
 <br>
 
-<img width="1080" alt="image" src="https://user-images.githubusercontent.com/94133633/211925359-6b0ad50b-7cba-4ef5-b8a9-27f1b63bff77.png">
+<img width="1080" alt="image" src="../static/TextImageSideBySide.png">
 
 <details>
   <summary>Structure Details</summary>
@@ -340,6 +340,201 @@ Template Name: "TextImageSideBySide"
 
 <br>
 <br>
+
+#### #9 TextCenterAlignedBody2
+
+Template Name: "TextCenterAlignedBody2"
+<br>
+
+<img width="1080" alt="image" src="../static/TextCenterAlignedBody2.png">
+
+<br>
+
+<details>
+  <summary>Structure Details</summary>
+
+      {
+        title '',
+        subTitles [
+          'In this example, an SME produces a batch of gears with batch number XX1235509 and part number 5A52625. After the parts have been manufactured, the SME creates a digital twin for this batch in the <strong class='tooltip'>Digital Twin Registry<0>Each traceable object is mapped via a digital twin and registered in the Digital Twin Registry</0></strong> using the <strong class='tooltip'>Batch<0>Represents the master data of a batch after the assembly process. Relevant for manufacturers of components with large batches, which are produced under the same manufacturing conditions and bundled in a batch number.</0></strong> data model in accordance with the Catena-X standards. In addition, a <strong class='tooltip'>Catena-X Unique ID<0>Catena-X ID - Universally Unique Identifier (UUID): Each object (raw material, component or vehicle) receives a unique Catena-X ID for an unequivocally identification in the Catena-X data room.</0></strong> is generated for the batch so that it can be clearly identified in the Catena-X ecosystem. The <strong class='tooltip'>EDC<0>The Eclipse Dataspace Connector (EDC) is the standard connector within the Catena-X network that ensures secure and sovereign data exchange.</0></strong> provides the customer with a data offer to retrieve this data from the digital twin. The physical components (gears) are then sent to the customer.<1></1><1></1><1></1>',
+          'The customer receives the SME's batch of gears and scans them when the transmission is manufactured. He also creates a digital twin and a Catena-X unique ID for the transmission (serial number 21B294301258, part number 5A52479). He uses the <strong class='tooltip'>SerialPartTypization<0>Represents the master data of a component with its own serial number after the assembly process. Relevant for manufacturers of serialized individual parts or vehicle manufacturers.</0></strong> data model to register his digital twin. He makes the information from the digital twin available to his customer, in this case to the OEM, via a corresponding data offer in the EDC. To logically link the two digital twins (batch of gears to transmissions), the Catena-X Unique ID of the batch is determined via a look-up in the Digital Twin Registry and stored in the digital twin of the transmission using the <strong class='tooltip'>AssemblyPartRelation<0>Represents the relationship between the components after the assembly process. For example, which batch (gear wheel, raw material) is installed in which serialized part (transmission) in which vehicle.</0></strong> data model. This logical link creates the Catena-X data chain.<1></1><1></1><1></1>',
+          'The same process happens at all levels, as in the example above, between the customer and the OEM.<1></1><1></1><1></1>'
+          ],
+        id 'details3-id',
+        backgroundColor '#f9f9f9',
+        template 'TextCenterAlignedBody2'
+      }
+
+ </details>
+
+ <br>
+ <br>
+
+#### #10 TextImageSideBySideWithLinks
+
+Template Name: "TextImageSideBySideWithLinks"
+<br>
+
+<img width="1080" alt="image" src="../static/TextImageSideBySideWithLinks.png">
+
+<br>
+
+<details>
+  <summary>Structure Details</summary>
+
+      {
+        title:"Policy Intro",
+        description:"Policies are used to define data access policies as well as usage details.<1></1><1></1>Access means it defined who can view data offers. Usage defines the data access itself - means contract negotiations and data consumption. E.g. Company A can see that Company B has a Data Offer of last week produced vehicle data - however due to missing usage rights the company can not accept the agreement/data offer and can't access those data.<1></1><1></1>The following page provides details about the respective available access/usage policies<1></1><1></1>",
+        imagePath:"/images/frame/AccessVsUsage.png",
+        backgroundColor:"#FFFFFFF",
+        id:"core-id",
+        template:"TextImageSideBySide",
+        sectionLink: {
+          data: [
+            {
+              title: "* Membership",
+              id:"membership-id",
+              internal: true
+            },
+            {
+              title: "* BPN",
+              id:"bpn-id",
+              internal: true
+            },
+            {
+              title: "* Use Case",
+              id:"usecase-id",
+              internal: true
+            },
+            {
+              title: "* Roles",
+              id:"roles-id",
+              internal: true
+            }
+          ]
+        }
+      }
+
+ </details>
+
+ <br>
+ <br>
+
+
+#### #11 TextImageSideBySideWithSections
+
+Template Name: "TextImageSideBySideWithSections"
+<br>
+
+<img width="1080" alt="image" src="../static/TextImageSideBySideWithSections.png">
+
+<br>
+
+<details>
+  <summary>Structure Details</summary>
+
+      {
+        title: "Configure your company",
+        description: "Configure your company before participating fully inside the network<1></1><1></1>",
+        imagePath: "/images/logos/cx-text.svg",
+        backgroundColor: "#F9F9F9",
+        id: "company-setting-id",
+        template: "TextImageSideBySideWithSections",
+        sectionLink: {
+          data: [
+            {
+              title: ">> IdP Config",
+              id: idp-id",
+              internal: true
+            },
+            {
+              title: ">> User Management",
+              id: "user-id",
+              internal: true
+            },
+            {
+              title: ">> Company Certificates",
+              id: "company-id",
+              internal: true
+            },
+            {
+              title: ">> Use Case Frameworks",
+              id: "usecase-id",
+              internal: true
+            }
+          ]
+        },
+        subsections: [
+          {
+            title: "User Management",
+            description:
+              "To add further members of your company as users to the portal, please proceed by reviewing the <strong>Role Descriptions</strong> and adding the desired colleagues via the <strong>User Management</strong><1></1><1></1>",
+            id: "user-id",
+            sectionLink: {
+              data: [
+                {
+                  title: ">> Role Descriptions",
+                  id: "/role-details",
+                  internal: false
+                },
+                {
+                  title: ">> User Management",
+                  id: "/usermanagement",
+                  internal: false
+                }
+              ]
+            }
+          },
+          {
+            title: "Configure Company IdP (optional)",
+            description:
+              "If your company would like to use their own company authentication to have the comfort of federated user login and user credentials not shared with an operator, you can connect your company IdP with the Catena-X shared IdP. Please refer to the following documentation to show you the necessary steps to configure your <strong>Company IdP</strong>.<1></1><1></1>",
+            id: idp-id",
+            sectionLink: {
+              data: [
+                {
+                  title: ">> Configure your IdP",
+                  id: "/documentation/?path=docs%2F02.+Technical+Integration%2F02.+Identity+Provider+Management",
+                  internal: false
+                }
+              ]
+            }
+          },
+          {
+            title: "Company Certificates",
+            description: "",
+            id: "company-id",
+            sectionLink: {
+              data: [
+                {
+                  title: ">> Setup your company certificates",
+                  id: "/documentation/?path=docs%2F06.+Certificates%2F02.+Other+Certificates.md",
+                  internal: false
+                }
+              ]
+            }
+          },
+          {
+            title: "Use Case Frameworks",
+            description: "",
+            id: "usecase-id",
+            sectionLink: {
+              data: [
+                {
+                  title: ">> Sign the relevant use case frameworks.",
+                  id: "/documentation/?path=docs%2F06.+Certificates%2F01.+UseCase+Participation.md",
+                  internal: false
+                }
+              ]
+            }
+          }
+        ]
+      }
+
+ </details>
+
+ <br>
+ <br>
 
 
 ### Implementation  
