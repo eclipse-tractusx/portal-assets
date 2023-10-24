@@ -36,4 +36,8 @@ The portal supports application and db logging. Details are stored here: https:/
 
 ## Monitoring
 
-Note: Prometheus and Grafana are planned
+Currently all backend services write log entries as structural data in json format. These logs can easily be monitored. There are several options to provide a stable monitoring solution, one of them is to setup loki and grafana. In this solution loki is used as a datasource and custom dashboards can be setup in grafana to monitor the services. Some general Properties to query with grafana are:
+
+- StatusCode - contains the status code of the response
+- Elapsed - contains the time a endpoint took to response in milliseconds
+- RenderedMessage - contains the log message with possible errors

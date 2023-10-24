@@ -339,10 +339,10 @@ Offer Change Messages, triggered by the api endpoint
 
 <br>
 
-| Topic | Notification Type       | Content                                                                                                                                       | UI Message                                                                                                                                                        | Receiver          |
-| ----- | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| INFO  | SUBSCRIPTION_URL_UPDATE | {"appId":"{offer.id}",<br>"appName":"{offer.name}",<br>"oldUrl":"{app_subscription_details.url}"<br>"newUrl":"{app_subscription_details.url}" | Triggered from the FE locales file<br> "App URL {appName} updated<br>The app provider has changed the stored App Instance URL for your subscribed app {AppName}." | tbd               |
-| INFO  | APP_ROLE_ADDED          | not yet supported                                                                                                                             | not yet supported                                                                                                                                                 | not yet supported |
+| Topic | Notification Type       | Content                                                                                                                                       | UI Message                                                                                                                                                        | Receiver     |
+| ----- | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| INFO  | SUBSCRIPTION_URL_UPDATE | {"appId":"{offer.id}",<br>"appName":"{offer.name}",<br>"oldUrl":"{app_subscription_details.url}"<br>"newUrl":"{app_subscription_details.url}" | Triggered from the FE locales file<br> "App URL {appName} updated<br>The app provider has changed the stored App Instance URL for your subscribed app {AppName}." | tbd          |
+| INFO  | APP_ROLE_ADDED          | {"AppName":"{offer.name}","Roles":["{user_roles.name}"]}                                                                                      | <img width="584" alt="image" src="https://github.com/catenax-ng/tx-portal-assets/assets/94133633/e7f72a26-63bf-4e1a-b743-64d0eebd7044">                           | app customer |
 
 <br>
 <br>

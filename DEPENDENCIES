@@ -10,7 +10,7 @@ npm/npmjs/-/basic-auth/2.0.1, MIT, approved, clearlydefined
 npm/npmjs/-/body-parser/1.20.1, MIT, approved, clearlydefined
 npm/npmjs/-/braces/3.0.2, MIT, approved, clearlydefined
 npm/npmjs/-/bytes/3.1.2, MIT, approved, clearlydefined
-npm/npmjs/-/call-bind/1.0.2, MIT, approved, clearlydefined
+npm/npmjs/-/call-bind/1.0.2, MIT, approved, #11092
 npm/npmjs/-/chalk/2.4.2, MIT, approved, clearlydefined
 npm/npmjs/-/chalk/4.1.2, MIT, approved, clearlydefined
 npm/npmjs/-/cliui/8.0.1, ISC AND Artistic-2.0, approved, #3753
@@ -48,7 +48,7 @@ npm/npmjs/-/find-replace/3.0.0, MIT, approved, clearlydefined
 npm/npmjs/-/follow-redirects/1.15.3, MIT, approved, #10782
 npm/npmjs/-/forwarded/0.2.0, MIT, approved, clearlydefined
 npm/npmjs/-/fresh/0.5.2, MIT, approved, clearlydefined
-npm/npmjs/-/function-bind/1.1.1, MIT, approved, clearlydefined
+npm/npmjs/-/function-bind/1.1.1, MIT, approved, #11063
 npm/npmjs/-/get-caller-file/2.0.5, ISC, approved, clearlydefined
 npm/npmjs/-/get-intrinsic/1.2.1, MIT, approved, #8453
 npm/npmjs/-/has-flag/3.0.0, MIT, approved, clearlydefined

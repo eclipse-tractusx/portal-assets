@@ -116,7 +116,7 @@
       {
         "title": "",
         "description": "",
-        "backgroundColor": "#F9F9F9",
+        "backgroundColor": "#FFFFFF",
         "grid": 2,
         "id": "links-id",
         "template": "LinkButtonGrid",
