@@ -325,10 +325,12 @@ New verified_credential_type_assigned_use_cases to map the verified_credential_t
 New verified_credential_external_types, verified_credential_external_type_use_case_detail_versions and verified_credential_type_assigned_external_types tables to have the versions for each type including the link from the verified_credential_external_types of a specific version to the verified_credential_types
 
 Company SSI Database Structure
-![Company SSI Database Structure](/public/assets/images/docs/company-ssi-database.png)
+
+<img src="/public/assets/images/docs/company-ssi-database.png" alt="drawing" width="900"/>
 
 Use Case Database Structure
-![Use Case Database Structure](/public/assets/images/docs/use-case-database.png)
+
+<img src="/public/assets/images/docs/use-case-database.png" alt="drawing" width="600"/>
 
 - NEW: table "language_long_names"
 - ENHANCED: table portal.languages "long_name_de" and "long_name_en" removed
