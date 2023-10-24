@@ -4,23 +4,11 @@
             "roles": [
                 {
                     "title" : "CX User",
-                    "description": "short role description will get added here"
+                    "description": "CX User wird neu hinzugefügt. Die Rolle ist die Standard Rolle für Users ohne erhöhten Zugriffbedarf. Benutzer können auf Apps & Dienstleistungen zugreifen und das Netzwerk erkunden (Marktplätze, etc.)."
                 },
                 {
                     "title" : "Purchaser",
-                    "description": "short role description will get added here"
-                }
-            ],
-            "features": [
-                {
-                    "title" : "App Subscription",
-                    "description": "description of the feature will get highlevel added in this section",
-                    "details": "link to the functional explanation"
-                },
-                {
-                    "title" : "Service Subscription",
-                    "description": "description of the feature will get highlevel added in this section",
-                    "details": "link to the functional explanation"
+                    "description": "Purchaser wird neu hinzugefügt. Die Rolle hat normalen Zugriff auf das Portal mit dem zusätzlichen Recht, Dienste und Apps auf dem Marktplatz zu abonnieren."
                 }
             ]
         },
@@ -28,23 +16,11 @@
             "roles": [
                 {
                     "title" : "CX User",
-                    "description": "short role description will get added here"
+                    "description": "CX User wird entfeernt. Die Rolle ist die Standard Rolle für Users ohne erhöhten Zugriffbedarf. Benutzer können auf Apps & Dienstleistungen zugreifen und das Netzwerk erkunden (Marktplätze, etc.)."
                 },
                 {
                     "title" : "Purchaser",
-                    "description": "short role description will get added here"
-                }
-            ],
-            "features": [
-                {
-                    "title" : "App Subscription",
-                    "description": "description of the feature will get highlevel added in this section",
-                    "details": "link to the functional explanation"
-                },
-                {
-                    "title" : "Service Subscription",
-                    "description": "description of the feature will get highlevel added in this section",
-                    "details": "link to the functional explanation"
+                    "description": "Purchaser wird entfeernt. Die Rolle hat normalen Zugriff auf das Portal mit dem zusätzlichen Recht, Dienste und Apps auf dem Marktplatz zu abonnieren."
                 }
             ]
         }
@@ -54,31 +30,31 @@
             "roles": [
                 {
                     "title" : "App Manager",
-                    "description": "short role description will get added here"
+                    "description": "App Manager wird neu hinzugefügt. Der App Manager ist in der Lage, neue App-Einträge für den Marktplatz hinzuzufügen und Abonnementanfragen zu verwalten. Auch der App-Änderungsprozess kann vom App Manager verwaltet werden."
                 },
                 {
                     "title" : "App Developer",
-                    "description": "short role description will get added here"
+                    "description": "App Developer wird neu hinzugefügt. Der App Developer kann eine für die App-Auflistung erstellte App ändern."
                 },
                 {
                     "title" : "Sales Manager",
-                    "description": "short role description will get added here"
+                    "description": "Sales Manager wird neu hinzugefügt. Der Sales Manager kann Abonnementanfragen einsehen, verwalten und aktivieren."
                 }
             ],
             "features": [
                 {
                     "title" : "App Management",
-                    "description": "description of the feature will get highlevel added in this section",
+                    "description": "Das App-Management-Board bietet dem App-Manager/Entwickler und dem Vertriebsleiter einen Überblick über die eigenen Apps. Apps können geändert/gewartet und neue App-Releases gestartet werden.",
                     "details": "link to the functional explanation"
                 },
                 {
                     "title" : "App Release Process",
-                    "description": "description of the feature will get highlevel added in this section",
+                    "description": "Überblick über die Schritte des App-Release-Prozesses und ermöglicht das generieren einer neuen App-Release-Anfrage für den CX Marktplatz.",
                     "details": "link to the functional explanation"
                 },
                 {
                     "title" : "App Subscription Management",
-                    "description": "description of the feature will get highlevel added in this section",
+                    "description": "Verwaltung von App-Abonnementanfragen; Übersicht über Aktivierung und verbundene Dienste.",
                     "details": "link to the functional explanation"
                 }
             ]
@@ -87,31 +63,31 @@
             "roles": [
                 {
                     "title" : "App Manager",
-                    "description": "short role description will get added here"
+                    "description": "App Manager wird entfeernt. Der App Manager ist in der Lage, neue App-Einträge für den Marktplatz hinzuzufügen und Abonnementanfragen zu verwalten. Auch der App-Änderungsprozess kann vom App Manager verwaltet werden."
                 },
                 {
                     "title" : "App Developer",
-                    "description": "short role description will get added here"
+                    "description": "App Developer wird entfeernt. Der App Developer kann eine für die App-Auflistung erstellte App ändern."
                 },
                 {
                     "title" : "Sales Manager",
-                    "description": "short role description will get added here"
+                    "description": "Sales Manager wird entfeernt. Der Sales Manager kann Abonnementanfragen einsehen, verwalten und aktivieren."
                 }
             ],
             "features": [
                 {
                     "title" : "App Management",
-                    "description": "description of the feature will get highlevel added in this section",
+                    "description": "Das App-Management-Board bietet dem App-Manager/Entwickler und dem Vertriebsleiter einen Überblick über die eigenen Apps. Apps können geändert/gewartet und neue App-Releases gestartet werden.",
                     "details": "link to the functional explanation"
                 },
                 {
                     "title" : "App Release Process",
-                    "description": "description of the feature will get highlevel added in this section",
+                    "description": "Überblick über die Schritte des App-Release-Prozesses und ermöglicht das generieren einer neuen App-Release-Anfrage für den CX Marktplatz",
                     "details": "link to the functional explanation"
                 },
                 {
                     "title" : "App Subscription Management",
-                    "description": "description of the feature will get highlevel added in this section",
+                    "description": "Verwaltung von App-Abonnementanfragen; Übersicht über Aktivierung und verbundene Dienste.",
                     "details": "link to the functional explanation"
                 }
             ]
@@ -122,31 +98,27 @@
             "roles": [
                 {
                     "title" : "Service Manager",
-                    "description": "short role description will get added here"
-                },
-                {
-                    "title" : "Service Developer",
-                    "description": "short role description will get added here"
+                    "description": "Service Manager wird neu hinzugefügt. Der Service Manager ist in der Lage, neue Service-Einträge für den Marktplatz hinzuzufügen und Abonnementanfragen zu verwalten. Auch der Service-Änderungsprozess kann vom Service Manager verwaltet werden."
                 },
                 {
                     "title" : "Sales Manager",
-                    "description": "short role description will get added here"
+                    "description": "Sales Manager wird neu hinzugefügt. Der Sales Manager kann Abonnementanfragen einsehen, verwalten und aktivieren."
                 }
             ],
             "features": [
                 {
                     "title" : "Service Management",
-                    "description": "description of the feature will get highlevel added in this section",
+                    "description": "Das Service Management Board bietet dem Service Manager und dem Vertriebsleiter einen Überblick über die eigenen Services. Services können geändert/gepflegt und neue Service-Releases gestartet werden.",
                     "details": "link to the functional explanation"
                 },
                 {
                     "title" : "Service Release Process",
-                    "description": "description of the feature will get highlevel added in this section",
+                    "description": "Überblick über die Schritte des Service-Release-Prozesses und ermöglicht das generieren einer neuen Service-Release-Anfrage für den CX Marktplatz.",
                     "details": "link to the functional explanation"
                 },
                 {
                     "title" : "Service Subscription Management",
-                    "description": "description of the feature will get highlevel added in this section",
+                    "description": "Verwaltung von Dienstabonnementanfragen; Übersicht über Aktivierung und verbundene Dienste.",
                     "details": "link to the functional explanation"
                 }
             ]
@@ -155,31 +127,27 @@
             "roles": [
                 {
                     "title" : "Service Manager",
-                    "description": "short role description will get added here"
-                },
-                {
-                    "title" : "Service Developer",
-                    "description": "short role description will get added here"
+                    "description": "Service Manager wird entfeernt. Der Service Manager wird neu hinzugefügt. Der Service Manager ist in der Lage, neue Service-Einträge für den Marktplatz hinzuzufügen und Abonnementanfragen zu verwalten. Auch der Service-Änderungsprozess kann vom Service Manager verwaltet werden."
                 },
                 {
                     "title" : "Sales Manager",
-                    "description": "short role description will get added here"
+                    "description": "Sales Manager wird entfeernt. Der Sales Manager kann Abonnementanfragen einsehen, verwalten und aktivieren."
                 }
             ],
             "features": [
                 {
                     "title" : "Service Management",
-                    "description": "description of the feature will get highlevel added in this section",
+                    "description": "Das Service Management Board bietet dem Service Manager und dem Vertriebsleiter einen Überblick über die eigenen Services. Services können geändert/gepflegt und neue Service-Releases gestartet werden.",
                     "details": "link to the functional explanation"
                 },
                 {
                     "title" : "Service Release Process",
-                    "description": "description of the feature will get highlevel added in this section",
+                    "description": "Überblick über die Schritte des Service-Release-Prozesses und ermöglicht das generieren einer neuen Service-Release-Anfrage für den CX Marktplatz.",
                     "details": "link to the functional explanation"
                 },
                 {
                     "title" : "Service Subscription Management",
-                    "description": "description of the feature will get highlevel added in this section",
+                    "description": "Verwaltung von Dienstabonnementanfragen; Übersicht über Aktivierung und verbundene Dienste.",
                     "details": "link to the functional explanation"
                 }
             ]
