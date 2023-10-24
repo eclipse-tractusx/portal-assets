@@ -2,6 +2,36 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
+## 1.7.0-RC1
+
+### Change
+* Updates static template guidelines
+* Enhanced/updated content for app provider introduction page
+* Added onboarding service provider introduction page
+* Technical Documentation: updated documentation for application monitoring options
+* Technical Documentation: updated documentation about application auditing
+* Technical User documentation
+  * enhanced developer docu of technical user deletion function
+  * added technical user credential reset documentation/flow
+  * dev documentation of new added technical user filters
+* Added list of standard technical user needed to run the portal application integration with core applications
+* Updated app change process (roles, tenant url, etc.) for developers and end users
+* Credential Management
+  * updated end user docu of allowed file types and size for VC request flow
+  * added new endpoint in developer documentation regarding requestable credentials
+  * added end user FAQ
+
+### Feature
+* Service Change Process
+  * released docu of 'Service Deactivation'
+
+### Technical Support
+* Dependencies upgraded
+* Moved couple of images from gitHub md files to docs/static image folder/directory
+
+### Bugfix
+* Updated background color used in static page last section
+
 ## 1.6.1
 
 ### Change
