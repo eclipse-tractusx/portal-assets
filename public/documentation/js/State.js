@@ -92,9 +92,7 @@ class State {
     }
     //console.log(this.clazz, 'setSelection', selection, hash)
     selection =
-      this.data.map?.[selection] !== undefined
-        ? selection
-        : NavTools.getRoot()
+      this.data.map?.[selection] !== undefined ? selection : NavTools.getRoot()
     if (selection === this.selection && !this.refresh) return
     this.refresh = false
     const content = this.getItem(selection)
