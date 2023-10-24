@@ -19,8 +19,7 @@
 
 import { Patterns, Settings } from './Settings.js'
 
-const getNodeOrViewable = (c) =>
-  Object.prototype.hasOwn.call(c, 'view') ? c.view : c
+const getNodeOrViewable = (c) => Object.prototype.hasOwnProperty.call(c, 'view') ? c.view : c
 
 const getTextNode = (c, tc) =>
   document.createTextNode(tc === 'string' ? c : '' + c)
