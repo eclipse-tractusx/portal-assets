@@ -4,23 +4,11 @@
       "roles": [
         {
           "title": "CX User",
-          "description": "short role description will get added here"
+          "description": "CX User newly added. The role is used as standard user role with which the user can access apps; services and explore the network."
         },
         {
           "title": "Purchaser",
-          "description": "short role description will get added here"
-        }
-      ],
-      "features": [
-        {
-          "title": "App Subscription",
-          "description": "description of the feature will get highlevel added in this section",
-          "details": "link to the functional explanation"
-        },
-        {
-          "title": "Service Subscription",
-          "description": "description of the feature will get highlevel added in this section",
-          "details": "link to the functional explanation"
+          "description": "The Purchaser role has normal access to the portal with additional right to subscribe services and apps on the marketplace."
         }
       ]
     },
@@ -28,23 +16,11 @@
       "roles": [
         {
           "title": "CX User",
-          "description": "short role description will get added here"
+          "description": "CX User role will get removed. The role is used as standard user role with which the user can access apps; services and explore the network."
         },
         {
           "title": "Purchaser",
-          "description": "short role description will get added here"
-        }
-      ],
-      "features": [
-        {
-          "title": "App Subscription",
-          "description": "description of the feature will get highlevel added in this section",
-          "details": "link to the functional explanation"
-        },
-        {
-          "title": "Service Subscription",
-          "description": "description of the feature will get highlevel added in this section",
-          "details": "link to the functional explanation"
+          "description": "Purchaser role will get removed. The Purchaser role has normal access to the portal with additional right to subscribe services and apps on the marketplace."
         }
       ]
     }
@@ -54,31 +30,31 @@
       "roles": [
         {
           "title": "App Manager",
-          "description": "short role description will get added here"
+          "description": "App Manager role newly added. The App Manager is able to add new app listings for the marketplace and to manage subscription requests. Also the app change process can get managed by the App Manager."
         },
         {
           "title": "App Developer",
-          "description": "short role description will get added here"
+          "description": "App Developer role newly added. The App Developer is able to chnage a app created for app listing."
         },
         {
           "title": "Sales Manager",
-          "description": "short role description will get added here"
+          "description": "The Sales Manager can view & manage subscription requests and activate the same."
         }
       ],
       "features": [
         {
           "title": "App Management",
-          "description": "description of the feature will get highlevel added in this section",
+          "description": "App Management page provides the App Manager/Developer and Sales Manager an overview of owned apps. Apps can get changed/maintained and new app releases started.",
           "details": "link to the functional explanation"
         },
         {
           "title": "App Release Process",
-          "description": "description of the feature will get highlevel added in this section",
+          "description": "Overview of the app release process steps and triggering a new app listing.",
           "details": "link to the functional explanation"
         },
         {
           "title": "App Subscription Management",
-          "description": "description of the feature will get highlevel added in this section",
+          "description": "Management of app subscirption requests; activation and connected service overview.",
           "details": "link to the functional explanation"
         }
       ]
@@ -87,31 +63,31 @@
       "roles": [
         {
           "title": "App Manager",
-          "description": "short role description will get added here"
+          "description": "App Manager role is getting removed. The App Manager is able to add new app listings for the marketplace and to manage subscription requests. Also the app change process can get managed by the App Manager."
         },
         {
           "title": "App Developer",
-          "description": "short role description will get added here"
+          "description": "App Developer role is getting removed. The App Developer is able to chnage a app created for app listing."
         },
         {
           "title": "Sales Manager",
-          "description": "short role description will get added here"
+          "description": "Sales Manager role is getting removed. The Sales Manager can view & manage subscription requests and activate the same."
         }
       ],
       "features": [
         {
           "title": "App Management",
-          "description": "description of the feature will get highlevel added in this section",
+          "description": "App Management Board for app status overview; app change process and deactivation will get removed.",
           "details": "link to the functional explanation"
         },
         {
           "title": "App Release Process",
-          "description": "description of the feature will get highlevel added in this section",
+          "description": "App Release Process to create a new app listing requests will get removed.",
           "details": "link to the functional explanation"
         },
         {
           "title": "App Subscription Management",
-          "description": "description of the feature will get highlevel added in this section",
+          "description": "App Subscription Management to view, activate and decline subscritions of owned offered marketplace apps will get removed.",
           "details": "link to the functional explanation"
         }
       ]
@@ -122,31 +98,27 @@
       "roles": [
         {
           "title": "Service Manager",
-          "description": "short role description will get added here"
-        },
-        {
-          "title": "Service Developer",
-          "description": "short role description will get added here"
+          "description": "Service Manager role newly added. The Service Manager is able to add new app listings for the marketplace and to manage subscription requests. Additionally the Service Manager is able to change details of the offered services or deactivate the same."
         },
         {
           "title": "Sales Manager",
-          "description": "short role description will get added here"
+          "description": "The Sales Manager can view & manage subscription requests and activate the same."
         }
       ],
       "features": [
         {
           "title": "Service Management",
-          "description": "description of the feature will get highlevel added in this section",
+          "description": "The Service Management board provides the Service Manager and Sales Manager an overview of owned services. Services can get changed/maintained and new service releases started.",
           "details": "link to the functional explanation"
         },
         {
           "title": "Service Release Process",
-          "description": "description of the feature will get highlevel added in this section",
+          "description": "Overview of the service release process steps and triggering a new service listing.",
           "details": "link to the functional explanation"
         },
         {
           "title": "Service Subscription Management",
-          "description": "description of the feature will get highlevel added in this section",
+          "description": "Management of service subscirption requests; activation and connected service overview.",
           "details": "link to the functional explanation"
         }
       ]
@@ -155,31 +127,27 @@
       "roles": [
         {
           "title": "Service Manager",
-          "description": "short role description will get added here"
-        },
-        {
-          "title": "Service Developer",
-          "description": "short role description will get added here"
+          "description": "Service Manager role is getting removed. The Service Manager is able to add new app listings for the marketplace and to manage subscription requests. Additionally the Service Manager is able to change details of the offered services or deactivate the same."
         },
         {
           "title": "Sales Manager",
-          "description": "short role description will get added here"
+          "description": "Sales Manager role is getting removed. The Sales Manager can view & manage subscription requests and activate the same."
         }
       ],
       "features": [
         {
           "title": "Service Management",
-          "description": "description of the feature will get highlevel added in this section",
+          "description": "Service Management Board for service status overview; service change process and deactivation will get removed.",
           "details": "link to the functional explanation"
         },
         {
           "title": "Service Release Process",
-          "description": "description of the feature will get highlevel added in this section",
+          "description": "Service Release Process to create a new app listing requests will get removed.",
           "details": "link to the functional explanation"
         },
         {
           "title": "Service Subscription Management",
-          "description": "description of the feature will get highlevel added in this section",
+          "description": "Service Subscription Management to view, activate and decline subscritions of owned offered marketplace services will get removed.",
           "details": "link to the functional explanation"
         }
       ]
