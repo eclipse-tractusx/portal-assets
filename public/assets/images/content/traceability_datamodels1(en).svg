@@ -1,0 +1,41 @@
+<svg width="4400" height="1800" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <g id="background" transform="scale(01 1) translate(-160 -1470)">
+        <path d="M443 1544C443 1532 452 1523 464 1523L1257 1523C1269 1523 1279 1532 1279 1544L1279 1628C1279 1640 1269 1650 1257 1650L464 1650C452 1650 443 1640 443 1628Z" fill="#85ACB9"/>
+    </g>
+    </defs>
+  <style>
+    .desc {
+      fill: #ffffff;
+      font-family: sans-serif;
+      font-weight: 400;
+      font-size: 50px;
+    }
+  </style>
+    <g transform="translate(0 -412)">
+  <path d="M0 460C0 434 21 413 47 413L4352 413C4378 413 4400 434 4400 460L4400 2162C4400 2188 4378 2210 4352 2210L47 2210C21 2210 0 2188 0 2162Z" fill="#035970" />
+  </g>
+  <rect x="100" y="300" width="4204" height="1200" stroke="#FFFFFF" stroke-width="6" fill="none" />
+    <rect x="260" y="250" width="835" height="107" stroke="#FFFFFF" stroke-width="6" fill="#035970" />
+    <text fill="#FFFFFF" font-family="Arial Narrow,sans-serif" font-weight="700" font-size="55" transform="translate(423 320)">Lebenszyklus “as planned</text>
+    <g id="icon">
+        <path d="M15 80C15 80 14 81 13 80 12 80 12 79 12 78 12 77 12 76 13 76 14 76 15 76 15 77 16 77 16 79 15 80ZM84 16 76 24 70 22 68 16 76 8C71 6 66 7 63 11 59 14 57 19 59 24L9 73C8 75 7 78 7 80 8 82 10 84 12 85 15 85 17 85 19 83L68 33C73 35 78 33 81 30 85 26 86 21 84 16Z" fill="#FFFFFF" transform="matrix(1 0 0 1 287 250)" />
+        <path d="M83 73 58 48 48 58 73 83 74 84 74 83C76 86 80 85 83 83 85 80 85 76 83 73Z" fill="#FFFFFF" transform="matrix(1 0 0 1 287 250)" />
+        <path d="M21 19 21 19 19 14 11 7 7 11 14 19 19 21 19 21 37 40 40 37Z" fill="#FFFFFF" transform="matrix(1 0 0 1 287 250)" />
+    </g>
+    <text class="desc" x="280" y="470">Describes the condition of a component or vehicle when the delivery relationship between supplier and customer is contractually defined.</text>
+    <use x="200" y="500" href="#background"></use>
+    <use x="200" y="700" href="#background"></use>
+    <use x="200" y="900" href="#background"></use>
+    <use x="200" y="1140" href="#background"></use>
+    <text class="desc" x="720" y="630">PartAsPlanned</text>
+    <text class="desc" x="570" y="830">PartSiteInformationAsPlanned</text>
+    <text class="desc" x="600" y="1030">SingleLevelBomAsPlanned</text>
+    <text class="desc" x="590" y="1270">SingleLevelUsageAsPlanned</text>
+    <text class="desc" x="1500" y="620">Represents the master data of a component in the “as planned” life cycle.</text>
+    <text class="desc" x="1500" y="810">Provides location-based information for a planned component. </text>
+    <text class="desc" x="1500" y="880">In this context, a location is a defined geographical area in which a company does business.</text>
+    <text class="desc" x="1500" y="1010">Represents the first level of an assembly or assembly without further sub-assemblies from a lower level.</text>
+    <text class="desc" x="1500" y="1070">The “as planned” life cycle covers the entire variance of potential vehicles (also known as a 120% parts list).</text>
+    <text class="desc" x="1500" y="1260">Establishes the relationship between a component and its superordinate parts during the “as planned” life cycle.</text>
+</svg>
