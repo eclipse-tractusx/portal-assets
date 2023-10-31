@@ -1,4 +1,5 @@
 # Summary
+
 <br>
 User Account, or My User Account is implemented to retrieve details of the current user or an user of the company (for admins only).  
 <br>

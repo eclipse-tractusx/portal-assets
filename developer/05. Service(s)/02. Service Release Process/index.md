@@ -2,8 +2,8 @@
 
 The service release process is used to publish services by service providers in the service marketplace of the cx platform operator.
 
-Links:  
-   
+Links:
+
 - [Step 1: Service Card](./01.%20Service%20Card.md)
 - [Step 2: Service Detail Page](./02.%20Service%20Detail%20Page.md)
 - [Step 3: Terms & Conditions](./03.%20Terms%20and%20Conditions.md)

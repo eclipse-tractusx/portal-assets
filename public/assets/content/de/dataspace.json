@@ -2,117 +2,116 @@
   "subNavigation": [
     {
       "index": 1,
-      "title":"Policy Intro",
-      "navigation":"intro-id"
+      "title": "Policy Intro",
+      "navigation": "intro-id"
     },
     {
       "index": 2,
-      "title":"Membership",
-      "navigation":"membership-id"
+      "title": "Membership",
+      "navigation": "membership-id"
     },
     {
       "index": 3,
-      "title":"BPN",
-      "navigation":"bpn-id"
+      "title": "BPN",
+      "navigation": "bpn-id"
     },
     {
       "index": 4,
-      "title":"Use Case",
-      "navigation":"usecase-id"
+      "title": "Use Case",
+      "navigation": "usecase-id"
     },
     {
       "index": 5,
-      "title":"Roles",
-      "navigation":"roles-id"
+      "title": "Roles",
+      "navigation": "roles-id"
     },
     {
       "index": 6,
-      "title":"Links",
-      "navigation":"links-id"
+      "title": "Links",
+      "navigation": "links-id"
     }
   ],
   "dataSpace": {
-    "title":"Catena-X Datenraum",
-    "description":"Das Grundkonzept von catena-x ist der Datenaustausch in einem standardisierten Format. Dies wird durch Datensouveränität und Interoperabilität erreicht. Über Datenrichtlinien können Sie auf mehreren Ebenen entscheiden, wer auf Datenangebote zugreifen kann.",
+    "title": "Catena-X Datenraum",
+    "description": "Das Grundkonzept von catena-x ist der Datenaustausch in einem standardisierten Format. Dies wird durch Datensouveränität und Interoperabilität erreicht. Über Datenrichtlinien können Sie auf mehreren Ebenen entscheiden, wer auf Datenangebote zugreifen kann.",
     "sections": [
       {
-        "title":"Policy Beschreibung",
-        "description":"Mithilfe von Richtlinien werden Datenzugriffsrichtlinien sowie Nutzungsdetails definiert.<1></1><1></1>'Access' bedeutet, dass festgelegt wird, wer Datenangebote sehen kann. Die Nutzung definiert den Datenzugriff selbst – also Vertragsverhandlungen und Datenverbrauch. Z.B. Unternehmen A kann sehen, dass Unternehmen B ein Datenangebot für die in der letzten Woche produzierten Fahrzeugdaten hat. Aufgrund fehlender Nutzungsrechte kann das Unternehmen die Vereinbarung/das Datenangebot jedoch nicht annehmen und hat keinen Zugriff auf diese Daten.<1></1>< 1></1>Auf der folgenden Seite finden Sie Einzelheiten zu den jeweils verfügbaren Zugriffs-/Nutzungsrichtlinien<1></1><1></1>",
-        "imagePath":"/images/frame/AccessVsUsage.png",
-        "backgroundColor":"#FFFFFFF",
-        "id":"core-id",
-        "template":"TextImageSideBySide",
+        "title": "Policy Beschreibung",
+        "description": "Mithilfe von Richtlinien werden Datenzugriffsrichtlinien sowie Nutzungsdetails definiert.<1></1><1></1>'Access' bedeutet, dass festgelegt wird, wer Datenangebote sehen kann. Die Nutzung definiert den Datenzugriff selbst – also Vertragsverhandlungen und Datenverbrauch. Z.B. Unternehmen A kann sehen, dass Unternehmen B ein Datenangebot für die in der letzten Woche produzierten Fahrzeugdaten hat. Aufgrund fehlender Nutzungsrechte kann das Unternehmen die Vereinbarung/das Datenangebot jedoch nicht annehmen und hat keinen Zugriff auf diese Daten.<1></1>< 1></1>Auf der folgenden Seite finden Sie Einzelheiten zu den jeweils verfügbaren Zugriffs-/Nutzungsrichtlinien<1></1><1></1>",
+        "imagePath": "/images/frame/AccessVsUsage.png",
+        "backgroundColor": "#FFFFFFF",
+        "id": "core-id",
+        "template": "TextImageSideBySide",
         "sectionLink": {
           "data": [
             {
               "title": "* Membership",
-              "id":"membership-id",
+              "id": "membership-id",
               "internal": true
             },
             {
               "title": "* BPN",
-              "id":"bpn-id",
+              "id": "bpn-id",
               "internal": true
             },
             {
               "title": "* Use Case",
-              "id":"usecase-id",
+              "id": "usecase-id",
               "internal": true
             },
             {
               "title": "* Rollen",
-              "id":"roles-id",
+              "id": "roles-id",
               "internal": true
             }
           ]
         }
       },
       {
-        "title":"Datenzugriffsrichtlinie basierend auf dem Membership",
-        "description":"Der Mitgliedschaftsnachweis wird verwendet, um zu überprüfen, ob der Datenkonsument Mitglied des Datenraums ist. Der Mitgliedsausweis ist ein 'muss' Berechtigungsnachweis für alle Datenangebote.<1></1><1></1>",
-        "imagePath":"/images/logos/cx-text.svg",
-        "backgroundColor":"#F9F9F9",
-        "id":"membership-id",
-        "template":"TextImageSideBySide"
+        "title": "Datenzugriffsrichtlinie basierend auf dem Membership",
+        "description": "Der Mitgliedschaftsnachweis wird verwendet, um zu überprüfen, ob der Datenkonsument Mitglied des Datenraums ist. Der Mitgliedsausweis ist ein 'muss' Berechtigungsnachweis für alle Datenangebote.<1></1><1></1>",
+        "imagePath": "/images/logos/cx-text.svg",
+        "backgroundColor": "#F9F9F9",
+        "id": "membership-id",
+        "template": "TextImageSideBySide"
       },
       {
-        "title":"Datenzugriffsrichtlinie basierend auf der Geschäftspartnernummer",
-        "description":"Über die Geschäftspartnernummer (jedes Mitglied von catena-x hat einen eigenen BPN) kann der Datenzugriff eingeschränkt werden.<1></1><1></1>Das heißt, Firma a kann festlegen, dass Firma b dazu berechtigt ist Sehen Sie sich einen Datenvertrag an bzw. greifen Sie darauf zu, während Unternehmen c nicht da ist.<1></1><1></1>Beim Erstellen eines Datenangebots muss Unternehmen a entscheiden, ob das Datenangebot für eine Reihe von Unternehmen (bpns) beschränkt ist. oder nicht<1></1><1></1>",
-        "imagePath":"/images/frame/BusinessPartnerNumber.png",
-        "backgroundColor":"#FFFFFFF",
-        "id":"bpn-id",
-        "template":"TextImageSideBySide",
+        "title": "Datenzugriffsrichtlinie basierend auf der Geschäftspartnernummer",
+        "description": "Über die Geschäftspartnernummer (jedes Mitglied von catena-x hat einen eigenen BPN) kann der Datenzugriff eingeschränkt werden.<1></1><1></1>Das heißt, Firma a kann festlegen, dass Firma b dazu berechtigt ist Sehen Sie sich einen Datenvertrag an bzw. greifen Sie darauf zu, während Unternehmen c nicht da ist.<1></1><1></1>Beim Erstellen eines Datenangebots muss Unternehmen a entscheiden, ob das Datenangebot für eine Reihe von Unternehmen (bpns) beschränkt ist. oder nicht<1></1><1></1>",
+        "imagePath": "/images/frame/BusinessPartnerNumber.png",
+        "backgroundColor": "#FFFFFFF",
+        "id": "bpn-id",
+        "template": "TextImageSideBySide",
         "sectionLink": {
           "data": [
             {
               "title": "* Ansicht aller Business Partner",
-              "id":"/partnernetwork",
+              "id": "/partnernetwork",
               "internal": false
-
             },
             {
               "title": "* BPDM Use Case Details (coming soon)",
-              "id":"",
+              "id": "",
               "internal": false
             }
           ]
         }
       },
       {
-        "title":"Use Cases",
-        "description":"Unterstützte UseCase-Anmeldeinformationen: <1></1><1></1>>> Attribute - >>> CredentialSubjectItem <1></1><1></1>>> FrameworkAgreement.pcf - PcfCredential <1></1><1></1>>> FrameworkAgreement.sustainability - SustainabilityCredential <1></1><1></1>>> FrameworkAgreement.quality - QualityCredential <1></1><1></1>>> FrameworkAgreement.traceability - TraceabilityCredential <1></1><1></1>>> FrameworkAgreement.behavioraltwin - BehaviorTwinCredential <1></1><1></1>",
-        "imagePath":"/images/logos/cx-text.svg",
-        "backgroundColor":"#F9F9F9",
-        "id":"usecase-id",
-        "template":"TextImageSideBySide"
+        "title": "Use Cases",
+        "description": "Unterstützte UseCase-Anmeldeinformationen: <1></1><1></1>>> Attribute - >>> CredentialSubjectItem <1></1><1></1>>> FrameworkAgreement.pcf - PcfCredential <1></1><1></1>>> FrameworkAgreement.sustainability - SustainabilityCredential <1></1><1></1>>> FrameworkAgreement.quality - QualityCredential <1></1><1></1>>> FrameworkAgreement.traceability - TraceabilityCredential <1></1><1></1>>> FrameworkAgreement.behavioraltwin - BehaviorTwinCredential <1></1><1></1>",
+        "imagePath": "/images/logos/cx-text.svg",
+        "backgroundColor": "#F9F9F9",
+        "id": "usecase-id",
+        "template": "TextImageSideBySide"
       },
       {
-        "title":"Rollen",
-        "description":"Dieser Text muss noch hinzugefügt werden.",
-        "imagePath":"/images/logos/cx-text.svg",
-        "backgroundColor":"#FFFFFF",
-        "id":"roles-id",
-        "template":"TextImageSideBySide"
+        "title": "Rollen",
+        "description": "Dieser Text muss noch hinzugefügt werden.",
+        "imagePath": "/images/logos/cx-text.svg",
+        "backgroundColor": "#FFFFFF",
+        "id": "roles-id",
+        "template": "TextImageSideBySide"
       },
       {
         "title": "",

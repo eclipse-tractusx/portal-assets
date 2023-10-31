@@ -2,7 +2,7 @@
 
 This content is produced and maintained by the Eclipse Tractus-X project.
 
-* Project home: https://projects.eclipse.org/projects/automotive.tractusx
+- Project home: https://projects.eclipse.org/projects/automotive.tractusx
 
 ## Copyright
 
@@ -38,23 +38,23 @@ See DEPENDENCIES file.
 
 This project uses the following font:
 
-* License: Open Font License 1.1
-* Licence Path: https://github.com/impallari/Libre-Franklin/blob/master/OFL.txt
-* Source URL: https://github.com/impallari/Libre-Franklin
+- License: Open Font License 1.1
+- Licence Path: https://github.com/impallari/Libre-Franklin/blob/master/OFL.txt
+- Source URL: https://github.com/impallari/Libre-Franklin
 
 This project uses the following image content:
 
-* Image: Catena-X Logo
-* Source URL: https://catena-x.net
+- Image: Catena-X Logo
+- Source URL: https://catena-x.net
 
-* Image: German Edge Cloud Logo
-* Source URL: https://gec.io
+- Image: German Edge Cloud Logo
+- Source URL: https://gec.io
 
-* Image: SAP Logo
-* Source URL: https://www.sap.com
+- Image: SAP Logo
+- Source URL: https://www.sap.com
 
-* Image: Siemens-X Logo
-* Source URL: https://www.siemens.com
+- Image: Siemens-X Logo
+- Source URL: https://www.siemens.com
 
 ## Cryptography
 

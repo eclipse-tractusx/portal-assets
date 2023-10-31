@@ -2,29 +2,29 @@
 
 The release process for a new version can roughly be divided into the following steps:
 
-* [Preparations on the release branch](#preparations-on-the-release-branch)
-* [Tag and build of versioned images](#tag-and-build-of-versioned-images)
-* [Release new helm chart version](#release-new-helm-chart-version)
-* [RC: checkout release-candidate branch](#rc-checkout-release-candidate-branch)
-* [Merge release branch](#merge-release-branch)
-* [RC: provide successive RC branch and change base of open PRs](#rc-provide-successive-rc-branch-and-change-base-of-open-prs)
-* [Create releases from tags](#create-releases-from-tags)
+- [Preparations on the release branch](#preparations-on-the-release-branch)
+- [Tag and build of versioned images](#tag-and-build-of-versioned-images)
+- [Release new helm chart version](#release-new-helm-chart-version)
+- [RC: checkout release-candidate branch](#rc-checkout-release-candidate-branch)
+- [Merge release branch](#merge-release-branch)
+- [RC: provide successive RC branch and change base of open PRs](#rc-provide-successive-rc-branch-and-change-base-of-open-prs)
+- [Create releases from tags](#create-releases-from-tags)
 
 The process builds on the development flow which, usually, takes place within forks and leads to merged pull pull requests in the repositories of the eclipse-tractusx organization.
 
 Frontend repositories:
 
-* [Portal Frontend](https://github.com/eclipse-tractusx/portal-frontend)
-* [Portal Frontend Registration](https://github.com/eclipse-tractusx/portal-frontend-registration)
-* [Portal Assets](https://github.com/eclipse-tractusx/portal-assets)
+- [Portal Frontend](https://github.com/eclipse-tractusx/portal-frontend)
+- [Portal Frontend Registration](https://github.com/eclipse-tractusx/portal-frontend-registration)
+- [Portal Assets](https://github.com/eclipse-tractusx/portal-assets)
 
 Backend repository:
 
-* [Portal Backend](https://github.com/eclipse-tractusx/portal-backend)
+- [Portal Backend](https://github.com/eclipse-tractusx/portal-backend)
 
 Continuous Deployment / CD repository (containing the portal helm chart)
 
-* [Portal CD](https://github.com/eclipse-tractusx/portal-cd)
+- [Portal CD](https://github.com/eclipse-tractusx/portal-cd)
 
 For assigning and incrementing **version** numbers [Semantic Versioning](https://semver.org) is followed.
 
@@ -45,7 +45,7 @@ For the backend repo, the version needs to be updated within the 'Directory.Buil
 
 Example for commit message:
 
-*release: bump version for vx.x.x*
+_release: bump version for vx.x.x_
 
 ### 2. Update changelog file
 
@@ -54,17 +54,17 @@ During development every developer should extend the changelog under the 'Unrele
 Once a new version is ready to be released, the changelog of the version gets finalized and the release version gets set for the, up to then, unreleased changes.
 In the released version, the changelog is structured as following:
 
-* Changes
-* Features
-* Technical Support
-* Bug Fixes
-* Known Knowns
+- Changes
+- Features
+- Technical Support
+- Bug Fixes
+- Known Knowns
 
 In case of breaking change, the breaking change will get highlighted with a breaking change tag =) ![Tag](https://img.shields.io/static/v1?label=&message=BreakingChange&color=yellow&style=flat)
 
 Example for commit message:
 
-*release: update changelog for vx.x.x*
+_release: update changelog for vx.x.x_
 
 ### 3. Aggregate migrations (backend repo only)
 
@@ -86,17 +86,17 @@ The push also triggers the image tags to be updated in the helm chart: in the de
 
 Example for tag:
 
-*v1.2.0*
+_v1.2.0_
 
 Examples for tag messages:
 
-*Version 1.2.0: Frontend Portal for the Catena-X*
+_Version 1.2.0: Frontend Portal for the Catena-X_
 
-*Version 1.2.0: Frontend Registration for the Catena-X*
+_Version 1.2.0: Frontend Registration for the Catena-X_
 
-*Version 1.1.0: Assets for the Catena-X Portal*
+_Version 1.1.0: Assets for the Catena-X Portal_
 
-*Version 1.1.0: Backend for the Catena-X Portal*
+_Version 1.1.0: Backend for the Catena-X Portal_
 
 ## Release new helm chart version
 
@@ -122,13 +122,13 @@ Copy updated README file on chart level to root level.
 
 Example for commit message:
 
-*release: update readme for vx.x.x*
+_release: update readme for vx.x.x_
 
 Once the steps are done, create a PR to 'main' to test the to be released helm chart with the 'Portal Lint and Test Chart' workflow.
 
 Example for PR title:
 
-*release(1.2.0): merge release into dev*
+_release(1.2.0): merge release into dev_
 
 Once the workflow ran successfully, release the new helm chart by running the 'Release Chart' action via workflow dispatch on the release branch.
 
@@ -161,9 +161,9 @@ Technically this step is already possible after [Tag and build of versioned imag
 
 Example for PR titles:
 
-*release(1.2.0): merge release into main*
+_release(1.2.0): merge release into main_
 
-*release(1.2.0): merge main to dev*
+_release(1.2.0): merge main to dev_
 
 ## Create releases from tags
 
@@ -171,10 +171,10 @@ Technically this step is already possible after [Tag and build of versioned imag
 
 Examples for release messages:
 
-*Version 1.2.0: Frontend Portal for the Catena-X*
+_Version 1.2.0: Frontend Portal for the Catena-X_
 
-*Version 1.2.0: Frontend Registration for the Catena-X*
+_Version 1.2.0: Frontend Registration for the Catena-X_
 
-*Version 1.1.0: Assets for the Catena-X Portal*
+_Version 1.1.0: Assets for the Catena-X Portal_
 
-*Version 1.1.0: Backend for the Catena-X Portal*
+_Version 1.1.0: Backend for the Catena-X Portal_

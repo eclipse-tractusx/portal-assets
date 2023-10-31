@@ -12,10 +12,10 @@ A drop down list is a graphical control element, similar to a list box, that all
 
 #### Guidance
 
-* Gray out any unavailable options
-* Avoid very long dropdowns
-* Avoid dropdown boxes when typing may be faster
-* support keyboard input
+- Gray out any unavailable options
+- Avoid very long dropdowns
+- Avoid dropdown boxes when typing may be faster
+- support keyboard input
 
 <br>
 <br>

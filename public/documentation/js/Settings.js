@@ -18,11 +18,11 @@
  ********************************************************************************/
 
 export const Settings = {
-    DOCBASE: 'https://raw.githubusercontent.com/eclipse-tractusx/portal-assets',
-    SRCBASE: 'https://github.com/eclipse-tractusx/portal-assets',
-    DEFAULT_ROOT: 'docs',
+  DOCBASE: 'https://raw.githubusercontent.com/eclipse-tractusx/portal-assets',
+  SRCBASE: 'https://github.com/eclipse-tractusx/portal-assets',
+  DEFAULT_ROOT: 'docs',
 }
 
 export const Patterns = {
-    DISPLAY: /(^\d+[.-_]?\s+|_|\.md$)/g
+  DISPLAY: /(^\d+[.-_]?\s+|_|\.md$)/g,
 }

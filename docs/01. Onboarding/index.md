@@ -2,8 +2,8 @@
 
 The Catena-X onbaording is splitted into two section:
 
-* Regsitration
-* Technical Onbaording
+- Regsitration
+- Technical Onbaording
 
 In this section the registration process and approval is in focus.
 

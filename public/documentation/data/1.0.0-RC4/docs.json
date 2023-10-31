@@ -34,9 +34,7 @@
             {
               "path": "docs/01. Onboarding/01. Registration Invite/Summary.md",
               "name": "Summary.md",
-              "chapter": [
-                "## Summary"
-              ]
+              "chapter": ["## Summary"]
             }
           ]
         },
@@ -47,46 +45,32 @@
             {
               "path": "docs/01. Onboarding/02. Registration/01. Login.md",
               "name": "01. Login.md",
-              "chapter": [
-                "# Intro",
-                "#### Registration Login"
-              ]
+              "chapter": ["# Intro", "#### Registration Login"]
             },
             {
               "path": "docs/01. Onboarding/02. Registration/02. Add Company Data.md",
               "name": "02. Add Company Data.md",
-              "chapter": [
-                "#### Add Company Data"
-              ]
+              "chapter": ["#### Add Company Data"]
             },
             {
               "path": "docs/01. Onboarding/02. Registration/03. Add Additional User(s).md",
               "name": "03. Add Additional User(s).md",
-              "chapter": [
-                "#### Invite additional users",
-                "#optional step#"
-              ]
+              "chapter": ["#### Invite additional users", "#optional step#"]
             },
             {
               "path": "docs/01. Onboarding/02. Registration/04. Company Role & Consent.md",
               "name": "04. Company Role & Consent.md",
-              "chapter": [
-                "#### Company Role & Terms and Conditions"
-              ]
+              "chapter": ["#### Company Role & Terms and Conditions"]
             },
             {
               "path": "docs/01. Onboarding/02. Registration/05. Document Upload.md",
               "name": "05. Document Upload.md",
-              "chapter": [
-                "#### Document upload"
-              ]
+              "chapter": ["#### Document upload"]
             },
             {
               "path": "docs/01. Onboarding/02. Registration/06. Verify Registration Data.md",
               "name": "06. Verify Registration Data.md",
-              "chapter": [
-                "#### Submit company data"
-              ]
+              "chapter": ["#### Submit company data"]
             },
             {
               "path": "docs/01. Onboarding/02. Registration/07. FAQ.md",
@@ -109,9 +93,7 @@
             {
               "path": "docs/01. Onboarding/03. Registration Approval/FAQ.md",
               "name": "FAQ.md",
-              "chapter": [
-                "# FAQ"
-              ]
+              "chapter": ["# FAQ"]
             },
             {
               "path": "docs/01. Onboarding/03. Registration Approval/Functional Details.md",
@@ -166,9 +148,7 @@
             {
               "path": "docs/01. Onboarding/03. Registration Approval/Summary.md",
               "name": "Summary.md",
-              "chapter": [
-                "## Summary"
-              ]
+              "chapter": ["## Summary"]
             }
           ]
         }
@@ -185,9 +165,7 @@
             {
               "path": "docs/02. Technical Integration/01. Connector Registration/01. Summary.md",
               "name": "01. Summary.md",
-              "chapter": [
-                "# Summary"
-              ]
+              "chapter": ["# Summary"]
             },
             {
               "path": "docs/02. Technical Integration/01. Connector Registration/02. Implementation.md",
@@ -236,9 +214,7 @@
             {
               "path": "docs/02. Technical Integration/02. Identity Provider Management/01. Summary.md",
               "name": "01. Summary.md",
-              "chapter": [
-                "# Summary"
-              ]
+              "chapter": ["# Summary"]
             },
             {
               "path": "docs/02. Technical Integration/02. Identity Provider Management/02. User Description.md",
@@ -286,9 +262,7 @@
         {
           "path": "docs/02. Technical Integration/index.md",
           "name": "index.md",
-          "chapter": [
-            "# Technical Integration"
-          ]
+          "chapter": ["# Technical Integration"]
         }
       ]
     },
@@ -324,23 +298,17 @@
             {
               "path": "docs/03. User Management/1 User Account/3 Implementation.md",
               "name": "3 Implementation.md",
-              "chapter": [
-                "# Implementation"
-              ]
+              "chapter": ["# Implementation"]
             },
             {
               "path": "docs/03. User Management/1 User Account/4 Summary.md",
               "name": "4 Summary.md",
-              "chapter": [
-                "# Summary"
-              ]
+              "chapter": ["# Summary"]
             },
             {
               "path": "docs/03. User Management/1 User Account/index.md",
               "name": "index.md",
-              "chapter": [
-                "# User Account"
-              ]
+              "chapter": ["# User Account"]
             }
           ]
         },
@@ -351,10 +319,7 @@
             {
               "path": "docs/03. User Management/2 Edit User Account/1 Design.md",
               "name": "1 Design.md",
-              "chapter": [
-                "# User Account Details",
-                "# My CX Account"
-              ]
+              "chapter": ["# User Account Details", "# My CX Account"]
             },
             {
               "path": "docs/03. User Management/2 Edit User Account/2 Password Reset.md",
@@ -393,9 +358,7 @@
             {
               "path": "docs/03. User Management/2 Edit User Account/5 Suspend User.md",
               "name": "5 Suspend User.md",
-              "chapter": [
-                "# Suspend User"
-              ]
+              "chapter": ["# Suspend User"]
             },
             {
               "path": "docs/03. User Management/2 Edit User Account/6 Delete User.md",
@@ -413,9 +376,7 @@
             {
               "path": "docs/03. User Management/2 Edit User Account/index.md",
               "name": "index.md",
-              "chapter": [
-                "# Summary\r"
-              ]
+              "chapter": ["# Summary\r"]
             }
           ]
         },
@@ -426,17 +387,12 @@
             {
               "path": "docs/03. User Management/3 Technical User/01 Create Technical User.md",
               "name": "01 Create Technical User.md",
-              "chapter": [
-                "## Create a new technical user"
-              ]
+              "chapter": ["## Create a new technical user"]
             },
             {
               "path": "docs/03. User Management/3 Technical User/02 Delete Technical User.md",
               "name": "02 Delete Technical User.md",
-              "chapter": [
-                "## Delete an user",
-                "#### Currently not supported:"
-              ]
+              "chapter": ["## Delete an user", "#### Currently not supported:"]
             },
             {
               "path": "docs/03. User Management/3 Technical User/03 FAQ.md",
@@ -446,9 +402,7 @@
             {
               "path": "docs/03. User Management/3 Technical User/2 Design.md",
               "name": "2 Design.md",
-              "chapter": [
-                "# Design"
-              ]
+              "chapter": ["# Design"]
             },
             {
               "path": "docs/03. User Management/3 Technical User/4 Implementation.md",
@@ -481,9 +435,7 @@
             {
               "path": "docs/03. User Management/4 App Access Management/1 Design.md",
               "name": "1 Design.md",
-              "chapter": [
-                "# Design"
-              ]
+              "chapter": ["# Design"]
             },
             {
               "path": "docs/03. User Management/4 App Access Management/2 Implementation.md",
@@ -499,19 +451,14 @@
             {
               "path": "docs/03. User Management/4 App Access Management/3 Summary.md",
               "name": "3 Summary.md",
-              "chapter": [
-                "# Summary",
-                "#### Pre-Requisite"
-              ]
+              "chapter": ["# Summary", "#### Pre-Requisite"]
             }
           ]
         },
         {
           "path": "docs/03. User Management/index.md",
           "name": "index.md",
-          "chapter": [
-            "# User Management"
-          ]
+          "chapter": ["# User Management"]
         }
       ]
     },
@@ -522,11 +469,7 @@
         {
           "path": "docs/04. App(s)/App-Change-Process.md",
           "name": "App-Change-Process.md",
-          "chapter": [
-            "# Summary",
-            "# Function",
-            "# Implementation"
-          ]
+          "chapter": ["# Summary", "# Function", "# Implementation"]
         },
         {
           "path": "docs/04. App(s)/App-Management",
@@ -845,9 +788,7 @@
             {
               "path": "docs/05. Service(s)/Marketplace/FAQ.md",
               "name": "FAQ.md",
-              "chapter": [
-                "### FAQ"
-              ]
+              "chapter": ["### FAQ"]
             },
             {
               "path": "docs/05. Service(s)/Marketplace/Implementation.md",
@@ -882,10 +823,7 @@
             {
               "path": "docs/05. Service(s)/Release-Process/Design.md",
               "name": "Design.md",
-              "chapter": [
-                "# Summary",
-                "# Design Flow"
-              ]
+              "chapter": ["# Summary", "# Design Flow"]
             },
             {
               "path": "docs/05. Service(s)/Release-Process/FAQ.md",
@@ -911,9 +849,7 @@
             {
               "path": "docs/05. Service(s)/Release-Process/User_Description.md",
               "name": "User_Description.md",
-              "chapter": [
-                "# Summary"
-              ]
+              "chapter": ["# Summary"]
             }
           ]
         },
@@ -954,10 +890,7 @@
             {
               "path": "docs/05. Service(s)/Subscription/User_Description.md",
               "name": "User_Description.md",
-              "chapter": [
-                "# Summary",
-                "# Connected Documentation"
-              ]
+              "chapter": ["# Summary", "# Connected Documentation"]
             }
           ]
         }

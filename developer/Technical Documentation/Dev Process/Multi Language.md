@@ -1,29 +1,30 @@
 # Multi Language
 
 ## Summary
+
 Multi-Language support is planned for the Portal and Registration App in two languages
 <br>
-* English
-* German
-<br>
-<br>
-The multi language function is mainly implemented on front-end side via i18next.
-<br>
-I18next is an internationalization-framework for react and ideal to support multi language function in web applications.
-<br>
-<br>
+
+- English
+- German
+  <br>
+  <br>
+  The multi language function is mainly implemented on front-end side via i18next.
+  <br>
+  I18next is an internationalization-framework for react and ideal to support multi language function in web applications.
+  <br>
+  <br>
 
 i18next provides following add-ons:
-* detect the user language
-* load the translations
-* optionally cache the translations
-* extension, by using post-processing - e.g. to enable sprintf support
+
+- detect the user language
+- load the translations
+- optionally cache the translations
+- extension, by using post-processing - e.g. to enable sprintf support
 
 => get more details (https://www.i18next.com/overview/plugins-and-utils)
 <br>
 <br>
-
-
 
 ## Technical Implementation
 
@@ -44,4 +45,3 @@ Inside the CX Portal, the locales are divided by pages.
 <img width="150" alt="image" src="https://user-images.githubusercontent.com/94133633/210455893-bd9971e7-ab0d-429a-a507-416f88d4b601.png">
 <br>
 There is one main file holding the generic translation for often used items (e.g. "approval button", headlines,...) and a file for each specific page to translate not often used values.
-
