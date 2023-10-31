@@ -20,15 +20,16 @@ The board supports filter, serach and the actual approval / validation function 
 <br>
 
 ### Display Application Details
+
 <br>
 With using the application details button, application details such as
 <br>
 <br>
 
- * Company Data
- * Company application role
- * Documents, and
- * details to the approval flow status
+- Company Data
+- Company application role
+- Documents, and
+- details to the approval flow status
 
 <br>
 <img width="1000" alt="image" src="https://user-images.githubusercontent.com/94133633/210288576-e97207fe-fb86-44ed-991a-f6c9de7b47c8.png">

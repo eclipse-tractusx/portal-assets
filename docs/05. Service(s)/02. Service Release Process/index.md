@@ -4,15 +4,14 @@ The "Service Release Publishing Process" is used to enable Service Provider to o
 This chapter describes the service release process.
 
 How to get there?
-Access the "Service Publish Process" via the "Service Release Process" or via the "Service Management" page. Both sub-menus are available via the top menu "Servie Management".  
+Access the "Service Publish Process" via the "Service Release Process" or via the "Service Management" page. Both sub-menus are available via the top menu "Servie Management".
 
 <br>
 <br>
 
 ### Trigger the Publishing Process
 
-
-Open the service release process via the top navigation menu "Service Management" -> "Service Release Process" 
+Open the service release process via the top navigation menu "Service Management" -> "Service Release Process"
 and click on the action button "Register your service"
 
 <br>

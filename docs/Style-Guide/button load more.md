@@ -9,9 +9,9 @@ Load More button component is based on the button component.
 
 ##### Setting:
 
-* outlined
-* active
-* with icon 
+- outlined
+- active
+- with icon
 
 <br>
 <br>

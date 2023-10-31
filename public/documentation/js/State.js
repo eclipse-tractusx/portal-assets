@@ -20,148 +20,153 @@
 import { NavTools, Transformer } from './Toolkit.js'
 
 class State {
+  clazz = 'State'
 
-    clazz = 'State'
+  listener = {
+    data: [],
+    selection: [],
+    menuOpen: [],
+    releases: [],
+    releaseSelection: [],
+    search: [],
+  }
 
-    listener = {
-        data: [],
-        selection: [],
-        menuOpen: [],
-        releases: [],
-        releaseSelection: [],
-        search: []
+  data = {}
+  selection = undefined
+  menuOpen = true
+  releases = undefined
+  releaseSelection = undefined
+  search = undefined
+  refresh = false
+
+  addListener(key, listener) {
+    this.listener[key] = [
+      ...new Set([
+        ...this.listener[key],
+        ...(Array.isArray(listener) ? listener : [listener]),
+      ]),
+    ]
+    return this
+  }
+
+  addDataListener(listener) {
+    return this.addListener('data', listener)
+  }
+
+  fireDataChanged() {
+    this.listener.data.forEach((l) => l.dataChanged(this.data))
+    return this
+  }
+
+  setData(data) {
+    //console.log(this.clazz, 'setData', data)
+    data.map = Transformer.tree2map({}, data, undefined, data, 0, 0)
+    this.data = data
+    this.fireDataChanged(data)
+    return this
+  }
+
+  getItem(path) {
+    return this.data.map[path]
+  }
+
+  addSelectionListener(listener) {
+    this.addListener('selection', listener)
+    return this
+  }
+
+  fireSelectionChanged() {
+    this.listener.selection.forEach((l) =>
+      l.selectionChanged(this.selection, this.data.map[this.selection])
+    )
+    return this
+  }
+
+  setSelection(selection, hash) {
+    if (!selection) {
+      return this
     }
-
-    data = {}
-    selection = undefined
-    menuOpen = true
-    releases = undefined
-    releaseSelection = undefined
-    search = undefined
-    refresh = false
-
-    addListener(key, listener) {
-        this.listener[key] = [...new Set([...this.listener[key], ...(Array.isArray(listener) ? listener : [listener])])]
-        return this
+    if (selection.includes('#')) {
+      // eslint-disable-next-line no-extra-semi
+      ;[selection, hash] = selection.split('#')
     }
+    //console.log(this.clazz, 'setSelection', selection, hash)
+    selection =
+      this.data.map?.[selection] !== undefined ? selection : NavTools.getRoot()
+    if (selection === this.selection && !this.refresh) return
+    this.refresh = false
+    const content = this.getItem(selection)
+    NavTools.pushState({ ...content, hash })
+    this.selection = content.path
+    this.fireSelectionChanged()
+    return this
+  }
 
-    addDataListener(listener) {
-        return this.addListener('data', listener)
-    }
+  addMenuOpenListener(listener) {
+    return this.addListener('menuOpen', listener)
+  }
 
-    fireDataChanged() {
-        this.listener.data.forEach(l => l.dataChanged(this.data))
-        return this
-    }
+  fireMenuOpenChanged() {
+    this.listener.menuOpen.forEach((l) => l.menuOpenChanged(this.menuOpen))
+    return this
+  }
 
-    setData(data) {
-        //console.log(this.clazz, 'setData', data)
-        data.map = Transformer.tree2map({}, data, undefined, data, 0, 0)
-        this.data = data
-        this.fireDataChanged(data)
-        return this
-    }
+  setMenuOpen(menuOpen) {
+    this.menuOpen = menuOpen
+    this.fireMenuOpenChanged(menuOpen)
+    return this
+  }
 
-    getItem(path) {
-        return this.data.map[path]
-    }
+  addReleasesListener(listener) {
+    return this.addListener('releases', listener)
+  }
 
-    addSelectionListener(listener) {
-        this.addListener('selection', listener)
-        return this
-    }
+  fireReleasesChanged() {
+    this.listener.releases.forEach((l) => l.releasesChanged(this.releases))
+    return this
+  }
 
-    fireSelectionChanged() {
-        this.listener.selection.forEach(l => l.selectionChanged(
-            this.selection,
-            this.data.map[this.selection]
-        ))
-        return this
-    }
+  setReleases(releases) {
+    this.releases = releases.map((ref) => ({
+      ref,
+      name: ref.split('/').slice(-1)[0],
+    }))
+    this.fireReleasesChanged(this.releases)
+    return this
+  }
 
-    setSelection(selection, hash) {
-        if (!selection) {
-            return this
-        }
-        if (selection.includes('#')) {
-            [selection, hash] = selection.split('#')
-        }
-        //console.log(this.clazz, 'setSelection', selection, hash)
-        selection = (this.data.map && this.data.map.hasOwnProperty(selection)) ? selection : NavTools.getRoot()
-        if (selection === this.selection && !this.refresh)
-            return
-        this.refresh = false
-        const content = this.getItem(selection)
-        NavTools.pushState({ ...content, hash })
-        this.selection = content.path
-        this.fireSelectionChanged()
-        return this
-    }
+  addReleaseSelectionListener(listener) {
+    return this.addListener('releaseSelection', listener)
+  }
 
-    addMenuOpenListener(listener) {
-        return this.addListener('menuOpen', listener)
-    }
+  fireReleaseSelectionChanged() {
+    this.listener.releaseSelection.forEach((l) =>
+      l.releaseSelectionChanged(this.releaseSelection)
+    )
+    return this
+  }
 
-    fireMenuOpenChanged() {
-        this.listener.menuOpen.forEach(l => l.menuOpenChanged(this.menuOpen))
-        return this
-    }
+  setReleaseSelection(releaseSelection) {
+    this.releaseSelection = releaseSelection
+    this.fireReleaseSelectionChanged(releaseSelection)
+    this.refresh = true
+    return this
+  }
 
-    setMenuOpen(menuOpen) {
-        this.menuOpen = menuOpen
-        this.fireMenuOpenChanged(menuOpen)
-        return this
-    }
+  addSearchListener(listener) {
+    return this.addListener('search', listener)
+  }
 
-    addReleasesListener(listener) {
-        return this.addListener('releases', listener)
-    }
+  fireSearchChanged() {
+    this.listener.search.forEach((l) => l.searchChanged(this.search))
+    return this
+  }
 
-    fireReleasesChanged() {
-        this.listener.releases.forEach(l => l.releasesChanged(this.releases))
-        return this
-    }
-
-    setReleases(releases) {
-        this.releases = releases.map(ref => ({
-            ref,
-            name: ref.split('/').slice(-1)[0]
-        }))
-        this.fireReleasesChanged(this.releases)
-        return this
-    }
-
-    addReleaseSelectionListener(listener) {
-        return this.addListener('releaseSelection', listener)
-    }
-
-    fireReleaseSelectionChanged() {
-        this.listener.releaseSelection.forEach(l => l.releaseSelectionChanged(this.releaseSelection))
-        return this
-    }
-
-    setReleaseSelection(releaseSelection) {
-        this.releaseSelection = releaseSelection
-        this.fireReleaseSelectionChanged(releaseSelection)
-        this.refresh = true
-        return this
-    }
-
-    addSearchListener(listener) {
-        return this.addListener('search', listener)
-    }
-
-    fireSearchChanged() {
-        this.listener.search.forEach(l => l.searchChanged(this.search))
-        return this
-    }
-
-    setSearch(search) {
-        this.search = search
-        this.fireSearchChanged()
-        return this
-    }
-
+  setSearch(search) {
+    this.search = search
+    this.fireSearchChanged()
+    return this
+  }
 }
 
 export const state = new State()

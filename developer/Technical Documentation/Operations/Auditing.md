@@ -2,8 +2,8 @@
 
 For db audit logs, 2 generic approaches are used
 
-* PostgreSQL Session Logging (pgAudit)
-* Application Logging
+- PostgreSQL Session Logging (pgAudit)
+- Application Logging
 
 ## PostgreSQL Session Logging (pgAudit)
 
@@ -30,9 +30,9 @@ Due to the functional requirement to enable search, quick validations and audit 
 
 What: for each audit relevant table, an audit_tablename_version table is created and storing any original table INSERT, DELETE or UPDATE records. Important, we always store:
 
-* Who changed
-* What
-* When
+- Who changed
+- What
+- When
 
 To support auditing in the project we implemented a custom solution which overrides the `SaveChanges` and `SaveChangesAsync` methods within the `PortalDbContext`. The specific auditing implementation can be found within the `AuditHandlerV1`.
 
@@ -52,7 +52,7 @@ See the example below for further information:
 
 1. Create Audit entity which should contains all properties that are no navigation properties from the auditable entity. The audit entity must implement the `IAuditEntityV1` interface and mark the with the `Key` Attribute.
 
-``` c#
+```c#
 public class AuditCompanyUser20230522 : IAuditEntityV1
 {
    [Key]
@@ -64,14 +64,14 @@ public class AuditCompanyUser20230522 : IAuditEntityV1
 
 2. The auditable entity needs to implement interface 'IAuditableV1' and be marked with the `AuditEntityV1` Attribute
 
-``` c#
+```c#
 [AuditEntityV1(typeof(AuditCompanyUser20230522))]
 public class CompanyUser : IAuditableV1
 ```
 
 3. Add DbSet in PortalDbContext for the newly created Entity
 
-``` c#
+```c#
 public virtual DbSet<AuditCompanyUser20230522> AuditCompanyUser20230522 { get; set; } = default!;
 ```
 
@@ -79,5 +79,5 @@ public virtual DbSet<AuditCompanyUser20230522> AuditCompanyUser20230522 { get; s
 
 Additional relevant information:
 
-* (warning) If not already existing in the original table, a uuid and last_editor_id attribute need to get added to the original entity.
-* (warning) whenever the original table attributes are changed (e.g. adding an attribute or deleting and attribute) the already existing audit table will be set to frozen and a new audit table is getting created. All new audit relevant records will be stored in the new audit table
+- (warning) If not already existing in the original table, a uuid and last_editor_id attribute need to get added to the original entity.
+- (warning) whenever the original table attributes are changed (e.g. adding an attribute or deleting and attribute) the already existing audit table will be set to frozen and a new audit table is getting created. All new audit relevant records will be stored in the new audit table

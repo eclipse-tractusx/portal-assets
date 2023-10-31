@@ -4,33 +4,33 @@ Enum or enumeration are used for data type consisting of named values like eleme
 
 List of used enums in the portal application
 
-* agreement_categories
-* application_checklist_statuses
-* application_checklist_types
-* audit_operation
-* bpdm_identifiers
-* company_application_statuses
-* company_service_account_statuses
-* company_service_account_types
-* company_statuses
-* company_user_statuses
-* connector_statuses
-* connector_types
-* consent_statuses
-* document_status
-* document_types
-* identity_provider_categories
-* invitation_statuses
-* notification_topic
-* notification_type
-* offer_statuses
-* offer_subscription_statuses
-* offer_types
-* privacy_policies
-* process_step_statuses
-* process_step_types
-* service_types
-* unique_identifiers
+- agreement_categories
+- application_checklist_statuses
+- application_checklist_types
+- audit_operation
+- bpdm_identifiers
+- company_application_statuses
+- company_service_account_statuses
+- company_service_account_types
+- company_statuses
+- company_user_statuses
+- connector_statuses
+- connector_types
+- consent_statuses
+- document_status
+- document_types
+- identity_provider_categories
+- invitation_statuses
+- notification_topic
+- notification_type
+- offer_statuses
+- offer_subscription_statuses
+- offer_types
+- privacy_policies
+- process_step_statuses
+- process_step_types
+- service_types
+- unique_identifiers
 
 <br>
 <br>
@@ -56,11 +56,11 @@ Same applies to frontend and backend logic. Both might refer to the enum label a
 
 Deletion of enums have following impacts
 
-* Seeding data update needed (likely data need to get deleted / changed)
-* Data inside the database in the different running environments need to get updated
-* User flow process impacted
-* Backend business logic impacted
-* Frontend business logic impacted
+- Seeding data update needed (likely data need to get deleted / changed)
+- Data inside the database in the different running environments need to get updated
+- User flow process impacted
+- Backend business logic impacted
+- Frontend business logic impacted
 
 It is not recommended to delete enums; instead .......... to be updated; we need to define how enums can / should get changed if needed
 

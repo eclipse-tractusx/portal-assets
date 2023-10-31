@@ -4,14 +4,14 @@ DockerHub: [https://hub.docker.com/r/tractusx/portal-assets](https://hub.docker.
 
 Eclipse Tractus-X product(s) installed within the image:
 
-__Portal Assets__
+**Portal Assets**
 
 - GitHub: https://github.com/eclipse-tractusx/portal-assets
 - Project home: https://projects.eclipse.org/projects/automotive.tractusx
 - Dockerfile: https://github.com/eclipse-tractusx/portal-assets/blob/main/.conf/Dockerfile
 - Project license: [Apache License, Version 2.0](https://github.com/eclipse-tractusx/portal-assets/blob/main/LICENSE)
 
-__Used base images__
+**Used base images**
 
 - Dockerfile: [nginxinc/nginx-unprivileged:alpine](https://github.com/nginxinc/docker-nginx-unprivileged/blob/main/Dockerfile-alpine.template)
 - GitHub project: [https://github.com/nginxinc/docker-nginx-unprivileged](https://github.com/nginxinc/docker-nginx-unprivileged)

@@ -3,6 +3,7 @@
 ## What is the Portal & Marketplace Product?
 
 The Portal & Marketplace Product combines 4 main components of the Catena-X core services:
+
 - Registration Front End
 - Portal & Marketplace Front End
 - Registration, Portal and Marketplace API services
