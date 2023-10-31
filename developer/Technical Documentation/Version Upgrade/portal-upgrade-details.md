@@ -10,6 +10,117 @@ Each section includes the respective change details, impact on existing data and
 <br>
 <br>
 
+#### Technical Role - UPDATE - 1.7.0
+
+To align the portal database with the keycloak database the following SQL must be executed against the portal database. The script will replace the 'Connector User' role with the roles 'Semantic Model Management' and 'Dataspace Discovery'. As well as replace the 'App Tech User' role with 'Semantic Model Management', 'Dataspace Discovery' and 'CX Membership Info'. This results in all identity assigned roles being replaced, all technical user profile assigned roles being updated and the old roles being removed from the database.
+
+```sql
+WITH connector_users AS (
+    SELECT DISTINCT identity_id
+    FROM portal.identity_assigned_roles AS ia
+        JOIN portal.user_roles AS ur
+        ON ia.user_role_id = ur.id
+    WHERE ur.user_role = 'Connector User'
+),
+connector_roles_to_insert AS (
+    SELECT DISTINCT atu.identity_id, ur.id AS user_role_id
+    FROM connector_users AS atu
+    CROSS JOIN (
+        SELECT id
+        FROM portal.user_roles
+        WHERE user_role IN ('Semantic Model Management', 'Dataspace Discovery')
+    ) AS ur
+)
+INSERT INTO portal.identity_assigned_roles (identity_id, user_role_id)
+SELECT rt.identity_id, rt.user_role_id
+FROM connector_roles_to_insert AS rt
+    LEFT JOIN portal.identity_assigned_roles AS iar
+    ON rt.identity_id = iar.identity_id AND rt.user_role_id = iar.user_role_id
+WHERE iar.identity_id IS NULL;
+
+WITH app_tech_users AS (
+    SELECT DISTINCT identity_id
+    FROM portal.identity_assigned_roles AS ia
+        JOIN portal.user_roles AS ur
+        ON ia.user_role_id = ur.id
+    WHERE ur.user_role = 'App Tech User'
+),
+roles_to_insert AS (
+    SELECT DISTINCT atu.identity_id, ur.id AS user_role_id
+    FROM app_tech_users AS atu
+    CROSS JOIN (
+        SELECT id
+        FROM portal.user_roles
+        WHERE user_role IN ('Semantic Model Management', 'Dataspace Discovery', 'CX Membership Info')
+    ) ur
+)
+INSERT INTO portal.identity_assigned_roles (identity_id, user_role_id)
+SELECT rt.identity_id, rt.user_role_id
+FROM roles_to_insert rt
+    LEFT JOIN portal.identity_assigned_roles AS iar
+    ON rt.identity_id = iar.identity_id AND rt.user_role_id = iar.user_role_id
+WHERE iar.identity_id IS NULL;
+
+WITH connector_technical_user_profiles AS (
+    SELECT DISTINCT technical_user_profile_id
+    FROM portal.technical_user_profile_assigned_user_roles AS ia
+        JOIN portal.user_roles AS ur
+        ON ia.user_role_id = ur.id
+    WHERE ur.user_role = 'Connector User'
+),
+connector_profiles_to_insert AS (
+    SELECT DISTINCT atu.technical_user_profile_id, ur.id AS user_role_id
+    FROM app_technical_user_profiles AS atu
+    CROSS JOIN (
+        SELECT id
+        FROM portal.user_roles
+        WHERE user_role IN ('Semantic Model Management', 'Dataspace Discovery')
+    ) ur
+)
+INSERT INTO portal.technical_user_profile_assigned_user_roles (technical_user_profile_id, user_role_id)
+SELECT rt.technical_user_profile_id, rt.user_role_id
+FROM connector_profiles_to_insert rt
+    LEFT JOIN portal.technical_user_profile_assigned_user_roles AS iar
+    ON rt.identity_id = iar.identity_id AND rt.technical_user_profile_id = iar.technical_user_profile_id
+WHERE iar.identity_id IS NULL;
+
+WITH app_technical_user_profiles AS (
+    SELECT DISTINCT technical_user_profile_id
+    FROM portal.technical_user_profile_assigned_user_roles AS ia
+        JOIN portal.user_roles AS ur
+        ON ia.user_role_id = ur.id
+    WHERE ur.user_role = 'App Tech User'
+),
+profiles_to_insert AS (
+    SELECT DISTINCT atu.technical_user_profile_id, ur.id AS user_role_id
+    FROM app_technical_user_profiles AS atu
+    CROSS JOIN (
+        SELECT id
+        FROM portal.user_roles
+        WHERE user_role IN ('Semantic Model Management', 'Dataspace Discovery', 'CX Membership Info')
+    ) ur
+)
+INSERT INTO portal.technical_user_profile_assigned_user_roles (technical_user_profile_id, user_role_id)
+SELECT rt.technical_user_profile_id, rt.user_role_id
+FROM profiles_to_insert rt
+    LEFT JOIN portal.technical_user_profile_assigned_user_roles AS iar
+    ON rt.identity_id = iar.identity_id AND rt.technical_user_profile_id = iar.technical_user_profile_id
+WHERE iar.identity_id IS NULL;
+
+UPDATE portal.user_roles SET user_role = 'Offer Management' WHERE user_role IN ('Service Management');
+
+DELETE FROM portal.user_role_assigned_collections
+WHERE user_role_id IN (SELECT id FROM portal.user_roles WHERE user_role IN ('Connector User', 'App Tech User'));
+
+DELETE FROM portal.technical_user_profile_assigned_user_roles
+WHERE user_role_id IN (SELECT id FROM portal.user_roles WHERE user_role IN ('Connector User', 'App Tech User'));
+
+DELETE FROM portal.identity_assigned_roles where user_role_id in (SELECT id FROM portal.user_roles where user_role IN ('Connector User', 'App Tech User'));
+
+DELETE FROM portal.user_roles WHERE user_role IN ('Connector User', 'App Tech User');
+
+```
+
 #### Database Constraints - FIX - 1.7.0
 
 If you're running on release 1.6.0 (1.6.0-rc1 up to 1.7.0-alpha are the affected versions) and want to execute a database dump, for instance as part of a database upgrade, you should run the following script on the database to make sure that the database dump can be imported without any problems and errors.
