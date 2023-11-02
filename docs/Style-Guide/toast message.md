@@ -18,10 +18,10 @@ If a user does hover on a toast message, the auto closure timer is stopped and w
 
 #### Style
 
-* top left oriented
-* 16px margin from the right page frame
-* fix width of 402px
-* height does auto adjust based on content
+- top left oriented
+- 16px margin from the right page frame
+- fix width of 402px
+- height does auto adjust based on content
 
 <br>
 <br>

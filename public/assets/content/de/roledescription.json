@@ -1,32 +1,34 @@
-[{
-  "title": "Common Roles",
-  "subTitles": [
-    "Company Admin",
-    "IT Admin",
-    "CX User",
-    "Business Admin",
-    "Purchaser"
+[
+  {
+    "title": "Common Roles",
+    "subTitles": [
+      "Company Admin",
+      "IT Admin",
+      "CX User",
+      "Business Admin",
+      "Purchaser"
     ],
-  "descriptions": [
-    "Der Unternehmensadministrator ist der Unternehmensadministrator für die Unternehmensverwaltung. Unternehmensadministratoren können die Unternehmensregistrierung, Connector-Registrierung, Unternehmenskonfiguration und Benutzerverwaltung durchführen.",
-    "Der IT-Admin ist der Firmen-Admin für die IT-Administration zwischen dem Firmennetzwerk und catena-x. IT-Administratoren können den IdP, die Benutzerverwaltung und die Connector-Registrierung konfigurieren.",
-    "Der CX-Benutzer ist ein Standardbenutzer im Netzwerk und wird für die meisten Benutzer verwendet. Diese Benutzer können keine Vereinbarungen erstellen oder Dienste bestellen, aber sie können verfügbare Dienste erkunden und auf ihre Geschäftsanwendungen zugreifen.",
-    "Der Business-Admin kann eine App im Namen des Unternehmens abonnieren.",
-    "Der Einkäufer kann eine App im Namen des Unternehmens abonnieren."
+    "descriptions": [
+      "Der Unternehmensadministrator ist der Unternehmensadministrator für die Unternehmensverwaltung. Unternehmensadministratoren können die Unternehmensregistrierung, Connector-Registrierung, Unternehmenskonfiguration und Benutzerverwaltung durchführen.",
+      "Der IT-Admin ist der Firmen-Admin für die IT-Administration zwischen dem Firmennetzwerk und catena-x. IT-Administratoren können den IdP, die Benutzerverwaltung und die Connector-Registrierung konfigurieren.",
+      "Der CX-Benutzer ist ein Standardbenutzer im Netzwerk und wird für die meisten Benutzer verwendet. Diese Benutzer können keine Vereinbarungen erstellen oder Dienste bestellen, aber sie können verfügbare Dienste erkunden und auf ihre Geschäftsanwendungen zugreifen.",
+      "Der Business-Admin kann eine App im Namen des Unternehmens abonnieren.",
+      "Der Einkäufer kann eine App im Namen des Unternehmens abonnieren."
     ]
-},
- {
-  "title": "Company role specific roles: App Provider",
-  "subTitles": [
-    "App Manager",
-    "App Developer",
-    "Service Manager",
-    "Sales Manager"
+  },
+  {
+    "title": "Company role specific roles: App Provider",
+    "subTitles": [
+      "App Manager",
+      "App Developer",
+      "Service Manager",
+      "Sales Manager"
     ],
-  "descriptions": [
-    "Der App Manager kann eine App hinzufügen, löschen und ändern",
-    "Der App-Entwickler kann das Netzwerk erkunden (wie der CX-Benutzer) und hat zusätzlich Zugriff auf die Richtlinien für Entwickler.",
-    "Der Service Manager ist der Benutzer, der den angebotenen Service verwaltet. Fügen Sie neue Services hinzu, weisen Sie Sales Manager zu und ziehen Sie Services zurück.",
-    "Der Sales Manager ist der Benutzer, der am App-/Service-Verkaufsprozess beteiligt ist. Der Vertriebsleiter ist mit der App innerhalb des Marktplatzes verknüpft und erhält Benachrichtigungen für Abonnementanfragen."
+    "descriptions": [
+      "Der App Manager kann eine App hinzufügen, löschen und ändern",
+      "Der App-Entwickler kann das Netzwerk erkunden (wie der CX-Benutzer) und hat zusätzlich Zugriff auf die Richtlinien für Entwickler.",
+      "Der Service Manager ist der Benutzer, der den angebotenen Service verwaltet. Fügen Sie neue Services hinzu, weisen Sie Sales Manager zu und ziehen Sie Services zurück.",
+      "Der Sales Manager ist der Benutzer, der am App-/Service-Verkaufsprozess beteiligt ist. Der Vertriebsleiter ist mit der App innerhalb des Marktplatzes verknüpft und erhält Benachrichtigungen für Abonnementanfragen."
     ]
-}]
+  }
+]

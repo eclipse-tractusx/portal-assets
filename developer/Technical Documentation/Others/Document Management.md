@@ -2,10 +2,9 @@
 
 Inside the portal, we have a number of different places to
 
-* upload documents
-* view documents
-* delete documents
-
+- upload documents
+- view documents
+- delete documents
 
 Documents can be templates, but also signed contracts The uploaded documents must be .pdf documents.
 <br>
@@ -27,11 +26,11 @@ Documents are managed inside the postgresql db.
 
 Mainly 4 tables are used for the documents itself
 
-* documents
-* document_types
-* document_status
-* offer_assigned_documents
-* agreement_assigned_documents
+- documents
+- document_types
+- document_status
+- offer_assigned_documents
+- agreement_assigned_documents
 
 <br>
 
@@ -55,11 +54,11 @@ The deletion of legal binding documents will lead to an immense issue on the aud
 Based on the reasons above, the document deletion is handled in 2 different functions
 <br>
 
-* Deletion triggered by the enduser  
-      The deletion triggered by the enduser is possible as long as the document is in status "PENDING". As soon as any other state is reached the deletion wont be possible anymore.
+- Deletion triggered by the enduser  
+   The deletion triggered by the enduser is possible as long as the document is in status "PENDING". As soon as any other state is reached the deletion wont be possible anymore.
 
-* Deletion triggered by an automatic job running at a specific time (batch job)  
-      Specific configured batch job running nigthly to delete INACTIVE documents with a certain age.
+- Deletion triggered by an automatic job running at a specific time (batch job)  
+   Specific configured batch job running nigthly to delete INACTIVE documents with a certain age.
 
 <br>
 <br>
@@ -74,9 +73,10 @@ Uploading documents is limited to 8MB. The configuration for the maximum file si
 Additionally document size validation on FE was implemented lately where the size depends on the process.  
 Inside the registration sizes can be following:
 <br>
-* Registration => up to 8MB
-* App Release Process => up to 1MB
-* etc.
+
+- Registration => up to 8MB
+- App Release Process => up to 1MB
+- etc.
 
 <br>
 <br>
@@ -90,16 +90,16 @@ Inside the registration sizes can be following:
 Overview of all document related GET Endpoints:
 <br>
 
-WHAT              |Endpoint                                                         | Who can call the endpoint | What can I retrieve                 |
------------------ | --------------------------------------------------------------- | ------------------------- | ----------------------------------- |
-CX Frame Docs     | GET: /api/registration/registrationDocuments/{documentId}       | All                       | All CX Frame flagged documents      |
-CX Frame Docs     | GET: /api/administration/frameDocuments/{documentId}            | All                       | All CX Frame flagged documents      |
-Registration Docs | GET: /api/registration/documents/{documentId}                   | All                       | Only my Company Docs                |
-Registration Docs | GET: /api/administration/documents/{documentID}                 | All                       | Only my Company Docs                |
-Registration Docs | GET: /api/administration/registration/documents/{documentId}    | Operator                  | Registration docus of all companies |
-Registration Docs | GET: /api/administration/documents/selfDescription/{documentId} | All                       | All SDs flagged documents           |
-App Documents     | GET: /api/apps/{appId}/appDocuments/{documentId}                | All                       | All app offer assigned docs         |
-Service Documents | GET: /api/services/{serviceId}/serviceDocuments/{documentId}    | All                       | All service offer assigned docs     |
+| WHAT              | Endpoint                                                        | Who can call the endpoint | What can I retrieve                 |
+| ----------------- | --------------------------------------------------------------- | ------------------------- | ----------------------------------- |
+| CX Frame Docs     | GET: /api/registration/registrationDocuments/{documentId}       | All                       | All CX Frame flagged documents      |
+| CX Frame Docs     | GET: /api/administration/frameDocuments/{documentId}            | All                       | All CX Frame flagged documents      |
+| Registration Docs | GET: /api/registration/documents/{documentId}                   | All                       | Only my Company Docs                |
+| Registration Docs | GET: /api/administration/documents/{documentID}                 | All                       | Only my Company Docs                |
+| Registration Docs | GET: /api/administration/registration/documents/{documentId}    | Operator                  | Registration docus of all companies |
+| Registration Docs | GET: /api/administration/documents/selfDescription/{documentId} | All                       | All SDs flagged documents           |
+| App Documents     | GET: /api/apps/{appId}/appDocuments/{documentId}                | All                       | All app offer assigned docs         |
+| Service Documents | GET: /api/services/{serviceId}/serviceDocuments/{documentId}    | All                       | All service offer assigned docs     |
 
 <br>
 
@@ -143,4 +143,3 @@ Scheduled deletion job, configurable to run overnight.
 
 <br>
 <br>
-

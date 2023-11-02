@@ -13,25 +13,17 @@
             {
               "path": "developer/01. Onboarding/01. Invite/01. Summary.md",
               "name": "01. Summary.md",
-              "chapter": [
-                "## Summary"
-              ]
+              "chapter": ["## Summary"]
             },
             {
               "path": "developer/01. Onboarding/01. Invite/02. Overview Invited Companies.md",
               "name": "02. Overview Invited Companies.md",
-              "chapter": [
-                "## Get Invited Companies",
-                "#### API Details"
-              ]
+              "chapter": ["## Get Invited Companies", "#### API Details"]
             },
             {
               "path": "developer/01. Onboarding/01. Invite/03. Invite Company : Create Application.md",
               "name": "03. Invite Company : Create Application.md",
-              "chapter": [
-                "## Invite Company",
-                "#### API Details"
-              ]
+              "chapter": ["## Invite Company", "#### API Details"]
             }
           ]
         },
@@ -185,9 +177,7 @@
             {
               "path": "developer/02. Technical Integration/01. Connector Registration/01. Summary.md",
               "name": "01. Summary.md",
-              "chapter": [
-                "# Summary"
-              ]
+              "chapter": ["# Summary"]
             },
             {
               "path": "developer/02. Technical Integration/01. Connector Registration/02. View Connector.md",
@@ -214,17 +204,12 @@
             {
               "path": "developer/02. Technical Integration/01. Connector Registration/04. DAPS Registration.md",
               "name": "04. DAPS Registration.md",
-              "chapter": [
-                "## 4 Retrigger DAPS",
-                "#### API Details"
-              ]
+              "chapter": ["## 4 Retrigger DAPS", "#### API Details"]
             },
             {
               "path": "developer/02. Technical Integration/01. Connector Registration/05. Self Description.md",
               "name": "05. Self Description.md",
-              "chapter": [
-                "## Self Description"
-              ]
+              "chapter": ["## Self Description"]
             },
             {
               "path": "developer/02. Technical Integration/01. Connector Registration/06. Delete Connector.md",
@@ -244,9 +229,7 @@
             {
               "path": "developer/02. Technical Integration/02. Identity Provider Management/01. Summary.md",
               "name": "01. Summary.md",
-              "chapter": [
-                "# Summary"
-              ]
+              "chapter": ["# Summary"]
             },
             {
               "path": "developer/02. Technical Integration/02. Identity Provider Management/02. Configure Company IdP.md",
@@ -290,9 +273,7 @@
             {
               "path": "developer/03. User Management/01. User Account/01. Summary.md",
               "name": "01. Summary.md",
-              "chapter": [
-                "# Summary"
-              ]
+              "chapter": ["# Summary"]
             },
             {
               "path": "developer/03. User Management/01. User Account/02. User Account.md",
@@ -307,16 +288,12 @@
             {
               "path": "developer/03. User Management/01. User Account/03. Create new user account (single) - UPDATE NEEDED.md",
               "name": "03. Create new user account (single) - UPDATE NEEDED.md",
-              "chapter": [
-                "## Create a new user account (single)"
-              ]
+              "chapter": ["## Create a new user account (single)"]
             },
             {
               "path": "developer/03. User Management/01. User Account/04. Create new user account (bulk) - UPDATE NEEDED.md",
               "name": "04. Create new user account (bulk) - UPDATE NEEDED.md",
-              "chapter": [
-                "## Create a new user account (bulk)"
-              ]
+              "chapter": ["## Create a new user account (bulk)"]
             }
           ]
         },
@@ -327,10 +304,7 @@
             {
               "path": "developer/03. User Management/02. Edit User Account/01. Summary.md",
               "name": "01. Summary.md",
-              "chapter": [
-                "# User Account Details",
-                "# My CX Account"
-              ]
+              "chapter": ["# User Account Details", "# My CX Account"]
             },
             {
               "path": "developer/03. User Management/02. Edit User Account/02. Password Reset.md",
@@ -370,9 +344,7 @@
             {
               "path": "developer/03. User Management/02. Edit User Account/05. Suspend User.md",
               "name": "05. Suspend User.md",
-              "chapter": [
-                "# Suspend User"
-              ]
+              "chapter": ["# Suspend User"]
             },
             {
               "path": "developer/03. User Management/02. Edit User Account/06. Delete User.md",
@@ -390,9 +362,7 @@
             {
               "path": "developer/03. User Management/02. Edit User Account/index.md",
               "name": "index.md",
-              "chapter": [
-                "# Summary\r"
-              ]
+              "chapter": ["# Summary\r"]
             }
           ]
         },
@@ -448,10 +418,7 @@
             {
               "path": "developer/03. User Management/4 App Access Management/01. Summary.md",
               "name": "01. Summary.md",
-              "chapter": [
-                "# Summary",
-                "#### Pre-Requisite"
-              ]
+              "chapter": ["# Summary", "#### Pre-Requisite"]
             },
             {
               "path": "developer/03. User Management/4 App Access Management/02. Assign App Role Page Overview.md",
@@ -476,9 +443,7 @@
         {
           "path": "developer/03. User Management/index.md",
           "name": "index.md",
-          "chapter": [
-            "# User Management"
-          ]
+          "chapter": ["# User Management"]
         }
       ]
     },
@@ -627,10 +592,7 @@
             {
               "path": "developer/04. Apps/06. App Change Process/App Deactivation.md",
               "name": "App Deactivation.md",
-              "chapter": [
-                "## Summary",
-                "## Implementation"
-              ]
+              "chapter": ["## Summary", "## Implementation"]
             }
           ]
         },
@@ -651,10 +613,7 @@
             {
               "path": "developer/04. Apps/App Release Approval - UPDATE NEEDED/02. Approve App Release - IMPL.md",
               "name": "02. Approve App Release - IMPL.md",
-              "chapter": [
-                "## Implementation",
-                "### #1 Approve App Release"
-              ]
+              "chapter": ["## Implementation", "### #1 Approve App Release"]
             },
             {
               "path": "developer/04. Apps/App Release Approval - UPDATE NEEDED/03. Decline App Release - IMPL.md",
@@ -760,10 +719,7 @@
     {
       "path": "developer/Documents - DB - View.md",
       "name": "Documents - DB - View.md",
-      "chapter": [
-        "## Documents",
-        "## Document DB Connection"
-      ]
+      "chapter": ["## Documents", "## Document DB Connection"]
     },
     {
       "path": "developer/Subscription - DB - View.md",
@@ -796,9 +752,7 @@
             {
               "path": "developer/Technical Documentation/Architecture/Building block view.md",
               "name": "Building block view.md",
-              "chapter": [
-                "# Building Block View"
-              ]
+              "chapter": ["# Building Block View"]
             },
             {
               "path": "developer/Technical Documentation/Architecture/Context and scope.md",
@@ -833,9 +787,7 @@
             {
               "path": "developer/Technical Documentation/Architecture/Solution strategy.md",
               "name": "Solution strategy.md",
-              "chapter": [
-                "# Solution Strategy"
-              ]
+              "chapter": ["# Solution Strategy"]
             },
             {
               "path": "developer/Technical Documentation/Architecture/Whitebox Overall System.md",

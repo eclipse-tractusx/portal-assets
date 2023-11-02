@@ -5,12 +5,11 @@ Below you can find an overview of all supported templates as well as the templat
 
 ### Templates
 
-
 #### Common Notes
 
-* <id: `templateId`>
-  * The `templateId` is the link in the sub navigation section.
-  * The `templateId` has to be unique among the templates
+- <id: `templateId`>
+  - The `templateId` is the link in the sub navigation section.
+  - The `templateId` has to be unique among the templates
 
 #### #1 TextCenterAlignedWithCardGrid
 
@@ -84,14 +83,12 @@ Template Name: "TextCenterAlignedWithCardGrid"
  <br>
  <br>
 
-
-#### #2 TextCenterAlignedWithLinkButtonGrid  
+#### #2 TextCenterAlignedWithLinkButtonGrid
 
 Template Name: "TextCenterAlignedWithLinkButtonGrid"
 <br>
 
 <img width="1080" alt="image" src="../static/TextCenterAlignedWithLinkButtonGrid.png">
-
 
  <details>
    <summary>Structure Details</summary>
@@ -132,8 +129,7 @@ Template Name: "TextCenterAlignedWithLinkButtonGrid"
 <br>
 <br>
 
-
-#### #3 TextImageSideBySideWithCardGrid 
+#### #3 TextImageSideBySideWithCardGrid
 
 Template Name: "TextImageSideBySideWithCardGrid"
 <br>
@@ -213,8 +209,7 @@ Template Name: "TextImageSideBySideWithCardGrid"
 <br>
 <br>
 
-
-#### #4 TextVideoSideBySide 
+#### #4 TextVideoSideBySide
 
 Template Name: "TextVideoSideBySide"
 <br>
@@ -239,8 +234,7 @@ Template Name: "TextVideoSideBySide"
 <br>
 <br>
 
-
-#### #5 Video-Text-Side-By-Side 
+#### #5 Video-Text-Side-By-Side
 
 Template Name: "VideoTextSideBySide"
 <br>
@@ -420,7 +414,6 @@ Template Name: "TextImageSideBySideWithLinks"
  <br>
  <br>
 
-
 #### #11 TextImageSideBySideWithSections
 
 Template Name: "TextImageSideBySideWithSections"
@@ -536,13 +529,13 @@ Template Name: "TextImageSideBySideWithSections"
  <br>
  <br>
 
-
-### Implementation  
+### Implementation
 
 To create a new page or enhance an existing page, the following steps need to get performed
 <br>
 
 #### New Page creation
+
 If a complete new page with the usage static data templates is planned, the page need to get introduced inside the portal frontend repo as well as inside the asset repo.
 The frontend repo is needed to introduce the page, permissions to the page as well as the navigation.
 
@@ -550,6 +543,7 @@ The frontend repo is needed to introduce the page, permissions to the page as we
 <br>
 
 #### Enhancing an existing page
+
 For enhancing an existing page, the asset files insidide the asset repo => /public/assets/content/de/.... need to get enhanced.
 Please ensure that you extend all language files and not only one.
 
@@ -557,7 +551,3 @@ By adding a new template (as mentioned above) inside the content files, the port
 
 <br>
 <br>
-
-
-
-

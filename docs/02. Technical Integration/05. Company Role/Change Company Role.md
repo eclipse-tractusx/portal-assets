@@ -3,10 +3,11 @@
 Company Administrators can change the company participation role of the own company account to enable additional dataspace features or disable the same.
 
 Available Company Roles
-* Participant (data provider and data consumer as well as app and service customers)
-* App Provider (offering managed or unmanaged applications to enable customers to make more use of their data and enable new business deep dives)
-* Service Provider (offering managed services such as dataspace services/consultant services)
-<br>
+
+- Participant (data provider and data consumer as well as app and service customers)
+- App Provider (offering managed or unmanaged applications to enable customers to make more use of their data and enable new business deep dives)
+- Service Provider (offering managed services such as dataspace services/consultant services)
+  <br>
 
 The change of the company role will impact the roles and rights inside the portal.
 Those are displayed to the company admin when switching the role.
@@ -41,4 +42,3 @@ If the user approved all the necessary T&Cs the role change can get commited and
 
 <br>
 <br>
-

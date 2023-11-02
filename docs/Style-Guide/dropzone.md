@@ -9,16 +9,15 @@ The dropzone, also upload area called, is used to load one or more local stored 
 
 ##### The dropzone supports following setting
 
-* dropzone size
-* #of uploaded documents (single vs multiple)
-* drag&drop as well as browse function
-* plus, extensions
-* upload list
-* upload status
-* (auto)uploadqueue
-* delete function
-* preview function
-
+- dropzone size
+- #of uploaded documents (single vs multiple)
+- drag&drop as well as browse function
+- plus, extensions
+- upload list
+- upload status
+- (auto)uploadqueue
+- delete function
+- preview function
 
 In the following screens those add on extensions are shown
 
@@ -67,5 +66,3 @@ Example:
 
 <br>
 <br>
-
-

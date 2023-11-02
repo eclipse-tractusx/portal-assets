@@ -8,12 +8,12 @@ Beyond this view, the portal allows for component integration of other (sub-prod
 
 Currently integrated (or in the process of being integrated) products are:
 
-* Semantic Hub
-* BPDM-Pool
-* Managed Identity Wallet
-* Self-Description Factory
-* Clearing House / Gaia-X
-* Digital Twin Registry (until decentral DTR is in place)
+- Semantic Hub
+- BPDM-Pool
+- Managed Identity Wallet
+- Self-Description Factory
+- Clearing House / Gaia-X
+- Digital Twin Registry (until decentral DTR is in place)
 
 <br>
 <br>

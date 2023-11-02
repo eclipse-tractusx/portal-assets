@@ -7,12 +7,12 @@ The App Picture / Image for the app card logo is one of the most important eleme
 <br>
 The app card should be
 
-* unique
-* colors should be selected carefully (not too much and not too less)
-* reduce characters since people wont be able to read the text => icons are rather small inside the marketplace
-* size: 200x200 pixel
-* full-bleed square
-* dont use ui pictures or screenshots, take a graphic/design a graphic
+- unique
+- colors should be selected carefully (not too much and not too less)
+- reduce characters since people wont be able to read the text => icons are rather small inside the marketplace
+- size: 200x200 pixel
+- full-bleed square
+- dont use ui pictures or screenshots, take a graphic/design a graphic
 
 <br>
 <br>
@@ -20,8 +20,6 @@ The app card should be
 ### Support Information
 
 #### App Picture Layout Template
-
-
 
 <br>
 <br>
@@ -38,13 +36,13 @@ All images used for any user interaction will receive a frame. White as well as 
 
 ###### Do's
 
-* Colorful, white and black background
+- Colorful, white and black background
 
 <br>
 
 ###### Dont's
 
-* pastel colors (always difficult as soon as the background is white)
+- pastel colors (always difficult as soon as the background is white)
 
 <br>
 <br>
@@ -71,11 +69,11 @@ All images used for any user interaction will receive a frame. White as well as 
 
 Do's
 
-* Colorful, white and black background
+- Colorful, white and black background
 
 Don'ts
 
-* pastel colors (always difficult as soon as the background is white)
+- pastel colors (always difficult as soon as the background is white)
 
 <br>
 <br>
@@ -87,8 +85,8 @@ Multi Language Support is necessary for Catena-X owned apps
 <br>
 Mandatory language support
 
-* German
-* English
+- German
+- English
 
 <br>
 Technical solution proposal
@@ -96,4 +94,3 @@ Technical solution proposal
 
 <br>
 <br>
-

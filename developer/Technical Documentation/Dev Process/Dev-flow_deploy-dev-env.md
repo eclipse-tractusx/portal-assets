@@ -40,12 +40,12 @@ flowchart LR
     end
 ```
 
-Note* Every pull request (PR) requires at least one approving review by a committer
+Note\* Every pull request (PR) requires at least one approving review by a committer
 
-Note** ESlint, unit tests and Sonarcloud runs at pull request, Trivy and KICS scans at merge as well as daily and Veracode scan runs weekly
+Note\*\* ESlint, unit tests and Sonarcloud runs at pull request, Trivy and KICS scans at merge as well as daily and Veracode scan runs weekly
 
-Note*** Unit tests and Sonarcloud runs at pull request, Trivy and KICS scans at merge as well as daily and Veracode scan runs weekly
+Note\*\*\* Unit tests and Sonarcloud runs at pull request, Trivy and KICS scans at merge as well as daily and Veracode scan runs weekly
 
-Note**** Sonarcloud runs at pull request, Trivy and KICS scans at merge as well as daily
+Note\*\*\*\* Sonarcloud runs at pull request, Trivy and KICS scans at merge as well as daily
 
-Note***** Trivy and KICS scans are scheduled to daily
+Note**\*** Trivy and KICS scans are scheduled to daily

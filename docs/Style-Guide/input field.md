@@ -7,10 +7,10 @@
 
 #### Guidance
 
-* always set input data patterns to validate the user input
-* support error handling in case of incorrect input
-* enable (where necessary) - hints/tips/infomration icons
-* mandatory/optional data inputs should get highlighted
+- always set input data patterns to validate the user input
+- support error handling in case of incorrect input
+- enable (where necessary) - hints/tips/infomration icons
+- mandatory/optional data inputs should get highlighted
 
 <br>
 <br>
