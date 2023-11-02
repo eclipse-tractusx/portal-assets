@@ -1,8 +1,11 @@
 ## Identity Provider Management
 
 - [Summary](./01.%20Summary.md)
+- [Company IdPs](./02.%20Company%20IdPs.md)
 - [Configure Company IdP](./02.%20Configure%20Company%20IdP.md)
 - [User Migration](./03.%20User%20Migration.md)
+- [Identity Provider Disablement](./05.%20Disable%20Identity%20Provider.md)
+- [Identity Provider Deletion](./04.%20Identity%20Provider%20Deletion.md)
 - [FAQ](./04.%20FAQ.md)
 
 <br>
