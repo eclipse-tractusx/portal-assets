@@ -115,7 +115,10 @@
       },
       {
         "title": "",
-        "subTitles": ["Bei kritischen Qualitätsthemen wird mithilfe der Quality Investigations und Quality Alerts eine schnelle Weiterleitung von Nachrichten auf", "Basis des zuvor beschriebenen Datenaustausches und damit der konkreten Produktstrukturen („as built“) und der damit verbundenen Lieferbeziehungen ermöglicht. Dies beschleunigt die Qualitätsarbeit und reduziert Kosten entlang der gesamten Wertschöpfungskette."],
+        "subTitles": [
+          "Bei kritischen Qualitätsthemen wird mithilfe der Quality Investigations und Quality Alerts eine schnelle Weiterleitung von Nachrichten auf",
+          "Basis des zuvor beschriebenen Datenaustausches und damit der konkreten Produktstrukturen („as built“) und der damit verbundenen Lieferbeziehungen ermöglicht. Dies beschleunigt die Qualitätsarbeit und reduziert Kosten entlang der gesamten Wertschöpfungskette."
+        ],
         "id": "details3-id",
         "backgroundColor": "#f9f9f9",
         "template": "TextCenterAlignedBody2"
