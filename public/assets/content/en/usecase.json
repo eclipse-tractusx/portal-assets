@@ -83,7 +83,7 @@
         "imagePath": "/images/content/traceability_datamodels(en).svg",
         "backgroundColor": "#FFFFFF",
         "id": "data-model-id",
-        "images": ["/images/content/traceability_datamodels1(de).svg"],
+      "images": ["/images/content/traceability_datamodels1(en).svg"],
         "template": "TextImageCenterAligned"
       },
       {
@@ -106,7 +106,7 @@
         "template": "TextCenterAlignedBody2"
       },
       {
-        "title": "QUALITY Investigations AND ALERTS ALONG THE ENTIRE SUPPLY CHAIN are integrated into the Apps via the alerting process.",
+        "title": "QUALITY INVESTIGATIONS AND ALERTS ALONG THE ENTIRE SUPPLY CHAIN ARE INTEGRATED INTO THE APPS VIA THE ALERTING PROCESS.",
         "description": "Notifications have been standardized for the alerting process. These are a prerequisite for the interoperability of various apps as part of the alerting process. The alerting process consists of Quality Investigations and Quality Alerts.",
         "imagePath": "/images/content/traceability_quality(en).png",
         "backgroundColor": "#F9F9F9",
