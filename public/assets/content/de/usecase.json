@@ -106,7 +106,7 @@
         "template": "TextCenterAlignedBody2"
       },
       {
-        "title": "QUALITÄTSUNTERSUCHUNGEN UND WARNMELDUNGEN ENTLANG DER GESAMTEN LIEFERKETTE SIND IN DEN APPS ÜBER DEN ALERTING-PROZESS INTEGRIERT.",
+        "title": "Qualitätsuntersuchungen und Warnmeldungen entlang der gesamten Lieferkette sind in den Apps über den Alerting-Prozess integriert",
         "description": "Für den Alerting-Prozess wurden Benachrichtigungen (Notifications) standardisiert. Diese sind Voraussetzung für die Interoperabilität verschiedener Apps im Rahmen des Alerting-Prozesses. Der Alerting-Prozess setzt sich aus Quality Investigations und Quality Alerts zusammen:",
         "imagePath": "/images/content/traceability_quality(de).png",
         "backgroundColor": "#F9F9F9",
