@@ -8,29 +8,10 @@
     'flowchart': { 'diagramPadding': '10', 'wrappingWidth': '', 'nodeSpacing': '', 'rankSpacing':'', 'titleTopMargin':'10', 'curve':'basis'},
   }
 }%%
-flowchart TD
-    NC("Potential new company (admin)")
-    CU(Company user)
+flowchart LR
 
-    K(Keycloak)
-    KAPI(Keycloak REST API)
-    KCR(Keycloak company realms)
-
-    NC --> K
-    CU --> KAPI
-    KCR <-->|OIDC| KAPI
-
-    BPDM
-    SDT(Sematic / Digital Twin)
-    SDR("SD-Registry \n (Self Description)")
-    MIW(Managed Identity Wallets)
-
-    CH(GX Clearing House)
-
-    subgraph Portal
-    direction LR
-    RF("Registration frontend")
-    PF("Portal frontend")
+    RF("Registration")
+    PF("Portal")
 
     RS(Registration service)
     AS(Administration service)
@@ -38,14 +19,32 @@ flowchart TD
     MSS(Marketplace services service)
     NS(Notification service)
 
+    BPDM
+    SDT(Semantic / Digital Twin)
+    SDR("SD-Registry \n (Self Description)")
+    MIW(Managed Identity Wallets)
+    NC("Potential new company (admin)")
+    CU(Company user)
+
+    K(Keycloak)
+    KAPI(Keycloak REST API)
+    KCR(Keycloak company realms)
+
+    subgraph Portal
+        subgraph Frontend
+        RF
+        PF
+        end
+        subgraph Backend
+        RS
+        AS
+        MAS
+        MSS
+        NS
+        end
     PDB[(Portal DB \n Postgres Azure cluster \n standard setup \n EFCore for mapping \n objects to SQL)]
     end
-
-    K <--> RF
-    KAPI <--> PF
-    RF <--> KAPI
-    K <--> KAPI
-
+  
     RS <-->|Company data \n user role data \n T&C / consent agreements| RF
     RS <--> KAPI
     RS <--> K
@@ -73,4 +72,15 @@ flowchart TD
 
     PF -->|Product meta data| SDT
     PF -->|"Company data (e.g. BPN)"| BPDM
+
+    NC --> K
+    CU --> KAPI
+    KCR <-->|OIDC| KAPI
+
+    CH(GX Clearing House)
+
+    K <--> RF
+    KAPI <--> PF
+    RF <--> KAPI
+    K <--> KAPI
 ```
