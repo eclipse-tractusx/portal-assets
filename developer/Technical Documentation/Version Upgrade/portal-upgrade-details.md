@@ -8,6 +8,75 @@ Each section includes the respective change details, impact on existing data and
 > **_INFO:_** inside the detailed descriptions below, the definition 'migration script' refers to the term 'migrations' as it is defined by the ef-core framework: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations
 
 <br>
+
+#### Enable OSP Provider IdPs - Update - 1.7.0
+
+The `identity_providers` table has been adjusted to provide the possibility to safe the owner of the idp.
+
+<img width="779" alt="image" src="/docs/static/IdentityProvidersUpdate.png">
+
+- added "Identity_Provider_Types" table which is connected to portal.identity_providers table
+- added inside the new table "Identity_Provider_Types" an id as well as a label. Labels are defined below:
+  - own
+  - managed
+  - shared
+- additionally a new attribute identity_providers.owner_id is added
+  - in case the type is "own" - the owner is always the same company as the IdP connected company
+  - in case the type is "managed" - the owner is the company which created the IdP (OSP or Operator)
+  - in case the type is "shared" - the owner is the same company as the IdP connected company
+
+the identity_providers.owner is important to define which companies are able to create users linked to this idp
+
+- added new process_type PARTNER_REGISTRATION and new process_step_types:
+  - SYNCHRONIZE_USER
+  - RETRIGGER_SYNCHRONIZE_USER
+  - TRIGGER_CALLBACK_OSP_SUBMITTED
+  - TRIGGER_CALLBACK_OSP_APPROVED
+  - TRIGGER_CALLBACK_OSP_DECLINED
+  - RETRIGGER_CALLBACK_OSP_SUBMITTED
+  - RETRIGGER_CALLBACK_OSP_APPROVED
+  - RETRIGGER_CALLBACK_OSP_DECLINED
+
+
+Migration
+
+For each existing idp data set inside the table identity_providers; the following values will get set:
+* idp owner
+* idp type
+ 
+Logic:
+
+* all "KEYCLOAK_SHARED" IdPs got the idp type "3" set ("3" = "SHARED")
+* all "KEYCLOAK_SHARED" IdP categories have been changed to "OIDC"
+* "KEYCLOAK_OIDC" got renamed to "OIDC"
+* "KEYCLOAK_SAML" got renamed to "SAML"
+* all "OIDC" & "SAML" IdPs got the idp type "1" set ("1" = "owned")
+* all "OIDC" and "SAML"  IdPs need to have the "Customer" set as IdP owner
+
+
+#### Enable Application Types - NEW - 1.7.0
+
+The `company_applications` table has been expanded. New columns `company_application_type`, `onboarding_service_provider_id` have been added to have the possibility to track which onboarding service provider started an application for a specific company.
+
+<img width="427" alt="image" src="/docs/static/CompanyApplicationTypes.png">
+
+<br>
+
+"onboarding_service_provider_id" => nullable
+"external" => enum; 1 = "INTERNAL", 2 = "EXTERNAL"
+
+#### Enable Onboarding Service Provider - NEW 1.7.0
+
+* NEW: portal.company_user_assigned_identity_providers
+* NEW: portal.network_registrations
+* NEW: portal.onboarding_service_provider_details
+* EXTEND: portal.identity_user_statuses
+
+NEW portal.company_user_assigned_identity_providers table to be able to link a user to an identity provider
+NEW portal.network_registrations to safe the network registrations of an onboarding service provider or operator
+NEW portal.onboarding_service_provider_details to safe information of the onboarding service provider such as the auth_url to authenticate the technical users as well as the callback url
+
+<br>
 <br>
 
 #### Technical Role - UPDATE - 1.7.0
@@ -256,10 +325,12 @@ New verified_credential_type_assigned_use_cases to map the verified_credential_t
 New verified_credential_external_types, verified_credential_external_type_use_case_detail_versions and verified_credential_type_assigned_external_types tables to have the versions for each type including the link from the verified_credential_external_types of a specific version to the verified_credential_types
 
 Company SSI Database Structure
-![Company SSI Database Structure](/public/assets/images/docs/company-ssi-database.png)
+
+<img src="/docs/static/company-ssi-database.png" alt="drawing" width="900"/>
 
 Use Case Database Structure
-![Use Case Database Structure](/public/assets/images/docs/use-case-database.png)
+
+<img src="/docs/static/use-case-database.png" alt="drawing" width="600"/>
 
 - NEW: table "language_long_names"
 - ENHANCED: table portal.languages "long_name_de" and "long_name_en" removed
@@ -413,7 +484,7 @@ Attributes
 - service_type_id (connected to portal.service_types and replacing table service_assigned_service_types)
 - technical_user_needed (true/false flag)
 
-<img width="376" alt="image" src="https://user-images.githubusercontent.com/94133633/228341713-1bbc0354-0ebf-42f7-bc37-135567037b60.png">
+<img width="376" alt="image" src="/docs/static/ServiceDetails.png">
 
 Impact on existing data:
 Migration script existing, based on the service type which is fetched for all existing data from portal table service_assigned_service_types, the technical_user_needed attribute is set to "true" for "DATASPACE_SERVICE" services and "false" for "CONSULTANCE_SERVICE".
