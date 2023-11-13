@@ -17,7 +17,7 @@
   </g>
   <rect x="100" y="300" width="4204" height="1200" stroke="#FFFFFF" stroke-width="6" fill="none" />
     <rect x="260" y="250" width="835" height="107" stroke="#FFFFFF" stroke-width="6" fill="#035970" />
-    <text fill="#FFFFFF" font-family="Arial Narrow,sans-serif" font-weight="700" font-size="55" transform="translate(423 320)">Lebenszyklus “as planned</text>
+    <text fill="#FFFFFF" font-family="Arial Narrow,sans-serif" font-weight="700" font-size="55" transform="translate(423 320)">Lebenszyklus “as planned"</text>
     <g id="icon">
         <path d="M15 80C15 80 14 81 13 80 12 80 12 79 12 78 12 77 12 76 13 76 14 76 15 76 15 77 16 77 16 79 15 80ZM84 16 76 24 70 22 68 16 76 8C71 6 66 7 63 11 59 14 57 19 59 24L9 73C8 75 7 78 7 80 8 82 10 84 12 85 15 85 17 85 19 83L68 33C73 35 78 33 81 30 85 26 86 21 84 16Z" fill="#FFFFFF" transform="matrix(1 0 0 1 287 250)" />
         <path d="M83 73 58 48 48 58 73 83 74 84 74 83C76 86 80 85 83 83 85 80 85 76 83 73Z" fill="#FFFFFF" transform="matrix(1 0 0 1 287 250)" />

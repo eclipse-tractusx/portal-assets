@@ -2,6 +2,19 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
+## 1.7.0-RC3
+
+### Change
+* useCase content file updated
+* images linked for traceability useCase exchanged
+* portal database upgrade documentation updated
+
+### Feature
+n/a
+
+### Bugfix
+n/a
+
 ## 1.7.0-RC2
 
 ### Change
