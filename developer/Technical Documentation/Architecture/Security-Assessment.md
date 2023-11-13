@@ -3,11 +3,6 @@
 ## Data Flow Diagram
 
 ```mermaid
-%%{
-  init: {
-    'flowchart': { 'diagramPadding': '10', 'wrappingWidth': '', 'nodeSpacing': '', 'rankSpacing':'', 'titleTopMargin':'10', 'curve':'basis'},
-  }
-}%%
 flowchart LR
 
     RF("Registration")
@@ -19,16 +14,18 @@ flowchart LR
     MSS(Marketplace services service)
     NS(Notification service)
 
-    BPDM
-    SDT(Semantic / Digital Twin)
+    NC("Potential new company (admin)")
+    CU-Shared(Company user)
+    CU-Own(Company user)
+
+    K("Keycloak (REST API)")
+
+    BPDM(Business Partner Data Management)
+    SDT(Semantic Hub / Digital Twin)
     SDR("SD-Registry \n (Self Description)")
     MIW(Managed Identity Wallets)
-    NC("Potential new company (admin)")
-    CU(Company user)
 
-    K(Keycloak)
-    KAPI(Keycloak REST API)
-    KCR(Keycloak company realms)
+    CH(Gaia-X Clearing House)
 
     subgraph Portal
         subgraph Frontend
@@ -42,16 +39,38 @@ flowchart LR
         MSS
         NS
         end
-    PDB[(Portal DB \n Postgres Azure cluster \n standard setup \n EFCore for mapping \n objects to SQL)]
+    PDB[(Portal DB \n Postgres \n EF Core for mapping \n objects to SQL)]
+    end
+    subgraph Keycloak
+      subgraph centralidp
+      K
+      end
+      subgraph sharedidp
+        subgraph Company realms
+        NC
+        CU-Shared
+        end
+      end
+    end
+    subgraph ownIdP
+    CU-Own
+    end
+    subgraph cross[Catena-X Cross functions]
+    BPDM
+    SDT
+    SDR
+    MIW
+    end
+    subgraph ext["External Services (3rd party)"]
+    CH
     end
   
     RS <-->|Company data \n user role data \n T&C / consent agreements| RF
-    RS <--> KAPI
     RS <--> K
     RS -->|Company data \n user role data \n T&C consent agreements| PDB
     RS -->|"Company data (e.g. name, etc.)"| BPDM
 
-    AS --> KAPI
+    AS --> K
     AS <--> PF
     AS -->|"User data \n (real and technical company data)"| PDB
     AS -->|Data related to \n self description| SDR
@@ -59,28 +78,20 @@ flowchart LR
     AS -->|Company data \n signed self description| CH
 
     MAS -->|Company app subscription data \n app service data + user preferences| PDB
-    MAS <--> KAPI
-    MAS <--> PF
+    MAS <--> K & PF
 
-    MSS <--> PF
-    MSS <--> KAPI
+    MSS <--> PF & K
     MSS -->|Company app subscription data \n app service data + user preferences| PDB
 
-    NS -->PDB
-    NS <--> PF
-    NS <--> KAPI
+    NS --> PDB & PF & K
 
     PF -->|Product meta data| SDT
     PF -->|"Company data (e.g. BPN)"| BPDM
 
-    NC --> K
-    CU --> KAPI
-    KCR <-->|OIDC| KAPI
+    NC & CU-Shared & CU-Own --> |OIDC| K
 
-    CH(GX Clearing House)
+    K <--> |"Authentication/authorization data (using JWT)"| RF & PF
 
-    K <--> RF
-    KAPI <--> PF
-    RF <--> KAPI
-    K <--> KAPI
+    %% workaround to improve arrangement of subgraphs
+    K ~~~ ownIdP & cross & ext
 ```
