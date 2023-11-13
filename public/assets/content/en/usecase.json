@@ -115,7 +115,9 @@
       },
       {
         "title": "",
-        "subTitles": ["When it comes to critical quality issues, Quality Investigations and Quality Alerts enable rapid forwarding of messages based on the data exchange described above and thus the specific product structures (“as built”) and the associated supply relationships. This speeds up quality work and reduces costs along the entire value chain."],
+        "subTitles": [
+          "When it comes to critical quality issues, Quality Investigations and Quality Alerts enable rapid forwarding of messages based on the data exchange described above and thus the specific product structures (“as built”) and the associated supply relationships. This speeds up quality work and reduces costs along the entire value chain."
+        ],
         "id": "details3-id",
         "backgroundColor": "#f9f9f9",
         "template": "TextCenterAlignedBody2"
