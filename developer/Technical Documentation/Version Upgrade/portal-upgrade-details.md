@@ -13,7 +13,7 @@ Each section includes the respective change details, impact on existing data and
 
 The `identity_providers` table has been adjusted to provide the possibility to safe the owner of the idp.
 
-<img width="779" alt="image" src="https://github.com/catenax-ng/tx-portal-assets/assets/94133633/57447ebf-1d56-48e4-a3ee-d8a017a2e605">
+<img width="779" alt="image" src="/docs/static/IdentityProvidersUpdate.png">
 
 - added "Identity_Provider_Types" table which is connected to portal.identity_providers table
 - added inside the new table "Identity_Provider_Types" an id as well as a label. Labels are defined below:
@@ -58,7 +58,7 @@ Logic:
 
 The `company_applications` table has been expanded. New columns `company_application_type`, `onboarding_service_provider_id` have been added to have the possibility to track which onboarding service provider started an application for a specific company.
 
-<img width="427" alt="image" src="https://github.com/catenax-ng/tx-portal-assets/assets/94133633/7054e023-6b1c-4b04-933d-ab760f8eb821">
+<img width="427" alt="image" src="/docs/static/CompanyApplicationTypes.png">
 
 <br>
 
@@ -326,11 +326,11 @@ New verified_credential_external_types, verified_credential_external_type_use_ca
 
 Company SSI Database Structure
 
-<img src="/public/assets/images/docs/company-ssi-database.png" alt="drawing" width="900"/>
+<img src="/docs/static/company-ssi-database.png" alt="drawing" width="900"/>
 
 Use Case Database Structure
 
-<img src="/public/assets/images/docs/use-case-database.png" alt="drawing" width="600"/>
+<img src="/docs/static/use-case-database.png" alt="drawing" width="600"/>
 
 - NEW: table "language_long_names"
 - ENHANCED: table portal.languages "long_name_de" and "long_name_en" removed
@@ -484,7 +484,7 @@ Attributes
 - service_type_id (connected to portal.service_types and replacing table service_assigned_service_types)
 - technical_user_needed (true/false flag)
 
-<img width="376" alt="image" src="https://user-images.githubusercontent.com/94133633/228341713-1bbc0354-0ebf-42f7-bc37-135567037b60.png">
+<img width="376" alt="image" src="/docs/static/ServiceDetails.png">
 
 Impact on existing data:
 Migration script existing, based on the service type which is fetched for all existing data from portal table service_assigned_service_types, the technical_user_needed attribute is set to "true" for "DATASPACE_SERVICE" services and "false" for "CONSULTANCE_SERVICE".
