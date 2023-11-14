@@ -9,6 +9,18 @@ Each section includes the respective change details, impact on existing data and
 
 <br>
 
+#### Company Service Account - FIX - 1.7.0
+
+To fix the empty user_entity_id for company_service_accounts the following process can be created. It will than run the process which will request the user from keycloak and set the user_entity_id for the corresponding company_service_account.
+
+```sql
+insert into portal.processes (id, process_type_id, lock_expiry_date, version)
+values ('b6f57214-3c72-4b9b-aeb9-fe6add2d406d', 5, null, 'b6f57214-3c72-4b9b-aeb9-fe6add2d406d');
+
+insert into portal.process_steps (id, process_step_type_id, process_step_status_id, date_created, date_last_changed, process_id, message)
+values ('68d28f88-85fc-43a9-835a-fce0d5a9e665', 300, 1, '2023-02-21 08:15:20.479000 +00:00', null, 'b6f57214-3c72-4b9b-aeb9-fe6add2d406d', null);
+```
+
 #### Enable OSP Provider IdPs - Update - 1.7.0
 
 The `identity_providers` table has been adjusted to provide the possibility to safe the owner of the idp.
@@ -36,7 +48,6 @@ the identity_providers.owner is important to define which companies are able to 
   - RETRIGGER_CALLBACK_OSP_SUBMITTED
   - RETRIGGER_CALLBACK_OSP_APPROVED
   - RETRIGGER_CALLBACK_OSP_DECLINED
-
 
 Migration
 
