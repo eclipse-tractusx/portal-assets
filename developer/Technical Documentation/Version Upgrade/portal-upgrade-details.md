@@ -9,6 +9,15 @@ Each section includes the respective change details, impact on existing data and
 
 <br>
 
+#### User role company role assignegment - FIX - 1.7.0
+
+To fix the assignement of the CX Admin to the Onboarding Service Provider company role please execute the following script against the portal database:
+
+```sql
+delete from user_role_assigned_collections
+where user_role_id = '58f897ec-0aad-4588-8ffa-5f45d6638632' AND user_role_collection_id = '916b09e7-7841-4e57-bdca-e0d3bd329c27';
+```
+
 #### Enable OSP Provider IdPs - Update - 1.7.0
 
 The `identity_providers` table has been adjusted to provide the possibility to safe the owner of the idp.
