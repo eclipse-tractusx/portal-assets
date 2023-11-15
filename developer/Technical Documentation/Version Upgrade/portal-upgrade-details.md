@@ -1,15 +1,33 @@
+- [Summary](#summary)
+  - [v1.7.0](#v170)
+    - [Company Service Account - FIX](#company-service-account---fix)
+    - [Enable OSP Provider IdPs - Update](#enable-osp-provider-idps---update)
+    - [Enable Application Types - NEW](#enable-application-types---new)
+    - [Enable Onboarding Service Provider - NEW](#enable-onboarding-service-provider---new)
+    - [Technical Role - UPDATE](#technical-role---update)
+    - [Database Constraints - FIX](#database-constraints---fix)
+  - [v1.6.0](#v160)
+    - [Company Credential Details - NEW](#company-credential-details---new)
+    - [Connectors - CHANGED](#connectors---changed)
+  - [v1.4.0](#v140)
+    - [Technical User Profiles - NEW](#technical-user-profiles---new)
+    - [License Types - NEW \& ENHANCED](#license-types---new--enhanced)
+  - [v1.2.0](#v120)
+    - [Mediatype - NEW \& ENHANCED](#mediatype---new--enhanced)
+  - [v1.1.0](#v110)
+    - [Application Checklist - ENHANCED](#application-checklist---enhanced)
+    - [Service Details - NEW (interim)](#service-details---new-interim)
+
 ## Summary
 
 This document describes the portal database changes and its impact on transactional data. Depending on the impact, possible risks/impediments on upgrades as well as mitigation plans are described.
 Each section includes the respective change details, impact on existing data and the respective release with which the change is getting active.
 
-<br>
-
 > **_INFO:_** inside the detailed descriptions below, the definition 'migration script' refers to the term 'migrations' as it is defined by the ef-core framework: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations
 
-<br>
+### v1.7.0
 
-#### Company Service Account - FIX - 1.7.0
+#### Company Service Account - FIX
 
 To fix the empty user_entity_id for company_service_accounts the following process can be created. It will than run the process which will request the user from keycloak and set the user_entity_id for the corresponding company_service_account.
 
@@ -21,11 +39,11 @@ insert into portal.process_steps (id, process_step_type_id, process_step_status_
 values ('68d28f88-85fc-43a9-835a-fce0d5a9e665', 300, 1, '2023-02-21 08:15:20.479000 +00:00', null, 'b6f57214-3c72-4b9b-aeb9-fe6add2d406d', null);
 ```
 
-#### Enable OSP Provider IdPs - Update - 1.7.0
+#### Enable OSP Provider IdPs - Update
 
 The `identity_providers` table has been adjusted to provide the possibility to safe the owner of the idp.
 
-<img width="779" alt="image" src="/docs/static/IdentityProvidersUpdate.png">
+![IdentityProvidersUpdate](/docs/static/IdentityProvidersUpdate.png)
 
 - added "Identity_Provider_Types" table which is connected to portal.identity_providers table
 - added inside the new table "Identity_Provider_Types" an id as well as a label. Labels are defined below:
@@ -65,18 +83,16 @@ Logic:
 * all "OIDC" and "SAML"  IdPs need to have the "Customer" set as IdP owner
 
 
-#### Enable Application Types - NEW - 1.7.0
+#### Enable Application Types - NEW
 
 The `company_applications` table has been expanded. New columns `company_application_type`, `onboarding_service_provider_id` have been added to have the possibility to track which onboarding service provider started an application for a specific company.
 
-<img width="427" alt="image" src="/docs/static/CompanyApplicationTypes.png">
-
-<br>
+![CompanyApplicationTypes](/docs/static/CompanyApplicationTypes.png)
 
 "onboarding_service_provider_id" => nullable
 "external" => enum; 1 = "INTERNAL", 2 = "EXTERNAL"
 
-#### Enable Onboarding Service Provider - NEW 1.7.0
+#### Enable Onboarding Service Provider - NEW
 
 * NEW: portal.company_user_assigned_identity_providers
 * NEW: portal.network_registrations
@@ -87,10 +103,7 @@ NEW portal.company_user_assigned_identity_providers table to be able to link a u
 NEW portal.network_registrations to safe the network registrations of an onboarding service provider or operator
 NEW portal.onboarding_service_provider_details to safe information of the onboarding service provider such as the auth_url to authenticate the technical users as well as the callback url
 
-<br>
-<br>
-
-#### Technical Role - UPDATE - 1.7.0
+#### Technical Role - UPDATE
 
 To align the portal database with the keycloak database the following SQL must be executed against the portal database. The script will replace the 'Connector User' role with the roles 'Semantic Model Management' and 'Dataspace Discovery'. As well as replace the 'App Tech User' role with 'Semantic Model Management', 'Dataspace Discovery' and 'CX Membership Info'. This results in all identity assigned roles being replaced, all technical user profile assigned roles being updated and the old roles being removed from the database.
 
@@ -201,7 +214,7 @@ DELETE FROM portal.user_roles WHERE user_role IN ('Connector User', 'App Tech Us
 
 ```
 
-#### Database Constraints - FIX - 1.7.0
+#### Database Constraints - FIX
 
 If you're running on release 1.6.0 (1.6.0-rc1 up to 1.7.0-alpha are the affected versions) and want to execute a database dump, for instance as part of a database upgrade, you should run the following script on the database to make sure that the database dump can be imported without any problems and errors.
 
@@ -315,7 +328,9 @@ FOR EACH ROW
 EXECUTE PROCEDURE portal.tr_is_external_type_use_case();
 ```
 
-#### Company Credential Details - NEW - 1.6.0
+### v1.6.0
+
+#### Company Credential Details - NEW
 
 - NEW: portal.use_case_descriptions
 - NEW: portal.company_ssi_details
@@ -337,11 +352,11 @@ New verified_credential_external_types, verified_credential_external_type_use_ca
 
 Company SSI Database Structure
 
-<img src="/docs/static/company-ssi-database.png" alt="drawing" width="900"/>
+![company-ssi-database](/docs/static/company-ssi-database.png)
 
 Use Case Database Structure
 
-<img src="/docs/static/use-case-database.png" alt="drawing" width="600"/>
+![use-case-database](/docs/static/use-case-database.png)
 
 - NEW: table "language_long_names"
 - ENHANCED: table portal.languages "long_name_de" and "long_name_en" removed
@@ -351,8 +366,6 @@ New language_long_names table released for multi language support.
 Impact on existing data:
 As part of the migration, for all existing language stored in the table portal.languages, the short name will be used to define language.Newly created table language_long_names
 will have foreign key relation with languages table where long name will be stored for each corresponding short name of language table in german and english language for e.g below
-
-<br>
 
 language_long_names:
 
@@ -365,17 +378,16 @@ language_long_names:
 | es         | de                  | spanisch     |
 | es         | en                  | spanish      |
 
-<br>
-<br>
-
-#### Connectors - CHANGED - 1.6.0
+#### Connectors - CHANGED
 
 - REMOVED: removed table connector_client_details
 - REMOVED: column daps_registration_successful
 
 The DAPS was completly removed from the portal services, hence the connector_client_details table was removed, as well as the daps_registration_successful column from the connector table.
 
-#### Technical User Profiles - NEW - 1.4.0
+### v1.4.0
+
+#### Technical User Profiles - NEW
 
 > **_INFO:_** Please note: the technical user profiles will remove the interim solution of technical_user_needed within the service_details table, which was introduced in 1.1.0
 
@@ -405,10 +417,7 @@ Impact on existing data:
 
 As part of the migration the `technical_user_needed` flag within the `service_details` table will be removed. Therefore all existing apps and services in the offer table needs to be manually updated, if they should keep a technical user profile. See the above mentioned script as an option.
 
-<br>
-<br>
-
-#### License Types - NEW & ENHANCED- 1.4.0
+#### License Types - NEW & ENHANCED
 
 - NEW: table "license_types"
 - ENHANCED: table portal.offers "license_type_id" added
@@ -418,8 +427,6 @@ New license_types table released to manage license need for app/services with a 
 Impact on existing data:
 As part of the migration, for all existing offer stored in the table portal.offers, the license_type_id will be used to define license need for apps and services for respective offer where default value of license_type_id is 1 i.e COTS.
 
-<br>
-
 Supported license types:
 
 | license_type_id | license_type |
@@ -427,10 +434,9 @@ Supported license types:
 | 1               | COTS         |
 | 2               | FOSS         |
 
-<br>
-<br>
+### v1.2.0
 
-#### Mediatype - NEW & ENHANCED - 1.2.0
+#### Mediatype - NEW & ENHANCED
 
 - NEW: table "media_types"
 - ENHANCED: table portal.documents "media_type_id" added
@@ -438,8 +444,6 @@ Supported license types:
 Impact on existing data:
 As part of the migration, for all existing documents stored in the table portal.documents, the filename extension will be used to define and store the media_type_id of the respective document inside the new table attribute. Important: check beforehand if all documents have a document type added inside the document name. If not, add the respective media type or delete the document.
 Additionally check if all stored documents are supported by the media types migrated in table portal.media_type. In case any other document media type is currently loaded/stored inside the table portal.documents, the migration will fail. In this case delete the document beforehand or enhance the migration script media types supported.
-
-<br>
 
 Supported media types:
 
@@ -454,14 +458,11 @@ Supported media types:
 | 6             | .pdf       |
 | 7             | .json      |
 
-<br>
-
 > **_INFO:_** additional media types (e.g. .pem, .ca_cert, .pkx_cer, .octet) are added in version 1.2.0 and 1.3.0
 
-<br>
-<br>
+### v1.1.0
 
-#### Application Checklist - ENHANCED - 1.1.0
+#### Application Checklist - ENHANCED
 
 - NEW: portal.processes
 - NEW: portal.process_types
@@ -480,10 +481,7 @@ Existing company registration data currently under validation are automatically 
 No manual intervention needed.
 For company applications currently in status "under creation" (which means not yet submitted for validation) the change has no impact, since the process_id is created as part of the registration submitted. As soon as the participant submits the registration, the new process with the process_id will apply.
 
-<br>
-<br>
-
-#### Service Details - NEW (interim) - 1.1.0
+#### Service Details - NEW (interim)
 
 - NEW: table "service_details"
 - REMOVED: table service_assigned_service_types
@@ -495,15 +493,10 @@ Attributes
 - service_type_id (connected to portal.service_types and replacing table service_assigned_service_types)
 - technical_user_needed (true/false flag)
 
-<img width="376" alt="image" src="/docs/static/ServiceDetails.png">
+![ServiceDetails](/docs/static/ServiceDetails.png)
 
 Impact on existing data:
 Migration script existing, based on the service type which is fetched for all existing data from portal table service_assigned_service_types, the technical_user_needed attribute is set to "true" for "DATASPACE_SERVICE" services and "false" for "CONSULTANCE_SERVICE".
 Transactional data are automatically updated/migrated.
 
-<br>
-
 > **_INFO:_** Please note: this is an interim solution which is expected to get replaced/changed in version 1.4.0
-
-<br>
-<br>
