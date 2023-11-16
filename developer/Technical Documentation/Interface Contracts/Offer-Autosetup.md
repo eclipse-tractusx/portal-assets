@@ -177,3 +177,11 @@ Response Body
 | 104<br>Offr Subscription Technical User Creation     | Technical User creation in keycloak and metadata storage in portal db, additionally notification creation with technical client id                                 | The process step is set to "DONE" <br>after technical user ot successfully created                                               | Status "FAILED" if job was running on fail | Yes, in case of an 5xx by keycloak                  | Yes, in case of an 4xx by keycloak                                                      | #105                                            |
 | 105<br>Activate Subscription                         | Subscription record activation, notification creation and send email.                                                                                              | The process step is set to "DONE" <br>after xxx                                                                                  | xxx                                        | Yes, in case of an 5xx for the email - auto "TO_DO" | -                                                                                       | Multi Instance: #106 <br> Single Instance: -    |
 | 106<br>Trigger Provider Callback                     | Trigger provider callback url to share client and tech user.                                                                                                       | The process step is set to "DONE" <br>after xxx                                                                                  | xxx                                        | Yes, in case of an 5xx                              | Yes, in case of an 4xx                                                                  | -                                               |
+
+## NOTICE
+
+This work is licensed under the [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+- SPDX-License-Identifier: Apache-2.0
+- SPDX-FileCopyrightText: 2021-2023 Contributors to the Eclipse Foundation
+- Source URL: https://github.com/eclipse-tractusx/portal-iam

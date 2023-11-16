@@ -500,3 +500,11 @@ Migration script existing, based on the service type which is fetched for all ex
 Transactional data are automatically updated/migrated.
 
 > **_INFO:_** Please note: this is an interim solution which is expected to get replaced/changed in version 1.4.0
+
+## NOTICE
+
+This work is licensed under the [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+- SPDX-License-Identifier: Apache-2.0
+- SPDX-FileCopyrightText: 2021-2023 Contributors to the Eclipse Foundation
+- Source URL: https://github.com/eclipse-tractusx/portal-iam
