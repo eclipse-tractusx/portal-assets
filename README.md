@@ -11,7 +11,7 @@ The Catena-X Portal application consists of
 
 ![Tag](https://img.shields.io/static/v1?label=&message=LeadingRepository&color=green&style=flat) The helm chart for installing the Catena-X Portal is available in [portal-cd](https://github.com/eclipse-tractusx/portal-cd).
 
-The Catena-X Portal is designed to work with the [Catena-X IAM](https://github.com/eclipse-tractusx/portal-iam).
+The Catena-X Portal is designed to work with the [Catena-X IAM](https://github.com/eclipse-tractusx/portal-iam) for further information you can read the [documentation](https://github.com/eclipse-tractusx/portal-iam/tree/main/docs).
 
 ## Steps to run local
 
