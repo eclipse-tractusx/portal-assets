@@ -110,15 +110,13 @@ On the release branch the following steps are executed:
 
 2. Update changelog file
 
-3. Update README (chart and root level)
+3. Update README (on chart level)
 
 Use [helm-docs](https://github.com/norwoodj/helm-docs) (gotemplate driven) for updating the README file.
 
 ```bash
 helm-docs --chart-search-root [charts-dir] --sort-values-order file
 ```
-
-Copy updated README file on chart level to root level.
 
 Example for commit message:
 

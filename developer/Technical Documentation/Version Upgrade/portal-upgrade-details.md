@@ -105,7 +105,7 @@ NEW portal.onboarding_service_provider_details to safe information of the onboar
 
 #### Technical Role - UPDATE
 
-To align the portal database with the keycloak database the following SQL must be executed against the portal database. The script will replace the 'Connector User' role with the roles 'Semantic Model Management' and 'Dataspace Discovery'. As well as replace the 'App Tech User' role with 'Semantic Model Management', 'Dataspace Discovery' and 'CX Membership Info'. This results in all identity assigned roles being replaced, all technical user profile assigned roles being updated and the old roles being removed from the database.
+To align the portal database with the Keycloak database the following SQL must be executed against the portal database. The script will replace the 'Connector User' role with the roles 'Semantic Model Management' and 'Dataspace Discovery'. As well as replace the 'App Tech User' role with 'Semantic Model Management', 'Dataspace Discovery' and 'CX Membership Info'. This results in all identity assigned roles being replaced, all technical user profile assigned roles being updated and the old roles being removed from the database.
 
 ```sql
 WITH connector_users AS (
@@ -395,7 +395,7 @@ The DAPS was completly removed from the portal services, hence the connector_cli
 - NEW: portal.technical_user_assigned_user_roles
 
 New technical_user_profiles table released to provide technical user profiles for apps and dataspace services.
-New technical_user_assigned_user_roles table to assign multiple roles to a technical user proile.
+New technical_user_assigned_user_roles table to assign multiple roles to a technical user profile.
 
 Until the corresponding endpoint is implemented to add technical user profiles, you can use the following script, please make sure the ids used in appTechnicalUserRole and serviceTechnicalUserRole are correct and existing in the database:
 

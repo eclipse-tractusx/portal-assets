@@ -1,6 +1,6 @@
 ## Static Page Template(s)
 
-The static page templates enable the users to build responsive static sites within extremly short time and in line with the CX styling guidelines.
+The static page templates enable the users to build responsive static sites within extremely short time and in line with the CX styling guidelines.
 Below you can find an overview of all supported templates as well as the template structure.
 
 ### Templates
@@ -26,7 +26,7 @@ Template Name: "TextCenterAlignedWithCardGrid"
       {
           title: 'Section Title',
           description:
-            'description such as an introduction or explaination / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards',
+            'description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards',
           backgroundColor: '#FFFFFF',
           id: 'business-id',
           imageUrl:
@@ -142,7 +142,7 @@ Template Name: "TextImageSideBySideWithCardGrid"
          {
       title: 'Section Title',
       description:
-        'description such as an introduction or explaination / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards',
+        'description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards',
       imageUrl:
         'https://cdn.pixabay.com/photo/2017/09/05/10/20/business-2717066_1280.jpg',
       backgroundColor: '#FFFFFF',
@@ -154,7 +154,7 @@ Template Name: "TextImageSideBySideWithCardGrid"
           imageUrl:
             'https://cdn.pixabay.com/photo/2017/09/05/10/20/business-2717066_1280.jpg',
           description:
-            'description such as an introduction or explaination / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards',
+            'description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards',
           readMore: '/help',
           readMoreTitle: 'Details',
           backgroundColor: '#F9F9F9',
@@ -164,7 +164,7 @@ Template Name: "TextImageSideBySideWithCardGrid"
           imageUrl:
             'https://cdn.pixabay.com/photo/2017/09/05/10/20/business-2717066_1280.jpg',
           description:
-            'description such as an introduction or explaination / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards',
+            'description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards',
           readMore: '/help',
           backgroundColor: '#F9F9F9',
         },
@@ -173,7 +173,7 @@ Template Name: "TextImageSideBySideWithCardGrid"
           imageUrl:
             'https://cdn.pixabay.com/photo/2017/09/05/10/20/business-2717066_1280.jpg',
           description:
-            'description such as an introduction or explaination / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards',
+            'description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards - description such as an introduction or explanation / subscription of the following cards',
           readMore: '/help',
           readMoreTitle: 'Details',
           backgroundColor: '#F9F9F9',
@@ -544,7 +544,7 @@ The frontend repo is needed to introduce the page, permissions to the page as we
 
 #### Enhancing an existing page
 
-For enhancing an existing page, the asset files insidide the asset repo => /public/assets/content/de/.... need to get enhanced.
+For enhancing an existing page, the asset files inside the assets repo => /public/assets/content/de/.... need to get enhanced.
 Please ensure that you extend all language files and not only one.
 
 By adding a new template (as mentioned above) inside the content files, the portal page will get automatically extended by the new content.

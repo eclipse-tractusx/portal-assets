@@ -101,13 +101,13 @@ Transactional data is created by operating the system in a market or testing act
 
 ## Layering Concept on Keycloak side
 
-For keycloak, the concept is similar.
+For Keycloak, the concept is similar.
 
 There is a base setup (provided as static data setting) as well as transactional data.
 
-The difference between keycloak and portal is inside the load.
+The difference between Keycloak and portal is inside the load.
 
-Its not planned to have soon any delta updates in keycloak regarding the base data. Off course there will changes in the inital load, but for a certain time those are planned to get added by the operator manually till an actual delta load solution is in place.
+Its not planned to have soon any delta updates in Keycloak regarding the base data. Off course there will changes in the initial load, but for a certain time those are planned to get added by the operator manually till an actual delta load solution is in place.
 
 <br>
 

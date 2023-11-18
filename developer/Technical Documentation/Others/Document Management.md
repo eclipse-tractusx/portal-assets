@@ -103,7 +103,7 @@ Overview of all document related GET Endpoints:
 
 <br>
 
-In all those endpoints, the document itself will get retrived (e.g. pdf, json, png, etc.)
+In all those endpoints, the document itself will get retrieved (e.g. pdf, json, png, etc.)
 
 <br>
 <br>

@@ -138,7 +138,7 @@ Response Body
 ###### #4 GET/POST App LeadImage
 
 The endpoints enable the user to store and retrieve the app leadimage id.  
-Using the document id of the response body, the document base64 encoding can get retireved and turned to the actual image.  
+Using the document id of the response body, the document base64 encoding can get retrieved and turned to the actual image.  
 <br>
 
 Supported formats: JPEG and PNG
@@ -155,8 +155,8 @@ Supported formats: JPEG and PNG
 
 ###### #5 DELETE Image
 
-In case the user identifiers that a wrong image is loaded or the image doesnt fit/has changed; the DELETE endpoint is used to delete doucments linked to the app.
-Important: the deletion is not reversable - since the app is still under DRAFT, all app related details will get deleted immediately.
+In case the user identifiers that a wrong image is loaded or the image doesn't fit/has changed; the DELETE endpoint is used to delete documents linked to the app.
+Important: the deletion is not reversible - since the app is still under DRAFT, all app related details will get deleted immediately.
 
 ```diff
 ! Delete: /api/apps/appreleaseprocess/documents/{documentId}
@@ -342,8 +342,8 @@ Please note: if a value is send empty, the existing possible saved value will ge
 
 ###### #2 DELETE Image/Documents
 
-In case the user identifiers that a wrong image is loaded or the image doesnt fit/has changed; the DELETE endpoint is used to delete doucments linked to the app.
-Important: the deletion is not reversable - since the app is still under DRAFT, all app related details will get deleted immediately.
+In case the user identifiers that a wrong image is loaded or the image doesn't fit/has changed; the DELETE endpoint is used to delete documents linked to the app.
+Important: the deletion is not reversible - since the app is still under DRAFT, all app related details will get deleted immediately.
 
 ```diff
 ! Delete: /api/apps/appreleaseprocess/documents/{documentId}
@@ -493,8 +493,8 @@ Type: CONFORMITY_APPROVAL_BUSINESS_APPS
 
 ###### #4 DELETE Document
 
-In case the user identifiers that a wrong document got uploaded in the respective step, the DELETE endpoint is used to delete doucments linked to the app.
-Important: the deletion is not reversable - since the app is still under DRAFT, all app related details will get deleted immediately.
+In case the user identifiers that a wrong document got uploaded in the respective step, the DELETE endpoint is used to delete documents linked to the app.
+Important: the deletion is not reversible - since the app is still under DRAFT, all app related details will get deleted immediately.
 
 ```diff
 ! Delete: /api/apps/appreleaseprocess/documents/{documentId}
@@ -518,7 +518,7 @@ With uploading the csv via the dropzone, a preview section will display the resp
 <img width="464" alt="image" src="https://user-images.githubusercontent.com/94133633/223828948-02846247-2389-4d45-8d93-95c71dba4e01.png">
 </p>
  
-With approving the upload with the button "Create App Roles" the roles are stored in the portal DB. Keycloak is untouched, since role creation in keycloak will only be relevant if the app instance/client is getting created.
+With approving the upload with the button "Create App Roles" the roles are stored in the portal DB. Keycloak is untouched, since role creation in Keycloak will only be relevant if the app instance/client is getting created.
 
 <br>
 <br>

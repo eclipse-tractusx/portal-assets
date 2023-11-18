@@ -1,9 +1,9 @@
 ## Onboarding
 
-The Catena-X onbaording is splitted into two section:
+The Catena-X onboarding is split into two section:
 
-- Regsitration
-- Technical Onbaording
+- Registration
+- Technical Onboarding
 
 In this section the registration process and approval is in focus.
 

@@ -19,9 +19,9 @@ A search bar can be displayed alone, or in a navigation bar or content view. Whe
 
 #### Context and usage
 
-Use a search bar instead of a standard input field to implement the serach function.
+Use a search bar instead of a standard input field to implement the search function.
 Implement a clear button to give the user the chance to delete the entered value.
-Ensure that the user can terminate the serach with a cancel button.
+Ensure that the user can terminate the search with a cancel button.
 
 #### Guidance
 

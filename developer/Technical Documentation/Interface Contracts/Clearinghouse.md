@@ -73,7 +73,7 @@ Two technical users are created to allow the clearinghouse to access the availab
 
 The Clearinghouse is triggered by the respective CX service (depending on the scenario by portal or SD Factory) and processes the data.
 The response is provided back to the portal in both the cases.
-Since the interface is asynchron - a response delay of 60 seconds have been agreed. In special cases it could take longer.
+Since the interface is asynchronous - a response delay of 60 seconds have been agreed. In special cases it could take longer.
 
 Endpoints used by the CH for response:
 

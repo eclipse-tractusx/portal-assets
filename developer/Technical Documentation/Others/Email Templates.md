@@ -12,7 +12,7 @@ On this page a summary is provided on which Email Templates are available and us
 - E-Mail Invite additional Users
 - E-Mail Submitted Registration & Next Steps
 - E-Mail Welcome to Catena-X - Join the Network
-- E-Mail Passwort Reset
+- E-Mail Password Reset
 - E-Mail Invite New User to Portal
 - E-Mail Template implementations
   <br>
@@ -84,7 +84,7 @@ Email Trigger: CX Admin has approved Company Registration request.
 <br>
 <br>
 
-### E-Mail Passwort Reset
+### E-Mail Password Reset
 
 Email Trigger: Shared IdP User is selecting "Password reset" on the login screen
 <br>

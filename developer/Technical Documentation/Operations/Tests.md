@@ -12,7 +12,7 @@ Unit tests are available for backend and frontend components and getting automat
 
 ## Test Automation
 
-Test Automation as part of functional e2e tests are planned for upcomming releases.
+Test Automation as part of functional e2e tests are planned for upcoming releases.
 Currently all tests are manually handled.
 
 <br>
