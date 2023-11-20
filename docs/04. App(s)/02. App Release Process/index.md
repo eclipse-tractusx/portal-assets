@@ -31,7 +31,7 @@ Access the "App Overview" page via the top navigation "App Management"
 <br>
 <br>
 
-<img width="222" alt="image" src="https://user-images.githubusercontent.com/94133633/218282685-019ea98f-e77d-4fe8-a811-46d4cdf0a2d3.png">
+<img width="222" alt="image" src="/docs/static/register-app.png">
 
 <br>
 <br>
@@ -43,7 +43,7 @@ and click on
 <br>
 <br>
 
-<img width="187" alt="image" src="https://user-images.githubusercontent.com/94133633/218282773-a7d2479e-5e90-456c-b70b-ed54730440bf.png">
+<img width="187" alt="image" src="/docs/static/register-app-button.png">
 
 <br>
 <br>
