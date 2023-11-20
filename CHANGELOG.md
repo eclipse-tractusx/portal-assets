@@ -5,39 +5,46 @@ New features, fixed bugs, known defects and other noteworthy changes to each rel
 ## 1.7.0-RC3
 
 ### Change
-* useCase content file updated
-* images linked for traceability useCase exchanged
-* portal database upgrade documentation updated
+
+- useCase content file updated
+- images linked for traceability useCase exchanged
+- portal database upgrade documentation updated
 
 ### Feature
+
 n/a
 
 ### Bugfix
+
 n/a
 
 ## 1.7.0-RC2
 
 ### Change
-* identity provider connection documentation (developer & end user); new flow released
-* subscription management board (service provider) documentation enhanced (developer & end user)
-* updated technical user role definition
-  * removal of 'Connector User', 'App Tech User'
-  * updated 'Service Management' to 'Offer Management'
-  * added 'Semantic Model Management', 'Dataspace Discovery', 'CX Membership Info'
-  * permission assignment updated (R&R Matrix documentation & portal upgrade script provided for portal db and 
-* Interface contract documentation for 'Clearinghouse' updated with new architecture images and additional details of relevant authentication users and used endpoints
-* traceability use case page images and text sections updated for release 23.12
+
+- identity provider connection documentation (developer & end user); new flow released
+- subscription management board (service provider) documentation enhanced (developer & end user)
+- updated technical user role definition
+  - removal of 'Connector User', 'App Tech User'
+  - updated 'Service Management' to 'Offer Management'
+  - added 'Semantic Model Management', 'Dataspace Discovery', 'CX Membership Info'
+  - permission assignment updated (R&R Matrix documentation & portal upgrade script provided for portal db and
+- Interface contract documentation for 'Clearinghouse' updated with new architecture images and additional details of relevant authentication users and used endpoints
+- traceability use case page images and text sections updated for release 23.12
 
 ### Feature
+
 n/a
 
 ### Technical Support
-* Portal db - technical user upgrade script provided which need to get executed for upgrade from 1.6.0 to 1.7.0 RC
-* Keycloak db - technical user upgrade script provided which need to get executed for upgrade from 1.6.0 to 1.7.0 RC
-* Added linter rules and prettify gitHub actions for asset repo and fixed findings
+
+- Portal db - technical user upgrade script provided which need to get executed for upgrade from 1.6.0 to 1.7.0 RC
+- Keycloak db - technical user upgrade script provided which need to get executed for upgrade from 1.6.0 to 1.7.0 RC
+- Added linter rules and prettify gitHub actions for asset repo and fixed findings
 
 ### Bugfix
-* md file linkage
+
+- md file linkage
 
 ## 1.7.0-RC1
 

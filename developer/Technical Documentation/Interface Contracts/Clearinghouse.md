@@ -1,8 +1,9 @@
 ## Clearinghouse
+
 <br>
 
-* [Legal Participant Self Description Creation](/developer/Technical%20Documentation/Interface%20Contracts/Clearinghouse.md#1-notarization-check)
-* [Connector/Service Self Description Creation](/developer/Technical%20Documentation/Interface%20Contracts/Clearinghouse.md#2-compliance-check)
+- [Legal Participant Self Description Creation](/developer/Technical%20Documentation/Interface%20Contracts/Clearinghouse.md#1-notarization-check)
+- [Connector/Service Self Description Creation](/developer/Technical%20Documentation/Interface%20Contracts/Clearinghouse.md#2-compliance-check)
 
 <br>
 <br>
@@ -13,7 +14,7 @@ The Gaia-X Clearinghouse provides two key services
 
 - trust (validation of corporate data by verifying data from legal entities, according to the Gaia-X Trust Framework)
 - conformity assessment (SD Documents via teh compliance check)
-<br>
+  <br>
 
 Below the respective touched business process steps are highlighted to enable an easier mapping of the interfaces to the portal product business process:
 
@@ -63,8 +64,9 @@ Both the flows are identical and displayed below:
 </p>
 
 Two technical users are created to allow the clearinghouse to access the available services:
-* sa-cl2-01 (for the notarization service response)
-* sa-cl2-02 (for the compliance sd submission)
+
+- sa-cl2-01 (for the notarization service response)
+- sa-cl2-02 (for the compliance sd submission)
 
 <br>
 <br>

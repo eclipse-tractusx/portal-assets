@@ -70,18 +70,18 @@ the identity_providers.owner is important to define which companies are able to 
 Migration
 
 For each existing idp data set inside the table identity_providers; the following values will get set:
-* idp owner
-* idp type
- 
+
+- idp owner
+- idp type
+
 Logic:
 
-* all "KEYCLOAK_SHARED" IdPs got the idp type "3" set ("3" = "SHARED")
-* all "KEYCLOAK_SHARED" IdP categories have been changed to "OIDC"
-* "KEYCLOAK_OIDC" got renamed to "OIDC"
-* "KEYCLOAK_SAML" got renamed to "SAML"
-* all "OIDC" & "SAML" IdPs got the idp type "1" set ("1" = "owned")
-* all "OIDC" and "SAML"  IdPs need to have the "Customer" set as IdP owner
-
+- all "KEYCLOAK_SHARED" IdPs got the idp type "3" set ("3" = "SHARED")
+- all "KEYCLOAK_SHARED" IdP categories have been changed to "OIDC"
+- "KEYCLOAK_OIDC" got renamed to "OIDC"
+- "KEYCLOAK_SAML" got renamed to "SAML"
+- all "OIDC" & "SAML" IdPs got the idp type "1" set ("1" = "owned")
+- all "OIDC" and "SAML" IdPs need to have the "Customer" set as IdP owner
 
 #### Enable Application Types - NEW
 
@@ -94,10 +94,10 @@ The `company_applications` table has been expanded. New columns `company_applica
 
 #### Enable Onboarding Service Provider - NEW
 
-* NEW: portal.company_user_assigned_identity_providers
-* NEW: portal.network_registrations
-* NEW: portal.onboarding_service_provider_details
-* EXTEND: portal.identity_user_statuses
+- NEW: portal.company_user_assigned_identity_providers
+- NEW: portal.network_registrations
+- NEW: portal.onboarding_service_provider_details
+- EXTEND: portal.identity_user_statuses
 
 NEW portal.company_user_assigned_identity_providers table to be able to link a user to an identity provider
 NEW portal.network_registrations to safe the network registrations of an onboarding service provider or operator
