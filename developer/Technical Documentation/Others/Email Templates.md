@@ -12,7 +12,7 @@ On this page a summary is provided on which Email Templates are available and us
 - E-Mail Invite additional Users
 - E-Mail Submitted Registration & Next Steps
 - E-Mail Welcome to Catena-X - Join the Network
-- E-Mail Passwort Reset
+- E-Mail Password Reset
 - E-Mail Invite New User to Portal
 - E-Mail Template implementations
   <br>
@@ -84,7 +84,7 @@ Email Trigger: CX Admin has approved Company Registration request.
 <br>
 <br>
 
-### E-Mail Passwort Reset
+### E-Mail Password Reset
 
 Email Trigger: Shared IdP User is selecting "Password reset" on the login screen
 <br>
@@ -101,3 +101,11 @@ Email Trigger: Admin User is inviting inside the Portal User Management a new us
 <br>
 <br>
 <br>
+
+## NOTICE
+
+This work is licensed under the [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+- SPDX-License-Identifier: Apache-2.0
+- SPDX-FileCopyrightText: 2021-2023 Contributors to the Eclipse Foundation
+- Source URL: https://github.com/eclipse-tractusx/portal-assets

@@ -46,7 +46,7 @@ to be added
 
 #### Get Membership Flag
 
-The endpoint provides all business partner numbers of those comapny records; where the company status is "ACTIVE" (means: company is part of the catena-x network).
+The endpoint provides all business partner numbers of those company records; where the company status is "ACTIVE" (means: company is part of the catena-x network).
 Those bpns are mapped with the GET Business Partner Data response (see above) and a membership flag is added for matching companies inside the partner network user interface.
 <br>
 
@@ -60,3 +60,11 @@ to be added
 
 <br>
 <br>
+
+## NOTICE
+
+This work is licensed under the [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+- SPDX-License-Identifier: Apache-2.0
+- SPDX-FileCopyrightText: 2021-2023 Contributors to the Eclipse Foundation
+- Source URL: https://github.com/eclipse-tractusx/portal-assets

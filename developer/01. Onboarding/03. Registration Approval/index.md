@@ -5,7 +5,7 @@ The registration approval board is created for the CX Admin to managed registrat
 Acting user: CX Admin (Operator)
 <br>
 <br>
-The board supports filter, serach and the actual approval / validation function of new company registration requests.
+The board supports filter, search and the actual approval / validation function of new company registration requests.
 <br>
 <br>
 <img width="1000" alt="image" src="https://user-images.githubusercontent.com/94133633/210287568-1591aba6-2f12-4b11-bf12-4ceba24af1aa.png">
@@ -36,3 +36,11 @@ With using the application details button, application details such as
 
 <br>
 <br>
+
+## NOTICE
+
+This work is licensed under the [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+- SPDX-License-Identifier: Apache-2.0
+- SPDX-FileCopyrightText: 2021-2023 Contributors to the Eclipse Foundation
+- Source URL: https://github.com/eclipse-tractusx/portal-assets

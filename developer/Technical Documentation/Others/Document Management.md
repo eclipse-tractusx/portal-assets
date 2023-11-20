@@ -103,7 +103,7 @@ Overview of all document related GET Endpoints:
 
 <br>
 
-In all those endpoints, the document itself will get retrived (e.g. pdf, json, png, etc.)
+In all those endpoints, the document itself will get retrieved (e.g. pdf, json, png, etc.)
 
 <br>
 <br>
@@ -143,3 +143,11 @@ Scheduled deletion job, configurable to run overnight.
 
 <br>
 <br>
+
+## NOTICE
+
+This work is licensed under the [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+- SPDX-License-Identifier: Apache-2.0
+- SPDX-FileCopyrightText: 2021-2023 Contributors to the Eclipse Foundation
+- Source URL: https://github.com/eclipse-tractusx/portal-assets

@@ -81,3 +81,11 @@ Additional relevant information:
 
 - (warning) If not already existing in the original table, a uuid and last_editor_id attribute need to get added to the original entity.
 - (warning) whenever the original table attributes are changed (e.g. adding an attribute or deleting and attribute) the already existing audit table will be set to frozen and a new audit table is getting created. All new audit relevant records will be stored in the new audit table
+
+## NOTICE
+
+This work is licensed under the [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+- SPDX-License-Identifier: Apache-2.0
+- SPDX-FileCopyrightText: 2021-2023 Contributors to the Eclipse Foundation
+- Source URL: https://github.com/eclipse-tractusx/portal-assets

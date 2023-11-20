@@ -130,3 +130,11 @@ Follow this (SVG) decision diagram to find the optimal image encoding.
 <img width="1280px" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/public/assets/images/docs/graphics/image-formats.svg"/>
 
 Choosing an image for use on a web page is a trade-off between file size and quality of display. The file format has the biggest impact on the result. High quality, high resolution bitmap images look very beautiful on the screen but often come as big files that takes very long to load. Always try to keep the file size as small as possible while preserving an acceptable quality for the user. As a rule of thumb, the file size of any image should not exceed 100kB. Whenever the image type allows to use SVG, then use SVG as it usually is the best choice combining the smallest file size together with best image quality.
+
+## NOTICE
+
+This work is licensed under the [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+- SPDX-License-Identifier: Apache-2.0
+- SPDX-FileCopyrightText: 2021-2023 Contributors to the Eclipse Foundation
+- Source URL: https://github.com/eclipse-tractusx/portal-assets

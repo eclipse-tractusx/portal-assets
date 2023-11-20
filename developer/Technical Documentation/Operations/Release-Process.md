@@ -110,15 +110,13 @@ On the release branch the following steps are executed:
 
 2. Update changelog file
 
-3. Update README (chart and root level)
+3. Update README (on chart level)
 
 Use [helm-docs](https://github.com/norwoodj/helm-docs) (gotemplate driven) for updating the README file.
 
 ```bash
 helm-docs --chart-search-root [charts-dir] --sort-values-order file
 ```
-
-Copy updated README file on chart level to root level.
 
 Example for commit message:
 
@@ -178,3 +176,11 @@ _Version 1.2.0: Frontend Registration for the Catena-X_
 _Version 1.1.0: Assets for the Catena-X Portal_
 
 _Version 1.1.0: Backend for the Catena-X Portal_
+
+## NOTICE
+
+This work is licensed under the [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+- SPDX-License-Identifier: Apache-2.0
+- SPDX-FileCopyrightText: 2021-2023 Contributors to the Eclipse Foundation
+- Source URL: https://github.com/eclipse-tractusx/portal-assets
