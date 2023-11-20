@@ -15,7 +15,7 @@ Business Partner Data Management as a product as well as the portal have three d
 Below the respective touched business process steps are highlighted to enable an easier mapping of the interfaces to the portal product business process:
 
 <p align="center">
-<img width="843" alt="image" src="https://github.com/catenax-ng/tx-portal-assets/assets/94133633/3a262783-775b-4e4f-acba-a8354d5281ae">
+<img width="843" alt="image" src="/docs/static/bpdm-touchpoints.png">
 </p>
 
 <br>
@@ -37,7 +37,7 @@ For the registration process we are using the BPDM data call to pull the company
 <br>
 
 -> Authentication: the authorization is triggered by the acting FE users token  
--> Endpoint: BPDM endpoint is covered by a portal endpoint which is used to request the data and transfer the respnse into the needed format (portal endpoint: GET /api/registration/legalEntityAddress/{bpn} ; bpdm endpoint: https://business-partners.{env}.demo.catena-x.net/pool/api/catena/legal-entities/{idValue})
+-> Endpoint: BPDM endpoint is covered by a portal endpoint which is used to request the data and transfer the response into the needed format (portal endpoint: GET /api/registration/legalEntityAddress/{bpn} ; bpdm endpoint: https://business-partners.{env}.demo.catena-x.net/pool/api/catena/legal-entities/{idValue})
 
 <br>
 <br>
@@ -47,7 +47,7 @@ For the registration process we are using the BPDM data call to pull the company
 To integrate the API into CX onboarding process, portal team just have to call the lookup REST endpoint and transform the response into a pick list for the portal user.
 <br>
 <br>
-<img width="904" alt="image" src="https://github.com/catenax-ng/tx-portal-assets/assets/94133633/7ef4073c-dd35-4072-abc6-d23ccdab1744">
+<img width="904" alt="image" src="/docs/static/bpdm-golden-record-overview.png">
 <br>
 <br>
 
@@ -60,7 +60,7 @@ Retrieving company data from the CX mirror.
 ### Description of the physical interfaces (HOW)
 
 <br>
-<img width="1200" alt="image" src="https://user-images.githubusercontent.com/94133633/210436060-929f9d50-0af3-47c7-aabd-16526f4dd7af.png">
+<img width="1200" alt="image" src="/docs/static/bpdm-physical-interfaces.png">
 <br>
 <br>
 
@@ -107,8 +107,8 @@ The portal is using an technical user for the authentication. The technical user
 <br>
 <br>
 
-
 ## Push new Business Partners
+
 (into the Golden Record via a Gate) to trigger the BPNL creation for the new registering party (used along the application approval process of the portal)
 
 ### Interface Summary
@@ -130,25 +130,25 @@ The Golden Record has a couple of implemented validations to validate the regist
 <br>
 
 <p align="center">
-<img width="821" alt="image" src="https://github.com/catenax-ng/tx-portal-assets/assets/94133633/500b90f7-e1fa-4bc6-95d3-4a5fdd5a4c25">
+<img width="821" alt="image" src="/docs/static/bpdm-process-worker.png">
 </p>
 
 <br>
 <br>
 
 ### Description of the functional interface (WHAT)
+
 Publishing company data of a to be registered CX member to the Golden Record
 <br>
 <br>
 
 ### Description of the physical interfaces (HOW)
-<br>
+
 n/a
 <br>
 <br>
 
 #### Service Call Details
-<br>
 
 The call itself is not a API triggered call but automated by the process worker.
 However the administrator of the platform has the chance to retrigger the process in the scenario of an failure.
@@ -167,24 +167,26 @@ Request Body
 <br>
 <br>
 
-
-
-<br>
-<br>
-
 ##### Data Submission Details
+
 <br>
 
 - Company Name
-- ...
-- ...
-- ...
-- ...
+- ExternalId
+- Company Short Name
+- Company Identifiers
+- Country
+- Zip Code
+- City
+- Street Name
+- Street Number
+- Region
 
 <br>
 <br>
 
 ## Pull new Business Partner BPNL
+
 (from the Golden Record via a Gate) to fetch the new created BPNL or the process error details for the new registering party (used along the application approval process of the portal)
 
 ### Interface Summary
@@ -201,29 +203,27 @@ The interface is used to fetch the BPN of the previously submitted party registr
 <br>
 
 ### Architecture Overview
-<br>
-<br>
 
 <p align="center">
-<img width="803" alt="image" src="https://github.com/catenax-ng/tx-portal-assets/assets/94133633/82d02fee-0524-4a4e-a758-ba1d95b930ca">
+<img width="803" alt="image" src="/docs/static/bpdm-process-worker-pull.png">
 </p>
 
 <br>
 <br>
 
 ### Description of the functional interface (WHAT)
+
 Fetching the (if available) newly created Business Partner Number (BPN) of the to be registered CX member to process the application registration request.
 <br>
 <br>
 
 ### Description of the physical interfaces (HOW)
-<br>
+
 n/a
 <br>
 <br>
 
 #### Service Call Details
-<br>
 
 The call itself is not a API triggered call but automated by the process worker.
 However the administrator of the platform has the chance to retrigger the process in the scenario of an failure.
@@ -277,28 +277,27 @@ This document describes the details of the interface spec between BPDM and Porta
 <br>
 
 ### Architecture Overview
-<br>
 
 <p align="center">
-<img width="780" alt="image" src="https://github.com/catenax-ng/tx-portal-assets/assets/94133633/7196326c-4f34-4ca1-891c-cc480414b0f6">
+<img width="780" alt="image" src="/docs/static/bpdm-partner-network.png">
 </p>
 
 <br>
 <br>
 
 ### Description of the functional interface (WHAT)
+
 Display business partner data via the partner network.
 <br>
 <br>
 
 ### Description of the physical interfaces (HOW)
-<br>
+
 n/a
 <br>
 <br>
 
 #### Get Business Partner data
-<br>
 
 ```diff
 ! GET /api/catena/legal-entities/legal-addresses/search
@@ -308,6 +307,7 @@ n/a
 <br>
 
 ##### Get Membership Flag
+
 The endpoint provides all business partner numbers of those comapny records; where the company status is "ACTIVE" (means: company is part of the catena-x network).
 Those bpns are mapped with the GET Business Partner Data response (see above) and a membership flag is added for matching companies inside the partner network user interface.
 <br>
