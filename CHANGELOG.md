@@ -2,6 +2,26 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
+## 1.7.0-RC4
+
+### Change
+
+- added documentation for service account sync
+- added table of content to version upgrade
+- added documentation for app change documents
+- added license notice and image licenses
+- added notice to md files in docs and developers directory
+- added check for license info headers, footers and files in pr-template
+- added data-flow diagram
+- moved iam specific documentation to portal-iam repository
+- updated documentation for bulk user creation
+- updated bpdm interface contract
+- fixed typos
+
+### Technical Support
+
+- Trivy scan: changed to no failure on high findings, as it should only fail if there is an error/misconfiguration
+
 ## 1.7.0-RC3
 
 ### Change
