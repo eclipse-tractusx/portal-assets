@@ -4,10 +4,10 @@
 
 Business Partner Data Management as a product as well as the portal have three different interfaces:
 
-* [Search Existing Business Partners](/developer/Technical%20Documentation/Interface%20Contracts/BPDM.md#search-existing-business-partners)
-* [Push New Business Partners](/developer/Technical%20Documentation/Interface%20Contracts/BPDM.md#push-new-business-partners)
-* [Pull New Business Partner BPNL](/developer/Technical%20Documentation/Interface%20Contracts/BPDM.md#pull-new-business-partners)
-* [Partner Network Connect](/developer/Technical%20Documentation/Interface%20Contracts/BPDM.md#partner-network-connect)
+- [Search Existing Business Partners](/developer/Technical%20Documentation/Interface%20Contracts/BPDM.md#search-existing-business-partners)
+- [Push New Business Partners](/developer/Technical%20Documentation/Interface%20Contracts/BPDM.md#push-new-business-partners)
+- [Pull New Business Partner BPNL](/developer/Technical%20Documentation/Interface%20Contracts/BPDM.md#pull-new-business-partners)
+- [Partner Network Connect](/developer/Technical%20Documentation/Interface%20Contracts/BPDM.md#partner-network-connect)
 
 <br>
 <br>
@@ -21,8 +21,8 @@ Below the respective touched business process steps are highlighted to enable an
 <br>
 <br>
 
+## Search existing Business Partners
 
-## Search existing Business Partners 
 (via Golden Record) via the BPNL (used inside the registration application/form)
 
 ### Interface Summary
@@ -126,6 +126,7 @@ The Golden Record has a couple of implemented validations to validate the regist
 <br>
 
 ### Architecture Overview
+
 <br>
 <br>
 
@@ -256,10 +257,8 @@ Request Body
             ]
         }
 
-
 <br>
 <br>
-
 
 ## Partner Network
 
