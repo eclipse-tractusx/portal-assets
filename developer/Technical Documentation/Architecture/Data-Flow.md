@@ -79,7 +79,7 @@ flowchart LR
     subgraph ext["External Services (3rd party)"]
     CH
     end
-  
+
     RS <-->|Company data \n user role data \n T&C / consent agreements| RF
     RS <--> K
     RS -->|Company data \n user role data \n T&C consent agreements| PDB
