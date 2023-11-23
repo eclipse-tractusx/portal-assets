@@ -44,3 +44,11 @@ We start each part as a server process running on a different port. Then we star
 With the last step the portal is fully running and there should automatically open
 a browser session pointing to your local development instance at http://localhost:3000/
 By default the frontend is using the backend services deployed on the public development environment.
+
+## NOTICE
+
+This work is licensed under the [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+- SPDX-License-Identifier: Apache-2.0
+- SPDX-FileCopyrightText: 2021-2023 Contributors to the Eclipse Foundation
+- Source URL: https://github.com/eclipse-tractusx/portal-assets

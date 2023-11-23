@@ -101,3 +101,11 @@ The suggested naming convention is '{type}{(function)}: {short summary}'
 
 Add details to the change, fix or feature in the PR description.
 What was changed, why was it changed (e.g. which issue was fixed or which requirement was implemented), and how was it changed.
+
+## NOTICE
+
+This work is licensed under the [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+- SPDX-License-Identifier: Apache-2.0
+- SPDX-FileCopyrightText: 2021-2023 Contributors to the Eclipse Foundation
+- Source URL: https://github.com/eclipse-tractusx/portal-assets

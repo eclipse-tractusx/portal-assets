@@ -4,7 +4,7 @@ The "Service Release Publishing Process" is used to enable Service Provider to o
 This chapter describes the service release process.
 
 How to get there?
-Access the "Service Publish Process" via the "Service Release Process" or via the "Service Management" page. Both sub-menus are available via the top menu "Servie Management".
+Access the "Service Publish Process" via the "Service Release Process" or via the "Service Management" page. Both sub-menus are available via the top menu "Service Management".
 
 <br>
 <br>
@@ -30,3 +30,11 @@ and click on the action button "Register your service"
 
 <br>
 <br>
+
+## NOTICE
+
+This work is licensed under the [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+- SPDX-License-Identifier: Apache-2.0
+- SPDX-FileCopyrightText: 2021-2023 Contributors to the Eclipse Foundation
+- Source URL: https://github.com/eclipse-tractusx/portal-assets

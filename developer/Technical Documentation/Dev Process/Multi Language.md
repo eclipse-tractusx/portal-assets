@@ -45,3 +45,11 @@ Inside the CX Portal, the locales are divided by pages.
 <img width="150" alt="image" src="https://user-images.githubusercontent.com/94133633/210455893-bd9971e7-ab0d-429a-a507-416f88d4b601.png">
 <br>
 There is one main file holding the generic translation for often used items (e.g. "approval button", headlines,...) and a file for each specific page to translate not often used values.
+
+## NOTICE
+
+This work is licensed under the [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+- SPDX-License-Identifier: Apache-2.0
+- SPDX-FileCopyrightText: 2021-2023 Contributors to the Eclipse Foundation
+- Source URL: https://github.com/eclipse-tractusx/portal-assets

@@ -83,7 +83,7 @@
         "imagePath": "/images/content/traceability_datamodels(en).svg",
         "backgroundColor": "#FFFFFF",
         "id": "data-model-id",
-      "images": ["/images/content/traceability_datamodels1(en).svg"],
+        "images": ["/images/content/traceability_datamodels1(en).svg"],
         "template": "TextImageCenterAligned"
       },
       {

@@ -31,7 +31,7 @@ Access the "App Overview" page via the top navigation "App Management"
 <br>
 <br>
 
-<img width="222" alt="image" src="https://user-images.githubusercontent.com/94133633/218282685-019ea98f-e77d-4fe8-a811-46d4cdf0a2d3.png">
+<img width="222" alt="image" src="/docs/static/register-app.png">
 
 <br>
 <br>
@@ -43,13 +43,13 @@ and click on
 <br>
 <br>
 
-<img width="187" alt="image" src="https://user-images.githubusercontent.com/94133633/218282773-a7d2479e-5e90-456c-b70b-ed54730440bf.png">
+<img width="187" alt="image" src="/docs/static/register-app-button.png">
 
 <br>
 <br>
 
-- [Step 1: Service Card](./01.%20App%20Card.md)
-- [Step 2: Service Detail Page](./02.%20App%20Detail%20Page.md)
+- [Step 1: App Card](./01.%20App%20Card.md)
+- [Step 2: App Detail Page](./02.%20App%20Detail%20Page.md)
 - [Step 3: Terms & Conditions](./03.Terms%26Conditions.md)
 - [Step 4: Technical Integration](./04.Technical%20Integration.md)
 - [Step 5: Verify & Submit](./05.Verify%20%26%20Submit.md)
@@ -58,3 +58,11 @@ and click on
 
 <br>
 <br>
+
+## NOTICE
+
+This work is licensed under the [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+- SPDX-License-Identifier: Apache-2.0
+- SPDX-FileCopyrightText: 2021-2023 Contributors to the Eclipse Foundation
+- Source URL: https://github.com/eclipse-tractusx/portal-assets

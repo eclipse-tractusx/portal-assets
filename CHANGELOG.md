@@ -2,42 +2,69 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
+## 1.7.0-RC4
+
+### Change
+
+- added documentation for service account sync
+- added table of content to version upgrade
+- added documentation for app change documents
+- added license notice and image licenses
+- added notice to md files in docs and developers directory
+- added check for license info headers, footers and files in pr-template
+- added data-flow diagram
+- moved iam specific documentation to portal-iam repository
+- updated documentation for bulk user creation
+- updated bpdm interface contract
+- fixed typos
+
+### Technical Support
+
+- Trivy scan: changed to no failure on high findings, as it should only fail if there is an error/misconfiguration
+
 ## 1.7.0-RC3
 
 ### Change
-* useCase content file updated
-* images linked for traceability useCase exchanged
-* portal database upgrade documentation updated
+
+- useCase content file updated
+- images linked for traceability useCase exchanged
+- portal database upgrade documentation updated
 
 ### Feature
+
 n/a
 
 ### Bugfix
+
 n/a
 
 ## 1.7.0-RC2
 
 ### Change
-* identity provider connection documentation (developer & end user); new flow released
-* subscription management board (service provider) documentation enhanced (developer & end user)
-* updated technical user role definition
-  * removal of 'Connector User', 'App Tech User'
-  * updated 'Service Management' to 'Offer Management'
-  * added 'Semantic Model Management', 'Dataspace Discovery', 'CX Membership Info'
-  * permission assignment updated (R&R Matrix documentation & portal upgrade script provided for portal db and 
-* Interface contract documentation for 'Clearinghouse' updated with new architecture images and additional details of relevant authentication users and used endpoints
-* traceability use case page images and text sections updated for release 23.12
+
+- identity provider connection documentation (developer & end user); new flow released
+- subscription management board (service provider) documentation enhanced (developer & end user)
+- updated technical user role definition
+  - removal of 'Connector User', 'App Tech User'
+  - updated 'Service Management' to 'Offer Management'
+  - added 'Semantic Model Management', 'Dataspace Discovery', 'CX Membership Info'
+  - permission assignment updated (R&R Matrix documentation & portal upgrade script provided for portal db and
+- Interface contract documentation for 'Clearinghouse' updated with new architecture images and additional details of relevant authentication users and used endpoints
+- traceability use case page images and text sections updated for release 23.12
 
 ### Feature
+
 n/a
 
 ### Technical Support
-* Portal db - technical user upgrade script provided which need to get executed for upgrade from 1.6.0 to 1.7.0 RC
-* Keycloak db - technical user upgrade script provided which need to get executed for upgrade from 1.6.0 to 1.7.0 RC
-* Added linter rules and prettify gitHub actions for asset repo and fixed findings
+
+- Portal db - technical user upgrade script provided which need to get executed for upgrade from 1.6.0 to 1.7.0 RC
+- Keycloak db - technical user upgrade script provided which need to get executed for upgrade from 1.6.0 to 1.7.0 RC
+- Added linter rules and prettify gitHub actions for asset repo and fixed findings
 
 ### Bugfix
-* md file linkage
+
+- md file linkage
 
 ## 1.7.0-RC1
 

@@ -32,3 +32,11 @@ Every time you make a change:
 6. if everything works as expected do this:
    - run npm unpublish --force
    - change the names back to @catena-x , set the version to one higher than the last published one and raise PR.
+
+## NOTICE
+
+This work is licensed under the [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+- SPDX-License-Identifier: Apache-2.0
+- SPDX-FileCopyrightText: 2021-2023 Contributors to the Eclipse Foundation
+- Source URL: https://github.com/eclipse-tractusx/portal-assets

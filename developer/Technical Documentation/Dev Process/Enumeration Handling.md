@@ -46,7 +46,7 @@ Since enums have an enhanced impact on the system functionality; it is mandatori
 ### Change Enums
 
 Change of enums (labels) is possible but need to be done carefully and only if necessarily needed.
-In the case a change is getting executed; the system configuration / appsettings / env. variables need to get checked to ensure that those dont refer to the enum which is getting changed/ updated.
+In the case a change is getting executed; the system configuration / appsettings / env. variables need to get checked to ensure that those don't refer to the enum which is getting changed/ updated.
 Same applies to frontend and backend logic. Both might refer to the enum label and will automatically fail when an enum value is getting changed.
 
 <br>
@@ -66,3 +66,11 @@ It is not recommended to delete enums; instead .......... to be updated; we need
 
 <br>
 <br>
+
+## NOTICE
+
+This work is licensed under the [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+- SPDX-License-Identifier: Apache-2.0
+- SPDX-FileCopyrightText: 2021-2023 Contributors to the Eclipse Foundation
+- Source URL: https://github.com/eclipse-tractusx/portal-assets
