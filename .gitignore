@@ -1,3 +1,10 @@
 **/.DS_Store
 node_modules
 public/documentation/js/lib
+
+# Add legal info files during build
+
+public/assets/notice/LICENSE
+public/assets/notice/DEPENDENCIES
+public/assets/notice/NOTICE.md
+public/assets/notice/SECURITY.md
