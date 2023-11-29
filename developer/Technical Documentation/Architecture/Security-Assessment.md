@@ -28,7 +28,7 @@ The whole eco-system on the automotive value chain is connected at one place.
 - [portal-shared-components](https://github.com/eclipse-tractusx/portal-shared-components)
 - [portal-assets](https://github.com/eclipse-tractusx/portal-assets)
 - [portal-backend](https://github.com/eclipse-tractusx/portal-backend)
-
+- [portal-iam](https://github.com/eclipse-tractusx/portal-iam)
 
 ## Data Flow Diagram
 
