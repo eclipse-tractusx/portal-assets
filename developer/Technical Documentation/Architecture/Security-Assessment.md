@@ -112,37 +112,39 @@ flowchart LR
     subgraph ext["External Services (3rd party)"]
     CH
     end
-
-    RS <-->|Company data \n user role data \n T&C / consent agreements| RF
-    RS <--> K
-    RS -->|Company data \n user role data \n T&C consent agreements| PDB
-
-    AS --> K
+RS <-->|Company data \n user role data \n T&C / consent agreements| RF
+    RS <-.-> K
+    RS ==>|Company data \n user role data \n T&C consent agreements| PDB
+    AS -.-> K
     AS <--> PF
-    AS -->|"User data \n (real and technical company data)"| PDB
+    AS ==>|"User data \n (real and technical company data)"| PDB
     AS ---|Data related to \n self description| SDF
     AS -->|"Create MIW-tenant \n update MIW-tenant (BPN-VC, Member-VC) \n update MIW-framework-VC \n update dismantler-VC \n data: BPN, Auth, Contract, Version"| MIW
     AS <-->|Company data \n signed self description| CH
     AS <-->|OSP registers its customer \n Company Data \n Admin User Record| OSP
-
-    NS --> PDB & PF & K
-
-    BPDM -->|"Company data (e.g. name, etc.)"| RF
+    NS --> PF
+    NS ==> PDB
+    NS -.-> K
+    BPDM -.->|"Company data (e.g. name, etc.)"| RF
     BPDM -->|"Company data (e.g. BPN)"| AS
-
-    MAS -->|Company app subscription data \n app service data + user preferences| PDB
-    MAS <--> K & PF
-
-    MSS <--> PF & K
-    MSS -->|Company app subscription data \n app service data + user preferences| PDB
-
+    MAS ==>|Company app subscription data \n app service data + user preferences| PDB
+    MAS <--> PF
+    MAS <-.-> K
+    MSS <--> PF
+    MSS <-.-> K
+    MSS ==>|Company app subscription data \n app service data + user preferences| PDB
     SDF <--> CH
-
-    SDT -->|Product meta data| PF
-
-    NC1 & CU-Shared1 & NC2 & CU-Shared2 & NC3 & CU-Shared3 & CU-Own --> |OIDC| K
-
-    K <--> |"Authentication/authorization data (using JWT)"| RF & PF
+    SDT -.->|Product meta data| PF
+    NC1 & CU-Shared1 & NC2 & CU-Shared2 & NC3 & CU-Shared3 & CU-Own -.-> |OIDC| K
+    K <-.-> |"Authentication/authorization data (using JWT)"| RF & PF
+    subgraph Legend
+        C1("Component 1")
+        D1[("Database")]
+        C1 <-.-> D1
+        C1 <--> |https connections| D1 
+        C1 <==> D1
+        
+    end
 ```
 
 ### Changes compared to last Security Assessment
