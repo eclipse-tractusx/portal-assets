@@ -780,8 +780,8 @@
         "sectionLink": {
           "data": [
             {
-              "title": ">> manage IdP page (coming soon)",
-              "id": "",
+              "title": ">> manage IdP page",
+              "id": " https://portal.int.demo.catena-x.net/idpmanagement ",
               "internal": false
             },
             {
@@ -806,7 +806,7 @@
           "data": [
             {
               "title": ">> Technical User Self Service",
-              "id": "",
+              "id": "https://portal.int.demo.catena-x.net/technicaluser",
               "internal": false
             },
             {
