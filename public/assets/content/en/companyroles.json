@@ -676,7 +676,7 @@
       }
     ]
   },
-  "confirmity": {
+  "conformity": {
     "subNavigation": [
       {
         "index": 2,
@@ -706,7 +706,7 @@
       {
         "title": "Certification Process",
         "description": "For more details visit the catena-x <strong>association homepage</strong><1></1><1></1>",
-        "imagePath": "/images/content/confirmity.png",
+        "imagePath": "/images/content/conformity.png",
         "backgroundColor": "#FFFFFF",
         "id": "section-two",
         "template": "TextImageSideBySideWithSections",
