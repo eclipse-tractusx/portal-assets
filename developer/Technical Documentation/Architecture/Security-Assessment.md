@@ -1,25 +1,26 @@
 # Security Assessment Portal (incl. Frontend, Backend Services, IAM and other infrastructure)
 
-|     |     |
-| --- | --- |
-| Contact for product        | [@evegufy](https://github.com/evegufy) <br> [@jjeroch](https://github.com/jjeroch) |
-| Security responsible       | [@SSIRKC](https://github.com/SSIRKC) <br> [Szymon Kowalczyk](szymon.kowalczyk.external@zf.com) |
-| Version number of product  | 23.12 |
-| Dates of assessment        | 2023-11-14: Re-Assessment |
-| Status of assessment       | RE-ASSESSMENT DRAFT |
+|                           |                                                                                                |
+| ------------------------- | ---------------------------------------------------------------------------------------------- |
+| Contact for product       | [@evegufy](https://github.com/evegufy) <br> [@jjeroch](https://github.com/jjeroch)             |
+| Security responsible      | [@SSIRKC](https://github.com/SSIRKC) <br> [Szymon Kowalczyk](szymon.kowalczyk.external@zf.com) |
+| Version number of product | 23.12                                                                                          |
+| Dates of assessment       | 2023-11-14: Re-Assessment                                                                      |
+| Status of assessment      | RE-ASSESSMENT DRAFT                                                                            |
 
 ## Product Description
 
 The Catena-X Portal and Marketplace is the heart of Catena-X and the entry point for all activities in the automotive network/value chain.
 Every user of the automotive value chain, no matter if it is a consumer, app provider, IT administrator or IT support will connect via the portal to the value bringing services.
 The whole eco-system on the automotive value chain is connected at one place.
-* Portal Frame
-* Partner Onboarding Process (initial, technical & business)
-* Login Process
-* User Management
-* App Store
-* Developer Platform
-* UI / UX & Developer Guidelines
+
+- Portal Frame
+- Partner Onboarding Process (initial, technical & business)
+- Login Process
+- User Management
+- App Store
+- Developer Platform
+- UI / UX & Developer Guidelines
 
 ### Important Links
 
@@ -146,12 +147,12 @@ flowchart LR
 
 ### Changes compared to last Security Assessment
 
-* No major architectural changes that introduce new threats.
-* Main changes are connections to the onboarding service provider.
+- No major architectural changes that introduce new threats.
+- Main changes are connections to the onboarding service provider.
 
 ### Features for Upcoming Versions
 
-* Integration of onboarding service provider endpoints.
+- Integration of onboarding service provider endpoints.
 
 ## Threats & Risks
 
