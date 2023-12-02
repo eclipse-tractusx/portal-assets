@@ -17,6 +17,7 @@
   - [v1.1.0](#v110)
     - [Application Checklist - ENHANCED](#application-checklist---enhanced)
     - [Service Details - NEW (interim)](#service-details---new-interim)
+- [NOTICE](#notice)
 
 ## Summary
 
@@ -121,7 +122,7 @@ connector_roles_to_insert AS (
     CROSS JOIN (
         SELECT id
         FROM portal.user_roles
-        WHERE user_role IN ('Semantic Model Management', 'Dataspace Discovery')
+        WHERE user_role IN ('Semantic Model Management', 'Identity Wallet Management', 'Dataspace Discovery')
     ) AS ur
 )
 INSERT INTO portal.identity_assigned_roles (identity_id, user_role_id)
@@ -144,7 +145,7 @@ roles_to_insert AS (
     CROSS JOIN (
         SELECT id
         FROM portal.user_roles
-        WHERE user_role IN ('Semantic Model Management', 'Dataspace Discovery', 'CX Membership Info')
+        WHERE user_role IN ('Semantic Model Management', 'Identity Wallet Management', 'Dataspace Discovery', 'CX Membership Info')
     ) ur
 )
 INSERT INTO portal.identity_assigned_roles (identity_id, user_role_id)
@@ -167,7 +168,7 @@ connector_profiles_to_insert AS (
     CROSS JOIN (
         SELECT id
         FROM portal.user_roles
-        WHERE user_role IN ('Semantic Model Management', 'Dataspace Discovery')
+        WHERE user_role IN ('Semantic Model Management', 'Identity Wallet Management', 'Dataspace Discovery')
     ) ur
 )
 INSERT INTO portal.technical_user_profile_assigned_user_roles (technical_user_profile_id, user_role_id)
@@ -190,7 +191,7 @@ profiles_to_insert AS (
     CROSS JOIN (
         SELECT id
         FROM portal.user_roles
-        WHERE user_role IN ('Semantic Model Management', 'Dataspace Discovery', 'CX Membership Info')
+        WHERE user_role IN ('Semantic Model Management', 'Identity Wallet Management','Dataspace Discovery', 'CX Membership Info')
     ) ur
 )
 INSERT INTO portal.technical_user_profile_assigned_user_roles (technical_user_profile_id, user_role_id)
