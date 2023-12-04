@@ -106,7 +106,7 @@ NEW portal.onboarding_service_provider_details to safe information of the onboar
 
 #### Technical Role - UPDATE
 
-To align the portal database with the Keycloak database the following SQL must be executed against the portal database. The script will replace the 'Connector User' role with the roles 'Semantic Model Management' and 'Dataspace Discovery'. As well as replace the 'App Tech User' role with 'Semantic Model Management', 'Dataspace Discovery' and 'CX Membership Info'. This results in all identity assigned roles being replaced, all technical user profile assigned roles being updated and the old roles being removed from the database.
+To align the portal database with the Keycloak database the following SQL must be executed against the portal database. The script will replace the 'Connector User' role with the roles 'Semantic Model Management', 'Identity Wallet Management' and 'Dataspace Discovery'. As well as replace the 'App Tech User' role with 'Semantic Model Management', 'Dataspace Discovery' and 'CX Membership Info'. This results in all identity assigned roles being replaced, all technical user profile assigned roles being updated and the old roles being removed from the database.
 
 ```sql
 WITH connector_users AS (
@@ -145,7 +145,7 @@ roles_to_insert AS (
     CROSS JOIN (
         SELECT id
         FROM portal.user_roles
-        WHERE user_role IN ('Semantic Model Management', 'Identity Wallet Management', 'Dataspace Discovery', 'CX Membership Info')
+        WHERE user_role IN ('Semantic Model Management', 'Dataspace Discovery', 'CX Membership Info')
     ) ur
 )
 INSERT INTO portal.identity_assigned_roles (identity_id, user_role_id)
@@ -191,7 +191,7 @@ profiles_to_insert AS (
     CROSS JOIN (
         SELECT id
         FROM portal.user_roles
-        WHERE user_role IN ('Semantic Model Management', 'Identity Wallet Management','Dataspace Discovery', 'CX Membership Info')
+        WHERE user_role IN ('Semantic Model Management', 'Dataspace Discovery', 'CX Membership Info')
     ) ur
 )
 INSERT INTO portal.technical_user_profile_assigned_user_roles (technical_user_profile_id, user_role_id)
