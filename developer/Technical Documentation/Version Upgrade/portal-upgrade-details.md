@@ -6,6 +6,7 @@
     - [Enable Onboarding Service Provider - NEW](#enable-onboarding-service-provider---new)
     - [Technical Role - UPDATE](#technical-role---update)
     - [Database Constraints - FIX](#database-constraints---fix)
+    - [Technical User Profile - CHANGE](#technical-user-profile---change)
   - [v1.6.0](#v160)
     - [Company Credential Details - NEW](#company-credential-details---new)
     - [Connectors - CHANGED](#connectors---changed)
@@ -17,6 +18,7 @@
   - [v1.1.0](#v110)
     - [Application Checklist - ENHANCED](#application-checklist---enhanced)
     - [Service Details - NEW (interim)](#service-details---new-interim)
+- [NOTICE](#notice)
 
 ## Summary
 
@@ -326,6 +328,36 @@ ON portal.company_ssi_details
 INITIALLY DEFERRED
 FOR EACH ROW
 EXECUTE PROCEDURE portal.tr_is_external_type_use_case();
+```
+
+#### Technical User Profile - CHANGE
+
+**Hint:** This is only applicable if you're running on a release candidate 1.7.0-alpha - 1.7.0-RC5
+
+To make sure that all apps have at least one technical user profile assigned, please execute the following script against the portal db:
+
+```sql
+
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+WITH inserted_profiles AS (
+    INSERT INTO portal.technical_user_profiles (id, offer_id)
+    SELECT uuid_generate_v4(), o.id
+    FROM portal.offers AS o
+    LEFT JOIN portal.technical_user_profiles AS tup ON o.id = tup.offer_id
+    WHERE o.offer_type_id != 2 AND tup.offer_id IS NULL
+    RETURNING id
+)
+
+INSERT INTO portal.technical_user_profile_assigned_user_roles (technical_user_profile_id, user_role_id)
+SELECT ip.id AS technical_user_profile_id, ur.default_user_role_id AS user_role_id
+FROM inserted_profiles AS ip
+CROSS JOIN (
+    SELECT roles.id
+	FROM portal.user_roles as roles
+	where roles.user_role in ('Identity Wallet Management', 'Dataspace Discovery', 'Semantic Model Management')
+) AS ur(default_user_role_id);
+
 ```
 
 ### v1.6.0
