@@ -781,7 +781,7 @@
           "data": [
             {
               "title": ">> manage IdP page",
-              "id": " https://portal.int.demo.catena-x.net/idpmanagement ",
+              "id": "/idpmanagement ",
               "internal": false
             },
             {
@@ -806,7 +806,7 @@
           "data": [
             {
               "title": ">> Technical User Self Service",
-              "id": "https://portal.int.demo.catena-x.net/technicaluser",
+              "id": "/technicaluser",
               "internal": false
             },
             {
