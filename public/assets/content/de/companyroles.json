@@ -676,164 +676,49 @@
       }
     ]
   },
-  "confirmity": {
+  "conformity": {
     "subNavigation": [
       {
-        "index": 1,
-        "title": "marketplace",
-        "navigation": "intro-id"
-      },
-      {
         "index": 2,
-        "title": "marketplace subscriptions",
-        "navigation": "data-id"
-      },
-      {
-        "index": 3,
-        "title": "dataspace participants",
-        "navigation": "business-id"
+        "title": "Certification Process",
+        "navigation": "section-two"
       }
     ],
-    "title": "Catena-X Data Confirmity Body",
-    "description": "The Catena-X Confirmity Body is the standard role inside the Catena-X network. Companies sharing and receiving data as well as using service provider offers and app offers are usually 'Confirmity Body' - active members of the network.",
+    "title": "Catena-X Data Conformity Assessment Bodies (CABs)",
+    "description": "The Catena-X CAB is the standard role inside the Catena-X network. Companies sharing and receiving data as well as using service provider offers and app offers are usually 'CAB' - active members of the network.",
     "sections": [
       {
-        "title": "Marketplace",
-        "description": "The marketplace is structured into 2 different areaa - Apps and Services. Depending on your need you can access the marketplace and receive an overview of available apps/services of a wide range of providers.",
-        "imagePath": "/images/content/teaser.png",
+        "title": "",
+        "imagePath": "",
+        "description": "Die Standards, die die Grundlage unseres Netzwerks bilden, werden von Catena-X  e. V. erstellt und veröffentlicht.<1></1>Conformity Assessment Bodies (CABs) auditieren und stellen Zertifikate auf Basis dieser Standards.<1></1>Mehr Details hierzu finden sie unter folgender <strong>Vereinshomepage</strong><1></1><1></1>Die einheitliche Prüfung jeder Komponente des Netzes auf der Grundlage eines gemeinsam vereinbarten Rahmens ermöglicht eine hohe Transparenz und Vergleichbarkeit für alle Anbieter von Dienstleistungen und Anwendungen für unsere Mitglieder und Nutzer.<1></1><1></1>",
+        "template": "TextImageSideBySideWithSections",
         "backgroundColor": "#DAE3EB",
-        "id": "intro-id",
-        "template": "TextImageSideBySideWithCardGrid",
-        "detailsWithImageRow1": [
-          {
-            "title": "App Marketplace",
-            "imagePath": "/images/content/teaser.png",
-            "description": "The app marketplace offers business applications supporting your business in the daily live. Have a look into the marketplace and use filter options such as use case based views.",
-            "readMore": "",
-            "backgroundColor": "#F9F9F9"
-          },
-          {
-            "title": "Service Marketplace",
-            "imagePath": "/images/content/teaser.png",
-            "description": "The service marketplace offers technical and consultancy support to enable you and your company to participate in the Catena-X dataspace.",
-            "readMore": "",
-            "backgroundColor": "#F9F9F9"
-          }
-        ],
-        "detailsWithoutImageRow1": [
-          {
-            "title": "to be defined",
-            "description": "to be defined",
-            "readMore": "",
-            "backgroundColor": "#F9F9F9"
-          },
-          {
-            "title": "How to get to the app marketplace",
-            "description": "to get to the marketplace, just follow the link below",
-            "readMore": "/appmarketplace",
-            "readMoreTitle": "Details",
-            "backgroundColor": "#F9F9F9"
-          },
-          {
-            "title": "How to get to the service marketplace",
-            "description": "to get to the marketplace, just follow the link below",
-            "readMore": "/servicemarketplace",
-            "readMoreTitle": "Details",
-            "backgroundColor": "#F9F9F9"
-          }
-        ]
+        "sectionLink": {
+          "data": [
+            {
+              "title": ">> Vereinshomepage",
+              "id": "https://catena-x.net/de/zertifizierung",
+              "internal": false
+            }
+          ]
+        }
       },
       {
-        "title": "Marketplace Subscriptions",
-        "description": "Inside the app and service marketplace, subscriptions to avialable offers can get made. Find out more how this works by following the details below",
-        "imagePath": "/images/content/teaser.png",
-        "id": "data-id",
-        "template": "TextImageSideBySideWithCardGrid",
-        "backgroundColor": "#F9F9F9",
-        "detailsWithImageRow1": [
-          {
-            "title": "Subscription Authority",
-            "imagePath": "/images/content/circle-image.png",
-            "description": "This are the details which I will still add",
-            "readMore": "",
-            "backgroundColor": "#FFFFFF",
-            "imageShape": "circle"
-          },
-          {
-            "title": "Subscription Flow",
-            "imagePath": "/images/content/circle-image.png",
-            "description": "This are the details which I will still add",
-            "readMore": "",
-            "backgroundColor": "#FFFFFF",
-            "imageShape": "circle"
-          }
-        ],
-        "detailsWithoutImageRow1": [
-          {
-            "title": "Who can subscribe?",
-            "description": "the details will get added asap",
-            "readMore": "/help",
-            "readMoreTitle": "Details",
-            "backgroundColor": "#FFFFFF"
-          },
-          {
-            "title": "What happens after the subscription?",
-            "description": "the details will get added asap",
-            "readMore": "/help",
-            "backgroundColor": "#FFFFFF"
-          },
-          {
-            "title": "How can I use the service?",
-            "description": "the details will get added asap",
-            "readMore": "/help",
-            "readMoreTitle": "Details",
-            "backgroundColor": "#FFFFFF"
-          }
-        ]
-      },
-      {
-        "title": "Dataspace participants",
-        "description": "Details regarding the dataspace ",
-        "imagePath": "/images/content/teaser.png",
-        "id": "business-id",
-        "template": "TextImageSideBySideWithCardGrid",
+        "title": "Certification Process",
+        "description": "Weitere Informationen finden Sie auf der<strong>Vereins-Homepage</strong><1></1><1></1>",
+        "imagePath": "/images/content/conformity.png",
         "backgroundColor": "#FFFFFF",
-        "detailsWithImageRow1": [
-          {
-            "title": "Simply lorem Ipsum Text",
-            "imagePath": "/images/content/teaser.png",
-            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
-            "readMore": "",
-            "backgroundColor": "#F9F9F9"
-          },
-          {
-            "title": "Simply lorem Ipsum Text",
-            "imagePath": "/images/content/teaser.png",
-            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
-            "readMore": "",
-            "backgroundColor": "#F9F9F9"
-          }
-        ],
-        "detailsWithoutImageRow1": [
-          {
-            "title": "Simply lorem Ipsum Text",
-            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
-            "readMore": "",
-            "backgroundColor": "#F9F9F9"
-          },
-          {
-            "title": "Simply lorem Ipsum Text",
-            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
-            "readMore": "",
-            "backgroundColor": "#F9F9F9"
-          },
-          {
-            "title": "Simply lorem Ipsum Text",
-            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard .",
-            "readMore": "",
-            "backgroundColor": "#F9F9F9"
-          }
-        ]
+        "id": "section-two",
+        "template": "TextImageSideBySideWithSections",
+        "sectionLink": {
+          "data": [
+            {
+              "title": ">> Vereins Homepage",
+              "id": "https://catena-x.net/de/zertifizierung",
+              "internal": false
+            }
+          ]
+        }
       }
     ]
   },
@@ -856,7 +741,7 @@
       }
     ],
     "title": "Catena-X Onboarding Service Provider ",
-    "description": ".…information will get added here soon…..",
+    "description": "On-Boarding-Dienstleister ermöglichen die Integration von Datenanbietern/-verbrauchern in das Catena-X-Netzwerk. Dazu gehört die organisatorische und technische Integration. Da die technische Integration beispielsweise eine BPN erfordert, bedarf die Nutzung der Dienste einer bilateralen Abstimmung mit dem die Dienste erbringenden Unternehmen, sofern es sich nicht um das Unternehmen handelt, das die Dienste betreibt.",
     "sections": [
       {
         "title": "Onboarding Service Provider (OSP)",
@@ -910,7 +795,7 @@
       {
         "title": "Register Companies",
         "description": "In the first implementation level provided with end of 2023, the OSP is able to push registrations of new CX members via an CSP provided partnerRegistration endpoint.<1></1><1></1>To call the endpoint, the OSP needs to follow the endpoint strutcure and create an technical user which is used for the endpoint authentication.<1></1><1></1>The technical user can get found in the technical user self-service<1></1><1></1>",
-        "imagePath": "",
+        "imagePath": "/images/content/osp-registration.png",
         "backgroundColor": "#FFFFFF",
         "id": "register-companies-id",
         "template": "TextImageSideBySideWithSections",

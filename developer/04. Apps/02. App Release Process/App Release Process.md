@@ -661,7 +661,7 @@ Description
 
 Validations:
 
-- validates document upload (lead image, app image, confirmity document)
+- validates document upload (lead image, app image, conformity document)
 - validates the signed agreements
 - validates if roles are uploaded
 - validates if technical user profile is configured
