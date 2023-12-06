@@ -15,7 +15,7 @@ Business Partner Data Management as a product as well as the portal have three d
 Below the respective touched business process steps are highlighted to enable an easier mapping of the interfaces to the portal product business process:
 
 <p align="center">
-<img width="843" alt="image" src="/docs/static/bpdm-touchpoints.png">
+<img width="843" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/bpdm-touchpoints.png">
 </p>
 
 <br>
@@ -47,7 +47,7 @@ For the registration process we are using the BPDM data call to pull the company
 To integrate the API into CX onboarding process, portal team just have to call the lookup REST endpoint and transform the response into a pick list for the portal user.
 <br>
 <br>
-<img width="904" alt="image" src="/docs/static/bpdm-golden-record-overview.png">
+<img width="904" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/bpdm-golden-record-overview.png">
 <br>
 <br>
 
@@ -60,7 +60,7 @@ Retrieving company data from the CX mirror.
 ### Description of the physical interfaces (HOW)
 
 <br>
-<img width="1200" alt="image" src="/docs/static/bpdm-physical-interfaces.png">
+<img width="1200" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/bpdm-physical-interfaces.png">
 <br>
 <br>
 
@@ -131,7 +131,7 @@ The Golden Record has a couple of implemented validations to validate the regist
 <br>
 
 <p align="center">
-<img width="821" alt="image" src="/docs/static/bpdm-process-worker.png">
+<img width="821" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/bpdm-process-worker.png">
 </p>
 
 <br>
@@ -206,7 +206,7 @@ The interface is used to fetch the BPN of the previously submitted party registr
 ### Architecture Overview
 
 <p align="center">
-<img width="803" alt="image" src="/docs/static/bpdm-process-worker-pull.png">
+<img width="803" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/bpdm-process-worker-pull.png">
 </p>
 
 <br>
@@ -278,7 +278,7 @@ This document describes the details of the interface spec between BPDM and Porta
 ### Architecture Overview
 
 <p align="center">
-<img width="780" alt="image" src="/docs/static/bpdm-partner-network.png">
+<img width="780" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/bpdm-partner-network.png">
 </p>
 
 <br>

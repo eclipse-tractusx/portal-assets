@@ -45,7 +45,7 @@ values ('68d28f88-85fc-43a9-835a-fce0d5a9e665', 300, 1, '2023-02-21 08:15:20.479
 
 The `identity_providers` table has been adjusted to provide the possibility to safe the owner of the idp.
 
-![IdentityProvidersUpdate](/docs/static/IdentityProvidersUpdate.png)
+![IdentityProvidersUpdate](https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/IdentityProvidersUpdate.png)
 
 - added "Identity_Provider_Types" table which is connected to portal.identity_providers table
 - added inside the new table "Identity_Provider_Types" an id as well as a label. Labels are defined below:
@@ -89,7 +89,7 @@ Logic:
 
 The `company_applications` table has been expanded. New columns `company_application_type`, `onboarding_service_provider_id` have been added to have the possibility to track which onboarding service provider started an application for a specific company.
 
-![CompanyApplicationTypes](/docs/static/CompanyApplicationTypes.png)
+![CompanyApplicationTypes](https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/CompanyApplicationTypes.png)
 
 "onboarding_service_provider_id" => nullable
 "external" => enum; 1 = "INTERNAL", 2 = "EXTERNAL"
@@ -384,11 +384,11 @@ New verified_credential_external_types, verified_credential_external_type_use_ca
 
 Company SSI Database Structure
 
-![company-ssi-database](/docs/static/company-ssi-database.png)
+![company-ssi-database](https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/company-ssi-database.png)
 
 Use Case Database Structure
 
-![use-case-database](/docs/static/use-case-database.png)
+![use-case-database](https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/use-case-database.png)
 
 - NEW: table "language_long_names"
 - ENHANCED: table portal.languages "long_name_de" and "long_name_en" removed
@@ -525,7 +525,7 @@ Attributes
 - service_type_id (connected to portal.service_types and replacing table service_assigned_service_types)
 - technical_user_needed (true/false flag)
 
-![ServiceDetails](/docs/static/ServiceDetails.png)
+![ServiceDetails](https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/ServiceDetails.png)
 
 Impact on existing data:
 Migration script existing, based on the service type which is fetched for all existing data from portal table service_assigned_service_types, the technical_user_needed attribute is set to "true" for "DATASPACE_SERVICE" services and "false" for "CONSULTANCE_SERVICE".

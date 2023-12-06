@@ -31,7 +31,7 @@ Access the "App Overview" page via the top navigation "App Management"
 <br>
 <br>
 
-<img width="222" alt="image" src="/docs/static/register-app.png">
+<img width="222" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/register-app.png">
 
 <br>
 <br>
@@ -43,7 +43,7 @@ and click on
 <br>
 <br>
 
-<img width="187" alt="image" src="/docs/static/register-app-button.png">
+<img width="187" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/register-app-button.png">
 
 <br>
 <br>
