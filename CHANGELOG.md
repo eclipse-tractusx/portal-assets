@@ -2,103 +2,72 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
-## 1.7.0-RC4
+## 1.7.0
 
 ### Change
 
+- Portal Version Upgrade
+  - updated documentation for fixes, changes and news
+  - added information about PostgresSQL upgrade and recommended upgrade approach
+  - added table of content
+- Technical Documentation
+  - updated documentation for application monitoring options
+  - updated documentation about application auditing
+- Technical User documentation
+  - enhanced developer documentation of technical user deletion function
+  - added technical user credential reset documentation/flow
+  - dev documentation of new added technical user filters
+- Credential Management
+  - updated end user documentation of allowed file types and size for VC request flow
+  - added new endpoint in developer documentation regarding requestable credentials
+  - added end user FAQ
+- Technical User Role Definition
+  - removed 'Connector User' and 'App Tech User'
+  - updated 'Service Management' to 'Offer Management'
+  - added 'Semantic Model Management', 'Dataspace Discovery', 'CX Membership Info'
+  - updated permission assignment (R&R matrix documentation & portal upgrade script provided for portal db)
+- Legal information for distributions [TRG 7.05](https://eclipse-tractusx.github.io/docs/release/trg-7/trg-7-05/)
+  - added legal info at build
+- updated static template guidelines
+- enhanced/updated content for app provider introduction page
+- added onboarding service provider introduction page
+- added list of standard technical user needed to run the portal application integration with core applications
+- updated identity provider connection documentation (developer & end user) for new flow
+- enhanced subscription management board (service provider) documentation (developer & end user)
+- updated app change process (roles, tenant url, etc.) for developers and end users
+- interface contract documentation for 'Clearinghouse' updated with new architecture images and additional details of relevant authentication users and used endpoints
+- traceability use case page images and text sections updated for release 23.12
+- useCase content file updated
+- images linked for traceability useCase exchanged
 - added documentation for service account sync
-- added table of content to version upgrade
 - added documentation for app change documents
 - added license notice and image licenses
 - added notice to md files in docs and developers directory
 - added check for license info headers, footers and files in pr-template
-- added data-flow diagram
+- added security assessment documentation and removed data-flow diagram (integrated in security assessment)
 - moved iam specific documentation to portal-iam repository
 - updated documentation for bulk user creation
 - updated bpdm interface contract
+- updated offer authentication flow
 - fixed typos
-
-### Technical Support
-
-- Trivy scan: changed to no failure on high findings, as it should only fail if there is an error/misconfiguration
-
-## 1.7.0-RC3
-
-### Change
-
-- useCase content file updated
-- images linked for traceability useCase exchanged
-- portal database upgrade documentation updated
-
-### Feature
-
-n/a
-
-### Bugfix
-
-n/a
-
-## 1.7.0-RC2
-
-### Change
-
-- identity provider connection documentation (developer & end user); new flow released
-- subscription management board (service provider) documentation enhanced (developer & end user)
-- updated technical user role definition
-  - removal of 'Connector User', 'App Tech User'
-  - updated 'Service Management' to 'Offer Management'
-  - added 'Semantic Model Management', 'Dataspace Discovery', 'CX Membership Info'
-  - permission assignment updated (R&R Matrix documentation & portal upgrade script provided for portal db and
-- Interface contract documentation for 'Clearinghouse' updated with new architecture images and additional details of relevant authentication users and used endpoints
-- traceability use case page images and text sections updated for release 23.12
-
-### Feature
-
-n/a
-
-### Technical Support
-
-- Portal db - technical user upgrade script provided which need to get executed for upgrade from 1.6.0 to 1.7.0 RC
-- Keycloak db - technical user upgrade script provided which need to get executed for upgrade from 1.6.0 to 1.7.0 RC
-- Added linter rules and prettify gitHub actions for asset repo and fixed findings
-
-### Bugfix
-
-- md file linkage
-
-## 1.7.0-RC1
-
-### Change
-
-- Updates static template guidelines
-- Enhanced/updated content for app provider introduction page
-- Added onboarding service provider introduction page
-- Technical Documentation: updated documentation for application monitoring options
-- Technical Documentation: updated documentation about application auditing
-- Technical User documentation
-  - enhanced developer docu of technical user deletion function
-  - added technical user credential reset documentation/flow
-  - dev documentation of new added technical user filters
-- Added list of standard technical user needed to run the portal application integration with core applications
-- Updated app change process (roles, tenant url, etc.) for developers and end users
-- Credential Management
-  - updated end user docu of allowed file types and size for VC request flow
-  - added new endpoint in developer documentation regarding requestable credentials
-  - added end user FAQ
 
 ### Feature
 
 - Service Change Process
-  - released docu of 'Service Deactivation'
-
-### Technical Support
-
-- Dependencies upgraded
-- Moved couple of images from gitHub md files to docs/static image folder/directory
+  - released documentation of 'Service Deactivation'
 
 ### Bugfix
 
-- Updated background color used in static page last section
+- updated background color used in static page last section
+- fixed links in md files
+
+### Technical Support
+
+- upgraded dependencies
+- moved some images referenced in md file from GitHub to docs/static directory
+- added linter rules and prettify gitHub actions for asset repo and fixed findings
+- Trivy scan: changed to no failure on high findings, as it should only fail if there is an error/misconfiguration
+- added pull request linting
 
 ## 1.6.1
 

@@ -1,11 +1,13 @@
 - [Summary](#summary)
   - [v1.7.0](#v170)
+    - [PostgreSQL - Upgrade](#postgresql---upgrade)
     - [Company Service Account - FIX](#company-service-account---fix)
     - [Enable OSP Provider IdPs - Update](#enable-osp-provider-idps---update)
     - [Enable Application Types - NEW](#enable-application-types---new)
     - [Enable Onboarding Service Provider - NEW](#enable-onboarding-service-provider---new)
     - [Technical Role - UPDATE](#technical-role---update)
     - [Database Constraints - FIX](#database-constraints---fix)
+    - [Technical User Profile - CHANGE](#technical-user-profile---change)
   - [v1.6.0](#v160)
     - [Company Credential Details - NEW](#company-credential-details---new)
     - [Connectors - CHANGED](#connectors---changed)
@@ -28,6 +30,38 @@ Each section includes the respective change details, impact on existing data and
 
 ### v1.7.0
 
+#### PostgreSQL - Upgrade
+
+Please be aware that the PostgreSQL version of the subchart by Bitnami of the [portal helm chart](https://github.com/eclipse-tractusx/portal-cd) is upgraded from 14.5.0 to 15.4.x (dependency updated from version 11.9.13 to 12.12.x).
+
+In case you are using an external PostgreSQL instance and would like to upgrade to 15.x, please follow the [official instructions](https://www.postgresql.org/docs/15/upgrading.html).
+
+In case you would like to upgrade the PostgreSQL subchart from Bitnami, we recommend a blue-green deployment approach. In the following, you find a rough outline of the necessary steps:
+
+1. Scale down the current Portal services and suspend jobs (blue deployment)
+2. Backup the current data
+3. Deploy the new Portal instance (green deployment e.g: `-green`, `-portal170`, ...) in another namespace than the blue instance
+4. Restore the data of the blue instance to the green instance
+5. Start the new Portal services
+6. Make sure that the database migrations jobs which are defined as post-upgrade hooks are completed successfully
+7. Once the new/green instance is validated, switch the user traffic to it
+
+For restoring the data of the blue instance to the green instance (step 4), execute the following statement using [pg-dumpall](https://www.postgresql.org/docs/current/app-pg-dumpall.html):
+
+On the cluster:
+
+```shell
+ kubectl exec -it green-postgresql-primary-0 -n green-namespace -- /opt/bitnami/scripts/postgresql/entrypoint.sh /bin/bash -c 'export PGPASSWORD=""; echo "local all postgres trust" > /opt/bitnami/postgresql/conf/pg_hba.conf; pg_ctl reload; time pg_dumpall -c -h 10-123-45-67.blue-namespace.pod.cluster.local -U postgres | psql -U postgres'
+```
+
+Or on the primary pod of the new/green PostgreSQL instance:
+
+```shell
+/opt/bitnami/scripts/postgresql/entrypoint.sh /bin/bash -c 'export PGPASSWORD=""; echo "local all postgres trust" > /opt/bitnami/postgresql/conf/pg_hba.conf; pg_ctl reload; time pg_dumpall -c -h 10-123-45-67.blue-namespace.pod.cluster.local -U postgres | psql -U postgres'
+```
+
+Where '10-123-45-67' is the cluster IP of the old/blue PostgreSQL instance.
+
 #### Company Service Account - FIX
 
 To fix the empty user_entity_id for company_service_accounts the following process can be created. It will than run the process which will request the user from keycloak and set the user_entity_id for the corresponding company_service_account.
@@ -44,7 +78,7 @@ values ('68d28f88-85fc-43a9-835a-fce0d5a9e665', 300, 1, '2023-02-21 08:15:20.479
 
 The `identity_providers` table has been adjusted to provide the possibility to safe the owner of the idp.
 
-![IdentityProvidersUpdate](/docs/static/IdentityProvidersUpdate.png)
+![IdentityProvidersUpdate](https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/IdentityProvidersUpdate.png)
 
 - added "Identity_Provider_Types" table which is connected to portal.identity_providers table
 - added inside the new table "Identity_Provider_Types" an id as well as a label. Labels are defined below:
@@ -88,7 +122,7 @@ Logic:
 
 The `company_applications` table has been expanded. New columns `company_application_type`, `onboarding_service_provider_id` have been added to have the possibility to track which onboarding service provider started an application for a specific company.
 
-![CompanyApplicationTypes](/docs/static/CompanyApplicationTypes.png)
+![CompanyApplicationTypes](https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/CompanyApplicationTypes.png)
 
 "onboarding_service_provider_id" => nullable
 "external" => enum; 1 = "INTERNAL", 2 = "EXTERNAL"
@@ -106,7 +140,7 @@ NEW portal.onboarding_service_provider_details to safe information of the onboar
 
 #### Technical Role - UPDATE
 
-To align the portal database with the Keycloak database the following SQL must be executed against the portal database. The script will replace the 'Connector User' role with the roles 'Semantic Model Management' and 'Dataspace Discovery'. As well as replace the 'App Tech User' role with 'Semantic Model Management', 'Dataspace Discovery' and 'CX Membership Info'. This results in all identity assigned roles being replaced, all technical user profile assigned roles being updated and the old roles being removed from the database.
+To align the portal database with the Keycloak database the following SQL must be executed against the portal database. The script will replace the 'Connector User' role with the roles 'Semantic Model Management', 'Identity Wallet Management' and 'Dataspace Discovery'. As well as replace the 'App Tech User' role with 'Semantic Model Management', 'Dataspace Discovery' and 'CX Membership Info'. This results in all identity assigned roles being replaced, all technical user profile assigned roles being updated and the old roles being removed from the database.
 
 ```sql
 WITH connector_users AS (
@@ -122,7 +156,7 @@ connector_roles_to_insert AS (
     CROSS JOIN (
         SELECT id
         FROM portal.user_roles
-        WHERE user_role IN ('Semantic Model Management', 'Dataspace Discovery')
+        WHERE user_role IN ('Semantic Model Management', 'Identity Wallet Management', 'Dataspace Discovery')
     ) AS ur
 )
 INSERT INTO portal.identity_assigned_roles (identity_id, user_role_id)
@@ -168,7 +202,7 @@ connector_profiles_to_insert AS (
     CROSS JOIN (
         SELECT id
         FROM portal.user_roles
-        WHERE user_role IN ('Semantic Model Management', 'Dataspace Discovery')
+        WHERE user_role IN ('Semantic Model Management', 'Identity Wallet Management', 'Dataspace Discovery')
     ) ur
 )
 INSERT INTO portal.technical_user_profile_assigned_user_roles (technical_user_profile_id, user_role_id)
@@ -329,6 +363,36 @@ FOR EACH ROW
 EXECUTE PROCEDURE portal.tr_is_external_type_use_case();
 ```
 
+#### Technical User Profile - CHANGE
+
+**Hint:** This is only applicable if you're running on a release candidate 1.7.0-alpha - 1.7.0-RC5
+
+To make sure that all apps have at least one technical user profile assigned, please execute the following script against the portal db:
+
+```sql
+
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+WITH inserted_profiles AS (
+    INSERT INTO portal.technical_user_profiles (id, offer_id)
+    SELECT uuid_generate_v4(), o.id
+    FROM portal.offers AS o
+    LEFT JOIN portal.technical_user_profiles AS tup ON o.id = tup.offer_id
+    WHERE o.offer_type_id != 2 AND tup.offer_id IS NULL
+    RETURNING id
+)
+
+INSERT INTO portal.technical_user_profile_assigned_user_roles (technical_user_profile_id, user_role_id)
+SELECT ip.id AS technical_user_profile_id, ur.default_user_role_id AS user_role_id
+FROM inserted_profiles AS ip
+CROSS JOIN (
+    SELECT roles.id
+	FROM portal.user_roles as roles
+	where roles.user_role in ('Identity Wallet Management', 'Dataspace Discovery', 'Semantic Model Management')
+) AS ur(default_user_role_id);
+
+```
+
 ### v1.6.0
 
 #### Company Credential Details - NEW
@@ -353,11 +417,11 @@ New verified_credential_external_types, verified_credential_external_type_use_ca
 
 Company SSI Database Structure
 
-![company-ssi-database](/docs/static/company-ssi-database.png)
+![company-ssi-database](https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/company-ssi-database.png)
 
 Use Case Database Structure
 
-![use-case-database](/docs/static/use-case-database.png)
+![use-case-database](https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/use-case-database.png)
 
 - NEW: table "language_long_names"
 - ENHANCED: table portal.languages "long_name_de" and "long_name_en" removed
@@ -494,7 +558,7 @@ Attributes
 - service_type_id (connected to portal.service_types and replacing table service_assigned_service_types)
 - technical_user_needed (true/false flag)
 
-![ServiceDetails](/docs/static/ServiceDetails.png)
+![ServiceDetails](https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/ServiceDetails.png)
 
 Impact on existing data:
 Migration script existing, based on the service type which is fetched for all existing data from portal table service_assigned_service_types, the technical_user_needed attribute is set to "true" for "DATASPACE_SERVICE" services and "false" for "CONSULTANCE_SERVICE".
