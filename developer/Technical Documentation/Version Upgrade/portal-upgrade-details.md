@@ -1,5 +1,6 @@
 - [Summary](#summary)
   - [v1.7.0](#v170)
+    - [PostgreSQL - Upgrade](#postgresql---upgrade)
     - [Company Service Account - FIX](#company-service-account---fix)
     - [Enable OSP Provider IdPs - Update](#enable-osp-provider-idps---update)
     - [Enable Application Types - NEW](#enable-application-types---new)
@@ -28,6 +29,38 @@ Each section includes the respective change details, impact on existing data and
 > **_INFO:_** inside the detailed descriptions below, the definition 'migration script' refers to the term 'migrations' as it is defined by the ef-core framework: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations
 
 ### v1.7.0
+
+#### PostgreSQL - Upgrade
+
+Please be aware that the PostgreSQL version of the subchart by Bitnami of the [portal helm chart](https://github.com/eclipse-tractusx/portal-cd) is upgraded from 14.5.0 to 15.4.x (dependency updated from version 11.9.13 to 12.12.x).
+
+In case you are using an external PostgreSQL instance and would like to upgrade to 15.x, please follow the [official instructions](https://www.postgresql.org/docs/15/upgrading.html).
+
+In case you would like to upgrade the PostgreSQL subchart from Bitnami, we recommend a blue-green deployment approach. In the following, you find a rough outline of the necessary steps:
+
+1. Scale down the current Portal services and suspend jobs (blue deployment)
+2. Backup the current data
+3. Deploy the new Portal instance (green deployment e.g: `-green`, `-portal170`, ...) in another namespace than the blue instance
+4. Restore the data of the blue instance to the green instance
+5. Start the new Portal services
+6. Make sure that the database migrations jobs which are defined as post-upgrade hooks are completed successfully
+7. Once the new/green instance is validated, switch the user traffic to it
+
+For restoring the data of the blue instance to the green instance (step 4), execute the following statement using [pg-dumpall](https://www.postgresql.org/docs/current/app-pg-dumpall.html):
+
+On the cluster:
+
+```shell
+ kubectl exec -it green-postgresql-primary-0 -n green-namespace -- /opt/bitnami/scripts/postgresql/entrypoint.sh /bin/bash -c 'export PGPASSWORD=""; echo "local all postgres trust" > /opt/bitnami/postgresql/conf/pg_hba.conf; pg_ctl reload; time pg_dumpall -c -h 10-123-45-67.blue-namespace.pod.cluster.local -U postgres | psql -U postgres'
+```
+
+Or on the primary pod of the new/green PostgreSQL instance:
+
+```shell
+/opt/bitnami/scripts/postgresql/entrypoint.sh /bin/bash -c 'export PGPASSWORD=""; echo "local all postgres trust" > /opt/bitnami/postgresql/conf/pg_hba.conf; pg_ctl reload; time pg_dumpall -c -h 10-123-45-67.blue-namespace.pod.cluster.local -U postgres | psql -U postgres'
+```
+
+Where '10-123-45-67' is the cluster IP of the old/blue PostgreSQL instance.
 
 #### Company Service Account - FIX
 
