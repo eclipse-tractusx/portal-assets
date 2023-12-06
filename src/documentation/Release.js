@@ -20,6 +20,8 @@
 import fs from 'fs'
 import dirTree from 'directory-tree'
 
+const exclude = /\/static(\/|$)/
+
 class MDHelper {
   readContent(path) {
     if (!fs.lstatSync(path).isFile()) return ''
@@ -39,15 +41,16 @@ class MDHelper {
   extractChapterTree(tree) {
     if (fs.lstatSync(tree.path).isFile())
       tree.chapter = this.parseChapters(tree.path)
-    else if (tree.children)
+    else if (tree.children) {
       tree.children.forEach((child) => this.extractChapterTree(child))
+    }
     return tree
   }
 }
 
 class TreeHelper {
   static readDirTree(root) {
-    const tree = dirTree(root)
+    const tree = dirTree(root, { exclude })
     //const tree = Transformer.tree2map({}, dirTree(root), undefined, 0, 0)
     return tree
   }
