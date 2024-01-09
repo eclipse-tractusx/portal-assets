@@ -209,47 +209,7 @@ All threats identified are mitigated.
 - Container Scan conducted - Trivy
 - Infrastructure as Code - KICS
 
-### Penetration Testing
-
-The lasted Penetration Test by an external security testing company was performed on version 1.6.0-RC1 and took place during the period of July-August 2023.
-
-The following overview shows the open findings at the time of the release of version 1.7.0:
-
-```mermaid
-gantt
-    title Findings Portal Backend
-    dateFormat X
-    axisFormat %s
-
-    section Critical
-    0   : 0, 0
-    section High
-    0   : 0, 0
-    section Medium
-    2   : 0, 2
-    section Low
-    5   : 0, 5
-
-```
-
-```mermaid
-gantt
-    title Findings Portal Frontend
-    dateFormat X
-    axisFormat %s
-
-    section Critical
-    0   : 0, 0
-    section High
-    0   : 0, 0
-    section Medium
-    2   : 0, 2
-    section Low
-    5   : 0, 5
-
-```
-
-As outlined in the [Security Policy](../../../SECURITY.md), the findings will be documented as security advisories.
+Also see [Penetrations Tests](../Tests/Tests.md#penetration-tests).
 
 ## NOTICE
 
