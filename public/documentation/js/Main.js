@@ -545,9 +545,6 @@ class Content extends Viewable {
     const isLocalLink = url.origin === location.origin
     const isRawLink = url.href.startsWith(Settings.DOCBASE)
     const isAppLink = isLocalLink && url.pathname.startsWith('/documentation/')
-    const isDevLink =
-      (isLocalLink && url.pathname.startsWith('/docs/developer/')) ||
-      (isRawLink && url.pathname.includes('/docs/developer/'))
     const isDocsLink =
       (isLocalLink && url.pathname.startsWith('/docs/')) ||
       (isRawLink && url.pathname.includes('/docs/'))
@@ -556,10 +553,9 @@ class Content extends Viewable {
       // ignore
     } else if (!(isLocalLink || isRawLink) || isAppLink) {
       // ignore
-    } else if (isDocsLink || isDevLink) {
+    } else if (isDocsLink) {
       const path = decodeURI(link.href)
         .replace(/^.*docs\//, 'docs/')
-        .replace(/^.*developer\//, 'developer/')
         .replace(/\/$/, '')
       link.setAttribute('href', `.?path=${encodeURI(path)}`)
     }
