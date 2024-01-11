@@ -4,10 +4,10 @@
 
 Business Partner Data Management as a product as well as the portal have three different interfaces:
 
-- [Search Existing Business Partners](/developer/Technical%20Documentation/Interface%20Contracts/BPDM.md#search-existing-business-partners)
-- [Push New Business Partners](/developer/Technical%20Documentation/Interface%20Contracts/BPDM.md#push-new-business-partners)
-- [Pull New Business Partner BPNL](/developer/Technical%20Documentation/Interface%20Contracts/BPDM.md#pull-new-business-partners)
-- [Partner Network Connect](/developer/Technical%20Documentation/Interface%20Contracts/BPDM.md#partner-network-connect)
+- [Search Existing Business Partners](/docs/developer/Technical%20Documentation/Interface%20Contracts/BPDM.md#search-existing-business-partners)
+- [Push New Business Partners](/docs/developer/Technical%20Documentation/Interface%20Contracts/BPDM.md#push-new-business-partners)
+- [Pull New Business Partner BPNL](/docs/developer/Technical%20Documentation/Interface%20Contracts/BPDM.md#pull-new-business-partners)
+- [Partner Network Connect](/docs/developer/Technical%20Documentation/Interface%20Contracts/BPDM.md#partner-network-connect)
 
 <br>
 <br>

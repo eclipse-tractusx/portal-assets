@@ -19,7 +19,7 @@ Mainly 4 tables are used for the documents itself
 <br>
 <br>
 
-Details to the documents service implementation can get found [here](/developer/Technical%20Documentation/Services/Document_Management.md#summary)
+Details to the documents service implementation can get found [here](/docs/developer/Technical%20Documentation/Services/Document_Management.md#summary)
 
 ## NOTICE
 

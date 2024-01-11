@@ -2,8 +2,8 @@
 
 <br>
 
-- [Legal Participant Self Description Creation](/developer/Technical%20Documentation/Interface%20Contracts/Clearinghouse.md#1-notarization-check)
-- [Connector/Service Self Description Creation](/developer/Technical%20Documentation/Interface%20Contracts/Clearinghouse.md#2-compliance-check)
+- [Legal Participant Self Description Creation](/docs/developer/Technical%20Documentation/Interface%20Contracts/Clearinghouse.md#1-notarization-check)
+- [Connector/Service Self Description Creation](/docs/developer/Technical%20Documentation/Interface%20Contracts/Clearinghouse.md#2-compliance-check)
 
 <br>
 <br>

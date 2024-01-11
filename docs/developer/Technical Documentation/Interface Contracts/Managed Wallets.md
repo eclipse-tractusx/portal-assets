@@ -65,7 +65,7 @@ Relevant endpoints from MIW side:
 
 <br>
 
-Additional Details: [Click here](/developer/02.%20Technical%20Integration/04.%20Credentials/00.%20Wallet%20Creation.md)
+Additional Details: [Click here](/docs/developer/02.%20Technical%20Integration/04.%20Credentials/00.%20Wallet%20Creation.md)
 
 <br>
 <br>
@@ -76,7 +76,7 @@ Additional Details: [Click here](/developer/02.%20Technical%20Integration/04.%20
 
 <br>
 
-Additional Details: [Click here](/developer/02.%20Technical%20Integration/04.%20Credentials/01.%20Get%20UseCase%20Credential.md)
+Additional Details: [Click here](/docs/developer/02.%20Technical%20Integration/04.%20Credentials/01.%20Get%20UseCase%20Credential.md)
 
 <br>
 <br>
@@ -87,7 +87,7 @@ Additional Details: [Click here](/developer/02.%20Technical%20Integration/04.%20
 
 <br>
 
-Additional Details: [Click here](/developer/02.%20Technical%20Integration/04.%20Credentials/02.%20Other%20Certificates.md)
+Additional Details: [Click here](/docs/developer/02.%20Technical%20Integration/04.%20Credentials/02.%20Other%20Certificates.md)
 
 <br>
 <br>

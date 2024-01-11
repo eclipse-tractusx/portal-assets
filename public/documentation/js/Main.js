@@ -546,8 +546,8 @@ class Content extends Viewable {
     const isRawLink = url.href.startsWith(Settings.DOCBASE)
     const isAppLink = isLocalLink && url.pathname.startsWith('/documentation/')
     const isDevLink =
-      (isLocalLink && url.pathname.startsWith('/developer/')) ||
-      (isRawLink && url.pathname.includes('/developer/'))
+      (isLocalLink && url.pathname.startsWith('/docs/developer/')) ||
+      (isRawLink && url.pathname.includes('/docs/developer/'))
     const isDocsLink =
       (isLocalLink && url.pathname.startsWith('/docs/')) ||
       (isRawLink && url.pathname.includes('/docs/'))
