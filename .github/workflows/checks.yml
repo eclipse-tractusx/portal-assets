@@ -35,7 +35,7 @@ jobs:
       - name: Install Dependencies
         run: yarn
 
-      - name: linter checks
+      - name: Execute linter checks
         run: yarn lint
 
       - name: Build Application
