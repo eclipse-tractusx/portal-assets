@@ -20,7 +20,7 @@
 import fs from 'fs'
 import dirTree from 'directory-tree'
 
-const exclude = /\/static(\/|$)/
+const exclude = /\/static(\/|$)|\/developer(\/|$)/
 
 class MDHelper {
   readContent(path) {
@@ -95,8 +95,7 @@ const createDocsMetadata = (version) => {
   version ||= 'main'
 
   const DOCS = {
-    docs: 'Catena-X Help Desk',
-    developer: 'Catena-X Developer Documentation',
+    docs: 'Catena-X Help Desk'
   }
 
   Object.entries(DOCS).forEach((item) => {
