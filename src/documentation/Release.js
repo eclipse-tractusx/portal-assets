@@ -20,8 +20,6 @@
 import fs from 'fs'
 import dirTree from 'directory-tree'
 
-const exclude = /\/static(\/|$)|\/developer(\/|$)/
-
 class MDHelper {
   readContent(path) {
     if (!fs.lstatSync(path).isFile()) return ''
@@ -50,57 +48,37 @@ class MDHelper {
 
 class TreeHelper {
   static readDirTree(root) {
-    const tree = dirTree(root, { exclude })
+    const tree = dirTree(root)
     //const tree = Transformer.tree2map({}, dirTree(root), undefined, 0, 0)
     return tree
   }
 }
 
 const createReleaseSelection = (version) => {
-  const Settings = {
-    BASE: 'https://api.github.com',
-    OWNER: 'eclipse-tractusx',
-    REPO: 'portal-assets',
-  }
-
-  const url = `${Settings.BASE}/repos/${Settings.OWNER}/${Settings.REPO}/git/refs/tags`
-
   const writeReleases = (releases) =>
     fs.writeFileSync(
       './public/documentation/data/Releases.json',
       JSON.stringify(releases, null, 2)
     )
 
-  const saveTags = (data) =>
-    writeReleases(
-      data
-        .map((item) => item.ref)
-        .concat('main')
-        .reverse()
-    )
-
-  //(async () => saveLocal(await getJSON(url)))()
-
-  if (version) {
-    writeReleases([version === 'main' ? version : `ref/tags/${version}`])
-  } else {
-    fetch(url)
-      .then((response) => response.json())
-      .then(saveTags)
-      .catch(() => writeReleases(['main']))
-  }
+  writeReleases([
+    version !== undefined && version !== 'main'
+      ? `ref/tags/${version}`
+      : 'main',
+  ])
 }
 
 const createDocsMetadata = (version) => {
   version ||= 'main'
 
   const DOCS = {
-    docs: 'Catena-X Help Desk'
+    user: 'Catena-X Help Desk',
+    developer: 'Catena-X Developer Documentation',
   }
 
   Object.entries(DOCS).forEach((item) => {
     const tree = new MDHelper().extractChapterTree(
-      TreeHelper.readDirTree(item[0])
+      TreeHelper.readDirTree(`docs/${item[0]}`)
     )
     tree.name = item[1]
     const path = `./public/documentation/data/${version}`
