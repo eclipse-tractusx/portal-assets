@@ -32,10 +32,7 @@
             {
               "path": "docs/user/01. Onboarding/01. Registration Invite/index.md",
               "name": "index.md",
-              "chapter": [
-                "## Registration Invite",
-                "## NOTICE"
-              ]
+              "chapter": ["## Registration Invite", "## NOTICE"]
             }
           ]
         },
@@ -56,10 +53,7 @@
             {
               "path": "docs/user/01. Onboarding/02. Registration/02. Add Company Data.md",
               "name": "02. Add Company Data.md",
-              "chapter": [
-                "## Add Company Data",
-                "## NOTICE"
-              ]
+              "chapter": ["## Add Company Data", "## NOTICE"]
             },
             {
               "path": "docs/user/01. Onboarding/02. Registration/03. Add Additional User(s).md",
@@ -81,18 +75,12 @@
             {
               "path": "docs/user/01. Onboarding/02. Registration/05. Document Upload.md",
               "name": "05. Document Upload.md",
-              "chapter": [
-                "#### Document upload",
-                "## NOTICE"
-              ]
+              "chapter": ["#### Document upload", "## NOTICE"]
             },
             {
               "path": "docs/user/01. Onboarding/02. Registration/06. Verify Registration Data.md",
               "name": "06. Verify Registration Data.md",
-              "chapter": [
-                "## Submit company data",
-                "## NOTICE"
-              ]
+              "chapter": ["## Submit company data", "## NOTICE"]
             },
             {
               "path": "docs/user/01. Onboarding/02. Registration/07. FAQ.md",
@@ -110,10 +98,7 @@
             {
               "path": "docs/user/01. Onboarding/02. Registration/index.md",
               "name": "index.md",
-              "chapter": [
-                "## Registration",
-                "## NOTICE"
-              ]
+              "chapter": ["## Registration", "## NOTICE"]
             }
           ]
         },
@@ -157,10 +142,7 @@
             {
               "path": "docs/user/01. Onboarding/03. Registration Approval/04. Decline Application.md",
               "name": "04. Decline Application.md",
-              "chapter": [
-                "## Decline Company Application",
-                "## NOTICE"
-              ]
+              "chapter": ["## Decline Company Application", "## NOTICE"]
             },
             {
               "path": "docs/user/01. Onboarding/03. Registration Approval/05. FAQ.md",
@@ -175,20 +157,14 @@
             {
               "path": "docs/user/01. Onboarding/03. Registration Approval/index.md",
               "name": "index.md",
-              "chapter": [
-                "## Summary",
-                "## NOTICE"
-              ]
+              "chapter": ["## Summary", "## NOTICE"]
             }
           ]
         },
         {
           "path": "docs/user/01. Onboarding/index.md",
           "name": "index.md",
-          "chapter": [
-            "## Onboarding",
-            "## NOTICE"
-          ]
+          "chapter": ["## Onboarding", "## NOTICE"]
         }
       ]
     },
@@ -203,10 +179,7 @@
             {
               "path": "docs/user/02. Technical Integration/01. Connector Registration/00. Summary.md",
               "name": "00. Summary.md",
-              "chapter": [
-                "## Summary",
-                "## NOTICE"
-              ]
+              "chapter": ["## Summary", "## NOTICE"]
             },
             {
               "path": "docs/user/02. Technical Integration/01. Connector Registration/01. Connector Overview.md",
@@ -232,18 +205,12 @@
             {
               "path": "docs/user/02. Technical Integration/01. Connector Registration/04. SelfDescription Retrigger.md",
               "name": "04. SelfDescription Retrigger.md",
-              "chapter": [
-                "#### Self Description Retrigger",
-                "## NOTICE"
-              ]
+              "chapter": ["#### Self Description Retrigger", "## NOTICE"]
             },
             {
               "path": "docs/user/02. Technical Integration/01. Connector Registration/05. Delete Connector.md",
               "name": "05. Delete Connector.md",
-              "chapter": [
-                "## 5 Delete Connector",
-                "## NOTICE"
-              ]
+              "chapter": ["## 5 Delete Connector", "## NOTICE"]
             },
             {
               "path": "docs/user/02. Technical Integration/01. Connector Registration/06. OpenAPI.md",
@@ -301,10 +268,7 @@
             {
               "path": "docs/user/02. Technical Integration/01. Connector Registration/index.md",
               "name": "index.md",
-              "chapter": [
-                "## Connector Management",
-                "## NOTICE"
-              ]
+              "chapter": ["## Connector Management", "## NOTICE"]
             }
           ]
         },
@@ -315,18 +279,12 @@
             {
               "path": "docs/user/02. Technical Integration/02. Identity Provider Management/01. Summary.md",
               "name": "01. Summary.md",
-              "chapter": [
-                "# Summary",
-                "## NOTICE"
-              ]
+              "chapter": ["# Summary", "## NOTICE"]
             },
             {
               "path": "docs/user/02. Technical Integration/02. Identity Provider Management/02. Company IdPs.md",
               "name": "02. Company IdPs.md",
-              "chapter": [
-                "## Identity Provider Overview",
-                "## NOTICE"
-              ]
+              "chapter": ["## Identity Provider Overview", "## NOTICE"]
             },
             {
               "path": "docs/user/02. Technical Integration/02. Identity Provider Management/02. Configure Company IdP.md",
@@ -349,18 +307,12 @@
             {
               "path": "docs/user/02. Technical Integration/02. Identity Provider Management/04. Identity Provider Deletion.md",
               "name": "04. Identity Provider Deletion.md",
-              "chapter": [
-                "### Identity Provider Deletion",
-                "## NOTICE"
-              ]
+              "chapter": ["### Identity Provider Deletion", "## NOTICE"]
             },
             {
               "path": "docs/user/02. Technical Integration/02. Identity Provider Management/05. Disable Identity Provider.md",
               "name": "05. Disable Identity Provider.md",
-              "chapter": [
-                "### Identity Provider Disable",
-                "## NOTICE"
-              ]
+              "chapter": ["### Identity Provider Disable", "## NOTICE"]
             },
             {
               "path": "docs/user/02. Technical Integration/02. Identity Provider Management/06. FAQ.md",
@@ -377,10 +329,7 @@
             {
               "path": "docs/user/02. Technical Integration/02. Identity Provider Management/index.md",
               "name": "index.md",
-              "chapter": [
-                "## Identity Provider Management",
-                "## NOTICE"
-              ]
+              "chapter": ["## Identity Provider Management", "## NOTICE"]
             }
           ]
         },
@@ -403,10 +352,7 @@
             {
               "path": "docs/user/02. Technical Integration/03. CX Membership/index.md",
               "name": "index.md",
-              "chapter": [
-                "## CX Membership",
-                "## NOTICE"
-              ]
+              "chapter": ["## CX Membership", "## NOTICE"]
             }
           ]
         },
@@ -430,10 +376,7 @@
             {
               "path": "docs/user/02. Technical Integration/04. Dataspace Discovery/index.md",
               "name": "index.md",
-              "chapter": [
-                "## Dataspace Discovery",
-                "## NOTICE"
-              ]
+              "chapter": ["## Dataspace Discovery", "## NOTICE"]
             }
           ]
         },
@@ -444,28 +387,19 @@
             {
               "path": "docs/user/02. Technical Integration/05. Company Role/Change Company Role.md",
               "name": "Change Company Role.md",
-              "chapter": [
-                "## Company Role Change",
-                "## NOTICE"
-              ]
+              "chapter": ["## Company Role Change", "## NOTICE"]
             },
             {
               "path": "docs/user/02. Technical Integration/05. Company Role/index.md",
               "name": "index.md",
-              "chapter": [
-                "## Company Participation Role",
-                "## NOTICE"
-              ]
+              "chapter": ["## Company Participation Role", "## NOTICE"]
             }
           ]
         },
         {
           "path": "docs/user/02. Technical Integration/index.md",
           "name": "index.md",
-          "chapter": [
-            "# Technical Integration",
-            "## NOTICE"
-          ]
+          "chapter": ["# Technical Integration", "## NOTICE"]
         }
       ]
     },
@@ -480,18 +414,12 @@
             {
               "path": "docs/user/03. User Management/01. User Account/01. Summary.md",
               "name": "01. Summary.md",
-              "chapter": [
-                "# Summary",
-                "## NOTICE"
-              ]
+              "chapter": ["# Summary", "## NOTICE"]
             },
             {
               "path": "docs/user/03. User Management/01. User Account/02. User Account.md",
               "name": "02. User Account.md",
-              "chapter": [
-                "## View company user accounts",
-                "## NOTICE"
-              ]
+              "chapter": ["## View company user accounts", "## NOTICE"]
             },
             {
               "path": "docs/user/03. User Management/01. User Account/03. Create new user account (single).md",
@@ -530,10 +458,7 @@
             {
               "path": "docs/user/03. User Management/01. User Account/index.md",
               "name": "index.md",
-              "chapter": [
-                "# User Account",
-                "## NOTICE"
-              ]
+              "chapter": ["# User Account", "## NOTICE"]
             }
           ]
         },
@@ -573,19 +498,12 @@
             {
               "path": "docs/user/03. User Management/02. Modify User Account/04. Manage user assigned BPN.md",
               "name": "04. Manage user assigned BPN.md",
-              "chapter": [
-                "## Add BPN",
-                "# Delete BPN",
-                "## NOTICE"
-              ]
+              "chapter": ["## Add BPN", "# Delete BPN", "## NOTICE"]
             },
             {
               "path": "docs/user/03. User Management/02. Modify User Account/05. Suspend User.md",
               "name": "05. Suspend User.md",
-              "chapter": [
-                "# Suspend User",
-                "## NOTICE"
-              ]
+              "chapter": ["# Suspend User", "## NOTICE"]
             },
             {
               "path": "docs/user/03. User Management/02. Modify User Account/06. Delete User.md",
@@ -600,10 +518,7 @@
             {
               "path": "docs/user/03. User Management/02. Modify User Account/index.md",
               "name": "index.md",
-              "chapter": [
-                "# Summary",
-                "## NOTICE"
-              ]
+              "chapter": ["# Summary", "## NOTICE"]
             }
           ]
         },
@@ -614,10 +529,7 @@
             {
               "path": "docs/user/03. User Management/03. Technical User/01. Technical User Overview.md",
               "name": "01. Technical User Overview.md",
-              "chapter": [
-                "## Technical User Overview",
-                "## NOTICE"
-              ]
+              "chapter": ["## Technical User Overview", "## NOTICE"]
             },
             {
               "path": "docs/user/03. User Management/03. Technical User/02. Create Technical User.md",
@@ -633,10 +545,7 @@
             {
               "path": "docs/user/03. User Management/03. Technical User/03. Delete Technical User.md",
               "name": "03. Delete Technical User.md",
-              "chapter": [
-                "## Delete an user",
-                "## NOTICE"
-              ]
+              "chapter": ["## Delete an user", "## NOTICE"]
             },
             {
               "path": "docs/user/03. User Management/03. Technical User/04. FAQ.md",
@@ -674,51 +583,34 @@
             {
               "path": "docs/user/03. User Management/04. Assign App Roles/01. App Access Management Overview.md",
               "name": "01. App Access Management Overview.md",
-              "chapter": [
-                "## App Access Management Overview",
-                "## NOTICE"
-              ]
+              "chapter": ["## App Access Management Overview", "## NOTICE"]
             },
             {
               "path": "docs/user/03. User Management/04. Assign App Roles/02. Assign User App Role(s).md",
               "name": "02. Assign User App Role(s).md",
-              "chapter": [
-                "## Assign User App Role",
-                "## NOTICE"
-              ]
+              "chapter": ["## Assign User App Role", "## NOTICE"]
             },
             {
               "path": "docs/user/03. User Management/04. Assign App Roles/03. Update Users Assigned App Role(s).md",
               "name": "03. Update Users Assigned App Role(s).md",
-              "chapter": [
-                "## Update User Assigned App Role",
-                "## NOTICE"
-              ]
+              "chapter": ["## Update User Assigned App Role", "## NOTICE"]
             },
             {
               "path": "docs/user/03. User Management/04. Assign App Roles/04. FAQ.md",
               "name": "04. FAQ.md",
-              "chapter": [
-                "## NOTICE"
-              ]
+              "chapter": ["## NOTICE"]
             },
             {
               "path": "docs/user/03. User Management/04. Assign App Roles/index.md",
               "name": "index.md",
-              "chapter": [
-                "# Summary",
-                "## NOTICE"
-              ]
+              "chapter": ["# Summary", "## NOTICE"]
             }
           ]
         },
         {
           "path": "docs/user/03. User Management/index.md",
           "name": "index.md",
-          "chapter": [
-            "# User Management",
-            "## NOTICE"
-          ]
+          "chapter": ["# User Management", "## NOTICE"]
         }
       ]
     },
@@ -733,34 +625,22 @@
             {
               "path": "docs/user/04. App(s)/01. Marketplace/01. App Overview.md",
               "name": "01. App Overview.md",
-              "chapter": [
-                "## App Overview",
-                "## NOTICE"
-              ]
+              "chapter": ["## App Overview", "## NOTICE"]
             },
             {
               "path": "docs/user/04. App(s)/01. Marketplace/02. App Details.md",
               "name": "02. App Details.md",
-              "chapter": [
-                "## App Details",
-                "## NOTICE"
-              ]
+              "chapter": ["## App Details", "## NOTICE"]
             },
             {
               "path": "docs/user/04. App(s)/01. Marketplace/03. App Favorites.md",
               "name": "03. App Favorites.md",
-              "chapter": [
-                "## App Favorites",
-                "## NOTICE"
-              ]
+              "chapter": ["## App Favorites", "## NOTICE"]
             },
             {
               "path": "docs/user/04. App(s)/01. Marketplace/04. My Business Apps.md",
               "name": "04. My Business Apps.md",
-              "chapter": [
-                "## My Business Applications",
-                "## NOTICE"
-              ]
+              "chapter": ["## My Business Applications", "## NOTICE"]
             },
             {
               "path": "docs/user/04. App(s)/01. Marketplace/05. FAQ.md",
@@ -813,10 +693,7 @@
             {
               "path": "docs/user/04. App(s)/02. App Release Process/04.Technical Integration.md",
               "name": "04.Technical Integration.md",
-              "chapter": [
-                "### Step 4 - Technical Integration",
-                "## NOTICE"
-              ]
+              "chapter": ["### Step 4 - Technical Integration", "## NOTICE"]
             },
             {
               "path": "docs/user/04. App(s)/02. App Release Process/05.Verify & Submit.md",
@@ -875,35 +752,22 @@
             {
               "path": "docs/user/04. App(s)/03. App Release Approval/01. App Approval Board.md",
               "name": "01. App Approval Board.md",
-              "chapter": [
-                "## Summary",
-                "### Page Design",
-                "## NOTICE"
-              ]
+              "chapter": ["## Summary", "### Page Design", "## NOTICE"]
             },
             {
               "path": "docs/user/04. App(s)/03. App Release Approval/02. App Details.md",
               "name": "02. App Details.md",
-              "chapter": [
-                "## App details",
-                "## NOTICE"
-              ]
+              "chapter": ["## App details", "## NOTICE"]
             },
             {
               "path": "docs/user/04. App(s)/03. App Release Approval/03. Approve App Release.md",
               "name": "03. Approve App Release.md",
-              "chapter": [
-                "## Approve App Release",
-                "## NOTICE"
-              ]
+              "chapter": ["## Approve App Release", "## NOTICE"]
             },
             {
               "path": "docs/user/04. App(s)/03. App Release Approval/04. Decline App Release.md",
               "name": "04. Decline App Release.md",
-              "chapter": [
-                "## Decline App Release",
-                "## NOTICE"
-              ]
+              "chapter": ["## Decline App Release", "## NOTICE"]
             }
           ]
         },
@@ -914,11 +778,7 @@
             {
               "path": "docs/user/04. App(s)/04. App Provider Management Board(s)/01. App Board.md",
               "name": "01. App Board.md",
-              "chapter": [
-                "## App Board",
-                "### Details",
-                "## NOTICE"
-              ]
+              "chapter": ["## App Board", "### Details", "## NOTICE"]
             }
           ]
         },
@@ -929,18 +789,12 @@
             {
               "path": "docs/user/04. App(s)/05. App Subscription/01. Subscription Request (Customer).md",
               "name": "01. Subscription Request (Customer).md",
-              "chapter": [
-                "# Summary",
-                "## NOTICE"
-              ]
+              "chapter": ["# Summary", "## NOTICE"]
             },
             {
               "path": "docs/user/04. App(s)/05. App Subscription/02. Overview Company Subscription (Customer).md",
               "name": "02. Overview Company Subscription (Customer).md",
-              "chapter": [
-                "# Summary",
-                "## NOTICE"
-              ]
+              "chapter": ["# Summary", "## NOTICE"]
             },
             {
               "path": "docs/user/04. App(s)/05. App Subscription/03. Subscription Overview (App Provider).md",
@@ -955,18 +809,12 @@
             {
               "path": "docs/user/04. App(s)/05. App Subscription/04. Subscription Activation (App Provider).md",
               "name": "04. Subscription Activation (App Provider).md",
-              "chapter": [
-                "## Subscription Activation",
-                "## NOTICE"
-              ]
+              "chapter": ["## Subscription Activation", "## NOTICE"]
             },
             {
               "path": "docs/user/04. App(s)/05. App Subscription/05. App Unsubscribe.md",
               "name": "05. App Unsubscribe.md",
-              "chapter": [
-                "## Unsubscribe",
-                "## NOTICE"
-              ]
+              "chapter": ["## Unsubscribe", "## NOTICE"]
             },
             {
               "path": "docs/user/04. App(s)/05. App Subscription/05. FAQ.md",
@@ -989,43 +837,27 @@
             {
               "path": "docs/user/04. App(s)/06. App Change Process/01. Summary.md",
               "name": "01. Summary.md",
-              "chapter": [
-                "## Summary",
-                "## Function",
-                "## NOTICE"
-              ]
+              "chapter": ["## Summary", "## Function", "## NOTICE"]
             },
             {
               "path": "docs/user/04. App(s)/06. App Change Process/02. Change App Lead Image.md",
               "name": "02. Change App Lead Image.md",
-              "chapter": [
-                "## Summary",
-                "## NOTICE"
-              ]
+              "chapter": ["## Summary", "## NOTICE"]
             },
             {
               "path": "docs/user/04. App(s)/06. App Change Process/03. Change App Description.md",
               "name": "03. Change App Description.md",
-              "chapter": [
-                "## Summary",
-                "## NOTICE"
-              ]
+              "chapter": ["## Summary", "## NOTICE"]
             },
             {
               "path": "docs/user/04. App(s)/06. App Change Process/04. App Deactivation.md",
               "name": "04. App Deactivation.md",
-              "chapter": [
-                "## Summary",
-                "## NOTICE"
-              ]
+              "chapter": ["## Summary", "## NOTICE"]
             },
             {
               "path": "docs/user/04. App(s)/06. App Change Process/05. Change App Tenant URL.md",
               "name": "05. Change App Tenant URL.md",
-              "chapter": [
-                "## App Tenant URL Change",
-                "## NOTICE"
-              ]
+              "chapter": ["## App Tenant URL Change", "## NOTICE"]
             },
             {
               "path": "docs/user/04. App(s)/06. App Change Process/06. Change App RolesL.md",
@@ -1099,18 +931,12 @@
             {
               "path": "docs/user/05. Service(s)/01. Service Marketplace/02. Service Details.md",
               "name": "02. Service Details.md",
-              "chapter": [
-                "## Service Offer Details",
-                "## NOTICE"
-              ]
+              "chapter": ["## Service Offer Details", "## NOTICE"]
             },
             {
               "path": "docs/user/05. Service(s)/01. Service Marketplace/03. FAQ.md",
               "name": "03. FAQ.md",
-              "chapter": [
-                "### FAQ",
-                "## NOTICE"
-              ]
+              "chapter": ["### FAQ", "## NOTICE"]
             }
           ]
         },
@@ -1121,10 +947,7 @@
             {
               "path": "docs/user/05. Service(s)/02. Service Release Process/01. Service Card.md",
               "name": "01. Service Card.md",
-              "chapter": [
-                "### Step 1 - Service Card Details",
-                "## NOTICE"
-              ]
+              "chapter": ["### Step 1 - Service Card Details", "## NOTICE"]
             },
             {
               "path": "docs/user/05. Service(s)/02. Service Release Process/02. Service Detail Page.md",
@@ -1149,10 +972,7 @@
             {
               "path": "docs/user/05. Service(s)/02. Service Release Process/04.Technical Integration.md",
               "name": "04.Technical Integration.md",
-              "chapter": [
-                "### Step 4 - Technical Integration",
-                "## NOTICE"
-              ]
+              "chapter": ["### Step 4 - Technical Integration", "## NOTICE"]
             },
             {
               "path": "docs/user/05. Service(s)/02. Service Release Process/05.Verify & Submit.md",
@@ -1189,35 +1009,22 @@
             {
               "path": "docs/user/05. Service(s)/03. Service Release Approval/01. Service Approval Board.md",
               "name": "01. Service Approval Board.md",
-              "chapter": [
-                "## Summary",
-                "### Page Design",
-                "## NOTICE"
-              ]
+              "chapter": ["## Summary", "### Page Design", "## NOTICE"]
             },
             {
               "path": "docs/user/05. Service(s)/03. Service Release Approval/02. Service Details.md",
               "name": "02. Service Details.md",
-              "chapter": [
-                "## Service Details",
-                "## NOTICE"
-              ]
+              "chapter": ["## Service Details", "## NOTICE"]
             },
             {
               "path": "docs/user/05. Service(s)/03. Service Release Approval/03. Approve Service Release.md",
               "name": "03. Approve Service Release.md",
-              "chapter": [
-                "## Approve Service Release",
-                "## NOTICE"
-              ]
+              "chapter": ["## Approve Service Release", "## NOTICE"]
             },
             {
               "path": "docs/user/05. Service(s)/03. Service Release Approval/04. Decline Service Release.md",
               "name": "04. Decline Service Release.md",
-              "chapter": [
-                "## Decline Service Release",
-                "## NOTICE"
-              ]
+              "chapter": ["## Decline Service Release", "## NOTICE"]
             }
           ]
         },
@@ -1228,10 +1035,7 @@
             {
               "path": "docs/user/05. Service(s)/03. Service Subscription/01. Service Subscription.md",
               "name": "01. Service Subscription.md",
-              "chapter": [
-                "## Summary",
-                "## NOTICE"
-              ]
+              "chapter": ["## Summary", "## NOTICE"]
             },
             {
               "path": "docs/user/05. Service(s)/03. Service Subscription/03. Subscription Overview (Provider).md",
@@ -1256,9 +1060,7 @@
             {
               "path": "docs/user/05. Service(s)/03. Service Subscription/04. Service Unsubscribe.md",
               "name": "04. Service Unsubscribe.md",
-              "chapter": [
-                "## NOTICE"
-              ]
+              "chapter": ["## NOTICE"]
             },
             {
               "path": "docs/user/05. Service(s)/03. Service Subscription/05. FAQ.md",
@@ -1280,28 +1082,19 @@
             {
               "path": "docs/user/05. Service(s)/05. Service Change Process/01. Summary.md",
               "name": "01. Summary.md",
-              "chapter": [
-                "## Summary",
-                "## NOTICE"
-              ]
+              "chapter": ["## Summary", "## NOTICE"]
             },
             {
               "path": "docs/user/05. Service(s)/05. Service Change Process/02. Service Deactivation.md",
               "name": "02. Service Deactivation.md",
-              "chapter": [
-                "## Summary",
-                "## NOTICE"
-              ]
+              "chapter": ["## Summary", "## NOTICE"]
             }
           ]
         },
         {
           "path": "docs/user/05. Service(s)/index.md",
           "name": "index.md",
-          "chapter": [
-            "## Service Marketplace in Catena-X",
-            "## NOTICE"
-          ]
+          "chapter": ["## Service Marketplace in Catena-X", "## NOTICE"]
         }
       ]
     },
@@ -1312,18 +1105,12 @@
         {
           "path": "docs/user/06. Certificates/01. UseCase Participation.md",
           "name": "01. UseCase Participation.md",
-          "chapter": [
-            "## UseCase Participation",
-            "## NOTICE"
-          ]
+          "chapter": ["## UseCase Participation", "## NOTICE"]
         },
         {
           "path": "docs/user/06. Certificates/02. Other Certificates.md",
           "name": "02. Other Certificates.md",
-          "chapter": [
-            "## Company Certificates",
-            "## NOTICE"
-          ]
+          "chapter": ["## Company Certificates", "## NOTICE"]
         },
         {
           "path": "docs/user/06. Certificates/03. Credential Admin Board.md",
@@ -1351,10 +1138,7 @@
         {
           "path": "docs/user/06. Certificates/index.md",
           "name": "index.md",
-          "chapter": [
-            "## Summary",
-            "## NOTICE"
-          ]
+          "chapter": ["## Summary", "## NOTICE"]
         }
       ]
     },
@@ -1469,12 +1253,7 @@
         {
           "path": "docs/user/Style-Guide/drop down.md",
           "name": "drop down.md",
-          "chapter": [
-            "### Drop Down",
-            "#### ...",
-            "#### Guidance",
-            "## NOTICE"
-          ]
+          "chapter": ["### Drop Down", "#### ...", "#### Guidance", "## NOTICE"]
         },
         {
           "path": "docs/user/Style-Guide/dropzone.md",
@@ -1493,28 +1272,17 @@
         {
           "path": "docs/user/Style-Guide/input field.md",
           "name": "input field.md",
-          "chapter": [
-            "### Input Field",
-            "#### Guidance",
-            "## NOTICE"
-          ]
+          "chapter": ["### Input Field", "#### Guidance", "## NOTICE"]
         },
         {
           "path": "docs/user/Style-Guide/loading.md",
           "name": "loading.md",
-          "chapter": [
-            "### Loading",
-            "#### Guidance",
-            "## NOTICE"
-          ]
+          "chapter": ["### Loading", "#### Guidance", "## NOTICE"]
         },
         {
           "path": "docs/user/Style-Guide/scrollbar.md",
           "name": "scrollbar.md",
-          "chapter": [
-            "### Scrollbar",
-            "## NOTICE"
-          ]
+          "chapter": ["### Scrollbar", "## NOTICE"]
         },
         {
           "path": "docs/user/Style-Guide/searchbar.md",

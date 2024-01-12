@@ -18,10 +18,7 @@
             {
               "path": "docs/developer/01. Onboarding/01. Invite/01. Summary.md",
               "name": "01. Summary.md",
-              "chapter": [
-                "## Summary",
-                "## NOTICE"
-              ]
+              "chapter": ["## Summary", "## NOTICE"]
             },
             {
               "path": "docs/developer/01. Onboarding/01. Invite/02. Overview Invited Companies.md",
@@ -35,11 +32,7 @@
             {
               "path": "docs/developer/01. Onboarding/01. Invite/03. Invite Company_Create Application.md",
               "name": "03. Invite Company_Create Application.md",
-              "chapter": [
-                "## Invite Company",
-                "#### API Details",
-                "## NOTICE"
-              ]
+              "chapter": ["## Invite Company", "#### API Details", "## NOTICE"]
             }
           ]
         },
@@ -237,10 +230,7 @@
             {
               "path": "docs/developer/02. Technical Integration/01. Connector Registration/01. Summary.md",
               "name": "01. Summary.md",
-              "chapter": [
-                "# Summary",
-                "## NOTICE"
-              ]
+              "chapter": ["# Summary", "## NOTICE"]
             },
             {
               "path": "docs/developer/02. Technical Integration/01. Connector Registration/02. View Connector.md",
@@ -318,10 +308,7 @@
             {
               "path": "docs/developer/02. Technical Integration/02. Identity Provider Management/01. Summary.md",
               "name": "01. Summary.md",
-              "chapter": [
-                "# Summary",
-                "## NOTICE"
-              ]
+              "chapter": ["# Summary", "## NOTICE"]
             },
             {
               "path": "docs/developer/02. Technical Integration/02. Identity Provider Management/02. Company IdPs.md",
@@ -399,9 +386,7 @@
             {
               "path": "docs/developer/02. Technical Integration/03. Company Configuration/01. Summary.md",
               "name": "01. Summary.md",
-              "chapter": [
-                "## NOTICE"
-              ]
+              "chapter": ["## NOTICE"]
             },
             {
               "path": "docs/developer/02. Technical Integration/03. Company Configuration/02. View Preferred Use Cases.md",
@@ -513,10 +498,7 @@
             {
               "path": "docs/developer/03. User Management/01. User Account/01. Summary.md",
               "name": "01. Summary.md",
-              "chapter": [
-                "# Summary",
-                "## NOTICE"
-              ]
+              "chapter": ["# Summary", "## NOTICE"]
             },
             {
               "path": "docs/developer/03. User Management/01. User Account/02. My User Account.md",
@@ -544,18 +526,12 @@
             {
               "path": "docs/developer/03. User Management/01. User Account/03. Create new user account (single) - UPDATE NEEDED.md",
               "name": "03. Create new user account (single) - UPDATE NEEDED.md",
-              "chapter": [
-                "## Create a new user account (single)",
-                "## NOTICE"
-              ]
+              "chapter": ["## Create a new user account (single)", "## NOTICE"]
             },
             {
               "path": "docs/developer/03. User Management/01. User Account/04. Create new user account (bulk) - UPDATE NEEDED.md",
               "name": "04. Create new user account (bulk) - UPDATE NEEDED.md",
-              "chapter": [
-                "## Create a new user account (bulk)",
-                "## NOTICE"
-              ]
+              "chapter": ["## Create a new user account (bulk)", "## NOTICE"]
             }
           ]
         },
@@ -621,10 +597,7 @@
             {
               "path": "docs/developer/03. User Management/02. Edit User Account/05. Suspend User.md",
               "name": "05. Suspend User.md",
-              "chapter": [
-                "# Suspend User",
-                "## NOTICE"
-              ]
+              "chapter": ["# Suspend User", "## NOTICE"]
             },
             {
               "path": "docs/developer/03. User Management/02. Edit User Account/06. Delete User.md",
@@ -643,10 +616,7 @@
             {
               "path": "docs/developer/03. User Management/02. Edit User Account/index.md",
               "name": "index.md",
-              "chapter": [
-                "# Summary",
-                "## NOTICE"
-              ]
+              "chapter": ["# Summary", "## NOTICE"]
             }
           ]
         },
@@ -757,10 +727,7 @@
         {
           "path": "docs/developer/03. User Management/index.md",
           "name": "index.md",
-          "chapter": [
-            "# User Management",
-            "## NOTICE"
-          ]
+          "chapter": ["# User Management", "## NOTICE"]
         }
       ]
     },
@@ -1018,10 +985,7 @@
             {
               "path": "docs/developer/04. Apps/06. App Change Process/01. Summary.md",
               "name": "01. Summary.md",
-              "chapter": [
-                "## Summary",
-                "## NOTICE"
-              ]
+              "chapter": ["## Summary", "## NOTICE"]
             },
             {
               "path": "docs/developer/04. Apps/06. App Change Process/02. Change App Lead Image.md",
@@ -1057,11 +1021,7 @@
             {
               "path": "docs/developer/04. Apps/06. App Change Process/04. App Deactivation.md",
               "name": "04. App Deactivation.md",
-              "chapter": [
-                "## Summary",
-                "## Implementation",
-                "## NOTICE"
-              ]
+              "chapter": ["## Summary", "## Implementation", "## NOTICE"]
             },
             {
               "path": "docs/developer/04. Apps/06. App Change Process/05. App Instance Url.md",
@@ -1212,10 +1172,7 @@
             {
               "path": "docs/developer/05. Service(s)/02. Service Release Process/index.md",
               "name": "index.md",
-              "chapter": [
-                "## Summary",
-                "## NOTICE"
-              ]
+              "chapter": ["## Summary", "## NOTICE"]
             }
           ]
         },
@@ -1354,10 +1311,7 @@
             {
               "path": "docs/developer/05. Service(s)/06. Service Change Process/01. Summary.md",
               "name": "01. Summary.md",
-              "chapter": [
-                "## Summary",
-                "## NOTICE"
-              ]
+              "chapter": ["## Summary", "## NOTICE"]
             },
             {
               "path": "docs/developer/05. Service(s)/06. Service Change Process/02. Service Deactivation.md",
@@ -1401,10 +1355,7 @@
             {
               "path": "docs/developer/Technical Documentation/Architecture/Building block view.md",
               "name": "Building block view.md",
-              "chapter": [
-                "# Building Block View",
-                "## NOTICE"
-              ]
+              "chapter": ["# Building Block View", "## NOTICE"]
             },
             {
               "path": "docs/developer/Technical Documentation/Architecture/Context and scope.md",
@@ -1475,10 +1426,7 @@
             {
               "path": "docs/developer/Technical Documentation/Architecture/Solution strategy.md",
               "name": "Solution strategy.md",
-              "chapter": [
-                "# Solution Strategy",
-                "## NOTICE"
-              ]
+              "chapter": ["# Solution Strategy", "## NOTICE"]
             },
             {
               "path": "docs/developer/Technical Documentation/Architecture/Whitebox Overall System.md",
@@ -1538,10 +1486,7 @@
             {
               "path": "docs/developer/Technical Documentation/DB Views and Details/Connector - DB - View.md",
               "name": "Connector - DB - View.md",
-              "chapter": [
-                "## Connector DB",
-                "## NOTICE"
-              ]
+              "chapter": ["## Connector DB", "## NOTICE"]
             },
             {
               "path": "docs/developer/Technical Documentation/DB Views and Details/Data Management.md",
@@ -1591,10 +1536,7 @@
             {
               "path": "docs/developer/Technical Documentation/Dev Process/Dev-flow_git-diagram.md",
               "name": "Dev-flow_git-diagram.md",
-              "chapter": [
-                "# Dev flow (git diagram)",
-                "## NOTICE"
-              ]
+              "chapter": ["# Dev flow (git diagram)", "## NOTICE"]
             },
             {
               "path": "docs/developer/Technical Documentation/Dev Process/Enumeration Handling.md",
@@ -2035,9 +1977,7 @@
                 {
                   "path": "docs/developer/Technical Documentation/Tests/Automation/06. NotificiationInitScenario.md",
                   "name": "06. NotificiationInitScenario.md",
-                  "chapter": [
-                    "## NOTICE"
-                  ]
+                  "chapter": ["## NOTICE"]
                 },
                 {
                   "path": "docs/developer/Technical Documentation/Tests/Automation/07. ServiceAccountCUDScenarios.md",
