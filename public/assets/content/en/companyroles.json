@@ -738,6 +738,11 @@
         "index": 3,
         "title": "get status",
         "navigation": "get-status-id"
+      },
+      {
+        "index": 4,
+        "title": "standard libraries",
+        "navigation": "std-libraries-id"
       }
     ],
     "title": "Catena-X Onboarding Service Provider ",
@@ -821,8 +826,16 @@
         "title": "Status CallBack",
         "description": "The OSP has two options to receive submitted registration record status updates<1></1><1></1>1. Via Interface<1></1>2. Via the CSP provided management panel<1></1><1></1>In case the interface option is used, the OSP needs to configure inside the CSP components his callback url as well as the authentication details.<1></1>",
         "imagePath": "",
-        "backgroundColor": "#FFFFFF",
+        "backgroundColor": "#DAE3EB",
         "id": "get-status-id",
+        "template": "TextImageSideBySideWithSections"
+      },
+      {
+        "title": "Standard Libraries",
+        "description": "",
+        "imagePath": "",
+        "backgroundColor": "#FFFFFF",
+        "id": "std-libraries-id",
         "template": "TextImageSideBySideWithSections"
       }
     ]
