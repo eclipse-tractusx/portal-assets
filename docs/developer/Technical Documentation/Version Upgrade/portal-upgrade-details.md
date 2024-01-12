@@ -34,7 +34,7 @@ Each section includes the respective change details, impact on existing data and
 
 Please be aware that the PostgreSQL version of the subchart by Bitnami of the [portal helm chart](https://github.com/eclipse-tractusx/portal-cd) is upgraded from 14.5.0 to 15.4.x (dependency updated from version 11.9.13 to 12.12.x).
 
-In case you are using an external PostgreSQL instance and would like to upgrade to 15.x, please follow the [official instructions](https://www.postgresql.org/docs/15/upgrading.html).
+In case you are using an external PostgreSQL instance and would like to upgrade to 15.x, please follow the [official instructions](https://www.postgresql.org/docs/user/15/upgrading.html).
 
 In case you would like to upgrade the PostgreSQL subchart from Bitnami, we recommend a blue-green deployment approach. In the following, you find a rough outline of the necessary steps:
 
@@ -46,7 +46,7 @@ In case you would like to upgrade the PostgreSQL subchart from Bitnami, we recom
 6. Make sure that the database migrations jobs which are defined as post-upgrade hooks are completed successfully
 7. Once the new/green instance is validated, switch the user traffic to it
 
-For restoring the data of the blue instance to the green instance (step 4), execute the following statement using [pg-dumpall](https://www.postgresql.org/docs/current/app-pg-dumpall.html):
+For restoring the data of the blue instance to the green instance (step 4), execute the following statement using [pg-dumpall](https://www.postgresql.org/docs/user/current/app-pg-dumpall.html):
 
 On the cluster:
 

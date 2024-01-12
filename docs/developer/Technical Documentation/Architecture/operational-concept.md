@@ -32,7 +32,7 @@ Note: will be added soon
 
 ## Logging
 
-The portal supports application and db logging. Details are stored here: https://github.com/catenax-ng/tx-portal-assets/blob/945546d91065b8870aa8f69ce94b48eac7a5ade2/docs/Technical%20Details/Auditing.md
+The portal supports application and db logging. Details are stored here: https://github.com/catenax-ng/tx-portal-assets/blob/945546d91065b8870aa8f69ce94b48eac7a5ade2/docs/user/Technical%20Details/Auditing.md
 
 ## Monitoring
 

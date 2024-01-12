@@ -3,7 +3,7 @@
 ## Build, test, deploy
 
 Details to the build, test and deploy process can get found under following link/md file:  
-https://github.com/catenax-ng/tx-portal-assets/blob/945546d91065b8870aa8f69ce94b48eac7a5ade2/docs/Release-Process.md
+https://github.com/catenax-ng/tx-portal-assets/blob/945546d91065b8870aa8f69ce94b48eac7a5ade2/docs/user/Release-Process.md
 <br>
 <br>
 
