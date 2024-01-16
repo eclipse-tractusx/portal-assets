@@ -2,6 +2,31 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
+## 1.8.0-RC1
+
+### Change
+
+- enhanced developer docu by adding db table details about entity 'Agreements' incl. db schema
+- added portal registration application images and connected the image store with the registration application repo
+- created a new section to display standard library info in osp page
+
+### Feature
+
+n/a
+
+### Technical Support
+
+- added automatic linter and build checks for newly created pull request
+- added additional image tags of type semver to release workflows
+
+### BugFixes
+
+n/a
+
+#### Known Knowns
+
+- release 1.8.0 documentation of new features outstanding
+
 ## 1.7.0
 
 ### Change
