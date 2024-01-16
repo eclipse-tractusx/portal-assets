@@ -23,8 +23,9 @@ The table is mainly connected to the following 5 tables:
 <br>
 
 Key functions:
-* documents can be ACTIVE/INACTIVE (only active documents are relevant)
-* mandatory tag (agreements can be mandatory or non-mandatory; mandatory agreements need to receive a user consent before proceeding with the functional flow)
+
+- documents can be ACTIVE/INACTIVE (only active documents are relevant)
+- mandatory tag (agreements can be mandatory or non-mandatory; mandatory agreements need to receive a user consent before proceeding with the functional flow)
 
 <br>
 <br>
