@@ -580,7 +580,7 @@ class Content extends Viewable {
 
   renderMD(content) {
     this.content = content
-    const url = `${Settings.DOCBASE}/${state.releaseSelection}/${content.path}`
+    const url = `${Settings.DOCBASE}/${state.releaseSelection}/docs/${content.path}`
     this.loader.classList.remove('hidden')
     fetch(url)
       .then((response) => response.text())

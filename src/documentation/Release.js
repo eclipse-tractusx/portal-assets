@@ -77,9 +77,11 @@ const createDocsMetadata = (version) => {
   }
 
   Object.entries(DOCS).forEach((item) => {
+    process.chdir('./docs')
     const tree = new MDHelper().extractChapterTree(
-      TreeHelper.readDirTree(`docs/${item[0]}`)
+      TreeHelper.readDirTree(item[0])
     )
+    process.chdir('..')
     tree.name = item[1]
     const path = `./public/documentation/data/${version}`
     if (!fs.existsSync(path)) {
