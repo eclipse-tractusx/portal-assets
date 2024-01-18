@@ -13,17 +13,21 @@
             {
               "path": "developer/01. Onboarding/01. Invite/01. Summary.md",
               "name": "01. Summary.md",
-              "chapter": ["## Summary"]
+              "chapter": ["## Summary", "## NOTICE"]
             },
             {
               "path": "developer/01. Onboarding/01. Invite/02. Overview Invited Companies.md",
               "name": "02. Overview Invited Companies.md",
-              "chapter": ["## Get Invited Companies", "#### API Details"]
+              "chapter": [
+                "## Get Invited Companies",
+                "#### API Details",
+                "## NOTICE"
+              ]
             },
             {
-              "path": "developer/01. Onboarding/01. Invite/03. Invite Company : Create Application.md",
-              "name": "03. Invite Company : Create Application.md",
-              "chapter": ["## Invite Company", "#### API Details"]
+              "path": "developer/01. Onboarding/01. Invite/03. Invite Company_Create Application.md",
+              "name": "03. Invite Company_Create Application.md",
+              "chapter": ["## Invite Company", "#### API Details", "## NOTICE"]
             }
           ]
         },
@@ -38,7 +42,8 @@
                 "# Intro",
                 "#### Registration Login",
                 "### Registration Login Details",
-                "## Portal Login"
+                "## Portal Login",
+                "## NOTICE"
               ]
             },
             {
@@ -60,7 +65,8 @@
                 "###### Implemented Pattern",
                 "###### POST allowed Unique Identifier",
                 "### Store/Save Company Data",
-                "### Display Company Data (pre-saved)"
+                "### Display Company Data (pre-saved)",
+                "## NOTICE"
               ]
             },
             {
@@ -69,7 +75,8 @@
               "chapter": [
                 "# Implementation",
                 "## Add Aditional Users",
-                "#### API Details"
+                "#### API Details",
+                "## NOTICE"
               ]
             },
             {
@@ -80,7 +87,8 @@
                 "## Select company role & sign terms and conditions",
                 "#### API Details",
                 "#1 Roles and agreements are fetched from the consent endpoint",
-                "#2 Consent Post"
+                "#2 Consent Post",
+                "## NOTICE"
               ]
             },
             {
@@ -93,17 +101,19 @@
                 "##### #1 API Get Documents",
                 "##### #2 API Upload Document",
                 "##### #3 API Delete Document",
-                "##### #4 API Download Document"
+                "##### #4 API Download Document",
+                "## NOTICE"
               ]
             },
             {
               "path": "developer/01. Onboarding/02. Registration/06. Verify Registration Data.md",
               "name": "06. Verify Registration Data.md",
               "chapter": [
-                "# Implementation",
-                "## Verify your data",
-                "##### #1 Get application data",
-                "##### #2 Submit Registration"
+                "## Verify Registration Data data",
+                "#### #1 Get application data",
+                "#### #2 Submit Registration",
+                "###### Validations",
+                "## NOTICE"
               ]
             },
             {
@@ -117,7 +127,8 @@
                 "### 3 Invite Users",
                 "### 4 Company Role and Terms&Conditions",
                 "### 5 Document Load",
-                "### 6 Verify Data"
+                "### 6 Verify Data",
+                "## NOTICE"
               ]
             }
           ]
@@ -142,7 +153,8 @@
                 "#### API Details Get Company Checklist Status",
                 "## 3 Download Documents",
                 "#### Logical flow of the service",
-                "#### API Details"
+                "#### API Details",
+                "## NOTICE"
               ]
             },
             {
@@ -168,13 +180,15 @@
                 "#### Details \"Clearinghouse Check\"",
                 "###### Step 1 - Send company data to clearinghouse",
                 "###### Step 2 - Clearinghouse response",
-                "##### Details \"Self-Description Creation LegalPerson\"",
+                "##### Details \"Self-Description Creation LegalParticipant\"",
                 "###### Step 1 - Create SelfDescription - send company data to SD Factory",
                 "###### Step 2 - Save self description document",
                 "###### DB Table Content",
                 "##### Details \"Activation\"",
                 "### Add/Update BPN for the registration company",
-                "### Status endpoint - Checklist Details"
+                "### Status endpoint - Checklist Details",
+                "### Details for retrigger process",
+                "## NOTICE"
               ]
             },
             {
@@ -182,7 +196,8 @@
               "name": "04. Decline Application.md",
               "chapter": [
                 "## Decline Company Application",
-                "##### API Implementation"
+                "##### API Implementation",
+                "## NOTICE"
               ]
             },
             {
@@ -191,7 +206,8 @@
               "chapter": [
                 "## Summary",
                 "## Functional Details",
-                "### Display Application Details"
+                "### Display Application Details",
+                "## NOTICE"
               ]
             }
           ]
@@ -209,7 +225,7 @@
             {
               "path": "developer/02. Technical Integration/01. Connector Registration/01. Summary.md",
               "name": "01. Summary.md",
-              "chapter": ["# Summary"]
+              "chapter": ["# Summary", "## NOTICE"]
             },
             {
               "path": "developer/02. Technical Integration/01. Connector Registration/02. View Connector.md",
@@ -226,7 +242,8 @@
                 "#### API Details",
                 "### 2 Get all \"my\" Connector Registrations hosted for customers/3rd parties",
                 "#### Logical flow of the service",
-                "#### API Details"
+                "#### API Details",
+                "## NOTICE"
               ]
             },
             {
@@ -234,22 +251,16 @@
               "name": "03. Create new Connector Registration.md",
               "chapter": [
                 "## 1. Create new Connector Registration - self-owned",
-                "#### Details to the DAPS",
-                "##### API Details",
                 "#### Details to the SD",
                 "##### #1 Self description request",
-                "##### #2 Self description response (asynchron)",
+                "##### #2 Self description response (asynchronous)",
                 "#### Logical flow of the service",
                 "#### API Details",
-                "## 2. Create new Connector Registration - managed ",
+                "## 2. Create new Connector Registration - managed",
                 "#### Logical flow of the service",
-                "#### API Details"
+                "#### API Details",
+                "## NOTICE"
               ]
-            },
-            {
-              "path": "developer/02. Technical Integration/01. Connector Registration/04. DAPS Registration.md",
-              "name": "04. DAPS Registration.md",
-              "chapter": ["## 4 Retrigger DAPS", "#### API Details"]
             },
             {
               "path": "developer/02. Technical Integration/01. Connector Registration/05. Self Description.md",
@@ -258,13 +269,18 @@
                 "## Self Description",
                 "### Implementation Details",
                 "#### Send Company Data to SD Factory (Create SD)",
-                "#### SD CallBack Service"
+                "#### SD CallBack Service",
+                "## NOTICE"
               ]
             },
             {
               "path": "developer/02. Technical Integration/01. Connector Registration/06. Delete Connector.md",
               "name": "06. Delete Connector.md",
-              "chapter": ["## 5 Delete Connector", "#### API Details"]
+              "chapter": [
+                "## 5 Delete Connector",
+                "#### API Details",
+                "## NOTICE"
+              ]
             },
             {
               "path": "developer/02. Technical Integration/01. Connector Registration/07. Error Handling.md",
@@ -274,7 +290,8 @@
                 "### View Connector Table",
                 "#### #1 Scenario: No Data available",
                 "#### #2 Scenario: Endpoints are responding with an 500 error",
-                "#### #3 Scenario: Endpoints are responding with an 4xx error"
+                "#### #3 Scenario: Endpoints are responding with an 4xx error",
+                "## NOTICE"
               ]
             }
           ]
@@ -286,22 +303,52 @@
             {
               "path": "developer/02. Technical Integration/02. Identity Provider Management/01. Summary.md",
               "name": "01. Summary.md",
-              "chapter": ["# Summary"]
+              "chapter": ["# Summary", "## NOTICE"]
+            },
+            {
+              "path": "developer/02. Technical Integration/02. Identity Provider Management/02. Company IdPs.md",
+              "name": "02. Company IdPs.md",
+              "chapter": [
+                "## Identity Provider Overview",
+                "### Implementation",
+                "### API GET IdPs",
+                "## NOTICE"
+              ]
             },
             {
               "path": "developer/02. Technical Integration/02. Identity Provider Management/02. Configure Company IdP.md",
               "name": "02. Configure Company IdP.md",
               "chapter": [
-                "# User Description",
-                "### Register your company IdP",
-                "#### Create the new idp record"
+                "## IDP Configuration",
+                "### Create IdP",
+                "#### Implementation details:",
+                "#### API Create new IdP connection",
+                "### Configure IdP",
+                "#### Implementation details:",
+                "#### API Update IdP Config",
+                "### User Connection",
+                "## NOTICE"
               ]
             },
             {
               "path": "developer/02. Technical Integration/02. Identity Provider Management/03. User Migration.md",
               "name": "03. User Migration.md",
               "chapter": [
-                "#### Migrate existing user accounts to the new created IdP"
+                "### Migrate existing user accounts to the new created IdP",
+                "### Implementation Details",
+                "#### GET User List",
+                "#### POST User IdP Link",
+                "## NOTICE"
+              ]
+            },
+            {
+              "path": "developer/02. Technical Integration/02. Identity Provider Management/04. Delete Identity Provider.md",
+              "name": "04. Delete Identity Provider.md",
+              "chapter": [
+                "### Identity Provider Deletion",
+                "#### Implementation details:",
+                "#### API DELETE IdPs",
+                "## NOTICE"
               ]
             },
             {
@@ -311,7 +358,18 @@
                 "### FAQ",
                 "#### <question<?",
                 "#### <question<?",
-                "#### <question<?"
+                "#### <question<?",
+                "## NOTICE"
+              ]
+            },
+            {
+              "path": "developer/02. Technical Integration/02. Identity Provider Management/05. Disable Identity Provider.md",
+              "name": "05. Disable Identity Provider.md",
+              "chapter": [
+                "### Identity Provider Disable",
+                "#### Implementation details:",
+                "#### API DISABLE IdP",
+                "## NOTICE"
               ]
             }
           ]
@@ -323,24 +381,101 @@
             {
               "path": "developer/02. Technical Integration/03. Company Configuration/01. Summary.md",
               "name": "01. Summary.md",
-              "chapter": []
+              "chapter": ["## NOTICE"]
             },
             {
               "path": "developer/02. Technical Integration/03. Company Configuration/02. View Preferred Use Cases.md",
               "name": "02. View Preferred Use Cases.md",
-              "chapter": ["## View Company Preferred Use Cases", "### Details"]
+              "chapter": [
+                "## View Company Preferred Use Cases",
+                "### Details",
+                "## NOTICE"
+              ]
             },
             {
               "path": "developer/02. Technical Integration/03. Company Configuration/03. Add new Use Case.md",
               "name": "03. Add new Use Case.md",
-              "chapter": ["## Add New Preferred Use Case", "### Details"]
+              "chapter": [
+                "## Add New Preferred Use Case",
+                "### Details",
+                "## NOTICE"
+              ]
             },
             {
               "path": "developer/02. Technical Integration/03. Company Configuration/04. Delete Preferred Use Case.md",
               "name": "04. Delete Preferred Use Case.md",
               "chapter": [
                 "## Delete Company Preferred Use Cases",
-                "### Details"
+                "### Details",
+                "## NOTICE"
+              ]
+            },
+            {
+              "path": "developer/02. Technical Integration/03. Company Configuration/05. Change Company Role.md",
+              "name": "05. Change Company Role.md",
+              "chapter": [
+                "### Change Company Role",
+                "#### Company Role Config Page",
+                "##### Data Mapping",
+                "#### Submit new company rol request",
+                "## NOTICE"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "developer/02. Technical Integration/04. Credentials",
+          "name": "04. Credentials",
+          "children": [
+            {
+              "path": "developer/02. Technical Integration/04. Credentials/00. Wallet Creation.md",
+              "name": "00. Wallet Creation.md",
+              "chapter": [
+                "## Managed Identity Wallet",
+                "### Wallet Creation",
+                "### Initial Credentials",
+                "## NOTICE"
+              ]
+            },
+            {
+              "path": "developer/02. Technical Integration/04. Credentials/01. Get UseCase Credential.md",
+              "name": "01. Get UseCase Credential.md",
+              "chapter": [
+                "## Use Case Credentials",
+                "### Process Flow",
+                "### Displaying available Credential Types",
+                "### Submit Credential request",
+                "## NOTICE"
+              ]
+            },
+            {
+              "path": "developer/02. Technical Integration/04. Credentials/02. Other Certificates.md",
+              "name": "02. Other Certificates.md",
+              "chapter": [
+                "## Company Certificates",
+                "### Process Flow",
+                "### Display certificates and status",
+                "### Available Certificate Document Requests",
+                "##### Additional implementation details",
+                "### Submit Certificate request",
+                "## NOTICE"
+              ]
+            },
+            {
+              "path": "developer/02. Technical Integration/04. Credentials/03. Credential Admin Board.md",
+              "name": "03. Credential Admin Board.md",
+              "chapter": [
+                "## Credential Admin Board",
+                "#### Filter based on credential request status",
+                "#### Display all available credential requests",
+                "#### Open the attached document",
+                "#### Approve Credential Request",
+                "##### MIW Call Details",
+                "###### \"Type\" mapping",
+                "###### \"contract-template\"",
+                "###### \"contract-version\"",
+                "#### Reject Credential Request",
+                "## NOTICE"
               ]
             }
           ]
@@ -358,27 +493,40 @@
             {
               "path": "developer/03. User Management/01. User Account/01. Summary.md",
               "name": "01. Summary.md",
-              "chapter": ["# Summary"]
+              "chapter": ["# Summary", "## NOTICE"]
+            },
+            {
+              "path": "developer/03. User Management/01. User Account/02. My User Account.md",
+              "name": "02. My User Account.md",
+              "chapter": [
+                "### User Permissions",
+                "#### #1 Get company user details",
+                "##### User Information",
+                "##### User Assigned Permissions",
+                "## NOTICE"
+              ]
             },
             {
               "path": "developer/03. User Management/01. User Account/02. User Account.md",
               "name": "02. User Account.md",
               "chapter": [
-                "## User Permissions",
-                "## API Details",
-                "### #1 Get company user details",
-                "### #1 Get company user details"
+                "### User Permissions",
+                "#### #1 Get company user details",
+                "##### User Information",
+                "##### Change User Assigned CX Portal Roles",
+                "##### User Assigned Permissions",
+                "## NOTICE"
               ]
             },
             {
               "path": "developer/03. User Management/01. User Account/03. Create new user account (single) - UPDATE NEEDED.md",
               "name": "03. Create new user account (single) - UPDATE NEEDED.md",
-              "chapter": ["## Create a new user account (single)"]
+              "chapter": ["## Create a new user account (single)", "## NOTICE"]
             },
             {
               "path": "developer/03. User Management/01. User Account/04. Create new user account (bulk) - UPDATE NEEDED.md",
               "name": "04. Create new user account (bulk) - UPDATE NEEDED.md",
-              "chapter": ["## Create a new user account (bulk)"]
+              "chapter": ["## Create a new user account (bulk)", "## NOTICE"]
             }
           ]
         },
@@ -389,7 +537,11 @@
             {
               "path": "developer/03. User Management/02. Edit User Account/01. Summary.md",
               "name": "01. Summary.md",
-              "chapter": ["# User Account Details", "# My CX Account"]
+              "chapter": [
+                "# User Account Details",
+                "# My CX Account",
+                "## NOTICE"
+              ]
             },
             {
               "path": "developer/03. User Management/02. Edit User Account/02. Password Reset.md",
@@ -397,7 +549,8 @@
               "chapter": [
                 "## Password Reset",
                 "### Error message handling for password reset",
-                "### Password reset policy"
+                "### Password reset policy",
+                "## NOTICE"
               ]
             },
             {
@@ -415,7 +568,8 @@
                 "#### #1 Get company user details",
                 "#### #2 Get company user details",
                 "#### #3 Fetch App Roles",
-                "#### #4 Update user assigned App Roles"
+                "#### #4 Update user assigned App Roles",
+                "## NOTICE"
               ]
             },
             {
@@ -431,13 +585,14 @@
                 "### Success/Error Messages",
                 "## API Details",
                 "### #1 API Endpoint Details: Add BPN",
-                "### #2 API Endpoint Details: Delete BPN"
+                "### #2 API Endpoint Details: Delete BPN",
+                "## NOTICE"
               ]
             },
             {
               "path": "developer/03. User Management/02. Edit User Account/05. Suspend User.md",
               "name": "05. Suspend User.md",
-              "chapter": ["# Suspend User"]
+              "chapter": ["# Suspend User", "## NOTICE"]
             },
             {
               "path": "developer/03. User Management/02. Edit User Account/06. Delete User.md",
@@ -449,13 +604,14 @@
                 "## Functionality and impacted Keycloak layers",
                 "## API Details",
                 "### #1 Delete my user",
-                "### #2 Delete user {userId}"
+                "### #2 Delete user {userId}",
+                "## NOTICE"
               ]
             },
             {
               "path": "developer/03. User Management/02. Edit User Account/index.md",
               "name": "index.md",
-              "chapter": ["# Summary\r"]
+              "chapter": ["# Summary", "## NOTICE"]
             }
           ]
         },
@@ -469,7 +625,8 @@
               "chapter": [
                 "# Summary",
                 "### Customer Functionalities covered in the function",
-                "### Available technical user roles"
+                "### Available technical user roles",
+                "## NOTICE"
               ]
             },
             {
@@ -478,7 +635,10 @@
               "chapter": [
                 "## View technical users",
                 "## Implementation - API Details",
-                "### #1 Get Service Accounts"
+                "### #1 Get Service Accounts",
+                "#### Data Mapping (example)",
+                "### #2 Filter & Search",
+                "## NOTICE"
               ]
             },
             {
@@ -490,7 +650,8 @@
                 "### Get Service Account Role Profiles",
                 "### Create Service Account",
                 "### Show Tech. Service Account Details (of just created Account)",
-                "### Service Accounts Created via service/app subscription"
+                "### Service Accounts Created via service/app subscription",
+                "## NOTICE"
               ]
             },
             {
@@ -499,13 +660,26 @@
               "chapter": [
                 "## Delete an user",
                 "#### Currently not supported:",
-                "### Delete Service Account"
+                "### Delete Service Account",
+                "## NOTICE"
+              ]
+            },
+            {
+              "path": "developer/03. User Management/03. Technical User/04. Reset Credentials.md",
+              "name": "04. Reset Credentials.md",
+              "chapter": [
+                "## Introduction",
+                "### Reset Credential",
+                "## NOTICE"
               ]
             },
             {
               "path": "developer/03. User Management/03. Technical User/05. FAQ.md",
               "name": "05. FAQ.md",
-              "chapter": ["### How to retrieve a technical user token?"]
+              "chapter": [
+                "### How to retrieve a technical user token?",
+                "## NOTICE"
+              ]
             }
           ]
         },
@@ -519,7 +693,8 @@
               "chapter": [
                 "## Summary",
                 "#### Pre-Requisite",
-                "### App Access Management"
+                "### App Access Management",
+                "## NOTICE"
               ]
             },
             {
@@ -528,7 +703,8 @@
               "chapter": [
                 "## App Role Management",
                 "### #1 Get App Roles and Descriptions",
-                "### #2 Get Company App Users & Serach"
+                "### #2 Get Company App Users & Serach",
+                "## NOTICE"
               ]
             },
             {
@@ -537,7 +713,8 @@
               "chapter": [
                 "## Assign App Role",
                 "### #1 Add App Role",
-                "### #2 Update App Role"
+                "### #2 Update App Role",
+                "## NOTICE"
               ]
             }
           ]
@@ -545,7 +722,7 @@
         {
           "path": "developer/03. User Management/index.md",
           "name": "index.md",
-          "chapter": ["# User Management"]
+          "chapter": ["# User Management", "## NOTICE"]
         }
       ]
     },
@@ -563,7 +740,8 @@
               "chapter": [
                 "## Summary",
                 "## Implementation",
-                "### #1 App Overview"
+                "### #1 App Overview",
+                "## NOTICE"
               ]
             },
             {
@@ -574,7 +752,8 @@
                 "## Implementation",
                 "### #1 App Details",
                 "### #2 Subscription Management",
-                "### #3 App Policy Data"
+                "### #3 App Policy Data",
+                "## NOTICE"
               ]
             },
             {
@@ -583,7 +762,8 @@
               "chapter": [
                 "## Summary",
                 "## Implementation",
-                "### #1 Store User Favorites"
+                "### #1 Store User Favorites",
+                "## NOTICE"
               ]
             },
             {
@@ -594,7 +774,8 @@
                 "## Implementation",
                 "### #1 My Business Application",
                 "#### DB Details",
-                "#### Get my Business Applications"
+                "#### Get my Business Applications",
+                "## NOTICE"
               ]
             }
           ]
@@ -611,7 +792,8 @@
                 "## Implementation",
                 "### Delete App",
                 "##### Validation",
-                "##### Logic:"
+                "##### Logic:",
+                "## NOTICE"
               ]
             },
             {
@@ -650,8 +832,9 @@
                 "##### Implementation Details",
                 "##### API Details",
                 "###### #1 Get App Details",
-                "###### #2 Submit App for Marketrelease",
-                "###### #3 Download Document"
+                "###### #2 Submit App for Marketplace Release",
+                "###### #3 Download Document",
+                "## NOTICE"
               ]
             }
           ]
@@ -667,7 +850,8 @@
                 "## App Approval Board",
                 "### #1 App Release Overview",
                 "#### Sorting",
-                "#### Views"
+                "#### Views",
+                "## NOTICE"
               ]
             },
             {
@@ -678,13 +862,18 @@
                 "### #1 Display App details",
                 "### #2 Display Images",
                 "### #3 Download Documents",
-                "### #4 App Policy Data"
+                "### #4 App Policy Data",
+                "## NOTICE"
               ]
             },
             {
               "path": "developer/04. Apps/03. App Release Approval/03. Approve App Release.md",
               "name": "03. Approve App Release.md",
-              "chapter": ["## Implementation", "### #1 Approve App Release"]
+              "chapter": [
+                "## Implementation",
+                "### #1 Approve App Release",
+                "## NOTICE"
+              ]
             },
             {
               "path": "developer/04. Apps/03. App Release Approval/04. Decline App Release.md",
@@ -692,7 +881,8 @@
               "chapter": [
                 "## App Decline Details",
                 "### #1 Decline App Release",
-                "##### Email Example"
+                "##### Email Example",
+                "## NOTICE"
               ]
             }
           ]
@@ -707,37 +897,78 @@
               "chapter": [
                 "## App Board",
                 "### #1 App Overview",
-                "### #2 \"Last Changed\" Apps"
+                "### #2 \"Last Changed\" Apps",
+                "## NOTICE"
               ]
             }
           ]
         },
         {
-          "path": "developer/04. Apps/05. App-Subscription Kopie",
-          "name": "05. App-Subscription Kopie",
+          "path": "developer/04. Apps/05. App Subscription",
+          "name": "05. App Subscription",
           "children": [
             {
-              "path": "developer/04. Apps/05. App-Subscription Kopie/App Subscription Request Management - IMPL.md",
-              "name": "App Subscription Request Management - IMPL.md",
+              "path": "developer/04. Apps/05. App Subscription/01. Subscription Flow.md",
+              "name": "01. Subscription Flow.md",
               "chapter": [
-                "# Summary",
-                "# Implementation",
-                "### Function: View Subscriptions (Requests and Active)",
-                "### Function: Sorting",
-                "### #1 View Subscriptions",
-                "### #2 Subscription Activation"
+                "## Implementation",
+                "### #1 POST Subscribe Request",
+                "### #2 Manage (own) App Subscription",
+                "### #3 Manage App Subscriptions",
+                "### #4 Put Inactivate App Subscriptions",
+                "## NOTICE"
               ]
             },
             {
-              "path": "developer/04. Apps/05. App-Subscription Kopie/Subscription Flow - Implementation.md",
-              "name": "Subscription Flow - Implementation.md",
+              "path": "developer/04. Apps/05. App Subscription/01.App Subscription Request Management.md",
+              "name": "01.App Subscription Request Management.md",
               "chapter": [
-                "## Implementation ",
-                "### #1 POST Subscribe Request",
-                "### #2 Subscription Activation",
-                "### #3 Manage (own) App Subscription",
-                "### #4 Manage App Subscriptions",
-                "### #4 Put Inactivate App Subscriptions"
+                "## Summary",
+                "## Management Board",
+                "#### Design Details - Filter function",
+                "### Implementation Details",
+                "#### #1 Function: Search",
+                "#### #2 Function: Views (Requests and Active) / Sorting",
+                "##### Function: Views",
+                "##### Function: Sorting",
+                "#### #3 Filter",
+                "##### 3.1 Retrieve possible filters",
+                "##### 3.2 Select filter option",
+                "#### #4 Subscription Overview",
+                "#### #5 Subscription Details",
+                "## NOTICE"
+              ]
+            },
+            {
+              "path": "developer/04. Apps/05. App Subscription/02. App Subscription Activation (Provider).md",
+              "name": "02. App Subscription Activation (Provider).md",
+              "chapter": [
+                "## App Subscription Activation",
+                "## Implementation",
+                "### Activation Overlay",
+                "### Activation & Success",
+                "##### Data Mapping:",
+                "##### Result",
+                "##### Data Mapping:",
+                "## NOTICE"
+              ]
+            },
+            {
+              "path": "developer/04. Apps/05. App Subscription/03. Unsubscribe.md",
+              "name": "03. Unsubscribe.md",
+              "chapter": [
+                "## Unsubscribe",
+                "### Implementation",
+                "#### #1 GET Subscribed Apps",
+                "##### Business Logic:",
+                "##### Validation:",
+                "#### #2 GET Subscription Details",
+                "##### Business Logic:",
+                "##### Validation:",
+                "#### #3 PUT Unsubscribe",
+                "##### Business Logic:",
+                "##### Validation:",
+                "## NOTICE"
               ]
             }
           ]
@@ -747,9 +978,68 @@
           "name": "06. App Change Process",
           "children": [
             {
-              "path": "developer/04. Apps/06. App Change Process/App Deactivation.md",
-              "name": "App Deactivation.md",
-              "chapter": ["## Summary", "## Implementation"]
+              "path": "developer/04. Apps/06. App Change Process/01. Summary.md",
+              "name": "01. Summary.md",
+              "chapter": ["## Summary", "## NOTICE"]
+            },
+            {
+              "path": "developer/04. Apps/06. App Change Process/02. Change App Lead Image.md",
+              "name": "02. Change App Lead Image.md",
+              "chapter": [
+                "## Summary",
+                "## Implementation",
+                "#### Validation:",
+                "#### Logic:",
+                "## NOTICE"
+              ]
+            },
+            {
+              "path": "developer/04. Apps/06. App Change Process/03. App Instance Url.md",
+              "name": "03. App Instance Url.md",
+              "chapter": [
+                "## App Tenant URL Change",
+                "### Trigger App Instance Url Switch",
+                "## NOTICE"
+              ]
+            },
+            {
+              "path": "developer/04. Apps/06. App Change Process/03. Change App Description.md",
+              "name": "03. Change App Description.md",
+              "chapter": [
+                "## Summary",
+                "## Implementation",
+                "#### Validation:",
+                "#### Logic:",
+                "## NOTICE"
+              ]
+            },
+            {
+              "path": "developer/04. Apps/06. App Change Process/04. App Deactivation.md",
+              "name": "04. App Deactivation.md",
+              "chapter": ["## Summary", "## Implementation", "## NOTICE"]
+            },
+            {
+              "path": "developer/04. Apps/06. App Change Process/05. App Instance Url.md",
+              "name": "05. App Instance Url.md",
+              "chapter": [
+                "## App Tenant URL Change",
+                "### Trigger App Instance Url Switch",
+                "## NOTICE"
+              ]
+            },
+            {
+              "path": "developer/04. Apps/06. App Change Process/06. App Role Change.md",
+              "name": "06. App Role Change.md",
+              "chapter": [
+                "## Summary",
+                "### Implementation",
+                "#### GEt app roles",
+                "#### Add new roles",
+                "#### Validation:",
+                "#### Logic:",
+                "### Connected Implementations",
+                "## NOTICE"
+              ]
             }
           ]
         }
@@ -759,6 +1049,15 @@
       "path": "developer/05. Service(s)",
       "name": "05. Service(s)",
       "children": [
+        {
+          "path": "developer/05. Service(s)/01. Service Change.md",
+          "name": "01. Service Change.md",
+          "chapter": [
+            "#### Others",
+            "###### #1 Update Service Documentation / Additional Details",
+            "## NOTICE"
+          ]
+        },
         {
           "path": "developer/05. Service(s)/01. Service Marketplace",
           "name": "01. Service Marketplace",
@@ -772,7 +1071,8 @@
                 "### #1 Search",
                 "### #2 Filter",
                 "### #3 Sorting",
-                "### #4 Get all active services"
+                "### #4 Get all active services",
+                "## NOTICE"
               ]
             },
             {
@@ -783,7 +1083,8 @@
                 "## Implementation Details",
                 "### #1 Get Service Offer Details",
                 "### #2 Get Service Order Details",
-                "### #3 Download service related documents"
+                "### #3 Download service related documents",
+                "## NOTICE"
               ]
             }
           ]
@@ -793,36 +1094,27 @@
           "name": "02. Service Release Process",
           "children": [
             {
-              "path": "developer/05. Service(s)/02. Service Release Process/01. Service Publish Process.md",
-              "name": "01. Service Publish Process.md",
+              "path": "developer/05. Service(s)/02. Service Release Process/01. Service Card.md",
+              "name": "01. Service Card.md",
               "chapter": [
-                "## Summary",
-                "## Implementation",
-                "### Trigger the Publishing Process",
-                "#### Step 1 - Service Card Details",
-                "##### API Details",
-                "###### #1 Get Service Type",
-                "###### #2 Create Service Offering",
-                "###### #3 Get Service Details",
-                "###### #4 Update Service Offering",
-                "#### Step 2 - Service Page Details",
-                "##### Implementation Details",
-                "##### API Details",
-                "###### #1 Update Service Offering",
-                "###### #2 GET Service Details",
-                "#### Step 3 - Terms & Conditions / Consent",
-                "##### Implementation Details",
-                "##### API Details",
-                "###### #1 Retrieve Terms & Conditions",
-                "###### #2 Retrieve Documents",
-                "###### #3 Store Consent for Agreements",
-                "#### Step 4 - Validate & Submit for Publishing check",
-                "##### Implementation Details",
-                "##### API Details",
-                "###### #1 Get Service Details",
-                "###### #2 Submit new Service Offering for release/publishing",
-                "#### Others",
-                "###### #1 Update Service Documentation / Additional Details"
+                "### Step 1 - Service Card Details",
+                "#### API Details",
+                "#### #1 Get Service Type",
+                "#### #2 Create Service Offering",
+                "#### #3 Get Service Details",
+                "#### #4 Update Service Offering",
+                "## NOTICE"
+              ]
+            },
+            {
+              "path": "developer/05. Service(s)/02. Service Release Process/02. Service Detail Page.md",
+              "name": "02. Service Detail Page.md",
+              "chapter": [
+                "### Step 2 - Service Page Details",
+                "### Implementation Details",
+                "#### #1 Get Service Details",
+                "#### #2 Update Service Offering",
+                "## NOTICE"
               ]
             },
             {
@@ -834,8 +1126,48 @@
                 "### #1 Approve Service Request",
                 "### #2 Decline Service Request",
                 "### #3 Service Details",
-                "### #4 Download service related documents"
+                "### #4 Download service related documents",
+                "## NOTICE"
               ]
+            },
+            {
+              "path": "developer/05. Service(s)/02. Service Release Process/03.Terms&Conditions.md",
+              "name": "03.Terms&Conditions.md",
+              "chapter": [
+                "### Step 3 - Terms & Conditions / Consent",
+                "### Implementation Details",
+                "#### #1 Retrieve Terms & Conditions",
+                "#### #2 Retrieve Documents",
+                "#### #3 Store Consent for Agreements",
+                "## NOTICE"
+              ]
+            },
+            {
+              "path": "developer/05. Service(s)/02. Service Release Process/04.Technical Integration.md",
+              "name": "04.Technical Integration.md",
+              "chapter": [
+                "### Step 4 - Technical Integration",
+                "### #1 GET Available Technical User Permissions",
+                "### #2 Fetch previously service stored Tech User Profile",
+                "### #3 Store Tech User Profile",
+                "## NOTICE"
+              ]
+            },
+            {
+              "path": "developer/05. Service(s)/02. Service Release Process/05.Verify & Submit.md",
+              "name": "05.Verify & Submit.md",
+              "chapter": [
+                "### Step 4 - Validate & Submit for Publishing check",
+                "#### Implementation Details",
+                "#### #1 Get Service Details",
+                "#### #2 Submit new Service Offering for release/publishing",
+                "## NOTICE"
+              ]
+            },
+            {
+              "path": "developer/05. Service(s)/02. Service Release Process/index.md",
+              "name": "index.md",
+              "chapter": ["## Summary", "## NOTICE"]
             }
           ]
         },
@@ -850,7 +1182,8 @@
                 "## Service Approval Board",
                 "### #1 Service Release Overview",
                 "#### Sorting",
-                "#### Views"
+                "#### Views",
+                "## NOTICE"
               ]
             },
             {
@@ -860,21 +1193,27 @@
                 "## Service Details",
                 "### #1 Display Service details",
                 "### #2 Display Images",
-                "### #3 Download Documents"
+                "### #3 Download Documents",
+                "## NOTICE"
               ]
             },
             {
               "path": "developer/05. Service(s)/03. Service Release Approval/03. Approve Service Release.md",
               "name": "03. Approve Service Release.md",
-              "chapter": ["## Implementation", "### #1 Approve Service Release"]
+              "chapter": [
+                "## Implementation",
+                "### #1 Approve Service Release",
+                "## NOTICE"
+              ]
             },
             {
               "path": "developer/05. Service(s)/03. Service Release Approval/04. Decline Service Release.md",
               "name": "04. Decline Service Release.md",
               "chapter": [
                 "## Service Decline Details",
-                "### #1 Decline Service Release",
-                "##### Email Example"
+                "### Decline Service Release",
+                "##### Email Example",
+                "## NOTICE"
               ]
             }
           ]
@@ -887,11 +1226,56 @@
               "path": "developer/05. Service(s)/03. Service Subscription/01. Service Subscription.md",
               "name": "01. Service Subscription.md",
               "chapter": [
-                "# Summary",
+                "## Summary",
                 "# Implementation",
                 "### #1 Get Service Agreements",
                 "### #2 Post Subscription Request",
-                "### #3 Activate Subscription & Tenant"
+                "### #3 Activate Subscription & Tenant",
+                "## NOTICE"
+              ]
+            },
+            {
+              "path": "developer/05. Service(s)/03. Service Subscription/01.Service Subscription Request Management.md",
+              "name": "01.Service Subscription Request Management.md",
+              "chapter": [
+                "## Summary",
+                "## Management Board",
+                "#### Design Details - Filter function",
+                "### Implementation Details",
+                "#### #1 Function: Search",
+                "#### #2 Function: Views (Requests and Active) / Sorting",
+                "##### Function: Views",
+                "##### Function: Sorting",
+                "#### #3 Filter",
+                "##### 3.1 Retrieve possible filters",
+                "##### 3.2 Select filter option",
+                "#### #4 Subscription Overview",
+                "#### #5 Subscription Details",
+                "## NOTICE"
+              ]
+            },
+            {
+              "path": "developer/05. Service(s)/03. Service Subscription/02. Service Subscription Activation (Provider).md",
+              "name": "02. Service Subscription Activation (Provider).md",
+              "chapter": [
+                "## Service Subscription Activation",
+                "## Implementation",
+                "### Activation Overlay",
+                "### Activation & Success",
+                "##### Data Mapping:",
+                "##### Result",
+                "##### Data Mapping:",
+                "## NOTICE"
+              ]
+            },
+            {
+              "path": "developer/05. Service(s)/03. Service Subscription/03. Unsubscribe.md",
+              "name": "03. Unsubscribe.md",
+              "chapter": [
+                "## Unsubscribe",
+                "### Implementation",
+                "#### #1 PUT Unsubscribe",
+                "## NOTICE"
               ]
             }
           ]
@@ -909,7 +1293,30 @@
                 "### #2 Service Details",
                 "#### Scenario: Service in Status \"ACTIVE\" or \"INACTIVE\"",
                 "#### Scenario: Service in Status \"IN PROGRESS\"",
-                "### #3 Download service related documents"
+                "### #3 Download service related documents",
+                "## NOTICE"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "developer/05. Service(s)/06. Service Change Process",
+          "name": "06. Service Change Process",
+          "children": [
+            {
+              "path": "developer/05. Service(s)/06. Service Change Process/01. Summary.md",
+              "name": "01. Summary.md",
+              "chapter": ["## Summary", "## NOTICE"]
+            },
+            {
+              "path": "developer/05. Service(s)/06. Service Change Process/02. Service Deactivation.md",
+              "name": "02. Service Deactivation.md",
+              "chapter": [
+                "## Summary",
+                "## Implementation",
+                "### Implementation Details/Logics UI",
+                "### Implementation Details/Logics BE",
+                "## NOTICE"
               ]
             }
           ]
@@ -921,6 +1328,11 @@
       "name": "Technical Documentation",
       "children": [
         {
+          "path": "developer/Technical Documentation/.DS_Store",
+          "name": ".DS_Store",
+          "chapter": []
+        },
+        {
           "path": "developer/Technical Documentation/Architecture",
           "name": "Architecture",
           "children": [
@@ -931,13 +1343,14 @@
                 "# Architecture Constraints",
                 "## General",
                 "## Developer",
-                "## Code analysis, linting and code coverage"
+                "## Code analysis, linting and code coverage",
+                "## NOTICE"
               ]
             },
             {
               "path": "developer/Technical Documentation/Architecture/Building block view.md",
               "name": "Building block view.md",
-              "chapter": ["# Building Block View"]
+              "chapter": ["# Building Block View", "## NOTICE"]
             },
             {
               "path": "developer/Technical Documentation/Architecture/Context and scope.md",
@@ -945,7 +1358,8 @@
               "chapter": [
                 "# Content and Scope",
                 "## Business Context",
-                "## Technical Context"
+                "## Technical Context",
+                "## NOTICE"
               ]
             },
             {
@@ -956,8 +1370,26 @@
                 "## Build, test, deploy",
                 "## Development Guidelines",
                 "#### Swagger",
+                "#### API Dev Guidelines",
+                "###### Implement authorization",
+                "###### Validate all requests",
+                "###### Encrypt all requests and responses",
+                "###### Only include necessary information in responses",
+                "###### Throttle API requests and establish quotas",
+                "###### Log API activity",
+                "###### Conduct security tests",
+                "###### Pagination",
+                "###### Error Handling",
+                "###### Repository Pattern",
+                "##### Tests",
+                "###### User Authentication Test",
+                "###### Parameter Tampering Test",
+                "###### Injection Test",
+                "###### Unhandled HTTP Methods Test",
+                "###### Load Test",
                 "## Migration",
-                "## Configurability"
+                "## Configurability",
+                "## NOTICE"
               ]
             },
             {
@@ -966,13 +1398,30 @@
               "chapter": [
                 "# Requirements overview",
                 "## What is the Portal & Marketplace Product?",
-                "## Requirements"
+                "## Requirements",
+                "## NOTICE"
+              ]
+            },
+            {
+              "path": "developer/Technical Documentation/Architecture/Security-Assessment.md",
+              "name": "Security-Assessment.md",
+              "chapter": [
+                "# Security Assessment Portal (incl. Frontend, Backend Services, IAM and other infrastructure)",
+                "## Product Description",
+                "### Important Links",
+                "## Data Flow Diagram",
+                "### Changes compared to last Security Assessment",
+                "### Features for Upcoming Versions",
+                "## Threats & Risks",
+                "### Mitigated Threats",
+                "### Performed Security Checks",
+                "## NOTICE"
               ]
             },
             {
               "path": "developer/Technical Documentation/Architecture/Solution strategy.md",
               "name": "Solution strategy.md",
-              "chapter": ["# Solution Strategy"]
+              "chapter": ["# Solution Strategy", "## NOTICE"]
             },
             {
               "path": "developer/Technical Documentation/Architecture/Whitebox Overall System.md",
@@ -985,7 +1434,8 @@
                 "### Registration (Company Onboarding)",
                 "### Central IdP & Shared IdP",
                 "### Marketplace",
-                "### Important Interfaces"
+                "### Important Interfaces",
+                "## NOTICE"
               ]
             },
             {
@@ -1002,7 +1452,8 @@
                 "## Scaling",
                 "## Clustering",
                 "## Logging",
-                "## Monitoring"
+                "## Monitoring",
+                "## NOTICE"
               ]
             }
           ]
@@ -1020,13 +1471,17 @@
                 "#### App Images",
                 "#### App Release Date",
                 "#### App Use Case",
-                "#### App Privacy Policy"
+                "#### App Privacy Policy",
+                "#### App Date Last Changed",
+                "###### App Change",
+                "###### App Release",
+                "## NOTICE"
               ]
             },
             {
               "path": "developer/Technical Documentation/DB Views and Details/Connector - DB - View.md",
               "name": "Connector - DB - View.md",
-              "chapter": ["## Connector DB"]
+              "chapter": ["## Connector DB", "## NOTICE"]
             },
             {
               "path": "developer/Technical Documentation/DB Views and Details/Data Management.md",
@@ -1035,13 +1490,18 @@
                 "## Categories of Data",
                 "## Master Data",
                 "## Transactional Data",
-                "## Layering Concept on Keycloak side"
+                "## Layering Concept on Keycloak side",
+                "## NOTICE"
               ]
             },
             {
               "path": "developer/Technical Documentation/DB Views and Details/Documents - DB - View.md",
               "name": "Documents - DB - View.md",
-              "chapter": ["## Documents", "## Document DB Connection"]
+              "chapter": [
+                "## Documents",
+                "## Document DB Connection",
+                "## NOTICE"
+              ]
             },
             {
               "path": "developer/Technical Documentation/DB Views and Details/Subscription - DB - View.md",
@@ -1049,8 +1509,9 @@
               "chapter": [
                 "## Subscription",
                 "### Subscription DB Connection",
-                "#### Difference Offer_Subscription and App_Subscriptionn_Details",
-                "#### Display Name"
+                "#### Difference Offer_Subscription and App_Subscription_Details",
+                "#### Display Name",
+                "## NOTICE"
               ]
             }
           ]
@@ -1062,12 +1523,15 @@
             {
               "path": "developer/Technical Documentation/Dev Process/Dev-flow_deploy-dev-env.md",
               "name": "Dev-flow_deploy-dev-env.md",
-              "chapter": ["# Dev flow with deployment to dev environment"]
+              "chapter": [
+                "# Dev flow with deployment to dev environment",
+                "## NOTICE"
+              ]
             },
             {
               "path": "developer/Technical Documentation/Dev Process/Dev-flow_git-diagram.md",
               "name": "Dev-flow_git-diagram.md",
-              "chapter": ["# Dev flow (git diagram)"]
+              "chapter": ["# Dev flow (git diagram)", "## NOTICE"]
             },
             {
               "path": "developer/Technical Documentation/Dev Process/Enumeration Handling.md",
@@ -1076,7 +1540,8 @@
                 "## Enumeration",
                 "### Add Enums",
                 "### Change Enums",
-                "### Delete Enums"
+                "### Delete Enums",
+                "## NOTICE"
               ]
             },
             {
@@ -1091,7 +1556,8 @@
                 "## Commit and PR guidelines",
                 "### Commits",
                 "### PR title",
-                "### PR description"
+                "### PR description",
+                "## NOTICE"
               ]
             },
             {
@@ -1102,7 +1568,8 @@
                 "## Summary",
                 "## Technical Implementation",
                 "### Portal-Registration",
-                "### CX-Portal"
+                "### CX-Portal",
+                "## NOTICE"
               ]
             },
             {
@@ -1114,207 +1581,18 @@
                 "## Set up a local development environment",
                 "#### 1. Start the portal webserver instance on local port 3001",
                 "#### 2. Start the registration app webserver instance on local port 3002",
-                "#### 3. Start the reverse proxy and assets webserver instance on ports 3000 and 3003"
-              ]
-            }
-          ]
-        },
-        {
-          "path": "developer/Technical Documentation/Identity & Access",
-          "name": "Identity & Access",
-          "children": [
-            {
-              "path": "developer/Technical Documentation/Identity & Access/00. External Identity Provider.md",
-              "name": "00. External Identity Provider.md",
-              "chapter": ["## How does the external IdP connection work?"]
-            },
-            {
-              "path": "developer/Technical Documentation/Identity & Access/01. Introduction.md",
-              "name": "01. Introduction.md",
-              "chapter": [
-                "## Identity & Access Management",
-                "### As-Is Authentication Management",
-                "### Authentication Protocol - OpenID Connect (OIDC)"
+                "#### 3. Start the reverse proxy and assets webserver instance on ports 3000 and 3003",
+                "## NOTICE"
               ]
             },
             {
-              "path": "developer/Technical Documentation/Identity & Access/02. Generic Setup.md",
-              "name": "02. Generic Setup.md",
+              "path": "developer/Technical Documentation/Dev Process/Shared Components.md",
+              "name": "Shared Components.md",
               "chapter": [
-                "## Generic Setup",
-                "### Identity Provider",
-                "#### Requirement",
-                "#### What's a Keycloak identity provider",
-                "#### Brokering overview",
-                "#### (Change) Identity Provider Display Name",
-                "#### Delete Identity Provider",
-                "### Realms",
-                "#### Requirement",
-                "#### Realm Emails",
-                "###### Host",
-                "###### Port",
-                "###### From",
-                "###### From Display Name",
-                "###### Reply To",
-                "###### Reply To Display Name",
-                "###### Envelope From",
-                "###### Enable Authentication"
-              ]
-            },
-            {
-              "path": "developer/Technical Documentation/Identity & Access/03. Clients.md",
-              "name": "03. Clients.md",
-              "chapter": [
-                "## Clients",
-                "### Overview Clients",
-                "### Client Creation",
-                "### Initial Client Load",
-                "### Client Authentication Concept",
-                "##### Scenario 1 - Only one DFT Client - one for all customer",
-                "##### Scenario 2 - Multiple DFT Clients - one for each customer"
-              ]
-            },
-            {
-              "path": "developer/Technical Documentation/Identity & Access/03. User Management.md",
-              "name": "03. User Management.md",
-              "chapter": [
-                "## User Management",
-                "### Technical User",
-                "#### Role Management",
-                "### User Attributes",
-                "#### bpn-mapper",
-                "#### username-mapper",
-                "### View Users in a realm",
-                "### Create New User"
-              ]
-            },
-            {
-              "path": "developer/Technical Documentation/Identity & Access/04. Authentication Configuration.md",
-              "name": "04. Authentication Configuration.md",
-              "chapter": ["## Authentication Configuration"]
-            },
-            {
-              "path": "developer/Technical Documentation/Identity & Access/05. Roles & Rights Concept.md",
-              "name": "05. Roles & Rights Concept.md",
-              "chapter": [
-                "## 1. General details",
-                "### 1.1 Scope and binding force of the document",
-                "### 1.2 Affected application",
-                "### 1.3 Referenced documents",
-                "## 2. Authorization structure and role model",
-                "### 2.1 Underlying business processes and roles:",
-                "### 2.2 Basic principles",
-                "### 2.3 Individual privileges and authorization framework",
-                "### 2.4 Role definition",
-                "### 2.5 Role/Permission Matrix",
-                "#### 2.5.1 Technical User (portal internal)",
-                "#### 2.5.2 Registration Application",
-                "#### 2.5.3 Portal Application",
-                "#### 2.5.3b Technical User Accounts",
-                "#### 2.5.4 Managed Wallets",
-                "#### 2.5.5 BPDM",
-                "#### 2.5.6 BPDM Gate",
-                "#### 2.5.7 BPDMShare",
-                "### 2.6 Segregation of duties",
-                "## 3. Global subjects",
-                "### 3.1 Authorization management connections",
-                "### 3.2 Used infrastructure components",
-                "### 3.3 Privileged and technical user accounts",
-                "### 3.4 Technical restrictions",
-                "### 3.5 Logging the use",
-                "## 4. Authorization procedure",
-                "## 5. Appendix"
-              ]
-            },
-            {
-              "path": "developer/Technical Documentation/Identity & Access/06. Password Policy.md",
-              "name": "06. Password Policy.md",
-              "chapter": [
-                "# Password Policy",
-                "## Password Policy",
-                "#### How to configure Password Policies",
-                "#### Implementation",
-                "##Password Reset",
-                "#### How to configure Password Recovery",
-                "#### Implementation",
-                "## 2-Factor-Auth",
-                "#### Setup for Catena-X",
-                "##### Config for the Master Realm",
-                "##### Config for the Catena-X Realm",
-                "##### Config for the Company Spec. Realm",
-                "#### How to Setup - Yubikey as 2-Fact-Auth",
-                "##### #1 Create New Auth Flow as shown below",
-                "##### #2 Set the Auth Flow as browser flow",
-                "##### #3 Update the Required Actions"
-              ]
-            },
-            {
-              "path": "developer/Technical Documentation/Identity & Access/07. Email Configuration.md",
-              "name": "07. Email Configuration.md",
-              "chapter": [
-                "# IdP Email Configuration",
-                "## Requirement",
-                "## How to configuring email for a realm",
-                "###### Host",
-                "###### Port",
-                "###### From",
-                "###### From Display Name",
-                "###### Reply To",
-                "###### Reply To Display Name",
-                "###### Envelope From",
-                "###### Enable Authentication",
-                "#### Catena-X Implementation"
-              ]
-            },
-            {
-              "path": "developer/Technical Documentation/Identity & Access/08. Event Logging.md",
-              "name": "08. Event Logging.md",
-              "chapter": [
-                "# Event Logging",
-                "## Requirement",
-                "## Keycloak events",
-                "## Configure Logging",
-                "##### Keycloak Admin UI/DB",
-                "###### Event Configuration",
-                "###### Save Events",
-                "###### Login Events",
-                "###### Login Event Filter",
-                "###### Event Types",
-                "##### Log Files",
-                "## Event Listener"
-              ]
-            },
-            {
-              "path": "developer/Technical Documentation/Identity & Access/09. Generic Security.md",
-              "name": "09. Generic Security.md",
-              "chapter": [
-                "## Security Generic",
-                "### Host",
-                "### Bruce Force Detection",
-                "#### Catena-X configuration",
-                "##### Preventing automated attacks",
-                "##### Preventing manual attacks",
-                "### Clickjacking",
-                "### Open redirections",
-                "### Compromised Authorization code",
-                "### Compromised access and refresh tokens",
-                "### CSRF attack",
-                "### Limiting Scope - Client Token",
-                "### Client Policies"
-              ]
-            },
-            {
-              "path": "developer/Technical Documentation/Identity & Access/10. FAQ.md",
-              "name": "10. FAQ.md",
-              "chapter": [
-                "## FAQ",
-                "### How to crete new roles",
-                "##### Portal Role",
-                "##### App Role",
-                "##### Technical User Role",
-                "### What is the difference between roles & permission",
-                "### How to setup technical user authentication",
-                "### Retrieve token for service account"
+                "# Developing Shared Components",
+                "## Introduction",
+                "## Developing Shared Components",
+                "## NOTICE"
               ]
             }
           ]
@@ -1335,21 +1613,43 @@
                 "### Get Business Partner data",
                 "#### Data Mapping for Company Data",
                 "#### Get Membership Flag",
-                "#### Data Mapping for Company Data"
+                "#### Data Mapping for Company Data",
+                "## NOTICE"
               ]
             },
             {
               "path": "developer/Technical Documentation/Interface Contracts/BPDM.md",
               "name": "BPDM.md",
               "chapter": [
-                "# Business Partner Data Management",
-                "## Interface Summary",
-                "## Architecture Overview",
-                "## Description of the functional interface (WHAT)",
-                "## Description of the physical interfaces (HOW)",
-                "### Service Call via BPN",
-                "#### Data Mapping for Company Data",
-                "### Service Call via CompanyName"
+                "## Business Partner Data Management",
+                "## Search existing Business Partners",
+                "### Interface Summary",
+                "### Architecture Overview",
+                "### Description of the functional interface (WHAT)",
+                "### Description of the physical interfaces (HOW)",
+                "#### Service Call via BPN",
+                "##### Data Mapping for Company Data",
+                "## Push new Business Partners",
+                "### Interface Summary",
+                "### Architecture Overview",
+                "### Description of the functional interface (WHAT)",
+                "### Description of the physical interfaces (HOW)",
+                "#### Service Call Details",
+                "##### Data Submission Details",
+                "## Pull new Business Partner BPNL",
+                "### Interface Summary",
+                "### Architecture Overview",
+                "### Description of the functional interface (WHAT)",
+                "### Description of the physical interfaces (HOW)",
+                "#### Service Call Details",
+                "## Partner Network",
+                "### Interface Summary",
+                "### Architecture Overview",
+                "### Description of the functional interface (WHAT)",
+                "### Description of the physical interfaces (HOW)",
+                "#### Get Business Partner data",
+                "##### Get Membership Flag",
+                "## NOTICE"
               ]
             },
             {
@@ -1362,7 +1662,22 @@
                 "## Implementation",
                 "### #1 CX Membership Discovery",
                 "###### Request Body",
-                "###### Response Body"
+                "###### Response Body",
+                "## NOTICE"
+              ]
+            },
+            {
+              "path": "developer/Technical Documentation/Interface Contracts/Clearinghouse.md",
+              "name": "Clearinghouse.md",
+              "chapter": [
+                "## Clearinghouse",
+                "### Interface Summary",
+                "### Architecture Overview",
+                "#### #1 Notarization Check",
+                "#### #2 Compliance Check",
+                "### Authentication Flow / Details",
+                "### Description of the functional interface (WHAT) and the physical interfaces (HOW)",
+                "## NOTICE"
               ]
             },
             {
@@ -1375,22 +1690,26 @@
                 "## Implementation",
                 "### #1 EDC Discovery",
                 "###### Request Body",
-                "###### Response Body"
+                "###### Response Body",
+                "## NOTICE"
               ]
             },
             {
               "path": "developer/Technical Documentation/Interface Contracts/Managed Wallets.md",
               "name": "Managed Wallets.md",
               "chapter": [
-                "# Managed Wallets",
-                "## Interface Summary",
-                "## Architecture Overview",
-                "### #1 Company Registration",
-                "### #2 Company Registration",
-                "## Authentication Flow / Details",
-                "## Description of the functional interface (WHAT)",
-                "## Description of the physical interfaces (HOW)",
-                "## APIs"
+                "## Managed Wallets",
+                "### Interface Summary",
+                "### Architecture Overview",
+                "#### #1 Company Registration",
+                "#### #2 EDC Registration",
+                "### Authentication Flow / Details",
+                "### Description of the functional interface (WHAT)",
+                "### Description of the physical interfaces (HOW)",
+                "#### Wallet Creation & BPN VC",
+                "#### Framework VC",
+                "#### Dismantler VC",
+                "## NOTICE"
               ]
             },
             {
@@ -1405,7 +1724,9 @@
                 "## Implementation",
                 "### #1 PUT Service URL",
                 "### #2 POST Service Request",
-                "### #3 POST Service Instance"
+                "### #3 POST Service Instance",
+                "## Checklist Worker",
+                "## NOTICE"
               ]
             },
             {
@@ -1422,7 +1743,8 @@
                 "### 1.2 Service (Type of SD is \"ServiceOffering\")",
                 "## 2. Self Description Storage",
                 "## 3. Self Description Deletion",
-                "## 4. Self Description Discovery"
+                "## 4. Self Description Discovery",
+                "## NOTICE"
               ]
             }
           ]
@@ -1432,12 +1754,21 @@
           "name": "Operations",
           "children": [
             {
+              "path": "developer/Technical Documentation/Operations/.DS_Store",
+              "name": ".DS_Store",
+              "chapter": []
+            },
+            {
               "path": "developer/Technical Documentation/Operations/Auditing.md",
               "name": "Auditing.md",
               "chapter": [
                 "# Audit Logging",
                 "## PostgreSQL Session Logging (pgAudit)",
-                "## Application Audit Logging"
+                "## Application Audit Logging",
+                "### Implementation Details",
+                "### Why we use versioning for the audit tables?",
+                "### How to enable an entity to be auditable in the code (Example: CompanyUser)",
+                "## NOTICE"
               ]
             },
             {
@@ -1448,24 +1779,14 @@
                 "## Preparations on the release branch",
                 "### 1. Version bump",
                 "### 2. Update changelog file",
-                "### 3. Update dependencies file",
-                "### 4. License check with the Eclipse Dash License Tool",
-                "### 5. Aggregate migrations (backend repo only)",
+                "### 3. Aggregate migrations (backend repo only)",
+                "## RC: checkout release-candidate branch",
                 "## Tag and build of versioned images",
-                "## Merge release branch",
                 "## Release new helm chart version",
+                "## RC: provide successive RC branch and change base of open PRs",
+                "## Merge release branch",
                 "## Create releases from tags",
-                "## Publish new version of Shared UI Components to npm"
-              ]
-            },
-            {
-              "path": "developer/Technical Documentation/Operations/Tests.md",
-              "name": "Tests.md",
-              "chapter": [
-                "## Summary",
-                "## Unit Tests",
-                "## Test Automation",
-                "## Manual Tests"
+                "## NOTICE"
               ]
             }
           ]
@@ -1488,7 +1809,8 @@
                 "## #1 Get Documents",
                 "## #2 POST Document",
                 "## #3 Ad-Hoc Delete Documents",
-                "## #4 Batch Delete Documents"
+                "## #4 Batch Delete Documents",
+                "## NOTICE"
               ]
             },
             {
@@ -1504,8 +1826,9 @@
                 "### E-Mail Invite additional Users",
                 "### E-Mail Submitted Registration & Next Steps",
                 "### E-Mail Welcome to Catena-X - Join the Network",
-                "### E-Mail Passwort Reset",
-                "### E-Mail Invite New User to Portal"
+                "### E-Mail Password Reset",
+                "### E-Mail Invite New User to Portal",
+                "## NOTICE"
               ]
             },
             {
@@ -1522,7 +1845,8 @@
                 "## Scaling",
                 "## Creating and Manipulating Images",
                 "## Caching",
-                "## Final Considerations"
+                "## Final Considerations",
+                "## NOTICE"
               ]
             },
             {
@@ -1544,20 +1868,175 @@
                 "### #2 Get User Notification Count-Details",
                 "### #3 Get User Notification Details",
                 "### #4 PUT User Notification \"read\" / \"unread\"",
-                "### #5 DELETE User notification ",
+                "### #5 DELETE User notification",
                 "### #6 Implemented Sorting feature",
                 "###### VIEW ALL (inside the filter)",
-                "###### VIEW APP  (inside the filter)",
-                "###### VIEW Info (inside the filter) ",
-                "###### View Action Required  (inside the filter)",
+                "###### VIEW APP (inside the filter)",
+                "###### VIEW Info (inside the filter)",
+                "###### View Action Required (inside the filter)",
                 "### #7 Implemented Views",
                 "## Configuration",
                 "### Notification Types / Messages",
                 "#### Welcome",
+                "#### Manage your company details",
                 "#### Offer Release Request",
+                "#### Offer Change Process",
                 "#### Offer Subscription",
                 "#### User Role Change",
-                "## Notification \"Done\" State"
+                "## Notification \"Done\" State",
+                "## NOTICE"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "developer/Technical Documentation/Tests",
+          "name": "Tests",
+          "children": [
+            {
+              "path": "developer/Technical Documentation/Tests/Automation",
+              "name": "Automation",
+              "children": [
+                {
+                  "path": "developer/Technical Documentation/Tests/Automation/01. Summary.md",
+                  "name": "01. Summary.md",
+                  "chapter": [
+                    "## How to run",
+                    "## Users for TestAutomation",
+                    "## Management of secrets and environment variables",
+                    "## Structure",
+                    "### Health Check Tests",
+                    "#### [PortalHealthCheck](04.%20PortalHealthCheck.md)",
+                    "#### [InterfacePartnerHealthCheck](03.%20InterfacePArtnerHealthCheck.md)",
+                    "### Functional E2E Tests",
+                    "#### [Registration scenarios](05.%20RegistrationScenarios.md)",
+                    "#### [Notification initial scenario](NotificationInitSceanrio.md)",
+                    "#### [Service Account CUD Scenarios](ServiceAccountCUDScenarios.md)",
+                    "## Test Parametrization",
+                    "## ReportPortal",
+                    "## NOTICE"
+                  ]
+                },
+                {
+                  "path": "developer/Technical Documentation/Tests/Automation/02. Access Token Retrieval.md",
+                  "name": "02. Access Token Retrieval.md",
+                  "chapter": [
+                    "# Access Token Retrieval",
+                    "## Authentication Flow",
+                    "### Authenticate existing and new users: Start",
+                    "### Authenticate new users only: Update Password",
+                    "### Authenticate existing and new users: End",
+                    "## Use of disposable email addresses",
+                    "### DeveloperMail API",
+                    "### TempMail API",
+                    "## NOTICE"
+                  ]
+                },
+                {
+                  "path": "developer/Technical Documentation/Tests/Automation/03. InterfacePartnerHealthCheck.md",
+                  "name": "03. InterfacePartnerHealthCheck.md",
+                  "chapter": [
+                    "## BPDM",
+                    "### Availability",
+                    "## ClearingHouse",
+                    "### Availability",
+                    "## SD Factory",
+                    "### Availability",
+                    "## Wallet",
+                    "### Availability",
+                    "### Create and Duplication Check",
+                    "## NOTICE"
+                  ]
+                },
+                {
+                  "path": "developer/Technical Documentation/Tests/Automation/04. PortalHealthCheck.md",
+                  "name": "04. PortalHealthCheck.md",
+                  "chapter": [
+                    "## Base Data Load Check for Administration Service",
+                    "## Registration Health Check for Registration Service",
+                    "## NOTICE"
+                  ]
+                },
+                {
+                  "path": "developer/Technical Documentation/Tests/Automation/05. RegistrationScenarios.md",
+                  "name": "05. RegistrationScenarios.md",
+                  "chapter": [
+                    "## Happy path - new registration without BPN",
+                    "## Happy path - new registration with BPN",
+                    "## In-Registration member invitation",
+                    "## Company detail data update",
+                    "## UnHappy path - new registration without document",
+                    "## NOTICE"
+                  ]
+                },
+                {
+                  "path": "developer/Technical Documentation/Tests/Automation/06. NotificiationInitScenario.md",
+                  "name": "06. NotificiationInitScenario.md",
+                  "chapter": ["## NOTICE"]
+                },
+                {
+                  "path": "developer/Technical Documentation/Tests/Automation/07. ServiceAccountCUDScenarios.md",
+                  "name": "07. ServiceAccountCUDScenarios.md",
+                  "chapter": [
+                    "## Create a new service account",
+                    "## Create a new service account and update the same",
+                    "## Create a new service account and update the credentials",
+                    "## Create and delete a new service account",
+                    "## NOTICE"
+                  ]
+                },
+                {
+                  "path": "developer/Technical Documentation/Tests/Automation/08. TestDataFileSetup.md",
+                  "name": "08. TestDataFileSetup.md",
+                  "chapter": [
+                    "## General instructions for working with the test data files",
+                    "## Test data files for registration scenarios",
+                    "### Scenario: Registration without Bpn",
+                    "### Scenario: Update company detail data",
+                    "## Test data file for service account CUD scenarios",
+                    "## Test data file for create app scenario",
+                    "## Test documents",
+                    "## Hardcoded values in the test scenarios",
+                    "## NOTICE"
+                  ]
+                },
+                {
+                  "path": "developer/Technical Documentation/Tests/Automation/09. CreateAppScenario.md",
+                  "name": "09. CreateAppScenario.md",
+                  "chapter": [
+                    "## Actual E2E scenario",
+                    "## Fetching relevant metadata",
+                    "### Privacy policies",
+                    "### Language tags",
+                    "### Use cases",
+                    "### Agreement consents",
+                    "### Technical user profiles",
+                    "## NOTICE"
+                  ]
+                },
+                {
+                  "path": "developer/Technical Documentation/Tests/Automation/10. ReportPortal.md",
+                  "name": "10. ReportPortal.md",
+                  "chapter": [
+                    "# ReportPortal",
+                    "## How to deploy ReportPortal",
+                    "## Widget configuration",
+                    "## Test Automation Integration",
+                    "## NOTICE"
+                  ]
+                }
+              ]
+            },
+            {
+              "path": "developer/Technical Documentation/Tests/Tests.md",
+              "name": "Tests.md",
+              "chapter": [
+                "## Summary",
+                "## Unit Tests",
+                "## Test Automation",
+                "## Manual Tests",
+                "## Penetration Tests",
+                "## NOTICE"
               ]
             }
           ]
@@ -1571,11 +2050,27 @@
               "name": "portal-upgrade-details.md",
               "chapter": [
                 "## Summary",
-                "#### Technical User Profiles - NEW - 1.4.0",
-                "#### License Types - NEW & ENHANCED- 1.4.0",
-                "#### Mediatype - NEW & ENHANCED - 1.2.0",
-                "#### Application Checklist - ENHANCED - 1.1.0",
-                "#### Service Details - NEW (interim) - 1.1.0"
+                "### v1.7.0",
+                "#### PostgreSQL - Upgrade",
+                "#### Company Service Account - FIX",
+                "#### Enable OSP Provider IdPs - Update",
+                "#### Enable Application Types - NEW",
+                "#### Enable Onboarding Service Provider - NEW",
+                "#### Technical Role - UPDATE",
+                "#### Database Constraints - FIX",
+                "#### Technical User Profile - CHANGE",
+                "### v1.6.0",
+                "#### Company Credential Details - NEW",
+                "#### Connectors - CHANGED",
+                "### v1.4.0",
+                "#### Technical User Profiles - NEW",
+                "#### License Types - NEW & ENHANCED",
+                "### v1.2.0",
+                "#### Mediatype - NEW & ENHANCED",
+                "### v1.1.0",
+                "#### Application Checklist - ENHANCED",
+                "#### Service Details - NEW (interim)",
+                "## NOTICE"
               ]
             }
           ]
