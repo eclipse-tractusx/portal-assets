@@ -1,27 +1,22 @@
 {
-  "path": "docs/developer",
+  "path": "developer",
   "name": "Catena-X Developer Documentation",
   "children": [
     {
-      "path": "docs/developer/.DS_Store",
-      "name": ".DS_Store",
-      "chapter": []
-    },
-    {
-      "path": "docs/developer/01. Onboarding",
+      "path": "developer/01. Onboarding",
       "name": "01. Onboarding",
       "children": [
         {
-          "path": "docs/developer/01. Onboarding/01. Invite",
+          "path": "developer/01. Onboarding/01. Invite",
           "name": "01. Invite",
           "children": [
             {
-              "path": "docs/developer/01. Onboarding/01. Invite/01. Summary.md",
+              "path": "developer/01. Onboarding/01. Invite/01. Summary.md",
               "name": "01. Summary.md",
               "chapter": ["## Summary", "## NOTICE"]
             },
             {
-              "path": "docs/developer/01. Onboarding/01. Invite/02. Overview Invited Companies.md",
+              "path": "developer/01. Onboarding/01. Invite/02. Overview Invited Companies.md",
               "name": "02. Overview Invited Companies.md",
               "chapter": [
                 "## Get Invited Companies",
@@ -30,18 +25,18 @@
               ]
             },
             {
-              "path": "docs/developer/01. Onboarding/01. Invite/03. Invite Company_Create Application.md",
+              "path": "developer/01. Onboarding/01. Invite/03. Invite Company_Create Application.md",
               "name": "03. Invite Company_Create Application.md",
               "chapter": ["## Invite Company", "#### API Details", "## NOTICE"]
             }
           ]
         },
         {
-          "path": "docs/developer/01. Onboarding/02. Registration",
+          "path": "developer/01. Onboarding/02. Registration",
           "name": "02. Registration",
           "children": [
             {
-              "path": "docs/developer/01. Onboarding/02. Registration/01. Login.md",
+              "path": "developer/01. Onboarding/02. Registration/01. Login.md",
               "name": "01. Login.md",
               "chapter": [
                 "# Intro",
@@ -52,7 +47,7 @@
               ]
             },
             {
-              "path": "docs/developer/01. Onboarding/02. Registration/02. Add Company Data.md",
+              "path": "developer/01. Onboarding/02. Registration/02. Add Company Data.md",
               "name": "02. Add Company Data.md",
               "chapter": [
                 "## Add Company Data",
@@ -75,7 +70,7 @@
               ]
             },
             {
-              "path": "docs/developer/01. Onboarding/02. Registration/03. Add Additional Users.md",
+              "path": "developer/01. Onboarding/02. Registration/03. Add Additional Users.md",
               "name": "03. Add Additional Users.md",
               "chapter": [
                 "# Implementation",
@@ -85,7 +80,7 @@
               ]
             },
             {
-              "path": "docs/developer/01. Onboarding/02. Registration/04. Company Role & Consent.md",
+              "path": "developer/01. Onboarding/02. Registration/04. Company Role & Consent.md",
               "name": "04. Company Role & Consent.md",
               "chapter": [
                 "# Implementation",
@@ -97,7 +92,7 @@
               ]
             },
             {
-              "path": "docs/developer/01. Onboarding/02. Registration/05. Document Upload.md",
+              "path": "developer/01. Onboarding/02. Registration/05. Document Upload.md",
               "name": "05. Document Upload.md",
               "chapter": [
                 "# Implementation",
@@ -111,7 +106,7 @@
               ]
             },
             {
-              "path": "docs/developer/01. Onboarding/02. Registration/06. Verify Registration Data.md",
+              "path": "developer/01. Onboarding/02. Registration/06. Verify Registration Data.md",
               "name": "06. Verify Registration Data.md",
               "chapter": [
                 "## Verify Registration Data data",
@@ -122,7 +117,7 @@
               ]
             },
             {
-              "path": "docs/developer/01. Onboarding/02. Registration/07. Error Scenarios.md",
+              "path": "developer/01. Onboarding/02. Registration/07. Error Scenarios.md",
               "name": "07. Error Scenarios.md",
               "chapter": [
                 "## Error Scenarios",
@@ -139,11 +134,11 @@
           ]
         },
         {
-          "path": "docs/developer/01. Onboarding/03. Registration Approval",
+          "path": "developer/01. Onboarding/03. Registration Approval",
           "name": "03. Registration Approval",
           "children": [
             {
-              "path": "docs/developer/01. Onboarding/03. Registration Approval/02. View Company Application(s).md",
+              "path": "developer/01. Onboarding/03. Registration Approval/02. View Company Application(s).md",
               "name": "02. View Company Application(s).md",
               "chapter": [
                 "## View Company Application(s)",
@@ -163,7 +158,7 @@
               ]
             },
             {
-              "path": "docs/developer/01. Onboarding/03. Registration Approval/03. Registration Approval Process.md",
+              "path": "developer/01. Onboarding/03. Registration Approval/03. Registration Approval Process.md",
               "name": "03. Registration Approval Process.md",
               "chapter": [
                 "## Summary",
@@ -197,7 +192,7 @@
               ]
             },
             {
-              "path": "docs/developer/01. Onboarding/03. Registration Approval/04. Decline Application.md",
+              "path": "developer/01. Onboarding/03. Registration Approval/04. Decline Application.md",
               "name": "04. Decline Application.md",
               "chapter": [
                 "## Decline Company Application",
@@ -206,7 +201,7 @@
               ]
             },
             {
-              "path": "docs/developer/01. Onboarding/03. Registration Approval/index.md",
+              "path": "developer/01. Onboarding/03. Registration Approval/index.md",
               "name": "index.md",
               "chapter": [
                 "## Summary",
@@ -220,20 +215,20 @@
       ]
     },
     {
-      "path": "docs/developer/02. Technical Integration",
+      "path": "developer/02. Technical Integration",
       "name": "02. Technical Integration",
       "children": [
         {
-          "path": "docs/developer/02. Technical Integration/01. Connector Registration",
+          "path": "developer/02. Technical Integration/01. Connector Registration",
           "name": "01. Connector Registration",
           "children": [
             {
-              "path": "docs/developer/02. Technical Integration/01. Connector Registration/01. Summary.md",
+              "path": "developer/02. Technical Integration/01. Connector Registration/01. Summary.md",
               "name": "01. Summary.md",
               "chapter": ["# Summary", "## NOTICE"]
             },
             {
-              "path": "docs/developer/02. Technical Integration/01. Connector Registration/02. View Connector.md",
+              "path": "developer/02. Technical Integration/01. Connector Registration/02. View Connector.md",
               "name": "02. View Connector.md",
               "chapter": [
                 "## View Connector",
@@ -252,7 +247,7 @@
               ]
             },
             {
-              "path": "docs/developer/02. Technical Integration/01. Connector Registration/03. Create new Connector Registration.md",
+              "path": "developer/02. Technical Integration/01. Connector Registration/03. Create new Connector Registration.md",
               "name": "03. Create new Connector Registration.md",
               "chapter": [
                 "## 1. Create new Connector Registration - self-owned",
@@ -268,7 +263,7 @@
               ]
             },
             {
-              "path": "docs/developer/02. Technical Integration/01. Connector Registration/05. Self Description.md",
+              "path": "developer/02. Technical Integration/01. Connector Registration/05. Self Description.md",
               "name": "05. Self Description.md",
               "chapter": [
                 "## Self Description",
@@ -279,7 +274,7 @@
               ]
             },
             {
-              "path": "docs/developer/02. Technical Integration/01. Connector Registration/06. Delete Connector.md",
+              "path": "developer/02. Technical Integration/01. Connector Registration/06. Delete Connector.md",
               "name": "06. Delete Connector.md",
               "chapter": [
                 "## 5 Delete Connector",
@@ -288,7 +283,7 @@
               ]
             },
             {
-              "path": "docs/developer/02. Technical Integration/01. Connector Registration/07. Error Handling.md",
+              "path": "developer/02. Technical Integration/01. Connector Registration/07. Error Handling.md",
               "name": "07. Error Handling.md",
               "chapter": [
                 "## Connector Registration Error Handling",
@@ -302,16 +297,16 @@
           ]
         },
         {
-          "path": "docs/developer/02. Technical Integration/02. Identity Provider Management",
+          "path": "developer/02. Technical Integration/02. Identity Provider Management",
           "name": "02. Identity Provider Management",
           "children": [
             {
-              "path": "docs/developer/02. Technical Integration/02. Identity Provider Management/01. Summary.md",
+              "path": "developer/02. Technical Integration/02. Identity Provider Management/01. Summary.md",
               "name": "01. Summary.md",
               "chapter": ["# Summary", "## NOTICE"]
             },
             {
-              "path": "docs/developer/02. Technical Integration/02. Identity Provider Management/02. Company IdPs.md",
+              "path": "developer/02. Technical Integration/02. Identity Provider Management/02. Company IdPs.md",
               "name": "02. Company IdPs.md",
               "chapter": [
                 "## Identity Provider Overview",
@@ -321,7 +316,7 @@
               ]
             },
             {
-              "path": "docs/developer/02. Technical Integration/02. Identity Provider Management/02. Configure Company IdP.md",
+              "path": "developer/02. Technical Integration/02. Identity Provider Management/02. Configure Company IdP.md",
               "name": "02. Configure Company IdP.md",
               "chapter": [
                 "## IDP Configuration",
@@ -336,7 +331,7 @@
               ]
             },
             {
-              "path": "docs/developer/02. Technical Integration/02. Identity Provider Management/03. User Migration.md",
+              "path": "developer/02. Technical Integration/02. Identity Provider Management/03. User Migration.md",
               "name": "03. User Migration.md",
               "chapter": [
                 "### Migrate existing user accounts to the new created IdP",
@@ -347,7 +342,7 @@
               ]
             },
             {
-              "path": "docs/developer/02. Technical Integration/02. Identity Provider Management/04. Delete Identity Provider.md",
+              "path": "developer/02. Technical Integration/02. Identity Provider Management/04. Delete Identity Provider.md",
               "name": "04. Delete Identity Provider.md",
               "chapter": [
                 "### Identity Provider Deletion",
@@ -357,7 +352,7 @@
               ]
             },
             {
-              "path": "docs/developer/02. Technical Integration/02. Identity Provider Management/04. FAQ.md",
+              "path": "developer/02. Technical Integration/02. Identity Provider Management/04. FAQ.md",
               "name": "04. FAQ.md",
               "chapter": [
                 "### FAQ",
@@ -368,7 +363,7 @@
               ]
             },
             {
-              "path": "docs/developer/02. Technical Integration/02. Identity Provider Management/05. Disable Identity Provider.md",
+              "path": "developer/02. Technical Integration/02. Identity Provider Management/05. Disable Identity Provider.md",
               "name": "05. Disable Identity Provider.md",
               "chapter": [
                 "### Identity Provider Disable",
@@ -380,16 +375,16 @@
           ]
         },
         {
-          "path": "docs/developer/02. Technical Integration/03. Company Configuration",
+          "path": "developer/02. Technical Integration/03. Company Configuration",
           "name": "03. Company Configuration",
           "children": [
             {
-              "path": "docs/developer/02. Technical Integration/03. Company Configuration/01. Summary.md",
+              "path": "developer/02. Technical Integration/03. Company Configuration/01. Summary.md",
               "name": "01. Summary.md",
               "chapter": ["## NOTICE"]
             },
             {
-              "path": "docs/developer/02. Technical Integration/03. Company Configuration/02. View Preferred Use Cases.md",
+              "path": "developer/02. Technical Integration/03. Company Configuration/02. View Preferred Use Cases.md",
               "name": "02. View Preferred Use Cases.md",
               "chapter": [
                 "## View Company Preferred Use Cases",
@@ -398,7 +393,7 @@
               ]
             },
             {
-              "path": "docs/developer/02. Technical Integration/03. Company Configuration/03. Add new Use Case.md",
+              "path": "developer/02. Technical Integration/03. Company Configuration/03. Add new Use Case.md",
               "name": "03. Add new Use Case.md",
               "chapter": [
                 "## Add New Preferred Use Case",
@@ -407,7 +402,7 @@
               ]
             },
             {
-              "path": "docs/developer/02. Technical Integration/03. Company Configuration/04. Delete Preferred Use Case.md",
+              "path": "developer/02. Technical Integration/03. Company Configuration/04. Delete Preferred Use Case.md",
               "name": "04. Delete Preferred Use Case.md",
               "chapter": [
                 "## Delete Company Preferred Use Cases",
@@ -416,7 +411,7 @@
               ]
             },
             {
-              "path": "docs/developer/02. Technical Integration/03. Company Configuration/05. Change Company Role.md",
+              "path": "developer/02. Technical Integration/03. Company Configuration/05. Change Company Role.md",
               "name": "05. Change Company Role.md",
               "chapter": [
                 "### Change Company Role",
@@ -429,11 +424,11 @@
           ]
         },
         {
-          "path": "docs/developer/02. Technical Integration/04. Credentials",
+          "path": "developer/02. Technical Integration/04. Credentials",
           "name": "04. Credentials",
           "children": [
             {
-              "path": "docs/developer/02. Technical Integration/04. Credentials/00. Wallet Creation.md",
+              "path": "developer/02. Technical Integration/04. Credentials/00. Wallet Creation.md",
               "name": "00. Wallet Creation.md",
               "chapter": [
                 "## Managed Identity Wallet",
@@ -443,7 +438,7 @@
               ]
             },
             {
-              "path": "docs/developer/02. Technical Integration/04. Credentials/01. Get UseCase Credential.md",
+              "path": "developer/02. Technical Integration/04. Credentials/01. Get UseCase Credential.md",
               "name": "01. Get UseCase Credential.md",
               "chapter": [
                 "## Use Case Credentials",
@@ -454,7 +449,7 @@
               ]
             },
             {
-              "path": "docs/developer/02. Technical Integration/04. Credentials/02. Other Certificates.md",
+              "path": "developer/02. Technical Integration/04. Credentials/02. Other Certificates.md",
               "name": "02. Other Certificates.md",
               "chapter": [
                 "## Company Certificates",
@@ -467,7 +462,7 @@
               ]
             },
             {
-              "path": "docs/developer/02. Technical Integration/04. Credentials/03. Credential Admin Board.md",
+              "path": "developer/02. Technical Integration/04. Credentials/03. Credential Admin Board.md",
               "name": "03. Credential Admin Board.md",
               "chapter": [
                 "## Credential Admin Board",
@@ -488,20 +483,20 @@
       ]
     },
     {
-      "path": "docs/developer/03. User Management",
+      "path": "developer/03. User Management",
       "name": "03. User Management",
       "children": [
         {
-          "path": "docs/developer/03. User Management/01. User Account",
+          "path": "developer/03. User Management/01. User Account",
           "name": "01. User Account",
           "children": [
             {
-              "path": "docs/developer/03. User Management/01. User Account/01. Summary.md",
+              "path": "developer/03. User Management/01. User Account/01. Summary.md",
               "name": "01. Summary.md",
               "chapter": ["# Summary", "## NOTICE"]
             },
             {
-              "path": "docs/developer/03. User Management/01. User Account/02. My User Account.md",
+              "path": "developer/03. User Management/01. User Account/02. My User Account.md",
               "name": "02. My User Account.md",
               "chapter": [
                 "### User Permissions",
@@ -512,7 +507,7 @@
               ]
             },
             {
-              "path": "docs/developer/03. User Management/01. User Account/02. User Account.md",
+              "path": "developer/03. User Management/01. User Account/02. User Account.md",
               "name": "02. User Account.md",
               "chapter": [
                 "### User Permissions",
@@ -524,23 +519,23 @@
               ]
             },
             {
-              "path": "docs/developer/03. User Management/01. User Account/03. Create new user account (single) - UPDATE NEEDED.md",
+              "path": "developer/03. User Management/01. User Account/03. Create new user account (single) - UPDATE NEEDED.md",
               "name": "03. Create new user account (single) - UPDATE NEEDED.md",
               "chapter": ["## Create a new user account (single)", "## NOTICE"]
             },
             {
-              "path": "docs/developer/03. User Management/01. User Account/04. Create new user account (bulk) - UPDATE NEEDED.md",
+              "path": "developer/03. User Management/01. User Account/04. Create new user account (bulk) - UPDATE NEEDED.md",
               "name": "04. Create new user account (bulk) - UPDATE NEEDED.md",
               "chapter": ["## Create a new user account (bulk)", "## NOTICE"]
             }
           ]
         },
         {
-          "path": "docs/developer/03. User Management/02. Edit User Account",
+          "path": "developer/03. User Management/02. Edit User Account",
           "name": "02. Edit User Account",
           "children": [
             {
-              "path": "docs/developer/03. User Management/02. Edit User Account/01. Summary.md",
+              "path": "developer/03. User Management/02. Edit User Account/01. Summary.md",
               "name": "01. Summary.md",
               "chapter": [
                 "# User Account Details",
@@ -549,7 +544,7 @@
               ]
             },
             {
-              "path": "docs/developer/03. User Management/02. Edit User Account/02. Password Reset.md",
+              "path": "developer/03. User Management/02. Edit User Account/02. Password Reset.md",
               "name": "02. Password Reset.md",
               "chapter": [
                 "## Password Reset",
@@ -559,7 +554,7 @@
               ]
             },
             {
-              "path": "docs/developer/03. User Management/02. Edit User Account/03. User Permissions.md",
+              "path": "developer/03. User Management/02. Edit User Account/03. User Permissions.md",
               "name": "03. User Permissions.md",
               "chapter": [
                 "## User Permissions",
@@ -578,7 +573,7 @@
               ]
             },
             {
-              "path": "docs/developer/03. User Management/02. Edit User Account/04. Manage user assigned BPN.md",
+              "path": "developer/03. User Management/02. Edit User Account/04. Manage user assigned BPN.md",
               "name": "04. Manage user assigned BPN.md",
               "chapter": [
                 "#x Add BPN",
@@ -595,12 +590,12 @@
               ]
             },
             {
-              "path": "docs/developer/03. User Management/02. Edit User Account/05. Suspend User.md",
+              "path": "developer/03. User Management/02. Edit User Account/05. Suspend User.md",
               "name": "05. Suspend User.md",
               "chapter": ["# Suspend User", "## NOTICE"]
             },
             {
-              "path": "docs/developer/03. User Management/02. Edit User Account/06. Delete User.md",
+              "path": "developer/03. User Management/02. Edit User Account/06. Delete User.md",
               "name": "06. Delete User.md",
               "chapter": [
                 "## Delete User",
@@ -614,18 +609,18 @@
               ]
             },
             {
-              "path": "docs/developer/03. User Management/02. Edit User Account/index.md",
+              "path": "developer/03. User Management/02. Edit User Account/index.md",
               "name": "index.md",
               "chapter": ["# Summary", "## NOTICE"]
             }
           ]
         },
         {
-          "path": "docs/developer/03. User Management/03. Technical User",
+          "path": "developer/03. User Management/03. Technical User",
           "name": "03. Technical User",
           "children": [
             {
-              "path": "docs/developer/03. User Management/03. Technical User/01. Summary.md",
+              "path": "developer/03. User Management/03. Technical User/01. Summary.md",
               "name": "01. Summary.md",
               "chapter": [
                 "# Summary",
@@ -635,7 +630,7 @@
               ]
             },
             {
-              "path": "docs/developer/03. User Management/03. Technical User/02. View Technical Users.md",
+              "path": "developer/03. User Management/03. Technical User/02. View Technical Users.md",
               "name": "02. View Technical Users.md",
               "chapter": [
                 "## View technical users",
@@ -647,7 +642,7 @@
               ]
             },
             {
-              "path": "docs/developer/03. User Management/03. Technical User/03. Create Technical User.md",
+              "path": "developer/03. User Management/03. Technical User/03. Create Technical User.md",
               "name": "03. Create Technical User.md",
               "chapter": [
                 "## Create a new technical user",
@@ -660,7 +655,7 @@
               ]
             },
             {
-              "path": "docs/developer/03. User Management/03. Technical User/04. Delete Technical User.md",
+              "path": "developer/03. User Management/03. Technical User/04. Delete Technical User.md",
               "name": "04. Delete Technical User.md",
               "chapter": [
                 "## Delete an user",
@@ -670,7 +665,7 @@
               ]
             },
             {
-              "path": "docs/developer/03. User Management/03. Technical User/04. Reset Credentials.md",
+              "path": "developer/03. User Management/03. Technical User/04. Reset Credentials.md",
               "name": "04. Reset Credentials.md",
               "chapter": [
                 "## Introduction",
@@ -679,7 +674,7 @@
               ]
             },
             {
-              "path": "docs/developer/03. User Management/03. Technical User/05. FAQ.md",
+              "path": "developer/03. User Management/03. Technical User/05. FAQ.md",
               "name": "05. FAQ.md",
               "chapter": [
                 "### How to retrieve a technical user token?",
@@ -689,11 +684,11 @@
           ]
         },
         {
-          "path": "docs/developer/03. User Management/04. App Access Management",
+          "path": "developer/03. User Management/04. App Access Management",
           "name": "04. App Access Management",
           "children": [
             {
-              "path": "docs/developer/03. User Management/04. App Access Management/01. Summary.md",
+              "path": "developer/03. User Management/04. App Access Management/01. Summary.md",
               "name": "01. Summary.md",
               "chapter": [
                 "## Summary",
@@ -703,7 +698,7 @@
               ]
             },
             {
-              "path": "docs/developer/03. User Management/04. App Access Management/02. Assign App Role Page Overview.md",
+              "path": "developer/03. User Management/04. App Access Management/02. Assign App Role Page Overview.md",
               "name": "02. Assign App Role Page Overview.md",
               "chapter": [
                 "## App Role Management",
@@ -713,7 +708,7 @@
               ]
             },
             {
-              "path": "docs/developer/03. User Management/04. App Access Management/03. Assign App Role.md",
+              "path": "developer/03. User Management/04. App Access Management/03. Assign App Role.md",
               "name": "03. Assign App Role.md",
               "chapter": [
                 "## Assign App Role",
@@ -725,22 +720,22 @@
           ]
         },
         {
-          "path": "docs/developer/03. User Management/index.md",
+          "path": "developer/03. User Management/index.md",
           "name": "index.md",
           "chapter": ["# User Management", "## NOTICE"]
         }
       ]
     },
     {
-      "path": "docs/developer/04. Apps",
+      "path": "developer/04. Apps",
       "name": "04. Apps",
       "children": [
         {
-          "path": "docs/developer/04. Apps/01. Marketplace",
+          "path": "developer/04. Apps/01. Marketplace",
           "name": "01. Marketplace",
           "children": [
             {
-              "path": "docs/developer/04. Apps/01. Marketplace/01. App Overview.md",
+              "path": "developer/04. Apps/01. Marketplace/01. App Overview.md",
               "name": "01. App Overview.md",
               "chapter": [
                 "## Summary",
@@ -750,7 +745,7 @@
               ]
             },
             {
-              "path": "docs/developer/04. Apps/01. Marketplace/02. App Details.md",
+              "path": "developer/04. Apps/01. Marketplace/02. App Details.md",
               "name": "02. App Details.md",
               "chapter": [
                 "## Summary",
@@ -762,7 +757,7 @@
               ]
             },
             {
-              "path": "docs/developer/04. Apps/01. Marketplace/03. App Favorites.md",
+              "path": "developer/04. Apps/01. Marketplace/03. App Favorites.md",
               "name": "03. App Favorites.md",
               "chapter": [
                 "## Summary",
@@ -772,7 +767,7 @@
               ]
             },
             {
-              "path": "docs/developer/04. Apps/01. Marketplace/04. My Business Apps.md",
+              "path": "developer/04. Apps/01. Marketplace/04. My Business Apps.md",
               "name": "04. My Business Apps.md",
               "chapter": [
                 "## Summary",
@@ -786,11 +781,11 @@
           ]
         },
         {
-          "path": "docs/developer/04. Apps/02. App Release Process",
+          "path": "developer/04. Apps/02. App Release Process",
           "name": "02. App Release Process",
           "children": [
             {
-              "path": "docs/developer/04. Apps/02. App Release Process/04. Delete App.md",
+              "path": "developer/04. Apps/02. App Release Process/04. Delete App.md",
               "name": "04. Delete App.md",
               "chapter": [
                 "## Summary",
@@ -802,7 +797,7 @@
               ]
             },
             {
-              "path": "docs/developer/04. Apps/02. App Release Process/App Release Process.md",
+              "path": "developer/04. Apps/02. App Release Process/App Release Process.md",
               "name": "App Release Process.md",
               "chapter": [
                 "## Summary",
@@ -845,11 +840,11 @@
           ]
         },
         {
-          "path": "docs/developer/04. Apps/03. App Release Approval",
+          "path": "developer/04. Apps/03. App Release Approval",
           "name": "03. App Release Approval",
           "children": [
             {
-              "path": "docs/developer/04. Apps/03. App Release Approval/01. App Approval Board Overview.md",
+              "path": "developer/04. Apps/03. App Release Approval/01. App Approval Board Overview.md",
               "name": "01. App Approval Board Overview.md",
               "chapter": [
                 "## App Approval Board",
@@ -860,7 +855,7 @@
               ]
             },
             {
-              "path": "docs/developer/04. Apps/03. App Release Approval/02. App Details.md",
+              "path": "developer/04. Apps/03. App Release Approval/02. App Details.md",
               "name": "02. App Details.md",
               "chapter": [
                 "## App Details",
@@ -872,7 +867,7 @@
               ]
             },
             {
-              "path": "docs/developer/04. Apps/03. App Release Approval/03. Approve App Release.md",
+              "path": "developer/04. Apps/03. App Release Approval/03. Approve App Release.md",
               "name": "03. Approve App Release.md",
               "chapter": [
                 "## Implementation",
@@ -881,7 +876,7 @@
               ]
             },
             {
-              "path": "docs/developer/04. Apps/03. App Release Approval/04. Decline App Release.md",
+              "path": "developer/04. Apps/03. App Release Approval/04. Decline App Release.md",
               "name": "04. Decline App Release.md",
               "chapter": [
                 "## App Decline Details",
@@ -893,11 +888,11 @@
           ]
         },
         {
-          "path": "docs/developer/04. Apps/04. App Provider Management Board(s)",
+          "path": "developer/04. Apps/04. App Provider Management Board(s)",
           "name": "04. App Provider Management Board(s)",
           "children": [
             {
-              "path": "docs/developer/04. Apps/04. App Provider Management Board(s)/01. App Board.md",
+              "path": "developer/04. Apps/04. App Provider Management Board(s)/01. App Board.md",
               "name": "01. App Board.md",
               "chapter": [
                 "## App Board",
@@ -909,11 +904,11 @@
           ]
         },
         {
-          "path": "docs/developer/04. Apps/05. App Subscription",
+          "path": "developer/04. Apps/05. App Subscription",
           "name": "05. App Subscription",
           "children": [
             {
-              "path": "docs/developer/04. Apps/05. App Subscription/01. Subscription Flow.md",
+              "path": "developer/04. Apps/05. App Subscription/01. Subscription Flow.md",
               "name": "01. Subscription Flow.md",
               "chapter": [
                 "## Implementation",
@@ -925,7 +920,7 @@
               ]
             },
             {
-              "path": "docs/developer/04. Apps/05. App Subscription/01.App Subscription Request Management.md",
+              "path": "developer/04. Apps/05. App Subscription/01.App Subscription Request Management.md",
               "name": "01.App Subscription Request Management.md",
               "chapter": [
                 "## Summary",
@@ -945,7 +940,7 @@
               ]
             },
             {
-              "path": "docs/developer/04. Apps/05. App Subscription/02. App Subscription Activation (Provider).md",
+              "path": "developer/04. Apps/05. App Subscription/02. App Subscription Activation (Provider).md",
               "name": "02. App Subscription Activation (Provider).md",
               "chapter": [
                 "## App Subscription Activation",
@@ -959,7 +954,7 @@
               ]
             },
             {
-              "path": "docs/developer/04. Apps/05. App Subscription/03. Unsubscribe.md",
+              "path": "developer/04. Apps/05. App Subscription/03. Unsubscribe.md",
               "name": "03. Unsubscribe.md",
               "chapter": [
                 "## Unsubscribe",
@@ -979,16 +974,16 @@
           ]
         },
         {
-          "path": "docs/developer/04. Apps/06. App Change Process",
+          "path": "developer/04. Apps/06. App Change Process",
           "name": "06. App Change Process",
           "children": [
             {
-              "path": "docs/developer/04. Apps/06. App Change Process/01. Summary.md",
+              "path": "developer/04. Apps/06. App Change Process/01. Summary.md",
               "name": "01. Summary.md",
               "chapter": ["## Summary", "## NOTICE"]
             },
             {
-              "path": "docs/developer/04. Apps/06. App Change Process/02. Change App Lead Image.md",
+              "path": "developer/04. Apps/06. App Change Process/02. Change App Lead Image.md",
               "name": "02. Change App Lead Image.md",
               "chapter": [
                 "## Summary",
@@ -999,7 +994,7 @@
               ]
             },
             {
-              "path": "docs/developer/04. Apps/06. App Change Process/03. App Instance Url.md",
+              "path": "developer/04. Apps/06. App Change Process/03. App Instance Url.md",
               "name": "03. App Instance Url.md",
               "chapter": [
                 "## App Tenant URL Change",
@@ -1008,7 +1003,7 @@
               ]
             },
             {
-              "path": "docs/developer/04. Apps/06. App Change Process/03. Change App Description.md",
+              "path": "developer/04. Apps/06. App Change Process/03. Change App Description.md",
               "name": "03. Change App Description.md",
               "chapter": [
                 "## Summary",
@@ -1019,12 +1014,12 @@
               ]
             },
             {
-              "path": "docs/developer/04. Apps/06. App Change Process/04. App Deactivation.md",
+              "path": "developer/04. Apps/06. App Change Process/04. App Deactivation.md",
               "name": "04. App Deactivation.md",
               "chapter": ["## Summary", "## Implementation", "## NOTICE"]
             },
             {
-              "path": "docs/developer/04. Apps/06. App Change Process/05. App Instance Url.md",
+              "path": "developer/04. Apps/06. App Change Process/05. App Instance Url.md",
               "name": "05. App Instance Url.md",
               "chapter": [
                 "## App Tenant URL Change",
@@ -1033,7 +1028,7 @@
               ]
             },
             {
-              "path": "docs/developer/04. Apps/06. App Change Process/06. App Role Change.md",
+              "path": "developer/04. Apps/06. App Change Process/06. App Role Change.md",
               "name": "06. App Role Change.md",
               "chapter": [
                 "## Summary",
@@ -1051,11 +1046,11 @@
       ]
     },
     {
-      "path": "docs/developer/05. Service(s)",
+      "path": "developer/05. Service(s)",
       "name": "05. Service(s)",
       "children": [
         {
-          "path": "docs/developer/05. Service(s)/01. Service Change.md",
+          "path": "developer/05. Service(s)/01. Service Change.md",
           "name": "01. Service Change.md",
           "chapter": [
             "#### Others",
@@ -1064,11 +1059,11 @@
           ]
         },
         {
-          "path": "docs/developer/05. Service(s)/01. Service Marketplace",
+          "path": "developer/05. Service(s)/01. Service Marketplace",
           "name": "01. Service Marketplace",
           "children": [
             {
-              "path": "docs/developer/05. Service(s)/01. Service Marketplace/01. Service Marketplace.md",
+              "path": "developer/05. Service(s)/01. Service Marketplace/01. Service Marketplace.md",
               "name": "01. Service Marketplace.md",
               "chapter": [
                 "## Service Marketplace",
@@ -1081,7 +1076,7 @@
               ]
             },
             {
-              "path": "docs/developer/05. Service(s)/01. Service Marketplace/02. Service Details.md",
+              "path": "developer/05. Service(s)/01. Service Marketplace/02. Service Details.md",
               "name": "02. Service Details.md",
               "chapter": [
                 "## Service Offer Details",
@@ -1095,11 +1090,11 @@
           ]
         },
         {
-          "path": "docs/developer/05. Service(s)/02. Service Release Process",
+          "path": "developer/05. Service(s)/02. Service Release Process",
           "name": "02. Service Release Process",
           "children": [
             {
-              "path": "docs/developer/05. Service(s)/02. Service Release Process/01. Service Card.md",
+              "path": "developer/05. Service(s)/02. Service Release Process/01. Service Card.md",
               "name": "01. Service Card.md",
               "chapter": [
                 "### Step 1 - Service Card Details",
@@ -1112,7 +1107,7 @@
               ]
             },
             {
-              "path": "docs/developer/05. Service(s)/02. Service Release Process/02. Service Detail Page.md",
+              "path": "developer/05. Service(s)/02. Service Release Process/02. Service Detail Page.md",
               "name": "02. Service Detail Page.md",
               "chapter": [
                 "### Step 2 - Service Page Details",
@@ -1123,7 +1118,7 @@
               ]
             },
             {
-              "path": "docs/developer/05. Service(s)/02. Service Release Process/02. Service Publish Approval.md",
+              "path": "developer/05. Service(s)/02. Service Release Process/02. Service Publish Approval.md",
               "name": "02. Service Publish Approval.md",
               "chapter": [
                 "## Summary",
@@ -1136,7 +1131,7 @@
               ]
             },
             {
-              "path": "docs/developer/05. Service(s)/02. Service Release Process/03.Terms&Conditions.md",
+              "path": "developer/05. Service(s)/02. Service Release Process/03.Terms&Conditions.md",
               "name": "03.Terms&Conditions.md",
               "chapter": [
                 "### Step 3 - Terms & Conditions / Consent",
@@ -1148,7 +1143,7 @@
               ]
             },
             {
-              "path": "docs/developer/05. Service(s)/02. Service Release Process/04.Technical Integration.md",
+              "path": "developer/05. Service(s)/02. Service Release Process/04.Technical Integration.md",
               "name": "04.Technical Integration.md",
               "chapter": [
                 "### Step 4 - Technical Integration",
@@ -1159,7 +1154,7 @@
               ]
             },
             {
-              "path": "docs/developer/05. Service(s)/02. Service Release Process/05.Verify & Submit.md",
+              "path": "developer/05. Service(s)/02. Service Release Process/05.Verify & Submit.md",
               "name": "05.Verify & Submit.md",
               "chapter": [
                 "### Step 4 - Validate & Submit for Publishing check",
@@ -1170,18 +1165,18 @@
               ]
             },
             {
-              "path": "docs/developer/05. Service(s)/02. Service Release Process/index.md",
+              "path": "developer/05. Service(s)/02. Service Release Process/index.md",
               "name": "index.md",
               "chapter": ["## Summary", "## NOTICE"]
             }
           ]
         },
         {
-          "path": "docs/developer/05. Service(s)/03. Service Release Approval",
+          "path": "developer/05. Service(s)/03. Service Release Approval",
           "name": "03. Service Release Approval",
           "children": [
             {
-              "path": "docs/developer/05. Service(s)/03. Service Release Approval/01. Service Approval Board Overview.md",
+              "path": "developer/05. Service(s)/03. Service Release Approval/01. Service Approval Board Overview.md",
               "name": "01. Service Approval Board Overview.md",
               "chapter": [
                 "## Service Approval Board",
@@ -1192,7 +1187,7 @@
               ]
             },
             {
-              "path": "docs/developer/05. Service(s)/03. Service Release Approval/02. Service Details.md",
+              "path": "developer/05. Service(s)/03. Service Release Approval/02. Service Details.md",
               "name": "02. Service Details.md",
               "chapter": [
                 "## Service Details",
@@ -1203,7 +1198,7 @@
               ]
             },
             {
-              "path": "docs/developer/05. Service(s)/03. Service Release Approval/03. Approve Service Release.md",
+              "path": "developer/05. Service(s)/03. Service Release Approval/03. Approve Service Release.md",
               "name": "03. Approve Service Release.md",
               "chapter": [
                 "## Implementation",
@@ -1212,7 +1207,7 @@
               ]
             },
             {
-              "path": "docs/developer/05. Service(s)/03. Service Release Approval/04. Decline Service Release.md",
+              "path": "developer/05. Service(s)/03. Service Release Approval/04. Decline Service Release.md",
               "name": "04. Decline Service Release.md",
               "chapter": [
                 "## Service Decline Details",
@@ -1224,11 +1219,11 @@
           ]
         },
         {
-          "path": "docs/developer/05. Service(s)/03. Service Subscription",
+          "path": "developer/05. Service(s)/03. Service Subscription",
           "name": "03. Service Subscription",
           "children": [
             {
-              "path": "docs/developer/05. Service(s)/03. Service Subscription/01. Service Subscription.md",
+              "path": "developer/05. Service(s)/03. Service Subscription/01. Service Subscription.md",
               "name": "01. Service Subscription.md",
               "chapter": [
                 "## Summary",
@@ -1240,7 +1235,7 @@
               ]
             },
             {
-              "path": "docs/developer/05. Service(s)/03. Service Subscription/01.Service Subscription Request Management.md",
+              "path": "developer/05. Service(s)/03. Service Subscription/01.Service Subscription Request Management.md",
               "name": "01.Service Subscription Request Management.md",
               "chapter": [
                 "## Summary",
@@ -1260,7 +1255,7 @@
               ]
             },
             {
-              "path": "docs/developer/05. Service(s)/03. Service Subscription/02. Service Subscription Activation (Provider).md",
+              "path": "developer/05. Service(s)/03. Service Subscription/02. Service Subscription Activation (Provider).md",
               "name": "02. Service Subscription Activation (Provider).md",
               "chapter": [
                 "## Service Subscription Activation",
@@ -1274,7 +1269,7 @@
               ]
             },
             {
-              "path": "docs/developer/05. Service(s)/03. Service Subscription/03. Unsubscribe.md",
+              "path": "developer/05. Service(s)/03. Service Subscription/03. Unsubscribe.md",
               "name": "03. Unsubscribe.md",
               "chapter": [
                 "## Unsubscribe",
@@ -1286,11 +1281,11 @@
           ]
         },
         {
-          "path": "docs/developer/05. Service(s)/04. Service Provider Management Board(s)",
+          "path": "developer/05. Service(s)/04. Service Provider Management Board(s)",
           "name": "04. Service Provider Management Board(s)",
           "children": [
             {
-              "path": "docs/developer/05. Service(s)/04. Service Provider Management Board(s)/01. App Board.md",
+              "path": "developer/05. Service(s)/04. Service Provider Management Board(s)/01. App Board.md",
               "name": "01. App Board.md",
               "chapter": [
                 "## Service Board",
@@ -1305,16 +1300,16 @@
           ]
         },
         {
-          "path": "docs/developer/05. Service(s)/06. Service Change Process",
+          "path": "developer/05. Service(s)/06. Service Change Process",
           "name": "06. Service Change Process",
           "children": [
             {
-              "path": "docs/developer/05. Service(s)/06. Service Change Process/01. Summary.md",
+              "path": "developer/05. Service(s)/06. Service Change Process/01. Summary.md",
               "name": "01. Summary.md",
               "chapter": ["## Summary", "## NOTICE"]
             },
             {
-              "path": "docs/developer/05. Service(s)/06. Service Change Process/02. Service Deactivation.md",
+              "path": "developer/05. Service(s)/06. Service Change Process/02. Service Deactivation.md",
               "name": "02. Service Deactivation.md",
               "chapter": [
                 "## Summary",
@@ -1329,20 +1324,20 @@
       ]
     },
     {
-      "path": "docs/developer/Technical Documentation",
+      "path": "developer/Technical Documentation",
       "name": "Technical Documentation",
       "children": [
         {
-          "path": "docs/developer/Technical Documentation/.DS_Store",
+          "path": "developer/Technical Documentation/.DS_Store",
           "name": ".DS_Store",
           "chapter": []
         },
         {
-          "path": "docs/developer/Technical Documentation/Architecture",
+          "path": "developer/Technical Documentation/Architecture",
           "name": "Architecture",
           "children": [
             {
-              "path": "docs/developer/Technical Documentation/Architecture/Architecture Constraints.md",
+              "path": "developer/Technical Documentation/Architecture/Architecture Constraints.md",
               "name": "Architecture Constraints.md",
               "chapter": [
                 "# Architecture Constraints",
@@ -1353,12 +1348,12 @@
               ]
             },
             {
-              "path": "docs/developer/Technical Documentation/Architecture/Building block view.md",
+              "path": "developer/Technical Documentation/Architecture/Building block view.md",
               "name": "Building block view.md",
               "chapter": ["# Building Block View", "## NOTICE"]
             },
             {
-              "path": "docs/developer/Technical Documentation/Architecture/Context and scope.md",
+              "path": "developer/Technical Documentation/Architecture/Context and scope.md",
               "name": "Context and scope.md",
               "chapter": [
                 "# Content and Scope",
@@ -1368,7 +1363,7 @@
               ]
             },
             {
-              "path": "docs/developer/Technical Documentation/Architecture/Development Concept.md",
+              "path": "developer/Technical Documentation/Architecture/Development Concept.md",
               "name": "Development Concept.md",
               "chapter": [
                 "# Development Concept",
@@ -1398,7 +1393,7 @@
               ]
             },
             {
-              "path": "docs/developer/Technical Documentation/Architecture/Requirements.md",
+              "path": "developer/Technical Documentation/Architecture/Requirements.md",
               "name": "Requirements.md",
               "chapter": [
                 "# Requirements overview",
@@ -1408,7 +1403,7 @@
               ]
             },
             {
-              "path": "docs/developer/Technical Documentation/Architecture/Security-Assessment.md",
+              "path": "developer/Technical Documentation/Architecture/Security-Assessment.md",
               "name": "Security-Assessment.md",
               "chapter": [
                 "# Security Assessment Portal (incl. Frontend, Backend Services, IAM and other infrastructure)",
@@ -1424,12 +1419,12 @@
               ]
             },
             {
-              "path": "docs/developer/Technical Documentation/Architecture/Solution strategy.md",
+              "path": "developer/Technical Documentation/Architecture/Solution strategy.md",
               "name": "Solution strategy.md",
               "chapter": ["# Solution Strategy", "## NOTICE"]
             },
             {
-              "path": "docs/developer/Technical Documentation/Architecture/Whitebox Overall System.md",
+              "path": "developer/Technical Documentation/Architecture/Whitebox Overall System.md",
               "name": "Whitebox Overall System.md",
               "chapter": [
                 "# Whitebox Overall System",
@@ -1444,7 +1439,7 @@
               ]
             },
             {
-              "path": "docs/developer/Technical Documentation/Architecture/operational-concept.md",
+              "path": "developer/Technical Documentation/Architecture/operational-concept.md",
               "name": "operational-concept.md",
               "chapter": [
                 "# Operational concepts",
@@ -1464,11 +1459,11 @@
           ]
         },
         {
-          "path": "docs/developer/Technical Documentation/DB Views and Details",
+          "path": "developer/Technical Documentation/DB Views and Details",
           "name": "DB Views and Details",
           "children": [
             {
-              "path": "docs/developer/Technical Documentation/DB Views and Details/App - DB - View.md",
+              "path": "developer/Technical Documentation/DB Views and Details/App - DB - View.md",
               "name": "App - DB - View.md",
               "chapter": [
                 "## App",
@@ -1484,12 +1479,12 @@
               ]
             },
             {
-              "path": "docs/developer/Technical Documentation/DB Views and Details/Connector - DB - View.md",
+              "path": "developer/Technical Documentation/DB Views and Details/Connector - DB - View.md",
               "name": "Connector - DB - View.md",
               "chapter": ["## Connector DB", "## NOTICE"]
             },
             {
-              "path": "docs/developer/Technical Documentation/DB Views and Details/Data Management.md",
+              "path": "developer/Technical Documentation/DB Views and Details/Data Management.md",
               "name": "Data Management.md",
               "chapter": [
                 "## Categories of Data",
@@ -1500,7 +1495,7 @@
               ]
             },
             {
-              "path": "docs/developer/Technical Documentation/DB Views and Details/Documents - DB - View.md",
+              "path": "developer/Technical Documentation/DB Views and Details/Documents - DB - View.md",
               "name": "Documents - DB - View.md",
               "chapter": [
                 "## Documents",
@@ -1509,7 +1504,7 @@
               ]
             },
             {
-              "path": "docs/developer/Technical Documentation/DB Views and Details/Subscription - DB - View.md",
+              "path": "developer/Technical Documentation/DB Views and Details/Subscription - DB - View.md",
               "name": "Subscription - DB - View.md",
               "chapter": [
                 "## Subscription",
@@ -1522,11 +1517,11 @@
           ]
         },
         {
-          "path": "docs/developer/Technical Documentation/Dev Process",
+          "path": "developer/Technical Documentation/Dev Process",
           "name": "Dev Process",
           "children": [
             {
-              "path": "docs/developer/Technical Documentation/Dev Process/Dev-flow_deploy-dev-env.md",
+              "path": "developer/Technical Documentation/Dev Process/Dev-flow_deploy-dev-env.md",
               "name": "Dev-flow_deploy-dev-env.md",
               "chapter": [
                 "# Dev flow with deployment to dev environment",
@@ -1534,12 +1529,12 @@
               ]
             },
             {
-              "path": "docs/developer/Technical Documentation/Dev Process/Dev-flow_git-diagram.md",
+              "path": "developer/Technical Documentation/Dev Process/Dev-flow_git-diagram.md",
               "name": "Dev-flow_git-diagram.md",
               "chapter": ["# Dev flow (git diagram)", "## NOTICE"]
             },
             {
-              "path": "docs/developer/Technical Documentation/Dev Process/Enumeration Handling.md",
+              "path": "developer/Technical Documentation/Dev Process/Enumeration Handling.md",
               "name": "Enumeration Handling.md",
               "chapter": [
                 "## Enumeration",
@@ -1550,7 +1545,7 @@
               ]
             },
             {
-              "path": "docs/developer/Technical Documentation/Dev Process/How to contribute.md",
+              "path": "developer/Technical Documentation/Dev Process/How to contribute.md",
               "name": "How to contribute.md",
               "chapter": [
                 "# Contribution details",
@@ -1566,7 +1561,7 @@
               ]
             },
             {
-              "path": "docs/developer/Technical Documentation/Dev Process/Multi Language.md",
+              "path": "developer/Technical Documentation/Dev Process/Multi Language.md",
               "name": "Multi Language.md",
               "chapter": [
                 "# Multi Language",
@@ -1578,7 +1573,7 @@
               ]
             },
             {
-              "path": "docs/developer/Technical Documentation/Dev Process/Run frontend on localhost.md",
+              "path": "developer/Technical Documentation/Dev Process/Run frontend on localhost.md",
               "name": "Run frontend on localhost.md",
               "chapter": [
                 "# Run frontend locally",
@@ -1591,7 +1586,7 @@
               ]
             },
             {
-              "path": "docs/developer/Technical Documentation/Dev Process/Shared Components.md",
+              "path": "developer/Technical Documentation/Dev Process/Shared Components.md",
               "name": "Shared Components.md",
               "chapter": [
                 "# Developing Shared Components",
@@ -1603,11 +1598,11 @@
           ]
         },
         {
-          "path": "docs/developer/Technical Documentation/Interface Contracts",
+          "path": "developer/Technical Documentation/Interface Contracts",
           "name": "Interface Contracts",
           "children": [
             {
-              "path": "docs/developer/Technical Documentation/Interface Contracts/BPDM (2).md",
+              "path": "developer/Technical Documentation/Interface Contracts/BPDM (2).md",
               "name": "BPDM (2).md",
               "chapter": [
                 "# Business Partner Data Management",
@@ -1623,7 +1618,7 @@
               ]
             },
             {
-              "path": "docs/developer/Technical Documentation/Interface Contracts/BPDM.md",
+              "path": "developer/Technical Documentation/Interface Contracts/BPDM.md",
               "name": "BPDM.md",
               "chapter": [
                 "## Business Partner Data Management",
@@ -1658,7 +1653,7 @@
               ]
             },
             {
-              "path": "docs/developer/Technical Documentation/Interface Contracts/CX-Membership.md",
+              "path": "developer/Technical Documentation/Interface Contracts/CX-Membership.md",
               "name": "CX-Membership.md",
               "chapter": [
                 "# CX-Membership",
@@ -1672,7 +1667,7 @@
               ]
             },
             {
-              "path": "docs/developer/Technical Documentation/Interface Contracts/Clearinghouse.md",
+              "path": "developer/Technical Documentation/Interface Contracts/Clearinghouse.md",
               "name": "Clearinghouse.md",
               "chapter": [
                 "## Clearinghouse",
@@ -1686,7 +1681,7 @@
               ]
             },
             {
-              "path": "docs/developer/Technical Documentation/Interface Contracts/Dataspace-Discovery.md",
+              "path": "developer/Technical Documentation/Interface Contracts/Dataspace-Discovery.md",
               "name": "Dataspace-Discovery.md",
               "chapter": [
                 "# Dataspace Discovery",
@@ -1700,7 +1695,7 @@
               ]
             },
             {
-              "path": "docs/developer/Technical Documentation/Interface Contracts/Managed Wallets.md",
+              "path": "developer/Technical Documentation/Interface Contracts/Managed Wallets.md",
               "name": "Managed Wallets.md",
               "chapter": [
                 "## Managed Wallets",
@@ -1718,7 +1713,7 @@
               ]
             },
             {
-              "path": "docs/developer/Technical Documentation/Interface Contracts/Offer-Autosetup.md",
+              "path": "developer/Technical Documentation/Interface Contracts/Offer-Autosetup.md",
               "name": "Offer-Autosetup.md",
               "chapter": [
                 "# Offer Autosetup",
@@ -1735,7 +1730,7 @@
               ]
             },
             {
-              "path": "docs/developer/Technical Documentation/Interface Contracts/Self Description.md",
+              "path": "developer/Technical Documentation/Interface Contracts/Self Description.md",
               "name": "Self Description.md",
               "chapter": [
                 "# Self Description",
@@ -1755,16 +1750,16 @@
           ]
         },
         {
-          "path": "docs/developer/Technical Documentation/Operations",
+          "path": "developer/Technical Documentation/Operations",
           "name": "Operations",
           "children": [
             {
-              "path": "docs/developer/Technical Documentation/Operations/.DS_Store",
+              "path": "developer/Technical Documentation/Operations/.DS_Store",
               "name": ".DS_Store",
               "chapter": []
             },
             {
-              "path": "docs/developer/Technical Documentation/Operations/Auditing.md",
+              "path": "developer/Technical Documentation/Operations/Auditing.md",
               "name": "Auditing.md",
               "chapter": [
                 "# Audit Logging",
@@ -1777,7 +1772,7 @@
               ]
             },
             {
-              "path": "docs/developer/Technical Documentation/Operations/Release-Process.md",
+              "path": "developer/Technical Documentation/Operations/Release-Process.md",
               "name": "Release-Process.md",
               "chapter": [
                 "# Release Process",
@@ -1797,11 +1792,11 @@
           ]
         },
         {
-          "path": "docs/developer/Technical Documentation/Others",
+          "path": "developer/Technical Documentation/Others",
           "name": "Others",
           "children": [
             {
-              "path": "docs/developer/Technical Documentation/Others/Document Management.md",
+              "path": "developer/Technical Documentation/Others/Document Management.md",
               "name": "Document Management.md",
               "chapter": [
                 "# Summary",
@@ -1819,7 +1814,7 @@
               ]
             },
             {
-              "path": "docs/developer/Technical Documentation/Others/Email Templates.md",
+              "path": "developer/Technical Documentation/Others/Email Templates.md",
               "name": "Email Templates.md",
               "chapter": [
                 "# Email Templates",
@@ -1837,7 +1832,7 @@
               ]
             },
             {
-              "path": "docs/developer/Technical Documentation/Others/Images, Graphics and Diagrams.md",
+              "path": "developer/Technical Documentation/Others/Images, Graphics and Diagrams.md",
               "name": "Images, Graphics and Diagrams.md",
               "chapter": [
                 "# Images, Graphics and Diagrams",
@@ -1855,7 +1850,7 @@
               ]
             },
             {
-              "path": "docs/developer/Technical Documentation/Others/Notifications.md",
+              "path": "developer/Technical Documentation/Others/Notifications.md",
               "name": "Notifications.md",
               "chapter": [
                 "## Summary",
@@ -1895,15 +1890,15 @@
           ]
         },
         {
-          "path": "docs/developer/Technical Documentation/Tests",
+          "path": "developer/Technical Documentation/Tests",
           "name": "Tests",
           "children": [
             {
-              "path": "docs/developer/Technical Documentation/Tests/Automation",
+              "path": "developer/Technical Documentation/Tests/Automation",
               "name": "Automation",
               "children": [
                 {
-                  "path": "docs/developer/Technical Documentation/Tests/Automation/01. Summary.md",
+                  "path": "developer/Technical Documentation/Tests/Automation/01. Summary.md",
                   "name": "01. Summary.md",
                   "chapter": [
                     "## How to run",
@@ -1923,7 +1918,7 @@
                   ]
                 },
                 {
-                  "path": "docs/developer/Technical Documentation/Tests/Automation/02. Access Token Retrieval.md",
+                  "path": "developer/Technical Documentation/Tests/Automation/02. Access Token Retrieval.md",
                   "name": "02. Access Token Retrieval.md",
                   "chapter": [
                     "# Access Token Retrieval",
@@ -1938,7 +1933,7 @@
                   ]
                 },
                 {
-                  "path": "docs/developer/Technical Documentation/Tests/Automation/03. InterfacePartnerHealthCheck.md",
+                  "path": "developer/Technical Documentation/Tests/Automation/03. InterfacePartnerHealthCheck.md",
                   "name": "03. InterfacePartnerHealthCheck.md",
                   "chapter": [
                     "## BPDM",
@@ -1954,7 +1949,7 @@
                   ]
                 },
                 {
-                  "path": "docs/developer/Technical Documentation/Tests/Automation/04. PortalHealthCheck.md",
+                  "path": "developer/Technical Documentation/Tests/Automation/04. PortalHealthCheck.md",
                   "name": "04. PortalHealthCheck.md",
                   "chapter": [
                     "## Base Data Load Check for Administration Service",
@@ -1963,7 +1958,7 @@
                   ]
                 },
                 {
-                  "path": "docs/developer/Technical Documentation/Tests/Automation/05. RegistrationScenarios.md",
+                  "path": "developer/Technical Documentation/Tests/Automation/05. RegistrationScenarios.md",
                   "name": "05. RegistrationScenarios.md",
                   "chapter": [
                     "## Happy path - new registration without BPN",
@@ -1975,12 +1970,12 @@
                   ]
                 },
                 {
-                  "path": "docs/developer/Technical Documentation/Tests/Automation/06. NotificiationInitScenario.md",
+                  "path": "developer/Technical Documentation/Tests/Automation/06. NotificiationInitScenario.md",
                   "name": "06. NotificiationInitScenario.md",
                   "chapter": ["## NOTICE"]
                 },
                 {
-                  "path": "docs/developer/Technical Documentation/Tests/Automation/07. ServiceAccountCUDScenarios.md",
+                  "path": "developer/Technical Documentation/Tests/Automation/07. ServiceAccountCUDScenarios.md",
                   "name": "07. ServiceAccountCUDScenarios.md",
                   "chapter": [
                     "## Create a new service account",
@@ -1991,7 +1986,7 @@
                   ]
                 },
                 {
-                  "path": "docs/developer/Technical Documentation/Tests/Automation/08. TestDataFileSetup.md",
+                  "path": "developer/Technical Documentation/Tests/Automation/08. TestDataFileSetup.md",
                   "name": "08. TestDataFileSetup.md",
                   "chapter": [
                     "## General instructions for working with the test data files",
@@ -2006,7 +2001,7 @@
                   ]
                 },
                 {
-                  "path": "docs/developer/Technical Documentation/Tests/Automation/09. CreateAppScenario.md",
+                  "path": "developer/Technical Documentation/Tests/Automation/09. CreateAppScenario.md",
                   "name": "09. CreateAppScenario.md",
                   "chapter": [
                     "## Actual E2E scenario",
@@ -2020,7 +2015,7 @@
                   ]
                 },
                 {
-                  "path": "docs/developer/Technical Documentation/Tests/Automation/10. ReportPortal.md",
+                  "path": "developer/Technical Documentation/Tests/Automation/10. ReportPortal.md",
                   "name": "10. ReportPortal.md",
                   "chapter": [
                     "# ReportPortal",
@@ -2033,7 +2028,7 @@
               ]
             },
             {
-              "path": "docs/developer/Technical Documentation/Tests/Tests.md",
+              "path": "developer/Technical Documentation/Tests/Tests.md",
               "name": "Tests.md",
               "chapter": [
                 "## Summary",
@@ -2047,11 +2042,11 @@
           ]
         },
         {
-          "path": "docs/developer/Technical Documentation/Version Upgrade",
+          "path": "developer/Technical Documentation/Version Upgrade",
           "name": "Version Upgrade",
           "children": [
             {
-              "path": "docs/developer/Technical Documentation/Version Upgrade/portal-upgrade-details.md",
+              "path": "developer/Technical Documentation/Version Upgrade/portal-upgrade-details.md",
               "name": "portal-upgrade-details.md",
               "chapter": [
                 "## Summary",
