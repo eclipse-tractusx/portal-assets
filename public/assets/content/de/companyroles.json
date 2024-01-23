@@ -22,12 +22,12 @@
         "navigation": "managed-connector-registration-id"
       },
       {
-        "index": 4,
+        "index": 5,
         "title": "technical user management",
         "navigation": "technical-user-management-id"
       },
       {
-        "index": 5,
+        "index": 6,
         "title": "standard libraries",
         "navigation": "std-libraries-id"
       }
