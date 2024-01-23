@@ -17,14 +17,19 @@
         "navigation": "app-change-process-id"
       },
       {
-        "index": 1,
+        "index": 4,
         "title": "connector registration",
         "navigation": "managed-connector-registration-id"
       },
       {
-        "index": 2,
+        "index": 4,
         "title": "technical user management",
         "navigation": "technical-user-management-id"
+      },
+      {
+        "index": 5,
+        "title": "standard libraries",
+        "navigation": "std-libraries-id"
       }
     ],
     "title": "Catena-X Data App Provider",
@@ -238,6 +243,14 @@
             "backgroundColor": "#F9F9F9"
           }
         ]
+      },
+      {
+        "title": "Standard Libraries",
+        "description": "",
+        "imagePath": "",
+        "backgroundColor": "#FFFFFF",
+        "id": "std-libraries-id",
+        "template": "TextImageSideBySideWithSections"
       }
     ]
   },
@@ -257,6 +270,11 @@
         "index": 3,
         "title": "dataspace participants",
         "navigation": "business-id"
+      },
+      {
+        "index": 4,
+        "title": "standard libraries",
+        "navigation": "std-libraries-id"
       }
     ],
     "title": "Catena-X Data Service Provider",
@@ -400,6 +418,14 @@
             "backgroundColor": "#F9F9F9"
           }
         ]
+      },
+      {
+        "title": "Standard Libraries",
+        "description": "",
+        "imagePath": "",
+        "backgroundColor": "#FFFFFF",
+        "id": "std-libraries-id",
+        "template": "TextImageSideBySideWithSections"
       }
     ]
   },
@@ -424,6 +450,11 @@
         "index": 4,
         "title": "Manage your Network",
         "navigation": "network-id"
+      },
+      {
+        "index": 5,
+        "title": "standard libraries",
+        "navigation": "std-libraries-id"
       }
     ],
     "title": "Catena-X Participant",
@@ -673,6 +704,14 @@
             "backgroundColor": "#F9F9F9"
           }
         ]
+      },
+      {
+        "title": "Standard Libraries",
+        "description": "",
+        "imagePath": "",
+        "backgroundColor": "#FFFFFF",
+        "id": "std-libraries-id",
+        "template": "TextImageSideBySideWithSections"
       }
     ]
   },
@@ -682,6 +721,11 @@
         "index": 2,
         "title": "Certification Process",
         "navigation": "section-two"
+      },
+      {
+        "index": 3,
+        "title": "standard libraries",
+        "navigation": "std-libraries-id"
       }
     ],
     "title": "Catena-X Data Conformity Assessment Bodies (CABs)",
@@ -719,6 +763,14 @@
             }
           ]
         }
+      },
+      {
+        "title": "Standard Libraries",
+        "description": "",
+        "imagePath": "",
+        "backgroundColor": "#FFFFFF",
+        "id": "std-libraries-id",
+        "template": "TextImageSideBySideWithSections"
       }
     ]
   },
@@ -741,6 +793,11 @@
       },
       {
         "index": 4,
+        "title": "standard libraries",
+        "navigation": "std-libraries-id"
+      },
+      {
+        "index": 5,
         "title": "standard libraries",
         "navigation": "std-libraries-id"
       }
