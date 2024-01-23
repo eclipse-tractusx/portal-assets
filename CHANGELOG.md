@@ -2,6 +2,17 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
+## 1.8.0-RC2
+
+### Change
+
+- moved developer into docs directory and enable docs app
+- moved helper user docs into user user directory and enable docs app
+- moved pen test information to Tests.md
+- updated test automation docs
+- removed obsolete version files
+- enhanced documentation for technical user view
+
 ## 1.8.0-RC1
 
 ### Change
