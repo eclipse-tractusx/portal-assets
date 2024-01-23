@@ -546,11 +546,11 @@ class Content extends Viewable {
     const isRawLink = url.href.startsWith(Settings.DOCBASE)
     const isAppLink = isLocalLink && url.pathname.startsWith('/documentation/')
     const isDevLink =
-      (isLocalLink && url.pathname.startsWith('/developer/')) ||
-      (isRawLink && url.pathname.includes('/developer/'))
+      (isLocalLink && url.pathname.startsWith('/docs/developer/')) ||
+      (isRawLink && url.pathname.includes('/docs/developer/'))
     const isDocsLink =
-      (isLocalLink && url.pathname.startsWith('/docs/')) ||
-      (isRawLink && url.pathname.includes('/docs/'))
+      (isLocalLink && url.pathname.startsWith('/docs/user/')) ||
+      (isRawLink && url.pathname.includes('/docs/user/'))
     const isPageLink = isAppLink && url.search === location.search
     if (isPageLink) {
       // ignore
@@ -558,8 +558,8 @@ class Content extends Viewable {
       // ignore
     } else if (isDocsLink || isDevLink) {
       const path = decodeURI(link.href)
-        .replace(/^.*docs\//, 'docs/')
-        .replace(/^.*developer\//, 'developer/')
+        .replace(/^.*docs\/user\//, 'user/')
+        .replace(/^.*docs\/developer\//, 'developer/')
         .replace(/\/$/, '')
       link.setAttribute('href', `.?path=${encodeURI(path)}`)
     }
@@ -584,7 +584,7 @@ class Content extends Viewable {
 
   renderMD(content) {
     this.content = content
-    const url = `${Settings.DOCBASE}/${state.releaseSelection}/${content.path}`
+    const url = `${Settings.DOCBASE}/${state.releaseSelection}/docs/${content.path}`
     this.loader.classList.remove('hidden')
     fetch(url)
       .then((response) => response.text())

@@ -20,7 +20,7 @@
 export const Settings = {
   DOCBASE: 'https://raw.githubusercontent.com/eclipse-tractusx/portal-assets',
   SRCBASE: 'https://github.com/eclipse-tractusx/portal-assets',
-  DEFAULT_ROOT: 'docs',
+  DEFAULT_ROOT: 'user',
 }
 
 export const Patterns = {
