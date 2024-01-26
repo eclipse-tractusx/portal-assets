@@ -139,7 +139,7 @@ The Golden Record has a couple of implemented validations to validate the regist
 
 ### Description of the functional interface (WHAT)
 
-Publishing company data of a to be registered CX member to the Golden Record
+Publishing company data of a to be registered CX member to the Golden Record via the Gate
 <br>
 <br>
 
@@ -152,18 +152,19 @@ n/a
 #### Service Call Details
 
 The call itself is not a API triggered call but automated by the process worker.
-However the administrator of the platform has the chance to retrigger the process in the scenario of an failure.
+The portal process worker calls the following endpoints to store the new registration business partner company data
 
 ```diff
-! POST /api/administration/registration/application/{applicationId}/trigger-bpn
+! PUT /api/catena/input/business-partners
 ```
 
-<br>
+> **_NOTE:_**  Field ownCompanyData gets set to "true"
 
-Request Body
-<br>
+As soon as the data are published, the job runs the endpoint to trigger the bpnl creation
 
-    n/a
+```diff
+! ????
+```
 
 <br>
 <br>
@@ -230,7 +231,7 @@ The call itself is not a API triggered call but automated by the process worker.
 However the administrator of the platform has the chance to retrigger the process in the scenario of an failure.
 
 ```diff
-! POST /api/administration/registration/application/{applicationId}/trigger-bpn
+! GET /api/catena/sharing-state
 ```
 
 <br>
@@ -256,6 +257,25 @@ Request Body
                 }
             ]
         }
+
+<br>
+<br>
+
+### Workaround Solution - in case BPNL is down
+
+In case the BPDM interface is not enabled or runs into unexpected system downtime, the operator got enabled to set the BPNL manually for the registration request via the "Application Request" board.
+The endpoint enabled to set the BPNL manually:
+
+```diff
+! POST /api/administration/registration/application/{applicationId}/{bpn}/bpn
+```
+
+<br>
+
+Request Body
+<br>
+
+    n/a
 
 <br>
 <br>
