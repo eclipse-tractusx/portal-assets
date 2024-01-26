@@ -43,7 +43,10 @@ We start each part as a server process running on a different port. Then we star
 
 With the last step the portal is fully running and there should automatically open
 a browser session pointing to your local development instance at http://localhost:3000/
-By default the frontend is using the backend services deployed on the public development environment.
+
+#### Connect to backend/interface instances
+
+To connect your local portal frontend or registration app instance against a Portal Backend, Keycloak (centralidp), Business Partner Data Management, Semantic Hub and/or Managed Identity Wallet instance, change the default environment settings (example.org) in the [portal index.html](https://github.com/eclipse-tractusx/portal-frontend/blob/main/public/index.html), or [registration index.html](https://github.com/eclipse-tractusx/portal-frontend-registration/blob/main/public/index.html) respectively, on your local accordingly (do not commit those changes, it's recommended to keep them in a local stash).
 
 ## NOTICE
 
