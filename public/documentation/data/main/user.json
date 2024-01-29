@@ -683,21 +683,21 @@
               ]
             },
             {
-              "path": "user/04. App(s)/02. App Release Process/03.Terms&Conditions.md",
-              "name": "03.Terms&Conditions.md",
+              "path": "user/04. App(s)/02. App Release Process/03. Terms&Conditions.md",
+              "name": "03. Terms&Conditions.md",
               "chapter": [
                 "### Step 3 - Terms & Conditions / Consent",
                 "## NOTICE"
               ]
             },
             {
-              "path": "user/04. App(s)/02. App Release Process/04.Technical Integration.md",
-              "name": "04.Technical Integration.md",
+              "path": "user/04. App(s)/02. App Release Process/04. Technical Integration.md",
+              "name": "04. Technical Integration.md",
               "chapter": ["### Step 4 - Technical Integration", "## NOTICE"]
             },
             {
-              "path": "user/04. App(s)/02. App Release Process/05.Verify & Submit.md",
-              "name": "05.Verify & Submit.md",
+              "path": "user/04. App(s)/02. App Release Process/05. Verify & Submit.md",
+              "name": "05. Verify & Submit.md",
               "chapter": [
                 "### Step 6 - Validate & Submit for Publishing check",
                 "## NOTICE"
@@ -962,21 +962,21 @@
               ]
             },
             {
-              "path": "user/05. Service(s)/02. Service Release Process/03.Terms&Conditions.md",
-              "name": "03.Terms&Conditions.md",
+              "path": "user/05. Service(s)/02. Service Release Process/03. Terms&Conditions.md",
+              "name": "03. Terms&Conditions.md",
               "chapter": [
                 "### Step 3 - Terms & Conditions / Consent",
                 "## NOTICE"
               ]
             },
             {
-              "path": "user/05. Service(s)/02. Service Release Process/04.Technical Integration.md",
-              "name": "04.Technical Integration.md",
+              "path": "user/05. Service(s)/02. Service Release Process/04. Technical Integration.md",
+              "name": "04. Technical Integration.md",
               "chapter": ["### Step 4 - Technical Integration", "## NOTICE"]
             },
             {
-              "path": "user/05. Service(s)/02. Service Release Process/05.Verify & Submit.md",
-              "name": "05.Verify & Submit.md",
+              "path": "user/05. Service(s)/02. Service Release Process/05. Verify & Submit.md",
+              "name": "05. Verify & Submit.md",
               "chapter": [
                 "### Step 4 - Validate & Submit for Publishing check",
                 "## NOTICE"
