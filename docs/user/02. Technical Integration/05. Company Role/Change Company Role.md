@@ -19,7 +19,7 @@ To update the company role, follow the following steps.
 
 1st open the admin board
 
-<img width="226" alt="image" src="https://github.com/catenax-ng/tx-portal-assets/assets/94133633/db6ffe2c-a939-45ed-8aa8-9e53962fbd12">
+<img width="226" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/config-company-role-button.png">
 
 <br>
 <br>
@@ -27,7 +27,7 @@ To update the company role, follow the following steps.
 2nd select the resepctive required roles
 
 <p align="center">
-<img width="636" alt="image" src="https://github.com/catenax-ng/tx-portal-assets/assets/94133633/6c2130dd-6add-4953-b480-1fb9fd6e6399">
+<img width="636" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/change-company-role-options.png">
 </p>
 
 <br>
@@ -37,7 +37,7 @@ With the "Submit" selection the overlay with the change details as well as the r
 If the user approved all the necessary T&Cs the role change can get committed and will get effective in the same moment
 
 <p align="center">
-<img width="526" alt="image" src="https://github.com/catenax-ng/tx-portal-assets/assets/94133633/2e9f91e4-4b89-4482-b2ed-99d89a00e0cb">
+<img width="526" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/change-company-role-confirmations-screen.png">
 </p>
 
 <br>

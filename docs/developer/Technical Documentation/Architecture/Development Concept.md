@@ -122,7 +122,7 @@ Implementation
 
 Example
 
-<img width="606" alt="image" src="https://github.com/catenax-ng/tx-portal-assets/assets/94133633/52971680-ea8c-4edc-8d6d-0b52d4b67b23">
+<img width="606" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/registration-application-json-content.png">
 
 <br>
 <br>

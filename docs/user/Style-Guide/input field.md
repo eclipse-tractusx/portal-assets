@@ -1,6 +1,6 @@
 ### Input Field
 
-<img width="600" alt="image" src="https://github.com/catenax-ng/tx-portal-assets/assets/94133633/131c3add-d7c7-4162-8546-46a9f6cbecbc">
+<img width="600" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/input-field-example.png">
 
 <br>
 <br>
