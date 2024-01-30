@@ -19,7 +19,7 @@ The Gaia-X Clearinghouse provides two key services
 Below the respective touched business process steps are highlighted to enable an easier mapping of the interfaces to the portal product business process:
 
 <p align="center">
-<img width="843" alt="image" src="https://github.com/catenax-ng/tx-portal-assets/assets/94133633/520ca8f9-488a-4227-8a3b-0ed573dee210">
+<img width="843" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/clearinghouse-usage-overview.png">
 </p>
 
 <br>
@@ -34,7 +34,7 @@ Below the respective touched business process steps are highlighted to enable an
 <br>
 
 <p align="center">
-<img width="857" alt="image" src="https://github.com/catenax-ng/tx-portal-assets/assets/94133633/597fd45f-cc99-481e-a8d3-875922b23905">
+<img width="857" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/clearinghouse-data-validation.png">
 </p>
 
 <br>
@@ -48,7 +48,7 @@ Both the flows are identical and displayed below:
 <br>
 
 <p align="center">
-<img width="857" alt="image" src="https://github.com/catenax-ng/tx-portal-assets/assets/94133633/cba051a0-246f-494f-8dd9-db353904abc1">
+<img width="857" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/clearringhouse-sd-factory.png">
 </p>
 
 <br>
@@ -60,7 +60,7 @@ Both the flows are identical and displayed below:
 <br>
 
 <p align="center">
-<img width="709" alt="image" src="https://github.com/catenax-ng/tx-portal-assets/assets/94133633/3d073212-45ee-47b4-8a4a-5561b3fccbcc">
+<img width="709" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/clearinghouse-compliance-check.png">
 </p>
 
 Two technical users are created to allow the clearinghouse to access the available services:

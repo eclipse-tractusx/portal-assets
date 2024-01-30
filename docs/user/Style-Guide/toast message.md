@@ -1,6 +1,6 @@
 ### Toast Message
 
-<img width="463" alt="image" src="https://github.com/catenax-ng/tx-portal-assets/assets/94133633/c8cbd24e-35d9-4122-b5e3-dd1d59c41b71">
+<img width="463" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/toast-example.png">
 
 <br>
 
