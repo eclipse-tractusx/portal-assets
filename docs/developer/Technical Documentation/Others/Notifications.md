@@ -256,19 +256,19 @@ Unread first: {hostname}/api/Notification?page=0&size=15& notificationTopic=ACTI
 <br>
 
 When the user is opening the page "All" is preselected and the notification as per the endpoint:  
-https://portal-backend.dev.demo.catena-x.net/api/Notification?page=0&size=15&sorting=DateDesc  
+https://{hostname}/api/Notification?page=0&size=15&sorting=DateDesc  
 <br>
 
 When the user clicks on the view tag "app only" notification as per the endpoint are showing app:  
-https://portal-backend.dev.demo.catena-x.net/api/Notification?page=0&size=15¬ificationTopic=OFFER&sorting=DateDesc  
+https://{hostname}/api/Notification?page=0&size=15¬ificationTopic=OFFER&sorting=DateDesc  
 <br>
 
 When the user clicks on the view tag "info only" notification as per the endpoint are showing app:  
-https://portal-backend.dev.demo.catena-x.net/api/Notification?page=0&size=15¬ificationTopic=INFO&sorting=DateDesc  
+https://{hostname}/api/Notification?page=0&size=15¬ificationTopic=INFO&sorting=DateDesc  
 <br>
 
 When the user clicks on the view tag "messaged with action required" notification as per the endpoint are showing app:  
-https://portal-backend.dev.demo.catena-x.net/api/Notification?page=0&size=15&onlyDueDate=true&sorting=DateDesc
+https://{hostname}/api/Notification?page=0&size=15&onlyDueDate=true&sorting=DateDesc
 
 <br>
 <br>

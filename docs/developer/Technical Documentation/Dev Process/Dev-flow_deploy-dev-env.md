@@ -36,7 +36,6 @@ flowchart LR
     subgraph Argo CD - sync to k8s cluster
     CD -- auto-sync --> A(Argo CD dev)
     PICD --> A
-    click A "https://argo.dev.demo.catena-x.net"
     end
 ```
 
