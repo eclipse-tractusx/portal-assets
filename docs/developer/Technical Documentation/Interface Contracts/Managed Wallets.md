@@ -28,7 +28,7 @@ The Portal / Managed Service connection is implemented in 2 functions
 #### #2 EDC Registration
 
 <br>
-<img width="1044" alt="image" src="https://github.com/catenax-ng/tx-portal-assets/assets/94133633/6eba2675-9255-437c-86d4-4873ea7a0f2f">
+<img width="1044" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/clearringhouse-sd-factory.png">
 <br>
 <br>
 

@@ -1,6 +1,6 @@
 ### Searchbar
 
-<img width="453" alt="image" src="https://github.com/catenax-ng/tx-portal-assets/assets/94133633/91df7804-cf82-4940-9fa0-3a98dd0f0fa9">
+<img width="453" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/searchbar-example.png">
 
 <br>
 

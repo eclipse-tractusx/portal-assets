@@ -4,7 +4,7 @@
 
 <br>
 
-<img width="978" alt="image" src="https://github.com/catenax-ng/tx-portal-assets/assets/94133633/850e9dc6-aae9-41ad-9976-6227758f4528">
+<img width="978" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/agreements-db-schema.png">
 
 <br>
 <br>

@@ -1463,6 +1463,16 @@
           "name": "DB Views and Details",
           "children": [
             {
+              "path": "developer/Technical Documentation/DB Views and Details/Agreements - DB - View.md",
+              "name": "Agreements - DB - View.md",
+              "chapter": [
+                "## Agreements",
+                "### Agreement Table Connection",
+                "### Details",
+                "## NOTICE"
+              ]
+            },
+            {
               "path": "developer/Technical Documentation/DB Views and Details/App - DB - View.md",
               "name": "App - DB - View.md",
               "chapter": [
@@ -1582,6 +1592,7 @@
                 "#### 1. Start the portal webserver instance on local port 3001",
                 "#### 2. Start the registration app webserver instance on local port 3002",
                 "#### 3. Start the reverse proxy and assets webserver instance on ports 3000 and 3003",
+                "#### Connect to backend/interface instances",
                 "## NOTICE"
               ]
             },

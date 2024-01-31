@@ -1,6 +1,6 @@
 ### Buttons
 
-![image](https://github.com/catenax-ng/tx-portal-assets/assets/94133633/1263bd7f-eb01-4c02-bdf8-3fe7899f68e4)
+![image](https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/button-variations.png)
 
 <br>
 <br>

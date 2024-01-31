@@ -1,6 +1,6 @@
 ### Date Picker
 
-<img width="560" alt="image" src="https://github.com/catenax-ng/tx-portal-assets/assets/94133633/bdbcb714-0c5a-4acb-806f-48e60864199f">
+<img width="560" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/datepicker.png">
 
 #### Principles
 

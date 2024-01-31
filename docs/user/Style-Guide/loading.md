@@ -1,6 +1,6 @@
 ### Loading
 
-<img width="352" alt="image" src="https://github.com/catenax-ng/tx-portal-assets/assets/94133633/5f7ac50e-8432-47ba-8acd-e7fe867119f7">
+<img width="352" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/loading-example.png">
 
 <br>
 

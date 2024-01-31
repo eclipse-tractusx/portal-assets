@@ -1,6 +1,6 @@
 ### Drop Down
 
-<img width="740" alt="image" src="https://github.com/catenax-ng/tx-portal-assets/assets/94133633/af7bc1c5-9d26-4baf-ad50-612835c0a009">
+<img width="740" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/dropdown.png">
 
 <br>
 
