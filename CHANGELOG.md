@@ -2,6 +2,19 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
+## 1.8.0-RC3
+
+### Change
+
+- removed references to consortia environments
+- removed image reference to catena-ng in documentation
+- adjusted directory structure for app and service release process documentation
+- enhanced local development documentation for frontend in regards to backend and interface connection
+
+### Bugfix
+
+- added standard library template to sections under company roles
+
 ## 1.8.0-RC2
 
 ### Change
