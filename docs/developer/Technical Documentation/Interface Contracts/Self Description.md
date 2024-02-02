@@ -23,7 +23,7 @@ In the current implementation level, self-descriptions are considered in the fol
 ## Architecture Overview
 
 <br>
-<img width="927" alt="image" src="https://user-images.githubusercontent.com/94133633/210441023-e5266002-d358-4757-b06a-2eae03b23803.png">
+<img width="927" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/sdfactory-portal-wallet-interactions.png">
 <br>
 <br>
 

@@ -51,8 +51,8 @@ currently under change
 
 Email Trigger: Invite of a new Business Partner by the CX Admin
 <br>
-<img width="600" alt="image" src="https://user-images.githubusercontent.com/94133633/210457757-dd9cd9f8-3768-420f-9d9f-523941085230.png">
-<img width="600" alt="image" src="https://user-images.githubusercontent.com/94133633/210457503-61f8e8a9-bda6-42d3-8115-441d52fff867.png">
+<img width="600" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/registration-invite-mail.png">
+<img width="600" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/registration-password-mail.png">
 <br>
 <br>
 <br>
@@ -70,7 +70,7 @@ Email Trigger: Invite of a team member to the registration process by the compan
 
 Email Trigger: User clicked "Submit" button in the last step of the Registration Flow
 <br>
-<img width="600" alt="image" src="https://user-images.githubusercontent.com/94133633/210458019-ba6a78e9-b941-4e2f-988a-ab42d6fa0db8.png">
+<img width="600" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/successful-registration-mail.png">
 <br>
 <br>
 <br>

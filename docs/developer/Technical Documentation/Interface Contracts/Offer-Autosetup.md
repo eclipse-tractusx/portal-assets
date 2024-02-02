@@ -17,7 +17,7 @@ Following interfaces are relevant to enable the autosetup
 
 ### #1 Highlevel Architecture picture
 
-<img width="756" alt="image" src="https://user-images.githubusercontent.com/94133633/211172076-72c4894e-17a6-49a6-bf68-5c5a889781e0.png">
+<img width="756" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/app-service-subscription-flow.png">
 
 <br>
 <br>
@@ -36,7 +36,7 @@ The PUT service url is enabling the service / app provider to store/hold the ser
 Logic: the service provider/app provider (must be an cx member) can trigger the endpoint to store the autosetup endpoint.
 <br>
 
-<img width="600" alt="image" src="https://user-images.githubusercontent.com/94133633/211172164-f552814c-4212-4936-9c52-a8f7df3622df.png">
+<img width="600" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/register-url-popup.png">
 
 <br>
 

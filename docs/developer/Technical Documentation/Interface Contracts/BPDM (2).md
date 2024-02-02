@@ -12,7 +12,7 @@ This document describes the details of the interface spec between BPDM and Porta
 ## Architecture Overview
 
 <br>
-<img width="955" alt="image" src="https://user-images.githubusercontent.com/94133633/210439117-f02cb00b-5631-479c-ae70-b8b3e326a2ac.png">
+<img width="955" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/portal-bpdm-backend-interaction.png">
 <br>
 <br>
 

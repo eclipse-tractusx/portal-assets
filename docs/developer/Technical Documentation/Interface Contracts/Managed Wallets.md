@@ -21,7 +21,7 @@ The Portal / Managed Service connection is implemented in 2 functions
 #### #1 Company Registration
 
 <br>
-<img width="1000" alt="image" src="https://user-images.githubusercontent.com/94133633/210450411-03a7c623-464c-4246-bdc9-460b98952af4.png">
+<img width="1000" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/company-registration-backend-interactions.png">
 <br>
 <br>
 
@@ -36,7 +36,7 @@ The Portal / Managed Service connection is implemented in 2 functions
 
 <br>
 <br>
-<img width="1000" alt="image" src="https://user-images.githubusercontent.com/94133633/210450632-ec394df5-ed4c-4f11-b4ea-9ba10bd134f1.png">
+<img width="1000" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/user-authentification-backend-flow.png">
 <br>
 <br>
 
