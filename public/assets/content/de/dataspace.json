@@ -40,7 +40,7 @@
         "description": "Mithilfe von Richtlinien werden Datenzugriffsrichtlinien sowie Nutzungsdetails definiert.<1></1><1></1>'Access' bedeutet, dass festgelegt wird, wer Datenangebote sehen kann. Die Nutzung definiert den Datenzugriff selbst – also Vertragsverhandlungen und Datenverbrauch. Z.B. Unternehmen A kann sehen, dass Unternehmen B ein Datenangebot für die in der letzten Woche produzierten Fahrzeugdaten hat. Aufgrund fehlender Nutzungsrechte kann das Unternehmen die Vereinbarung/das Datenangebot jedoch nicht annehmen und hat keinen Zugriff auf diese Daten.<1></1>< 1></1>Auf der folgenden Seite finden Sie Einzelheiten zu den jeweils verfügbaren Zugriffs-/Nutzungsrichtlinien<1></1><1></1>",
         "imagePath": "/images/frame/AccessVsUsage.png",
         "backgroundColor": "#FFFFFFF",
-        "id": "core-id",
+        "id": "intro-id",
         "template": "TextImageSideBySide",
         "sectionLink": {
           "data": [
