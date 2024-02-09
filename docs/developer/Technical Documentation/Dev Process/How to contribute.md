@@ -102,6 +102,16 @@ The suggested naming convention is '{type}{(function)}: {short summary}'
 Add details to the change, fix or feature in the PR description.
 What was changed, why was it changed (e.g. which issue was fixed or which requirement was implemented), and how was it changed.
 
+## Documentation
+
+### Adding Pictures
+
+If your change needs to be documented inside the documentation with pictures please add them the following way:
+
+1. Add the picture to the docs/static folder
+2. Generate a license file for your picture either manually or by using \tx-portal-assets\scripts\license.sh. Please make sure only the license files for your pictures were added/modified
+3. Link to your picture from static like this https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/YOUR_FILE.png
+
 ## NOTICE
 
 This work is licensed under the [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).
