@@ -6,3 +6,7 @@ This document outlines the developer implementation details for the registration
 
 The documentation is structured to provide a comprehensive guide for developers to understand, implement, and integrate these registration flows into the application.
 
+NOTE: The registration flow is a critical component of the user onboarding process, designed to authenticate and onboard users through distinct pathways tailored to the application's requirements. This documentation describes the steps, API endpoints, expected responses, and error handling for both registration methods.
+
+<br>
+<br>
