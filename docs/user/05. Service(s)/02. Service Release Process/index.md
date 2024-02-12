@@ -16,7 +16,7 @@ and click on the action button "Register your service"
 
 <br>
 
-<img width="636" alt="image" src="https://user-images.githubusercontent.com/94133633/229456022-5ae40336-b4d2-4bdd-8fc3-7abd819be7e2.png">
+<img width="636" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/register-service-screen.png">
 
 <br>
 <br>

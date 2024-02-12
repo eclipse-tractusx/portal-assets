@@ -49,7 +49,7 @@ All images used for any user interaction will receive a frame. White as well as 
 
 #### App Picture Icon Template
 
-<img width="357" alt="image" src="https://user-images.githubusercontent.com/94133633/211018531-97d26766-33cf-47af-88be-58b10761ce43.png">
+<img width="357" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/app-image-template.png">
 
 <br>
 <br>

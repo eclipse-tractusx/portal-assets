@@ -14,7 +14,7 @@ Mainly 4 tables are used for the documents itself
 
 <br>
 
-<img width="1367" alt="image" src="https://user-images.githubusercontent.com/94133633/211201142-a4235316-6c4e-47eb-85b3-6d13cf3e2846.png">
+<img width="1367" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/db-schema-documents.png">
 
 <br>
 <br>

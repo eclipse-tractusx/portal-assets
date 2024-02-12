@@ -3,7 +3,7 @@
 #### App DB Connection
 
 <br>
-<img width="1684" alt="image" src="https://user-images.githubusercontent.com/94133633/222970951-6e813f26-fd44-4b8c-87ee-7c33050ae661.png">
+<img width="1684" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/db-schema-offers.png">
 
 <br>
 <br>
@@ -54,7 +54,7 @@ Table relation use_cases - 1:m - app_assigned_use_cases - m:1 - offers
 <br>
 
 <p align="center">
-<img width="610" alt="image" src="https://user-images.githubusercontent.com/94133633/229378877-a4b6bddc-d77a-46d5-a9a1-1ab17f04b536.png">
+<img width="610" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/db-schema-offer-privacy-policy.png">
 </p>
 
 <br>
