@@ -102,15 +102,15 @@ The suggested naming convention is '{type}{(function)}: {short summary}'
 Add details to the change, fix or feature in the PR description.
 What was changed, why was it changed (e.g. which issue was fixed or which requirement was implemented), and how was it changed.
 
-## Documentation
-
 ### Adding Pictures
 
-If your change needs to be documented inside the documentation with pictures please add them the following way:
+If your change includes adding pictures, please add them the following way:
 
-1. Add the picture to the docs/static folder
-2. Generate a license file for your picture either manually or by using \tx-portal-assets\scripts\license.sh. Please make sure only the license files for your pictures were added/modified
-3. Link to your picture from static like this https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/YOUR_FILE.png
+1. Add the picture to the docs/static folder if it is documentation app specific or to public/assets/images for portal app specific pictures.
+2. Generate a license file for your picture either manually or by using the scripts\license.sh. Please make sure that the license file states the correct information in term of legal obligations especially in the case of [3rd party content](https://eclipse-tractusx.github.io/docs/release/trg-7/trg-7-04). Also, please don't change any information in already existing license files.
+3. [Only relevant for docs/static pictures] Link to your picture from the static folder like this https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/YOUR_FILE.png
+
+The absolute path in step 3 is necessary because the documentation app is not yet enabled for relative paths: [#236](https://github.com/eclipse-tractusx/portal-assets/issues/236).
 
 ## NOTICE
 
