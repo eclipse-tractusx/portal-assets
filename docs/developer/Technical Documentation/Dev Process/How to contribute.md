@@ -104,7 +104,7 @@ What was changed, why was it changed (e.g. which issue was fixed or which requir
 
 ### Adding Pictures
 
-If your change includes adding pictures, please add them the following way:
+If your change includes adding pictures, please add them in the following way:
 
 1. Add the picture to the docs/static folder if it is documentation app specific or to public/assets/images for portal app specific pictures.
 2. Generate a license file for your picture either manually or by using the scripts\license.sh. Please make sure that the license file states the correct information in term of legal obligations especially in the case of [3rd party content](https://eclipse-tractusx.github.io/docs/release/trg-7/trg-7-04). Also, please don't change any information in already existing license files.
