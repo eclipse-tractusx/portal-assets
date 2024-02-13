@@ -6,7 +6,7 @@ The offer autosetup is used to
 - the service offers two possibilities:
   - either automate the full flow; or
   - run it via any UI
- 
+
 In the page below the functional details and technical implementation possibilities are explained.
 
 ## Architecture Overview
@@ -44,11 +44,11 @@ With any further endpoint triggers; the existing record will get overwritten. Me
 <br>
 
 ##### UI Flow Details:
+
 <img width="600" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/register-url-popup.png">
 
 <br>
 <br>
-
 
 After the endpoint is configured, all customer service/app subscription will trigger automatically the company configured endpoint with the following data:
 
@@ -87,7 +87,7 @@ After the customer request incl the customer data for service/app setup got prov
 - ramp-up & configure the service/app
 - activate the subscription request of the customer
 
-For the *ramp-up and configuration* likely a technical user might be needed to (e.g. connect to a central provided service such as dataspace discovery, bpdm-pool, etc.). Since the offer provider did define the technical user needed profile in the app/service release process, the pre-saved configuration profile will be used now to create the technical user.
+For the _ramp-up and configuration_ likely a technical user might be needed to (e.g. connect to a central provided service such as dataspace discovery, bpdm-pool, etc.). Since the offer provider did define the technical user needed profile in the app/service release process, the pre-saved configuration profile will be used now to create the technical user.
 The app/service provider is responsible to secure the technical user credentials carefully. The technical user is a critical element since this technical user is created on the behalf of the customer (means: the technical user claims are connected to the customer identity - this is mandatorily needed since the customer is the actual acting identity of the service/app - and not the app/service provider).
 
 The app/service provider is supposed to call the endpoint which triggers the automatic creation of all app/service instance relevant informations. Therefore 2 endpoints are available
@@ -103,7 +103,6 @@ The app/service provider is supposed to call the endpoint which triggers the aut
 With the successful client/app instance creation on the portal side, the technical user for the AAS registry will get send within the response.  
 **Auth**: can get triggered by usern with the role App Manager; Service Manager and technical users with the role "Offer Management"
 
-
 Request Body
 <br>
 
@@ -115,7 +114,6 @@ Request Body
           ]
 
 <br>
-
 
 ##### API Endpoint Logic
 
@@ -177,6 +175,7 @@ Response Body
 #### Details of POST /api/Apps/start-autoSetup
 
 As an functional extencion and more app/service provider centric approach, the endpoint /api/Apps/start-autoSetup got developed which is providing:
+
 - process worker used to setup offer provider relevant objects and user notifications
 - in case of system errors or process issues, data loss is prefented by using temp data storage and automatic retriggering of processes
 
@@ -205,15 +204,15 @@ Compared to the deprecated endpoint mentioned above, the /start-autosetup is a a
 
 ## Checklist Worker
 
-| Process Step                                         | Initiated by..                                         | Description                                                                                                                                                        | Success Scenario                                                                                                                 | Error (process_step status FAILED)         | Auto Retrigger?                                     | Manual Retrigger?                                                                       | Possible Following Steps                        |
-| ---------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ | --------------------------------------------------- | --------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| 100<br>Trigger Provider                              | Automatically by the portal application                              | Subscription Record creation in "PENDING" <br>Portal triggers the Offer Provider URL (if provider url is stored)                                                   | If the provider endpoint is responding with 20x <br>the process step will get set to "DONE" and "SKIPPED" if no URL is available | ??                                         | Yes, in case of an 5xx                              | Yes, in case of an 400 (wrong content) 404 (wrong url)                                  | Multi Instance: #101 <br> Single Instance: #103 |
-| 101<br>Start Autosetup                               | By the provider by running .../api/Apps/start-autoSetup                              | Provider is triggering the portal autosetup endpoint with necessary offer details<br>the step will trigger the portal internal autosetup jobs (102, 103, 104, 105) | The process step is set to "DONE" <br>with successful endpoint request body (which is getting stored in a temp table)            | -                                          | -                                                   | Step stays on "TO_DO" till the endpoint got successfully triggered (content is correct) | Apps: #102 <br>Services: #104                   |
-| 102<br>OfferSubscription Client Creation             | Automatically by the portal application             | Created app client in Keycloak and DB, additionally app instance is getting created                                                                                | The process step is set to "DONE" <br>after all records are created                                                              | Status "FAILED" if job was running on fail | Yes, in case of an 5xx by keycloak                  | Yes, in case of an 4xx by keycloak                                                      | #104 <br>#105                                   |
-| 103<br>Single Instance Subscription Details Creation | By the provider by running ?????                              | Single Instance Subscription Details Creation                                                                                                                      | The process step is set to "DONE" <br>as soon as the url and instance is linked                                                  |                                            | -                                                   | -                                                                                       | #105                                            |
-| 104<br>Offr Subscription Technical User Creation     | Automatically by the portal application             | Technical User creation in keycloak and metadata storage in portal db, additionally notification creation with technical client id                                 | The process step is set to "DONE" <br>after technical user ot successfully created                                               | Status "FAILED" if job was running on fail | Yes, in case of an 5xx by keycloak                  | Yes, in case of an 4xx by keycloak                                                      | #105                                            |
-| 105<br>Activate Subscription                         | By the provider by running .../api/Apps/subscription/{offerSubscriptionId}/activate-single-instance             | Subscription record activation, notification creation and send email.                                                                                              | The process step is set to "DONE" <br>after xxx                                                                                  | xxx                                        | Yes, in case of an 5xx for the email - auto "TO_DO" | -                                                                                       | Multi Instance: #106 <br> Single Instance: -    |
-| 106<br>Trigger Provider Callback                     | Automatically by the portal application                              | Trigger provider callback url to share client and tech user.                                                                                                       | The process step is set to "DONE" <br>after xxx                                                                                  | xxx                                        | Yes, in case of an 5xx                              | Yes, in case of an 4xx                                                                  | -                                               |
+| Process Step                                         | Initiated by..                                                                                      | Description                                                                                                                                                        | Success Scenario                                                                                                                 | Error (process_step status FAILED)         | Auto Retrigger?                                     | Manual Retrigger?                                                                       | Possible Following Steps                        |
+| ---------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ | --------------------------------------------------- | --------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| 100<br>Trigger Provider                              | Automatically by the portal application                                                             | Subscription Record creation in "PENDING" <br>Portal triggers the Offer Provider URL (if provider url is stored)                                                   | If the provider endpoint is responding with 20x <br>the process step will get set to "DONE" and "SKIPPED" if no URL is available | ??                                         | Yes, in case of an 5xx                              | Yes, in case of an 400 (wrong content) 404 (wrong url)                                  | Multi Instance: #101 <br> Single Instance: #103 |
+| 101<br>Start Autosetup                               | By the provider by running .../api/Apps/start-autoSetup                                             | Provider is triggering the portal autosetup endpoint with necessary offer details<br>the step will trigger the portal internal autosetup jobs (102, 103, 104, 105) | The process step is set to "DONE" <br>with successful endpoint request body (which is getting stored in a temp table)            | -                                          | -                                                   | Step stays on "TO_DO" till the endpoint got successfully triggered (content is correct) | Apps: #102 <br>Services: #104                   |
+| 102<br>OfferSubscription Client Creation             | Automatically by the portal application                                                             | Created app client in Keycloak and DB, additionally app instance is getting created                                                                                | The process step is set to "DONE" <br>after all records are created                                                              | Status "FAILED" if job was running on fail | Yes, in case of an 5xx by keycloak                  | Yes, in case of an 4xx by keycloak                                                      | #104 <br>#105                                   |
+| 103<br>Single Instance Subscription Details Creation | By the provider by running ?????                                                                    | Single Instance Subscription Details Creation                                                                                                                      | The process step is set to "DONE" <br>as soon as the url and instance is linked                                                  |                                            | -                                                   | -                                                                                       | #105                                            |
+| 104<br>Offr Subscription Technical User Creation     | Automatically by the portal application                                                             | Technical User creation in keycloak and metadata storage in portal db, additionally notification creation with technical client id                                 | The process step is set to "DONE" <br>after technical user ot successfully created                                               | Status "FAILED" if job was running on fail | Yes, in case of an 5xx by keycloak                  | Yes, in case of an 4xx by keycloak                                                      | #105                                            |
+| 105<br>Activate Subscription                         | By the provider by running .../api/Apps/subscription/{offerSubscriptionId}/activate-single-instance | Subscription record activation, notification creation and send email.                                                                                              | The process step is set to "DONE" <br>after xxx                                                                                  | xxx                                        | Yes, in case of an 5xx for the email - auto "TO_DO" | -                                                                                       | Multi Instance: #106 <br> Single Instance: -    |
+| 106<br>Trigger Provider Callback                     | Automatically by the portal application                                                             | Trigger provider callback url to share client and tech user.                                                                                                       | The process step is set to "DONE" <br>after xxx                                                                                  | xxx                                        | Yes, in case of an 5xx                              | Yes, in case of an 4xx                                                                  | -                                               |
 
 <br>
 <br>
