@@ -9,7 +9,7 @@ In this section the registration process and approval is in focus.
 
 <br>
 <p align="center">
-<img width="822" alt="image" src="https://user-images.githubusercontent.com/94133633/220176825-cc77cd1f-f1bd-450a-b08c-ce5fe0b5908d.png">
+<img width="822" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/complete-e2e-flow.png">
 </p>
 <br>
 

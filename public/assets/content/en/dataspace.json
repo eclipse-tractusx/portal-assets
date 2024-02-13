@@ -40,7 +40,7 @@
         "description": "Policies are used to define data access policies as well as usage details.<1></1><1></1>Access means it defined who can view data offers. Usage defines the data access itself - means contract negotiations and data consumption. E.g. Company A can see that Company B has a Data Offer of last week produced vehicle data - however due to missing usage rights the company can not accept the agreement/data offer and can't access those data.<1></1><1></1>The following page provides details about the respective available access/usage policies<1></1><1></1>",
         "imagePath": "/images/frame/AccessVsUsage.png",
         "backgroundColor": "#FFFFFFF",
-        "id": "core-id",
+        "id": "intro-id",
         "template": "TextImageSideBySide",
         "sectionLink": {
           "data": [

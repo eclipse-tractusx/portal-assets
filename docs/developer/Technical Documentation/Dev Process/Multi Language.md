@@ -32,7 +32,7 @@ i18next provides following add-ons:
 
 There is a locales folder in src which contains subfolders according to respective language codes as shown in the screenshot shared, like 'de'(German), 'en'(English). These folders contain the translation.json file used for translations.
 <br>
-<img width="260" alt="image" src="https://user-images.githubusercontent.com/94133633/210454359-7ed91a28-4293-4699-9dc2-58692b17b55d.png">
+<img width="260" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/file-structure-translations.png">
 
 We can add additional translation files if needed for any additional language.
 <br>
@@ -42,7 +42,7 @@ We can add additional translation files if needed for any additional language.
 
 Inside the CX Portal, the locales are divided by pages.
 <br>
-<img width="150" alt="image" src="https://user-images.githubusercontent.com/94133633/210455893-bd9971e7-ab0d-429a-a507-416f88d4b601.png">
+<img width="150" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/portal-path-locales.png">
 <br>
 There is one main file holding the generic translation for often used items (e.g. "approval button", headlines,...) and a file for each specific page to translate not often used values.
 

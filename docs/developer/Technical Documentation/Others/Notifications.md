@@ -8,7 +8,7 @@ In CX, the idea of push notification to a mobile device is something which is cu
 
 ## Architecture
 
-<img width="1368" alt="image" src="https://user-images.githubusercontent.com/94133633/211213676-a10a97d7-a2e4-4f72-b07d-9ecdaf9be8c5.png">
+<img width="1368" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/change-db-notification-flow.png">
 
 <br>
 <br>
@@ -17,7 +17,7 @@ In CX, the idea of push notification to a mobile device is something which is cu
 
 ##### Elements
 
-<img width="300" alt="image" src="https://user-images.githubusercontent.com/94133633/211213774-1078849f-2dee-4ce2-a652-331024ddd63d.png">
+<img width="300" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/ui-elements-notifications.png">
 
 ++ highlight messages which have read status "false"
 ++ enable urls inside the message
@@ -32,39 +32,39 @@ In CX, the idea of push notification to a mobile device is something which is cu
 Scenario 1
 If unread messages are "0" the notification icon wont show up. Instead only the user icon will be displayed
 
-<img width="70" alt="image" src="https://user-images.githubusercontent.com/94133633/211213885-30afb622-9fdb-4cb2-b94b-c50d2c9fd272.png">
+<img width="70" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/profile-icon-no-notification.png">
 
 <br>
 
 Scenario 2
 If unread messages are > 0 AND the actionRequired are = 0; the user icon with notification "false" state will get displayed. Inside the notification count bubble the number of "unread" messages will be shown.
 
-<img width="64" alt="image" src="https://user-images.githubusercontent.com/94133633/211213867-6338e90f-61dd-48fb-9395-8292e2d8a92f.png">
+<img width="64" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/profile-icon-with-notification-noaction.png">
 
 <br>
 
 Scenario 3
 If unread messages are > 0 AND the actionRequired are > 0; the user icon with notification "true" state will get displayed. Inside the notification count bubble the number of "actionRequired" messages will be shown.
 
-<img width="70" alt="image" src="https://user-images.githubusercontent.com/94133633/211213901-b65c97e3-0dce-42f3-9c1b-20d8bac3afb3.png">
+<img width="70" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/profile-icon-with-notification-action.png">
 
 <br>
 
 ###### Notification Screen
 
-<img width="600" alt="image" src="https://user-images.githubusercontent.com/94133633/211213958-df1a063c-e217-41ed-8407-1754dc299c1b.png">
+<img width="600" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/notifications-overview-screen.png">
 
 <br>
 
 ###### Filtering
 
-<img width="600" alt="image" src="https://user-images.githubusercontent.com/94133633/211213984-2656cc47-8709-4823-9b1e-83b77f17a848.png">
+<img width="600" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/notification-sort-options.png">
 
 <br>
 
 ###### Deletion Process for "Action Required" Notifications
 
-<img width="600" alt="image" src="https://user-images.githubusercontent.com/94133633/211214010-c1f21cbe-1350-47f3-89b9-4669d9a0fc67.png">
+<img width="600" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/delete-notification-popup.png">
 
 <br>
 
@@ -75,7 +75,7 @@ If unread messages are > 0 AND the actionRequired are > 0; the user icon with no
 
 ### Database
 
-<img width="400" alt="image" src="https://user-images.githubusercontent.com/94133633/211214049-4970683d-22ab-4757-8ef2-85e1b2db6634.png">
+<img width="400" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/db-schema-notifications.png">
 
 <br>
 
@@ -251,7 +251,7 @@ Unread first: {hostname}/api/Notification?page=0&size=15& notificationTopic=ACTI
 ....
 <br>
 
-<img width="598" alt="image" src="https://user-images.githubusercontent.com/94133633/211214902-7cf17262-dfaa-4c49-9bd3-ffa48945ab44.png">
+<img width="598" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/notifications-filter-options.png">
 
 <br>
 
