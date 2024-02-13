@@ -158,7 +158,7 @@ The portal process worker calls the following endpoints to store the new registr
 ! PUT /companies/test-company/api/catena/input/business-partners
 ```
 
-> **_NOTE:_**  Field ownCompanyData gets set to "true"
+> **_NOTE:_** Field ownCompanyData gets set to "true"
 
 As soon as the data are published, the job runs the endpoint to trigger the bpnl creation
 
@@ -277,95 +277,95 @@ the post will contain the externalId of the previous call. The request will look
 
 Request Body
 {
-    "totalElements": 1,
-    "totalPages": 1,
-    "page": 0,
-    "contentSize": 1,
-    "content": [
-        {
-            "externalId": "{portal application ID}",
-            "nameParts": [
-                "Name of the company"
-            ],
-            "identifiers": [
-                {
-                    "type": "EU_VAT_ID_DE",
-                    "value": "DExxxxxxxx",
-                    "issuingBody": null
-                }
-            ],
-            "states": [],
-            "roles": [],
-            "isOwnCompanyData": false,
-            "legalEntity": {
-                "legalEntityBpn": "(This is the value we take for the bpnl)",
-                "legalName": "Name of the company",
-                "shortName": "Name of the company",
-                "legalForm": null,
-                "classifications": [],
-                "confidenceCriteria": {
-                    "sharedByOwner": false,
-                    "checkedByExternalDataSource": false,
-                    "numberOfBusinessPartners": 1,
-                    "lastConfidenceCheckAt": "2024-01-26T11:35:30.013377",
-                    "nextConfidenceCheckAt": "2024-01-31T11:35:30.013381",
-                    "confidenceLevel": 0
-                }
-            },
-            "site": null,
-            "address": {
-                "addressBpn": "(this is the bpna we receive from the previous call)",
-                "name": null,
-                "addressType": "AdditionalAddress",
-                "physicalPostalAddress": {
-                    "geographicCoordinates": null,
-                    "country": "DE",
-                    "administrativeAreaLevel1": null,
-                    "administrativeAreaLevel2": null,
-                    "administrativeAreaLevel3": null,
-                    "postalCode": "xxxxx",
-                    "city": "xxxx",
-                    "district": null,
-                    "street": {
-                        "namePrefix": null,
-                        "additionalNamePrefix": null,
-                        "name": "Test str",
-                        "nameSuffix": null,
-                        "additionalNameSuffix": null,
-                        "houseNumber": null,
-                        "houseNumberSupplement": null,
-                        "milestone": null,
-                        "direction": null
-                    },
-                    "companyPostalCode": null,
-                    "industrialZone": null,
-                    "building": null,
-                    "floor": null,
-                    "door": null
-                },
-                "alternativePostalAddress": {
-                    "geographicCoordinates": null,
-                    "country": null,
-                    "administrativeAreaLevel1": null,
-                    "postalCode": null,
-                    "city": null,
-                    "deliveryServiceType": null,
-                    "deliveryServiceQualifier": null,
-                    "deliveryServiceNumber": null
-                },
-                "confidenceCriteria": {
-                    "sharedByOwner": false,
-                    "checkedByExternalDataSource": false,
-                    "numberOfBusinessPartners": 1,
-                    "lastConfidenceCheckAt": "2024-01-26T11:35:30.013377",
-                    "nextConfidenceCheckAt": "2024-01-31T11:35:30.013381",
-                    "confidenceLevel": 0
-                }
-            },
-            "createdAt": "2024-01-26T14:27:00.140930Z",
-            "updatedAt": "2024-01-26T14:27:00.140935Z"
-        }
-    ]
+"totalElements": 1,
+"totalPages": 1,
+"page": 0,
+"contentSize": 1,
+"content": [
+{
+"externalId": "{portal application ID}",
+"nameParts": [
+"Name of the company"
+],
+"identifiers": [
+{
+"type": "EU_VAT_ID_DE",
+"value": "DExxxxxxxx",
+"issuingBody": null
+}
+],
+"states": [],
+"roles": [],
+"isOwnCompanyData": false,
+"legalEntity": {
+"legalEntityBpn": "(This is the value we take for the bpnl)",
+"legalName": "Name of the company",
+"shortName": "Name of the company",
+"legalForm": null,
+"classifications": [],
+"confidenceCriteria": {
+"sharedByOwner": false,
+"checkedByExternalDataSource": false,
+"numberOfBusinessPartners": 1,
+"lastConfidenceCheckAt": "2024-01-26T11:35:30.013377",
+"nextConfidenceCheckAt": "2024-01-31T11:35:30.013381",
+"confidenceLevel": 0
+}
+},
+"site": null,
+"address": {
+"addressBpn": "(this is the bpna we receive from the previous call)",
+"name": null,
+"addressType": "AdditionalAddress",
+"physicalPostalAddress": {
+"geographicCoordinates": null,
+"country": "DE",
+"administrativeAreaLevel1": null,
+"administrativeAreaLevel2": null,
+"administrativeAreaLevel3": null,
+"postalCode": "xxxxx",
+"city": "xxxx",
+"district": null,
+"street": {
+"namePrefix": null,
+"additionalNamePrefix": null,
+"name": "Test str",
+"nameSuffix": null,
+"additionalNameSuffix": null,
+"houseNumber": null,
+"houseNumberSupplement": null,
+"milestone": null,
+"direction": null
+},
+"companyPostalCode": null,
+"industrialZone": null,
+"building": null,
+"floor": null,
+"door": null
+},
+"alternativePostalAddress": {
+"geographicCoordinates": null,
+"country": null,
+"administrativeAreaLevel1": null,
+"postalCode": null,
+"city": null,
+"deliveryServiceType": null,
+"deliveryServiceQualifier": null,
+"deliveryServiceNumber": null
+},
+"confidenceCriteria": {
+"sharedByOwner": false,
+"checkedByExternalDataSource": false,
+"numberOfBusinessPartners": 1,
+"lastConfidenceCheckAt": "2024-01-26T11:35:30.013377",
+"nextConfidenceCheckAt": "2024-01-31T11:35:30.013381",
+"confidenceLevel": 0
+}
+},
+"createdAt": "2024-01-26T14:27:00.140930Z",
+"updatedAt": "2024-01-26T14:27:00.140935Z"
+}
+]
 }
 
 ### Workaround Solution - in case BPNL is down
