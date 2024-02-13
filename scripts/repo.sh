@@ -28,8 +28,8 @@
 #       tx-asset-raw docs/Onboarding/Registration/FAQ.md
 #
 
-OWNER=catenax-ng
-REPO=tx-portal-assets
+OWNER=eclipse-tractusx
+REPO=portal-assets
 BASE=https://api.github.com
 BASE_RAW=https://raw.githubusercontent.com
 BRANCH=main
