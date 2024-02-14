@@ -4,7 +4,7 @@ The CX Portal & Network Services system stores different types of data in the sa
 
 <br>
 <p align="center">
-<img width="507" alt="image" src="https://user-images.githubusercontent.com/94133633/223835660-14776d9f-c035-408e-8068-e0d64c47619e.png">
+<img width="507" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/data-layers.png">
 </p>
 <br>
 <br>
@@ -124,7 +124,7 @@ Central Keycloak Instance
 <br>
 <br>
 
-<img width="1115" alt="image" src="https://user-images.githubusercontent.com/94133633/223836590-5109c211-5565-465e-becb-3841f55d00c2.png">
+<img width="1115" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/table-keycloak-clients.png">
 
 - Technical Users
 

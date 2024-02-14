@@ -139,7 +139,7 @@ The Golden Record has a couple of implemented validations to validate the regist
 
 ### Description of the functional interface (WHAT)
 
-Publishing company data of a to be registered CX member to the Golden Record
+Publishing company data of a to be registered CX member to the Golden Record via the Gate
 <br>
 <br>
 
@@ -152,18 +152,19 @@ n/a
 #### Service Call Details
 
 The call itself is not a API triggered call but automated by the process worker.
-However the administrator of the platform has the chance to retrigger the process in the scenario of an failure.
+The portal process worker calls the following endpoints to store the new registration business partner company data
 
 ```diff
-! POST /api/administration/registration/application/{applicationId}/trigger-bpn
+! PUT /companies/test-company/api/catena/input/business-partners
 ```
 
-<br>
+> **_NOTE:_** Field ownCompanyData gets set to "true"
 
-Request Body
-<br>
+As soon as the data are published, the job runs the endpoint to trigger the bpnl creation
 
-    n/a
+```diff
+! POST: /companies/test-company/api/catena/sharing-state/ready
+```
 
 <br>
 <br>
@@ -171,6 +172,8 @@ Request Body
 ##### Data Submission Details
 
 <br>
+
+PUT /companies/test-company/api/catena/input/business-partners:
 
 - Company Name
 - ExternalId
@@ -182,6 +185,10 @@ Request Body
 - Street Name
 - Street Number
 - Region
+
+POST: /companies/test-company/api/catena/sharing-state/ready
+
+- External Id
 
 <br>
 <br>
@@ -230,7 +237,7 @@ The call itself is not a API triggered call but automated by the process worker.
 However the administrator of the platform has the chance to retrigger the process in the scenario of an failure.
 
 ```diff
-! POST /api/administration/registration/application/{applicationId}/trigger-bpn
+! GET /companies/test-company/api/catena/sharing-state?externalIds={externalId}
 ```
 
 <br>
@@ -245,17 +252,137 @@ Request Body
             "contentSize": 1,
             "content": [
                 {
-                    "businessPartnerType": "LEGAL_ENTITY",
+                    "businessPartnerType": "GENERIC",
                     "externalId": "{portal application ID}",
                     "sharingStateType": "{status e.g. SUCCESS}",
                     "sharingErrorCode": null,
                     "sharingErrorMessage": null,
-                    "bpn": "{BPNL if sharingProcess is finished; otherwise null}",
+                    "bpn": "{BPNA if sharingProcess is finished; otherwise null}",
                     "sharingProcessStarted": "{date}",
-                    "taskId": null
+                    "taskId": {uuid}
                 }
             ]
         }
+
+<br>
+<br>
+
+After this call was made and the portal receives a SUCCESS response it will trigger the next call to receive the BPNL of the entry, since the `GET /companies/test-company/api/catena/sharing-state?externalIds={externalId}` call only returns the BPNA for the generic types.
+
+```diff
+! POST: /companies/test-company/api/catena/output/business-partners/search
+```
+
+the post will contain the externalId of the previous call. The request will look like the following:
+
+Request Body
+{
+"totalElements": 1,
+"totalPages": 1,
+"page": 0,
+"contentSize": 1,
+"content": [
+{
+"externalId": "{portal application ID}",
+"nameParts": [
+"Name of the company"
+],
+"identifiers": [
+{
+"type": "EU_VAT_ID_DE",
+"value": "DExxxxxxxx",
+"issuingBody": null
+}
+],
+"states": [],
+"roles": [],
+"isOwnCompanyData": false,
+"legalEntity": {
+"legalEntityBpn": "(This is the value we take for the bpnl)",
+"legalName": "Name of the company",
+"shortName": "Name of the company",
+"legalForm": null,
+"classifications": [],
+"confidenceCriteria": {
+"sharedByOwner": false,
+"checkedByExternalDataSource": false,
+"numberOfBusinessPartners": 1,
+"lastConfidenceCheckAt": "2024-01-26T11:35:30.013377",
+"nextConfidenceCheckAt": "2024-01-31T11:35:30.013381",
+"confidenceLevel": 0
+}
+},
+"site": null,
+"address": {
+"addressBpn": "(this is the bpna we receive from the previous call)",
+"name": null,
+"addressType": "AdditionalAddress",
+"physicalPostalAddress": {
+"geographicCoordinates": null,
+"country": "DE",
+"administrativeAreaLevel1": null,
+"administrativeAreaLevel2": null,
+"administrativeAreaLevel3": null,
+"postalCode": "xxxxx",
+"city": "xxxx",
+"district": null,
+"street": {
+"namePrefix": null,
+"additionalNamePrefix": null,
+"name": "Test str",
+"nameSuffix": null,
+"additionalNameSuffix": null,
+"houseNumber": null,
+"houseNumberSupplement": null,
+"milestone": null,
+"direction": null
+},
+"companyPostalCode": null,
+"industrialZone": null,
+"building": null,
+"floor": null,
+"door": null
+},
+"alternativePostalAddress": {
+"geographicCoordinates": null,
+"country": null,
+"administrativeAreaLevel1": null,
+"postalCode": null,
+"city": null,
+"deliveryServiceType": null,
+"deliveryServiceQualifier": null,
+"deliveryServiceNumber": null
+},
+"confidenceCriteria": {
+"sharedByOwner": false,
+"checkedByExternalDataSource": false,
+"numberOfBusinessPartners": 1,
+"lastConfidenceCheckAt": "2024-01-26T11:35:30.013377",
+"nextConfidenceCheckAt": "2024-01-31T11:35:30.013381",
+"confidenceLevel": 0
+}
+},
+"createdAt": "2024-01-26T14:27:00.140930Z",
+"updatedAt": "2024-01-26T14:27:00.140935Z"
+}
+]
+}
+
+### Workaround Solution - in case BPNL is down
+
+In case the BPDM interface is not enabled or runs into unexpected system downtime, the operator got enabled to set the BPNL manually for the registration request via the "Application Request" board.
+The endpoint enabled to set the BPNL manually:
+
+```diff
+! POST /api/administration/registration/application/{applicationId}/{bpn}/bpn
+```
+
+<br>
+
+Request Body
+<br>
+
+    n/a
 
 <br>
 <br>

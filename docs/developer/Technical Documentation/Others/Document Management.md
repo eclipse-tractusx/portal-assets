@@ -13,7 +13,7 @@ In the DB table we have differentiated between documents which are uploaded by a
 
 Example User Flow which is supported by the document controller:
 
-<img width="831" alt="image" src="https://user-images.githubusercontent.com/94133633/211200490-650f3358-59a8-49f8-91be-fcfa3454a448.png">
+<img width="831" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/registration-process-document-storage.png">
 
 <br>
 <br>
@@ -34,7 +34,7 @@ Mainly 4 tables are used for the documents itself
 
 <br>
 
-<img width="1367" alt="image" src="https://user-images.githubusercontent.com/94133633/211201142-a4235316-6c4e-47eb-85b3-6d13cf3e2846.png">
+<img width="1367" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/db-schema-documents.png">
 
 <br>
 <br>
@@ -68,7 +68,7 @@ Based on the reasons above, the document deletion is handled in 2 different func
 Uploading documents is limited to 8MB. The configuration for the maximum file size is set in ingress (nginx). See the last line in the screenshot below:
 <br>
 
-<img width="600" alt="image" src="https://user-images.githubusercontent.com/94133633/211201554-169100d9-6106-45b9-9921-f12d769417d8.png">
+<img width="600" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/document-upload-restrictions.png">
 
 Additionally document size validation on FE was implemented lately where the size depends on the process.  
 Inside the registration sizes can be following:

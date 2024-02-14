@@ -12,21 +12,21 @@ The app publishing process includes the submission of relevant app details, addi
 
 Option 1: Via the app management page
 
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/94133633/211014835-71e80d17-06d3-42c9-ac67-739447336112.png">
+<img width="500" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/app-overview-register-new-app.png">
 
 <br>
 <br>
 
 Option 2: Via the App Release Process
 
-<img width="500" alt="image" src="https://user-images.githubusercontent.com/94133633/211015053-19b10f2d-9d8c-40f0-aa0f-30a25cd9b893.png">
+<img width="500" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/start-app-creation.png">
 
 <br>
 <br>
 
 #### Step 1 - App Card Details
 
-<img width="373" alt="image" src="https://user-images.githubusercontent.com/94133633/211015263-2fc2adf5-df18-4559-9f6f-c2e90e7f8495.png">
+<img width="373" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/app-creation-start-screen.png">
 
 In the Step 1 of the publishing process, the app card details are getting filled first
 
@@ -91,7 +91,7 @@ Response Body
 
 Get use cases api endpoint is used to provide the user a dropdown function in which the provider can select which use cases the respective app serves
 
-<img width="325" alt="image" src="https://user-images.githubusercontent.com/94133633/211015522-2b222613-61d9-4c9c-b1cf-343aff353628.png">
+<img width="325" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/app-creation-categories.png">
 
 ```diff
 ! GET /api/administration/staticdata/usecases
@@ -277,7 +277,7 @@ Endpoint exception handling:
 
 #### Step 2 - App Page Details
 
-<img width="212" alt="image" src="https://user-images.githubusercontent.com/94133633/211016428-19697dc0-362e-4de9-b955-2feee5f13797.png">
+<img width="212" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/app-creation-app-details-input.png">
 
 In the Step 2 of the publishing process, the app detail page is getting filled
 
@@ -406,20 +406,20 @@ following translation for the privacy policy tags
 
 Design:
 
-<img width="676" alt="image" src="https://user-images.githubusercontent.com/94133633/229377043-5572bcde-a84c-41de-a44e-0f8115539a83.png">
+<img width="676" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/privacy-information-selection-options.png">
 
 <br>
 
 In case the privacy policies can not get loaded, the response will look like defined below:
 
-<img width="658" alt="image" src="https://user-images.githubusercontent.com/94133633/229377086-7529cb89-4df4-442c-a531-13483c308554.png">
+<img width="658" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/privacy-information-error.png">
 
 <br>
 <br>
 
 #### Step 3 - Terms & Conditions / Consent
 
-<img width="576" alt="image" src="https://user-images.githubusercontent.com/94133633/223786562-6cc80a68-5299-4708-bc1d-1899dcf3cd23.png">
+<img width="576" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/app-creation-consent-contract-input.png">
 
 Depending on the response of the endpoint #1 GET agreements, the user will be enabled to download related documents from the portal to read through the relevant agreement details. Expected formats are pdf, however other formats can get supported as well.
 
@@ -451,13 +451,13 @@ Style
 
 If documentId inside response body is != NULL display the respective agreement as link - example:
 
-<img width="591" alt="image" src="https://user-images.githubusercontent.com/94133633/227883098-1043fd68-3461-4318-9c02-bbddf9ca8719.png">
+<img width="591" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/consent-contract-tickbox-document.png">
 
 <br>
 
 If the documentId is NULL, the agreement is displayed without link (as currently implemented) - example:
 
-<img width="590" alt="image" src="https://user-images.githubusercontent.com/94133633/227883308-8d933e1f-7b57-4bb4-a67d-4aed662c6d21.png">
+<img width="590" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/consent-contract-tickbox-nodocument.png">
 
 <br>
 <br>
@@ -508,14 +508,14 @@ Important: the deletion is not reversible - since the app is still under DRAFT, 
 <br>
 
 <p align="center">
-<img width="464" alt="image" src="https://user-images.githubusercontent.com/94133633/223825655-10abc8f9-815e-4bb2-9c4a-33347e763716.png">
+<img width="464" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/technical-integration-file-upload.png">
 </p>
 
 The Role Upload is a mandatory app release process step where the app provider can upload a csv file (template attached) to load user roles and description.
 With uploading the csv via the dropzone, a preview section will display the respective roles to be uploaded.
 
 <p align="center">
-<img width="464" alt="image" src="https://user-images.githubusercontent.com/94133633/223828948-02846247-2389-4d45-8d93-95c71dba4e01.png">
+<img width="464" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/technical-integration-file-upload-successful.png">
 </p>
  
 With approving the upload with the button "Create App Roles" the roles are stored in the portal DB. Keycloak is untouched, since role creation in Keycloak will only be relevant if the app instance/client is getting created.
@@ -561,7 +561,7 @@ Request Body
 
 #### Step 5 - Beta Test Runs
 
-<img width="636" alt="image" src="https://user-images.githubusercontent.com/94133633/223830906-9f682f43-bd7d-4579-881b-53694d7d8611.png">
+<img width="636" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/app-creation-beta-test.png">
   
 <br>
 
@@ -572,7 +572,7 @@ Only a preview for now
 
 #### Step 6 - Validate & Submit for Publishing check
 
-<img width="224" alt="image" src="https://user-images.githubusercontent.com/94133633/227897141-2c901956-f60d-4880-839f-682cfcc307d2.png">
+<img width="224" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/app-creation-validation-publishing.png">
   
 <text></text>
 
