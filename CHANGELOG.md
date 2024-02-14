@@ -2,6 +2,24 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
+## 1.8.0-RC4
+
+### Change
+
+- added image "use"-guidelines to contributing guide
+- added developer documentation details for the endpoint usage of /api/apps/start-autosetup
+- updated bpdm interface contract details regarding the integration of the portal with the BPDM service (golden record and gate service)
+- updated the developer documentation of the registration flow by making it more user friendly; including a process description, data flow diagrams and api calls supported
+- documentation for "Wallets" and "Credentials" added including the restructuring of the folder content "Technical Integration"
+
+### Technical Support
+
+- removed picture references to user-images in documentation by adding all images to 'docs static'
+
+### Bugfix
+
+- assets/content (companyRole and dataspace): added title and description to the standard library section based on the company role
+
 ## 1.8.0-RC3
 
 ### Change
