@@ -19,8 +19,8 @@
 
 #
 # usage:
-#       export NAME=tx-portal-assets
-#       export IMAGE=ghcr.io/catenax-ng/$NAME
+#       export NAME=portal-assets
+#       export IMAGE=ghcr.io/gh-example-org/$NAME
 #       docker build -t $IMAGE -f .conf/Dockerfile .
 #       docker run --rm -d -p 3000:8080 --name $NAME $IMAGE
 #       docker exec $NAME find /usr/share/nginx/html/

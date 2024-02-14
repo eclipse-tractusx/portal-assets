@@ -2,17 +2,19 @@
 
 ## Build, test, deploy
 
-Details to the build, test and deploy process can get found under following link/md file:  
-https://github.com/catenax-ng/tx-portal-assets/blob/945546d91065b8870aa8f69ce94b48eac7a5ade2/docs/user/Release-Process.md
-<br>
-<br>
+Details to the build, test and deploy process can be found in the following files:
+
+- [Release Process](../Operations/Release-Process.md)
+- [Tests](../Tests/Tests.md)
+  <br>
+  <br>
 
 ## Development Guidelines
 
 The portal is using following key frameworks:
 <br>
 
-- Javascript / React
+- Typescript / React
 - .Net
 - i18n
 - Keycloak
