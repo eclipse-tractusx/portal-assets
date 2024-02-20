@@ -16,7 +16,7 @@ Below you can find an overview of all supported templates as well as the templat
 Template Name: "TextCenterAlignedWithCardGrid"
 <br>
 
-<img width="1080" alt="image" src="../static/TextCenterAlignedWithCardGrid.png">
+<img width="1080" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/TextCenterAlignedWithCardGrid.png">
 
 <br>
 
@@ -88,7 +88,7 @@ Template Name: "TextCenterAlignedWithCardGrid"
 Template Name: "TextCenterAlignedWithLinkButtonGrid"
 <br>
 
-<img width="1080" alt="image" src="../static/TextCenterAlignedWithLinkButtonGrid.png">
+<img width="1080" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/TextCenterAlignedWithLinkButtonGrid.png">
 
  <details>
    <summary>Structure Details</summary>
@@ -134,7 +134,7 @@ Template Name: "TextCenterAlignedWithLinkButtonGrid"
 Template Name: "TextImageSideBySideWithCardGrid"
 <br>
 
-<img width="1080" alt="image" src="../static/TextImageSideBySideWithCardGrid.png">
+<img width="1080" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/TextImageSideBySideWithCardGrid.png">
 
 <details>
   <summary>Structure Details</summary>
@@ -214,7 +214,7 @@ Template Name: "TextImageSideBySideWithCardGrid"
 Template Name: "TextVideoSideBySide"
 <br>
 
-<img width="1080" alt="image" src="../static/TextVideoSideBySide.png">
+<img width="1080" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/TextVideoSideBySide.png">
 
 <details>
   <summary>Structure Details</summary>
@@ -239,7 +239,7 @@ Template Name: "TextVideoSideBySide"
 Template Name: "VideoTextSideBySide"
 <br>
 
-<img width="1080" alt="image" src="../static/VideoTextSideBySide.png">
+<img width="1080" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/VideoTextSideBySide.png">
 
 <details>
   <summary>Structure Details</summary>
@@ -264,7 +264,7 @@ Template Name: "VideoTextSideBySide"
 Template Name: "TextImageCenterAligned"
 <br>
 
-<img width="1055" alt="image" src="../static/TextImageCenterAligned.png">
+<img width="1055" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/TextImageCenterAligned.png">
 
 <details>
   <summary>Structure Details</summary>
@@ -290,7 +290,7 @@ Template Name: "TextImageCenterAligned"
 Template Name: "TextCenterAligned"
 <br>
 
-<img width="1080" alt="image" src="../static/TextCenterAligned.png">
+<img width="1080" alt="image" src=https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/TextCenterAligned.png">
 
 <details>
   <summary>Structure Details</summary>
@@ -314,7 +314,7 @@ Template Name: "TextCenterAligned"
 Template Name: "TextImageSideBySide"
 <br>
 
-<img width="1080" alt="image" src="../static/TextImageSideBySide.png">
+<img width="1080" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/TextImageSideBySide.png">
 
 <details>
   <summary>Structure Details</summary>
@@ -340,7 +340,7 @@ Template Name: "TextImageSideBySide"
 Template Name: "TextCenterAlignedBody2"
 <br>
 
-<img width="1080" alt="image" src="../static/TextCenterAlignedBody2.png">
+<img width="1080" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/static/TextCenterAlignedBody2.png">
 
 <br>
 
@@ -369,7 +369,7 @@ Template Name: "TextCenterAlignedBody2"
 Template Name: "TextImageSideBySideWithLinks"
 <br>
 
-<img width="1080" alt="image" src="../static/TextImageSideBySideWithLinks.png">
+<img width="1080" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/static/TextImageSideBySideWithLinks.png">
 
 <br>
 
@@ -419,7 +419,7 @@ Template Name: "TextImageSideBySideWithLinks"
 Template Name: "TextImageSideBySideWithSections"
 <br>
 
-<img width="1080" alt="image" src="../static/TextImageSideBySideWithSections.png">
+<img width="1080" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/static/TextImageSideBySideWithSections.png">
 
 <br>
 
