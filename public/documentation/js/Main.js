@@ -1,5 +1,5 @@
 /********************************************************************************
- * Copyright (c) 2021, 2023 Contributors to the Eclipse Foundation
+ * Copyright (c) 2021, 2024 Contributors to the Eclipse Foundation
  *
  * See the NOTICE file(s) distributed with this work for additional
  * information regarding copyright ownership.
@@ -282,7 +282,7 @@ class Breadcrumb extends Viewable {
         alt: 'Open in GitHub',
         href: `${Settings.SRCBASE}/${
           content.name.endsWith('.md') ? 'blob' : 'tree'
-        }/${state.releaseSelection}/${content.path}`,
+        }/${state.releaseSelection}/docs/${content.path}`,
       }
     )
   }
@@ -504,7 +504,7 @@ class Content extends Viewable {
     return this
   }
 
-  renderLink(content, hash) {
+  renderGHLink(content, hash) {
     return N(
       'a',
       N('img', null, {
@@ -516,14 +516,14 @@ class Content extends Viewable {
         alt: 'Open in GitHub',
         href: `${Settings.SRCBASE}/${
           content.name.endsWith('.md') ? 'blob' : 'tree'
-        }/${state.releaseSelection}/${content.path}#${hash}`,
+        }/${state.releaseSelection}/docs/${content.path}#${hash}`,
       }
     )
   }
 
   addHeadlineLink(item) {
     const newItem = N('div', null, { class: 'headline' })
-    const link = this.renderLink(this.content, item.id)
+    const link = this.renderGHLink(this.content, item.id)
     item.parentElement.insertBefore(newItem, item)
     item.parentElement.removeChild(item)
     newItem.appendChild(item)
