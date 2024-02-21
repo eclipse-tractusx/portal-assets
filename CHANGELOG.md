@@ -6,7 +6,7 @@ New features, fixed bugs, known defects and other noteworthy changes to each rel
 
 ### Bugfix
 
-- fixed links from documentation pages to GitHub
+- fixed links in documentation pages
 
 ## 1.8.0-RC4
 

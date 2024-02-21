@@ -595,10 +595,10 @@ class Content extends Viewable {
 
   filterText(text) {
     const path = state.selection.split('/').map(encodeURIComponent).join('/')
-    return text.replaceAll(
-      '](.',
-      `](${Settings.DOCBASE}/${state.releaseSelection}/${path}`
-    )
+    return text
+      .replaceAll(/\]\(\.([^)]*)(\/(index.md)?)?\)/g, `](.?path=${path}$1)`)
+      .replaceAll(/\]\(\/docs\/([^)]*)/g, `](.?path=$1)`)
+      .replaceAll(/\/\)/g, ')')
   }
 
   mdFromText(text) {
