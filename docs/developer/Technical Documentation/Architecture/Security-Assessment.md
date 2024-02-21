@@ -6,7 +6,7 @@
 | Security responsible      | [@SSIRKC](https://github.com/SSIRKC) <br> [Szymon Kowalczyk](szymon.kowalczyk.external@zf.com) |
 | Version number of product | 23.12                                                                                          |
 | Dates of assessment       | 2024-02-13: Re-Assessment                                                                      |
-| Status of assessment      | RE-ASSESSMENT Finalized                                                                            |
+| Status of assessment      | RE-ASSESSMENT Finalized                                                                        |
 
 ## Product Description
 
@@ -209,7 +209,7 @@ All threats identified are mitigated.
 - Container Scan conducted - Trivy
 - Infrastructure as Code - KICS
 - Securing code, dependencies, containers, IaC and Cloud Deployments - SNYK
- 
+
 Also see [Penetrations Tests](../Tests/Tests.md#penetration-tests).
 
 ## NOTICE
