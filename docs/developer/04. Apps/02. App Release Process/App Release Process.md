@@ -424,8 +424,8 @@ In case the privacy policies can not get loaded, the response will look like def
 This step in the app release process is ensuring that your application meets the marketplace's standards and complies with all legal and regulatory requirements.
 Following actions are covered in the step:
 
-* Agreement to Marketplace Rules and Terms & Conditions
-* Upload of App Dataspace Conformity Certification
+- Agreement to Marketplace Rules and Terms & Conditions
+- Upload of App Dataspace Conformity Certification
 
 <br>
 
@@ -439,10 +439,10 @@ Following actions are covered in the step:
 Before the app provider can proceed with the release process, they first must agree to the marketplace's rules and Terms & Conditions. This agreement is essential for ensuring that the provider app adheres to the marketplace's quality standards, operational guidelines, and legal requirements.
 To display the relevant agreements, respective linked documents and to store the provider consent, the following endpoints are to be used:
 
-* GET /api/apps/appreleaseprocess/agreementData - used to fetch all necessary appReleaseProcess agreements
-* GET /api/administration/documents/frameDocuments/{documentId} - used to enable the user to access agreement documents
-* POST /api/apps/appreleaseprocess/consent/{appId}/agreementConsents - post consent
-* GET /api/apps/AppReleaseProcess/{appId}/appStatus - to check the current given consent status
+- GET /api/apps/appreleaseprocess/agreementData - used to fetch all necessary appReleaseProcess agreements
+- GET /api/administration/documents/frameDocuments/{documentId} - used to enable the user to access agreement documents
+- POST /api/apps/appreleaseprocess/consent/{appId}/agreementConsents - post consent
+- GET /api/apps/AppReleaseProcess/{appId}/appStatus - to check the current given consent status
 
 <br>
 
@@ -533,14 +533,13 @@ Response Body
 The Service Dataspace Conformity Certification is a document that certifies that the service provider service complies with specific data handling, privacy, and security standards. This certification is crucial for marketplaces that prioritize the safety and privacy of their users.
 To support the conformity certificate upload, following endpoints are available:
 
-* GET /api/apps/appeReleaseProcess/{appId}/appStatus - to retrieve already uploaded certificates (if any existing)
-* PUT /api/apps/appreleaseprocess/updateappdoc/{appId}/documentType/{documentTypeId}/documents - to store the conformity certificate
-* DELETE /api/apps/appreleaseprocess/documents/{documentId} - used to delete the conformity certificate
+- GET /api/apps/appeReleaseProcess/{appId}/appStatus - to retrieve already uploaded certificates (if any existing)
+- PUT /api/apps/appreleaseprocess/updateappdoc/{appId}/documentType/{documentTypeId}/documents - to store the conformity certificate
+- DELETE /api/apps/appreleaseprocess/documents/{documentId} - used to delete the conformity certificate
 
 Note, only PDF is supported.
 
 <br>
-
 
 #### #1 Upload Document
 
