@@ -541,6 +541,7 @@ class Content extends Viewable {
   }
 
   replaceLink(link) {
+    /*
     const url = new URL(link.href)
     const isLocalLink = url.origin === location.origin
     const isRawLink = url.href.startsWith(Settings.DOCBASE)
@@ -563,6 +564,7 @@ class Content extends Viewable {
         .replace(/\/$/, '')
       link.setAttribute('href', `.?path=${encodeURI(path)}`)
     }
+    */
     return link
   }
 
@@ -595,10 +597,10 @@ class Content extends Viewable {
 
   filterText(text) {
     const path = state.selection.split('/').map(encodeURIComponent).join('/')
-    return text.replaceAll(
-      '](.',
-      `](${Settings.DOCBASE}/${state.releaseSelection}/${path}`
-    )
+    return text
+      .replaceAll(/\]\(\.([^)]*)(\/(index.md)?)?\)/g, `](.?path=${path}$1)`)
+      .replaceAll(/\]\(\/docs\/([^)]*)/g, `](.?path=$1)`)
+      .replaceAll(/\/\)/g, ')')
   }
 
   mdFromText(text) {
