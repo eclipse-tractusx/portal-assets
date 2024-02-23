@@ -6,7 +6,7 @@
 - [User Migration](./03.%20User%20Migration.md)
 - [Identity Provider Disablement](./05.%20Disable%20Identity%20Provider.md)
 - [Identity Provider Deletion](./04.%20Identity%20Provider%20Deletion.md)
-- [FAQ](./04.%20FAQ.md)
+- [FAQ](./06.%20FAQ.md)
 
 <br>
 <br>

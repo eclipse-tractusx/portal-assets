@@ -5,8 +5,8 @@
 | Contact for product       | [@evegufy](https://github.com/evegufy) <br> [@jjeroch](https://github.com/jjeroch)             |
 | Security responsible      | [@SSIRKC](https://github.com/SSIRKC) <br> [Szymon Kowalczyk](szymon.kowalczyk.external@zf.com) |
 | Version number of product | 23.12                                                                                          |
-| Dates of assessment       | 2023-11-14: Re-Assessment                                                                      |
-| Status of assessment      | RE-ASSESSMENT DRAFT                                                                            |
+| Dates of assessment       | 2024-02-13: Re-Assessment                                                                      |
+| Status of assessment      | RE-ASSESSMENT Finalized                                                                        |
 
 ## Product Description
 
@@ -133,7 +133,7 @@ RS <-->|Company data \n user role data \n T&C / consent agreements| RF
     MSS <--> PF
     MSS <-.-> K
     MSS ==>|Company app subscription data \n app service data + user preferences| PDB
-    SDF <--> CH
+    SDF <-->|Out of Scope \n details may be found in Gaia-X \n and SD Factory Repositories| CH
     SDT -.->|Product meta data| PF
     NC1 & CU-Shared1 & NC2 & CU-Shared2 & NC3 & CU-Shared3 & CU-Own -.-> |OIDC| K
     K <-.-> |"Authentication/authorization data (using JWT)"| RF & PF
@@ -208,6 +208,7 @@ All threats identified are mitigated.
 - Software Composition Analysis (SCA) - VeraCode
 - Container Scan conducted - Trivy
 - Infrastructure as Code - KICS
+- Securing code, dependencies, containers, IaC and Cloud Deployments - SNYK
 
 Also see [Penetrations Tests](../Tests/Tests.md#penetration-tests).
 

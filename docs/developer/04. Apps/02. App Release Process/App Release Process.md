@@ -417,15 +417,36 @@ In case the privacy policies can not get loaded, the response will look like def
 <br>
 <br>
 
-#### Step 3 - Terms & Conditions / Consent
-
-<img width="576" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/app-creation-consent-contract-input.png">
-
-Depending on the response of the endpoint #1 GET agreements, the user will be enabled to download related documents from the portal to read through the relevant agreement details. Expected formats are pdf, however other formats can get supported as well.
+### Step 3 - Terms & Conditions / Consent
 
 <br>
 
-###### #1 Retrieve Terms & Conditions
+This step in the app release process is ensuring that your application meets the marketplace's standards and complies with all legal and regulatory requirements.
+Following actions are covered in the step:
+
+- Agreement to Marketplace Rules and Terms & Conditions
+- Upload of App Dataspace Conformity Certification
+
+<br>
+
+<img width="576" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/app-creation-consent-contract-input.png">
+
+<br>
+<br>
+
+### Agreement to Marketplace Rules and Terms & Conditions
+
+Before the app provider can proceed with the release process, they first must agree to the marketplace's rules and Terms & Conditions. This agreement is essential for ensuring that the provider app adheres to the marketplace's quality standards, operational guidelines, and legal requirements.
+To display the relevant agreements, respective linked documents and to store the provider consent, the following endpoints are to be used:
+
+- GET /api/apps/appreleaseprocess/agreementData - used to fetch all necessary appReleaseProcess agreements
+- GET /api/administration/documents/frameDocuments/{documentId} - used to enable the user to access agreement documents
+- POST /api/apps/appreleaseprocess/consent/{appId}/agreementConsents - post consent
+- GET /api/apps/AppReleaseProcess/{appId}/appStatus - to check the current given consent status
+
+<br>
+
+#### #1 Retrieve Terms & Conditions
 
 Terms and Conditions are fetched via the endpoint
 
@@ -439,9 +460,9 @@ Response Body
 
     [
       {
-        "agreementId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "agreementId": "uuid",
         "name": "string",
-        "documentId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+        "documentId": "uuid"
       }
     ]
 
@@ -462,7 +483,7 @@ If the documentId is NULL, the agreement is displayed without link (as currently
 <br>
 <br>
 
-###### #2 Retrieve Documents
+#### #2 Retrieve Documents
 
 Terms and Conditions with an document ID in API endpoint #1 can get retrieved via the document endpoint GET /frameDocuments/{documentId}
 
@@ -479,7 +500,48 @@ Response Body
 <br>
 <br>
 
-###### #3 Upload Document
+<br>
+<br>
+
+#### #3 Store Consent for Agreements
+
+The given consent or the unapproved consent for the needed agreements are stored via the POST endpoint.
+The endpoint will store the newly added agreement status as well as update existing consent status if necessary.
+
+```diff
+! POST: /api/apps/appreleaseprocess/consent/{appId}/agreementConsents
+```
+
+<br>
+
+Response Body
+
+    {
+      "agreements": [
+        {
+          "agreementId": "uuid",
+          "consentStatus": "ACTIVE"
+        }
+      ]
+    }
+
+<br>
+<br>
+
+### Conformity Certification
+
+The Service Dataspace Conformity Certification is a document that certifies that the service provider service complies with specific data handling, privacy, and security standards. This certification is crucial for marketplaces that prioritize the safety and privacy of their users.
+To support the conformity certificate upload, following endpoints are available:
+
+- GET /api/apps/appeReleaseProcess/{appId}/appStatus - to retrieve already uploaded certificates (if any existing)
+- PUT /api/apps/appreleaseprocess/updateappdoc/{appId}/documentType/{documentTypeId}/documents - to store the conformity certificate
+- DELETE /api/apps/appreleaseprocess/documents/{documentId} - used to delete the conformity certificate
+
+Note, only PDF is supported.
+
+<br>
+
+#### #1 Upload Document
 
 The user has to upload the app conformity document.
 
@@ -491,14 +553,17 @@ Type: CONFORMITY_APPROVAL_BUSINESS_APPS
 
 <br>
 
-###### #4 DELETE Document
+#### #2 DELETE Document
 
 In case the user identifiers that a wrong document got uploaded in the respective step, the DELETE endpoint is used to delete documents linked to the app.
 Important: the deletion is not reversible - since the app is still under DRAFT, all app related details will get deleted immediately.
 
 ```diff
-! Delete: /api/apps/appreleaseprocess/documents/{documentId}
+! DELETE /api/apps/appreleaseprocess/documents/{documentId}
 ```
+
+<br>
+<br>
 
 <br>
 <br>

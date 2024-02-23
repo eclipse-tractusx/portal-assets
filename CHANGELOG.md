@@ -2,6 +2,17 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
+## 1.8.0-RC5
+
+### Change
+
+- improved offer release process documentation
+- updated security assessment
+
+### Bugfix
+
+- fixed links (relative links, image links and links to GitHub) in documentation app
+
 ## 1.8.0-RC4
 
 ### Change
