@@ -6,7 +6,7 @@ Displaying the table connections; key definition as well as a description of the
 #### Identity DB Connection
 
 <br>
-<img width="1500" alt="image" src="https://github.com/catenax-ng/tx-portal-assets/assets/94133633/60fd3409-f329-4236-8c0a-ffe761804edb">
+<img width="978" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/db-schema-identity.png">
 
 <br>
 <br>
@@ -17,9 +17,8 @@ Displaying the table connections; key definition as well as a description of the
 The identity table is created to manage/store all identities (user identities as well as service account identities).
 All attributes stored in this table are those values/attributes which are harmonized across all identity types.
 
-...more to be added...
-
-
+<br>
+<br>
 
 ## NOTICE
 
