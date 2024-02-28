@@ -94,52 +94,66 @@ New company_certificate_type_assigned_statuses use to map relationship between c
 Company Certificate Database Structure
 
 ```mermaid
- 
-COMPANY-CERTIFICATE{
-    int id PK
-    date valid_from
-    date valid_till
+
+%%{init: {
+  "theme": "default",
+  "themeCSS": [    
+    "[id^=entity-companycertificates] .er.entityBox { fill: lightgreen;} ",
+    "[id^=entity-companycertificatetypes] .er.entityBox { fill: lightblue;} ",
+    "[id^=entity-companycertificatetypedescriptions] .er.entityBox { fill: lightyellow;} ",
+    "[id^=entity-companycertificatestatuses] .er.entityBox { fill: pink;} ",
+    "[id^=entity-companycertificatetypeassignedstatuses] .er.entityBox { fill: silver;} ",
+    "[id^=entity-companies] .er.entityBox { fill: aqua;} ",
+    "[id^=entity-documents] .er.entityBox { fill: lightgray;} ",
+    "[id^=entity-languages] .er.entityBox { fill: orange;} "
+    ]
+}}%%
+erDiagram
+    company_certificates }|..|{ company_certificate_types : has
+    company_certificates }|..|{ company_certificate_statuses : has
+    company_certificates }|..|{ companies : has
+    company_certificates }|..|{ documents : has
+    company_certificate_type_descriptions }|..|{ company_certificate_types : has
+    company_certificate_type_descriptions }|..|{ languages : has
+    company_certificate_type_assigned_statuses ||..|{ company_certificate_types : has
+    company_certificate_type_assigned_statuses ||..|{ company_certificate_statuses : has
+
+    company_certificates{
+    uuid id PK
+    timestamp valid_from
+    timestamp valid_till
     int company_certificate_type_id FK
     int company_certificate_status_id Fk
-    int company_id Fk
-    int document_id Fk
+    uuid company_id Fk
+    uuid document_id Fk
 }
-COMPANY-CERTIFICATE-TYPE{
+company_certificate_types{
+    int id PK
+    char label
+}
+company_certificate_statuses{
     int id PK
     string label
 }
-COMPANY-CERTIFICATE-STATUS{
-    int id PK
-    string label
-}
-COMPANY-CERTIFICATE-TYPE-DESCRIPTION{
+company_certificate_type_descriptions{
     int company_certificate_type_id FK
-    string language_short_name FK
-    string description
+    char language_short_name FK
+    text description
 }
-COMPANY-CERTIFICATE-TYPE-ASSIGNED-STATUS{
+company_certificate_type_assigned_statuses{
     int company_certificate_type_id FK
     int company_certificate_status_id Fk
 }
-LANGUAGES{
-    string short_name PK
+languages{
+    char short_name PK
 }
-COMPANY{
-    int id PK
+companies{
+    uuid id PK
 }
-DOCUMENT{
-    int id PK
+documents{
+    uuid id PK
 }
-    COMPANY-CERTIFICATE }|..|{ COMPANY-CERTIFICATE-TYPE : has
-    COMPANY-CERTIFICATE }|..|{ COMPANY-CERTIFICATE-STATUS : has
-    COMPANY-CERTIFICATE }|..|{ COMPANY : has
-    COMPANY-CERTIFICATE }|..|{ DOCUMENT : has
-    COMPANY-CERTIFICATE-TYPE-DESCRIPTION }|..|{ COMPANY-CERTIFICATE-TYPE : has
-    COMPANY-CERTIFICATE-TYPE-DESCRIPTION }|..|{ LANGUAGES : has
-    COMPANY-CERTIFICATE-TYPE-ASSIGNED-STATUS ||..|{ COMPANY-CERTIFICATE-TYPE : has
-    COMPANY-CERTIFICATE-TYPE-ASSIGNED-STATUS ||..|{ COMPANY-CERTIFICATE-STATUS : has
-   
- 
+    
 ```
 
 ### v1.7.0
