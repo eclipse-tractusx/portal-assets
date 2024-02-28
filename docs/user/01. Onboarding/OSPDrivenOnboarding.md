@@ -1,5 +1,5 @@
 ## Users invited via OSP
-This part of the Documentation will help users, who were registered via an Onboarding Service Provider (OSP) to get along. Please note, that this documentation only starts at the time you were successfully registered with your OSP and received your welcome mail from the portal. Any help or guidance regarding the registration on any site of your OSP, needs to be obtained from your OSP.
+This part of the Documentation will help users, who were registered via an Onboarding Service Provider (OSP) to get along. Please note, that this documentation only starts at the time you were successfully registered with your OSP and received your welcome mail from the portal. Any help or guidance regarding the registration on any site of your OSP, needs to be obtained from your OSP. Please refer to [this documentation](/docs/developer/00.%20Personas/05.%20Onboarding%20Service%20Provider.md) if you need more information about OSPs in general. 
 
 ### Welcome Mail & First Login
 As soon as the registration process is done on your OSP side, you will receive a welcome mail, that contains information on how you can proceed. It will provide you with a link and information about where you're gonna be able to log in to the dataspace. 
