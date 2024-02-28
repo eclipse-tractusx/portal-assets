@@ -1,4 +1,6 @@
 - [Summary](#summary)
+  - [v1.8.o](#v180)
+    - [Agreements - ENHANCED](#agreements---enhanced)
   - [v1.7.0](#v170)
     - [PostgreSQL - Upgrade](#postgresql---upgrade)
     - [Company Service Account - FIX](#company-service-account---fix)
@@ -27,6 +29,50 @@ This document describes the portal database changes and its impact on transactio
 Each section includes the respective change details, impact on existing data and the respective release with which the change is getting active.
 
 > **_INFO:_** inside the detailed descriptions below, the definition 'migration script' refers to the term 'migrations' as it is defined by the ef-core framework: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations
+
+### v1.8.0
+
+#### Agreements - ENHANCED
+
+- NEW: portal.agreement_statuses
+- ENHANCED: table portal.agreements "agreement_status_id" added
+- ENHANCED: table portal.agreements "mandatory" added
+- REMOVED: table portal.agreements "agreement_type" removed
+
+New agreement_statuses table released to manage agreements with a ACTIVE/INACTIVE label.
+
+Impact on existing data:
+As part of the migration, All the existing records of portal.agreements , "mandatory"(true/false flag) set with default value as true and
+"agreement_status_id" set with default value as 1 i.e. ACTIVE
+
+```mermaid
+%%{init: {
+  "theme": "default",
+  "themeCSS": [
+    "[id^=entity-agreements] .er.entityBox { fill: lightblue; }",
+    "[id^=entity-agreementstatuses] .er.entityBox { fill : lightgreen; }"
+  ]
+}}%%
+erDiagram
+    agreements ||--o{ agreement_statuses : has
+    agreements {
+        uuid id PK
+        int agreement_category_id
+        timestamp date_created
+        timestamp date_last_changed
+        char name
+        uuid issuer_company_id
+        uuid use_case_id
+        uuid document_id
+        text agreement_link
+        int agreement_status_id FK "New Field"
+        bool mandatory "New Field"
+    }
+    agreement_statuses{
+        int id PK
+        char label
+    }
+```
 
 ### v1.7.0
 
