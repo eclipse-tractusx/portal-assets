@@ -1,6 +1,8 @@
 - [Summary](#summary)
   - [v1.8.0](#v180)
     - [Agreements - ENHANCED](#agreements---enhanced)
+        - [Impact on existing data:](#impact-on-existing-data)
+    - [Company Certificate Details - NEW](#company-certificate-details---new)
   - [v1.7.0](#v170)
     - [PostgreSQL - Upgrade](#postgresql---upgrade)
     - [Company Service Account - FIX](#company-service-account---fix)
@@ -72,6 +74,72 @@ erDiagram
         int id PK
         char label
     }
+```
+
+#### Company Certificate Details - NEW
+
+- NEW: portal.company_certificates
+- NEW: portal.company_certificate_types
+- NEW: portal.company_certificate_statuses
+- NEW: portal.company_certificate_type_descriptions
+- NEW: portal.company_certificate_type_assigned_statuses
+
+New company_certificates table released to be able to create translatable company certificates.
+New company_certificate_types, company_certificate_type_statuses tables to store the certificate type and certificate status which are mapped with company-certificates.
+New company_certificate_types is use tp map specific certificate type for specific condition.
+New company_certificate_statuses use to keep status of company certificate.
+New company_certificate_type_descriptions keeps the each company_certificate_types with specific language code with description.
+New company_certificate_type_assigned_statuses use to map relationship between company_certificate_types and company_certificate_statuses.
+
+Company Certificate Database Structure
+
+```mermaid
+ 
+COMPANY-CERTIFICATE{
+    int id PK
+    date valid_from
+    date valid_till
+    int company_certificate_type_id FK
+    int company_certificate_status_id Fk
+    int company_id Fk
+    int document_id Fk
+}
+COMPANY-CERTIFICATE-TYPE{
+    int id PK
+    string label
+}
+COMPANY-CERTIFICATE-STATUS{
+    int id PK
+    string label
+}
+COMPANY-CERTIFICATE-TYPE-DESCRIPTION{
+    int company_certificate_type_id FK
+    string language_short_name FK
+    string description
+}
+COMPANY-CERTIFICATE-TYPE-ASSIGNED-STATUS{
+    int company_certificate_type_id FK
+    int company_certificate_status_id Fk
+}
+LANGUAGES{
+    string short_name PK
+}
+COMPANY{
+    int id PK
+}
+DOCUMENT{
+    int id PK
+}
+    COMPANY-CERTIFICATE }|..|{ COMPANY-CERTIFICATE-TYPE : has
+    COMPANY-CERTIFICATE }|..|{ COMPANY-CERTIFICATE-STATUS : has
+    COMPANY-CERTIFICATE }|..|{ COMPANY : has
+    COMPANY-CERTIFICATE }|..|{ DOCUMENT : has
+    COMPANY-CERTIFICATE-TYPE-DESCRIPTION }|..|{ COMPANY-CERTIFICATE-TYPE : has
+    COMPANY-CERTIFICATE-TYPE-DESCRIPTION }|..|{ LANGUAGES : has
+    COMPANY-CERTIFICATE-TYPE-ASSIGNED-STATUS ||..|{ COMPANY-CERTIFICATE-TYPE : has
+    COMPANY-CERTIFICATE-TYPE-ASSIGNED-STATUS ||..|{ COMPANY-CERTIFICATE-STATUS : has
+   
+ 
 ```
 
 ### v1.7.0
