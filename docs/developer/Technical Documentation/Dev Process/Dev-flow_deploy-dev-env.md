@@ -25,12 +25,12 @@ flowchart LR
         end
         subgraph CD repo for auto-deploy to dev
             direction LR
-            PF --> CD(portal-cd***** -b dev)
+            PF --> CD(portal***** -b dev)
             PR --> CD
             PB --> CD
             PA --> CD
             D -- PR* to -b dev for chart --> CD
-            click CD "https://github.com/eclipse-tractusx/portal-cd"
+            click CD "https://github.com/eclipse-tractusx/portal"
         end
     end
     subgraph Argo CD - sync to k8s cluster

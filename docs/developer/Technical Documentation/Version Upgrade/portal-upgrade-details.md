@@ -32,7 +32,7 @@ Each section includes the respective change details, impact on existing data and
 
 #### PostgreSQL - Upgrade
 
-Please be aware that the PostgreSQL version of the subchart by Bitnami of the [portal helm chart](https://github.com/eclipse-tractusx/portal-cd) is upgraded from 14.5.0 to 15.4.x (dependency updated from version 11.9.13 to 12.12.x).
+Please be aware that the PostgreSQL version of the subchart by Bitnami of the [portal helm chart](https://github.com/eclipse-tractusx/portal) is upgraded from 14.5.0 to 15.4.x (dependency updated from version 11.9.13 to 12.12.x).
 
 In case you are using an external PostgreSQL instance and would like to upgrade to 15.x, please follow the [official instructions](https://www.postgresql.org/docs/user/15/upgrading.html).
 
