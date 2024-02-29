@@ -14,6 +14,6 @@ When you first log in, you will be prompted with an overlay that asks you to con
 
 ### Status Overlay
 
-You will then see an overlay that tells you about the status of your registration. The individual steps, that need to be checked and done prior to your final registration will be listed here. You can close it at any time and can reopen it with the bar at the top. The required steps are the same as they are for a regular operator triggered registration. That also includes the generation of the BPNL.
+You will then see an overlay that tells you about the status of your registration. The individual steps, that need to be checked and done prior to your final registration will be listed here. You can close it at any time and can reopen it with the bar at the top. The required steps are the same as they are for a regular operator triggered registration. That also includes the generation of the BPNL. As soon as all steps have been finished successfully, you will receive an status information mail.
 <br>
 **Please Note:** you do not need to perform anything here, these are automatic steps, that generally do not require your active participation at that point.
