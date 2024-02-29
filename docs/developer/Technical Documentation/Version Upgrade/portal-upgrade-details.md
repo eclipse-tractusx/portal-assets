@@ -42,6 +42,7 @@ Each section includes the respective change details, impact on existing data and
 New agreement_statuses table released to manage agreement status by supporting a new label ACTIVE/INACTIVE.
 
 ###### Impact on existing data:
+
 As part of the migration, for all existing records inside the table portal.agreements the "mandatory" (true/false flag) is getting set with default value as `true` and "agreement_status_id" set with default value as `1` i.e. ACTIVE
 
 ```mermaid
