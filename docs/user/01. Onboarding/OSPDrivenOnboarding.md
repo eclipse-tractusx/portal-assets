@@ -4,7 +4,7 @@ This part of the documentation will help users, who were registered via an Onboa
 
 ### Welcome Mail & First Login
 
-As soon as the registration process is done on your OSP side, you will receive a welcome mail, that contains information on how you can proceed. It will provide you with a link and information about how to log in to the dataspace.
+As soon as the registration process is done on your OSP side, you will receive a welcome mail, that contains information on how you can proceed. It will provide you with a link and information about how to log in to the dataspace. For the login you can use the account you're using with your OSP party already and entering your dataspace user credentials. In case the authentication runs on errors, please have a look at the [help](https://portal.int.demo.catena-x.net/documentation/?path=docs%2F09.+Others%28s%29%2F01.+Login.md) or contact your Onboarding Service Provider.
 
 ### T&Cs
 
