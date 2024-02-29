@@ -98,14 +98,14 @@ Company Certificate Database Structure
 %%{init: {
   "theme": "default",
   "themeCSS": [    
-    "[id^=entity-companycertificates] .er.entityBox { fill: lightgreen;} ",
-    "[id^=entity-companycertificatetypes] .er.entityBox { fill: lightblue;} ",
-    "[id^=entity-companycertificatetypedescriptions] .er.entityBox { fill: lightyellow;} ",
-    "[id^=entity-companycertificatestatuses] .er.entityBox { fill: pink;} ",
-    "[id^=entity-companycertificatetypeassignedstatuses] .er.entityBox { fill: silver;} ",
-    "[id^=entity-companies] .er.entityBox { fill: aqua;} ",
-    "[id^=entity-documents] .er.entityBox { fill: lightgray;} ",
-    "[id^=entity-languages] .er.entityBox { fill: orange;} "
+    "[id^=entity-companycertificates] .er.entityBox { fill: #DF9A9B;} ",
+    "[id^=entity-companycertificatetypes] .er.entityBox { fill: #DF9A9B;} ",
+    "[id^=entity-companycertificatetypedescriptions] .er.entityBox { fill: #DF9A9B;} ",
+    "[id^=entity-companycertificatestatuses] .er.entityBox { fill: #DF9A9B;} ",
+    "[id^=entity-companycertificatetypeassignedstatuses] .er.entityBox { fill: #DF9A9B;} ",
+    "[id^=entity-companies] .er.entityBox { fill: #92A2BD;} ",
+    "[id^=entity-documents] .er.entityBox { fill: #92A2BD;} ",
+    "[id^=entity-languages] .er.entityBox { fill: #92A2BD;} "
     ]
 }}%%
 erDiagram
