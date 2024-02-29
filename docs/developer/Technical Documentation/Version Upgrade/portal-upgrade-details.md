@@ -85,13 +85,12 @@ erDiagram
 - NEW: portal.company_certificate_type_descriptions
 - NEW: portal.company_certificate_type_assigned_statuses
 
-
 New company_certificates table is used to store company certificates and their status  
-New company_certificate_statuses table released managing supported certificate status values (supported types can get found below) 
+New company_certificate_statuses table released managing supported certificate status values (supported types can get found below)
 New company_certificate_types_statuses table released managing supported certificate type status values (supported types can get found below)  
 New company_certificate_type table released managing supported certificate types (supported types can get found below)  
-New company_certificate_type_descriptions table released managing certificate types description in mutliple languages  
-New company_certificate_type_assigned_statuses managing the status (Active/Inactive) for company certificate types  
+New company_certificate_type_descriptions table released managing certificate types description in multiple languages  
+New company_certificate_type_assigned_statuses managing the status (Active/Inactive) for company certificate types
 
 ##### Company Certificate Database Structure
 
@@ -99,7 +98,7 @@ New company_certificate_type_assigned_statuses managing the status (Active/Inact
 
 %%{init: {
   "theme": "default",
-  "themeCSS": [    
+  "themeCSS": [
     "[id^=entity-companycertificates] .er.entityBox { fill: #DF9A9B;} ",
     "[id^=entity-companycertificatetypes] .er.entityBox { fill: #DF9A9B;} ",
     "[id^=entity-companycertificatetypedescriptions] .er.entityBox { fill: #DF9A9B;} ",
@@ -155,42 +154,39 @@ companies{
 documents{
     uuid id PK
 }
-    
+
 ```
 
 ###### Supported company_certificate_statuses:
 
-| license_type_id | license_type     |
-| --------------- | ---------------- |
-| 1               | ACTIVE           |
-| 2               | INACTIVE         |
-
+| license_type_id | license_type |
+| --------------- | ------------ |
+| 1               | ACTIVE       |
+| 2               | INACTIVE     |
 
 ###### Supported company_certificate_type_statuses:
 
-| license_type_id | license_type     |
-| --------------- | ---------------- |
-| 1               | ACTIVE           |
-| 2               | INACTIVE         |
-
+| license_type_id | license_type |
+| --------------- | ------------ |
+| 1               | ACTIVE       |
+| 2               | INACTIVE     |
 
 ###### Supported company_certificate_types:
 
-| license_type_id  | license_type     |
-| ---------------- | ---------------- |
-| 1                | AEO_CTPAT_Security_Declaration          |
-| 2                | ISO_9001         |
-| 3                | IATF_16949         |
-| 4                | ISO_14001_EMAS_or_national_certification         |
-| 5                | ISO_45001_OHSAS_18001_or_national_certification         |
-| 6                | ISO_IEC_27001         |
-| 7                | ISO_50001_or_national_certification         |
-| 8                | ISO_IEC_17025         |
-| 9                | ISO_15504_SPICE         |
-| 10               | B_BBEE_Certificate_of_South_Africa         |
-| 11               | IATF         |
-| 12               | TISAX         |
-
+| license_type_id | license_type                                    |
+| --------------- | ----------------------------------------------- |
+| 1               | AEO_CTPAT_Security_Declaration                  |
+| 2               | ISO_9001                                        |
+| 3               | IATF_16949                                      |
+| 4               | ISO_14001_EMAS_or_national_certification        |
+| 5               | ISO_45001_OHSAS_18001_or_national_certification |
+| 6               | ISO_IEC_27001                                   |
+| 7               | ISO_50001_or_national_certification             |
+| 8               | ISO_IEC_17025                                   |
+| 9               | ISO_15504_SPICE                                 |
+| 10              | B_BBEE_Certificate_of_South_Africa              |
+| 11              | IATF                                            |
+| 12              | TISAX                                           |
 
 ### v1.7.0
 
