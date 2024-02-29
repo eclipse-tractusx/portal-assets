@@ -1,5 +1,5 @@
 - [Summary](#summary)
-  - [v1.8.o](#v180)
+  - [v1.8.0](#v180)
     - [Agreements - ENHANCED](#agreements---enhanced)
   - [v1.7.0](#v170)
     - [PostgreSQL - Upgrade](#postgresql---upgrade)
@@ -49,8 +49,8 @@ As part of the migration, All the existing records of portal.agreements , "manda
 %%{init: {
   "theme": "default",
   "themeCSS": [
-    "[id^=entity-agreements] .er.entityBox { fill: lightblue; }",
-    "[id^=entity-agreementstatuses] .er.entityBox { fill : lightgreen; }"
+    "[id^=entity-agreements] .er.entityBox { fill: #DF9A9B; }",
+    "[id^=entity-agreementstatuses] .er.entityBox { fill : #92A2BD; }"
   ]
 }}%%
 erDiagram
