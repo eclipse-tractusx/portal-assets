@@ -8,7 +8,7 @@ As soon as the registration process is done on your OSP side, you will receive a
 
 ### T&Cs
 
-When you first log in, you will be prompted with an overlay that asks you to consent to the terms and conditions. As soon as this is done the overlay will close and you can start browsing the site.
+When you first log in, you will be prompted with an overlay that asks you to consent to the terms and conditions. As soon as this is done the overlay will close and you can start browsing the site. The terms and conditions may vary, depending on the assigned roles, that were selected during the initial registration process.
 <br>
 **Please Note:** At this point you will not yet have access to the full functionality, this will only be possible once your registration is finally approved (see next paragraph).
 
