@@ -34,23 +34,22 @@ Each section includes the respective change details, impact on existing data and
 
 #### Agreements - ENHANCED
 
-- NEW: portal.agreement_statuses
+- NEW: table portal.agreement_statuses
 - ENHANCED: table portal.agreements "agreement_status_id" added
 - ENHANCED: table portal.agreements "mandatory" added
 - REMOVED: table portal.agreements "agreement_type" removed
 
-New agreement_statuses table released to manage agreements with a ACTIVE/INACTIVE label.
+New agreement_statuses table released to manage agreement status by supporting a new label ACTIVE/INACTIVE.
 
-Impact on existing data:
-As part of the migration, All the existing records of portal.agreements , "mandatory"(true/false flag) set with default value as true and
-"agreement_status_id" set with default value as 1 i.e. ACTIVE
+###### Impact on existing data:
+As part of the migration, for all existing records inside the table portal.agreements the "mandatory" (true/false flag) is getting set with default value as `true` and "agreement_status_id" set with default value as `1` i.e. ACTIVE
 
 ```mermaid
 %%{init: {
   "theme": "default",
   "themeCSS": [
-    "[id^=entity-agreements] .er.entityBox { fill: #DF9A9B; }",
-    "[id^=entity-agreementstatuses] .er.entityBox { fill : #92A2BD; }"
+    "[id^=entity-agreements] .er.entityBox { fill: #92A2BD; }",
+    "[id^=entity-agreementstatuses] .er.entityBox { fill : #DF9A9B; }"
   ]
 }}%%
 erDiagram
