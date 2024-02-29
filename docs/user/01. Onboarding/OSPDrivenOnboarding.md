@@ -21,3 +21,11 @@ You will then see an overlay that tells you about the status of your registratio
 ### Decline Registration
 
 In case you received the earlier mentioned welcome mail and you do not want to part of the dataspace, you can scroll down to the bottom of the page and click the link for declining the registration.
+
+## NOTICE
+
+This work is licensed under the [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+- SPDX-License-Identifier: Apache-2.0
+- SPDX-FileCopyrightText: 2021-2024 Contributors to the Eclipse Foundation
+- Source URL: https://github.com/eclipse-tractusx/portal-assets
