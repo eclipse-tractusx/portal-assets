@@ -80,18 +80,20 @@ erDiagram
 
 - NEW: portal.company_certificates
 - NEW: portal.company_certificate_types
+- NEW: portal.company_certificate_type_statuses
 - NEW: portal.company_certificate_statuses
 - NEW: portal.company_certificate_type_descriptions
 - NEW: portal.company_certificate_type_assigned_statuses
 
-New company_certificates table released to be able to create translatable company certificates.
-New company_certificate_types, company_certificate_type_statuses tables to store the certificate type and certificate status which are mapped with company-certificates.
-New company_certificate_types is use tp map specific certificate type for specific condition.
-New company_certificate_statuses use to keep status of company certificate.
-New company_certificate_type_descriptions keeps the each company_certificate_types with specific language code with description.
-New company_certificate_type_assigned_statuses use to map relationship between company_certificate_types and company_certificate_statuses.
 
-Company Certificate Database Structure
+New company_certificates table is used to store company certificates and their status  
+New company_certificate_statuses table released managing supported certificate status values (supported types can get found below) 
+New company_certificate_types_statuses table released managing supported certificate type status values (supported types can get found below)  
+New company_certificate_type table released managing supported certificate types (supported types can get found below)  
+New company_certificate_type_descriptions table released managing certificate types description in mutliple languages  
+New company_certificate_type_assigned_statuses managing the status (Active/Inactive) for company certificate types  
+
+##### Company Certificate Database Structure
 
 ```mermaid
 
@@ -155,6 +157,40 @@ documents{
 }
     
 ```
+
+###### Supported company_certificate_statuses:
+
+| license_type_id | license_type     |
+| --------------- | ---------------- |
+| 1               | ACTIVE           |
+| 2               | INACTIVE         |
+
+
+###### Supported company_certificate_type_statuses:
+
+| license_type_id | license_type     |
+| --------------- | ---------------- |
+| 1               | ACTIVE           |
+| 2               | INACTIVE         |
+
+
+###### Supported company_certificate_types:
+
+| license_type_id  | license_type     |
+| ---------------- | ---------------- |
+| 1                | AEO_CTPAT_Security_Declaration          |
+| 2                | ISO_9001         |
+| 3                | IATF_16949         |
+| 4                | ISO_14001_EMAS_or_national_certification         |
+| 5                | ISO_45001_OHSAS_18001_or_national_certification         |
+| 6                | ISO_IEC_27001         |
+| 7                | ISO_50001_or_national_certification         |
+| 8                | ISO_IEC_17025         |
+| 9                | ISO_15504_SPICE         |
+| 10               | B_BBEE_Certificate_of_South_Africa         |
+| 11               | IATF         |
+| 12               | TISAX         |
+
 
 ### v1.7.0
 
