@@ -18,6 +18,7 @@ Read more details in the following sections:
 - [Registration Invite](./01.%20Registration%20Invite/)
 - [Registration](./02.%20Registration/)
 - [Registration Approval](./03.%20Registration%20Approval/)
+- [Onboarding Service Provider](./04.%20OSP/)
 
 ## NOTICE
 
