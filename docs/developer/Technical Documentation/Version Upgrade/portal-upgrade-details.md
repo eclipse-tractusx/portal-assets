@@ -1,7 +1,7 @@
 - [Summary](#summary)
   - [v1.8.0](#v180)
     - [Agreements - ENHANCED](#agreements---enhanced)
-        - [Impact on existing data:](#impact-on-existing-data)
+      - [Impact on existing data:](#impact-on-existing-data)
     - [Company Certificate Details - NEW](#company-certificate-details---new)
   - [v1.7.0](#v170)
     - [PostgreSQL - Upgrade](#postgresql---upgrade)
