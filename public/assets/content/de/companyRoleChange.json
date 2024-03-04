@@ -152,5 +152,31 @@
         }
       ]
     }
+  },
+  "ONBOARDING_SERVICE_PROVIDER": {
+    "selected": {
+      "features": [
+        {
+          "title": "Managed IdPs",
+          "description": "Company Administrator and IT Admins are able to create and manage Managed IdPs for 3rd party registrations."
+        },
+        {
+          "title": "OSP Management Board accessible",
+          "description": "Company Administrator and IT Admins can access the new Management Board for OSPs - including an overview of managed IdPs, registered customers & configuration of callback url."
+        }
+      ]
+    },
+    "deselected": {
+      "features": [
+        {
+          "title": "Managed IdPs",
+          "description": "Company Administrator and IT Admins will loose the permission to create and manage Managed IdPs for 3rd party registrations. Note existing Managed IdP connections wont be editable anymore. Make sure you dont have active connections existing."
+        },
+        {
+          "title": "OSP Management Board accessible",
+          "description": "Company Administrator and IT Admins will loose the permission to access the Management Board for OSPs - including an overview of managed IdPs, registered customers & configuration of callback url."
+        }
+      ]
+    }
   }
 }
