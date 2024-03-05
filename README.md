@@ -1,43 +1,60 @@
-# Catena-X Portal Assets
+[![LeadingRepository](https://img.shields.io/badge/Leading_Repository-Portal-blue)](https://github.com/eclipse-tractusx/portal)
 
-This repository contains the documentation and static image content for Catena-X Portal.
+# Portal Assets
 
-The Catena-X Portal application consists of
+This repository contains the documentation and static image content for Portal.
+
+The Portal application consists of
 
 - [portal-frontend](https://github.com/eclipse-tractusx/portal-frontend),
 - [portal-frontend-registration](https://github.com/eclipse-tractusx/portal-frontend-registration),
 - [portal-assets](https://github.com/eclipse-tractusx/portal-assets) and
 - [portal-backend](https://github.com/eclipse-tractusx/portal-backend).
 
-![Tag](https://img.shields.io/static/v1?label=&message=LeadingRepository&color=green&style=flat) The helm chart for installing the Catena-X Portal is available in [portal-cd](https://github.com/eclipse-tractusx/portal-cd).
+The helm chart for installing the Portal is available in the [portal](https://github.com/eclipse-tractusx/portal) repository.
 
-The Catena-X Portal is designed to work with the [Catena-X IAM](https://github.com/eclipse-tractusx/portal-iam) for further information you can read the [documentation](https://github.com/eclipse-tractusx/portal-iam/tree/main/docs).
+Please refer to the [docs](./docs/) directory for the overarching user and developer documentation of the Portal application.
 
-## Steps to run local
+The Portal is designed to work with the [IAM](https://github.com/eclipse-tractusx/portal-iam).
 
-    yarn
-    yarn build:release
-    yarn build
-    yarn start
+## Local build and run
+
+1. Install dependencies
+
+```
+yarn
+```
+
+3. Build release for documentation app
+
+```
+yarn build:release
+```
+
+3. Build
+
+```
+yarn build
+```
+
+4. Run
+
+```
+yarn start
+```
 
 This will start the assets and documentation on
 
 - https://localhost:3003/assets/
 - https://localhost:3003/documentation/
 
-Note: if you'd like to run the complete frontend application, follow the 'Run frontend on localhost' guide within the developer documentation which is available within this repository.
+Note: if you'd like to run the complete frontend application, follow the `Run frontend on localhost.md` guide within the developer documentation which is available within this repository.
 
 ## Notice for Docker image
 
 This application provides container images for demonstration purposes.
 
-DockerHub: https://hub.docker.com/r/tractusx/portal-assets
-
-Base image: nginxinc/nginx-unprivileged:alpine
-
-- Dockerfile: [nginxinc/nginx-unprivileged:alpine](https://github.com/nginxinc/docker-nginx-unprivileged/blob/main/Dockerfile-alpine.template)
-- GitHub project: [https://github.com/nginxinc/docker-nginx-unprivileged](https://github.com/nginxinc/docker-nginx-unprivileged)
-- DockerHub: [https://hub.docker.com/r/nginxinc/nginx-unprivileged](https://hub.docker.com/r/nginxinc/nginx-unprivileged)
+See [Docker notice](.conf/notice-assets.md) for more information.
 
 ## License
 

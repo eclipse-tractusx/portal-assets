@@ -24,7 +24,7 @@ Backend repository:
 
 Continuous Deployment / CD repository (containing the portal helm chart)
 
-- [Portal CD](https://github.com/eclipse-tractusx/portal-cd)
+- [Portal](https://github.com/eclipse-tractusx/portal)
 
 For assigning and incrementing **version** numbers [Semantic Versioning](https://semver.org) is followed.
 
@@ -75,14 +75,14 @@ Be aware that migrations coming release branches for release candidates or from 
 
 ## RC: checkout release-candidate branch
 
-If starting into a release candidate phase, make sure to checkout the release-candidate branch from dev branch of [Portal CD](https://github.com/eclipse-tractusx/portal-cd).
+If starting into a release candidate phase, make sure to checkout the release-candidate branch from dev branch of [Portal](https://github.com/eclipse-tractusx/portal).
 
 ## Tag and build of versioned images
 
 It's important to pull the latest state of the release branch locally in every repository.
 Then create and push a tag for the released version.
 The push of the tag triggers the release workflow action (available in every repository) which creates the versioned image/s.
-The push also triggers the image tags to be updated in the helm chart: in the dev branch or respectively the release-candidate branch of the [Portal CD](https://github.com/eclipse-tractusx/portal-cd) repository.
+The push also triggers the image tags to be updated in the helm chart: in the dev branch or respectively the release-candidate branch of the [Portal](https://github.com/eclipse-tractusx/portal) repository.
 
 Example for tag:
 
@@ -101,7 +101,7 @@ _Version 1.1.0: Backend for the Catena-X Portal_
 ## Release new helm chart version
 
 Once the versioned images are available, a new version of the chart can be released.
-The helm chart is released from [Portal CD](https://github.com/eclipse-tractusx/portal-cd).
+The helm chart is released from [Portal](https://github.com/eclipse-tractusx/portal).
 
 Check out a release branch from the dev branch or from the release-candidate branch respectively.
 On the release branch the following steps are executed:
@@ -145,7 +145,7 @@ Example:
 git checkout tags/v1.2.0-RC2 -b release/v1.2.0-RC3
 ```
 
-Technically this step is already possible after [Tag and build of versioned images](#tag-and-build-of-versioned-images), but it's recommended to execute this step after [Release new helm chart version](#release-new-helm-chart-version), so that the image tag for the release in the release-candidate of [Portal CD](https://github.com/eclipse-tractusx/portal-cd) isn't overwritten by the push of the successive 'RC' branch.
+Technically this step is already possible after [Tag and build of versioned images](#tag-and-build-of-versioned-images), but it's recommended to execute this step after [Release new helm chart version](#release-new-helm-chart-version), so that the image tag for the release in the release-candidate of [Portal](https://github.com/eclipse-tractusx/portal) isn't overwritten by the push of the successive 'RC' branch.
 
 Also make sure to change the base of all open pull requests still pointing to the previous 'RC' branch to the newly pushed 'RC' branch.
 
