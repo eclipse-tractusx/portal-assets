@@ -32,14 +32,14 @@ Each section includes the respective change details, impact on existing data and
 
 #### OnboardingServiceProvider - ENHANCED
 
- - ENHANCED: table onboarding_service_provider_details "encryption_mode" added
- - ENHANCED: table onboarding_service_provider_details "initialization_vector" added
+- ENHANCED: table onboarding_service_provider_details "encryption_mode" added
+- ENHANCED: table onboarding_service_provider_details "initialization_vector" added
 
- - ENHANCED: configuration for onboarding-service-provider:
- 
+- ENHANCED: configuration for onboarding-service-provider:
+
 ```
     "OnboardingServiceProvider": {
-      "EncrptionConfigIndex": 1,
+      "EncryptionConfigIndex": 1,
       "EncryptionConfigs": [
         {
           "Index": 0,
@@ -56,20 +56,25 @@ Each section includes the respective change details, impact on existing data and
       ]
     }
 ```
+
 Previous OnboardingServiceProvider settings contained 'EncryptionKey'. Format was utf8-string being read as byte[].
 New format of EncryptionKey is 64 characters hex
 
 Example:
-  - old format:
+
+- old format:
+
 ```
     "OnboardingServiceProvider": {
-      "EcryptionKey": ")U\;>/h=ELj+.v5AD9(P2HQ3JnuYt.R:"
+      "EncryptionKey": ")U\;>/h=ELj+.v5AD9(P2HQ3JnuYt.R:"
     }
 ```
-  - including the details that before the change were defined in the sourcecode the same configuration as 'index 0' in new format:
+
+- including the details that before the change were defined in the source code the same configuration as 'index 0' in new format:
+
 ```
     "OnboardingServiceProvider": {
-      "EncrptionConfigIndex": 1,
+      "EncryptionConfigIndex": 1,
       "EncryptionConfigs": [
         {
           "Index": 0,
@@ -88,6 +93,7 @@ Example:
 ```
 
 to ensure the new encryption is able to decrypt preexisting client_secrets the old encryption-key must be converted to the new format. This may be done on the command-line:
+
 ```
 echo -n ")U\;>/h=ELj+.v5AD9(P2HQ3JnuYt.R:" | xxd -p
 ```
