@@ -32,6 +32,74 @@ Each section includes the respective change details, impact on existing data and
 
 > **_INFO:_** inside the detailed descriptions below, the definition 'migration script' refers to the term 'migrations' as it is defined by the ef-core framework: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations
 
+#### OnboardingServiceProvider - ENHANCED
+
+- ENHANCED: table onboarding_service_provider_details "encryption_mode" added
+- ENHANCED: table onboarding_service_provider_details "initialization_vector" added
+
+- ENHANCED: configuration for onboarding-service-provider:
+
+```
+    "OnboardingServiceProvider": {
+      "EncryptionConfigIndex": 1,
+      "EncryptionConfigs": [
+        {
+          "Index": 0,
+          "EncryptionKey": "",
+          "CipherMode": "",
+          "PaddingMode": ""
+        },
+        {
+          "Index": 1,
+          "EncryptionKey": "",
+          "CipherMode": "",
+          "PaddingMode": ""
+        }
+      ]
+    }
+```
+
+Previous OnboardingServiceProvider settings contained 'EncryptionKey'. Format was utf8-string being read as byte[].
+New format of EncryptionKey is 64 characters hex
+
+Example:
+
+- old format:
+
+```
+    "OnboardingServiceProvider": {
+      "EncryptionKey": ")U\;>/h=ELj+.v5AD9(P2HQ3JnuYt.R:"
+    }
+```
+
+- including the details that before the change were defined in the source code the same configuration as 'index 0' in new format:
+
+```
+    "OnboardingServiceProvider": {
+      "EncryptionConfigIndex": 1,
+      "EncryptionConfigs": [
+        {
+          "Index": 0,
+          "EncryptionKey": "29555c3b3e2f683d454c6a2b2e76354144392850324851334a6e7559742e523a",
+          "CipherMode": "ECB",
+          "PaddingMode": "PKCS7"
+        },
+        {
+          "Index": 1,
+          "EncryptionKey": "deadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef",
+          "CipherMode": "CBC",
+          "PaddingMode": "PKCS7"
+        }
+      ]
+    }
+```
+
+to ensure the new encryption is able to decrypt preexisting client_secrets the old encryption-key must be converted to the new format. This may be done on the command-line:
+
+```
+echo -n ")U\;>/h=ELj+.v5AD9(P2HQ3JnuYt.R:" | xxd -p
+```
+
 ### v1.8.0
 
 #### Agreements - ENHANCED
