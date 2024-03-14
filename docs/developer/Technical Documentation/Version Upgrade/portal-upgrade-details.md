@@ -1,4 +1,7 @@
 - [Summary](#summary)
+  - [vx.x.x](#vxxx)
+    - [OnboardingServiceProvider - ENHANCED](#onboardingserviceprovider---enhanced)
+    - [Postgres dependency of helm chart - ENHANCED](#postgres-dependency-of-helm-chart---enhanced)
   - [v1.8.0](#v180)
     - [Agreements - ENHANCED](#agreements---enhanced)
       - [Impact on existing data:](#impact-on-existing-data)
@@ -31,6 +34,8 @@ This document describes the portal database changes and its impact on transactio
 Each section includes the respective change details, impact on existing data and the respective release with which the change is getting active.
 
 > **_INFO:_** inside the detailed descriptions below, the definition 'migration script' refers to the term 'migrations' as it is defined by the ef-core framework: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations
+
+### vx.x.x
 
 #### OnboardingServiceProvider - ENHANCED
 
@@ -99,6 +104,12 @@ to ensure the new encryption is able to decrypt preexisting client_secrets the o
 ```
 echo -n ")U\;>/h=ELj+.v5AD9(P2HQ3JnuYt.R:" | xxd -p
 ```
+
+#### Postgres dependency of helm chart - ENHANCED
+
+Be aware that the PostgreSQL version of the subchart by Bitnami of the [portal helm chart](https://github.com/eclipse-tractusx/portal) has been changed from 15.4.x to use the latest available version of 15.
+
+In addition, the fullnameOverride, which was set by default, has been removed which leads to a differently named database server. In case you would like to upgrade the PostgreSQL subchart, the fullnameOverride can either be applied by overwrite using an additional values.yaml file or by executing a blue-green deployment, as outlined below: [PostgreSQL Dependency - Upgrade](#postgresql---upgrade)
 
 ### v1.8.0
 
