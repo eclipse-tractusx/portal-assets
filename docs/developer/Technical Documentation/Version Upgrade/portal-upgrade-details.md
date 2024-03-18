@@ -1,4 +1,11 @@
 - [Summary](#summary)
+  - [vx.x.x](#vxxx)
+    - [OnboardingServiceProvider - ENHANCED](#onboardingserviceprovider---enhanced)
+    - [Postgres dependency of helm chart - ENHANCED](#postgres-dependency-of-helm-chart---enhanced)
+  - [v1.8.0](#v180)
+    - [Agreements - ENHANCED](#agreements---enhanced)
+      - [Impact on existing data:](#impact-on-existing-data)
+    - [Company Certificate Details - NEW](#company-certificate-details---new)
   - [v1.7.0](#v170)
     - [PostgreSQL - Upgrade](#postgresql---upgrade)
     - [Company Service Account - FIX](#company-service-account---fix)
@@ -28,11 +35,243 @@ Each section includes the respective change details, impact on existing data and
 
 > **_INFO:_** inside the detailed descriptions below, the definition 'migration script' refers to the term 'migrations' as it is defined by the ef-core framework: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations
 
+### vx.x.x
+
+#### OnboardingServiceProvider - ENHANCED
+
+- ENHANCED: table onboarding_service_provider_details "encryption_mode" added
+- ENHANCED: table onboarding_service_provider_details "initialization_vector" added
+
+- ENHANCED: configuration for onboarding-service-provider:
+
+```
+    "OnboardingServiceProvider": {
+      "EncryptionConfigIndex": 1,
+      "EncryptionConfigs": [
+        {
+          "Index": 0,
+          "EncryptionKey": "",
+          "CipherMode": "",
+          "PaddingMode": ""
+        },
+        {
+          "Index": 1,
+          "EncryptionKey": "",
+          "CipherMode": "",
+          "PaddingMode": ""
+        }
+      ]
+    }
+```
+
+Previous OnboardingServiceProvider settings contained 'EncryptionKey'. Format was utf8-string being read as byte[].
+New format of EncryptionKey is 64 characters hex
+
+Example:
+
+- old format:
+
+```
+    "OnboardingServiceProvider": {
+      "EncryptionKey": ")U\;>/h=ELj+.v5AD9(P2HQ3JnuYt.R:"
+    }
+```
+
+- including the details that before the change were defined in the source code the same configuration as 'index 0' in new format:
+
+```
+    "OnboardingServiceProvider": {
+      "EncryptionConfigIndex": 1,
+      "EncryptionConfigs": [
+        {
+          "Index": 0,
+          "EncryptionKey": "29555c3b3e2f683d454c6a2b2e76354144392850324851334a6e7559742e523a",
+          "CipherMode": "ECB",
+          "PaddingMode": "PKCS7"
+        },
+        {
+          "Index": 1,
+          "EncryptionKey": "deadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef",
+          "CipherMode": "CBC",
+          "PaddingMode": "PKCS7"
+        }
+      ]
+    }
+```
+
+to ensure the new encryption is able to decrypt preexisting client_secrets the old encryption-key must be converted to the new format. This may be done on the command-line:
+
+```
+echo -n ")U\;>/h=ELj+.v5AD9(P2HQ3JnuYt.R:" | xxd -p
+```
+
+#### Postgres dependency of helm chart - ENHANCED
+
+Be aware that the PostgreSQL version of the subchart by Bitnami of the [portal helm chart](https://github.com/eclipse-tractusx/portal) has been changed from 15.4.x to use the latest available version of 15.
+
+In addition, the fullnameOverride, which was set by default, has been removed which leads to a differently named database server. In case you would like to upgrade the PostgreSQL subchart, the fullnameOverride can either be applied by overwrite using an additional values.yaml file or by executing a blue-green deployment, as outlined below: [PostgreSQL Dependency - Upgrade](#postgresql---upgrade)
+
+### v1.8.0
+
+#### Agreements - ENHANCED
+
+- NEW: table portal.agreement_statuses
+- ENHANCED: table portal.agreements "agreement_status_id" added
+- ENHANCED: table portal.agreements "mandatory" added
+- REMOVED: table portal.agreements "agreement_type" removed
+
+New agreement_statuses table released to manage agreement status by supporting a new label ACTIVE/INACTIVE.
+
+###### Impact on existing data:
+
+As part of the migration, for all existing records inside the table portal.agreements the "mandatory" (true/false flag) is getting set with default value as `true` and "agreement_status_id" set with default value as `1` i.e. ACTIVE
+
+```mermaid
+%%{init: {
+  "theme": "default",
+  "themeCSS": [
+    "[id^=entity-agreements] .er.entityBox { fill: #92A2BD; }",
+    "[id^=entity-agreementstatuses] .er.entityBox { fill : #DF9A9B; }"
+  ]
+}}%%
+erDiagram
+    agreements ||--o{ agreement_statuses : has
+    agreements {
+        uuid id PK
+        int agreement_category_id
+        timestamp date_created
+        timestamp date_last_changed
+        char name
+        uuid issuer_company_id
+        uuid use_case_id
+        uuid document_id
+        text agreement_link
+        int agreement_status_id FK "New Field"
+        bool mandatory "New Field"
+    }
+    agreement_statuses{
+        int id PK
+        char label
+    }
+```
+
+#### Company Certificate Details - NEW
+
+- NEW: portal.company_certificates
+- NEW: portal.company_certificate_types
+- NEW: portal.company_certificate_type_statuses
+- NEW: portal.company_certificate_statuses
+- NEW: portal.company_certificate_type_descriptions
+- NEW: portal.company_certificate_type_assigned_statuses
+
+New company_certificates table is used to store company certificates and their status  
+New company_certificate_statuses table released managing supported certificate status values (supported types can get found below)
+New company_certificate_types_statuses table released managing supported certificate type status values (supported types can get found below)  
+New company_certificate_type table released managing supported certificate types (supported types can get found below)  
+New company_certificate_type_descriptions table released managing certificate types description in multiple languages  
+New company_certificate_type_assigned_statuses managing the status (Active/Inactive) for company certificate types
+
+##### Company Certificate Database Structure
+
+```mermaid
+
+%%{init: {
+  "theme": "default",
+  "themeCSS": [
+    "[id^=entity-companycertificates] .er.entityBox { fill: #DF9A9B;} ",
+    "[id^=entity-companycertificatetypes] .er.entityBox { fill: #DF9A9B;} ",
+    "[id^=entity-companycertificatetypedescriptions] .er.entityBox { fill: #DF9A9B;} ",
+    "[id^=entity-companycertificatestatuses] .er.entityBox { fill: #DF9A9B;} ",
+    "[id^=entity-companycertificatetypeassignedstatuses] .er.entityBox { fill: #DF9A9B;} ",
+    "[id^=entity-companies] .er.entityBox { fill: #92A2BD;} ",
+    "[id^=entity-documents] .er.entityBox { fill: #92A2BD;} ",
+    "[id^=entity-languages] .er.entityBox { fill: #92A2BD;} "
+    ]
+}}%%
+erDiagram
+    company_certificates }|..|{ company_certificate_types : has
+    company_certificates }|..|{ company_certificate_statuses : has
+    company_certificates }|..|{ companies : has
+    company_certificates }|..|{ documents : has
+    company_certificate_type_descriptions }|..|{ company_certificate_types : has
+    company_certificate_type_descriptions }|..|{ languages : has
+    company_certificate_type_assigned_statuses ||..|{ company_certificate_types : has
+    company_certificate_type_assigned_statuses ||..|{ company_certificate_statuses : has
+
+    company_certificates{
+    uuid id PK
+    timestamp valid_from
+    timestamp valid_till
+    int company_certificate_type_id FK
+    int company_certificate_status_id Fk
+    uuid company_id Fk
+    uuid document_id Fk
+}
+company_certificate_types{
+    int id PK
+    char label
+}
+company_certificate_statuses{
+    int id PK
+    string label
+}
+company_certificate_type_descriptions{
+    int company_certificate_type_id FK
+    char language_short_name FK
+    text description
+}
+company_certificate_type_assigned_statuses{
+    int company_certificate_type_id FK
+    int company_certificate_status_id Fk
+}
+languages{
+    char short_name PK
+}
+companies{
+    uuid id PK
+}
+documents{
+    uuid id PK
+}
+
+```
+
+###### Supported company_certificate_statuses:
+
+| license_type_id | license_type |
+| --------------- | ------------ |
+| 1               | ACTIVE       |
+| 2               | INACTIVE     |
+
+###### Supported company_certificate_type_statuses:
+
+| license_type_id | license_type |
+| --------------- | ------------ |
+| 1               | ACTIVE       |
+| 2               | INACTIVE     |
+
+###### Supported company_certificate_types:
+
+| license_type_id | license_type                                    |
+| --------------- | ----------------------------------------------- |
+| 1               | AEO_CTPAT_Security_Declaration                  |
+| 2               | ISO_9001                                        |
+| 3               | IATF_16949                                      |
+| 4               | ISO_14001_EMAS_or_national_certification        |
+| 5               | ISO_45001_OHSAS_18001_or_national_certification |
+| 6               | ISO_IEC_27001                                   |
+| 7               | ISO_50001_or_national_certification             |
+| 8               | ISO_IEC_17025                                   |
+| 9               | ISO_15504_SPICE                                 |
+| 10              | B_BBEE_Certificate_of_South_Africa              |
+| 11              | IATF                                            |
+| 12              | TISAX                                           |
+
 ### v1.7.0
 
 #### PostgreSQL - Upgrade
 
-Please be aware that the PostgreSQL version of the subchart by Bitnami of the [portal helm chart](https://github.com/eclipse-tractusx/portal-cd) is upgraded from 14.5.0 to 15.4.x (dependency updated from version 11.9.13 to 12.12.x).
+Please be aware that the PostgreSQL version of the subchart by Bitnami of the [portal helm chart](https://github.com/eclipse-tractusx/portal) is upgraded from 14.5.0 to 15.4.x (dependency updated from version 11.9.13 to 12.12.x).
 
 In case you are using an external PostgreSQL instance and would like to upgrade to 15.x, please follow the [official instructions](https://www.postgresql.org/docs/user/15/upgrading.html).
 

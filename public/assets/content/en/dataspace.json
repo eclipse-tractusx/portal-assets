@@ -41,7 +41,7 @@
         "imagePath": "/images/frame/AccessVsUsage.png",
         "backgroundColor": "#FFFFFFF",
         "id": "intro-id",
-        "template": "TextImageSideBySide",
+        "template": "TextImageSideBySideWithSections",
         "sectionLink": {
           "data": [
             {
@@ -63,6 +63,16 @@
               "title": "* Roles",
               "id": "roles-id",
               "internal": true
+            }
+          ]
+        },
+        "subDescriptions": {
+          "title": "In addition a policy hub has been provided/released to support data provider, consumers as well as app and service provider to access the latest CX supported policy rule, their definition and complete policy templates.",
+          "sections": [
+            {
+              "title": "<2>Follow the Swagger Service</2>",
+              "value": ">> Swagger Service",
+              "link": "https://policy-hub.dev.demo.catena-x.net/api/policy-hub/swagger/index.html"
             }
           ]
         }
@@ -99,7 +109,7 @@
       },
       {
         "title": "Use Cases",
-        "description": "Supported UseCase credentials: <1></1><1></1>>> Attribute - >>> CredentialSubjectItem <1></1><1></1>>> FrameworkAgreement.pcf - PcfCredential <1></1><1></1>>> FrameworkAgreement.sustainability - SustainabilityCredential <1></1><1></1>>> FrameworkAgreement.quality - QualityCredential <1></1><1></1>>> FrameworkAgreement.traceability - TraceabilityCredential <1></1><1></1>>> FrameworkAgreement.behavioraltwin - BehaviorTwinCredential <1></1><1></1>",
+        "description": "Supported UseCase credentials: <1></1><1></1>* TraceabilityCredential<1></1><1></1>* QualityCredential<1></1><1></1>* CircularEconomyCredential<1></1><1></1>* PcfCredential<1></1><1></1>* DemandCapacityCredential<1></1><1></1>* PurisCredential<1></1><1></1>* BusinessPartnerCredential<1></1><1></1>* BehavioralTwinCredential<1></1><1></1>",
         "imagePath": "/images/logos/cx-text.svg",
         "backgroundColor": "#F9F9F9",
         "id": "usecase-id",

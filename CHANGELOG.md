@@ -2,66 +2,44 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
-## 1.8.0-RC5
+## unreleased
+
+- moved documentation for button, datepicker and dropdown to storybook in shared components
+
+## 1.8.0
 
 ### Change
 
-- improved offer release process documentation
-- updated security assessment
+Portal assets:
 
-### Bugfix
+- added portal registration application images and connected the image store with the registration application repository
+- created a new section to display standard library info in osp page
 
-- fixed links (relative links, image links and links to GitHub) in documentation app
+Documentation app:
 
-## 1.8.0-RC4
-
-### Change
-
-- added image "use"-guidelines to contributing guide
-- added developer documentation details for the endpoint usage of /api/apps/start-autosetup
-- updated bpdm interface contract details regarding the integration of the portal with the BPDM service (golden record and gate service)
-- updated the developer documentation of the registration flow by making it more user friendly; including a process description, data flow diagrams and api calls supported
-- documentation for "Wallets" and "Credentials" added including the restructuring of the folder content "Technical Integration"
-
-### Technical Support
-
-- removed picture references to user-images in documentation by adding all images to 'docs static'
-
-### Bugfix
-
-- assets/content (companyRole and dataspace): added title and description to the standard library section based on the company role
-
-## 1.8.0-RC3
-
-### Change
-
-- removed references to consortia environments
-- removed image reference to catena-ng in documentation
-- adjusted directory structure for app and service release process documentation
-- enhanced local development documentation for frontend in regards to backend and interface connection
-
-### Bugfix
-
-- added standard library template to sections under company roles
-
-## 1.8.0-RC2
-
-### Change
-
+- enhanced developer documentation by adding db table details about entity 'Agreements' incl. db schema
 - moved developer into docs directory and enable docs app
-- moved helper user docs into user user directory and enable docs app
+- moved helper user docs into user directory and enable docs app
 - moved pen test information to Tests.md
 - updated test automation docs
 - removed obsolete version files
 - enhanced documentation for technical user view
-
-## 1.8.0-RC1
-
-### Change
-
-- enhanced developer docu by adding db table details about entity 'Agreements' incl. db schema
-- added portal registration application images and connected the image store with the registration application repo
-- created a new section to display standard library info in osp page
+- removed references to consortia environments
+- removed image reference to catena-ng
+- adjusted directory structure for app and service release process documentation
+- enhanced local development documentation for frontend in regards to backend and interface connection
+- added image "use"-guidelines to contributing guide
+- added developer documentation details for the endpoint usage of /api/apps/start-autosetup
+- updated bpdm interface contract details regarding the integration of the portal with the BPDM service (golden record and gate service)
+- updated the documentation of the registration flow by making it more user friendly; including a process description, data flow diagrams and api calls supported
+- documentation for "Wallets" and "Credentials" added including the restructuring of the folder content "Technical Integration"
+- improved offer release process documentation
+- updated security assessment
+- added identity documentation
+- enhanced app flow documentation
+- added company certificate management details
+- extended osp documentation
+- updated version upgrade details
 
 ### Feature
 
@@ -71,14 +49,22 @@ n/a
 
 - added automatic linter and build checks for newly created pull request
 - added additional image tags of type semver to release workflows
+- removed picture references to user-images in documentation by adding all images to 'docs static'
+- changed portal-cd references to portal due to repository renaming
+- updated README.md
+  - mentioned `docs` folder in portal-assets repository
+  - referenced docker notice files in notice section instead of duplicating the content
 
 ### BugFixes
 
-n/a
+Portal assets:
 
-#### Known Knowns
+- added standard library template to sections under company roles
+- assets/content (companyRole and dataspace): added title and description to the standard library section based on the company role
 
-- release 1.8.0 documentation of new features outstanding
+Documentation app:
+
+- fixed relative links in documentation app
 
 ## 1.7.0
 
