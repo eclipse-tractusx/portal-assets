@@ -24,7 +24,8 @@ class MDHelper {
   readContent(path) {
     if (!fs.lstatSync(path).isFile()) return ''
     try {
-      return fs.readFileSync(path, 'utf8')
+      const fd = fs.openSync(path, 'r')
+      return fs.readFileSync(fd, 'utf8')
     } catch (err) {
       return ''
     }

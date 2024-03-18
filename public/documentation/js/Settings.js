@@ -24,5 +24,5 @@ export const Settings = {
 }
 
 export const Patterns = {
-  DISPLAY: /(^\d+[.-_]?\s+|_|\.md$)/g,
+  DISPLAY: /(^\d+[._-]?\s+|_|\.md$)/g,
 }
