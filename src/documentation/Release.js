@@ -25,7 +25,7 @@ class MDHelper {
     if (!fs.lstatSync(path).isFile()) return ''
     try {
       const fd = fs.openSync(path, 'r')
-      return fs.readFileSync(fd, 'utf8')
+      return fs.existsSync(fd) ? fs.readFileSync(fd, 'utf8') : ''
     } catch (err) {
       return ''
     }
