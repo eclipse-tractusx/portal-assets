@@ -30,7 +30,7 @@
     "start": "concurrently \"yarn start:assets\" \"yarn start:proxy\" \"open http://localhost:3000/\"",
     "start:proxy": "node src/proxy/index.cjs",
     "start:assets": "http-server -a 127.0.0.1 -p 3003",
-    "prepare": "husky install",
+    "prepare": "husky",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
     "pretty": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
