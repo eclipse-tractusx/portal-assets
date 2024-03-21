@@ -22,9 +22,11 @@ import dirTree from 'directory-tree'
 
 class MDHelper {
   readContent(path) {
-    if (!fs.lstatSync(path).isFile()) return ''
     try {
       const fd = fs.openSync(path, 'r')
+      if (!fs.lstatSync(fd).isFile()) {
+        return ''
+      }
       return fs.existsSync(fd) ? fs.readFileSync(fd, 'utf8') : ''
     } catch (err) {
       return ''
