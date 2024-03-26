@@ -22,10 +22,8 @@ In the current implementation level, self-descriptions are considered in the fol
 
 ## Architecture Overview
 
-<br>
-<img width="927" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/sdfactory-portal-wallet-interactions.png">
-<br>
-<br>
+![SD-Factory - Portal interaction](../../../static/sdfactory-portal-wallet-interactions.png)
+
 
 ## Description of the functional interface (WHAT)
 
