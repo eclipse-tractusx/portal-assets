@@ -22,14 +22,12 @@ In the current implementation level, self-descriptions are considered in the fol
 
 ## Architecture Overview
 
-<br>
-<img width="927" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/sdfactory-portal-wallet-interactions.png">
-<br>
-<br>
+![SD-Factory - Portal interaction](../../../static/sdfactory-portal-interactions.png)
+
 
 ## Description of the functional interface (WHAT)
 
-The Portal - SD Factory Interface is used to generate signed self descriptions which are stored in json ld files.
+The Portal - SD Factory Interface is used to start generating process of signed self descriptions which are stored in json ld files.
 The json ld file is supposed to get stored - for now normal db document storage linked to the self description owner (usually a company).
 <br>
 <br>
@@ -37,8 +35,9 @@ The json ld file is supposed to get stored - for now normal db document storage 
 ## Description of the physical interfaces (HOW)
 
 Portal is pushing the self description via an REST API "POST" developed under the portal context.
-Factory will receive the information and create the self-description with signature (with help of the wallet).
-A response is getting send to the portal with an "content" section. The content section is getting stored as json file in the portal db.
+Factory receives the information and transforms it to the self-description without signature. Then unsigned Self-Description is passed 
+to the Validation Service, which checks parameter values and signs Verifiable Credentials. This process is performed 
+asynchronously. The result is sent to the portal with an "content" section. The content section is getting stored as json file in the portal db.
 <br>
 <br>
 
