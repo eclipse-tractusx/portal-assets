@@ -721,11 +721,6 @@
         "index": 2,
         "title": "Certification Process",
         "navigation": "section-two"
-      },
-      {
-        "index": 3,
-        "title": "standard libraries",
-        "navigation": "std-libraries-id"
       }
     ],
     "title": "Catena-X Data Conformity Assessment Bodies (CABs)",
@@ -736,7 +731,7 @@
         "imagePath": "",
         "description": "Die Standards, die die Grundlage unseres Netzwerks bilden, werden von Catena-X  e. V. erstellt und veröffentlicht.<1></1>Conformity Assessment Bodies (CABs) auditieren und stellen Zertifikate auf Basis dieser Standards.<1></1>Mehr Details hierzu finden sie unter folgender <strong>Vereinshomepage</strong><1></1><1></1>Die einheitliche Prüfung jeder Komponente des Netzes auf der Grundlage eines gemeinsam vereinbarten Rahmens ermöglicht eine hohe Transparenz und Vergleichbarkeit für alle Anbieter von Dienstleistungen und Anwendungen für unsere Mitglieder und Nutzer.<1></1><1></1>",
         "template": "TextImageSideBySideWithSections",
-        "backgroundColor": "#DAE3EB",
+        "backgroundColor": "#FFFFFF",
         "sectionLink": {
           "data": [
             {
@@ -763,14 +758,6 @@
             }
           ]
         }
-      },
-      {
-        "title": "Conformity Assessment Bodies Certification Standards",
-        "description": "The Catena-X operating environment is based on the idea that there are multiple but distinct roles that aim at providing an attractive and fully functional ecosystem. Each provider can take on one or more of the following roles in any combination:<1></1><1></1>1. Core Service Provider<1></1><1></1>2. Enablement Service Provider<1></1><1></1>3. Business Application Provider<1></1><1></1>4. On-Boarding Service Provider<1></1><1></1>5. Consulting Provider<1></1><1></1>6. Data Provider and Consumer<1></1><1></1>7. Conformity Assessment Body<1></1><1></1>In the list you can find all current active standards relevant for Conformity Assessment Bodies certification.",
-        "imagePath": "",
-        "backgroundColor": "#FFFFFF",
-        "id": "std-libraries-id",
-        "template": "TextImageSideBySideWithSections"
       }
     ]
   },
