@@ -13,7 +13,7 @@
 The Gaia-X Clearinghouse provides two key services
 
 - trust (validation of corporate data by verifying data from legal entities, according to the Gaia-X Trust Framework)
-- conformity assessment (SD Documents via teh compliance check)
+- conformity assessment (SD Documents via the compliance check)
   <br>
 
 Below the respective touched business process steps are highlighted to enable an easier mapping of the interfaces to the portal product business process:
