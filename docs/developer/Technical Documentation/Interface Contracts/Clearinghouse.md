@@ -38,6 +38,10 @@ Below the respective touched business process steps are highlighted to enable an
 </p>
 
 <br>
+
+Additional documentation regarding the actual interface can get found here: [Registration Clearinghouse Check](/docs/developer/01.%20Registration/04.%20Registration%20Approval/03.%20Registration%20Approval%20Process.md#details-clearinghouse-check)
+
+<br>
 <br>
 
 #### #2 Compliance Check
