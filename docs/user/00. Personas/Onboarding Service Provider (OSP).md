@@ -21,3 +21,11 @@ The purpose of OSPs is to enable a faster growth of the the network on the one h
 
 The first step is to find an OSP. You're existing partners, that happen to be OSPs for Catena-X might inform you about their status as OSPs and offer you the opportunitity to become a participant in the Catena-X network. Alternatively you can find the list provided by the association, that lists all available OSPs. The individual onboarding process depends on the OSPs individual implementation. That might ie. be a registration form or a semi automatic process handled by your OSP. Ideally you get in contact with them and discuss the available options in order to figure out the availale/best ways to proceed.
 As soon as you registered with you OSP, please follow this [guide](docs/user/01.%20Onboarding/OSPDrivenOnboarding.md).
+
+## NOTICE
+
+This work is licensed under the [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+- SPDX-License-Identifier: Apache-2.0
+- SPDX-FileCopyrightText: 2021-2024 Contributors to the Eclipse Foundation
+- Source URL: https://github.com/eclipse-tractusx/portal-assets
