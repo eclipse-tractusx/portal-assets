@@ -22,8 +22,10 @@ In the current implementation level, self-descriptions are considered in the fol
 
 ## Architecture Overview
 
-![SD-Factory - Portal interaction](../../../static/sdfactory-portal-interactions.png)
-
+<br>
+<img width="927" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/sdfactory-portal-interactions.png">
+<br>
+<br>
 
 ## Description of the functional interface (WHAT)
 
@@ -35,8 +37,8 @@ The json ld file is supposed to get stored - for now normal db document storage 
 ## Description of the physical interfaces (HOW)
 
 Portal is pushing the self description via an REST API "POST" developed under the portal context.
-Factory receives the information and transforms it to the self-description without signature. Then unsigned Self-Description is passed 
-to the Validation Service, which checks parameter values and signs Verifiable Credentials. This process is performed 
+Factory receives the information and transforms it to the self-description without signature. Then unsigned Self-Description is passed
+to the Validation Service, which checks parameter values and signs Verifiable Credentials. This process is performed
 asynchronously. The result is sent to the portal with an "content" section. The content section is getting stored as json file in the portal db.
 <br>
 <br>
