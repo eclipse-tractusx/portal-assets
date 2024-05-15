@@ -29,9 +29,15 @@ updates:
       - "dependencies"
     schedule:
       interval: "weekly"
+    # restrict to patch updates (due to the big amount of dependencies)
     ignore:
       - dependency-name: "*"
         update-types: ["version-update:semver-major", "version-update:semver-minor"]
+    groups:
+      production-dependencies:
+        dependency-type: "production"
+      development-dependencies:
+        dependency-type: "development"
 
   # Github Actions
   -
@@ -42,6 +48,9 @@ updates:
       - "github-actions"
     schedule:
       interval: "weekly"
+    groups:
+      dependencies:
+        dependency-type: "production"
 
   # Docker
   -
@@ -52,3 +61,6 @@ updates:
       - "docker"
     schedule:
       interval: "weekly"
+    groups:
+      dependencies:
+        dependency-type: "production"
