@@ -1,5 +1,5 @@
 - [Summary](#summary)
-  - [vx.x.x](#vxxx)
+  - [v2.0.0](#v200)
     - [OnboardingServiceProvider - ENHANCED](#onboardingserviceprovider---enhanced)
     - [Postgres dependency of helm chart - ENHANCED](#postgres-dependency-of-helm-chart---enhanced)
   - [v1.8.0](#v180)
@@ -35,7 +35,7 @@ Each section includes the respective change details, impact on existing data and
 
 > **_INFO:_** inside the detailed descriptions below, the definition 'migration script' refers to the term 'migrations' as it is defined by the ef-core framework: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations
 
-### vx.x.x
+### v2.0.0
 
 #### OnboardingServiceProvider - ENHANCED
 

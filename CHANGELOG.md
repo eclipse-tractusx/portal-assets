@@ -2,9 +2,42 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
-## unreleased
+## 2.0.0-RC1
 
-- moved documentation for button, datepicker and dropdown to storybook in shared components
+### Change
+
+Portal assets:
+
+- moved documentation for button, datepicker and dropdown to storybook into shared components
+- upgraded library versions
+
+Documentation app:
+
+- updated version upgrade details
+- add link to contribution details in CONTRIBUTING.md
+- added OSP persona invitee perspective
+- updated interface specification for sd-factory
+- added new GET document certificate endpoints
+- add mapping table for BPDM
+- updated interface documentation for clearinghouse
+
+### BugFixes
+
+Portal assets:
+
+- updated use case and policy intro section content
+- updated content for conformity
+- improve code quality
+
+Documentation app:
+
+- fix errors in query for version update to 1.8.0
+
+### Technical Support
+
+- added dependabot.yml file
+- update eclipse dash tool for dependencies scanning
+- upgraded GH actions and changed to pinned commit sha
 
 ## 1.8.0
 
