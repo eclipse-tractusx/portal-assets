@@ -13,7 +13,7 @@
 The Gaia-X Clearinghouse provides two key services
 
 - trust (validation of corporate data by verifying data from legal entities, according to the Gaia-X Trust Framework)
-- conformity assessment (SD Documents via teh compliance check)
+- conformity assessment (SD Documents via the compliance check)
   <br>
 
 Below the respective touched business process steps are highlighted to enable an easier mapping of the interfaces to the portal product business process:
@@ -36,6 +36,10 @@ Below the respective touched business process steps are highlighted to enable an
 <p align="center">
 <img width="857" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/clearinghouse-data-validation.png">
 </p>
+
+<br>
+
+Additional documentation regarding the actual interface can get found here: [Registration Clearinghouse Check](/docs/developer/01.%20Registration/04.%20Registration%20Approval/03.%20Registration%20Approval%20Process.md#details-clearinghouse-check)
 
 <br>
 <br>
