@@ -7,7 +7,7 @@ This help page will provide you with all the important information you need to k
 
 - [What is an OSP?](#osps)
 - [What is the purpose of OSPs?](#purpose-of-osps)
-- [How can I interact with/use OSP services?](#access-osps) 
+- [How can I interact with/use OSP services?](#access-osps)
 
 ### OSPs
 
