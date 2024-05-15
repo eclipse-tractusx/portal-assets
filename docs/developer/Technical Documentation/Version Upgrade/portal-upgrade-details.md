@@ -437,7 +437,7 @@ WITH connector_technical_user_profiles AS (
 ),
 connector_profiles_to_insert AS (
     SELECT DISTINCT atu.technical_user_profile_id, ur.id AS user_role_id
-    FROM app_technical_user_profiles AS atu
+    FROM connector_technical_user_profiles AS atu
     CROSS JOIN (
         SELECT id
         FROM portal.user_roles
@@ -448,8 +448,8 @@ INSERT INTO portal.technical_user_profile_assigned_user_roles (technical_user_pr
 SELECT rt.technical_user_profile_id, rt.user_role_id
 FROM connector_profiles_to_insert rt
     LEFT JOIN portal.technical_user_profile_assigned_user_roles AS iar
-    ON rt.identity_id = iar.identity_id AND rt.technical_user_profile_id = iar.technical_user_profile_id
-WHERE iar.identity_id IS NULL;
+    ON rt.user_role_id = iar.user_role_id AND rt.technical_user_profile_id = iar.technical_user_profile_id
+WHERE iar.user_role_id IS NULL;
 
 WITH app_technical_user_profiles AS (
     SELECT DISTINCT technical_user_profile_id
@@ -471,8 +471,8 @@ INSERT INTO portal.technical_user_profile_assigned_user_roles (technical_user_pr
 SELECT rt.technical_user_profile_id, rt.user_role_id
 FROM profiles_to_insert rt
     LEFT JOIN portal.technical_user_profile_assigned_user_roles AS iar
-    ON rt.identity_id = iar.identity_id AND rt.technical_user_profile_id = iar.technical_user_profile_id
-WHERE iar.identity_id IS NULL;
+    ON rt.user_role_id = iar.user_role_id AND rt.technical_user_profile_id = iar.technical_user_profile_id
+WHERE iar.user_role_id IS NULL;
 
 UPDATE portal.user_roles SET user_role = 'Offer Management' WHERE user_role IN ('Service Management');
 
