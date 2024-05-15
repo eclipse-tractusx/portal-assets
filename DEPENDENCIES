@@ -166,7 +166,7 @@ npm/npmjs/-/prettier/3.2.5, MIT AND ISC AND BSD-2-Clause AND BSD-3-Clause AND Ap
 npm/npmjs/-/proxy-addr/2.0.7, MIT, approved, clearlydefined
 npm/npmjs/-/punycode/2.3.1, MIT, approved, #6373
 npm/npmjs/-/qs/6.11.0, BSD-3-Clause, approved, #7556
-npm/npmjs/-/qs/6.12.0, BSD-3-Clause, approved, clearlydefined
+npm/npmjs/-/qs/6.12.0, BSD-3-Clause, approved, #14380
 npm/npmjs/-/queue-microtask/1.2.3, MIT, approved, clearlydefined
 npm/npmjs/-/range-parser/1.2.1, MIT, approved, clearlydefined
 npm/npmjs/-/raw-body/2.5.2, MIT, approved, clearlydefined
