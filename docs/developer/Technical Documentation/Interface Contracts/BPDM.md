@@ -69,12 +69,22 @@ Retrieving company data from the CX mirror.
 <br>
 
 ```diff
-! GET /api/catena/business-partner/{idValue}
+! GET /api/registration/legalEntityAddress/{bpn}
 ```
 
 <br>
 
 Request Body
+<br>
+
+n/a
+
+<br>
+<br>
+
+The mentioned endpoint is provided by the registration service and acts as a kind of an mapper fro the actual BPDM endpoint.
+The BPDM endpoint which is getting called by the portal api path is the following `{BPDM Host}/pool/api/catena/legal-entities/{idValue}`with the following body
+
 <br>
 
     idValue: {BPN-Number},
@@ -83,8 +93,6 @@ Request Body
 <br>
 <br>
 
-The mentioned endpoint is provided by the registration service.
-Behind that, the BPDM endpoint {BPDM Host}/pool/api/catena/legal-entities/{idValue} is getting called.
 The portal is using an technical user for the authentication. The technical user bearer token is send via the api rest call to bpdm.
 
 <br>
@@ -103,6 +111,56 @@ The portal is using an technical user for the authentication. The technical user
 | Street & House Number  | addresses "country": [ { "technicalKey":}] | DE                 |
 | Country                | addresses "postCodes": [ { "value":}]      | 80809              |
 | Postal Code            | addresses "localities": [ { "value":}]     | Munich             |
+
+<br>
+<br>
+
+###### Special Scenario: Unique Identifier
+
+The BP-Pool includes the registration member's unique identifier, but it does not directly correspond to the supported identifiers in the portal. The portal only supports Gaia-X compliant identifiers, which are reduced to GX Unique ideas. To address this, a mapping table has been created within the portal.
+
+In cases where a BPDM unique identifier does not have a corresponding portal key mapped, the user will not receive an ID. In such scenarios, the front-end (FE) will prompt the user to manually select an ID type and enter the corresponding value.
+
+| BPDM Key                              | Country Code (for BPDM Key) | Portal Key            |
+| ------------------------------------- | --------------------------- | --------------------- |
+|       "technicalKey": "CX_POOL_ID",   | -                           | -                     |
+|       "technicalKey": "EU_VAT_ID_DE", | DE                          | VAT_ID                |
+|       "technicalKey": "CDQID",        | -                           | -                     |
+|       "technicalKey": "BPN",          | -                           | -                     |
+|       "technicalKey": "BR_CNPJ",      | -                           | -                     |
+|       "technicalKey": "BR_TAX_STATE", | ??                          | VAT_ID                |
+|       "technicalKey": "BR_TAX_MUN",   | ??                          | VAT_ID                |
+|       "technicalKey": "CH_UID",       | CH                          | COMMERCIAL_REG_NUMBER |
+|       "technicalKey": "EU_VAT_ID_FR", | FR                          | VAT_ID                |
+|       "technicalKey": "FR_SIRET",     | -                           | -                     |
+|       "technicalKey": "FR_SIREN",     | FR                          | COMMERCIAL_REG_NUMBER |
+|       "technicalKey": "EU_VAT_ID_AT", | AT                          | VAT_ID                |
+|       "technicalKey": "DE_TAX_ID",    | -                           | -                     |
+|       "technicalKey": "DE_BNUM",      | DE                          | COMMERCIAL_REG_NUMBER |
+|       "technicalKey": "DUNS_ID",      | -                           | -                     |
+|       "technicalKey": "CZ_ICO",       | CZ                          | COMMERCIAL_REG_NUMBER |
+|       "technicalKey": "EU_VAT_ID_CZ", | CZ                          | VAT_ID                |
+|       "technicalKey": "CX_BPN",       | -                           | -                     |
+|       "technicalKey": "string",       | -                           | -                     |
+|       "technicalKey": "ABN_AU",       | -                           | -                     |
+|       "technicalKey": "PL_NIP",       | -                           | -                     |
+|       "technicalKey": "EU_VAT_ID_PL", | PL                          | VAT_ID                |
+|       "technicalKey": "US_EMPL_ID",   | -                           | -                     |
+|       "technicalKey": "EU_VAT_ID_BE", | BE                          | VAT_ID                |
+|       "technicalKey": "EU_VAT_ID_CH", | CH                          | VAT_ID                |
+|       "technicalKey": "EU_VAT_ID_DK", | DK                          | VAT_ID                |
+|       "technicalKey": "EU_VAT_ID_ES", | ES                          | VAT_ID                |
+|       "technicalKey": "EU_VAT_ID_GB", | GB                          | VAT_ID                |
+|       "technicalKey": "EU_VAT_ID_NO", | NO                          | VAT_ID                |
+|       "technicalKey": "GS1_GLN",      | -                           | -                     |
+|       "technicalKey": "LEI_ID",       | all                         | LEI_CODE              |
+|       "technicalKey": "BR_ID_AT",     | -                           | -                     |
+|       "technicalKey": "BE_ENT_NO",    | BE                          | COMMERCIAL_REG_NUMBER |
+|       "technicalKey": "CVR_DK",       | DK                          | COMMERCIAL_REG_NUMBER |
+|       "technicalKey": "CIF_ES",       | -                           | -                     |
+|       "technicalKey": "ID_CRN",       | GB                          | COMMERCIAL_REG_NUMBER |
+|       "technicalKey": "NO_ORGID",     | NO                          | COMMERCIAL_REG_NUMBER |
+|       "technicalKey": "PL_REG",       | -                           | -                     |
 
 <br>
 <br>
