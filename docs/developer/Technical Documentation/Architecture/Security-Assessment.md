@@ -4,9 +4,9 @@
 | ------------------------- | ---------------------------------------------------------------------------------------------- |
 | Contact for product       | [@evegufy](https://github.com/evegufy) <br> [@jjeroch](https://github.com/jjeroch)             |
 | Security responsible      | [@SSIRKC](https://github.com/SSIRKC) <br> [Szymon Kowalczyk](szymon.kowalczyk.external@zf.com) |
-| Version number of product | 23.12                                                                                          |
-| Dates of assessment       | 2024-02-13: Re-Assessment                                                                      |
-| Status of assessment      | RE-ASSESSMENT Finalized                                                                        |
+| Version number of product | 24.05                                                                                          |
+| Dates of assessment       | 2024-05-21: Re-Assessment                                                                      |
+| Status of assessment      | Done & Approved                                                                        |
 
 ## Product Description
 
@@ -38,34 +38,28 @@ flowchart LR
 
     RF("Registration")
     PF("Portal")
-
     RS(Registration service)
     AS(Administration service)
     MAS(Marketplace apps service)
     MSS(Marketplace services service)
     NS(Notification service)
-
     CU-Own(Company user)
-
     NC1("Potential new company (admin)")
     CU-Shared1(Company user)
-
     NC2("Potential new company (admin)")
     CU-Shared2(Company user)
-
     NC3("Potential new company (admin)")
     CU-Shared3(Company user)
-
     K("Keycloak (REST API)")
-
     BPDM(Business Partner Data Management)
     SDT(Semantic Hub)
     SDF("SD Factory \n (Self Description)")
     MIW(Managed Identity Wallets)
-
+    DIW(Decentral Identity Wallet)
     CH(Gaia-X Clearing House)
     OSP("Onboarding Service Provider \n (Owns infrastructure \n e.g. IAM, portal and registration app, \n other core services) ")
-
+    SSICI(SSI Credential Issuer)
+    
     subgraph Portal
         subgraph Frontend
         RF
@@ -107,19 +101,25 @@ flowchart LR
     SDT
     SDF
     MIW
+    DIW
     OSP
+    SSICI
     end
     subgraph ext["External Services (3rd party)"]
     CH
     end
-RS <-->|Company data \n user role data \n T&C / consent agreements| RF
+    RS <-->|Company data \n user role data \n T&C / consent agreements| RF
     RS <-.-> K
     RS ==>|Company data \n user role data \n T&C consent agreements| PDB
     AS -.-> K
     AS <--> PF
     AS ==>|"User data \n (real and technical company data)"| PDB
-    AS ---|Data related to \n self description| SDF
-    AS -->|"Create MIW-tenant \n update MIW-tenant (BPN-VC, Member-VC) \n update MIW-framework-VC \n update dismantler-VC \n data: BPN, Auth, Contract, Version"| MIW
+    AS <-->|Data related to \n self description| SDF
+    AS -->|"(Possible communication to MIW or DIW - configuration dependant) \n Creation of tenants in Wallet"| MIW
+    AS -->|"(Possible communication to MIW or DIW - configuration dependant) \n Creation of tenants in Wallet"| DIW
+    SSICI-->|"(Possible communication to MIW or DIW - configuration dependant) \n Storing credentials in tenants wallet"|MIW
+    SSICI-->|"(Possible communication to MIW or DIW - configuration dependant) \n Storing credentials in tenants wallet"|DIW
+    AS -->|"Provide authenticated CX Users the possibility \n to create credentials inside the issuer \n and holder wallet. Furthermore, it handles the \n revocation and expiry handling for credentials."| SSICI
     AS <-->|Company data \n signed self description| CH
     AS <-->|OSP registers its customer \n Company Data \n Admin User Record| OSP
     NS --> PF
@@ -150,7 +150,7 @@ RS <-->|Company data \n user role data \n T&C / consent agreements| RF
 ### Changes compared to last Security Assessment
 
 - No major architectural changes that introduce new threats.
-- Main changes are connections to the onboarding service provider.
+- Main changes are related to the introduction of SSI Credential Issuer component.
 
 ### Features for Upcoming Versions
 
