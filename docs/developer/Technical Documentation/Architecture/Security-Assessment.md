@@ -101,12 +101,12 @@ flowchart LR
     SDT
     SDF
     MIW
-    DIW
     OSP
     SSICI
     end
     subgraph ext["External Services (3rd party)"]
     CH
+    DIW
     end
     RS <-->|Company data \n user role data \n T&C / consent agreements| RF
     RS <-.-> K
@@ -115,10 +115,10 @@ flowchart LR
     AS <--> PF
     AS ==>|"User data \n (real and technical company data)"| PDB
     AS <-->|Data related to \n self description| SDF
-    AS -->|"(Possible communication to MIW or DIW - configuration dependant) \n Creation of tenants in Wallet"| MIW
-    AS -->|"(Possible communication to MIW or DIW - configuration dependant) \n Creation of tenants in Wallet"| DIW
-    SSICI-->|"(Possible communication to MIW or DIW - configuration dependant) \n Storing credentials in tenants wallet"|MIW
-    SSICI-->|"(Possible communication to MIW or DIW - configuration dependant) \n Storing credentials in tenants wallet"|DIW
+    AS -->|"(Possible communication to MIW - configuration dependant) \n Creation of tenants in Wallet"| MIW
+    AS -->|"(Possible communication to DIW - configuration dependant) \n Creation of tenants in Wallet"| DIW
+    SSICI-->|"(Possible communication to MIW - configuration dependant) \n Storing credentials in tenants wallet"|MIW
+    SSICI-->|"(Possible communication to DIW - configuration dependant) \n Storing credentials in tenants wallet"|DIW
     AS -->|"Provide authenticated CX Users the possibility \n to create credentials inside the issuer \n and holder wallet. Furthermore, it handles the \n revocation and expiry handling for credentials."| SSICI
     AS <-->|Company data \n signed self description| CH
     AS <-->|OSP registers its customer \n Company Data \n Admin User Record| OSP
