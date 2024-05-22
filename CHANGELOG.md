@@ -2,6 +2,12 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
+## 2.0.0-RC2
+
+- reworked year in file header
+- updated security assessment
+- added Tractus-X logo to portal-assets
+
 ## 2.0.0-RC1
 
 ### Change
