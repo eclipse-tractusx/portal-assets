@@ -4,9 +4,9 @@
 | ------------------------- | ---------------------------------------------------------------------------------------------- |
 | Contact for product       | [@evegufy](https://github.com/evegufy) <br> [@jjeroch](https://github.com/jjeroch)             |
 | Security responsible      | [@SSIRKC](https://github.com/SSIRKC) <br> [Szymon Kowalczyk](szymon.kowalczyk.external@zf.com) |
-| Version number of product | 24.05                                                                                          |
+| Version number of product | 2.0.0                                                                                          |
 | Dates of assessment       | 2024-05-21: Re-Assessment                                                                      |
-| Status of assessment      | Done & Approved                                                                        |
+| Status of assessment      | Done & Approved                                                                                |
 
 ## Product Description
 
@@ -59,7 +59,6 @@ flowchart LR
     CH(Gaia-X Clearing House)
     OSP("Onboarding Service Provider \n (Owns infrastructure \n e.g. IAM, portal and registration app, \n other core services) ")
     SSICI(SSI Credential Issuer)
-    
     subgraph Portal
         subgraph Frontend
         RF
@@ -117,9 +116,9 @@ flowchart LR
     AS <-->|Data related to \n self description| SDF
     AS -->|"(Possible communication to MIW - configuration dependant) \n Creation of tenants in Wallet"| MIW
     AS -->|"(Possible communication to DIW - configuration dependant) \n Creation of tenants in Wallet"| DIW
-    SSICI-->|"(Possible communication to MIW - configuration dependant) \n Storing credentials in tenants wallet"|MIW
-    SSICI-->|"(Possible communication to DIW - configuration dependant) \n Storing credentials in tenants wallet"|DIW
-    AS -->|"Provide authenticated CX Users the possibility \n to create credentials inside the issuer \n and holder wallet. Furthermore, it handles the \n revocation and expiry handling for credentials."| SSICI
+    SSICI-->|"(Possible communication to MIW - configuration dependant) \n Storing credentials in tenants wallet"| MIW
+    SSICI-->|"(Possible communication to DIW - configuration dependant) \n Storing credentials in tenants wallet"| DIW
+    AS -->|"Provides authenticated CX Users the possibility \n to create credentials inside the issuer \n and holder wallet. Furthermore, it handles the \n revocation and expiry handling for credentials."| SSICI
     AS <-->|Company data \n signed self description| CH
     AS <-->|OSP registers its customer \n Company Data \n Admin User Record| OSP
     NS --> PF
