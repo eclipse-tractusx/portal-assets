@@ -2,6 +2,18 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
+## 2.0.0-RC3
+
+### Change
+
+- updated roles and rights matrix
+- added documentation for decline registration
+- added documentation for credential request, credential management and credential revocation
+
+### BugFixes
+
+- fixed missing image - added button-activate.png
+
 ## 2.0.0-RC2
 
 - reworked year in file header
