@@ -2,34 +2,16 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
-## 2.0.0-RC3
+## 2.0.0
 
 ### Change
 
-- updated roles and rights matrix
-- added documentation for decline registration
-- added documentation for credential request, credential management and credential revocation
+#### Assets
 
-### BugFixes
-
-- fixed missing image - added button-activate.png
-
-## 2.0.0-RC2
-
-- reworked year in file header
-- updated security assessment
-- added Tractus-X logo to portal-assets
-
-## 2.0.0-RC1
-
-### Change
-
-Portal assets:
-
-- moved documentation for button, datepicker and dropdown to storybook into shared components
+- moved documentation for button, datepicker and dropdown to storybook into [portal shared components](https://github.com/eclipse-tractusx/portal-shared-components)
 - upgraded library versions
 
-Documentation app:
+#### Documentation
 
 - updated version upgrade details
 - add link to contribution details in CONTRIBUTING.md
@@ -38,35 +20,42 @@ Documentation app:
 - added new GET document certificate endpoints
 - add mapping table for BPDM
 - updated interface documentation for clearinghouse
+- updated security assessment
+- added Tractus-X logo to portal-assets
+- updated roles and rights matrix
+- added documentation for decline registration
+- added documentation for credential request, credential management and credential revocation
 
 ### BugFixes
 
-Portal assets:
+#### Assets
 
 - updated use case and policy intro section content
 - updated content for conformity
 - improve code quality
 
-Documentation app:
+#### Documentation
 
-- fix errors in query for version update to 1.8.0
+- fixed errors in query for version upgrading to 1.8.0
+- fixed missing image - added button-activate.png
 
 ### Technical Support
 
-- added dependabot.yml file
+- added dependabot.yml file and introduced grouping of pull request for version updates
 - update eclipse dash tool for dependencies scanning
 - upgraded GH actions and changed to pinned commit sha
+- reworked year in file header
 
 ## 1.8.0
 
 ### Change
 
-Portal assets:
+#### Assets
 
 - added portal registration application images and connected the image store with the registration application repository
 - created a new section to display standard library info in osp page
 
-Documentation app:
+#### Documentation
 
 - enhanced developer documentation by adding db table details about entity 'Agreements' incl. db schema
 - moved developer into docs directory and enable docs app
@@ -108,12 +97,12 @@ n/a
 
 ### BugFixes
 
-Portal assets:
+#### Assets
 
 - added standard library template to sections under company roles
 - assets/content (companyRole and dataspace): added title and description to the standard library section based on the company role
 
-Documentation app:
+#### Documentation
 
 - fixed relative links in documentation app
 
