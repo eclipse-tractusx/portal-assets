@@ -27,12 +27,12 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE_NAMESPACE: "tractusx"
-  IMAGE_NAME: "portal-assets"
-  REF_NAME: "${{ github.ref_name }}"
+  IMAGE_NAMESPACE: 'tractusx'
+  IMAGE_NAME: 'portal-assets'
+  REF_NAME: '${{ github.ref_name }}'
   # variables needed for scripts/legal-notice.sh
-  SERVER_URL: "${{ github.server_url }}"
-  REPOSITORY: "${{ github.repository }}"
+  SERVER_URL: '${{ github.server_url }}'
+  REPOSITORY: '${{ github.repository }}'
 
 jobs:
   build-and-push-release:
@@ -89,9 +89,10 @@ jobs:
         id: meta
         uses: docker/metadata-action@8e5442c4ef9f78752691e2d8f8d19755c6f78e81 # v5.5.1
         with:
-          images: ${{ env.IMAGE_NAMESPACE }}/${{ env.IMAGE_NAME }}
-           # Automatically prepare image tags;
-           # semver patter will generate tags like these for example :v1 :v1.2 v1.2.3
+          images:
+            ${{ env.IMAGE_NAMESPACE }}/${{ env.IMAGE_NAME }}
+            # Automatically prepare image tags;
+            # semver patter will generate tags like these for example :v1 :v1.2 v1.2.3
           tags: |
             type=raw,value=latest
             type=raw,value=${{ env.REF_NAME }}
@@ -117,7 +118,7 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USER }}
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
           repository: ${{ env.IMAGE_NAMESPACE }}/${{ env.IMAGE_NAME }}
-          readme-filepath: ".conf/notice-assets.md"
+          readme-filepath: '.conf/notice-assets.md'
 
   auth-and-dispatch:
     needs: build-and-push-release
