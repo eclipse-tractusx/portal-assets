@@ -2,6 +2,10 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
+#### Documentation
+
+- removed image reference to stage-header-background since it is no longer used in portal repo
+
 ## 2.0.0
 
 ### Change
