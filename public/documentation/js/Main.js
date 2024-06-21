@@ -359,7 +359,6 @@ class Navigation extends Viewable {
       ;[...this.menu.getElementsByClassName('selected')].forEach((item) =>
         item.classList.remove('selected')
       )
-      // eslint-disable-next-line no-extra-semi
       ;[...this.menu.getElementsByClassName(normalize(content.path))].forEach(
         (item) => item.classList.add('selected')
       )
