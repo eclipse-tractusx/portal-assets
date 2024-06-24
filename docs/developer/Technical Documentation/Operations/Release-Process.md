@@ -10,7 +10,7 @@ The release process for a new version can roughly be divided into the following 
 - [RC: provide successive RC branch and change base of open PRs](#rc-provide-successive-rc-branch-and-change-base-of-open-prs)
 - [Create releases from tags](#create-releases-from-tags)
 
-The process builds on the development flow which, usually, takes place within forks and leads to merged pull pull requests in the repositories of the eclipse-tractusx organization.
+The process builds on the [Development Flow](./Dev-flow_git-diagram.md) which usually takes place within forks and leads to merged pull requests in the repositories of the eclipse-tractusx organization.
 
 Frontend repositories:
 
@@ -30,7 +30,7 @@ For assigning and incrementing **version** numbers [Semantic Versioning](https:/
 
 ## Preparations on the release branch
 
-Checking out from the dev branch (or main for portal-assets) a release branch (release/{to be released version} e.g. release/v1.2.0, or respectively release/v1.2.0-RC1 for a release candidate).
+Checking out from the main branch a release branch (release/{to be released version} e.g. release/v1.2.0, or respectively release/v1.2.0-RC1 for a release candidate).
 On the release branch the following steps are executed:
 
 ### 1. Version bump
@@ -45,12 +45,12 @@ For the backend repo, the version needs to be updated within the 'Directory.Buil
 
 Example for commit message:
 
-_release: bump version for vx.x.x_
+_build: bump version for vx.x.x_
 
 ### 2. Update changelog file
 
 The changelog file tracks all notable changes since the last released version.
-During development every developer should extend the changelog under the 'Unreleased' section when raising a pull request to main or dev.
+During development every developer should extend the changelog under the 'Unreleased' section when raising a pull request to main.
 Once a new version is ready to be released, the changelog of the version gets finalized and the release version gets set for the, up to then, unreleased changes.
 In the released version, the changelog is structured as following:
 
@@ -64,25 +64,25 @@ In case of breaking change, the breaking change will get highlighted with a brea
 
 Example for commit message:
 
-_release: update changelog for vx.x.x_
+_docs: update changelog for vx.x.x_
 
 ### 3. Aggregate migrations (backend repo only)
 
 Migrations should be **aggregated in the case of releasing a new version**, in order to not release the entire history of migrations which accumulate during the development process.
 
 Once a version has been released, migrations **mustn't be aggregated** in order to ensure upgradeability this also applies to **release candidates > RC1 and hotfixes**.
-Be aware that migrations coming release branches for release candidates or from hotfix branches, will **need to be incorporated into dev and main**.
+Be aware that migrations coming release branches for release candidates or from hotfix branches, will **need to be incorporated into main**.
 
 ## RC: checkout release-candidate branch
 
-If starting into a release candidate phase, make sure to checkout the release-candidate branch from dev branch of [Portal](https://github.com/eclipse-tractusx/portal).
+If starting into a release candidate phase, make sure to checkout the release-candidate branch from main branch of [Portal](https://github.com/eclipse-tractusx/portal).
 
 ## Tag and build of versioned images
 
 It's important to pull the latest state of the release branch locally in every repository.
 Then create and push a tag for the released version.
 The push of the tag triggers the release workflow action (available in every repository) which creates the versioned image/s.
-The push also triggers the image tags to be updated in the helm chart: in the dev branch or respectively the release-candidate branch of the [Portal](https://github.com/eclipse-tractusx/portal) repository.
+The push also triggers the image tags to be updated in the helm chart - in the main branch or respectively the release-candidate branch of the [Portal](https://github.com/eclipse-tractusx/portal) repository.
 
 Example for tag:
 
@@ -103,7 +103,7 @@ _Version 1.1.0: Backend for the Catena-X Portal_
 Once the versioned images are available, a new version of the chart can be released.
 The helm chart is released from [Portal](https://github.com/eclipse-tractusx/portal).
 
-Check out a release branch from the dev branch or from the release-candidate branch respectively.
+Check out a release branch from the main branch or from the release-candidate branch respectively.
 On the release branch the following steps are executed:
 
 1. Bump chart and image version (also for argocd-app-templates, needed for consortia-environments)
@@ -120,17 +120,17 @@ helm-docs --chart-search-root [charts-dir] --sort-values-order file
 
 Example for commit message:
 
-_release: update readme for vx.x.x_
+_build: update readme for vx.x.x_
 
 Once the steps are done, create a PR to 'main' to test the to be released helm chart with the 'Portal Lint and Test Chart' workflow.
 
 Example for PR title:
 
-_release(1.2.0): merge release into dev_
+_build(1.2.0): merge release into main_
 
 Once the workflow ran successfully, release the new helm chart by running the 'Release Chart' action via workflow dispatch on the release branch.
 
-Then merge the release branch into 'main' and merge afterwards 'main' in 'dev'. In the case of a release candidate, the release branch also needs to be merged into the release-candidate branch.
+Then merge the release branch into 'main'. In the case of a release candidate, the release branch also needs to be merged into the release-candidate branch.
 
 At the release of the chart, besides the official chart itself, there is also created a 'portal-x.x.x' tag.
 This tag is used to install (with the convenience of the argocd-app-templates) or upgrade the version via AgroCD on the consortia K8s clusters.
@@ -152,16 +152,13 @@ Also make sure to change the base of all open pull requests still pointing to th
 ## Merge release branch
 
 The release branches must be is merged into main.
-Afterwards, main into dev. This is only necessary for repositories with a dev branch.
-Those merges need to happen via PRs.
+This merge needs to happen via PR.
 
-Technically this step is already possible after [Tag and build of versioned images](#tag-and-build-of-versioned-images), but it's recommended to execute this step after [Release new helm chart version](#release-new-helm-chart-version), so that the image tag for the release isn't overwritten by the merge into dev or main respectively.
+Technically this step is already possible after [Tag and build of versioned images](#tag-and-build-of-versioned-images), but it's recommended to execute this step after [Release new helm chart version](#release-new-helm-chart-version), so that the image tag for the release isn't overwritten by the merge into main.
 
 Example for PR titles:
 
-_release(1.2.0): merge release into main_
-
-_release(1.2.0): merge main to dev_
+_build(1.2.0): merge release into main_
 
 ## Create releases from tags
 
