@@ -8,10 +8,10 @@ flowchart LR
     subgraph eclipse-tractusx
         direction LR
         subgraph CI repos
-            D -- PR to dev* --> PF(portal-frontend**)
-            D -- PR to dev* --> PR(portal-registration**)
+            D -- PR to main* --> PF(portal-frontend**)
+            D -- PR to main* --> PR(portal-registration**)
             D -- PR* to main* --> PA(portal-assets**)
-            D -- PR* to dev*--> PB(portal-backend***)
+            D -- PR* to main*--> PB(portal-backend***)
             click PF "https://github.com/eclipse-tractusx/portal-frontend"
             click PR "https://github.com/eclipse-tractusx/portal-frontend-registration"
             click PA "https://github.com/eclipse-tractusx/portal-assets"
@@ -23,13 +23,13 @@ flowchart LR
             PI --> PICD(portal-iam -b main)
             click PI "https://github.com/eclipse-tractusx/portal-iam"
         end
-        subgraph CD repo for auto-deploy to dev
+        subgraph CD repo with helm chart for auto-deploy to dev
             direction LR
-            PF --> CD(portal***** -b dev)
+            PF --> CD(portal***** -b main)
             PR --> CD
             PB --> CD
             PA --> CD
-            D -- PR* to -b dev for chart --> CD
+            D -- PR* to -b main --> CD
             click CD "https://github.com/eclipse-tractusx/portal"
         end
     end
@@ -41,13 +41,13 @@ flowchart LR
 
 Note\* Every pull request (PR) requires at least one approving review by a committer
 
-Note\*\* ESlint, unit tests and Sonarcloud runs at pull request, Trivy and KICS scans at merge as well as daily and Veracode scan runs weekly
+Note\*\* ESlint, unit tests, Sonarcloud, CodeQL checks run at pull request, Trivy and KICS scans run at push on main as well as daily
 
-Note\*\*\* Unit tests and Sonarcloud runs at pull request, Trivy and KICS scans at merge as well as daily and Veracode scan runs weekly
+Note\*\*\* Unit tests and Sonarcloud, CodeQL checks run at pull request, Trivy and KICS scans run at push on main as well as daily
 
-Note\*\*\*\* Sonarcloud runs at pull request, Trivy and KICS scans at merge as well as daily
+Note\*\*\*\* Sonarcloud runs at pull request, Trivy and KICS scans run at push on main as well as daily
 
-Note**\*** Trivy and KICS scans are scheduled to daily
+Note**\*** Trivy and KICS scans run at push on main as well as daily
 
 ## NOTICE
 
