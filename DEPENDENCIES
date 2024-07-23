@@ -44,7 +44,7 @@ npm/npmjs/-/deep-is/0.1.4, MIT, approved, #2130
 npm/npmjs/-/define-data-property/1.1.4, MIT, approved, #10591
 npm/npmjs/-/depd/2.0.0, MIT, approved, clearlydefined
 npm/npmjs/-/destroy/1.2.0, MIT, approved, clearlydefined
-npm/npmjs/-/directory-tree/3.5.1, MIT, approved, clearlydefined
+npm/npmjs/-/directory-tree/3.5.2, MIT, approved, clearlydefined
 npm/npmjs/-/doctrine/3.0.0, Apache-2.0 AND BSD-2-Clause, approved, CQ22628
 npm/npmjs/-/ee-first/1.1.1, MIT, approved, clearlydefined
 npm/npmjs/-/emoji-regex/8.0.0, MIT, approved, clearlydefined
