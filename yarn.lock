@@ -433,10 +433,10 @@ destroy@1.2.0:
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.2.0.tgz#4803735509ad8be552934c67df614f94e66fa015"
   integrity sha512-2sJGJTaXIIaR1w4iJSNoN0hnMY7Gpc/n8D4qSCJw8QqFWXf7cuAgnEHxBpweaVcPevC2l3KpjYCx3NypQQgaJg==
 
-directory-tree@^3.5.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/directory-tree/-/directory-tree-3.5.1.tgz#004d599c2478d752e7906e3a922b09c7ee2f03e2"
-  integrity sha512-HqjZ49fDzUnKYUhHxVw9eKBqbQ+lL0v4kSBInlDlaktmLtGoV9tC54a6A0ZfYeIrkMHWTE6MwwmUXP477+UEKQ==
+directory-tree@^3.5.2:
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/directory-tree/-/directory-tree-3.5.2.tgz#bdc4948ec6b357cb1afdf63c719acc8d9e42ce30"
+  integrity sha512-DsOqeZEHkZnZrVOJG3mE/J9M6J8PulImiC6I1ZpoprVlfno8GvLOPDMkxiJihklLK7B9aVudG463L1+S/kzjiw==
   dependencies:
     command-line-args "^5.2.0"
     command-line-usage "^6.1.1"
