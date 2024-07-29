@@ -44,7 +44,7 @@ The process steps `TRIGGER_CALLBACK_OSP_SUBMITTED`, `TRIGGER_CALLBACK_OSP_APPROV
 
 ## REMOVE_KEYCLOAK_USERS
 
-The process step `REMOVE_KEYCLOAK_USERS` is created when an network registration is declined. It will remove all keycloak users. It will proceed one user at a time and if more users are available for deletion it will create the same process step again.
+The process step `REMOVE_KEYCLOAK_USERS` is created when an network registration is declined. It will remove all Keycloak users. It will proceed one user at a time and if more users are available for deletion it will create the same process step again.
 
 ## NOTICE
 

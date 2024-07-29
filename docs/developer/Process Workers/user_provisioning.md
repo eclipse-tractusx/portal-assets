@@ -8,14 +8,14 @@ flowchart TD
     B(DELETE_COMPANYUSER_ASSIGNED_PROCESS)
     C(RETRIGGER_DELETE_CENTRAL_USER)
     A --> |if successful| B
-    A --> |if error occures| C
+    A --> |if error occurs| C
     C --> A
 
 ```
 
 ## External dependencies
 
-The process worker communicates with the central idp.
+The process worker communicates with the [centralidp](https://github.com/eclipse-tractusx/portal-iam/tree/main/charts/centralidp).
 
 ## DELETE_CENTRAL_USER
 
