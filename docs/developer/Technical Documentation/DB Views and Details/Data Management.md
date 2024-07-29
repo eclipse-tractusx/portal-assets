@@ -99,55 +99,6 @@ Transactional data is created by operating the system in a market or testing act
 <br>
 <br>
 
-## Layering Concept on Keycloak side
-
-For Keycloak, the concept is similar.
-
-There is a base setup (provided as static data setting) as well as transactional data.
-
-The difference between Keycloak and portal is inside the load.
-
-Its not planned to have soon any delta updates in Keycloak regarding the base data. Off course there will changes in the initial load, but for a certain time those are planned to get added by the operator manually till an actual delta load solution is in place.
-
-<br>
-
-Initial data load in regards of the different instances
-
-<br>
-
-Central Keycloak Instance
-
-- Realm: 'Master' & 'Operator'
-- User: operator admin (master realm); CX Admins (operator realm)
-- Clients:
-
-<br>
-<br>
-
-<img width="1115" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/table-keycloak-clients.png">
-
-- Technical Users
-
-Following technical users are part of the base setup of the portal and will be automatically deployed:
-
-| **ID** | **Name**                     | **Description**                                                                                   | **Service**             | **Assigned Roles** |
-| ------ | ---------------------------- | ------------------------------------------------------------------------------------------------- | ----------------------- | ------------------ |
-| 1      | sa-reg-1                     | Portal technical user to connect to central idp.                                                  | Central IdP (Core)      | to be added        |
-| 2      | sa-reg-2                     | Portal technical user to connect to shared idp.                                                   | Shared IdP (Core)       | to be added        |
-| 3      | sa-cl5-custodian-1           | Technical user of SD Factory to wallet                                                            | SD Factory (Core)       | to be added        |
-| 4      | sa-cl5-custodian-2           | Portal technical user to connect to wallet.                                                       | Managed Wallets (Core)  | to be added        |
-| 5      | sa-cl3-cx-1                  | Portal technical user to connect GitHub and Semantic Hub.                                         | Semantic Hub (Core)     | to be added        |
-| 6      | sa-cl7-cx-5                  | User for Portal to access BPDM for company address publishing to the BPDM process                 | BPDM Connect (Core)     | to be added        |
-| 7      | **obsolete**<br>sa-cl6-cx-01 | DAPS connector registration                                                                       | DAPS                    | to be added        |
-| 8      | sa-cl8-cx-1                  | Technical User for Portal to SD                                                                   | SD Factory (Core)       | to be added        |
-| 9      | sa-cl2-01                    | Technical User Clearinghouse update application                                                   | CH CX (3rd Party)       | to be added        |
-| 10     | sa-cl2-02                    | Technical User SelfDescription (SD) update application                                            | SD Factory (Core)       | to be added        |
-| 11     | sa-cl21-01                   | Technical User used and owned by the platform operator to register discovery services             | Discovery Finder (Core) | to be added        |
-| 11     | sa-cl22-01                   | Technical User used and owned by the platform operator to access the owned BPN discovery services | BPN Discovery (Core)    | to be added        |
-
-<br>
-<br>
-
 ## NOTICE
 
 This work is licensed under the [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).
