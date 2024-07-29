@@ -2,14 +2,14 @@
 
 To setup the wallet for the operator the following steps needs to be executed
 
-1. Request the wallet from the wallet hoster
+1. Request the wallet from the wallet provider
 2. Get the companyId of the operator company from the database
 3. Create the necessary data for the wallet creation
 4. Post the wallet information to the portal
 
 ## Wallet request
 
-the hoster of the wallet needs to provide the initial wallet information for the operator. The needed information are the did, the did document and autenticationDetails containing the AuthenticationServiceUrl, the clientId and the client secret.
+The provider of the wallet needs to provide the initial wallet information for the operator. The needed information are the did, the did document and authenticationDetails containing the AuthenticationServiceUrl, the clientId and the client secret.
 
 ## Retrieving company id
 
@@ -27,7 +27,7 @@ keep the company id for the later steps.
 
 Before executing the scripts please make sure that there is no company_application entry with the company_id matching the id from aboves query.
 
-After you ensured that no company_application exists for the operator company the following scripts need to be executed
+After you ensured that no company_application exists for the operator company, the following scripts need to be executed:
 
 ```sql
 
