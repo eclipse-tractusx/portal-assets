@@ -33,6 +33,7 @@ The issuer component provides the following functionalities:
 The RESTful API endpoints for interacting with the issuer component are as follows:
 
 #### Credential Information Retrieval
+
 - `GET /api/issuer/useCaseParticipation`
 - `GET /api/issuer/certificates`
 - `GET /api/issuer/certificateTypes`
@@ -42,6 +43,7 @@ The RESTful API endpoints for interacting with the issuer component are as follo
 - `GET /api/credential/documents/{documentId}`
 
 #### Credential Management
+
 - `POST /api/issuer/bpn`
 - `POST /api/issuer/membership`
 - `POST /api/issuer/framework`
@@ -49,6 +51,7 @@ The RESTful API endpoints for interacting with the issuer component are as follo
 - `PUT /api/issuer/{credentialId}/reject`
 
 #### Credential Revocation
+
 - `POST /api/revocation/issuer/credentials/{credentialId}`
 - `POST /api/revocation/credentials/{credentialId}`
 
@@ -59,7 +62,7 @@ These endpoints must be exposed by the issuer component and accessible through H
 The issuer component integrates with Keycloak for fine-grained access control. Each endpoint is protected by specific roles and permissions assigned to technical users within Keycloak. Clients must possess the necessary roles to interact with the issuer component.
 
 - **`revoke_credentials_issuer`**: Required for revocation endpoints (POST) by issuers.
-- **`revoce_credential`**: Required for revocation endpoints (POST) by holders.
+- **`revoke_credential`**: Required for revocation endpoints (POST) by holders.
 - **Permissions For Other Endpoints**: Specific roles must be created and assigned to users for managing credentials (GET, POST, PUT).
 
 For each action taken through the interface, a corresponding Keycloak role must be mapped and validated to ensure proper authorization and to prevent unauthorized access or actions.
