@@ -1,0 +1,77 @@
+# Summary
+
+The invitation process handles the creation of the central and shared idp data and users for a new company. The process steps are the following:
+
+```mermaid
+flowchart TD
+    A[INVITATION_CREATE_CENTRAL_IDP]
+    B(INVITATION_CREATE_SHARED_IDP_SERVICE_ACCOUNT)
+    C(INVITATION_UPDATE_CENTRAL_IDP_URLS)
+    D(INVITATION_ADD_REALM_ROLE)
+    E(INVITATION_CREATE_CENTRAL_IDP_ORG_MAPPER)
+    F(INVITATION_CREATE_SHARED_REALM)
+    G(INVITATION_CREATE_SHARED_CLIENT)
+    H(INVITATION_ENABLE_CENTRAL_IDP)
+    I(INVITATION_CREATE_DATABASE_IDP)
+    J(INVITATION_CREATE_USER)
+    A --> B
+    B --> C
+    C --> D
+    E --> F
+    F --> G
+    G --> H
+    H --> I
+    I --> J
+```
+
+## External dependencies
+
+The process worker communicates with the shared and central idp.
+
+## INVITATION_CREATE_CENTRAL_IDP
+
+The process step `INVITATION_CREATE_CENTRAL_IDP` creates the identity provider on the central idp.
+
+## INVITATION_CREATE_SHARED_IDP_SERVICE_ACCOUNT
+
+The process step `INVITATION_CREATE_SHARED_IDP_SERVICE_ACCOUNT` creates a client on the shared idp which is a service account. The clientId and secret is saved in the database for the next process steps until it is cleaned up.
+
+## INVITATION_UPDATE_CENTRAL_IDP_URLS
+
+The process step `INVITATION_UPDATE_CENTRAL_IDP_URLS` retrieves the information from the created service account client on the shared idp and updates the identity provider on the central idp.
+
+## INVITATION_ADD_REALM_ROLE
+
+The process step `INVITATION_ADD_REALM_ROLE` adds the `create-realm` to the created shared service account.
+
+## INVITATION_CREATE_CENTRAL_IDP_ORG_MAPPER
+
+The process step `INVITATION_CREATE_CENTRAL_IDP_ORG_MAPPER` sets the organization name in the central idp
+
+## INVITATION_CREATE_SHARED_REALM
+
+The process step `INVITATION_CREATE_SHARED_REALM` creates the shared realm.
+
+## INVITATION_CREATE_SHARED_CLIENT
+
+The process step `INVITATION_CREATE_SHARED_CLIENT` create the client on the shared idp.
+
+## INVITATION_ENABLE_CENTRAL_IDP
+
+The process step `INVITATION_ENABLE_CENTRAL_IDP` enables the central idp client.
+
+## INVITATION_CREATE_DATABASE_IDP
+
+The process step `INVITATION_CREATE_DATABASE_IDP` handles all write access to the database to create the identity provider and handles the initial application checklist creation.
+
+## INVITATION_CREATE_USER
+
+The process step `INVITATION_CREATE_USER` determines the user roles for newly created users and creates the users in the central idp. After the creation a mail process is added to the database.
+
+## NOTICE
+
+This work is licensed under the [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+- SPDX-License-Identifier: Apache-2.0
+- SPDX-FileCopyrightText: 2024 Contributors to the Eclipse Foundation
+- Source URL: https://github.com/eclipse-tractusx/portal-assets
