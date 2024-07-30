@@ -2,15 +2,37 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
-## unreleased
+## 2.1.0-RC1
+
+### Change
+
+- updated supported technical user role(s) [#332](https://github.com/eclipse-tractusx/portal-assets/pull/332)
+- updated decline application [#341](https://github.com/eclipse-tractusx/portal-assets/pull/341)
+- changed licensing and legal docs [#343](https://github.com/eclipse-tractusx/portal-assets/pull/343)
+- updated app subscription user documentation [#353](https://github.com/eclipse-tractusx/portal-assets/pull/353)
+- added subscription management documentation [#354](https://github.com/eclipse-tractusx/portal-assets/pull/354)
+- updated app release process - technical integration [#355](https://github.com/eclipse-tractusx/portal-assets/pull/355)
+- updated service release process - technical integration [#356](https://github.com/eclipse-tractusx/portal-assets/pull/356)
+- added and enhanced credential management documentation [#360](https://github.com/eclipse-tractusx/portal-assets/pull/360)
+- added documentation for initial wallet setup [#369](https://github.com/eclipse-tractusx/portal-assets/pull/369)
+- added documentation for processes worker [#368](https://github.com/eclipse-tractusx/portal-assets/pull/368)
 
 #### Documentation
 
-- removed image reference to stage-header-background since it is no longer used in portal repo
+- removed image reference to stage-header-background since it is no longer used in portal repo [#340](https://github.com/eclipse-tractusx/portal-assets/pull/340)
 
-#### Technical Support
+### Technical Support
 
-- upgraded dependencies
+- upgraded dependencies [#365](https://github.com/eclipse-tractusx/portal-assets/pull/365), [#328](https://github.com/eclipse-tractusx/portal-assets/pull/328), [#329](https://github.com/eclipse-tractusx/portal-assets/pull/329),[#366](https://github.com/eclipse-tractusx/portal-assets/pull/366), [#367](https://github.com/eclipse-tractusx/portal-assets/pull/367)
+- improved pre commit checks [#338](https://github.com/eclipse-tractusx/portal-assets/pull/338)
+- maintain latest changes in main branch [#344](https://github.com/eclipse-tractusx/portal-assets/pull/344)
+
+### BugFixes
+
+#### Documentation
+
+- fixed image path [#342](https://github.com/eclipse-tractusx/portal-assets/pull/342)
+- fixed broken link [#359](https://github.com/eclipse-tractusx/portal-assets/pull/359)
 
 ## 2.0.0
 
