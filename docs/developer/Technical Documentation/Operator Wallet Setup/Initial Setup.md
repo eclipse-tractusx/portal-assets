@@ -44,7 +44,7 @@ After you ensured that no company_application exists for the operator company, t
         ('e85cf473-0321-4428-818a-3e595086ac94', 21, 1, now(), null, '9782562f-5ba1-467f-b4da-a8d50d727145', null);
 
     INSERT INTO portal.company_applications(id, date_created, date_last_changed, application_status_id, company_id, last_editor_id, checklist_process_id, company_application_type_id, onboarding_service_provider_id)
-    VALUES ('31322991-f6fd-4a40-a529-566c9b04d6a4', now(), null, 8, 'your company id', null, '9782562f-5ba1-467f-b4da-a8d50d727145', 1, null);
+    VALUES ('31322991-f6fd-4a40-a529-566c9b04d6a4', now(), null, 7, 'your company id', null, '9782562f-5ba1-467f-b4da-a8d50d727145', 1, null);
 
     INSERT INTO portal.application_checklist(application_id, application_checklist_entry_type_id, date_created, date_last_changed, application_checklist_entry_status_id, comment)
         VALUES ('31322991-f6fd-4a40-a529-566c9b04d6a4', 1, now(), null, 3, null),
