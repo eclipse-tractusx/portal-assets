@@ -1,176 +1,80 @@
-# Offer Autosetup
+## Autosetup User Flow Description
 
-The offer autosetup is used to:
+The autosetup feature streamlines the process of setting up customer instances for service/app subscriptions by leveraging a company's internal ramp-up service. Below is an expanded user flow description that includes the asynchronous nature of the monitoring step.
 
-- enable app/service provider to configure and activate the offer subscription triggered by an customer
-- the service offers two possibilities:
-  - either automate the full flow; or
-  - run it via any UI
+> note: it is not mandatorily needed to use the automation flow, the offer provider is getting fully frontend enabled (via portal subscription management) as well.
 
-In the page below the functional details and technical implementation possibilities are explained.
+### Architecture Overview
 
-## Architecture Overview
-
-### #1 Highlevel Architecture picture
+#### #1 Highlevel Architecture picture
 
 <img width="756" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/app-service-subscription-flow.png">
 
 <br>
 <br>
 
-## Integration
+### Step 1: Configuring the Ramp-Up Service Endpoint
 
-Every offer provider (app as well as service) can integrate to the autosetup interface by executing following steps
+Offer providers are required to configure their internal ramp-up service endpoint, which will be used to initialize customer service/app instances upon subscription.
 
-1. Configure your company internal service/app ramp-up service
-2. ...
-3. ...
+- Access the portal with UI or as a technical user with "Offer Management" permissions.
+- Define the endpoint for the autosetup feature.
 
-<br>
-<br>
+**Endpoint Configuration:**
 
-### #1 Configure your company internal service/app ramp-up service
+- **Path**: `.../api/administration/serviceprovider/owncompany`
+- **Method**: `PUT`
+- **Description**: This endpoint allows storing the autosetup URL. It's available to providers with the "service provider" company role and will overwrite any existing configuration with updates.
+FYI: Company Role change process is defined under the following link [Change Company Role](/docs/user/02.%20Technical%20Integration/05.%20Company%20Role/Change%20Company%20Role.md)  
+- **Auth**: Users with App Manager, Service Manager, or "Offer Management" technical users can trigger this endpoint.
 
-The portal provides via the UI as well as callable by technical users with the permission configuration of "Offer Management" the possibility to configure the offer company endpoint used to ramp-up the services/apps offered by the company.
-
-**Path**: .../api/administration/serviceprovider/owncompany  
-**Method**: PUT  
-**Description**: Store the service partner/app partner autosetup url. The endpoint is only available for companies with the company role app provider/service provider. Company Role change process is defined under the following link [Change Company Role](/docs/user/02.%20Technical%20Integration/05.%20Company%20Role/Change%20Company%20Role.md)  
-With the first time calling the endpoint; the url will be set as app/service provider endpoint as a new data set.  
-With any further endpoint triggers; the existing record will get overwritten. Means; the app/service provider can have only one endpoint configured.  
-**Auth**: can get triggered by user with the role App Manager; Service Manager and technical users with the role "Offer Management"
-
-<br>
-<br>
-
-##### UI Flow Details:
+**UI Flow:**
 
 <img width="600" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/register-url-popup.png">
 
 <br>
-<br>
 
-After the endpoint is configured, all customer service/app subscription will trigger automatically the company configured endpoint with the following data:
-
-<br>
-
-          [
-           {
-            "customer" :
-                {
-                   "organizationName": "companyName"[required] ,
-
-                   "country": "company country alpha2code" [required],
-
-                   "email": "user email address which triggered the service" [required]
-                }
-
-            "properties":
-                {
-                   "bpnNumber": "bpn of the company" [required],
-
-                   "subscriptionId": "" [required],
-
-                   "serviceId": "" [required]
-                }
-              }
-          ]
+- Enter the ramp-up service URL in the UI as shown in the example pop-up.
+- Submit the URL to be used for future customer subscription events.
 
 <br>
 <br>
 
-### #2 The autosetup flow
+**Endpoint Configuration Result:**
 
-After the customer request including the customer data for service/app setup got provided to the offer provider, the offer provider is now supposed to:
+The endpoint receives customer subscription information in the following structure when a new service/app subscription is made:
 
-- validate the request
-- ramp-up & configure the service/app
-- activate the subscription request of the customer
+```json
+[
+  {
+    "customer": {
+      "organizationName": "companyName",
+      "country": "company country alpha2code",
+      "email": "user email address which triggered the service"
+    },
+    "properties": {
+      "bpnNumber": "bpn of the company",
+      "subscriptionId": "",
+      "serviceId": ""
+    }
+  }
+]
+```
 
-For the _ramp-up and configuration_ likely a technical user might be needed to (e.g. connect to a central provided service such as dataspace discovery, bpdm-pool, etc.). Since the offer provider did define the technical user needed profile in the app/service release process, the pre-saved configuration profile will be used now to create the technical user.
-The app/service provider is responsible to secure the technical user credentials carefully. The technical user is a critical element since this technical user is created on the behalf of the customer (means: the technical user claims are connected to the customer identity - this is mandatorily needed since the customer is the actual acting identity of the service/app - and not the app/service provider).
+### Step 2: The Autosetup Flow
 
-The app/service provider is supposed to call the endpoint which triggers the automatic creation of all app/service instance relevant information. Therefore 2 endpoints are available
+With the customer's subscription, the portal initiates the autosetup flow:
 
-- POST /api/Apps/autoSetup (deprecated - still supported till 25.08.)
-- POST /api/Apps/start-autoSetup
+1. **Portal Trigger**: The portal calls the configured autosetup URL with the subscription details.
+2. **Receiving Subscription Data**: The offer provider receives the subscription data according to the structure provided in Step 1.
+3. **Validation**: The provider validates the received request.
+4. **Ramp-Up & Configuration**: The service/app is ramped up and configured, potentially involving the creation of a technical user.
+5. **Activation**: Finally, the customer's subscription request is activated.
 
-#### Details of POST /api/Apps/autoSetup
+**Endpoints for Ramp-Up and Activation:**
 
-**Path**: .../api/Apps/autoSetup  
-**Method**: POST  
-**Description**: Post service request is used to create the customer service/app instance inside the portal db.  
-With the successful client/app instance creation on the portal side, the technical user for the AAS registry will get send within the response.  
-**Auth**: can get triggered by users‚ with the role App Manager; Service Manager and technical users with the role "Offer Management"
-
-Request Body
-<br>
-
-          [
-           {
-             requestId (service request id),
-             appUrl (service provider endpoint / client / app)
-           }
-          ]
-
-<br>
-
-##### API Endpoint Logic
-
-- Validate if requestId is existing in app_subscription table
-- Validate if user calling the endpoint is registered as service provider of the service/app
-- Validate if the subscription is in status "PENDING"
-  - if yes, proceed
-  - if no, error
-- Run client name creation (logic needed - similar like the service account logic implemented by Norbert; but in this case for the client itself) - ideally naming convention should be something like Cl-{AppName}-{CustomerName}
-- Add app instance and client for the customer and app id in following tables
-  - iam_client table
-  - app_instance table
-- Next, create the client in Keycloak central IdP - setting
-
-  - Client ID: {client name defined by the service before}
-  - Access Type: {public, might get auto set, please check}
-  - Standard Flow Enabled: true
-  - Direct Access Grants Enabled: true
-  - Valid Redirect URIs: {url send via the request body, likely a "\*" needs to get added}
-  - Web Origins: "+"
-  - Backchannel Logout Session Required: true
-  - Full Scope allowed: false
-
-- now add roles to the same client by using the roles stored inside user_roles in the portal db and linked to the respective app for which the instance got created
-- Create the technical user for the service, by creating another client with following settings
-
-  - Client ID: {ideally client name + prefix "sa-"}
-  - Access Type: {confidential}
-  - Standard Flow Enabled: false
-  - Direct Access Grants Enabled: false
-  - Service Accounts Enabled: true
-  - Backchannel Logout Session Required: true
-
-  - Full Scope allowed: true
-  - Service Account Roles: select the service account role "Digital Twin Management" of the client "technical_roles_management"
-
-- add to the technical user the bpn as attribute (bpn of the customer) and the bpn mapper inside the client. Config see attachment
-- store technical user data inside portal db => description "Technical User for app {app name} - {techUserRoleName}"
-- Technical user to be mapped to the customer company id
-- Back inside the portal db, update the service/app status in the app_subscription table from "PENDING" to "ACTIVE"
-- Create Notifications
-  - customer notification to inform the customer company about the technical user creation via the service provider. (receiver: customer IT admin)
-  - customer notification to inform the customer company about the activated app/service (receiver: customer app requester, customer IT admin)
-
-<br>
-<br>
-
-Response Body
-<br>
-
-          {
-             technicalUserId,
-             technical user secret
-           }
-
-<br>
-<br>
+- **Deprecated**: `POST /api/Apps/autoSetup`
+- **Current**: `POST /api/Apps/start-autoSetup`
 
 #### Details of POST /api/Apps/start-autoSetup
 
@@ -181,9 +85,9 @@ As an functional extension and more app/service provider centric approach, the e
 
 <br>
 
-**Path**: .../api/Apps/start-autoSetup  
-**Method**: POST  
-**Description**: ...
+**Path**: `.../api/Apps/start-autoSetup`
+**Method**: `POST`  
+**Description**: Triggers the setup of the appID, technical user based on the previously configured technical user profile as well as provides the offer provider access to the customer externalService URLs
 **Auth**: can get triggered by users with the role App Manager; Service Manager and technical users with the role "Offer Management"
 
 Request Body
@@ -198,32 +102,53 @@ Request Body
 
 <br>
 
-Compared to the deprecated endpoint mentioned above, the /start-autosetup is a asynchronous endpoint working with process steps (as defined below)
+> note you will need the technical user, external service URLs and appID - all those will get created via a process worker and will be asnychronly available via the endpoints defined below under step#3
 
-<br>
+### Step 3: Monitoring and Finalizing Setup (Asynchronous Endpoint)
 
-## Checklist Worker
+Monitoring the setup process is done through an asynchronous endpoint, which may require multiple calls by the provider to fetch all necessary data:
 
-| Process Step                                         | Initiated by..                                                                                      | Description                                                                                                                                                        | Success Scenario                                                                                                                 | Error (process_step status FAILED)         | Auto Retrigger?                                     | Manual Retrigger?                                                                       | Possible Following Steps                        |
-| ---------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ | --------------------------------------------------- | --------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| 100<br>Trigger Provider                              | Automatically by the portal application                                                             | Subscription Record creation in "PENDING" <br>Portal triggers the Offer Provider URL (if provider url is stored)                                                   | If the provider endpoint is responding with 20x <br>the process step will get set to "DONE" and "SKIPPED" if no URL is available | ??                                         | Yes, in case of an 5xx                              | Yes, in case of an 400 (wrong content) 404 (wrong url)                                  | Multi Instance: #101 <br> Single Instance: #103 |
-| 101<br>Start Autosetup                               | By the provider by running .../api/Apps/start-autoSetup                                             | Provider is triggering the portal autosetup endpoint with necessary offer details<br>the step will trigger the portal internal autosetup jobs (102, 103, 104, 105) | The process step is set to "DONE" <br>with successful endpoint request body (which is getting stored in a temp table)            | -                                          | -                                                   | Step stays on "TO_DO" till the endpoint got successfully triggered (content is correct) | Apps: #102 <br>Services: #104                   |
-| 102<br>OfferSubscription Client Creation             | Automatically by the portal application                                                             | Created app client in Keycloak and DB, additionally app instance is getting created                                                                                | The process step is set to "DONE" <br>after all records are created                                                              | Status "FAILED" if job was running on fail | Yes, in case of an 5xx by Keycloak                  | Yes, in case of an 4xx by Keycloak                                                      | #104 <br>#105                                   |
-| 103<br>Single Instance Subscription Details Creation | By the provider by running ?????                                                                    | Single Instance Subscription Details Creation                                                                                                                      | The process step is set to "DONE" <br>as soon as the url and instance is linked                                                  |                                            | -                                                   | -                                                                                       | #105                                            |
-| 104<br>Offer Subscription Technical User Creation    | Automatically by the portal application                                                             | Technical User creation in Keycloak and metadata storage in portal db, additionally notification creation with technical client id                                 | The process step is set to "DONE" <br>after technical user ot successfully created                                               | Status "FAILED" if job was running on fail | Yes, in case of an 5xx by Keycloak                  | Yes, in case of an 4xx by Keycloak                                                      | #105                                            |
-| 105<br>Activate Subscription                         | By the provider by running .../api/Apps/subscription/{offerSubscriptionId}/activate-single-instance | Subscription record activation, notification creation and send email.                                                                                              | The process step is set to "DONE" <br>after xxx                                                                                  | xxx                                        | Yes, in case of an 5xx for the email - auto "TO_DO" | -                                                                                       | Multi Instance: #106 <br> Single Instance: -    |
-| 106<br>Trigger Provider Callback                     | Automatically by the portal application                                                             | Trigger provider callback url to share client and tech user.                                                                                                       | The process step is set to "DONE" <br>after xxx                                                                                  | xxx                                        | Yes, in case of an 5xx                              | Yes, in case of an 4xx                                                                  | -                                               |
+1. **Monitor Status**: `GET /api/Apps/{appId}/subscription/{subscriptionId}/provider` allows providers to monitor the autosetup status. Since this is an asynchronous endpoint, providers may need to poll this endpoint multiple times to obtain the technicalUserID, technical user secret, appId, and externalService ID (for external service connections like wallets).
+2. **Fetch Credentials**: Once the technicalUserID is available, providers can call `GET /api/administration/serviceaccount/owncompany/serviceaccounts/{serviceAccountId}` to get technical user credentials.
+3. **Activate Subscription**: The final step involves calling `PUT /subscription/{subscriptionId}/activate` to complete the setup and ensure customers are notified.
 
-<br>
-<br>
-For the app provider, following steps are needed to connect to this endpoint in the respective needed manner:
-Due to the process worker/asynchronous setup of the process, the provider needs to connect to two additional endpoints to be able to fetch the status as well as the needed information for the application setup
- - GET /api/Apps/{appId}/subscription/{subscriptionId}/provider
- Used to watch the autosetup status via the property "processStepTypeId" as well as the technicalUserID which is needed to call the technical user credentials (next endpoint)
- - GET /api/administration/serviceaccount/owncompany/serviceaccounts/{serviceAccountId}
- Used to fetch the specific app tenant created technical user credentials by adding the "serviceAccountId" (aka technicalUserId) fetched via the endpoint of GET /api/Apps/{appId}/subscription/{subscriptionId}/provider
- - PUT /subscription/{subscriptionId}/activate
- Needed to run at the end of the customer tenant/instance configuration the activation of the subscription which will also initiate the customer information and sharing the tenantUrl
+## Checklist Worker details (running in the background of step 2)
+
+**Process Worker Process Steps Overview**
+
+| ID  | Process Step                                        | Initiated by | Description | Successor Step |
+|-----|-----------------------------------------------------|--------------|-------------|----------------|
+| 100 | Trigger Provider                                    | Automatically by the portal application | Subscription Record creation in "PENDING" Portal triggers the Offer Provider URL (if provider URL is stored) | Multi Instance: 101 Single Instance: 103 |
+| 101 | Start Autosetup                                     | By the provider by running .../api/Apps/start-autoSetup | Provider is triggering the portal autosetup endpoint with necessary offer details the step will trigger the portal internal autosetup jobs (102, 103, 104, 105) | Apps: 102 Services: 104 |
+| 102 | OfferSubscription Client Creation                   | Automatically by the portal application | Created app client in Keycloak and DB, additionally app instance is getting created | 104, 105 |
+| 103 | Single Instance Subscription Details Creation       | By the provider by running ????? | Single Instance Subscription Details Creation | 105 |
+| 104 | Offer Subscription Technical User Creation          | Automatically by the portal application | Technical User creation in Keycloak and metadata storage in portal db, additionally notification creation with technical client id | 105 |
+| 105 | Activate Subscription                               | By the provider by running .../api/Apps/subscription/{offerSubscriptionId}/activate-single-instance for multi instance offers and /api/apps/subscription/{offerSubscriptionId}/activate-single-instance for single instance offers | Subscription record activation, notification creation and send email. | Multi Instance: 106 Single Instance: - |
+| 106 | Trigger Provider Callback                           | Automatically by the portal application | Trigger provider callback URL to share client and tech user. | - |
+
+**Success/Failure Sceanrios**
+
+| ID  | Process Step                                        | Success Scenario | Error (process_step status FAILED) |
+|-----|-----------------------------------------------------|------------------|------------------------------------|
+| 100 | Trigger Provider                                    | If the provider endpoint is responding with 20x the process step will get set to "DONE" and "SKIPPED" if no URL is available | ?? |
+| 101 | Start Autosetup                                     | The process step is set to "DONE" with successful endpoint request body (which is getting stored in a temp table) | - |
+| 102 | OfferSubscription Client Creation                   | The process step is set to "DONE" after all records are created | Status "FAILED" if job was running on fail |
+| 103 | Single Instance Subscription Details Creation       | The process step is set to "DONE" as soon as the URL and instance is linked | |
+| 104 | Offer Subscription Technical User Creation          | The process step is set to "DONE" after technical user successfully created | Status "FAILED" if job was running on fail |
+| 105 | Activate Subscription                               | The process step is set to "DONE" after successful activation | xxx |
+| 106 | Trigger Provider Callback                           | The process step is set to "DONE" after successful callback | xxx |
+
+**Retrigger Options**
+
+| ID  | Process Step                                        | Auto Retrigger? | Manual Retrigger? |
+|-----|-----------------------------------------------------|-----------------|-------------------|
+| 100 | Trigger Provider                                    | Yes, in case of a 5xx | Yes, in case of a 400 (wrong content) or 404 (wrong url) |
+| 101 | Start Autosetup                                     | - | Step stays on "TO_DO" till the endpoint got successfully triggered (content is correct) |
+| 102 | OfferSubscription Client Creation                   | Yes, in case of a 5xx by Keycloak | Yes, in case of a 4xx by Keycloak |
+| 104 | Offer Subscription Technical User Creation          | Yes, in case of a 5xx by Keycloak | Yes, in case of a 4xx by Keycloak |
+| 105 | Activate Subscription                               | Yes, in case of a 5xx for the email - auto "TO_DO" | - |
+| 106 | Trigger Provider Callback                           | Yes, in case of a 5xx | Yes, in case of a 4xx |
+
 
 <br>
 <br>
