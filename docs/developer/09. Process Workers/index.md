@@ -6,14 +6,14 @@ The main process worker project is the `Processes.Worker` which runs all the pro
 
 The process worker supports the following processes:
 
-- [ApplicationChecklist](../Process%20Workers/application_checklist.md) - handles the registration process for a new company
-- [DimUserCreation](../Process%20Workers/dim_user_creation.md) - handles the creation of technical users in the dim middle layer
-- [IdentityProviderProvisioning](../Process%20Workers/identity_provider_provisioning.md) - cleans up an identity provider
-- [Invitation](../Process%20Workers/invitation.md) - handles the invitation of new users
-- [Mailing](../Process%20Workers/mailing.md) - handles the mail sending
-- [NetworkRegistration](../Process%20Workers/network_registration.md) - handles the osp registration
-- [OfferSubscription](../Process%20Workers/offer_subscription.md) - handles the subscription and automatic activation for an offer
-- [UserProvisioning](../Process%20Workers/user_provisioning.md) - handles the cleanup of users
+- [ApplicationChecklist](../09.%20Process%20Workers/01.%20application_checklist.md) - handles the registration process for a new company
+- [DimUserCreation](../09.%20Process%20Workers/02.%20dim_user_creation.md) - handles the creation of technical users in the dim middle layer
+- [IdentityProviderProvisioning](../09.%20Process%20Workers/03.%20identity_provider_provisioning.md) - cleans up an identity provider
+- [Invitation](../09.%20Process%20Workers/04.%20invitation.md) - handles the invitation of new users
+- [Mailing](../09.%20Process%20Workers/05.%20mailing.md) - handles the mail sending
+- [NetworkRegistration](../09.%20Process%20Workers/06.%20network_registration.md) - handles the osp registration
+- [OfferSubscription](../09.%20Process%20Workers/07.%20offer_subscription.md) - handles the subscription and automatic activation for an offer
+- [UserProvisioning](../09.%20Process%20Workers/08.%20user_provisioning.md) - handles the cleanup of users
 
 ## Retriggering
 
