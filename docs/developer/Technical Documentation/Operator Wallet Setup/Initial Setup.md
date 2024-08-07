@@ -48,13 +48,13 @@ After you ensured that no company_application exists for the operator company, t
 
     INSERT INTO portal.application_checklist(application_id, application_checklist_entry_type_id, date_created, date_last_changed, application_checklist_entry_status_id, comment)
         VALUES ('31322991-f6fd-4a40-a529-566c9b04d6a4', 1, now(), null, 3, null),
-        VALUES ('31322991-f6fd-4a40-a529-566c9b04d6a4', 2, now(), null, 3, null),
-        VALUES ('31322991-f6fd-4a40-a529-566c9b04d6a4', 3, now(), null, 2, null),
-        VALUES ('31322991-f6fd-4a40-a529-566c9b04d6a4', 4, now(), null, 1, null),
-        VALUES ('31322991-f6fd-4a40-a529-566c9b04d6a4', 5, now(), null, 1, null),
-        VALUES ('31322991-f6fd-4a40-a529-566c9b04d6a4', 6, now(), null, 1, null),
-        VALUES ('31322991-f6fd-4a40-a529-566c9b04d6a4', 7, now(), null, 1, null),
-        VALUES ('31322991-f6fd-4a40-a529-566c9b04d6a4', 8, now(), null, 1, null);
+               ('31322991-f6fd-4a40-a529-566c9b04d6a4', 2, now(), null, 3, null),
+               ('31322991-f6fd-4a40-a529-566c9b04d6a4', 3, now(), null, 2, null),
+               ('31322991-f6fd-4a40-a529-566c9b04d6a4', 4, now(), null, 1, null),
+               ('31322991-f6fd-4a40-a529-566c9b04d6a4', 5, now(), null, 1, null),
+               ('31322991-f6fd-4a40-a529-566c9b04d6a4', 6, now(), null, 1, null),
+               ('31322991-f6fd-4a40-a529-566c9b04d6a4', 7, now(), null, 1, null),
+               ('31322991-f6fd-4a40-a529-566c9b04d6a4', 8, now(), null, 1, null);
 
 ```
 
