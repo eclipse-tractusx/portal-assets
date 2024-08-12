@@ -7,7 +7,7 @@ The main process worker project is the `Processes.Worker` which runs all the pro
 The process worker supports the following processes:
 
 - [ApplicationChecklist](../09.%20Process%20Workers/01.%20application_checklist.md) - handles the registration process for a new company
-- [DimUserCreation](../09.%20Process%20Workers/02.%20dim_user_creation.md) - handles the creation of technical users in the dim middle layer
+- [DIMUserCreation](../09.%20Process%20Workers/02.%20dim_user_creation.md) - handles the creation of technical users in the DIM middle layer
 - [IdentityProviderProvisioning](../09.%20Process%20Workers/03.%20identity_provider_provisioning.md) - cleans up an identity provider
 - [Invitation](../09.%20Process%20Workers/04.%20invitation.md) - handles the invitation of new users
 - [Mailing](../09.%20Process%20Workers/05.%20mailing.md) - handles the mail sending
