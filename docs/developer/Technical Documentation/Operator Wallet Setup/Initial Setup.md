@@ -60,7 +60,7 @@ After you ensured that no company_application exists for the operator company, t
 
 ## Post company data
 
-After the database setup is done post the data you received for the wallet to the endpoint `POST: /api/administration/registration/dim/{bpn}` this will simulate a callback from the dim middle layer and continue the application checklist process.
+After the database setup is done post the data you received for the wallet to the endpoint `POST: /api/administration/registration/dim/{bpn}` this will simulate a callback from the DIM (Decentralized Identity Management) middle layer and continue the application checklist process.
 
 ## NOTICE
 
