@@ -106,7 +106,10 @@ The helm chart is released from [Portal](https://github.com/eclipse-tractusx/por
 Check out a release branch from the main branch or from the release-candidate branch respectively.
 On the release branch the following steps are executed:
 
-1. Bump chart and image version (also for argocd-app-templates, needed for consortia-environments)
+1. Bump chart and image version
+
+   - also for the targetRevision for the argocd-app-templates in /environments - needed for hosted environments
+   - and the chart version of LocalDev umbrella helm chart - needed to continue development
 
 2. Update changelog file
 
@@ -133,7 +136,7 @@ Once the workflow ran successfully, release the new helm chart by running the 'R
 Then merge the release branch into 'main'. In the case of a release candidate, the release branch also needs to be merged into the release-candidate branch.
 
 At the release of the chart, besides the official chart itself, there is also created a 'portal-x.x.x' tag.
-This tag is used to install (with the convenience of the argocd-app-templates) or upgrade the version via AgroCD on the consortia K8s clusters.
+This tag is used to install (with the convenience of the argocd-app-templates) or upgrade the version via AgroCD on the hosted K8s clusters.
 
 ## RC: provide successive RC branch and change base of open PRs
 
