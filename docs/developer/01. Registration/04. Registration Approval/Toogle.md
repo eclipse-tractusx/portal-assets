@@ -1,13 +1,9 @@
 ```mermaid
 flowchart TD
-    TD
     A[Registration]
-    B{Clearinghouse Connect Disabled}
-    A --> B
+    A --> D 
     C[Legal Person SD Creation skipped]
     D[ToDo]
-    B -->|True| C
-    B -->|False| D
     E[Done]
     F[Failed]
     H{Clearinghouse Connect Disabled}
