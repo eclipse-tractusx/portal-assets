@@ -2,11 +2,25 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
-## Change
+## 2.2.0
 
-### Documentation
+### Change
 
-- updated status details in technical user overview [#377](https://github.com/eclipse-tractusx/portal-assets/pull/377)
+#### Documentation
+
+- created section for toogle to skip Clearinghouse SD Factory connection [#396](https://github.com/eclipse-tractusx/portal-assets/pull/396)
+- adjusted delete technical user [#377](https://github.com/eclipse-tractusx/portal-assets/pull/377), [#393](https://github.com/eclipse-tractusx/portal-assets/pull/393)
+- adjusted registration approval process [#391](https://github.com/eclipse-tractusx/portal-assets/pull/391)
+- updated status details technical user overview [#377](https://github.com/eclipse-tractusx/portal-assets/pull/377)
+- changed file name for change app roles title [#394](https://github.com/eclipse-tractusx/portal-assets/pull/394)
+- updated release process for LocalDev version bump [#387](https://github.com/eclipse-tractusx/portal-assets/pull/387)
+
+### BugFixes
+
+#### Documentation
+
+- fixed initial wallet script [#378](https://github.com/eclipse-tractusx/portal-assets/pull/378), [#382](https://github.com/eclipse-tractusx/portal-assets/pull/382), [#384](https://github.com/eclipse-tractusx/portal-assets/pull/384)
+- adjusted process worker section [#381](https://github.com/eclipse-tractusx/portal-assets/pull/381), [#383](https://github.com/eclipse-tractusx/portal-assets/pull/383)
 
 ## 2.1.0
 
