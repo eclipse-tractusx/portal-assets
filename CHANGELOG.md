@@ -2,6 +2,14 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
+## Unreleased
+
+### Change
+
+#### Documentation
+
+- updated technical user overview with technical user details and also updated relevant images.
+
 ## 2.2.0
 
 ### Change
