@@ -134,7 +134,7 @@
           {
             "background": "#C498EF63",
             "title": "Manage UseCase Credentials",
-            "navigate": "/usecase-participation"
+            "navigate": "/usecaseParticipation"
           },
           {
             "background": "#C498EF63",
