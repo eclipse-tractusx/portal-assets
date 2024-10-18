@@ -13,7 +13,7 @@ New features, fixed bugs, known defects and other noteworthy changes to each rel
 ### BugFixes
 
 - **Use Case Participation**
-  - fixed Manage UseCase Credentials url
+  - fixed Manage UseCase Credentials url [#416](https://github.com/eclipse-tractusx/portal-assets/pull/416)
 
 ## 2.2.0
 
