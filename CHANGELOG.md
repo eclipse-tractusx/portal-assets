@@ -4,6 +4,8 @@ New features, fixed bugs, known defects and other noteworthy changes to each rel
 
 ## Unreleased
 
+## 2.3.0-RC1
+
 ### Change
 
 #### Documentation
@@ -12,8 +14,10 @@ New features, fixed bugs, known defects and other noteworthy changes to each rel
 
 ### BugFixes
 
-- **Use Case Participation**
-  - fixed Manage UseCase Credentials url [#416](https://github.com/eclipse-tractusx/portal-assets/pull/416)
+#### Assets
+
+- **Dataspace Page**
+  - fixed "Manage UseCase Credentials" and "Manage Role Credentials" links [#416](https://github.com/eclipse-tractusx/portal-assets/pull/425), [#416](https://github.com/eclipse-tractusx/portal-assets/pull/425)
 
 ## 2.2.0
 

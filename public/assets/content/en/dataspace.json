@@ -139,7 +139,7 @@
           {
             "background": "#C498EF63",
             "title": "Manage Role Credentials",
-            "navigate": "/certificate-credential"
+            "navigate": "/certificateCredential"
           }
         ],
         "linksRow2": [
