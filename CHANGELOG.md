@@ -10,7 +10,15 @@ New features, fixed bugs, known defects and other noteworthy changes to each rel
 
 #### Documentation
 
-- updated technical user overview with technical user details and also updated relevant images.
+- updated technical user overview with technical user details and also updated relevant images [#406](https://github.com/eclipse-tractusx/portal-assets/pull/406)
+- added missing process retrigger steps [#386](https://github.com/eclipse-tractusx/portal-assets/pull/386)
+- adjusted delete technical user [#399](https://github.com/eclipse-tractusx/portal-assets/pull/399)
+
+### Technical Support
+
+- upgraded dependencies [#411](https://github.com/eclipse-tractusx/portal-assets/pull/411)
+- introduce Trufflehog secret scan [#401](https://github.com/eclipse-tractusx/portal-assets/pull/401)
+- fixed Trivy scan to comply with latest state of TRG 8.04 [portal#467](https://github.com/eclipse-tractusx/portal/issues/467)
 
 ### BugFixes
 
@@ -25,7 +33,7 @@ New features, fixed bugs, known defects and other noteworthy changes to each rel
 
 #### Documentation
 
-- created section for toogle to skip Clearinghouse SD Factory connection [#396](https://github.com/eclipse-tractusx/portal-assets/pull/396)
+- created section for toggle to skip Clearinghouse SD Factory connection [#396](https://github.com/eclipse-tractusx/portal-assets/pull/396)
 - adjusted delete technical user [#377](https://github.com/eclipse-tractusx/portal-assets/pull/377), [#393](https://github.com/eclipse-tractusx/portal-assets/pull/393)
 - adjusted registration approval process [#391](https://github.com/eclipse-tractusx/portal-assets/pull/391)
 - updated status details technical user overview [#377](https://github.com/eclipse-tractusx/portal-assets/pull/377)
