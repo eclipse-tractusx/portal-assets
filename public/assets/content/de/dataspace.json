@@ -139,7 +139,7 @@
           {
             "background": "#C498EF63",
             "title": "Rollen-Teilnahmeinformationen verwalten",
-            "navigate": "/certificate-credential"
+            "navigate": "/certificateCredential"
           }
         ],
         "linksRow2": [
