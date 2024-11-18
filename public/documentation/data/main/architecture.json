@@ -1,0 +1,51 @@
+{
+  "path": "architecture",
+  "name": "Catena-X Architecture Documentation",
+  "children": [
+    {
+      "path": "architecture/Architecture Constraints.md",
+      "name": "Architecture Constraints.md",
+      "chapter": []
+    },
+    {
+      "path": "architecture/Building block view.md",
+      "name": "Building block view.md",
+      "chapter": []
+    },
+    {
+      "path": "architecture/Context and scope.md",
+      "name": "Context and scope.md",
+      "chapter": []
+    },
+    {
+      "path": "architecture/Development Concept.md",
+      "name": "Development Concept.md",
+      "chapter": []
+    },
+    {
+      "path": "architecture/Requirements.md",
+      "name": "Requirements.md",
+      "chapter": []
+    },
+    {
+      "path": "architecture/Security-Assessment.md",
+      "name": "Security-Assessment.md",
+      "chapter": []
+    },
+    {
+      "path": "architecture/Solution strategy.md",
+      "name": "Solution strategy.md",
+      "chapter": []
+    },
+    {
+      "path": "architecture/Whitebox Overall System.md",
+      "name": "Whitebox Overall System.md",
+      "chapter": []
+    },
+    {
+      "path": "architecture/operational-concept.md",
+      "name": "operational-concept.md",
+      "chapter": []
+    }
+  ]
+}
