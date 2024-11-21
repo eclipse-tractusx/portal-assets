@@ -1,0 +1,270 @@
+{
+  "path": "admin",
+  "name": "Catena-X Admin Documentation",
+  "children": [
+    {
+      "path": "admin/DB Views and Details",
+      "name": "DB Views and Details",
+      "children": [
+        {
+          "path": "admin/DB Views and Details/Agreements - DB - View.md",
+          "name": "Agreements - DB - View.md",
+          "chapter": []
+        },
+        {
+          "path": "admin/DB Views and Details/App - DB - View.md",
+          "name": "App - DB - View.md",
+          "chapter": []
+        },
+        {
+          "path": "admin/DB Views and Details/Connector - DB - View.md",
+          "name": "Connector - DB - View.md",
+          "chapter": []
+        },
+        {
+          "path": "admin/DB Views and Details/Data Management.md",
+          "name": "Data Management.md",
+          "chapter": []
+        },
+        {
+          "path": "admin/DB Views and Details/Documents - DB - View.md",
+          "name": "Documents - DB - View.md",
+          "chapter": []
+        },
+        {
+          "path": "admin/DB Views and Details/Identity - DB - View.md",
+          "name": "Identity - DB - View.md",
+          "chapter": []
+        },
+        {
+          "path": "admin/DB Views and Details/Subscription - DB - View.md",
+          "name": "Subscription - DB - View.md",
+          "chapter": []
+        }
+      ]
+    },
+    {
+      "path": "admin/Dev Process",
+      "name": "Dev Process",
+      "children": [
+        {
+          "path": "admin/Dev Process/Dev-flow_deploy-dev-env.md",
+          "name": "Dev-flow_deploy-dev-env.md",
+          "chapter": []
+        },
+        {
+          "path": "admin/Dev Process/Dev-flow_git-diagram.md",
+          "name": "Dev-flow_git-diagram.md",
+          "chapter": []
+        },
+        {
+          "path": "admin/Dev Process/Enumeration Handling.md",
+          "name": "Enumeration Handling.md",
+          "chapter": []
+        },
+        {
+          "path": "admin/Dev Process/How to contribute.md",
+          "name": "How to contribute.md",
+          "chapter": []
+        },
+        {
+          "path": "admin/Dev Process/Multi Language.md",
+          "name": "Multi Language.md",
+          "chapter": []
+        },
+        {
+          "path": "admin/Dev Process/Run frontend on localhost.md",
+          "name": "Run frontend on localhost.md",
+          "chapter": []
+        },
+        {
+          "path": "admin/Dev Process/Shared Components.md",
+          "name": "Shared Components.md",
+          "chapter": []
+        }
+      ]
+    },
+    {
+      "path": "admin/Interface Contracts",
+      "name": "Interface Contracts",
+      "children": [
+        {
+          "path": "admin/Interface Contracts/BPDM.md",
+          "name": "BPDM.md",
+          "chapter": []
+        },
+        {
+          "path": "admin/Interface Contracts/CX-Membership.md",
+          "name": "CX-Membership.md",
+          "chapter": []
+        },
+        {
+          "path": "admin/Interface Contracts/Clearinghouse.md",
+          "name": "Clearinghouse.md",
+          "chapter": []
+        },
+        {
+          "path": "admin/Interface Contracts/Credential Issuer.md",
+          "name": "Credential Issuer.md",
+          "chapter": []
+        },
+        {
+          "path": "admin/Interface Contracts/Dataspace-Discovery.md",
+          "name": "Dataspace-Discovery.md",
+          "chapter": []
+        },
+        {
+          "path": "admin/Interface Contracts/Managed Wallets.md",
+          "name": "Managed Wallets.md",
+          "chapter": []
+        },
+        {
+          "path": "admin/Interface Contracts/Offer-Autosetup.md",
+          "name": "Offer-Autosetup.md",
+          "chapter": []
+        },
+        {
+          "path": "admin/Interface Contracts/Self Description.md",
+          "name": "Self Description.md",
+          "chapter": []
+        }
+      ]
+    },
+    {
+      "path": "admin/Operations",
+      "name": "Operations",
+      "children": [
+        {
+          "path": "admin/Operations/Auditing.md",
+          "name": "Auditing.md",
+          "chapter": []
+        },
+        {
+          "path": "admin/Operations/Release-Process.md",
+          "name": "Release-Process.md",
+          "chapter": []
+        }
+      ]
+    },
+    {
+      "path": "admin/Operator Wallet Setup",
+      "name": "Operator Wallet Setup",
+      "children": [
+        {
+          "path": "admin/Operator Wallet Setup/Initial Setup.md",
+          "name": "Initial Setup.md",
+          "chapter": []
+        }
+      ]
+    },
+    {
+      "path": "admin/Others",
+      "name": "Others",
+      "children": [
+        {
+          "path": "admin/Others/Document Management.md",
+          "name": "Document Management.md",
+          "chapter": []
+        },
+        {
+          "path": "admin/Others/Email Templates.md",
+          "name": "Email Templates.md",
+          "chapter": []
+        },
+        {
+          "path": "admin/Others/Images, Graphics and Diagrams.md",
+          "name": "Images, Graphics and Diagrams.md",
+          "chapter": []
+        },
+        {
+          "path": "admin/Others/Notifications.md",
+          "name": "Notifications.md",
+          "chapter": []
+        }
+      ]
+    },
+    {
+      "path": "admin/README.md",
+      "name": "README.md",
+      "chapter": []
+    },
+    {
+      "path": "admin/Tests",
+      "name": "Tests",
+      "children": [
+        {
+          "path": "admin/Tests/Automation",
+          "name": "Automation",
+          "children": [
+            {
+              "path": "admin/Tests/Automation/01. Summary.md",
+              "name": "01. Summary.md",
+              "chapter": []
+            },
+            {
+              "path": "admin/Tests/Automation/02. Access Token Retrieval.md",
+              "name": "02. Access Token Retrieval.md",
+              "chapter": []
+            },
+            {
+              "path": "admin/Tests/Automation/03. InterfacePartnerHealthCheck.md",
+              "name": "03. InterfacePartnerHealthCheck.md",
+              "chapter": []
+            },
+            {
+              "path": "admin/Tests/Automation/04. PortalHealthCheck.md",
+              "name": "04. PortalHealthCheck.md",
+              "chapter": []
+            },
+            {
+              "path": "admin/Tests/Automation/05. RegistrationScenarios.md",
+              "name": "05. RegistrationScenarios.md",
+              "chapter": []
+            },
+            {
+              "path": "admin/Tests/Automation/06. NotificiationInitScenario.md",
+              "name": "06. NotificiationInitScenario.md",
+              "chapter": []
+            },
+            {
+              "path": "admin/Tests/Automation/07. ServiceAccountCUDScenarios.md",
+              "name": "07. ServiceAccountCUDScenarios.md",
+              "chapter": []
+            },
+            {
+              "path": "admin/Tests/Automation/08. TestDataFileSetup.md",
+              "name": "08. TestDataFileSetup.md",
+              "chapter": []
+            },
+            {
+              "path": "admin/Tests/Automation/09. CreateAppScenario.md",
+              "name": "09. CreateAppScenario.md",
+              "chapter": []
+            },
+            {
+              "path": "admin/Tests/Automation/10. ReportPortal.md",
+              "name": "10. ReportPortal.md",
+              "chapter": []
+            }
+          ]
+        },
+        {
+          "path": "admin/Tests/Tests.md",
+          "name": "Tests.md",
+          "chapter": []
+        }
+      ]
+    },
+    {
+      "path": "admin/Version Upgrade",
+      "name": "Version Upgrade",
+      "children": [
+        {
+          "path": "admin/Version Upgrade/portal-upgrade-details.md",
+          "name": "portal-upgrade-details.md",
+          "chapter": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "path": "api",
+  "name": "Catena-X API Documentation",
+  "children": [
+    {
+      "path": "api/README.md",
+      "name": "README.md",
+      "chapter": []
+    }
+  ]
+}

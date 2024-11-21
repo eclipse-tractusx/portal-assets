@@ -134,12 +134,12 @@
           {
             "background": "#C498EF63",
             "title": "UseCase-Teilnahmeinformationen verwalten",
-            "navigate": "/usecase-participation"
+            "navigate": "/usecaseParticipation"
           },
           {
             "background": "#C498EF63",
             "title": "Rollen-Teilnahmeinformationen verwalten",
-            "navigate": "/certificate-credential"
+            "navigate": "/certificateCredential"
           }
         ],
         "linksRow2": [

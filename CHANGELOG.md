@@ -2,9 +2,88 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
+## Unreleased
+
+## 2.3.0-RC1
+
+### Change
+
 #### Documentation
 
-- removed image reference to stage-header-background since it is no longer used in portal repo
+- updated technical user overview with technical user details and also updated relevant images [#406](https://github.com/eclipse-tractusx/portal-assets/pull/406)
+- added missing process retrigger steps [#386](https://github.com/eclipse-tractusx/portal-assets/pull/386)
+- adjusted delete technical user [#399](https://github.com/eclipse-tractusx/portal-assets/pull/399)
+
+### Technical Support
+
+- upgraded dependencies [#411](https://github.com/eclipse-tractusx/portal-assets/pull/411)
+- introduce Trufflehog secret scan [#401](https://github.com/eclipse-tractusx/portal-assets/pull/401)
+- fixed Trivy scan to comply with latest state of TRG 8.04 [portal#467](https://github.com/eclipse-tractusx/portal/issues/467)
+
+### BugFixes
+
+#### Assets
+
+- **Dataspace Page**
+  - fixed "Manage UseCase Credentials" and "Manage Role Credentials" links [#416](https://github.com/eclipse-tractusx/portal-assets/pull/425), [#416](https://github.com/eclipse-tractusx/portal-assets/pull/425)
+
+## 2.2.0
+
+### Change
+
+#### Documentation
+
+- created section for toggle to skip Clearinghouse SD Factory connection [#396](https://github.com/eclipse-tractusx/portal-assets/pull/396)
+- adjusted delete technical user [#377](https://github.com/eclipse-tractusx/portal-assets/pull/377), [#393](https://github.com/eclipse-tractusx/portal-assets/pull/393)
+- adjusted registration approval process [#391](https://github.com/eclipse-tractusx/portal-assets/pull/391)
+- updated status details technical user overview [#377](https://github.com/eclipse-tractusx/portal-assets/pull/377)
+- changed file name for change app roles title [#394](https://github.com/eclipse-tractusx/portal-assets/pull/394)
+- updated release process for LocalDev version bump [#387](https://github.com/eclipse-tractusx/portal-assets/pull/387)
+
+### BugFixes
+
+#### Documentation
+
+- fixed initial wallet script [#378](https://github.com/eclipse-tractusx/portal-assets/pull/378), [#382](https://github.com/eclipse-tractusx/portal-assets/pull/382), [#384](https://github.com/eclipse-tractusx/portal-assets/pull/384)
+- adjusted process worker section [#381](https://github.com/eclipse-tractusx/portal-assets/pull/381), [#383](https://github.com/eclipse-tractusx/portal-assets/pull/383)
+
+## 2.1.0
+
+### Change
+
+#### Documentation
+
+- removed image reference to stage-header-background since it is no longer used in portal repo [#340](https://github.com/eclipse-tractusx/portal-assets/pull/340)
+- updated supported technical user role(s) [#332](https://github.com/eclipse-tractusx/portal-assets/pull/332)
+- updated decline application [#341](https://github.com/eclipse-tractusx/portal-assets/pull/341)
+- changed licensing and legal docs [#343](https://github.com/eclipse-tractusx/portal-assets/pull/343)
+- updated app subscription user documentation [#353](https://github.com/eclipse-tractusx/portal-assets/pull/353)
+- added subscription management documentation [#354](https://github.com/eclipse-tractusx/portal-assets/pull/354)
+- updated app release process - technical integration [#355](https://github.com/eclipse-tractusx/portal-assets/pull/355)
+- updated service release process - technical integration [#356](https://github.com/eclipse-tractusx/portal-assets/pull/356)
+- added and enhanced credential management documentation [#360](https://github.com/eclipse-tractusx/portal-assets/pull/360)
+- added documentation for initial wallet setup [#369](https://github.com/eclipse-tractusx/portal-assets/pull/369)
+- added documentation for processes worker [#368](https://github.com/eclipse-tractusx/portal-assets/pull/368)
+- added process picture for registration approval process [#349](https://github.com/eclipse-tractusx/portal-assets/pull/349)
+- updated roles and rights [#373](https://github.com/eclipse-tractusx/portal-assets/pull/373)
+
+### Technical Support
+
+- upgraded dependencies [#365](https://github.com/eclipse-tractusx/portal-assets/pull/365), [#328](https://github.com/eclipse-tractusx/portal-assets/pull/328), [#329](https://github.com/eclipse-tractusx/portal-assets/pull/329),[#366](https://github.com/eclipse-tractusx/portal-assets/pull/366), [#367](https://github.com/eclipse-tractusx/portal-assets/pull/367)
+- improved pre commit checks [#338](https://github.com/eclipse-tractusx/portal-assets/pull/338)
+- enabled maintenance of latest changes in main branch [#344](https://github.com/eclipse-tractusx/portal-assets/pull/344)
+
+### BugFixes
+
+#### Documentation
+
+- fixed image path [#342](https://github.com/eclipse-tractusx/portal-assets/pull/342)
+- fixed broken link [#359](https://github.com/eclipse-tractusx/portal-assets/pull/359)
+- removed outdated client and service account information [#372](https://github.com/eclipse-tractusx/portal-assets/pull/372)
+
+### Known Knowns
+
+- Documentation for Offer Autosetup is out of date [#374](https://github.com/eclipse-tractusx/portal-assets/issues/374)
 
 ## 2.0.0
 

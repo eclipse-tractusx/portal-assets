@@ -75,8 +75,11 @@ const createDocsMetadata = (version) => {
   version ||= 'main'
 
   const DOCS = {
-    user: 'Catena-X Help Desk',
+    admin: 'Catena-X Admin Documentation',
+    api: 'Catena-X API Documentation',
+    architecture: 'Catena-X Architecture Documentation',
     developer: 'Catena-X Developer Documentation',
+    user: 'Catena-X Help Desk',
   }
 
   Object.entries(DOCS).forEach((item) => {
