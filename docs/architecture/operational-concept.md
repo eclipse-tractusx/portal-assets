@@ -32,7 +32,7 @@ Note: will be added soon
 
 ## Logging
 
-The portal supports application and db logging. Details are stored here: [Auditing](../Operations/Auditing.md).
+The portal supports application and db logging. Details are stored here: [Auditing](/docs/admin/Operations/Auditing.md).
 
 ## Monitoring
 

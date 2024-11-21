@@ -209,7 +209,7 @@ All threats identified are mitigated.
 - Infrastructure as Code - KICS
 - Securing code, dependencies, containers, IaC and Cloud Deployments - SNYK
 
-Also see [Penetrations Tests](../Tests/Tests.md#penetration-tests).
+Also see [Penetrations Tests](/docs/admin/Tests/Tests.md#penetration-tests).
 
 ## NOTICE
 

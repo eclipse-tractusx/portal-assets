@@ -4,8 +4,8 @@
 
 Details to the build, test and deploy process can be found in the following files:
 
-- [Release Process](../Operations/Release-Process.md)
-- [Tests](../Tests/Tests.md)
+- [Release Process](/docs/admin/Operations/Release-Process.md)
+- [Tests](/docs/admin/Tests/Tests.md)
   <br>
   <br>
 

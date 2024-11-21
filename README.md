@@ -13,7 +13,7 @@ The Portal application consists of
 
 The helm chart for installing the Portal is available in the [portal](https://github.com/eclipse-tractusx/portal) repository.
 
-Please refer to the [docs](./docs/) directory for the overarching user and developer documentation of the Portal application.
+Please refer to the [docs](./docs/) directory for the overarching documentation of the Portal application.
 
 The Portal is designed to work with the [IAM](https://github.com/eclipse-tractusx/portal-iam).
 

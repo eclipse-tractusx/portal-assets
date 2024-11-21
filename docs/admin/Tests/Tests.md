@@ -64,7 +64,7 @@ gantt
 
 ```
 
-As outlined in the [Security Policy](../../../SECURITY.md), the findings are documented as security advisories.
+As outlined in the [Security Policy](/SECURITY.md), the findings are documented as security advisories.
 
 <br>
 <br>
