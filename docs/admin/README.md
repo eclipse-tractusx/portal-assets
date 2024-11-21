@@ -2,14 +2,14 @@
 
 Sections
 
-- [DB Views and Details](./DB+Views+and+Details/)
-- [Development Process](./Dev+Process/)
-- [Interface Contracts](./Interface+Contracts/)
+- [DB Views and Details](./DB%20Views%20and%20Details/)
+- [Development Process](./Dev%20Process/)
+- [Interface Contracts](./Interface%20Contracts/)
 - [Operations](./Operations/)
-- [Operator Wallet Setup](./Operator+Wallet+Setup/)
+- [Operator Wallet Setup](./Operator%20Wallet%20Setup/)
 - [Others](./Others/)
 - [Tests](./Tests/)
-- [Version Upgrade](./Version+Upgrade/)
+- [Version Upgrade](./Version%20Upgrade/)
 
 ## NOTICE
 
