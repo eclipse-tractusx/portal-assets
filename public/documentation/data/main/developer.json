@@ -759,36 +759,36 @@
       ]
     },
     {
-      "path": "developer/06. Credential Management",
-      "name": "06. Credential Management",
+      "path": "developer/07. Credential Management",
+      "name": "07. Credential Management",
       "children": [
         {
-          "path": "developer/06. Credential Management/01. UseCase Participation.md",
+          "path": "developer/07. Credential Management/01. UseCase Participation.md",
           "name": "01. UseCase Participation.md",
           "chapter": []
         },
         {
-          "path": "developer/06. Credential Management/02. Other Certificates.md",
+          "path": "developer/07. Credential Management/02. Other Certificates.md",
           "name": "02. Other Certificates.md",
           "chapter": []
         },
         {
-          "path": "developer/06. Credential Management/03. Credential Admin Board.md",
+          "path": "developer/07. Credential Management/03. Credential Admin Board.md",
           "name": "03. Credential Admin Board.md",
           "chapter": []
         },
         {
-          "path": "developer/06. Credential Management/03. FAQ.md",
+          "path": "developer/07. Credential Management/03. FAQ.md",
           "name": "03. FAQ.md",
           "chapter": []
         },
         {
-          "path": "developer/06. Credential Management/04. Credential Revocation.md",
+          "path": "developer/07. Credential Management/04. Credential Revocation.md",
           "name": "04. Credential Revocation.md",
           "chapter": []
         },
         {
-          "path": "developer/06. Credential Management/index.md",
+          "path": "developer/07. Credential Management/index.md",
           "name": "index.md",
           "chapter": []
         }
@@ -886,6 +886,11 @@
           "chapter": []
         }
       ]
+    },
+    {
+      "path": "developer/README.md",
+      "name": "README.md",
+      "chapter": []
     }
   ]
 }

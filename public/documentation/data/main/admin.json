@@ -184,6 +184,11 @@
       ]
     },
     {
+      "path": "admin/README.md",
+      "name": "README.md",
+      "chapter": []
+    },
+    {
       "path": "admin/Tests",
       "name": "Tests",
       "children": [

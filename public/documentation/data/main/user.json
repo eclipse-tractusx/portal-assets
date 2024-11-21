@@ -843,42 +843,6 @@
       ]
     },
     {
-      "path": "user/06. Credential Management",
-      "name": "06. Credential Management",
-      "children": [
-        {
-          "path": "user/06. Credential Management/01. UseCase Participation.md",
-          "name": "01. UseCase Participation.md",
-          "chapter": []
-        },
-        {
-          "path": "user/06. Credential Management/02. Other Certificates.md",
-          "name": "02. Other Certificates.md",
-          "chapter": []
-        },
-        {
-          "path": "user/06. Credential Management/03. Credential Admin Board.md",
-          "name": "03. Credential Admin Board.md",
-          "chapter": []
-        },
-        {
-          "path": "user/06. Credential Management/03. FAQ.md",
-          "name": "03. FAQ.md",
-          "chapter": []
-        },
-        {
-          "path": "user/06. Credential Management/04. Credential Revocation.md",
-          "name": "04. Credential Revocation.md",
-          "chapter": []
-        },
-        {
-          "path": "user/06. Credential Management/index.md",
-          "name": "index.md",
-          "chapter": []
-        }
-      ]
-    },
-    {
       "path": "user/06. Notifications",
       "name": "06. Notifications",
       "children": [
@@ -892,6 +856,42 @@
               "chapter": []
             }
           ]
+        }
+      ]
+    },
+    {
+      "path": "user/07. Credential Management",
+      "name": "07. Credential Management",
+      "children": [
+        {
+          "path": "user/07. Credential Management/01. UseCase Participation.md",
+          "name": "01. UseCase Participation.md",
+          "chapter": []
+        },
+        {
+          "path": "user/07. Credential Management/02. Other Certificates.md",
+          "name": "02. Other Certificates.md",
+          "chapter": []
+        },
+        {
+          "path": "user/07. Credential Management/03. Credential Admin Board.md",
+          "name": "03. Credential Admin Board.md",
+          "chapter": []
+        },
+        {
+          "path": "user/07. Credential Management/03. FAQ.md",
+          "name": "03. FAQ.md",
+          "chapter": []
+        },
+        {
+          "path": "user/07. Credential Management/04. Credential Revocation.md",
+          "name": "04. Credential Revocation.md",
+          "chapter": []
+        },
+        {
+          "path": "user/07. Credential Management/index.md",
+          "name": "index.md",
+          "chapter": []
         }
       ]
     },
@@ -936,6 +936,11 @@
           "chapter": []
         }
       ]
+    },
+    {
+      "path": "user/README.md",
+      "name": "README.md",
+      "chapter": []
     },
     {
       "path": "user/Style-Guide",
