@@ -24,7 +24,7 @@ To update the company role, follow the following steps.
 <br>
 <br>
 
-2nd select the resepctive required roles
+2nd select the respective required roles
 
 <p align="center">
 <img width="636" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/change-company-role-options.png">
@@ -33,7 +33,7 @@ To update the company role, follow the following steps.
 <br>
 <br>
 
-With the "Submit" selection the overlay with the change details as well as the required term & condition approval are getting displayed.
+With the "Submit" selection the overlay with the change details as well as the required term & condition approval are being displayed.
 If the user approved all the necessary T&Cs the role change can get committed and will get effective in the same moment
 
 <p align="center">
