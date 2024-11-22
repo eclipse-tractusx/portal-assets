@@ -4,6 +4,26 @@ New features, fixed bugs, known defects and other noteworthy changes to each rel
 
 ## Unreleased
 
+## 2.3.0-RC2
+
+### Change
+
+#### Documentation
+
+- changed documentation structure to align with TRG 1 [#428](https://github.com/eclipse-tractusx/portal-assets/pull/428), [#a6c30a8](https://github.com/eclipse-tractusx/portal-assets/commit/a6c30a8126d8c4e835178576787cbd008013074a)
+- added activity flow diagram for registration process [#404](https://github.com/eclipse-tractusx/portal-assets/pull/404)
+- update naming order, fix typos and grammar [#433](https://github.com/eclipse-tractusx/portal-assets/pull/433), [#434](https://github.com/eclipse-tractusx/portal-assets/pull/434)
+
+### Technical Support
+
+- changed dependencies check to run only when specific files are changed [#432](https://github.com/eclipse-tractusx/portal-assets/pull/432)
+
+### BugFixes
+
+#### Documentation
+
+- updated auto-subscription for offer-subscription [#376](https://github.com/eclipse-tractusx/portal-assets/pull/376)
+
 ## 2.3.0-RC1
 
 ### Change
