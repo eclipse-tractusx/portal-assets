@@ -32,8 +32,8 @@
               "chapter": []
             },
             {
-              "path": "user/01. Onboarding/01. Registration Invite/index.md",
-              "name": "index.md",
+              "path": "user/01. Onboarding/01. Registration Invite/README.md",
+              "name": "README.md",
               "chapter": []
             }
           ]
@@ -78,8 +78,8 @@
               "chapter": []
             },
             {
-              "path": "user/01. Onboarding/02. Registration/index.md",
-              "name": "index.md",
+              "path": "user/01. Onboarding/02. Registration/README.md",
+              "name": "README.md",
               "chapter": []
             }
           ]
@@ -109,8 +109,8 @@
               "chapter": []
             },
             {
-              "path": "user/01. Onboarding/03. Registration Approval/index.md",
-              "name": "index.md",
+              "path": "user/01. Onboarding/03. Registration Approval/README.md",
+              "name": "README.md",
               "chapter": []
             }
           ]
@@ -138,42 +138,9 @@
           ]
         },
         {
-          "path": "user/01. Onboarding/index.md",
-          "name": "index.md",
+          "path": "user/01. Onboarding/README.md",
+          "name": "README.md",
           "chapter": []
-        }
-      ]
-    },
-    {
-      "path": "user/02. Identity",
-      "name": "02. Identity",
-      "children": [
-        {
-          "path": "user/02. Identity/01. Identity Levels",
-          "name": "01. Identity Levels",
-          "children": [
-            {
-              "path": "user/02. Identity/01. Identity Levels/00. Identity Types.md",
-              "name": "00. Identity Types.md",
-              "chapter": []
-            }
-          ]
-        },
-        {
-          "path": "user/02. Identity/02. Digital Wallet",
-          "name": "02. Digital Wallet",
-          "children": [
-            {
-              "path": "user/02. Identity/02. Digital Wallet/00. Wallet Creation.md",
-              "name": "00. Wallet Creation.md",
-              "chapter": []
-            },
-            {
-              "path": "user/02. Identity/02. Digital Wallet/01. Wallet UI.md",
-              "name": "01. Wallet UI.md",
-              "chapter": []
-            }
-          ]
         }
       ]
     },
@@ -226,8 +193,8 @@
               "chapter": []
             },
             {
-              "path": "user/02. Technical Integration/01. Connector Registration/index.md",
-              "name": "index.md",
+              "path": "user/02. Technical Integration/01. Connector Registration/README.md",
+              "name": "README.md",
               "chapter": []
             }
           ]
@@ -272,8 +239,8 @@
               "chapter": []
             },
             {
-              "path": "user/02. Technical Integration/02. Identity Provider Management/index.md",
-              "name": "index.md",
+              "path": "user/02. Technical Integration/02. Identity Provider Management/README.md",
+              "name": "README.md",
               "chapter": []
             }
           ]
@@ -288,8 +255,8 @@
               "chapter": []
             },
             {
-              "path": "user/02. Technical Integration/03. CX Membership/index.md",
-              "name": "index.md",
+              "path": "user/02. Technical Integration/03. CX Membership/README.md",
+              "name": "README.md",
               "chapter": []
             }
           ]
@@ -304,8 +271,8 @@
               "chapter": []
             },
             {
-              "path": "user/02. Technical Integration/04. Dataspace Discovery/index.md",
-              "name": "index.md",
+              "path": "user/02. Technical Integration/04. Dataspace Discovery/README.md",
+              "name": "README.md",
               "chapter": []
             }
           ]
@@ -320,15 +287,15 @@
               "chapter": []
             },
             {
-              "path": "user/02. Technical Integration/05. Company Role/index.md",
-              "name": "index.md",
+              "path": "user/02. Technical Integration/05. Company Role/README.md",
+              "name": "README.md",
               "chapter": []
             }
           ]
         },
         {
-          "path": "user/02. Technical Integration/index.md",
-          "name": "index.md",
+          "path": "user/02. Technical Integration/README.md",
+          "name": "README.md",
           "chapter": []
         }
       ]
@@ -367,8 +334,8 @@
               "chapter": []
             },
             {
-              "path": "user/03. User Management/01. User Account/index.md",
-              "name": "index.md",
+              "path": "user/03. User Management/01. User Account/README.md",
+              "name": "README.md",
               "chapter": []
             }
           ]
@@ -408,8 +375,8 @@
               "chapter": []
             },
             {
-              "path": "user/03. User Management/02. Modify User Account/index.md",
-              "name": "index.md",
+              "path": "user/03. User Management/02. Modify User Account/README.md",
+              "name": "README.md",
               "chapter": []
             }
           ]
@@ -444,8 +411,8 @@
               "chapter": []
             },
             {
-              "path": "user/03. User Management/03. Technical User/index.md",
-              "name": "index.md",
+              "path": "user/03. User Management/03. Technical User/README.md",
+              "name": "README.md",
               "chapter": []
             }
           ]
@@ -475,15 +442,15 @@
               "chapter": []
             },
             {
-              "path": "user/03. User Management/04. Assign App Roles/index.md",
-              "name": "index.md",
+              "path": "user/03. User Management/04. Assign App Roles/README.md",
+              "name": "README.md",
               "chapter": []
             }
           ]
         },
         {
-          "path": "user/03. User Management/index.md",
-          "name": "index.md",
+          "path": "user/03. User Management/README.md",
+          "name": "README.md",
           "chapter": []
         }
       ]
@@ -563,8 +530,8 @@
               "chapter": []
             },
             {
-              "path": "user/04. App(s)/02. App Release Process/index.md",
-              "name": "index.md",
+              "path": "user/04. App(s)/02. App Release Process/README.md",
+              "name": "README.md",
               "chapter": []
             }
           ]
@@ -690,8 +657,8 @@
           ]
         },
         {
-          "path": "user/04. App(s)/index.md",
-          "name": "index.md",
+          "path": "user/04. App(s)/README.md",
+          "name": "README.md",
           "chapter": []
         }
       ]
@@ -756,8 +723,8 @@
               "chapter": []
             },
             {
-              "path": "user/05. Service(s)/02. Service Release Process/index.md",
-              "name": "index.md",
+              "path": "user/05. Service(s)/02. Service Release Process/README.md",
+              "name": "README.md",
               "chapter": []
             }
           ]
@@ -836,8 +803,8 @@
           ]
         },
         {
-          "path": "user/05. Service(s)/index.md",
-          "name": "index.md",
+          "path": "user/05. Service(s)/README.md",
+          "name": "README.md",
           "chapter": []
         }
       ]
@@ -889,8 +856,8 @@
           "chapter": []
         },
         {
-          "path": "user/07. Credential Management/index.md",
-          "name": "index.md",
+          "path": "user/07. Credential Management/README.md",
+          "name": "README.md",
           "chapter": []
         }
       ]
@@ -922,16 +889,49 @@
       ]
     },
     {
-      "path": "user/09. Others",
-      "name": "09. Others",
+      "path": "user/09. Identity",
+      "name": "09. Identity",
       "children": [
         {
-          "path": "user/09. Others/01. Login.md",
+          "path": "user/09. Identity/01. Identity Levels",
+          "name": "01. Identity Levels",
+          "children": [
+            {
+              "path": "user/09. Identity/01. Identity Levels/00. Identity Types.md",
+              "name": "00. Identity Types.md",
+              "chapter": []
+            }
+          ]
+        },
+        {
+          "path": "user/09. Identity/02. Digital Wallet",
+          "name": "02. Digital Wallet",
+          "children": [
+            {
+              "path": "user/09. Identity/02. Digital Wallet/00. Wallet Creation.md",
+              "name": "00. Wallet Creation.md",
+              "chapter": []
+            },
+            {
+              "path": "user/09. Identity/02. Digital Wallet/01. Wallet UI.md",
+              "name": "01. Wallet UI.md",
+              "chapter": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "user/10. Others",
+      "name": "10. Others",
+      "children": [
+        {
+          "path": "user/10. Others/01. Login.md",
           "name": "01. Login.md",
           "chapter": []
         },
         {
-          "path": "user/09. Others/12. Offer Authentication Flow.md",
+          "path": "user/10. Others/12. Offer Authentication Flow.md",
           "name": "12. Offer Authentication Flow.md",
           "chapter": []
         }

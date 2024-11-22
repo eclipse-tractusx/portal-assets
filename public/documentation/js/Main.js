@@ -417,7 +417,7 @@ class Navigation extends Viewable {
             N(
               'ul',
               category.children
-                .filter((item) => item.name !== 'index.md')
+                .filter((item) => item.name !== 'README.md')
                 .map(this.createItem.bind(this)),
               { class: 'level2' }
             ),
@@ -432,7 +432,7 @@ class Navigation extends Viewable {
       .concat(
         content.toplevel.children
           ? content.toplevel.children
-              .filter((item) => item.name !== 'index.md')
+              .filter((item) => item.name !== 'README.md')
               .map(this.createSubnav.bind(this))
           : [document.createTextNode('')]
       )
@@ -595,7 +595,7 @@ class Content extends Viewable {
   filterText(text) {
     const path = state.selection.split('/').map(encodeURIComponent).join('/')
     return text
-      .replaceAll(/\]\(\.([^)]*)(\/(index.md)?)?\)/g, `](.?path=${path}$1)`)
+      .replaceAll(/\]\(\.([^)]*)(\/(README.md)?)?\)/g, `](.?path=${path}$1)`)
       .replaceAll(/\]\(\/docs\/([^)]*)/g, `](.?path=$1)`)
       .replaceAll(/\/\)/g, ')')
   }
@@ -630,8 +630,8 @@ class Content extends Viewable {
   renderArticle(content) {
     if (!location.hash) window.scrollTo(0, 0)
     if (!content.children) return this.renderMD(content)
-    if (content.children.filter((item) => item.name === 'index.md').length > 0)
-      return this.renderMD({ ...content, path: `${content.path}/index.md` })
+    if (content.children.filter((item) => item.name === 'README.md').length > 0)
+      return this.renderMD({ ...content, path: `${content.path}/README.md` })
     return this.renderOverview(content)
   }
 }

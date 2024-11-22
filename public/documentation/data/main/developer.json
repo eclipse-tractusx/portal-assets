@@ -27,13 +27,18 @@
               "chapter": []
             },
             {
-              "path": "developer/01. Registration/01. Registration Process/01. Registration Portal.md",
-              "name": "01. Registration Portal.md",
+              "path": "developer/01. Registration/01. Registration Process/01. Registration Flow Activity Diagram.md",
+              "name": "01. Registration Flow Activity Diagram.md",
               "chapter": []
             },
             {
-              "path": "developer/01. Registration/01. Registration Process/02. Registration External.md",
-              "name": "02. Registration External.md",
+              "path": "developer/01. Registration/01. Registration Process/02. Registration Portal.md",
+              "name": "02. Registration Portal.md",
+              "chapter": []
+            },
+            {
+              "path": "developer/01. Registration/01. Registration Process/03. Registration External.md",
+              "name": "03. Registration External.md",
               "chapter": []
             }
           ]
@@ -115,8 +120,8 @@
               "chapter": []
             },
             {
-              "path": "developer/01. Registration/04. Registration Approval/index.md",
-              "name": "index.md",
+              "path": "developer/01. Registration/04. Registration Approval/README.md",
+              "name": "README.md",
               "chapter": []
             }
           ]
@@ -389,8 +394,8 @@
               "chapter": []
             },
             {
-              "path": "developer/03. User Management/02. Edit User Account/index.md",
-              "name": "index.md",
+              "path": "developer/03. User Management/02. Edit User Account/README.md",
+              "name": "README.md",
               "chapter": []
             }
           ]
@@ -453,8 +458,8 @@
           ]
         },
         {
-          "path": "developer/03. User Management/index.md",
-          "name": "index.md",
+          "path": "developer/03. User Management/README.md",
+          "name": "README.md",
           "chapter": []
         }
       ]
@@ -671,8 +676,8 @@
               "chapter": []
             },
             {
-              "path": "developer/05. Service(s)/02. Service Release Process/index.md",
-              "name": "index.md",
+              "path": "developer/05. Service(s)/02. Service Release Process/README.md",
+              "name": "README.md",
               "chapter": []
             }
           ]
@@ -788,8 +793,8 @@
           "chapter": []
         },
         {
-          "path": "developer/07. Credential Management/index.md",
-          "name": "index.md",
+          "path": "developer/07. Credential Management/README.md",
+          "name": "README.md",
           "chapter": []
         }
       ]
@@ -865,8 +870,8 @@
           "chapter": []
         },
         {
-          "path": "developer/09. Process Workers/index.md",
-          "name": "index.md",
+          "path": "developer/09. Process Workers/README.md",
+          "name": "README.md",
           "chapter": []
         }
       ]
@@ -876,13 +881,13 @@
       "name": "10. Disable Clearinghouse SD",
       "children": [
         {
-          "path": "developer/10. Disable Clearinghouse SD/Use-Case-Diagrams.md",
-          "name": "Use-Case-Diagrams.md",
+          "path": "developer/10. Disable Clearinghouse SD/README.md",
+          "name": "README.md",
           "chapter": []
         },
         {
-          "path": "developer/10. Disable Clearinghouse SD/index.md",
-          "name": "index.md",
+          "path": "developer/10. Disable Clearinghouse SD/Use-Case-Diagrams.md",
+          "name": "Use-Case-Diagrams.md",
           "chapter": []
         }
       ]
