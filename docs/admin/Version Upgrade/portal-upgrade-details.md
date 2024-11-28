@@ -1,4 +1,14 @@
 - [Summary](#summary)
+  - [v2.3.0](#v230)
+    - [Service Account renaming](#service-account-renaming)
+    - [BPDM Access Configuration adjustment](#bpdm-access-configuration-adjustment)
+    - [Offer Provider](#offer-provider)
+    - [Company Invitations](#company-invitations)
+  - [v2.2.0](#v220)
+    - [Add SelfDescription Creation Process](#add-selfdescription-creation-process)
+    - [Enhance Certificate Management](#enhance-certificate-management)
+  - [v2.1.0](#v210)
+    - [Removal of company credentials](#removal-of-company-credentials)
   - [v2.0.0](#v200)
     - [OnboardingServiceProvider - ENHANCED](#onboardingserviceprovider---enhanced)
     - [Postgres dependency of helm chart - ENHANCED](#postgres-dependency-of-helm-chart---enhanced)
@@ -6,6 +16,10 @@
     - [Agreements - ENHANCED](#agreements---enhanced)
       - [Impact on existing data:](#impact-on-existing-data)
     - [Company Certificate Details - NEW](#company-certificate-details---new)
+      - [Company Certificate Database Structure](#company-certificate-database-structure)
+        - [Supported company_certificate_statuses:](#supported-company_certificate_statuses)
+        - [Supported company_certificate_type_statuses:](#supported-company_certificate_type_statuses)
+        - [Supported company_certificate_types:](#supported-company_certificate_types)
   - [v1.7.0](#v170)
     - [PostgreSQL - Upgrade](#postgresql---upgrade)
     - [Company Service Account - FIX](#company-service-account---fix)
@@ -34,6 +48,67 @@ This document describes the portal database changes and its impact on transactio
 Each section includes the respective change details, impact on existing data and the respective release with which the change is getting active.
 
 > **_INFO:_** inside the detailed descriptions below, the definition 'migration script' refers to the term 'migrations' as it is defined by the ef-core framework: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations
+
+### v2.3.0
+
+#### Service Account renaming
+
+All service account tables have been renamed to technical user. All changes are handled by the migration.
+The explicit changes can be found [here](https://github.com/eclipse-tractusx/portal-backend/blob/v2.3.0-RC3/CHANGELOG.md#230-rc1)
+
+#### BPDM Access Configuration adjustment
+
+Instead of configuring the BPDM Access directly on root level a section got introduced.
+
+**Old Configuration**
+
+```json
+    "BpnAccess": "https://example.org"
+```
+
+**New Configuration**
+
+```json
+  "BpnAccess": {
+     "BaseAddress": "https://example.org"
+  }
+```
+
+#### Offer Provider
+
+- REMOVED: table `offers` column `provider` was removed
+
+Instead of the column provider the link of the provider_company_id is used to get the name of the providing company.
+
+#### Company Invitations
+
+REMOVED: table `company_invitations` column `organisation_name` was removed
+ENHANCED: table `company_invitations` column `application_id` was made non nullable
+
+The organisation name was removed from the table, instead of the organisation name the name of the company is taken via the link of the company application
+
+### v2.2.0
+
+#### Add SelfDescription Creation Process
+
+- ENHANCED: table `companies` column `sd_creation_process_id` was added
+- ENHANCED: table `connectors` column `sd_creation_process_id` was added
+
+The columns `sd_creation_process_id` were added to the tables to link the newly introduced sd creation process to the company and connector.
+
+#### Enhance Certificate Management
+
+- ENHANCED: table `companies_certificate` columns `external_certificate_number`, `issuer`, `trust_level`, `validator` were added
+- ENHANCED: table `companies_certificate` column `valid_from` is now nullable
+- NEW: table `company_certificate_assigned_sites` added
+
+New table company_certificate_assigned_sites was added to assign certificates to bpns.
+
+### v2.1.0
+
+#### Removal of company credentials
+
+- REMOVED: tables `company_ssi_details`, `verified_credential_type_assigned_external_types`, `verified_credential_type_assigned_kinds`, `verified_credential_type_assigned_use_cases`, `company_ssi_detail_statuses`, `verified_credential_external_type_use_case_detail_versions`, `verified_credential_type_kinds`, `verified_credential_types`, `verified_credential_external_types` were removed from the portal database and moved to the [ssi-credential-issuer](https://github.com/eclipse-tractusx/ssi-credential-issuer)
 
 ### v2.0.0
 
