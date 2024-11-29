@@ -4,27 +4,7 @@ New features, fixed bugs, known defects and other noteworthy changes to each rel
 
 ## Unreleased
 
-## 2.3.0-RC2
-
-### Change
-
-#### Documentation
-
-- changed documentation structure to align with TRG 1 [#428](https://github.com/eclipse-tractusx/portal-assets/pull/428), [#a6c30a8](https://github.com/eclipse-tractusx/portal-assets/commit/a6c30a8126d8c4e835178576787cbd008013074a)
-- added activity flow diagram for registration process [#404](https://github.com/eclipse-tractusx/portal-assets/pull/404)
-- update naming order, fix typos and grammar [#433](https://github.com/eclipse-tractusx/portal-assets/pull/433), [#434](https://github.com/eclipse-tractusx/portal-assets/pull/434)
-
-### Technical Support
-
-- changed dependencies check to run only when specific files are changed [#432](https://github.com/eclipse-tractusx/portal-assets/pull/432)
-
-### BugFixes
-
-#### Documentation
-
-- updated auto-subscription for offer-subscription [#376](https://github.com/eclipse-tractusx/portal-assets/pull/376)
-
-## 2.3.0-RC1
+## 2.3.0
 
 ### Change
 
@@ -33,19 +13,31 @@ New features, fixed bugs, known defects and other noteworthy changes to each rel
 - updated technical user overview with technical user details and also updated relevant images [#406](https://github.com/eclipse-tractusx/portal-assets/pull/406)
 - added missing process retrigger steps [#386](https://github.com/eclipse-tractusx/portal-assets/pull/386)
 - adjusted delete technical user [#399](https://github.com/eclipse-tractusx/portal-assets/pull/399)
+- changed documentation structure to align with TRG 1 [#428](https://github.com/eclipse-tractusx/portal-assets/pull/428), [#a6c30a8](https://github.com/eclipse-tractusx/portal-assets/commit/a6c30a8126d8c4e835178576787cbd008013074a)
+- added activity flow diagram for registration process [#404](https://github.com/eclipse-tractusx/portal-assets/pull/404)
+- update naming order, fix typos and grammar [#433](https://github.com/eclipse-tractusx/portal-assets/pull/433), [#434](https://github.com/eclipse-tractusx/portal-assets/pull/434), [#437](https://github.com/eclipse-tractusx/portal-assets/pull/437)
+- updated version upgrade details [#440](https://github.com/eclipse-tractusx/portal-assets/pull/440)
+
+#### Assets
+
+- update roles and rights images [#443](https://github.com/eclipse-tractusx/portal-assets/pull/443)
 
 ### Technical Support
 
 - upgraded dependencies [#411](https://github.com/eclipse-tractusx/portal-assets/pull/411)
 - introduce Trufflehog secret scan [#401](https://github.com/eclipse-tractusx/portal-assets/pull/401)
 - fixed Trivy scan to comply with latest state of TRG 8.04 [portal#467](https://github.com/eclipse-tractusx/portal/issues/467)
+- changed dependencies check to run only when specific files are changed [#432](https://github.com/eclipse-tractusx/portal-assets/pull/432)
 
 ### BugFixes
 
+#### Documentation
+
+- updated auto-subscription for offer-subscription [#376](https://github.com/eclipse-tractusx/portal-assets/pull/376)
+
 #### Assets
 
-- **Dataspace Page**
-  - fixed "Manage UseCase Credentials" and "Manage Role Credentials" links [#416](https://github.com/eclipse-tractusx/portal-assets/pull/425), [#416](https://github.com/eclipse-tractusx/portal-assets/pull/425)
+- Dataspace page: fixed "Manage UseCase Credentials" and "Manage Role Credentials" links [#416](https://github.com/eclipse-tractusx/portal-assets/pull/425), [#416](https://github.com/eclipse-tractusx/portal-assets/pull/425)
 
 ## 2.2.0
 
