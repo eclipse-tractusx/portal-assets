@@ -43,7 +43,7 @@ The portal provides via the UI as well as callable by technical users with the p
 
 **Description**: Store the service partner/app partner autosetup url and callbackUrl. The endpoint is only available for companies with the company role app provider/service provider. Company Role change process is defined under the following link [Change Company Role](/docs/user/02.%20Technical%20Integration/05.%20Company%20Role/Change%20Company%20Role.md)  
 With the first time calling the endpoint; the url will be set as app/service provider endpoint as a new data set.  
-With any further endpoint triggers; the existing record will get overwritten. Means; the app/service provider can have only one endpoint configured.  
+With any further endpoint triggers; the existing record will get overwritten. Means; the app/service provider can have only one endpoint configured.
 
 To delete the auto setup configuration user needs to call the below api or click on Delete button in UI with same set of permission which is required to set the url
 
