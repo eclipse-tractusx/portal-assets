@@ -1,4 +1,10 @@
 - [Summary](#summary)
+  - [v2.4.0](#v240)
+    - [Add New Process Step Types](#add-new-process-step-types)
+    - [Sd Skipped Date](#sd-skipped-date)
+    - [Provider Owned Technical User](#provider-owned-technical-user)
+    - [Translatable Agreement Descriptions](#translatable-agreement-descriptions)
+    - [Document Size](#document-size)
   - [v2.3.0](#v230)
     - [Service Account renaming](#service-account-renaming)
     - [BPDM Access Configuration adjustment](#bpdm-access-configuration-adjustment)
@@ -48,6 +54,39 @@ This document describes the portal database changes and its impact on transactio
 Each section includes the respective change details, impact on existing data and the respective release with which the change is getting active.
 
 > **_INFO:_** inside the detailed descriptions below, the definition 'migration script' refers to the term 'migrations' as it is defined by the ef-core framework: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations
+
+### v2.4.0
+
+#### Add New Process Step Types
+
+- ENHANCE: table `process_step_types` add entries `SET_CX_MEMBERSHIP_IN_BPDM` & `RETRIGGER_SET_CX_MEMBERSHIP_IN_BPDM`
+
+The new process step types were added to support the new membership call to the bpdm which is made in the company onboarding.
+
+#### Sd Skipped Date
+
+- ENHANCE: table `connectors` add column `sd_skipped_date`
+
+Column `sd_skipped_date` was added to get information about when a sd document creation of for a connector was skipped if the `clearinghouseDisabled` flag is set to true.
+
+#### Provider Owned Technical User
+
+- ENHANCE: table `technical_user_types` add `PROVIDER_OWNED`
+- ENHANCE: adjust view `company_linked_technical_users`
+
+The view `company_linked_technical_users` has been adjusted to include the provider owned technical users and set the provider as well as owner to the offer provider company.
+
+#### Translatable Agreement Descriptions
+
+- NEW: table `agreement_descriptions`
+
+The `agreement_descriptions` got added to make the descriptions of agreements configurable for a specific language code which allows translatable descriptions.
+
+#### Document Size
+
+- ENHANCED: table `documents` column `document_size` was added
+
+To have the size of the document without calculating it every time the document size has been added to the database.
 
 ### v2.3.0
 
