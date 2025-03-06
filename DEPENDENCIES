@@ -89,7 +89,7 @@ npm/npmjs/-/function-bind/1.1.2, MIT, approved, #11063
 npm/npmjs/-/get-caller-file/2.0.5, ISC, approved, clearlydefined
 npm/npmjs/-/get-intrinsic/1.2.4, MIT, approved, #8453
 npm/npmjs/-/glob-parent/6.0.2, ISC, approved, clearlydefined
-npm/npmjs/-/glob/7.2.3, ISC, approved, clearlydefined
+npm/npmjs/-/glob/7.2.3, ISC AND (CC-BY-SA-4.0 AND ISC) AND (ISC AND MIT) AND CC-BY-SA-4.0, approved, #19366
 npm/npmjs/-/globals/13.24.0, MIT, approved, #11962
 npm/npmjs/-/gopd/1.0.1, MIT, approved, #4863
 npm/npmjs/-/graphemer/1.4.0, MIT, approved, clearlydefined
@@ -109,7 +109,7 @@ npm/npmjs/-/husky/9.1.7, MIT, approved, clearlydefined
 npm/npmjs/-/iconv-lite/0.4.24, MIT, approved, clearlydefined
 npm/npmjs/-/iconv-lite/0.6.3, MIT, approved, clearlydefined
 npm/npmjs/-/ignore/5.3.2, MIT, approved, #11665
-npm/npmjs/-/import-fresh/3.3.0, MIT, approved, clearlydefined
+npm/npmjs/-/import-fresh/3.3.0, MIT, approved, #19299
 npm/npmjs/-/imurmurhash/0.1.4, MIT, approved, clearlydefined
 npm/npmjs/-/inflight/1.0.6, ISC, approved, clearlydefined
 npm/npmjs/-/inherits/2.0.4, ISC, approved, clearlydefined
@@ -128,7 +128,7 @@ npm/npmjs/-/json-stable-stringify-without-jsonify/1.0.1, MIT, approved, clearlyd
 npm/npmjs/-/keyv/4.5.4, MIT, approved, #4674
 npm/npmjs/-/levn/0.4.1, MIT, approved, clearlydefined
 npm/npmjs/-/locate-path/6.0.0, MIT, approved, clearlydefined
-npm/npmjs/-/lodash.camelcase/4.3.0, MIT, approved, clearlydefined
+npm/npmjs/-/lodash.camelcase/4.3.0, CC0-1.0 AND MIT, approved, clearlydefined
 npm/npmjs/-/lodash.merge/4.6.2, MIT, approved, clearlydefined
 npm/npmjs/-/lodash/4.17.21, CC0-1.0 AND MIT, approved, #2096
 npm/npmjs/-/media-typer/0.3.0, MIT, approved, clearlydefined
@@ -206,7 +206,7 @@ npm/npmjs/-/toidentifier/1.0.1, MIT, approved, clearlydefined
 npm/npmjs/-/tree-kill/1.2.2, MIT, approved, clearlydefined
 npm/npmjs/-/tslib/2.7.0, 0BSD, approved, clearlydefined
 npm/npmjs/-/type-check/0.4.0, MIT, approved, clearlydefined
-npm/npmjs/-/type-fest/0.20.2, MIT OR (CC0-1.0 AND MIT), approved, clearlydefined
+npm/npmjs/-/type-fest/0.20.2, CC0-1.0 AND MIT, approved, clearlydefined
 npm/npmjs/-/type-is/1.6.18, MIT, approved, clearlydefined
 npm/npmjs/-/typical/4.0.0, MIT, approved, clearlydefined
 npm/npmjs/-/typical/5.2.0, MIT, approved, clearlydefined
