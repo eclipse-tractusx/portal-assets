@@ -217,9 +217,6 @@ Endpoint an app-provider is supposed to call to confirm the final activation of 
   "technicalUserInfo": [
     {
       "technicalUserId": "string"    (guid, id of the technical user),
-      "technicalUserPermissions": [
-        "string"                     (permissions that were assigned to the given technicalUserId)
-      ],
       "technicalUserSecret": "string", (secret of the technical user)
       "technicalClientId": "string" (clientId of the technical user)
     }
