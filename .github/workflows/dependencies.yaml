@@ -67,3 +67,4 @@ jobs:
       - name: Signal need to update DEPENDENCIES
         run: |
           echo "Dependencies need to be updated (updated DEPENDENCIES file has been uploaded to workflow run)"
+          exit 1
