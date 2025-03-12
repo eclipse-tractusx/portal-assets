@@ -223,8 +223,7 @@ Endpoint an app-provider is supposed to call to confirm the final activation of 
   ],
   "clientInfo":
     {
-      "clientId": "clientId of the app-instances keycloak-client",
-      "clientUrl": "url of the app-instance"
+      "clientId": "clientId of the app-instances keycloak-client"
     }
 }
 ```
