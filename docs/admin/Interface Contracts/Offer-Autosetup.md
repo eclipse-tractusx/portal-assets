@@ -214,15 +214,20 @@ Endpoint an app-provider is supposed to call to confirm the final activation of 
 
 ```
 {
-  "technicalUserInfo":
+  "technicalUserInfo": [
     {
-      "technicalUserId": "string" (id of technical user, guid)
-      "technicalUserSecret": "string" (secret of technical user)
-      "technicalClientId": "string" (clientId of technical user)
-    },
+      "technicalUserId": "string"    (guid, id of the technical user),
+      "technicalUserPermissions": [
+        "string"                     (permissions that were assigned to the given technicalUserId)
+      ],
+      "technicalUserSecret": "string", (secret of the technical user)
+      "technicalClientId": "string" (clientId of the technical user)
+    }
+  ],
   "clientInfo":
     {
-      "clientId": "string" (clientId of created app-instance)
+      "clientId": "clientId of the app-instances keycloak-client",
+      "clientUrl": "url of the app-instance"
     }
 }
 ```
