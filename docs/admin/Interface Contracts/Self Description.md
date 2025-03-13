@@ -58,7 +58,7 @@ Following data are getting submitted to the factory to create the participant se
        "type": "LegalPerson",
 
        "externalId": "Application id of the company",
-       
+
        "legalName": "Legal name of the company",
 
        "registrationNumber": "List of unique identifiers",
@@ -66,7 +66,7 @@ Following data are getting submitted to the factory to create the participant se
        “headquarterCountrySubdivisionCode”: "Use the ISO 3166-2 format of company's country and region",
 
        “legalCountrySubdivisionCode”: "Use the ISO 3166-2 format of the company's country and region",
-       
+
        “holder”: "Company bpn"
 
 <br>
