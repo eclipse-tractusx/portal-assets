@@ -2,6 +2,7 @@
   - [v2.4.0](#v240)
     - [Add New Process Step Types](#add-new-process-step-types)
     - [Sd Skipped Date](#sd-skipped-date)
+    - [Tagus clearing house changes](#tagus-clearing-house-changes)
     - [Provider Owned Technical User](#provider-owned-technical-user)
     - [Translatable Agreement Descriptions](#translatable-agreement-descriptions)
     - [Document Size](#document-size)
@@ -20,12 +21,12 @@
     - [Postgres dependency of helm chart - ENHANCED](#postgres-dependency-of-helm-chart---enhanced)
   - [v1.8.0](#v180)
     - [Agreements - ENHANCED](#agreements---enhanced)
-      - [Impact on existing data:](#impact-on-existing-data)
+        - [Impact on existing data:](#impact-on-existing-data)
     - [Company Certificate Details - NEW](#company-certificate-details---new)
       - [Company Certificate Database Structure](#company-certificate-database-structure)
-        - [Supported company_certificate_statuses:](#supported-company_certificate_statuses)
-        - [Supported company_certificate_type_statuses:](#supported-company_certificate_type_statuses)
-        - [Supported company_certificate_types:](#supported-company_certificate_types)
+        - [Supported company\_certificate\_statuses:](#supported-company_certificate_statuses)
+        - [Supported company\_certificate\_type\_statuses:](#supported-company_certificate_type_statuses)
+        - [Supported company\_certificate\_types:](#supported-company_certificate_types)
   - [v1.7.0](#v170)
     - [PostgreSQL - Upgrade](#postgresql---upgrade)
     - [Company Service Account - FIX](#company-service-account---fix)
@@ -68,6 +69,19 @@ The new process step types were added to support the new membership call to the 
 - ENHANCE: table `connectors` add column `sd_skipped_date`
 
 Column `sd_skipped_date` was added to get information about when a sd document creation of for a connector was skipped if the `clearinghouseDisabled` flag is set to true.
+
+#### Tagus clearing house changes
+
+With new clearing house version, all legal person and connector self description documents are no longer accepted by clearing house for validation.
+
+To prevent interruptions of connector creation, the system will notice outdated documents and activate connectors and mark document creation as skipped.
+
+Automatic reissuance is not supported yet. The operator has to generate new versions of all previously issued documents to create fully compatible companies.
+
+Following endpoints have previously been implemented to retrigger issuance of missing documents:
+`/api/administration/companydata/retrigger-self-description`
+`/api/administration/Connectors/retrigger-self-description`
+They were not intended for a proper reissuance processes. Caution is advised.
 
 #### Provider Owned Technical User
 
