@@ -57,16 +57,16 @@ Following data are getting submitted to the factory to create the participant se
 
        "type": "LegalPerson",
 
-       "registration_number": "application id of the company, in future unique identifier",
+       "externalId": "Application id of the company",
+       
+       "legalName": "Legal name of the company",
 
-       “headquarter_country”: "use the alpha2code of the company identity",
+       "registrationNumber": "List of unique identifiers",
 
-       ”legal_country”: "use the alpha2code of the company identity",
+       “headquarterCountrySubdivisionCode”: "Use the ISO 3166-2 format of company's country and region",
 
-       “bpn”: "company bpn",
-
-       “issuer”: "Catena-X bpn",
-
+       “legalCountrySubdivisionCode”: "Use the ISO 3166-2 format of the company's country and region",
+       
        “holder”: "Company bpn"
 
 <br>
@@ -84,15 +84,9 @@ Following you can find the self description json. Same as for participant, there
 
        "type": "ServiceOffering",
 
-       "providedBy": "participant sd document url",
+       “externalId”: "Connector id of the company",
 
-       “aggregationOf”: "",
-
-       ”termsAndConditions”: "link to AGB of Catena-X";  → to be clarified with Felix Gerbig (Werner Jost will request this),
-
-       “policies”: "the policies declared in the EDC instance to be registered/onboarded" → to be clarified with Stefan Ettl (Werner Jost will request this),
-
-       “issuer”: "Catena-X bpn",
+       "providedBy": "Participant sd document url",
 
        “holder”: "Company bpn"
 
