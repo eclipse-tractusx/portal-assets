@@ -8,6 +8,8 @@ New features, fixed bugs, known defects and other noteworthy changes to each rel
 
 ### Change
 
+#### Assets
+
 - updated roles and rights images [#443](https://github.com/eclipse-tractusx/portal-assets/pull/467)
 
 #### Documentation
