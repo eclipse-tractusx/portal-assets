@@ -55,7 +55,7 @@ Following data are getting submitted to the factory to create the participant se
 
        JSON Body
 
-       "type": "LegalPerson",
+       "type": "LegalParticipant",
 
        "externalId": "Application id of the company",
 
