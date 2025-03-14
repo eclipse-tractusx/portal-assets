@@ -2,6 +2,7 @@
   - [v2.4.0](#v240)
     - [Add New Process Step Types](#add-new-process-step-types)
     - [Sd Skipped Date](#sd-skipped-date)
+    - [Tagus clearing house changes](#tagus-clearing-house-changes)
     - [Provider Owned Technical User](#provider-owned-technical-user)
     - [Translatable Agreement Descriptions](#translatable-agreement-descriptions)
     - [Document Size](#document-size)
@@ -69,6 +70,23 @@ The new process step types were added to support the new membership call to the 
 
 Column `sd_skipped_date` was added to get information about when a sd document creation of for a connector was skipped if the `clearinghouseDisabled` flag is set to true.
 
+#### Tagus clearing house changes
+
+- ENHANCE: table `addresses` modified column `region` as NOT-NULLABLE
+
+`region` field has been mandatory at clearing house level so that's why its NOT-NULLABLE at portal end as well.
+
+With new clearing house version, all legal person and connector self description documents are no longer accepted by clearing house for validation.
+
+To prevent interruptions of connector creation, the system will notice outdated documents and activate connectors and mark document creation as skipped.
+
+Automatic reissuance is not supported yet. The operator has to generate new versions of all previously issued documents to create fully compatible companies.
+
+Following endpoints have previously been implemented to retrigger issuance of missing documents:
+`/api/administration/companydata/retrigger-self-description`
+`/api/administration/Connectors/retrigger-self-description`
+They were not intended for a proper reissuance processes. Caution is advised.
+
 #### Provider Owned Technical User
 
 - ENHANCE: table `technical_user_types` add `PROVIDER_OWNED`
@@ -87,6 +105,12 @@ The `agreement_descriptions` got added to make the descriptions of agreements co
 - ENHANCED: table `documents` column `document_size` was added
 
 To have the size of the document without calculating it every time the document size has been added to the database.
+
+#### Decline Offer Subscription
+
+- ENHANCED: table `notification_type` add entries `APP_SUBSCRIPTION_DECLINE` & `SERVICE_SUBSCRIPTION_DECLINE`
+
+To send the respective notification types on offer subscription declination.
 
 ### v2.3.0
 
