@@ -23,6 +23,25 @@ New features, fixed bugs, known defects and other noteworthy changes to each rel
 - adjusted dependency workflow [#466](https://github.com/eclipse-tractusx/portal-assets/pull/466)
 - upgraded dependencies [#468](https://github.com/eclipse-tractusx/portal-assets/pull/468), [#465](https://github.com/eclipse-tractusx/portal-assets/pull/465), [#450](https://github.com/eclipse-tractusx/portal-assets/pull/450), [#445](https://github.com/eclipse-tractusx/portal-assets/pull/445), [#446](https://github.com/eclipse-tractusx/portal-assets/pull/446)
 
+## 2.4.0.RC1
+
+### Change
+
+- updated roles and rights images [#443](https://github.com/eclipse-tractusx/portal-assets/pull/467)
+
+#### Documentation
+
+- updated technical user creation process [#454](https://github.com/eclipse-tractusx/portal-assets/pull/454)
+- updated clearing house and selfdescription process [#470](https://github.com/eclipse-tractusx/portal-assets/pull/470)
+- fixed typos [#458](https://github.com/eclipse-tractusx/portal-assets/pull/458)
+
+### Bugfixes
+
+### Technical Support
+
+- adjusted dependency workflow [#466](https://github.com/eclipse-tractusx/portal-assets/pull/466)
+- upgraded dependencies [#468](https://github.com/eclipse-tractusx/portal-assets/pull/468), [#465](https://github.com/eclipse-tractusx/portal-assets/pull/465), [#450](https://github.com/eclipse-tractusx/portal-assets/pull/450), [#445](https://github.com/eclipse-tractusx/portal-assets/pull/445), [#446](https://github.com/eclipse-tractusx/portal-assets/pull/446)
+
 ## 2.3.0
 
 ### Change
