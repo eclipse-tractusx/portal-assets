@@ -11,7 +11,7 @@
     "directory-tree": "^3.5.2",
     "eslint": "^8.51.0",
     "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
     "express": "^4.21.2",
     "http-proxy-middleware": "^2.0.7",
     "http-server": "^14.1.1",
