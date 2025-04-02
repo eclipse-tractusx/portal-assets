@@ -11,7 +11,7 @@ In the page below the functional details and technical implementation possibilit
 
 ## Architecture Overview
 
-### #1 Highlevel Architecture picture
+### Highlevel Architecture picture
 
 <img width="756" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/app-service-subscription-flow.png">
 
@@ -23,30 +23,33 @@ In the page below the functional details and technical implementation possibilit
 Every offer provider (app as well as service) can integrate to the autosetup interface by executing following steps
 
 1. Configure your company internal service/app ramp-up service
-2. ...
-3. ...
+2. The autosetup flow
 
 <br>
 <br>
 
-### #1 Configure your company internal service/app ramp-up service
+### 1. Configure Your Company’s Internal Service/App Ramp-Up Endpoint
 
-The portal provides via the UI as well as callable by technical users with the permission configuration of "Offer Management" the possibility to configure the offer company endpoint used to ramp-up the services/apps offered by the company.
+The portal allows users with the “Offer Management” permission to configure the endpoint used for ramping up company services and apps. This can be done through the UI or via API.
 
-**Path**: .../api/administration/subscriptionconfiguration/owncompany  
+**Endpoint**: .../api/administration/subscriptionconfiguration/owncompany
 **Method**: PUT
 **Request Body**:
 
-```
+```json
 {
   "url": "string" (url being called during execution of TRIGGER_PROVIDER),
   "callbackUrl": "string" (url being called during TRIGGER_PROVIDER_CALLBACK, optional)
 }
 ```
 
-**Description**: Store the service partner/app partner autosetup url and callbackUrl. The endpoint is only available for companies with the company role app provider/service provider. Company Role change process is defined under the following link [Change Company Role](/docs/user/02.%20Technical%20Integration/05.%20Company%20Role/Change%20Company%20Role.md)  
-With the first time calling the endpoint; the url will be set as app/service provider endpoint as a new data set.  
-With any further endpoint triggers; the existing record will get overwritten. Means; the app/service provider can have only one endpoint configured.
+**Description**:
+This API stores the auto-setup URL (url) and optional callback URL (callbackUrl) for service and app partners. It is accessible only to companies with the “App Provider” or “Service Provider” role. For details on changing company roles, refer to the [Change Company Role](/docs/user/02.%20Technical%20Integration/05.%20Company%20Role/Change%20Company%20Role.md) guide.
+
+- On the first call, the provided URL is saved as the app/service provider’s endpoint.
+- Subsequent calls overwrite the existing endpoint—only one endpoint can be configured at a time.
+- If callbackUrl is set to null, the URL will be removed from the database.
+- When a URL is deleted, any ongoing auto-setup steps of type `TRIGGER_PROVIDER_CALLBACK` in `TODO` status will be marked as `DONE`, and a new `AWAIT_START_AUTOSETUP` step will be created with `TODO` status.
 
 **Auth**: can get triggered by user with the role App Manager; Service Manager and technical users with the role "Offer Management"
 
@@ -76,7 +79,7 @@ After the endpoint is configured, all customer service/app subscription will tri
 }
 ```
 
-### #2 The autosetup flow
+### 2. The autosetup flow
 
 After the customer request including the customer data for service/app setup got provided to the offer provider, the offer provider is now supposed to:
 
