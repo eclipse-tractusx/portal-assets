@@ -12,7 +12,7 @@ Unit tests are available for backend and frontend components and getting automat
 
 ## Test Automation
 
-Information about the automation of functional e2e tests can be found under [Automation](./Automation).
+At the moment there is no test automation in the backend.
 
 <br>
 <br>
