@@ -57,7 +57,7 @@ npm/npmjs/-/escape-html/1.0.3, MIT, approved, clearlydefined
 npm/npmjs/-/escape-string-regexp/1.0.5, MIT, approved, clearlydefined
 npm/npmjs/-/escape-string-regexp/4.0.0, MIT, approved, clearlydefined
 npm/npmjs/-/eslint-config-prettier/9.1.0, MIT, approved, #11979
-npm/npmjs/-/eslint-plugin-prettier/5.2.1, MIT, approved, clearlydefined
+npm/npmjs/-/eslint-plugin-prettier/5.2.6, MIT, approved, clearlydefined
 npm/npmjs/-/eslint-scope/7.2.2, BSD-2-Clause, approved, #9916
 npm/npmjs/-/eslint-visitor-keys/3.4.3, Apache-2.0, approved, #18264
 npm/npmjs/-/eslint/8.57.1, MIT AND ISC AND OFL-1.1 AND CC-BY-SA-2.0, approved, #15317
@@ -102,7 +102,7 @@ npm/npmjs/-/hasown/2.0.2, MIT, approved, #11097
 npm/npmjs/-/he/1.2.0, MIT, approved, clearlydefined
 npm/npmjs/-/html-encoding-sniffer/3.0.0, MIT, approved, clearlydefined
 npm/npmjs/-/http-errors/2.0.0, MIT, approved, clearlydefined
-npm/npmjs/-/http-proxy-middleware/2.0.7, MIT, approved, clearlydefined
+npm/npmjs/-/http-proxy-middleware/2.0.9, MIT, approved, clearlydefined
 npm/npmjs/-/http-proxy/1.18.1, MIT, approved, clearlydefined
 npm/npmjs/-/http-server/14.1.1, MIT, approved, clearlydefined
 npm/npmjs/-/husky/9.1.7, MIT, approved, clearlydefined
@@ -198,13 +198,14 @@ npm/npmjs/-/strip-json-comments/3.1.1, MIT, approved, clearlydefined
 npm/npmjs/-/supports-color/5.5.0, MIT, approved, clearlydefined
 npm/npmjs/-/supports-color/7.2.0, MIT, approved, clearlydefined
 npm/npmjs/-/supports-color/8.1.1, MIT, approved, clearlydefined
-npm/npmjs/-/synckit/0.9.1, MIT, approved, clearlydefined
+npm/npmjs/-/synckit/0.11.4, MIT, approved, clearlydefined
 npm/npmjs/-/table-layout/1.0.2, MIT, approved, clearlydefined
 npm/npmjs/-/text-table/0.2.0, MIT, approved, clearlydefined
 npm/npmjs/-/to-regex-range/5.0.1, MIT, approved, clearlydefined
 npm/npmjs/-/toidentifier/1.0.1, MIT, approved, clearlydefined
 npm/npmjs/-/tree-kill/1.2.2, MIT, approved, clearlydefined
 npm/npmjs/-/tslib/2.7.0, 0BSD, approved, clearlydefined
+npm/npmjs/-/tslib/2.8.1, 0BSD, approved, clearlydefined
 npm/npmjs/-/type-check/0.4.0, MIT, approved, clearlydefined
 npm/npmjs/-/type-fest/0.20.2, CC0-1.0 AND MIT, approved, clearlydefined
 npm/npmjs/-/type-is/1.6.18, MIT, approved, clearlydefined
@@ -239,7 +240,7 @@ npm/npmjs/@humanwhocodes/object-schema/2.0.3, BSD-3-Clause, approved, clearlydef
 npm/npmjs/@nodelib/fs.scandir/2.1.5, MIT, approved, clearlydefined
 npm/npmjs/@nodelib/fs.stat/2.0.5, MIT, approved, clearlydefined
 npm/npmjs/@nodelib/fs.walk/1.2.8, MIT, approved, clearlydefined
-npm/npmjs/@pkgr/core/0.1.1, MIT, approved, clearlydefined
+npm/npmjs/@pkgr/core/0.2.4, MIT, approved, clearlydefined
 npm/npmjs/@types/http-proxy/1.17.15, MIT, approved, #8414
 npm/npmjs/@types/node/22.7.4, MIT, approved, #16398
 npm/npmjs/@ungap/structured-clone/1.2.0, ISC, approved, #18522
