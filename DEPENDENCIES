@@ -84,7 +84,7 @@ npm/npmjs/-/flatted/3.3.1, ISC AND (ISC AND MIT), approved, #13460
 npm/npmjs/-/follow-redirects/1.15.9, MIT, approved, #10782
 npm/npmjs/-/forwarded/0.2.0, MIT, approved, clearlydefined
 npm/npmjs/-/fresh/0.5.2, MIT, approved, clearlydefined
-npm/npmjs/-/fs.realpath/1.0.0, ISC, approved, clearlydefined
+npm/npmjs/-/fs.realpath/1.0.0, ISC AND MIT, approved, clearlydefined
 npm/npmjs/-/function-bind/1.1.2, MIT, approved, #11063
 npm/npmjs/-/get-caller-file/2.0.5, ISC, approved, clearlydefined
 npm/npmjs/-/get-intrinsic/1.2.4, MIT, approved, #8453
@@ -191,7 +191,7 @@ npm/npmjs/-/shebang-regex/3.0.0, MIT, approved, clearlydefined
 npm/npmjs/-/shell-quote/1.8.1, MIT, approved, #7044
 npm/npmjs/-/side-channel/1.0.6, MIT, approved, clearlydefined
 npm/npmjs/-/spawn-command/0.0.2, MIT, approved, #266
-npm/npmjs/-/statuses/2.0.1, MIT, approved, clearlydefined
+npm/npmjs/-/statuses/2.0.1, MIT, approved, #20906
 npm/npmjs/-/string-width/4.2.3, MIT, approved, clearlydefined
 npm/npmjs/-/strip-ansi/6.0.1, MIT, approved, clearlydefined
 npm/npmjs/-/strip-json-comments/3.1.1, MIT, approved, clearlydefined
