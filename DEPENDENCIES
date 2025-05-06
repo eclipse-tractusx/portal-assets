@@ -191,7 +191,7 @@ npm/npmjs/-/shebang-regex/3.0.0, MIT, approved, clearlydefined
 npm/npmjs/-/shell-quote/1.8.1, MIT, approved, #7044
 npm/npmjs/-/side-channel/1.0.6, MIT, approved, clearlydefined
 npm/npmjs/-/spawn-command/0.0.2, MIT, approved, #266
-npm/npmjs/-/statuses/2.0.1, MIT, approved, clearlydefined
+npm/npmjs/-/statuses/2.0.1, MIT, approved, #20906
 npm/npmjs/-/string-width/4.2.3, MIT, approved, clearlydefined
 npm/npmjs/-/strip-ansi/6.0.1, MIT, approved, clearlydefined
 npm/npmjs/-/strip-json-comments/3.1.1, MIT, approved, clearlydefined
