@@ -20,27 +20,24 @@ In the page below the functional details and technical implementation possibilit
 
 ## Integration
 
-Every offer provider (app as well as service) can integrate to the autosetup interface by executing following steps
-
-1. Configure your company internal service/app ramp-up service
-2. ...
-3. ...
-
-<br>
+Every offer provider (app as well as service) can integrate to the autosetup interface by executing following step
 <br>
 
-### #1 Configure your company internal service/app ramp-up service
+### Configure your company internal service/app ramp-up service
 
 The portal provides via the UI as well as callable by technical users with the permission configuration of "Offer Management" the possibility to configure the offer company endpoint used to ramp-up the services/apps offered by the company.
 
 **Path**: .../api/administration/subscriptionconfiguration/owncompany  
-**Method**: PUT
+**Method**: PUT  
 **Request Body**:
 
 ```
 {
-  "url": "string" (url being called during execution of TRIGGER_PROVIDER),
-  "callbackUrl": "string" (url being called during TRIGGER_PROVIDER_CALLBACK, optional)
+  "url": "string"[required](url being called during execution of TRIGGER_PROVIDER),
+  "callbackUrl": "string"[optional] (url being called during TRIGGER_PROVIDER_CALLBACK, optional),
+  "authUrl": "string"[required] (authentication provider token url to generate token for above url and callback url),
+  "clientId": "string"[required] (client id to generate the token from above auth  url),
+  "clientSecret": "string"[required] (secret to generate the token from above auth  url)
 }
 ```
 
@@ -48,12 +45,17 @@ The portal provides via the UI as well as callable by technical users with the p
 With the first time calling the endpoint; the url will be set as app/service provider endpoint as a new data set.  
 With any further endpoint triggers; the existing record will get overwritten. Means; the app/service provider can have only one endpoint configured.
 
+To delete the auto setup configuration user needs to call the below api or click on Delete button in UI with same set of permission which is required to set the url
+
+**Path**: .../api/administration/subscriptionconfiguration/owncompany  
+**Method**: DELETE  
+**Request Body**: No request body
+
 **Auth**: can get triggered by user with the role App Manager; Service Manager and technical users with the role "Offer Management"
 
 ##### UI Flow Details:
 
-<img width="600" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/register-url-popup.png">
-
+![AuthenticationProtocol](/docs/static/register-url-popup.png)
 <br>
 <br>
 
