@@ -40,8 +40,8 @@ The portal allows users with the “Offer Management” permission to configure 
   "url": "string"[required](url being called during execution of TRIGGER_PROVIDER),
   "callbackUrl": "string"[optional] (url being called during TRIGGER_PROVIDER_CALLBACK, optional),
   "authUrl": "string"[required] (authentication provider token url to generate token for above url and callback url),
-  "clientId": "string"[required] (client id to generate the token from above auth  url),
-  "clientSecret": "string"[required] (secret to generate the token from above auth  url)
+  "clientId": "string"[required] (client id to generate the token from above auth url),
+  "clientSecret": "string"[required] (secret to generate the token from above auth url)
 }
 ```
 
