@@ -26,7 +26,6 @@ Every offer provider (app as well as service) can integrate to the autosetup int
 2. The autosetup flow
 
 <br>
-<br>
 
 ### 1. Configure Your Company’s Internal Service/App Ramp-Up Endpoint
 
@@ -38,8 +37,11 @@ The portal allows users with the “Offer Management” permission to configure 
 
 ```json
 {
-  "url": "string" (url being called during execution of TRIGGER_PROVIDER),
-  "callbackUrl": "string" (url being called during TRIGGER_PROVIDER_CALLBACK, optional)
+  "url": "string"[required](url being called during execution of TRIGGER_PROVIDER),
+  "callbackUrl": "string"[optional] (url being called during TRIGGER_PROVIDER_CALLBACK, optional),
+  "authUrl": "string"[required] (authentication provider token url to generate token for above url and callback url),
+  "clientId": "string"[required] (client id to generate the token from above auth url),
+  "clientSecret": "string"[required] (secret to generate the token from above auth url)
 }
 ```
 
@@ -47,16 +49,22 @@ The portal allows users with the “Offer Management” permission to configure 
 This API stores the auto-setup URL (url) and optional callback URL (callbackUrl) for service and app partners. It is accessible only to companies with the “App Provider” or “Service Provider” role. For details on changing company roles, refer to the [Change Company Role](/docs/user/02.%20Technical%20Integration/05.%20Company%20Role/Change%20Company%20Role.md) guide.
 
 - On the first call, the provided URL is saved as the app/service provider’s endpoint.
-- Subsequent calls overwrite the existing endpoint—only one endpoint can be configured at a time.
-- If callbackUrl is set to null, the URL will be removed from the database.
-- When a URL is deleted, any ongoing auto-setup steps of type `TRIGGER_PROVIDER_CALLBACK` in `TODO` status will be marked as `DONE`, and a new `AWAIT_START_AUTOSETUP` step will be created with `TODO` status.
+- Subsequent calls overwrite the existing configuration stored for auto setup.
+
+#### Delete the auto setup configuration
+
+To delete the auto setup configuration user needs to call the below api or click on Delete button in UI with same set of permission which is required to set the url.
+When a URL is deleted, any ongoing auto-setup steps of type `TRIGGER_PROVIDER_CALLBACK` in `TODO` status will be marked as `DONE`, and a new `AWAIT_START_AUTOSETUP` step will be created with `TODO` status.
+
+**Path**: .../api/administration/subscriptionconfiguration/owncompany  
+**Method**: DELETE  
+**Request Body**: No request body
 
 **Auth**: can get triggered by user with the role App Manager; Service Manager and technical users with the role "Offer Management"
 
 ##### UI Flow Details:
 
-<img width="600" alt="image" src="https://raw.githubusercontent.com/eclipse-tractusx/portal-assets/main/docs/static/register-url-popup.png">
-
+![AuthenticationProtocol](/docs/static/register-url-popup.png)
 <br>
 <br>
 
