@@ -1,4 +1,6 @@
 - [Summary](#summary)
+  - [v2.5.0](#v250)
+    - [Enhance Provider Company Details](#enhance-provider-company-details)
   - [v2.4.0](#v240)
     - [Add New Process Step Types](#add-new-process-step-types)
     - [Sd Skipped Date](#sd-skipped-date)
@@ -6,6 +8,7 @@
     - [Provider Owned Technical User](#provider-owned-technical-user)
     - [Translatable Agreement Descriptions](#translatable-agreement-descriptions)
     - [Document Size](#document-size)
+    - [Decline Offer Subscription](#decline-offer-subscription)
   - [v2.3.0](#v230)
     - [Service Account renaming](#service-account-renaming)
     - [BPDM Access Configuration adjustment](#bpdm-access-configuration-adjustment)
@@ -55,6 +58,15 @@ This document describes the portal database changes and its impact on transactio
 Each section includes the respective change details, impact on existing data and the respective release with which the change is getting active.
 
 > **_INFO:_** inside the detailed descriptions below, the definition 'migration script' refers to the term 'migrations' as it is defined by the ef-core framework: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations
+
+### v2.5.0
+
+#### Enhance Provider Company Details
+
+- ENHANCE: table `provider_company_details` add new columns `auth_url`, `client_id`, `client_secret`, `encryption_mode`, `initialization_vector`
+- NEW: add new auditing table `audit_provider_company_detail20241210`
+
+The auto setup callback process was enhanced to post the result of the auto setup to the provider with specific technical users. These information have been added to the `provider_company_details` table.
 
 ### v2.4.0
 

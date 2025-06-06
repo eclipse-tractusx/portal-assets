@@ -23,6 +23,13 @@ New features, fixed bugs, known defects and other noteworthy changes to each rel
 - adjusted dependency workflow [#466](https://github.com/eclipse-tractusx/portal-assets/pull/466)
 - upgraded dependencies [#468](https://github.com/eclipse-tractusx/portal-assets/pull/468), [#465](https://github.com/eclipse-tractusx/portal-assets/pull/465), [#450](https://github.com/eclipse-tractusx/portal-assets/pull/450), [#445](https://github.com/eclipse-tractusx/portal-assets/pull/445), [#446](https://github.com/eclipse-tractusx/portal-assets/pull/446)
 
+## 2.5.0
+
+### Documentation
+
+- update auth field documentation for auto setup [#456](https://github.com/eclipse-tractusx/portal-assets/pull/456)
+- add callback url removal process description [#478](https://github.com/eclipse-tractusx/portal-assets/pull/478)
+
 ## 2.4.0.RC1
 
 ### Change
