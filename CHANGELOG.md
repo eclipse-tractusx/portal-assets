@@ -2,6 +2,15 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
+## 2.5.0-RC1
+
+### Change
+
+#### Documentation
+
+- removed end to end test documentation [#483](https://github.com/eclipse-tractusx/portal-assets/pull/483)
+- updated auto setup process [#478](https://github.com/eclipse-tractusx/portal-assets/pull/478), [#456](https://github.com/eclipse-tractusx/portal-assets/pull/456)
+
 ## 2.4.0
 
 ### Change
