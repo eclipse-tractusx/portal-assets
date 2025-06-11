@@ -1,5 +1,5 @@
 - [Summary](#summary)
-  - [v2.5.0-RC1](#v250-rc1)
+  - [v2.5.0](#v250)
     - [Enhance Provider Company Details](#enhance-provider-company-details)
   - [v2.4.0](#v240)
     - [Add New Process Step Types](#add-new-process-step-types)
@@ -59,7 +59,7 @@ Each section includes the respective change details, impact on existing data and
 
 > **_INFO:_** inside the detailed descriptions below, the definition 'migration script' refers to the term 'migrations' as it is defined by the ef-core framework: https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations
 
-### v2.5.0-RC1
+### v2.5.0
 
 #### Enhance Provider Company Details
 
