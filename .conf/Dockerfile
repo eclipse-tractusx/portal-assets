@@ -29,7 +29,7 @@
 #
 
 # Step 1
-FROM alpine:3.21 as build-step
+FROM alpine:3.22 as build-step
 COPY public /public
 WORKDIR /public/assets
 RUN find . -type f | cut -c 3- | sort > index.txt
