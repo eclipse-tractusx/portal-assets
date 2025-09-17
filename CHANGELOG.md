@@ -2,6 +2,14 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
+## 2.6.0-RC1
+
+### Change
+
+#### Technical Support
+
+- ci improvement to fail install if package changes were not applied [#501](https://github.com/eclipse-tractusx/portal-assets/pull/501/files)
+
 ## 2.5.0
 
 ### Change
