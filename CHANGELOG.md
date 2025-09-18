@@ -2,7 +2,7 @@
 
 New features, fixed bugs, known defects and other noteworthy changes to each release of the Catena-X Portal Assets.
 
-## 2.6.0-RC1
+## 2.6.0
 
 ### Change
 
