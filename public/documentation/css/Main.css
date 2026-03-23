@@ -28,16 +28,8 @@ html {
 }
 
 body {
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    Segoe UI,
-    Helvetica,
-    Arial,
-    sans-serif,
-    Apple Color Emoji,
-    Segoe UI Emoji;
-  background-image: url(/assets/images/frame/home-stage-desktop.png);
+  font-family: 'Montserrat-Light' !important;
+  background-image: url(/assets/images/frame/home-stage-desktop.jpg);
   background-position: 0px 0px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -240,7 +232,7 @@ main h3 {
 
 img {
   border-radius: 15px;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1Mi40IDU1LjczIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2EwYTBhMDt9LmNscy0ye2ZpbGw6I2EwYTBhMDt9PC9zdHlsZT48L2RlZnM+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNNDAsMjguNjl2LTZhMSwxLDAsMCwwLTEuNTUtLjgyTDE0LjY5LDM4LjMxYTQuMTEsNC4xMSwwLDAsMS02LjQ1LTMuMzhWMjdhOC4yMyw4LjIzLDAsMCwxLDMuNTUtNi43Nmw3LjA4LTQuODlBNC4wNyw0LjA3LDAsMCwwLDIwLjYzLDEyVjYuMzhsMC01LjM5QTEsMSwwLDAsMCwxOS4xLjE4bC01LDMuNDJBNC4wOCw0LjA4LDAsMCwwLDEyLjM4LDdWOS44NEw2LjMsMTRBMTQuNTcsMTQuNTcsMCwwLDAsMCwyNnY4Ljg5QTEyLjM2LDEyLjM2LDAsMCwwLDE5LjM4LDQ1LjA5bDE4LjktMTNBNC4wOSw0LjA5LDAsMCwwLDQwLDI4LjY5WiIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTMzLDEwLjYzbC0xOC45LDEzQTQuMDksNC4wOSwwLDAsMCwxMi4zNSwyN3Y2YTEsMSwwLDAsMCwxLjU1LjgxTDM3LjcxLDE3LjQxYTQuMTEsNC4xMSwwLDAsMSw2LjQ0LDMuMzh2Ny45YTguMjUsOC4yNSwwLDAsMS0zLjU1LDYuNzdsLTYuMzMsNC4zNi0uNzIuNWgwYTQuMDYsNC4wNiwwLDAsMC0xLjc1LDMuMzRWNDUuMmwwLDkuNDhhMSwxLDAsMCwwLDEuNTUuODFsNS0zLjQzQTQuMDUsNC4wNSwwLDAsMCw0MCw0OC43MlY0NS44N2w2LjA2LTQuMThhMTQuNTgsMTQuNTgsMCwwLDAsNi4yOS0xMlYyMC44QTEyLjM1LDEyLjM1LDAsMCwwLDMzLDEwLjYzWiIvPjwvc3ZnPg==);
+  background-image: url(../../assets/images/logos/construct-x-logo.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto auto;
@@ -252,7 +244,7 @@ img {
 /* FOOTER */
 
 footer {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat-Light', sans-serif;
   margin-top: auto;
   text-align: center;
   padding-top: 1vw;
@@ -294,7 +286,7 @@ footer .copy {
   left: 20px;
   width: 192px;
   height: 45px;
-  background-image: url(/assets/images/logos/cx-text.svg);
+  background-image: url(../../assets/images/logos/cx-text.svg);
   background-position: 0 0;
   background-size: cover;
   background-repeat: no-repeat;
@@ -309,7 +301,7 @@ footer .copy {
   top: 20px;
   width: 192px;
   height: 45px;
-  background-image: url(/assets/images/logos/cx-text.svg);
+  background-image: url(../../assets/images/logos/cx-text.svg);
   background-position: 0 0;
   background-size: cover;
   background-repeat: no-repeat;

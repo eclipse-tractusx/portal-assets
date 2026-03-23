@@ -2,8 +2,8 @@
 	<title>Subtract-svg</title>
 	<defs>
 		<linearGradient id="g1" x1="1663.4" y1="426.4" x2="1130.9" y2="-461" gradientUnits="userSpaceOnUse">
-			<stop offset="0" stop-color="#ff782c"/>
-			<stop offset="1" stop-color="#ffb326"/>
+			<stop offset="0" stop-color="#1f3a6f"/>
+			<stop offset="1" stop-color="#0e3f7f"/>
 		</linearGradient>
 	</defs>
 	<style>

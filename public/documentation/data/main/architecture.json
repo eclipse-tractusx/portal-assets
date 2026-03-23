@@ -1,6 +1,6 @@
 {
   "path": "architecture",
-  "name": "Catena-X Architecture Documentation",
+  "name": "Construct-X Architecture Documentation",
   "children": [
     {
       "path": "architecture/Architecture Constraints.md",

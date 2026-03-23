@@ -2,7 +2,7 @@
   {
     "id": "1",
     "title": "EDC 0.3.0 Major Version",
-    "subtitle": "Catena-X",
+    "subtitle": "Construct-X",
     "description": "With March 2023 - the new EDC Version 0.3.x will be available and is to be used for upcoming 3.1 e2e tests",
     "readMoreText": "Get Change Details",
     "readMoreLink": "https://github.com/eclipse-tractusx/tractusx-edc/blob/main/CHANGELOG.md#030---2023-02-20"
@@ -10,15 +10,15 @@
   {
     "id": "2",
     "title": "Test of Release 3.1 starting on 03rd of April",
-    "subtitle": "Catena-X",
+    "subtitle": "Construct-X",
     "description": "Next round of e2e Test is starting soon. Contact the Test Management to get part of it",
     "readMoreText": "",
     "readMoreLink": ""
   },
   {
     "id": "3",
-    "title": "Lorem ipsum",
-    "subtitle": "Catena-X",
+    "title": "New Release",
+    "subtitle": "Construct-X",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
     "readMoreText": "Read more",
     "readMoreLink": "#"

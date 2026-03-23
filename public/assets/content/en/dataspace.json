@@ -32,8 +32,8 @@
     }
   ],
   "dataSpace": {
-    "title": "Catena-X Dataspace",
-    "description": "The base concept of catena-x is the data exchange in a standardized format. This is reached by data sovereignty (explanation needed) and interoperability (link needed). Via data policies you can decide who can access data offers on several different levels",
+    "title": "Construct-X Dataspace",
+    "description": "The base concept of construct-x is the data exchange in a standardized format. This is reached by data sovereignty (explanation needed) and interoperability (link needed). Via data policies you can decide who can access data offers on several different levels",
     "sections": [
       {
         "title": "Policy Intro",
@@ -72,7 +72,7 @@
             {
               "title": "<2>Follow the Swagger Service</2>",
               "value": ">> Swagger Service",
-              "link": "https://policy-hub.dev.demo.catena-x.net/api/policy-hub/swagger/index.html"
+              "link": "https://policy-hub.dev.demo.construct-x.net/api/policy-hub/swagger/index.html"
             }
           ]
         }
@@ -87,7 +87,7 @@
       },
       {
         "title": "Data Access policy based on Business Partner Number",
-        "description": "The business partner number (every member of catena-x has ist own bpn) can be used to restrict data access.<1></1><1></1>Means, company a can define that company b is allowed to see/access a data contract while company c isnt.<1></1><1></1>While creating a data offer, company a needs to decide if the data offer is restricted for a number of companys (bpns) or not<1></1><1></1>",
+        "description": "The business partner number (every member of construct-x has ist own bpn) can be used to restrict data access.<1></1><1></1>Means, company a can define that company b is allowed to see/access a data contract while company c isnt.<1></1><1></1>While creating a data offer, company a needs to decide if the data offer is restricted for a number of companys (bpns) or not<1></1><1></1>",
         "imagePath": "/images/frame/BusinessPartnerNumber.png",
         "backgroundColor": "#FFFFFFF",
         "id": "bpn-id",
