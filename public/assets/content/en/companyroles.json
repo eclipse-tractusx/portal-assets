@@ -32,8 +32,8 @@
         "navigation": "std-libraries-id"
       }
     ],
-    "title": "Catena-X Data App Provider",
-    "description": "The Catena-X App Provider is the standard role inside the Catena-X network. Companies sharing and receiving data as well as using service provider offers and app offers are usually 'App Provider' - active members of the network.",
+    "title": "Construct-X Data App Provider",
+    "description": "The Construct-X App Provider is the standard role inside the Construct-X network. Companies sharing and receiving data as well as using service provider offers and app offers are usually 'App Provider' - active members of the network.",
     "sections": [
       {
         "title": "Application Service Provider",
@@ -246,7 +246,7 @@
       },
       {
         "title": "App Provider Certification Standards",
-        "description": "The Catena-X operating environment is based on the idea that there are multiple but distinct roles that aim at providing an attractive and fully functional ecosystem. Each provider can take on one or more of the following roles in any combination:<1></1><1></1>1. Core Service Provider<1></1><1></1>2. Enablement Service Provider<1></1><1></1>3. Business Application Provider<1></1><1></1>4. On-Boarding Service Provider<1></1><1></1>5. Consulting Provider<1></1><1></1>6. Data Provider and Consumer<1></1><1></1>7. Conformity Assessment Body<1></1><1></1>In the list you can find all current active standards relevant for App Provider Certification certification.",
+        "description": "The Construct-X operating environment is based on the idea that there are multiple but distinct roles that aim at providing an attractive and fully functional ecosystem. Each provider can take on one or more of the following roles in any combination:<1></1><1></1>1. Core Service Provider<1></1><1></1>2. Enablement Service Provider<1></1><1></1>3. Business Application Provider<1></1><1></1>4. On-Boarding Service Provider<1></1><1></1>5. Consulting Provider<1></1><1></1>6. Data Provider and Consumer<1></1><1></1>7. Conformity Assessment Body<1></1><1></1>In the list you can find all current active standards relevant for App Provider Certification certification.",
         "imagePath": "",
         "backgroundColor": "#FFFFFF",
         "id": "std-libraries-id",
@@ -277,8 +277,8 @@
         "navigation": "std-libraries-id"
       }
     ],
-    "title": "Catena-X Data Service Provider",
-    "description": "The Catena-X Service Provider is the standard role inside the Catena-X network. Companies sharing and receiving data as well as using service provider offers and app offers are usually 'Service Provider' - active members of the network.",
+    "title": "Construct-X Data Service Provider",
+    "description": "The Construct-X Service Provider is the standard role inside the Construct-X network. Companies sharing and receiving data as well as using service provider offers and app offers are usually 'Service Provider' - active members of the network.",
     "sections": [
       {
         "title": "Marketplace",
@@ -298,7 +298,7 @@
           {
             "title": "Service Marketplace",
             "imagePath": "/images/content/teaser.png",
-            "description": "The service marketplace offers technical and consultancy support to enable you and your company to participate in the Catena-X dataspace.",
+            "description": "The service marketplace offers technical and consultancy support to enable you and your company to participate in the Construct-X dataspace.",
             "readMore": "",
             "backgroundColor": "#F9F9F9"
           }
@@ -421,7 +421,7 @@
       },
       {
         "title": "Service Provider Certification Standards",
-        "description": "The Catena-X operating environment is based on the idea that there are multiple but distinct roles that aim at providing an attractive and fully functional ecosystem. Each provider can take on one or more of the following roles in any combination:<1></1><1></1>1. Core Service Provider<1></1><1></1>2. Enablement Service Provider<1></1><1></1>3. Business Application Provider<1></1><1></1>4. On-Boarding Service Provider<1></1><1></1>5. Consulting Provider<1></1><1></1>6. Data Provider and Consumer<1></1><1></1>7. Conformity Assessment Body<1></1><1></1>In the list you can find all current active standards relevant for Service Provider Certification certification.",
+        "description": "The Construct-X operating environment is based on the idea that there are multiple but distinct roles that aim at providing an attractive and fully functional ecosystem. Each provider can take on one or more of the following roles in any combination:<1></1><1></1>1. Core Service Provider<1></1><1></1>2. Enablement Service Provider<1></1><1></1>3. Business Application Provider<1></1><1></1>4. On-Boarding Service Provider<1></1><1></1>5. Consulting Provider<1></1><1></1>6. Data Provider and Consumer<1></1><1></1>7. Conformity Assessment Body<1></1><1></1>In the list you can find all current active standards relevant for Service Provider Certification certification.",
         "imagePath": "",
         "backgroundColor": "#FFFFFF",
         "id": "std-libraries-id",
@@ -457,8 +457,8 @@
         "navigation": "std-libraries-id"
       }
     ],
-    "title": "Catena-X Participant",
-    "description": "The Catena-X participant is the standard role inside the Catena-X network. Companies sharing and receiving data as well as using service provider offers and app offers are usually 'participants' - active members of the network.",
+    "title": "Construct-X Participant",
+    "description": "The Construct-X participant is the standard role inside the Construct-X network. Companies sharing and receiving data as well as using service provider offers and app offers are usually 'participants' - active members of the network.",
     "sections": [
       {
         "title": "Configure your company",
@@ -513,7 +513,7 @@
           },
           {
             "title": "Configure Company IdP (optional)",
-            "description": "If your company would like to use their own company authentication to have the comfort of federated user login and user credentials not shared with an operator, you can connect your company IdP with the Catena-X shared IdP. Please refer to the following documentation to show you the necessary steps to configure your <strong>Company IdP</strong>.<1></1><1></1>",
+            "description": "If your company would like to use their own company authentication to have the comfort of federated user login and user credentials not shared with an operator, you can connect your company IdP with the Construct-X shared IdP. Please refer to the following documentation to show you the necessary steps to configure your <strong>Company IdP</strong>.<1></1><1></1>",
             "id": "idp-id",
             "sectionLink": {
               "data": [
@@ -565,7 +565,7 @@
         "subsections": [
           {
             "title": "Use Cases",
-            "description": "Use cases describe the value add you can achieve with Catena-X. To learn more about the Catena-X Use Cases please visit the dedicated Use Case pages. You can inform yourself on the use case(s) you are interested in, its core values and benefits as well as an overview of the relevant data models and a list of business apps available<1></1><1></1>",
+            "description": "Use cases describe the value add you can achieve with Construct-X. To learn more about the Construct-X Use Cases please visit the dedicated Use Case pages. You can inform yourself on the use case(s) you are interested in, its core values and benefits as well as an overview of the relevant data models and a list of business apps available<1></1><1></1>",
             "sectionLink": {
               "data": [
                 {
@@ -591,7 +591,7 @@
           },
           {
             "title": "Semantic Hub",
-            "description": "The <strong>Semantic Hub</strong> describes the Catena-X standardized data models. The given semantic models and their descriptions are required to understand which data and which format is needed for each supported data object. You also find basic information on the use case specific data models in the details of the dedicated <strong>Use Case</strong> Pages.<1></1><1></1>",
+            "description": "The <strong>Semantic Hub</strong> describes the Construct-X standardized data models. The given semantic models and their descriptions are required to understand which data and which format is needed for each supported data object. You also find basic information on the use case specific data models in the details of the dedicated <strong>Use Case</strong> Pages.<1></1><1></1>",
             "sectionLink": {
               "data": [
                 {
@@ -604,7 +604,7 @@
           },
           {
             "title": "Data Mapping",
-            "description": "In this step you need to map your internal data formats to the existing Catena-X standard models. To prepare for this, refer to the relevant specific semantic models for the dedicated use case(s) you are interested in.<1></1><1></1>You will find a basic business description of data models within the details of the respective use case pages.<1></1><1></1>For more technical background, check out the Semantic Hub as well.<1></1><1></1>",
+            "description": "In this step you need to map your internal data formats to the existing Construct-X standard models. To prepare for this, refer to the relevant specific semantic models for the dedicated use case(s) you are interested in.<1></1><1></1>You will find a basic business description of data models within the details of the respective use case pages.<1></1><1></1>For more technical background, check out the Semantic Hub as well.<1></1><1></1>",
             "sectionLink": {
               "data": [
                 {
@@ -632,10 +632,10 @@
       },
       {
         "title": "Prepare your technical integration",
-        "description": "If you choose to manage the Catena-X components yourself and not use a Business Application or Managed Service,  you will need to set up the technical components yourself.<1></1>Technical Documentation, Tutorials and Guides how these components can be set up can be found in the  Shared Network KIT on <strong>Tractus-X</strong><1></1><1></1>",
+        "description": "If you choose to manage the Construct-X components yourself and not use a Business Application or Managed Service,  you will need to set up the technical components yourself.<1></1>Technical Documentation, Tutorials and Guides how these components can be set up can be found in the  Shared Network KIT on <strong>Tractus-X</strong><1></1><1></1>",
         "imagePath": "",
         "subDescriptions": {
-          "title": "To actively participate in one or more of the Catena-X Use Cases, you will need to provide or consume data. To do so , you have multiple options:<1></1>",
+          "title": "To actively participate in one or more of the Construct-X Use Cases, you will need to provide or consume data. To do so , you have multiple options:<1></1>",
           "sections": [
             {
               "title": "<2>* To inform yourself on existing offers, check out the App Marketplace</2>",
@@ -707,7 +707,7 @@
       },
       {
         "title": "Participant Certification Standards",
-        "description": "The Catena-X operating environment is based on the idea that there are multiple but distinct roles that aim at providing an attractive and fully functional ecosystem. Each provider can take on one or more of the following roles in any combination:<1></1><1></1>1. Core Service Provider<1></1><1></1>2. Enablement Service Provider<1></1><1></1>3. Business Application Provider<1></1><1></1>4. On-Boarding Service Provider<1></1><1></1>5. Consulting Provider<1></1><1></1>6. Data Provider and Consumer<1></1><1></1>7. Conformity Assessment Body<1></1><1></1>In the list you can find all current active standards relevant for Participant Certification certification.",
+        "description": "The Construct-X operating environment is based on the idea that there are multiple but distinct roles that aim at providing an attractive and fully functional ecosystem. Each provider can take on one or more of the following roles in any combination:<1></1><1></1>1. Core Service Provider<1></1><1></1>2. Enablement Service Provider<1></1><1></1>3. Business Application Provider<1></1><1></1>4. On-Boarding Service Provider<1></1><1></1>5. Consulting Provider<1></1><1></1>6. Data Provider and Consumer<1></1><1></1>7. Conformity Assessment Body<1></1><1></1>In the list you can find all current active standards relevant for Participant Certification certification.",
         "imagePath": "",
         "backgroundColor": "#FFFFFF",
         "id": "std-libraries-id",
@@ -723,13 +723,13 @@
         "navigation": "section-two"
       }
     ],
-    "title": "Catena-X Data Conformity Assessment Bodies(CABs)",
-    "description": "The CAB is the standard role inside the Catena-X network. Companies sharing and receiving data as well as using service provider offers and app offers are usually 'CAB' - active members of the network.",
+    "title": "Construct-X Data Conformity Assessment Bodies(CABs)",
+    "description": "The CAB is the standard role inside the Construct-X network. Companies sharing and receiving data as well as using service provider offers and app offers are usually 'CAB' - active members of the network.",
     "sections": [
       {
         "title": "",
         "imagePath": "",
-        "description": "The standards that form the basis of our network are developed by Catena-X e. V. created and published.<1></1>Conformity Assessment Bodies (CABs) audit and issue certificates based on these standards.<1></1>You can find more details on this on the following <strong>association homepage</strong><1></1><1></1>The uniform testing of each component of the network based on a mutually agreed framework enables a high level of transparency and comparability for all providers of services and applications for our members and users.<1></1><1></1>",
+        "description": "The standards that form the basis of our network are developed by Construct-X e. V. created and published.<1></1>Conformity Assessment Bodies (CABs) audit and issue certificates based on these standards.<1></1>You can find more details on this on the following <strong>association homepage</strong><1></1><1></1>The uniform testing of each component of the network based on a mutually agreed framework enables a high level of transparency and comparability for all providers of services and applications for our members and users.<1></1><1></1>",
         "template": "TextImageSideBySideWithSections",
         "backgroundColor": "#FFFFFF",
         "sectionLink": {
@@ -744,7 +744,7 @@
       },
       {
         "title": "Certification Process",
-        "description": "For more details visit the catena-x <strong>association homepage</strong><1></1><1></1>",
+        "description": "For more details visit the construct-x <strong>association homepage</strong><1></1><1></1>",
         "imagePath": "/images/content/conformity.png",
         "backgroundColor": "#FFFFFF",
         "id": "section-two",
@@ -784,8 +784,8 @@
         "navigation": "std-libraries-id"
       }
     ],
-    "title": "Catena-X Onboarding Service Provider ",
-    "description": "On-Boarding Service Providers enable data providers/consumers to be integrated into the Catena-X network. This includes organizational and technical integration. Since the technical integration requires, for example, a BPN, the use of the services requires bilateral coordination with the company providing the services if it is not the company operating the services.",
+    "title": "Construct-X Onboarding Service Provider ",
+    "description": "On-Boarding Service Providers enable data providers/consumers to be integrated into the Construct-X network. This includes organizational and technical integration. Since the technical integration requires, for example, a BPN, the use of the services requires bilateral coordination with the company providing the services if it is not the company operating the services.",
     "sections": [
       {
         "title": "Onboarding Service Provider (OSP)",
@@ -871,7 +871,7 @@
       },
       {
         "title": "Onboarding Service Provider Certification Standards",
-        "description": "The Catena-X operating environment is based on the idea that there are multiple but distinct roles that aim at providing an attractive and fully functional ecosystem. Each provider can take on one or more of the following roles in any combination:<1></1><1></1>1. Core Service Provider<1></1><1></1>2. Enablement Service Provider<1></1><1></1>3. Business Application Provider<1></1><1></1>4. On-Boarding Service Provider<1></1><1></1>5. Consulting Provider<1></1><1></1>6. Data Provider and Consumer<1></1><1></1>7. Conformity Assessment Body<1></1><1></1>In the list you can find all current active standards relevant for Onboarding Service Provider certification.",
+        "description": "The Construct-X operating environment is based on the idea that there are multiple but distinct roles that aim at providing an attractive and fully functional ecosystem. Each provider can take on one or more of the following roles in any combination:<1></1><1></1>1. Core Service Provider<1></1><1></1>2. Enablement Service Provider<1></1><1></1>3. Business Application Provider<1></1><1></1>4. On-Boarding Service Provider<1></1><1></1>5. Consulting Provider<1></1><1></1>6. Data Provider and Consumer<1></1><1></1>7. Conformity Assessment Body<1></1><1></1>In the list you can find all current active standards relevant for Onboarding Service Provider certification.",
         "imagePath": "",
         "backgroundColor": "#FFFFFF",
         "id": "std-libraries-id",

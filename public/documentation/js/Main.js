@@ -200,7 +200,7 @@ class Chapters extends Viewable {
     super()
     state.addDataListener(this)
     this.items = N('div')
-    this.title = N('h3', 'Catena-X Help Desk')
+    this.title = N('h3', 'Construct-X Help Desk')
     this.view = N(
       'section',
       [
@@ -883,7 +883,7 @@ class Footer extends Viewable {
     super()
     this.view = N('footer', [
       N('div', '', { class: 'links' }),
-      N('div', 'Copyright © Catena-X Automotive Network.', { class: 'copy' }),
+      N('div', 'Copyright © Construct-X Network.', { class: 'copy' }),
       new LegalNotice(),
     ])
   }

@@ -32,8 +32,8 @@
     }
   ],
   "dataSpace": {
-    "title": "Catena-X Datenraum",
-    "description": "Das Grundkonzept von catena-x ist der Datenaustausch in einem standardisierten Format. Dies wird durch Datensouveränität und Interoperabilität erreicht. Über Datenrichtlinien können Sie auf mehreren Ebenen entscheiden, wer auf Datenangebote zugreifen kann.",
+    "title": "Construct-X Datenraum",
+    "description": "Das Grundkonzept von construct-x ist der Datenaustausch in einem standardisierten Format. Dies wird durch Datensouveränität und Interoperabilität erreicht. Über Datenrichtlinien können Sie auf mehreren Ebenen entscheiden, wer auf Datenangebote zugreifen kann.",
     "sections": [
       {
         "title": "Policy Beschreibung",
@@ -72,7 +72,7 @@
             {
               "title": "<2>Follow the Swagger Service</2>",
               "value": ">> Swagger Service",
-              "link": "https://policy-hub.dev.demo.catena-x.net/api/policy-hub/swagger/index.html"
+              "link": "https://policy-hub.dev.demo.construct-x.net/api/policy-hub/swagger/index.html"
             }
           ]
         }
@@ -87,7 +87,7 @@
       },
       {
         "title": "Datenzugriffsrichtlinie basierend auf der Geschäftspartnernummer",
-        "description": "Über die Geschäftspartnernummer (jedes Mitglied von catena-x hat einen eigenen BPN) kann der Datenzugriff eingeschränkt werden.<1></1><1></1>Das heißt, Firma a kann festlegen, dass Firma b dazu berechtigt ist Sehen Sie sich einen Datenvertrag an bzw. greifen Sie darauf zu, während Unternehmen c nicht da ist.<1></1><1></1>Beim Erstellen eines Datenangebots muss Unternehmen a entscheiden, ob das Datenangebot für eine Reihe von Unternehmen (bpns) beschränkt ist. oder nicht<1></1><1></1>",
+        "description": "Über die Geschäftspartnernummer (jedes Mitglied von construct-x hat einen eigenen BPN) kann der Datenzugriff eingeschränkt werden.<1></1><1></1>Das heißt, Firma a kann festlegen, dass Firma b dazu berechtigt ist Sehen Sie sich einen Datenvertrag an bzw. greifen Sie darauf zu, während Unternehmen c nicht da ist.<1></1><1></1>Beim Erstellen eines Datenangebots muss Unternehmen a entscheiden, ob das Datenangebot für eine Reihe von Unternehmen (bpns) beschränkt ist. oder nicht<1></1><1></1>",
         "imagePath": "/images/frame/BusinessPartnerNumber.png",
         "backgroundColor": "#FFFFFFF",
         "id": "bpn-id",

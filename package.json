@@ -1,13 +1,13 @@
 {
   "name": "cx-portal-assets",
-  "version": "v2.6.0",
-  "description": "Shared frontend content and static assets for the Catena-X Portal",
+  "version": "v2.4.0",
+  "description": "Shared frontend content and static assets for the Construct-X Portal",
   "main": "index.js",
   "repository": "git@github.com:eclipse-tractusx/portal-assets.git",
   "license": "Apache-2.0",
   "type": "module",
   "devDependencies": {
-    "concurrently": "^8.0.1",
+    "concurrently": "^9.2.0",
     "directory-tree": "^3.5.2",
     "eslint": "^8.51.0",
     "eslint-config-prettier": "^9.0.0",
@@ -19,6 +19,7 @@
     "prettier": "^3.0.3"
   },
   "dependencies": {
+    "@fontsource/montserrat": "^5.2.6",
     "zero-md": "^2.4.0"
   },
   "lint-staged": {

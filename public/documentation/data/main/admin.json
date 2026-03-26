@@ -1,6 +1,6 @@
 {
   "path": "admin",
-  "name": "Catena-X Admin Documentation",
+  "name": "Construct-X Admin Documentation",
   "children": [
     {
       "path": "admin/DB Views and Details",
